@@ -1,0 +1,10 @@
+<svg viewBox="0 0 500 666.6666666666666" width="500" height="666.6666666666666" xmlns="http://www.w3.org/2000/svg">
+    <rect width="500" height="416.66666666666663" fill="#e7e7e7"/>
+    <circle cx="250" cy="416.66666666666663" r="250" fill="#e7e7e7"/>
+    <rect x="50" y="50" width="400" height="366.66666666666663" fill="#ffffff"/>
+    <circle cx="250" cy="416.66666666666663" r="200" fill="#ffffff"/>
+    <line x1="0" y1="0" x2="425" y2="566.6666666666666" stroke="#e7e7e7" stroke-width="50"/>
+    <text text-anchor="middle" fill="#303030" style="font-size: 80px; font-family: sans-serif; font-weight: 600;" transform="translate(275,319.99999999999994) rotate(-60)">
+        Bielsko-Biała
+    </text>
+</svg>

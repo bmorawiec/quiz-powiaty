@@ -1,0 +1,6832 @@
+[
+    {
+        "id": "02",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "dolnośląskie",
+        "capitals": [
+            "Wrocław"
+        ],
+        "plates": [
+            "D",
+            "V"
+        ],
+        "population": 2874496,
+        "density": 144.1
+    },
+    {
+        "id": "04",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "kujawsko-pomorskie",
+        "capitals": [
+            "Bydgoszcz",
+            "Toruń"
+        ],
+        "plates": [
+            "C"
+        ],
+        "population": 1990323,
+        "density": 110.7
+    },
+    {
+        "id": "06",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "lubelskie",
+        "capitals": [
+            "Lublin"
+        ],
+        "plates": [
+            "L"
+        ],
+        "population": 2003475,
+        "density": 79.7
+    },
+    {
+        "id": "08",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "lubuskie",
+        "capitals": [
+            "Gorzów Wielkopolski",
+            "Zielona Góra"
+        ],
+        "plates": [
+            "F"
+        ],
+        "population": 972140,
+        "density": 69.5
+    },
+    {
+        "id": "10",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "łódzkie",
+        "capitals": [
+            "Łódź"
+        ],
+        "plates": [
+            "E"
+        ],
+        "population": 2354135,
+        "density": 129.2
+    },
+    {
+        "id": "12",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "małopolskie",
+        "capitals": [
+            "Kraków"
+        ],
+        "plates": [
+            "K",
+            "J"
+        ],
+        "population": 3429685,
+        "density": 225.9
+    },
+    {
+        "id": "14",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "mazowieckie",
+        "capitals": [
+            "Warszawa"
+        ],
+        "plates": [
+            "W",
+            "A"
+        ],
+        "population": 5510618,
+        "density": 155
+    },
+    {
+        "id": "16",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "opolskie",
+        "capitals": [
+            "Opole"
+        ],
+        "plates": [
+            "O"
+        ],
+        "population": 933349,
+        "density": 99.1
+    },
+    {
+        "id": "18",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "podkarpackie",
+        "capitals": [
+            "Rzeszów"
+        ],
+        "plates": [
+            "R",
+            "Y"
+        ],
+        "population": 2067139,
+        "density": 115.8
+    },
+    {
+        "id": "20",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "podlaskie",
+        "capitals": [
+            "Białystok"
+        ],
+        "plates": [
+            "B"
+        ],
+        "population": 1135201,
+        "density": 56.2
+    },
+    {
+        "id": "22",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "pomorskie",
+        "capitals": [
+            "Gdańsk"
+        ],
+        "plates": [
+            "G",
+            "X"
+        ],
+        "population": 2359956,
+        "density": 120.7
+    },
+    {
+        "id": "24",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "śląskie",
+        "capitals": [
+            "Katowice"
+        ],
+        "plates": [
+            "S",
+            "I"
+        ],
+        "population": 4305126,
+        "density": 349
+    },
+    {
+        "id": "26",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "świętokrzyskie",
+        "capitals": [
+            "Kielce"
+        ],
+        "plates": [
+            "T"
+        ],
+        "population": 1163001,
+        "density": 99.3
+    },
+    {
+        "id": "28",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "warmińsko-mazurskie",
+        "capitals": [
+            "Olsztyn"
+        ],
+        "plates": [
+            "N"
+        ],
+        "population": 1353374,
+        "density": 56
+    },
+    {
+        "id": "30",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "wielkopolskie",
+        "capitals": [
+            "Poznań"
+        ],
+        "plates": [
+            "P",
+            "M"
+        ],
+        "population": 3484177,
+        "density": 116.8
+    },
+    {
+        "id": "32",
+        "tags": [
+            "voivodeship"
+        ],
+        "name": "zachodniopomorskie",
+        "capitals": [
+            "Szczecin"
+        ],
+        "plates": [
+            "Z"
+        ],
+        "population": 1626876,
+        "density": 71
+    },
+    {
+        "id": "0401",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "aleksandrowski",
+        "capitals": [
+            "Aleksandrów Kujawski"
+        ],
+        "plates": [
+            "CAL"
+        ],
+        "population": 55007,
+        "density": 115.89
+    },
+    {
+        "id": "2001",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "augustowski",
+        "capitals": [
+            "Augustów"
+        ],
+        "plates": [
+            "BAU"
+        ],
+        "population": 57908,
+        "density": 34.9
+    },
+    {
+        "id": "2801",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "bartoszycki",
+        "capitals": [
+            "Bartoszyce"
+        ],
+        "plates": [
+            "NBA"
+        ],
+        "population": 56891,
+        "density": 43.51
+    },
+    {
+        "id": "1001",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "bełchatowski",
+        "capitals": [
+            "Bełchatów"
+        ],
+        "plates": [
+            "EBE"
+        ],
+        "population": 112702,
+        "density": 116.48
+    },
+    {
+        "id": "2401",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "będziński",
+        "capitals": [
+            "Będzin"
+        ],
+        "plates": [
+            "SBE",
+            "SE"
+        ],
+        "population": 147816,
+        "density": 405.94
+    },
+    {
+        "id": "0601",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "bialski",
+        "capitals": [
+            "Biała Podlaska"
+        ],
+        "plates": [
+            "LBI"
+        ],
+        "population": 110454,
+        "density": 40.1
+    },
+    {
+        "id": "0661",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU",
+            "city"
+        ],
+        "name": "Biała Podlaska",
+        "capitals": [
+            "Biała Podlaska"
+        ],
+        "plates": [
+            "LB"
+        ],
+        "population": 57194,
+        "density": 1157.77
+    },
+    {
+        "id": "1401",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "białobrzeski",
+        "capitals": [
+            "Białobrzegi"
+        ],
+        "plates": [
+            "WBR"
+        ],
+        "population": 33332,
+        "density": 52.15
+    },
+    {
+        "id": "3201",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "białogardzki",
+        "capitals": [
+            "Białogard"
+        ],
+        "plates": [
+            "ZBI"
+        ],
+        "population": 47434,
+        "density": 56.1
+    },
+    {
+        "id": "2002",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "białostocki",
+        "capitals": [
+            "Białystok"
+        ],
+        "plates": [
+            "BIA"
+        ],
+        "population": 150333,
+        "density": 50.51
+    },
+    {
+        "id": "2061",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD",
+            "city"
+        ],
+        "name": "Białystok",
+        "capitals": [
+            "Białystok"
+        ],
+        "plates": [
+            "BI"
+        ],
+        "population": 297585,
+        "density": 2913.79
+    },
+    {
+        "id": "2003",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "bielski",
+        "capitals": [
+            "Bielsko-Biała"
+        ],
+        "plates": [
+            "SBI",
+            "IBI"
+        ],
+        "population": 166215,
+        "density": 362.41
+    },
+    {
+        "id": "2402",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "bielski",
+        "capitals": [
+            "Bielsko-Biała"
+        ],
+        "plates": [
+            "SBI",
+            "IBI"
+        ],
+        "population": 166215,
+        "density": 362.41
+    },
+    {
+        "id": "2461",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Bielsko-Biała",
+        "capitals": [
+            "Bielsko-Biała"
+        ],
+        "plates": [
+            "SB"
+        ],
+        "population": 170303,
+        "density": 1367.79
+    },
+    {
+        "id": "2414",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "bieruńsko-lędziński",
+        "capitals": [
+            "Bieruń"
+        ],
+        "plates": [
+            "SBL"
+        ],
+        "population": 59864,
+        "density": 378.53
+    },
+    {
+        "id": "1801",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "bieszczadzki",
+        "capitals": [
+            "Ustrzyki Dolne"
+        ],
+        "plates": [
+            "RBI"
+        ],
+        "population": 21576,
+        "density": 18.94
+    },
+    {
+        "id": "0602",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "biłgorajski",
+        "capitals": [
+            "Biłgoraj"
+        ],
+        "plates": [
+            "LBL"
+        ],
+        "population": 100617,
+        "density": 59.85
+    },
+    {
+        "id": "1201",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "bocheński",
+        "capitals": [
+            "Bochnia"
+        ],
+        "plates": [
+            "KBC"
+        ],
+        "population": 107023,
+        "density": 165.02
+    },
+    {
+        "id": "0201",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "bolesławiecki",
+        "capitals": [
+            "Bolesławiec"
+        ],
+        "plates": [
+            "DBL"
+        ],
+        "population": 90032,
+        "density": 69.07
+    },
+    {
+        "id": "2802",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "braniewski",
+        "capitals": [
+            "Braniewo"
+        ],
+        "plates": [
+            "NBR"
+        ],
+        "population": 40927,
+        "density": 34.06
+    },
+    {
+        "id": "0402",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "brodnicki",
+        "capitals": [
+            "Brodnica"
+        ],
+        "plates": [
+            "CBR"
+        ],
+        "population": 79129,
+        "density": 76.09
+    },
+    {
+        "id": "1202",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "brzeski",
+        "capitals": [
+            "Brzesko"
+        ],
+        "plates": [
+            "KBR"
+        ],
+        "population": 93125,
+        "density": 157.7
+    },
+    {
+        "id": "1601",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "brzeski",
+        "capitals": [
+            "Brzesko"
+        ],
+        "plates": [
+            "KBR"
+        ],
+        "population": 93125,
+        "density": 157.7
+    },
+    {
+        "id": "1021",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "brzeziński",
+        "capitals": [
+            "Brzeziny"
+        ],
+        "plates": [
+            "EBR"
+        ],
+        "population": 30793,
+        "density": 85.88
+    },
+    {
+        "id": "1802",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "brzozowski",
+        "capitals": [
+            "Brzozów"
+        ],
+        "plates": [
+            "RBR"
+        ],
+        "population": 65523,
+        "density": 121.49
+    },
+    {
+        "id": "2601",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "buski",
+        "capitals": [
+            "Busko-Zdrój"
+        ],
+        "plates": [
+            "TBU"
+        ],
+        "population": 71451,
+        "density": 73.81
+    },
+    {
+        "id": "0403",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "bydgoski",
+        "capitals": [
+            "Bydgoszcz"
+        ],
+        "plates": [
+            "CBY",
+            "CBC"
+        ],
+        "population": 119448,
+        "density": 85.68
+    },
+    {
+        "id": "0461",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP",
+            "city"
+        ],
+        "name": "Bydgoszcz",
+        "capitals": [
+            "Bydgoszcz"
+        ],
+        "plates": [
+            "CB"
+        ],
+        "population": 346739,
+        "density": 1970.33
+    },
+    {
+        "id": "2462",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Bytom",
+        "capitals": [
+            "Bytom"
+        ],
+        "plates": [
+            "SY"
+        ],
+        "population": 164447,
+        "density": 2368.19
+    },
+    {
+        "id": "2201",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "bytowski",
+        "capitals": [
+            "Bytów"
+        ],
+        "plates": [
+            "GBY"
+        ],
+        "population": 79136,
+        "density": 36.1
+    },
+    {
+        "id": "0662",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU",
+            "city"
+        ],
+        "name": "Chełm",
+        "capitals": [
+            "Chełm"
+        ],
+        "plates": [
+            "LC"
+        ],
+        "population": 61588,
+        "density": 1745.69
+    },
+    {
+        "id": "0404",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "chełmiński",
+        "capitals": [
+            "Chełmno"
+        ],
+        "plates": [
+            "CCH"
+        ],
+        "population": 51817,
+        "density": 98.34
+    },
+    {
+        "id": "0603",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "chełmski",
+        "capitals": [
+            "Chełm"
+        ],
+        "plates": [
+            "LCH"
+        ],
+        "population": 77752,
+        "density": 41.23
+    },
+    {
+        "id": "3001",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "chodzieski",
+        "capitals": [
+            "Chodzież"
+        ],
+        "plates": [
+            "PCH"
+        ],
+        "population": 46955,
+        "density": 68.54
+    },
+    {
+        "id": "2202",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "chojnicki",
+        "capitals": [
+            "Chojnice"
+        ],
+        "plates": [
+            "GCH"
+        ],
+        "population": 97677,
+        "density": 71.6
+    },
+    {
+        "id": "2463",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Chorzów",
+        "capitals": [
+            "Chorzów"
+        ],
+        "plates": [
+            "SH"
+        ],
+        "population": 107443,
+        "density": 3232.34
+    },
+    {
+        "id": "3202",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "choszczeński",
+        "capitals": [
+            "Choszczno"
+        ],
+        "plates": [
+            "ZCH"
+        ],
+        "population": 48035,
+        "density": 36.18
+    },
+    {
+        "id": "1203",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "chrzanowski",
+        "capitals": [
+            "Chrzanów"
+        ],
+        "plates": [
+            "KCH"
+        ],
+        "population": 124190,
+        "density": 335.54
+    },
+    {
+        "id": "1402",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "ciechanowski",
+        "capitals": [
+            "Ciechanów"
+        ],
+        "plates": [
+            "WCI"
+        ],
+        "population": 89213,
+        "density": 84.18
+    },
+    {
+        "id": "2403",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "cieszyński",
+        "capitals": [
+            "Cieszyn"
+        ],
+        "plates": [
+            "SCI",
+            "SCN",
+            "ICI"
+        ],
+        "population": 178005,
+        "density": 243.75
+    },
+    {
+        "id": "3002",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "czarnkowsko-trzcianecki",
+        "capitals": [
+            "Czarnków"
+        ],
+        "plates": [
+            "PCT"
+        ],
+        "population": 86868,
+        "density": 48.1
+    },
+    {
+        "id": "2464",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Częstochowa",
+        "capitals": [
+            "Częstochowa"
+        ],
+        "plates": [
+            "SC"
+        ],
+        "population": 219278,
+        "density": 1372.98
+    },
+    {
+        "id": "2404",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "częstochowski",
+        "capitals": [
+            "Częstochowa"
+        ],
+        "plates": [
+            "SCZ"
+        ],
+        "population": 134341,
+        "density": 88.26
+    },
+    {
+        "id": "2203",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "człuchowski",
+        "capitals": [
+            "Człuchów"
+        ],
+        "plates": [
+            "GCZ"
+        ],
+        "population": 55933,
+        "density": 35.51
+    },
+    {
+        "id": "2465",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Dąbrowa Górnicza",
+        "capitals": [
+            "Dąbrowa Górnicza"
+        ],
+        "plates": [
+            "SD"
+        ],
+        "population": 118899,
+        "density": 630
+    },
+    {
+        "id": "1204",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "dąbrowski",
+        "capitals": [
+            "Dąbrowa Tarnowska"
+        ],
+        "plates": [
+            "KDA"
+        ],
+        "population": 59147,
+        "density": 111.55
+    },
+    {
+        "id": "1803",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "dębicki",
+        "capitals": [
+            "Dębica"
+        ],
+        "plates": [
+            "RDE"
+        ],
+        "population": 135282,
+        "density": 174
+    },
+    {
+        "id": "3203",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "drawski",
+        "capitals": [
+            "Drawsko Pomorskie"
+        ],
+        "plates": [
+            "ZDR"
+        ],
+        "population": 56842,
+        "density": 32.22
+    },
+    {
+        "id": "2803",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "działdowski",
+        "capitals": [
+            "Działdowo"
+        ],
+        "plates": [
+            "NDZ"
+        ],
+        "population": 64966,
+        "density": 68.1
+    },
+    {
+        "id": "0202",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "dzierżoniowski",
+        "capitals": [
+            "Dzierżoniów"
+        ],
+        "plates": [
+            "DDZ"
+        ],
+        "population": 100519,
+        "density": 210.07
+    },
+    {
+        "id": "2861",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN",
+            "city"
+        ],
+        "name": "Elbląg",
+        "capitals": [
+            "Elbląg"
+        ],
+        "plates": [
+            "NE"
+        ],
+        "population": 119097,
+        "density": 1492.07
+    },
+    {
+        "id": "2804",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "elbląski",
+        "capitals": [
+            "Elbląg"
+        ],
+        "plates": [
+            "NEB"
+        ],
+        "population": 57056,
+        "density": 40.31
+    },
+    {
+        "id": "2805",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "ełcki",
+        "capitals": [
+            "Ełk"
+        ],
+        "plates": [
+            "NEL"
+        ],
+        "population": 91613,
+        "density": 82.33
+    },
+    {
+        "id": "1403",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "garwoliński",
+        "capitals": [
+            "Garwolin"
+        ],
+        "plates": [
+            "WG"
+        ],
+        "population": 108940,
+        "density": 84.79
+    },
+    {
+        "id": "2261",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM",
+            "city"
+        ],
+        "name": "Gdańsk",
+        "capitals": [
+            "Gdańsk"
+        ],
+        "plates": [
+            "GD"
+        ],
+        "population": 471525,
+        "density": 1799.99
+    },
+    {
+        "id": "2204",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "gdański",
+        "capitals": [
+            "Pruszcz Gdański"
+        ],
+        "plates": [
+            "GDA"
+        ],
+        "population": 119362,
+        "density": 150.38
+    },
+    {
+        "id": "2262",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM",
+            "city"
+        ],
+        "name": "Gdynia",
+        "capitals": [
+            "Gdynia"
+        ],
+        "plates": [
+            "GA"
+        ],
+        "population": 245867,
+        "density": 1819.35
+    },
+    {
+        "id": "2806",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "giżycki",
+        "capitals": [
+            "Giżycko"
+        ],
+        "plates": [
+            "NGI"
+        ],
+        "population": 56465,
+        "density": 50.44
+    },
+    {
+        "id": "2466",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Gliwice",
+        "capitals": [
+            "Gliwice"
+        ],
+        "plates": [
+            "SG"
+        ],
+        "population": 178186,
+        "density": 1330.94
+    },
+    {
+        "id": "2405",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "gliwicki",
+        "capitals": [
+            "Gliwice"
+        ],
+        "plates": [
+            "SGL"
+        ],
+        "population": 115540,
+        "density": 173.91
+    },
+    {
+        "id": "0203",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "głogowski",
+        "capitals": [
+            "Głogów"
+        ],
+        "plates": [
+            "DGL"
+        ],
+        "population": 88852,
+        "density": 200.45
+    },
+    {
+        "id": "1602",
+        "parent": "16",
+        "tags": [
+            "county",
+            "voiv-OP"
+        ],
+        "name": "głubczycki",
+        "capitals": [
+            "Głubczyce"
+        ],
+        "plates": [
+            "OGL"
+        ],
+        "population": 45291,
+        "density": 67.33
+    },
+    {
+        "id": "3003",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "gnieźnieński",
+        "capitals": [
+            "Gniezno"
+        ],
+        "plates": [
+            "PGN"
+        ],
+        "population": 145393,
+        "density": 115.85
+    },
+    {
+        "id": "3204",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "goleniowski",
+        "capitals": [
+            "Goleniów"
+        ],
+        "plates": [
+            "ZGL"
+        ],
+        "population": 82396,
+        "density": 51
+    },
+    {
+        "id": "0405",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "golubsko-dobrzyński",
+        "capitals": [
+            "Golub-Dobrzyń"
+        ],
+        "plates": [
+            "CGD"
+        ],
+        "population": 44952,
+        "density": 73.35
+    },
+    {
+        "id": "2818",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "gołdapski",
+        "capitals": [
+            "Gołdap"
+        ],
+        "plates": [
+            "NGO"
+        ],
+        "population": 26625,
+        "density": 34.48
+    },
+    {
+        "id": "1205",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "gorlicki",
+        "capitals": [
+            "Gorlice"
+        ],
+        "plates": [
+            "KGR"
+        ],
+        "population": 108778,
+        "density": 112.55
+    },
+    {
+        "id": "0801",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB"
+        ],
+        "name": "gorzowski",
+        "capitals": [
+            "Gorzów Wielkopolski"
+        ],
+        "plates": [
+            "FGW"
+        ],
+        "population": 72054,
+        "density": 59.34
+    },
+    {
+        "id": "0861",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB",
+            "city"
+        ],
+        "name": "Gorzów Wielkopolski",
+        "capitals": [
+            "Gorzów Wielkopolski"
+        ],
+        "plates": [
+            "FG"
+        ],
+        "population": 123341,
+        "density": 1438.88
+    },
+    {
+        "id": "1404",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "gostyniński",
+        "capitals": [
+            "Gostynin"
+        ],
+        "plates": [
+            "WGS"
+        ],
+        "population": 44761,
+        "density": 72.8
+    },
+    {
+        "id": "3004",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "gostyński",
+        "capitals": [
+            "Gostyń"
+        ],
+        "plates": [
+            "PGS"
+        ],
+        "population": 75907,
+        "density": 93.68
+    },
+    {
+        "id": "0204",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "górowski",
+        "capitals": [
+            "Góra"
+        ],
+        "plates": [
+            "DGR"
+        ],
+        "population": 34698,
+        "density": 47
+    },
+    {
+        "id": "2004",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "grajewski",
+        "capitals": [
+            "Grajewo"
+        ],
+        "plates": [
+            "BGR"
+        ],
+        "population": 47039,
+        "density": 48.61
+    },
+    {
+        "id": "1405",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "grodziski",
+        "capitals": [
+            "Grodzisk Mazowiecki"
+        ],
+        "plates": [
+            "WGM"
+        ],
+        "population": 96698,
+        "density": 263.45
+    },
+    {
+        "id": "3005",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "grodziski",
+        "capitals": [
+            "Grodzisk Mazowiecki"
+        ],
+        "plates": [
+            "WGM"
+        ],
+        "population": 96698,
+        "density": 263.45
+    },
+    {
+        "id": "1406",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "grójecki",
+        "capitals": [
+            "Grójec"
+        ],
+        "plates": [
+            "WGR",
+            "AGR"
+        ],
+        "population": 98173,
+        "density": 77.44
+    },
+    {
+        "id": "0462",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP",
+            "city"
+        ],
+        "name": "Grudziądz",
+        "capitals": [
+            "Grudziądz"
+        ],
+        "plates": [
+            "CG"
+        ],
+        "population": 94076,
+        "density": 1628.74
+    },
+    {
+        "id": "0406",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "grudziądzki",
+        "capitals": [
+            "Grudziądz"
+        ],
+        "plates": [
+            "CGR"
+        ],
+        "population": 40202,
+        "density": 55.24
+    },
+    {
+        "id": "3205",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "gryficki",
+        "capitals": [
+            "Gryfice"
+        ],
+        "plates": [
+            "ZGY"
+        ],
+        "population": 60025,
+        "density": 58.79
+    },
+    {
+        "id": "3206",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "gryfiński",
+        "capitals": [
+            "Gryfino"
+        ],
+        "plates": [
+            "ZGR"
+        ],
+        "population": 81598,
+        "density": 43.66
+    },
+    {
+        "id": "2005",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "hajnowski",
+        "capitals": [
+            "Hajnówka"
+        ],
+        "plates": [
+            "BHA"
+        ],
+        "population": 42293,
+        "density": 26.05
+    },
+    {
+        "id": "0604",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "hrubieszowski",
+        "capitals": [
+            "Hrubieszów"
+        ],
+        "plates": [
+            "LHR"
+        ],
+        "population": 62473,
+        "density": 49.27
+    },
+    {
+        "id": "2807",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "iławski",
+        "capitals": [
+            "Iława"
+        ],
+        "plates": [
+            "NIL"
+        ],
+        "population": 92826,
+        "density": 67.01
+    },
+    {
+        "id": "0407",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "inowrocławski",
+        "capitals": [
+            "Inowrocław"
+        ],
+        "plates": [
+            "CIN"
+        ],
+        "population": 159311,
+        "density": 130.03
+    },
+    {
+        "id": "0605",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "janowski",
+        "capitals": [
+            "Janów Lubelski"
+        ],
+        "plates": [
+            "LJA"
+        ],
+        "population": 45503,
+        "density": 51.99
+    },
+    {
+        "id": "3006",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "jarociński",
+        "capitals": [
+            "Jarocin"
+        ],
+        "plates": [
+            "PJA"
+        ],
+        "population": 71507,
+        "density": 121.76
+    },
+    {
+        "id": "1804",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "jarosławski",
+        "capitals": [
+            "Jarosław"
+        ],
+        "plates": [
+            "RJA"
+        ],
+        "population": 120097,
+        "density": 116.75
+    },
+    {
+        "id": "1805",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "jasielski",
+        "capitals": [
+            "Jasło"
+        ],
+        "plates": [
+            "RJS",
+            "YJS"
+        ],
+        "population": 113226,
+        "density": 136.27
+    },
+    {
+        "id": "2467",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Jastrzębie-Zdrój",
+        "capitals": [
+            "Jastrzębie-Zdrój"
+        ],
+        "plates": [
+            "SJZ"
+        ],
+        "population": 88425,
+        "density": 1036.27
+    },
+    {
+        "id": "0205",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "jaworski",
+        "capitals": [
+            "Jawor"
+        ],
+        "plates": [
+            "DJA"
+        ],
+        "population": 49937,
+        "density": 85.87
+    },
+    {
+        "id": "2468",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Jaworzno",
+        "capitals": [
+            "Jaworzno"
+        ],
+        "plates": [
+            "SJ"
+        ],
+        "population": 90759,
+        "density": 594.79
+    },
+    {
+        "id": "0261",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS",
+            "city"
+        ],
+        "name": "Jelenia Góra",
+        "capitals": [
+            "Jelenia Góra"
+        ],
+        "plates": [
+            "DJ"
+        ],
+        "population": 78778,
+        "density": 721.28
+    },
+    {
+        "id": "2602",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "jędrzejowski",
+        "capitals": [
+            "Jędrzejów"
+        ],
+        "plates": [
+            "TJE"
+        ],
+        "population": 85179,
+        "density": 67.77
+    },
+    {
+        "id": "3007",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "kaliski",
+        "capitals": [
+            "Kalisz"
+        ],
+        "plates": [
+            "PKA"
+        ],
+        "population": 83035,
+        "density": 71.58
+    },
+    {
+        "id": "3061",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP",
+            "city"
+        ],
+        "name": "Kalisz",
+        "capitals": [
+            "Kalisz"
+        ],
+        "plates": [
+            "PK"
+        ],
+        "population": 99761,
+        "density": 1437.06
+    },
+    {
+        "id": "0207",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "kamiennogórski",
+        "capitals": [
+            "Kamienna Góra"
+        ],
+        "plates": [
+            "DKA"
+        ],
+        "population": 43055,
+        "density": 108.81
+    },
+    {
+        "id": "3207",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "kamieński",
+        "capitals": [
+            "Kamień Pomorski"
+        ],
+        "plates": [
+            "ZKA"
+        ],
+        "population": 46861,
+        "density": 46.53
+    },
+    {
+        "id": "0206",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "karkonoski",
+        "capitals": [
+            "Jelenia Góra"
+        ],
+        "plates": [
+            "DJE"
+        ],
+        "population": 63388,
+        "density": 101.07
+    },
+    {
+        "id": "2205",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "kartuski",
+        "capitals": [
+            "Kartuzy"
+        ],
+        "plates": [
+            "GKA",
+            "GKY",
+            "GKZ"
+        ],
+        "population": 140770,
+        "density": 125.63
+    },
+    {
+        "id": "2469",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Katowice",
+        "capitals": [
+            "Katowice"
+        ],
+        "plates": [
+            "SK"
+        ],
+        "population": 291774,
+        "density": 1772.19
+    },
+    {
+        "id": "2603",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "kazimierski",
+        "capitals": [
+            "Kazimierza Wielka"
+        ],
+        "plates": [
+            "TKA"
+        ],
+        "population": 33489,
+        "density": 79.32
+    },
+    {
+        "id": "1603",
+        "parent": "16",
+        "tags": [
+            "county",
+            "voiv-OP"
+        ],
+        "name": "kędzierzyńsko-kozielski",
+        "capitals": [
+            "Kędzierzyn-Koźle"
+        ],
+        "plates": [
+            "OK"
+        ],
+        "population": 93544,
+        "density": 149.64
+    },
+    {
+        "id": "3008",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "kępiński",
+        "capitals": [
+            "Kępno"
+        ],
+        "plates": [
+            "PKE"
+        ],
+        "population": 56428,
+        "density": 92.77
+    },
+    {
+        "id": "2808",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "kętrzyński",
+        "capitals": [
+            "Kętrzyn"
+        ],
+        "plates": [
+            "NKE"
+        ],
+        "population": 62054,
+        "density": 51.16
+    },
+    {
+        "id": "2661",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK",
+            "city"
+        ],
+        "name": "Kielce",
+        "capitals": [
+            "Kielce"
+        ],
+        "plates": [
+            "TK"
+        ],
+        "population": 194218,
+        "density": 1771.25
+    },
+    {
+        "id": "2604",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "kielecki",
+        "capitals": [
+            "Kielce"
+        ],
+        "plates": [
+            "TKI",
+            "TKC",
+            "TKM",
+            "TKP"
+        ],
+        "population": 211259,
+        "density": 94.06
+    },
+    {
+        "id": "1604",
+        "parent": "16",
+        "tags": [
+            "county",
+            "voiv-OP"
+        ],
+        "name": "kluczborski",
+        "capitals": [
+            "Kluczbork"
+        ],
+        "plates": [
+            "OKL"
+        ],
+        "population": 65266,
+        "density": 76.61
+    },
+    {
+        "id": "2406",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "kłobucki",
+        "capitals": [
+            "Kłobuck"
+        ],
+        "plates": [
+            "SKL"
+        ],
+        "population": 84501,
+        "density": 95.1
+    },
+    {
+        "id": "0208",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "kłodzki",
+        "capitals": [
+            "Kłodzko"
+        ],
+        "plates": [
+            "DKL"
+        ],
+        "population": 157191,
+        "density": 95.66
+    },
+    {
+        "id": "1806",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "kolbuszowski",
+        "capitals": [
+            "Kolbuszowa"
+        ],
+        "plates": [
+            "RKL"
+        ],
+        "population": 62196,
+        "density": 80.44
+    },
+    {
+        "id": "2006",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "kolneński",
+        "capitals": [
+            "Kolno"
+        ],
+        "plates": [
+            "BKL"
+        ],
+        "population": 37983,
+        "density": 40.4
+    },
+    {
+        "id": "3009",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "kolski",
+        "capitals": [
+            "Koło"
+        ],
+        "plates": [
+            "PKL"
+        ],
+        "population": 86473,
+        "density": 85.56
+    },
+    {
+        "id": "3208",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "kołobrzeski",
+        "capitals": [
+            "Kołobrzeg"
+        ],
+        "plates": [
+            "ZKL"
+        ],
+        "population": 79399,
+        "density": 109.57
+    },
+    {
+        "id": "2605",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "konecki",
+        "capitals": [
+            "Końskie"
+        ],
+        "plates": [
+            "TKN"
+        ],
+        "population": 79525,
+        "density": 69.78
+    },
+    {
+        "id": "3062",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP",
+            "city"
+        ],
+        "name": "Konin",
+        "capitals": [
+            "Konin"
+        ],
+        "plates": [
+            "PKO",
+            "PN"
+        ],
+        "population": 73176,
+        "density": 889.03
+    },
+    {
+        "id": "3010",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "koniński",
+        "capitals": [
+            "Konin"
+        ],
+        "plates": [
+            "PKN"
+        ],
+        "population": 130005,
+        "density": 82.37
+    },
+    {
+        "id": "3261",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP",
+            "city"
+        ],
+        "name": "Koszalin",
+        "capitals": [
+            "Koszalin"
+        ],
+        "plates": [
+            "ZK"
+        ],
+        "population": 106880,
+        "density": 1086.84
+    },
+    {
+        "id": "3209",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "koszaliński",
+        "capitals": [
+            "Koszalin"
+        ],
+        "plates": [
+            "ZKO"
+        ],
+        "population": 66465,
+        "density": 40.2
+    },
+    {
+        "id": "3011",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "kościański",
+        "capitals": [
+            "Kościan"
+        ],
+        "plates": [
+            "PKS"
+        ],
+        "population": 79114,
+        "density": 109.51
+    },
+    {
+        "id": "2206",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "kościerski",
+        "capitals": [
+            "Kościerzyna"
+        ],
+        "plates": [
+            "GKS"
+        ],
+        "population": 72808,
+        "density": 62.46
+    },
+    {
+        "id": "1407",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "kozienicki",
+        "capitals": [
+            "Kozienice"
+        ],
+        "plates": [
+            "WKZ"
+        ],
+        "population": 59793,
+        "density": 65.27
+    },
+    {
+        "id": "1206",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "krakowski",
+        "capitals": [
+            "Kraków"
+        ],
+        "plates": [
+            "KRA",
+            "KRK"
+        ],
+        "population": 280403,
+        "density": 227.87
+    },
+    {
+        "id": "1261",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA",
+            "city"
+        ],
+        "name": "Kraków",
+        "capitals": [
+            "Kraków"
+        ],
+        "plates": [
+            "KR",
+            "KK"
+        ],
+        "population": 780981,
+        "density": 2389.42
+    },
+    {
+        "id": "1605",
+        "parent": "16",
+        "tags": [
+            "county",
+            "voiv-OP"
+        ],
+        "name": "krapkowicki",
+        "capitals": [
+            "Krapkowice"
+        ],
+        "plates": [
+            "OKR"
+        ],
+        "population": 63580,
+        "density": 143.91
+    },
+    {
+        "id": "0606",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "krasnostawski",
+        "capitals": [
+            "Krasnystaw"
+        ],
+        "plates": [
+            "LKS"
+        ],
+        "population": 62940,
+        "density": 61.02
+    },
+    {
+        "id": "0607",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "kraśnicki",
+        "capitals": [
+            "Kraśnik"
+        ],
+        "plates": [
+            "LKR"
+        ],
+        "population": 95064,
+        "density": 94.56
+    },
+    {
+        "id": "1861",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK",
+            "city"
+        ],
+        "name": "Krosno",
+        "capitals": [
+            "Krosno"
+        ],
+        "plates": [
+            "RK"
+        ],
+        "population": 46139,
+        "density": 1060.67
+    },
+    {
+        "id": "0802",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "krośnieński",
+        "capitals": [
+            "Krosno"
+        ],
+        "plates": [
+            "RKR",
+            "YKR"
+        ],
+        "population": 112195,
+        "density": 112.97
+    },
+    {
+        "id": "1807",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "krośnieński",
+        "capitals": [
+            "Krosno"
+        ],
+        "plates": [
+            "RKR",
+            "YKR"
+        ],
+        "population": 112195,
+        "density": 112.97
+    },
+    {
+        "id": "3012",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "krotoszyński",
+        "capitals": [
+            "Krotoszyn"
+        ],
+        "plates": [
+            "PKR"
+        ],
+        "population": 77182,
+        "density": 108.15
+    },
+    {
+        "id": "1002",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "kutnowski",
+        "capitals": [
+            "Kutno"
+        ],
+        "plates": [
+            "EKU"
+        ],
+        "population": 96126,
+        "density": 108.39
+    },
+    {
+        "id": "2207",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "kwidzyński",
+        "capitals": [
+            "Kwidzyn"
+        ],
+        "plates": [
+            "GKW"
+        ],
+        "population": 83028,
+        "density": 99.47
+    },
+    {
+        "id": "1408",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "legionowski",
+        "capitals": [
+            "Legionowo"
+        ],
+        "plates": [
+            "WL"
+        ],
+        "population": 119306,
+        "density": 305.32
+    },
+    {
+        "id": "0262",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS",
+            "city"
+        ],
+        "name": "Legnica",
+        "capitals": [
+            "Legnica"
+        ],
+        "plates": [
+            "DL"
+        ],
+        "population": 99072,
+        "density": 1760.03
+    },
+    {
+        "id": "0209",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "legnicki",
+        "capitals": [
+            "Legnica"
+        ],
+        "plates": [
+            "DLE"
+        ],
+        "population": 55210,
+        "density": 74.2
+    },
+    {
+        "id": "1821",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "leski",
+        "capitals": [
+            "Lesko"
+        ],
+        "plates": [
+            "RLS"
+        ],
+        "population": 26413,
+        "density": 31.63
+    },
+    {
+        "id": "3013",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "leszczyński",
+        "capitals": [
+            "Leszno"
+        ],
+        "plates": [
+            "PLE"
+        ],
+        "population": 57544,
+        "density": 71.41
+    },
+    {
+        "id": "3063",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP",
+            "city"
+        ],
+        "name": "Leszno",
+        "capitals": [
+            "Leszno"
+        ],
+        "plates": [
+            "PL"
+        ],
+        "population": 63323,
+        "density": 1987.54
+    },
+    {
+        "id": "1808",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "leżajski",
+        "capitals": [
+            "Leżajsk"
+        ],
+        "plates": [
+            "RLE"
+        ],
+        "population": 69233,
+        "density": 118.61
+    },
+    {
+        "id": "2208",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "lęborski",
+        "capitals": [
+            "Lębork"
+        ],
+        "plates": [
+            "GLE"
+        ],
+        "population": 66069,
+        "density": 93.35
+    },
+    {
+        "id": "2809",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "lidzbarski",
+        "capitals": [
+            "Lidzbark Warmiński"
+        ],
+        "plates": [
+            "NLI"
+        ],
+        "population": 41039,
+        "density": 44.37
+    },
+    {
+        "id": "1207",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "limanowski",
+        "capitals": [
+            "Limanowa"
+        ],
+        "plates": [
+            "KLI"
+        ],
+        "population": 131997,
+        "density": 138.76
+    },
+    {
+        "id": "0408",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "lipnowski",
+        "capitals": [
+            "Lipno"
+        ],
+        "plates": [
+            "CLI"
+        ],
+        "population": 65574,
+        "density": 64.56
+    },
+    {
+        "id": "1409",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "lipski",
+        "capitals": [
+            "Lipsko"
+        ],
+        "plates": [
+            "WLI"
+        ],
+        "population": 33738,
+        "density": 45.58
+    },
+    {
+        "id": "1809",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "lubaczowski",
+        "capitals": [
+            "Lubaczów"
+        ],
+        "plates": [
+            "RLU"
+        ],
+        "population": 54979,
+        "density": 42.02
+    },
+    {
+        "id": "0210",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "lubański",
+        "capitals": [
+            "Lubań"
+        ],
+        "plates": [
+            "DLB"
+        ],
+        "population": 54070,
+        "density": 126.24
+    },
+    {
+        "id": "0608",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "lubartowski",
+        "capitals": [
+            "Lubartów"
+        ],
+        "plates": [
+            "LLB"
+        ],
+        "population": 88152,
+        "density": 68.4
+    },
+    {
+        "id": "0609",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "lubelski",
+        "capitals": [
+            "Lublin"
+        ],
+        "plates": [
+            "LUB"
+        ],
+        "population": 156002,
+        "density": 92.88
+    },
+    {
+        "id": "0211",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "lubiński",
+        "capitals": [
+            "Lubin"
+        ],
+        "plates": [
+            "DLU"
+        ],
+        "population": 106106,
+        "density": 149.1
+    },
+    {
+        "id": "0663",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU",
+            "city"
+        ],
+        "name": "Lublin",
+        "capitals": [
+            "Lublin"
+        ],
+        "plates": [
+            "LU"
+        ],
+        "population": 339547,
+        "density": 2302.48
+    },
+    {
+        "id": "2407",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "lubliniecki",
+        "capitals": [
+            "Lubliniec"
+        ],
+        "plates": [
+            "SLU"
+        ],
+        "population": 76326,
+        "density": 92.83
+    },
+    {
+        "id": "0212",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "lwówecki",
+        "capitals": [
+            "Lwówek Śląski"
+        ],
+        "plates": [
+            "DLW"
+        ],
+        "population": 45770,
+        "density": 64.49
+    },
+    {
+        "id": "1810",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "łańcucki",
+        "capitals": [
+            "Łańcut"
+        ],
+        "plates": [
+            "RLA"
+        ],
+        "population": 81144,
+        "density": 179.59
+    },
+    {
+        "id": "1003",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "łaski",
+        "capitals": [
+            "Łask"
+        ],
+        "plates": [
+            "ELA"
+        ],
+        "population": 49794,
+        "density": 80.54
+    },
+    {
+        "id": "1004",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "łęczycki",
+        "capitals": [
+            "Łęczyca"
+        ],
+        "plates": [
+            "ELE"
+        ],
+        "population": 49562,
+        "density": 64.14
+    },
+    {
+        "id": "0610",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "łęczyński",
+        "capitals": [
+            "Łęczna"
+        ],
+        "plates": [
+            "LLE"
+        ],
+        "population": 57298,
+        "density": 90
+    },
+    {
+        "id": "3218",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "łobeski",
+        "capitals": [
+            "Łobez"
+        ],
+        "plates": [
+            "ZLO"
+        ],
+        "population": 36514,
+        "density": 34.28
+    },
+    {
+        "id": "2062",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD",
+            "city"
+        ],
+        "name": "Łomża",
+        "capitals": [
+            "Łomża"
+        ],
+        "plates": [
+            "BL"
+        ],
+        "population": 62795,
+        "density": 1922.1
+    },
+    {
+        "id": "2007",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "łomżyński",
+        "capitals": [
+            "Łomża"
+        ],
+        "plates": [
+            "BLM"
+        ],
+        "population": 50894,
+        "density": 37.57
+    },
+    {
+        "id": "1410",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "łosicki",
+        "capitals": [
+            "Łosice"
+        ],
+        "plates": [
+            "WLS"
+        ],
+        "population": 30658,
+        "density": 39.69
+    },
+    {
+        "id": "1005",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "łowicki",
+        "capitals": [
+            "Łowicz"
+        ],
+        "plates": [
+            "ELC"
+        ],
+        "population": 77842,
+        "density": 78.77
+    },
+    {
+        "id": "1006",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "łódzki wschodni",
+        "capitals": [
+            "Łódź"
+        ],
+        "plates": [
+            "ELW"
+        ],
+        "population": 72408,
+        "density": 144.89
+    },
+    {
+        "id": "1061",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD",
+            "city"
+        ],
+        "name": "Łódź",
+        "capitals": [
+            "Łódź"
+        ],
+        "plates": [
+            "EL",
+            "ED"
+        ],
+        "population": 677286,
+        "density": 2309.59
+    },
+    {
+        "id": "0611",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "łukowski",
+        "capitals": [
+            "Łuków"
+        ],
+        "plates": [
+            "LLU"
+        ],
+        "population": 106591,
+        "density": 76.45
+    },
+    {
+        "id": "1411",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "makowski",
+        "capitals": [
+            "Maków Mazowiecki"
+        ],
+        "plates": [
+            "WMA"
+        ],
+        "population": 44667,
+        "density": 41.96
+    },
+    {
+        "id": "2209",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "malborski",
+        "capitals": [
+            "Malbork"
+        ],
+        "plates": [
+            "GMB",
+            "XMB"
+        ],
+        "population": 63401,
+        "density": 128.28
+    },
+    {
+        "id": "1208",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "miechowski",
+        "capitals": [
+            "Miechów"
+        ],
+        "plates": [
+            "KMI"
+        ],
+        "population": 48689,
+        "density": 71.99
+    },
+    {
+        "id": "1811",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "mielecki",
+        "capitals": [
+            "Mielec"
+        ],
+        "plates": [
+            "RMI"
+        ],
+        "population": 136672,
+        "density": 155.22
+    },
+    {
+        "id": "3014",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "międzychodzki",
+        "capitals": [
+            "Międzychód"
+        ],
+        "plates": [
+            "PMI"
+        ],
+        "population": 36686,
+        "density": 49.82
+    },
+    {
+        "id": "0803",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB"
+        ],
+        "name": "międzyrzecki",
+        "capitals": [
+            "Międzyrzecz"
+        ],
+        "plates": [
+            "FMI"
+        ],
+        "population": 57374,
+        "density": 41.35
+    },
+    {
+        "id": "2408",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "mikołowski",
+        "capitals": [
+            "Mikołów"
+        ],
+        "plates": [
+            "SMI"
+        ],
+        "population": 99211,
+        "density": 425.62
+    },
+    {
+        "id": "0213",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "milicki",
+        "capitals": [
+            "Milicz"
+        ],
+        "plates": [
+            "DMI"
+        ],
+        "population": 36913,
+        "density": 51.63
+    },
+    {
+        "id": "1412",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "miński",
+        "capitals": [
+            "Mińsk Mazowiecki"
+        ],
+        "plates": [
+            "WM"
+        ],
+        "population": 154942,
+        "density": 133.14
+    },
+    {
+        "id": "1413",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "mławski",
+        "capitals": [
+            "Mława"
+        ],
+        "plates": [
+            "WML"
+        ],
+        "population": 72448,
+        "density": 61.3
+    },
+    {
+        "id": "0409",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "mogileński",
+        "capitals": [
+            "Mogilno"
+        ],
+        "plates": [
+            "CMG"
+        ],
+        "population": 45514,
+        "density": 67.42
+    },
+    {
+        "id": "2008",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "moniecki",
+        "capitals": [
+            "Mońki"
+        ],
+        "plates": [
+            "BMN"
+        ],
+        "population": 40251,
+        "density": 29.13
+    },
+    {
+        "id": "2810",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "mrągowski",
+        "capitals": [
+            "Mrągowo"
+        ],
+        "plates": [
+            "NMR"
+        ],
+        "population": 49660,
+        "density": 46.61
+    },
+    {
+        "id": "2470",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Mysłowice",
+        "capitals": [
+            "Mysłowice"
+        ],
+        "plates": [
+            "SM"
+        ],
+        "population": 74601,
+        "density": 1136.86
+    },
+    {
+        "id": "2409",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "myszkowski",
+        "capitals": [
+            "Myszków"
+        ],
+        "plates": [
+            "SMY"
+        ],
+        "population": 70709,
+        "density": 147.54
+    },
+    {
+        "id": "1209",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "myślenicki",
+        "capitals": [
+            "Myślenice"
+        ],
+        "plates": [
+            "KMY"
+        ],
+        "population": 127872,
+        "density": 189.98
+    },
+    {
+        "id": "3210",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "myśliborski",
+        "capitals": [
+            "Myślibórz"
+        ],
+        "plates": [
+            "ZMY"
+        ],
+        "population": 65426,
+        "density": 55.33
+    },
+    {
+        "id": "0410",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "nakielski",
+        "capitals": [
+            "Nakło nad Notecią"
+        ],
+        "plates": [
+            "CNA"
+        ],
+        "population": 86226,
+        "density": 76.98
+    },
+    {
+        "id": "1606",
+        "parent": "16",
+        "tags": [
+            "county",
+            "voiv-OP"
+        ],
+        "name": "namysłowski",
+        "capitals": [
+            "Namysłów"
+        ],
+        "plates": [
+            "ONA"
+        ],
+        "population": 42680,
+        "density": 57.05
+    },
+    {
+        "id": "2811",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "nidzicki",
+        "capitals": [
+            "Nidzica"
+        ],
+        "plates": [
+            "NNI"
+        ],
+        "population": 32753,
+        "density": 34.09
+    },
+    {
+        "id": "1812",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "niżański",
+        "capitals": [
+            "Nisko"
+        ],
+        "plates": [
+            "RNI"
+        ],
+        "population": 66430,
+        "density": 84.56
+    },
+    {
+        "id": "1414",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "nowodworski",
+        "capitals": [
+            "Nowy Dwór Gdański"
+        ],
+        "plates": [
+            "GND"
+        ],
+        "population": 35483,
+        "density": 52.64
+    },
+    {
+        "id": "2210",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "nowodworski",
+        "capitals": [
+            "Nowy Dwór Gdański"
+        ],
+        "plates": [
+            "GND"
+        ],
+        "population": 35483,
+        "density": 52.64
+    },
+    {
+        "id": "2812",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "nowomiejski",
+        "capitals": [
+            "Nowe Miasto Lubawskie"
+        ],
+        "plates": [
+            "NNM"
+        ],
+        "population": 43769,
+        "density": 63.07
+    },
+    {
+        "id": "1210",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "nowosądecki",
+        "capitals": [
+            "Nowy Sącz"
+        ],
+        "plates": [
+            "KNS"
+        ],
+        "population": 216994,
+        "density": 140.01
+    },
+    {
+        "id": "0804",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB"
+        ],
+        "name": "nowosolski",
+        "capitals": [
+            "Nowa Sól"
+        ],
+        "plates": [
+            "FNW"
+        ],
+        "population": 86014,
+        "density": 111.6
+    },
+    {
+        "id": "1211",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "nowotarski",
+        "capitals": [
+            "Nowy Targ"
+        ],
+        "plates": [
+            "KNT"
+        ],
+        "population": 191882,
+        "density": 130.09
+    },
+    {
+        "id": "3015",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "nowotomyski",
+        "capitals": [
+            "Nowy Tomyśl"
+        ],
+        "plates": [
+            "PNT"
+        ],
+        "population": 75675,
+        "density": 74.66
+    },
+    {
+        "id": "1262",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA",
+            "city"
+        ],
+        "name": "Nowy Sącz",
+        "capitals": [
+            "Nowy Sącz"
+        ],
+        "plates": [
+            "KN"
+        ],
+        "population": 83762,
+        "density": 1454.71
+    },
+    {
+        "id": "1607",
+        "parent": "16",
+        "tags": [
+            "county",
+            "voiv-OP"
+        ],
+        "name": "nyski",
+        "capitals": [
+            "Nysa"
+        ],
+        "plates": [
+            "ONY"
+        ],
+        "population": 135524,
+        "density": 110.73
+    },
+    {
+        "id": "3016",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "obornicki",
+        "capitals": [
+            "Oborniki"
+        ],
+        "plates": [
+            "POB"
+        ],
+        "population": 59826,
+        "density": 84.14
+    },
+    {
+        "id": "2813",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "olecki",
+        "capitals": [
+            "Olecko"
+        ],
+        "plates": [
+            "NOE"
+        ],
+        "population": 34050,
+        "density": 38.98
+    },
+    {
+        "id": "1608",
+        "parent": "16",
+        "tags": [
+            "county",
+            "voiv-OP"
+        ],
+        "name": "oleski",
+        "capitals": [
+            "Olesno"
+        ],
+        "plates": [
+            "OOL"
+        ],
+        "population": 64167,
+        "density": 65.92
+    },
+    {
+        "id": "0214",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "oleśnicki",
+        "capitals": [
+            "Oleśnica"
+        ],
+        "plates": [
+            "DOL"
+        ],
+        "population": 107328,
+        "density": 102.28
+    },
+    {
+        "id": "1212",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "olkuski",
+        "capitals": [
+            "Olkusz"
+        ],
+        "plates": [
+            "KOL"
+        ],
+        "population": 110900,
+        "density": 179.42
+    },
+    {
+        "id": "2862",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN",
+            "city"
+        ],
+        "name": "Olsztyn",
+        "capitals": [
+            "Olsztyn"
+        ],
+        "plates": [
+            "NO"
+        ],
+        "population": 171853,
+        "density": 1945.58
+    },
+    {
+        "id": "2814",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "olsztyński",
+        "capitals": [
+            "Olsztyn"
+        ],
+        "plates": [
+            "NOL"
+        ],
+        "population": 127205,
+        "density": 44.82
+    },
+    {
+        "id": "0215",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "oławski",
+        "capitals": [
+            "Oława"
+        ],
+        "plates": [
+            "DOA"
+        ],
+        "population": 76831,
+        "density": 146.6
+    },
+    {
+        "id": "2606",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "opatowski",
+        "capitals": [
+            "Opatów"
+        ],
+        "plates": [
+            "TOP"
+        ],
+        "population": 51834,
+        "density": 56.9
+    },
+    {
+        "id": "1007",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "opoczyński",
+        "capitals": [
+            "Opoczno"
+        ],
+        "plates": [
+            "EOP"
+        ],
+        "population": 75847,
+        "density": 72.92
+    },
+    {
+        "id": "1661",
+        "parent": "16",
+        "tags": [
+            "county",
+            "voiv-OP",
+            "city"
+        ],
+        "name": "Opole",
+        "capitals": [
+            "Opole"
+        ],
+        "plates": [
+            "OP"
+        ],
+        "population": 128012,
+        "density": 859.83
+    },
+    {
+        "id": "0612",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "opolski",
+        "capitals": [
+            "Opole Lubelskie"
+        ],
+        "plates": [
+            "LOP"
+        ],
+        "population": 58952,
+        "density": 72.78
+    },
+    {
+        "id": "1609",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "opolski",
+        "capitals": [
+            "Opole Lubelskie"
+        ],
+        "plates": [
+            "LOP"
+        ],
+        "population": 58952,
+        "density": 72.78
+    },
+    {
+        "id": "1415",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "ostrołęcki",
+        "capitals": [
+            "Ostrołęka"
+        ],
+        "plates": [
+            "WOS"
+        ],
+        "population": 88624,
+        "density": 42.33
+    },
+    {
+        "id": "1461",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ",
+            "city"
+        ],
+        "name": "Ostrołęka",
+        "capitals": [
+            "Ostrołęka"
+        ],
+        "plates": [
+            "WO",
+            "AO"
+        ],
+        "population": 51893,
+        "density": 1550.9
+    },
+    {
+        "id": "2607",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "ostrowiecki",
+        "capitals": [
+            "Ostrowiec Świętokrzyski"
+        ],
+        "plates": [
+            "TOS"
+        ],
+        "population": 108436,
+        "density": 175.81
+    },
+    {
+        "id": "1416",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "ostrowski",
+        "capitals": [
+            "Ostrów Wielkopolski"
+        ],
+        "plates": [
+            "POS"
+        ],
+        "population": 161581,
+        "density": 139.28
+    },
+    {
+        "id": "3017",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "ostrowski",
+        "capitals": [
+            "Ostrów Wielkopolski"
+        ],
+        "plates": [
+            "POS"
+        ],
+        "population": 161581,
+        "density": 139.28
+    },
+    {
+        "id": "2815",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "ostródzki",
+        "capitals": [
+            "Ostróda"
+        ],
+        "plates": [
+            "NOS",
+            "NOT",
+            "NOX"
+        ],
+        "population": 103895,
+        "density": 58.82
+    },
+    {
+        "id": "3018",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "ostrzeszowski",
+        "capitals": [
+            "Ostrzeszów"
+        ],
+        "plates": [
+            "POT"
+        ],
+        "population": 55436,
+        "density": 71.75
+    },
+    {
+        "id": "1213",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "oświęcimski",
+        "capitals": [
+            "Oświęcim"
+        ],
+        "plates": [
+            "KOS"
+        ],
+        "population": 153125,
+        "density": 377.55
+    },
+    {
+        "id": "1417",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "otwocki",
+        "capitals": [
+            "Otwock"
+        ],
+        "plates": [
+            "WOT"
+        ],
+        "population": 124460,
+        "density": 202.07
+    },
+    {
+        "id": "1008",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "pabianicki",
+        "capitals": [
+            "Pabianice"
+        ],
+        "plates": [
+            "EPA"
+        ],
+        "population": 119225,
+        "density": 242.24
+    },
+    {
+        "id": "1009",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "pajęczański",
+        "capitals": [
+            "Pajęczno"
+        ],
+        "plates": [
+            "EPJ"
+        ],
+        "population": 51071,
+        "density": 63.54
+    },
+    {
+        "id": "0613",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "parczewski",
+        "capitals": [
+            "Parczew"
+        ],
+        "plates": [
+            "LPA"
+        ],
+        "population": 34590,
+        "density": 36.33
+    },
+    {
+        "id": "1418",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "piaseczyński",
+        "capitals": [
+            "Piaseczno"
+        ],
+        "plates": [
+            "WPI",
+            "WPA",
+            "WPW"
+        ],
+        "population": 189516,
+        "density": 305.18
+    },
+    {
+        "id": "2471",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Piekary Śląskie",
+        "capitals": [
+            "Piekary Śląskie"
+        ],
+        "plates": [
+            "SPI"
+        ],
+        "population": 54860,
+        "density": 1372.19
+    },
+    {
+        "id": "3019",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "pilski",
+        "capitals": [
+            "Piła"
+        ],
+        "plates": [
+            "PP"
+        ],
+        "population": 135928,
+        "density": 107.18
+    },
+    {
+        "id": "2608",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "pińczowski",
+        "capitals": [
+            "Pińczów"
+        ],
+        "plates": [
+            "TPI"
+        ],
+        "population": 38691,
+        "density": 63.13
+    },
+    {
+        "id": "1010",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "piotrkowski",
+        "capitals": [
+            "Piotrków Trybunalski"
+        ],
+        "plates": [
+            "EPI"
+        ],
+        "population": 91360,
+        "density": 63.94
+    },
+    {
+        "id": "1062",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD",
+            "city"
+        ],
+        "name": "Piotrków Trybunalski",
+        "capitals": [
+            "Piotrków Trybunalski"
+        ],
+        "plates": [
+            "EP"
+        ],
+        "population": 72785,
+        "density": 1082.47
+    },
+    {
+        "id": "2816",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "piski",
+        "capitals": [
+            "Pisz"
+        ],
+        "plates": [
+            "NPI"
+        ],
+        "population": 55952,
+        "density": 31.53
+    },
+    {
+        "id": "3020",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "pleszewski",
+        "capitals": [
+            "Pleszew"
+        ],
+        "plates": [
+            "PPL"
+        ],
+        "population": 62962,
+        "density": 88.3
+    },
+    {
+        "id": "1462",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ",
+            "city"
+        ],
+        "name": "Płock",
+        "capitals": [
+            "Płock"
+        ],
+        "plates": [
+            "WP"
+        ],
+        "population": 118989,
+        "density": 1351.53
+    },
+    {
+        "id": "1419",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "płocki",
+        "capitals": [
+            "Płock"
+        ],
+        "plates": [
+            "WPL"
+        ],
+        "population": 110927,
+        "density": 61.74
+    },
+    {
+        "id": "1420",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "płoński",
+        "capitals": [
+            "Płońsk"
+        ],
+        "plates": [
+            "WPN"
+        ],
+        "population": 86868,
+        "density": 62.96
+    },
+    {
+        "id": "1011",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "poddębicki",
+        "capitals": [
+            "Poddębice"
+        ],
+        "plates": [
+            "EPD"
+        ],
+        "population": 41037,
+        "density": 46.57
+    },
+    {
+        "id": "3211",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "policki",
+        "capitals": [
+            "Police"
+        ],
+        "plates": [
+            "ZPL"
+        ],
+        "population": 81229,
+        "density": 122.09
+    },
+    {
+        "id": "0216",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "polkowicki",
+        "capitals": [
+            "Polkowice"
+        ],
+        "plates": [
+            "DPL"
+        ],
+        "population": 63082,
+        "density": 80.93
+    },
+    {
+        "id": "3064",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP",
+            "city"
+        ],
+        "name": "Poznań",
+        "capitals": [
+            "Poznań"
+        ],
+        "plates": [
+            "PO",
+            "PY",
+            "PX",
+            "MX"
+        ],
+        "population": 533830,
+        "density": 2038.22
+    },
+    {
+        "id": "3021",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "poznański",
+        "capitals": [
+            "Poznań"
+        ],
+        "plates": [
+            "PZ",
+            "POZ"
+        ],
+        "population": 403417,
+        "density": 212.34
+    },
+    {
+        "id": "1214",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "proszowicki",
+        "capitals": [
+            "Proszowice"
+        ],
+        "plates": [
+            "KPR"
+        ],
+        "population": 43160,
+        "density": 104.03
+    },
+    {
+        "id": "1610",
+        "parent": "16",
+        "tags": [
+            "county",
+            "voiv-OP"
+        ],
+        "name": "prudnicki",
+        "capitals": [
+            "Prudnik"
+        ],
+        "plates": [
+            "OPR"
+        ],
+        "population": 55091,
+        "density": 96.39
+    },
+    {
+        "id": "1421",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "pruszkowski",
+        "capitals": [
+            "Pruszków"
+        ],
+        "plates": [
+            "WPR",
+            "WPP",
+            "WPS"
+        ],
+        "population": 166436,
+        "density": 675.75
+    },
+    {
+        "id": "1422",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "przasnyski",
+        "capitals": [
+            "Przasnysz"
+        ],
+        "plates": [
+            "WPZ"
+        ],
+        "population": 52355,
+        "density": 42.96
+    },
+    {
+        "id": "1813",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "przemyski",
+        "capitals": [
+            "Przemyśl"
+        ],
+        "plates": [
+            "RPR"
+        ],
+        "population": 73968,
+        "density": 61.07
+    },
+    {
+        "id": "1862",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK",
+            "city"
+        ],
+        "name": "Przemyśl",
+        "capitals": [
+            "Przemyśl"
+        ],
+        "plates": [
+            "RP"
+        ],
+        "population": 60442,
+        "density": 1309.12
+    },
+    {
+        "id": "1814",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "przeworski",
+        "capitals": [
+            "Przeworsk"
+        ],
+        "plates": [
+            "RPZ"
+        ],
+        "population": 78227,
+        "density": 112.07
+    },
+    {
+        "id": "1423",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "przysuski",
+        "capitals": [
+            "Przysucha"
+        ],
+        "plates": [
+            "WPY"
+        ],
+        "population": 41360,
+        "density": 51.62
+    },
+    {
+        "id": "2410",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "pszczyński",
+        "capitals": [
+            "Pszczyna"
+        ],
+        "plates": [
+            "SPS"
+        ],
+        "population": 111682,
+        "density": 237.04
+    },
+    {
+        "id": "2211",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "pucki",
+        "capitals": [
+            "Puck"
+        ],
+        "plates": [
+            "GPU"
+        ],
+        "population": 87183,
+        "density": 150.01
+    },
+    {
+        "id": "0614",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "puławski",
+        "capitals": [
+            "Puławy"
+        ],
+        "plates": [
+            "LPU"
+        ],
+        "population": 112835,
+        "density": 120.8
+    },
+    {
+        "id": "1424",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "pułtuski",
+        "capitals": [
+            "Pułtusk"
+        ],
+        "plates": [
+            "WPU"
+        ],
+        "population": 51817,
+        "density": 62.62
+    },
+    {
+        "id": "3212",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "pyrzycki",
+        "capitals": [
+            "Pyrzyce"
+        ],
+        "plates": [
+            "ZPY"
+        ],
+        "population": 39251,
+        "density": 54.06
+    },
+    {
+        "id": "2411",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "raciborski",
+        "capitals": [
+            "Racibórz"
+        ],
+        "plates": [
+            "SRC"
+        ],
+        "population": 107926,
+        "density": 198.48
+    },
+    {
+        "id": "1463",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ",
+            "city"
+        ],
+        "name": "Radom",
+        "capitals": [
+            "Radom"
+        ],
+        "plates": [
+            "WR"
+        ],
+        "population": 210532,
+        "density": 1883.11
+    },
+    {
+        "id": "1425",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "radomski",
+        "capitals": [
+            "Radom"
+        ],
+        "plates": [
+            "WRA"
+        ],
+        "population": 152237,
+        "density": 99.52
+    },
+    {
+        "id": "1012",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "radomszczański",
+        "capitals": [
+            "Radomsko"
+        ],
+        "plates": [
+            "ERA"
+        ],
+        "population": 112255,
+        "density": 77.82
+    },
+    {
+        "id": "0411",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "radziejowski",
+        "capitals": [
+            "Radziejów"
+        ],
+        "plates": [
+            "CRA"
+        ],
+        "population": 40211,
+        "density": 66.22
+    },
+    {
+        "id": "0615",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "radzyński",
+        "capitals": [
+            "Radzyń Podlaski"
+        ],
+        "plates": [
+            "LRA"
+        ],
+        "population": 58604,
+        "density": 60.73
+    },
+    {
+        "id": "3022",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "rawicki",
+        "capitals": [
+            "Rawicz"
+        ],
+        "plates": [
+            "PRA"
+        ],
+        "population": 60233,
+        "density": 108.82
+    },
+    {
+        "id": "1013",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "rawski",
+        "capitals": [
+            "Rawa Mazowiecka"
+        ],
+        "plates": [
+            "ERW"
+        ],
+        "population": 48504,
+        "density": 75.06
+    },
+    {
+        "id": "1815",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "ropczycko-sędziszowski",
+        "capitals": [
+            "Ropczyce"
+        ],
+        "plates": [
+            "RRS"
+        ],
+        "population": 74582,
+        "density": 136.02
+    },
+    {
+        "id": "2472",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Ruda Śląska",
+        "capitals": [
+            "Ruda Śląska"
+        ],
+        "plates": [
+            "SRS",
+            "SL"
+        ],
+        "population": 137030,
+        "density": 1762.9
+    },
+    {
+        "id": "2412",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "rybnicki",
+        "capitals": [
+            "Rybnik"
+        ],
+        "plates": [
+            "SRB"
+        ],
+        "population": 78216,
+        "density": 349.74
+    },
+    {
+        "id": "2473",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Rybnik",
+        "capitals": [
+            "Rybnik"
+        ],
+        "plates": [
+            "SR"
+        ],
+        "population": 137782,
+        "density": 928.7
+    },
+    {
+        "id": "0616",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "rycki",
+        "capitals": [
+            "Ryki"
+        ],
+        "plates": [
+            "LRY"
+        ],
+        "population": 55841,
+        "density": 90.87
+    },
+    {
+        "id": "0412",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "rypiński",
+        "capitals": [
+            "Rypin"
+        ],
+        "plates": [
+            "CRY"
+        ],
+        "population": 43408,
+        "density": 74.02
+    },
+    {
+        "id": "1816",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "rzeszowski",
+        "capitals": [
+            "Rzeszów"
+        ],
+        "plates": [
+            "RZE",
+            "RZZ"
+        ],
+        "population": 169986,
+        "density": 148.18
+    },
+    {
+        "id": "1863",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK",
+            "city"
+        ],
+        "name": "Rzeszów",
+        "capitals": [
+            "Rzeszów"
+        ],
+        "plates": [
+            "RZ"
+        ],
+        "population": 196821,
+        "density": 1554.55
+    },
+    {
+        "id": "2609",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "sandomierski",
+        "capitals": [
+            "Sandomierz"
+        ],
+        "plates": [
+            "TSA"
+        ],
+        "population": 76736,
+        "density": 113.53
+    },
+    {
+        "id": "1817",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "sanocki",
+        "capitals": [
+            "Sanok"
+        ],
+        "plates": [
+            "RSA"
+        ],
+        "population": 94166,
+        "density": 81.43
+    },
+    {
+        "id": "2009",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "sejneński",
+        "capitals": [
+            "Sejny"
+        ],
+        "plates": [
+            "BSE"
+        ],
+        "population": 19807,
+        "density": 23.16
+    },
+    {
+        "id": "0413",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "sępoleński",
+        "capitals": [
+            "Sępólno Krajeńskie"
+        ],
+        "plates": [
+            "CSE"
+        ],
+        "population": 40922,
+        "density": 51.73
+    },
+    {
+        "id": "1464",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ",
+            "city"
+        ],
+        "name": "Siedlce",
+        "capitals": [
+            "Siedlce"
+        ],
+        "plates": [
+            "WS"
+        ],
+        "population": 78258,
+        "density": 2456.31
+    },
+    {
+        "id": "1426",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "siedlecki",
+        "capitals": [
+            "Siedlce"
+        ],
+        "plates": [
+            "WSI"
+        ],
+        "population": 81402,
+        "density": 50.77
+    },
+    {
+        "id": "2474",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Siemianowice Śląskie",
+        "capitals": [
+            "Siemianowice Śląskie"
+        ],
+        "plates": [
+            "SI"
+        ],
+        "population": 66587,
+        "density": 2611.25
+    },
+    {
+        "id": "2010",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "siemiatycki",
+        "capitals": [
+            "Siemiatycze"
+        ],
+        "plates": [
+            "BSI"
+        ],
+        "population": 43910,
+        "density": 30.09
+    },
+    {
+        "id": "1014",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "sieradzki",
+        "capitals": [
+            "Sieradz"
+        ],
+        "plates": [
+            "ESI"
+        ],
+        "population": 117370,
+        "density": 78.73
+    },
+    {
+        "id": "1427",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "sierpecki",
+        "capitals": [
+            "Sierpc"
+        ],
+        "plates": [
+            "WSE"
+        ],
+        "population": 51744,
+        "density": 60.73
+    },
+    {
+        "id": "2610",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "skarżyski",
+        "capitals": [
+            "Skarżysko-Kamienna"
+        ],
+        "plates": [
+            "TSK"
+        ],
+        "population": 73567,
+        "density": 186.04
+    },
+    {
+        "id": "1063",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD",
+            "city"
+        ],
+        "name": "Skierniewice",
+        "capitals": [
+            "Skierniewice"
+        ],
+        "plates": [
+            "ES"
+        ],
+        "population": 47932,
+        "density": 1385.32
+    },
+    {
+        "id": "1015",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "skierniewicki",
+        "capitals": [
+            "Skierniewice"
+        ],
+        "plates": [
+            "ESK"
+        ],
+        "population": 38156,
+        "density": 50.65
+    },
+    {
+        "id": "3213",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "sławieński",
+        "capitals": [
+            "Sławno"
+        ],
+        "plates": [
+            "ZSL"
+        ],
+        "population": 56010,
+        "density": 53.69
+    },
+    {
+        "id": "0805",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB"
+        ],
+        "name": "słubicki",
+        "capitals": [
+            "Słubice"
+        ],
+        "plates": [
+            "FSL"
+        ],
+        "population": 46897,
+        "density": 46.93
+    },
+    {
+        "id": "3023",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "słupecki",
+        "capitals": [
+            "Słupca"
+        ],
+        "plates": [
+            "PSL"
+        ],
+        "population": 59029,
+        "density": 70.44
+    },
+    {
+        "id": "2263",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM",
+            "city"
+        ],
+        "name": "Słupsk",
+        "capitals": [
+            "Słupsk"
+        ],
+        "plates": [
+            "GS"
+        ],
+        "population": 90320,
+        "density": 2093.16
+    },
+    {
+        "id": "2212",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "słupski",
+        "capitals": [
+            "Słupsk"
+        ],
+        "plates": [
+            "GSL"
+        ],
+        "population": 98781,
+        "density": 42.87
+    },
+    {
+        "id": "1428",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "sochaczewski",
+        "capitals": [
+            "Sochaczew"
+        ],
+        "plates": [
+            "WSC"
+        ],
+        "population": 85001,
+        "density": 115.68
+    },
+    {
+        "id": "1429",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "sokołowski",
+        "capitals": [
+            "Sokołów Podlaski"
+        ],
+        "plates": [
+            "WSK"
+        ],
+        "population": 53617,
+        "density": 47.4
+    },
+    {
+        "id": "2011",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "sokólski",
+        "capitals": [
+            "Sokółka"
+        ],
+        "plates": [
+            "BSK"
+        ],
+        "population": 66286,
+        "density": 32.26
+    },
+    {
+        "id": "2264",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM",
+            "city"
+        ],
+        "name": "Sopot",
+        "capitals": [
+            "Sopot"
+        ],
+        "plates": [
+            "GSP"
+        ],
+        "population": 35562,
+        "density": 2057.99
+    },
+    {
+        "id": "2475",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Sosnowiec",
+        "capitals": [
+            "Sosnowiec"
+        ],
+        "plates": [
+            "SO"
+        ],
+        "population": 198996,
+        "density": 2185.33
+    },
+    {
+        "id": "1818",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "stalowowolski",
+        "capitals": [
+            "Stalowa Wola"
+        ],
+        "plates": [
+            "RST"
+        ],
+        "population": 105850,
+        "density": 127.26
+    },
+    {
+        "id": "2611",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "starachowicki",
+        "capitals": [
+            "Starachowice"
+        ],
+        "plates": [
+            "TST"
+        ],
+        "population": 89152,
+        "density": 170.33
+    },
+    {
+        "id": "3214",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "stargardzki",
+        "capitals": [
+            "Stargard"
+        ],
+        "plates": [
+            "ZST"
+        ],
+        "population": 120151,
+        "density": 79.05
+    },
+    {
+        "id": "2213",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "starogardzki",
+        "capitals": [
+            "Starogard Gdański"
+        ],
+        "plates": [
+            "GST",
+            "XST"
+        ],
+        "population": 128264,
+        "density": 95.34
+    },
+    {
+        "id": "2612",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "staszowski",
+        "capitals": [
+            "Staszów"
+        ],
+        "plates": [
+            "TSZ"
+        ],
+        "population": 71574,
+        "density": 77.33
+    },
+    {
+        "id": "1611",
+        "parent": "16",
+        "tags": [
+            "county",
+            "voiv-OP"
+        ],
+        "name": "strzelecki",
+        "capitals": [
+            "Strzelce Opolskie"
+        ],
+        "plates": [
+            "OST"
+        ],
+        "population": 74171,
+        "density": 99.66
+    },
+    {
+        "id": "0806",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB"
+        ],
+        "name": "strzelecko-drezdenecki",
+        "capitals": [
+            "Strzelce Krajeńskie"
+        ],
+        "plates": [
+            "FSD"
+        ],
+        "population": 48855,
+        "density": 39.15
+    },
+    {
+        "id": "0217",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "strzeliński",
+        "capitals": [
+            "Strzelin"
+        ],
+        "plates": [
+            "DST"
+        ],
+        "population": 43456,
+        "density": 69.86
+    },
+    {
+        "id": "1819",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "strzyżowski",
+        "capitals": [
+            "Strzyżów"
+        ],
+        "plates": [
+            "RSR"
+        ],
+        "population": 61295,
+        "density": 121.75
+    },
+    {
+        "id": "0807",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB"
+        ],
+        "name": "sulęciński",
+        "capitals": [
+            "Sulęcin"
+        ],
+        "plates": [
+            "FSU"
+        ],
+        "population": 35110,
+        "density": 29.81
+    },
+    {
+        "id": "1215",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "suski",
+        "capitals": [
+            "Sucha Beskidzka"
+        ],
+        "plates": [
+            "KSU"
+        ],
+        "population": 84197,
+        "density": 122.79
+    },
+    {
+        "id": "2012",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "suwalski",
+        "capitals": [
+            "Suwałki"
+        ],
+        "plates": [
+            "BSU"
+        ],
+        "population": 35606,
+        "density": 27.24
+    },
+    {
+        "id": "2063",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD",
+            "city"
+        ],
+        "name": "Suwałki",
+        "capitals": [
+            "Suwałki"
+        ],
+        "plates": [
+            "BS"
+        ],
+        "population": 69786,
+        "density": 1065.27
+    },
+    {
+        "id": "3024",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "szamotulski",
+        "capitals": [
+            "Szamotuły"
+        ],
+        "plates": [
+            "PSZ"
+        ],
+        "population": 91720,
+        "density": 81.94
+    },
+    {
+        "id": "3262",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP",
+            "city"
+        ],
+        "name": "Szczecin",
+        "capitals": [
+            "Szczecin"
+        ],
+        "plates": [
+            "ZS"
+        ],
+        "population": 400990,
+        "density": 1333.97
+    },
+    {
+        "id": "3215",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "szczecinecki",
+        "capitals": [
+            "Szczecinek"
+        ],
+        "plates": [
+            "ZSZ"
+        ],
+        "population": 77394,
+        "density": 43.84
+    },
+    {
+        "id": "2817",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "szczycieński",
+        "capitals": [
+            "Szczytno"
+        ],
+        "plates": [
+            "NSZ"
+        ],
+        "population": 69263,
+        "density": 35.83
+    },
+    {
+        "id": "2216",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "sztumski",
+        "capitals": [
+            "Sztum"
+        ],
+        "plates": [
+            "GSZ"
+        ],
+        "population": 41141,
+        "density": 56.3
+    },
+    {
+        "id": "1430",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "szydłowiecki",
+        "capitals": [
+            "Szydłowiec"
+        ],
+        "plates": [
+            "WSZ"
+        ],
+        "population": 39547,
+        "density": 87.53
+    },
+    {
+        "id": "0218",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "średzki",
+        "capitals": [
+            "Środa Wielkopolska"
+        ],
+        "plates": [
+            "PSR"
+        ],
+        "population": 59033,
+        "density": 94.63
+    },
+    {
+        "id": "3025",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "średzki",
+        "capitals": [
+            "Środa Wielkopolska"
+        ],
+        "plates": [
+            "PSR"
+        ],
+        "population": 59033,
+        "density": 94.63
+    },
+    {
+        "id": "3026",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "śremski",
+        "capitals": [
+            "Śrem"
+        ],
+        "plates": [
+            "PSE"
+        ],
+        "population": 61455,
+        "density": 107.05
+    },
+    {
+        "id": "0219",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "świdnicki",
+        "capitals": [
+            "Świdnik"
+        ],
+        "plates": [
+            "LSW"
+        ],
+        "population": 71739,
+        "density": 153.17
+    },
+    {
+        "id": "0617",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "świdnicki",
+        "capitals": [
+            "Świdnik"
+        ],
+        "plates": [
+            "LSW"
+        ],
+        "population": 71739,
+        "density": 153.17
+    },
+    {
+        "id": "3216",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "świdwiński",
+        "capitals": [
+            "Świdwin"
+        ],
+        "plates": [
+            "ZSD"
+        ],
+        "population": 46526,
+        "density": 42.56
+    },
+    {
+        "id": "0808",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB"
+        ],
+        "name": "świebodziński",
+        "capitals": [
+            "Świebodzin"
+        ],
+        "plates": [
+            "FSW"
+        ],
+        "population": 55678,
+        "density": 59.45
+    },
+    {
+        "id": "0414",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "świecki",
+        "capitals": [
+            "Świecie"
+        ],
+        "plates": [
+            "CSW"
+        ],
+        "population": 98930,
+        "density": 67.11
+    },
+    {
+        "id": "2476",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Świętochłowice",
+        "capitals": [
+            "Świętochłowice"
+        ],
+        "plates": [
+            "SW"
+        ],
+        "population": 49363,
+        "density": 3708.72
+    },
+    {
+        "id": "3263",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP",
+            "city"
+        ],
+        "name": "Świnoujście",
+        "capitals": [
+            "Świnoujście"
+        ],
+        "plates": [
+            "ZSW"
+        ],
+        "population": 40864,
+        "density": 202.23
+    },
+    {
+        "id": "1864",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK",
+            "city"
+        ],
+        "name": "Tarnobrzeg",
+        "capitals": [
+            "Tarnobrzeg"
+        ],
+        "plates": [
+            "RT"
+        ],
+        "population": 46588,
+        "density": 545.53
+    },
+    {
+        "id": "1820",
+        "parent": "18",
+        "tags": [
+            "county",
+            "voiv-PK"
+        ],
+        "name": "tarnobrzeski",
+        "capitals": [
+            "Tarnobrzeg"
+        ],
+        "plates": [
+            "RTA"
+        ],
+        "population": 52871,
+        "density": 101.47
+    },
+    {
+        "id": "2413",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "tarnogórski",
+        "capitals": [
+            "Tarnowskie Góry"
+        ],
+        "plates": [
+            "STA",
+            "ITA"
+        ],
+        "population": 140799,
+        "density": 218.57
+    },
+    {
+        "id": "1216",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "tarnowski",
+        "capitals": [
+            "Tarnów"
+        ],
+        "plates": [
+            "KTA"
+        ],
+        "population": 201454,
+        "density": 142.72
+    },
+    {
+        "id": "1263",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA",
+            "city"
+        ],
+        "name": "Tarnów",
+        "capitals": [
+            "Tarnów"
+        ],
+        "plates": [
+            "KT"
+        ],
+        "population": 108177,
+        "density": 1494.57
+    },
+    {
+        "id": "1217",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "tatrzański",
+        "capitals": [
+            "Zakopane"
+        ],
+        "plates": [
+            "KTT"
+        ],
+        "population": 68120,
+        "density": 144.43
+    },
+    {
+        "id": "2214",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "tczewski",
+        "capitals": [
+            "Tczew"
+        ],
+        "plates": [
+            "GTC"
+        ],
+        "population": 115641,
+        "density": 165.89
+    },
+    {
+        "id": "0618",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "tomaszowski",
+        "capitals": [
+            "Tomaszów Mazowiecki"
+        ],
+        "plates": [
+            "ETM"
+        ],
+        "population": 116141,
+        "density": 113.33
+    },
+    {
+        "id": "1016",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "tomaszowski",
+        "capitals": [
+            "Tomaszów Mazowiecki"
+        ],
+        "plates": [
+            "ETM"
+        ],
+        "population": 116141,
+        "density": 113.33
+    },
+    {
+        "id": "0463",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP",
+            "city"
+        ],
+        "name": "Toruń",
+        "capitals": [
+            "Toruń"
+        ],
+        "plates": [
+            "CT"
+        ],
+        "population": 201106,
+        "density": 1737.87
+    },
+    {
+        "id": "0415",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "toruński",
+        "capitals": [
+            "Toruń"
+        ],
+        "plates": [
+            "CTR"
+        ],
+        "population": 108938,
+        "density": 88.54
+    },
+    {
+        "id": "0220",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "trzebnicki",
+        "capitals": [
+            "Trzebnica"
+        ],
+        "plates": [
+            "DTR"
+        ],
+        "population": 85401,
+        "density": 83.34
+    },
+    {
+        "id": "0416",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "tucholski",
+        "capitals": [
+            "Tuchola"
+        ],
+        "plates": [
+            "CTU"
+        ],
+        "population": 48338,
+        "density": 44.95
+    },
+    {
+        "id": "3027",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "turecki",
+        "capitals": [
+            "Turek"
+        ],
+        "plates": [
+            "PTU",
+            "MTU"
+        ],
+        "population": 83818,
+        "density": 90.18
+    },
+    {
+        "id": "2477",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Tychy",
+        "capitals": [
+            "Tychy"
+        ],
+        "plates": [
+            "ST"
+        ],
+        "population": 127307,
+        "density": 1556.13
+    },
+    {
+        "id": "1218",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "wadowicki",
+        "capitals": [
+            "Wadowice"
+        ],
+        "plates": [
+            "KWA",
+            "JWA"
+        ],
+        "population": 159971,
+        "density": 247.68
+    },
+    {
+        "id": "0265",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS",
+            "city"
+        ],
+        "name": "Wałbrzych",
+        "capitals": [
+            "Wałbrzych"
+        ],
+        "plates": [
+            "DB"
+        ],
+        "population": 110603,
+        "density": 1305.82
+    },
+    {
+        "id": "0221",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "wałbrzyski",
+        "capitals": [
+            "Wałbrzych"
+        ],
+        "plates": [
+            "DBA"
+        ],
+        "population": 55414,
+        "density": 128.8
+    },
+    {
+        "id": "3217",
+        "parent": "32",
+        "tags": [
+            "county",
+            "voiv-ZP"
+        ],
+        "name": "wałecki",
+        "capitals": [
+            "Wałcz"
+        ],
+        "plates": [
+            "ZWA"
+        ],
+        "population": 52929,
+        "density": 37.41
+    },
+    {
+        "id": "1465",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ",
+            "city"
+        ],
+        "name": "Warszawa",
+        "capitals": [
+            "Warszawa"
+        ],
+        "plates": [
+            "WA",
+            "WB",
+            "WD",
+            "WE",
+            "WF",
+            "WH",
+            "WI",
+            "WJ",
+            "WK",
+            "WN",
+            "WT",
+            "WU",
+            "WW",
+            "WX",
+            "WY"
+        ],
+        "population": 1793579,
+        "density": 3467.6
+    },
+    {
+        "id": "1432",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "warszawski zachodni",
+        "capitals": [
+            "Ożarów Mazowiecki"
+        ],
+        "plates": [
+            "WZ"
+        ],
+        "population": 119503,
+        "density": 223.88
+    },
+    {
+        "id": "0417",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "wąbrzeski",
+        "capitals": [
+            "Wąbrzeźno"
+        ],
+        "plates": [
+            "CWA"
+        ],
+        "population": 34115,
+        "density": 67.96
+    },
+    {
+        "id": "3028",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "wągrowiecki",
+        "capitals": [
+            "Wągrowiec"
+        ],
+        "plates": [
+            "PWA"
+        ],
+        "population": 70216,
+        "density": 67.54
+    },
+    {
+        "id": "2215",
+        "parent": "22",
+        "tags": [
+            "county",
+            "voiv-PM"
+        ],
+        "name": "wejherowski",
+        "capitals": [
+            "Wejherowo"
+        ],
+        "plates": [
+            "GWE",
+            "GWO"
+        ],
+        "population": 218766,
+        "density": 170.21
+    },
+    {
+        "id": "2819",
+        "parent": "28",
+        "tags": [
+            "county",
+            "voiv-WN"
+        ],
+        "name": "węgorzewski",
+        "capitals": [
+            "Węgorzewo"
+        ],
+        "plates": [
+            "NWE"
+        ],
+        "population": 22555,
+        "density": 32.54
+    },
+    {
+        "id": "1433",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "węgrowski",
+        "capitals": [
+            "Węgrów"
+        ],
+        "plates": [
+            "WWE"
+        ],
+        "population": 65641,
+        "density": 53.77
+    },
+    {
+        "id": "1219",
+        "parent": "12",
+        "tags": [
+            "county",
+            "voiv-MA"
+        ],
+        "name": "wielicki",
+        "capitals": [
+            "Wieliczka"
+        ],
+        "plates": [
+            "KWI"
+        ],
+        "population": 129984,
+        "density": 316.43
+    },
+    {
+        "id": "1017",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "wieluński",
+        "capitals": [
+            "Wieluń"
+        ],
+        "plates": [
+            "EWI"
+        ],
+        "population": 76081,
+        "density": 82.12
+    },
+    {
+        "id": "1018",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "wieruszowski",
+        "capitals": [
+            "Wieruszów"
+        ],
+        "plates": [
+            "EWE"
+        ],
+        "population": 42050,
+        "density": 72.86
+    },
+    {
+        "id": "0464",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP",
+            "city"
+        ],
+        "name": "Włocławek",
+        "capitals": [
+            "Włocławek"
+        ],
+        "plates": [
+            "CW"
+        ],
+        "population": 109347,
+        "density": 1296.81
+    },
+    {
+        "id": "0418",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "włocławski",
+        "capitals": [
+            "Włocławek"
+        ],
+        "plates": [
+            "CWL"
+        ],
+        "population": 85893,
+        "density": 58.29
+    },
+    {
+        "id": "0619",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "włodawski",
+        "capitals": [
+            "Włodawa"
+        ],
+        "plates": [
+            "LWL"
+        ],
+        "population": 38207,
+        "density": 30.41
+    },
+    {
+        "id": "2613",
+        "parent": "26",
+        "tags": [
+            "county",
+            "voiv-SK"
+        ],
+        "name": "włoszczowski",
+        "capitals": [
+            "Włoszczowa"
+        ],
+        "plates": [
+            "TLW"
+        ],
+        "population": 44933,
+        "density": 49.49
+    },
+    {
+        "id": "2415",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "wodzisławski",
+        "capitals": [
+            "Wodzisław Śląski"
+        ],
+        "plates": [
+            "SWD"
+        ],
+        "population": 156939,
+        "density": 547.3
+    },
+    {
+        "id": "3029",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "wolsztyński",
+        "capitals": [
+            "Wolsztyn"
+        ],
+        "plates": [
+            "PWL"
+        ],
+        "population": 57534,
+        "density": 84.64
+    },
+    {
+        "id": "1434",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "wołomiński",
+        "capitals": [
+            "Wołomin"
+        ],
+        "plates": [
+            "WWL",
+            "WV"
+        ],
+        "population": 251276,
+        "density": 263.51
+    },
+    {
+        "id": "0222",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "wołowski",
+        "capitals": [
+            "Wołów"
+        ],
+        "plates": [
+            "DWL"
+        ],
+        "population": 46725,
+        "density": 69.23
+    },
+    {
+        "id": "0264",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS",
+            "city"
+        ],
+        "name": "Wrocław",
+        "capitals": [
+            "Wrocław"
+        ],
+        "plates": [
+            "DW",
+            "DX"
+        ],
+        "population": 643782,
+        "density": 2198.56
+    },
+    {
+        "id": "0223",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "wrocławski",
+        "capitals": [
+            "Wrocław"
+        ],
+        "plates": [
+            "DWR",
+            "VWR"
+        ],
+        "population": 153876,
+        "density": 137.67
+    },
+    {
+        "id": "3030",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "wrzesiński",
+        "capitals": [
+            "Września"
+        ],
+        "plates": [
+            "PWR"
+        ],
+        "population": 78089,
+        "density": 110.99
+    },
+    {
+        "id": "0812",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB"
+        ],
+        "name": "wschowski",
+        "capitals": [
+            "Wschowa"
+        ],
+        "plates": [
+            "FWS"
+        ],
+        "population": 38787,
+        "density": 62.14
+    },
+    {
+        "id": "2013",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "wysokomazowiecki",
+        "capitals": [
+            "Wysokie Mazowieckie"
+        ],
+        "plates": [
+            "BWM"
+        ],
+        "population": 56652,
+        "density": 43.95
+    },
+    {
+        "id": "1435",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "wyszkowski",
+        "capitals": [
+            "Wyszków"
+        ],
+        "plates": [
+            "WWY"
+        ],
+        "population": 74283,
+        "density": 84.76
+    },
+    {
+        "id": "2478",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Zabrze",
+        "capitals": [
+            "Zabrze"
+        ],
+        "plates": [
+            "SZ"
+        ],
+        "population": 171691,
+        "density": 2135.46
+    },
+    {
+        "id": "2014",
+        "parent": "20",
+        "tags": [
+            "county",
+            "voiv-PD"
+        ],
+        "name": "zambrowski",
+        "capitals": [
+            "Zambrów"
+        ],
+        "plates": [
+            "BZA"
+        ],
+        "population": 43390,
+        "density": 59.19
+    },
+    {
+        "id": "0620",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU"
+        ],
+        "name": "zamojski",
+        "capitals": [
+            "Zamość"
+        ],
+        "plates": [
+            "LZA"
+        ],
+        "population": 105839,
+        "density": 56.59
+    },
+    {
+        "id": "0664",
+        "parent": "06",
+        "tags": [
+            "county",
+            "voiv-LU",
+            "city"
+        ],
+        "name": "Zamość",
+        "capitals": [
+            "Zamość"
+        ],
+        "plates": [
+            "LZ"
+        ],
+        "population": 63223,
+        "density": 2083.82
+    },
+    {
+        "id": "2416",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "zawierciański",
+        "capitals": [
+            "Zawiercie"
+        ],
+        "plates": [
+            "SZA"
+        ],
+        "population": 117137,
+        "density": 116.88
+    },
+    {
+        "id": "0224",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "ząbkowicki",
+        "capitals": [
+            "Ząbkowice Śląskie"
+        ],
+        "plates": [
+            "DZA"
+        ],
+        "population": 64486,
+        "density": 80.45
+    },
+    {
+        "id": "1019",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "zduńskowolski",
+        "capitals": [
+            "Zduńska Wola"
+        ],
+        "plates": [
+            "EZD"
+        ],
+        "population": 66232,
+        "density": 179.38
+    },
+    {
+        "id": "1020",
+        "parent": "10",
+        "tags": [
+            "county",
+            "voiv-LD"
+        ],
+        "name": "zgierski",
+        "capitals": [
+            "Zgierz"
+        ],
+        "plates": [
+            "EZG"
+        ],
+        "population": 166154,
+        "density": 194.29
+    },
+    {
+        "id": "0225",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "zgorzelecki",
+        "capitals": [
+            "Zgorzelec"
+        ],
+        "plates": [
+            "DZG"
+        ],
+        "population": 88770,
+        "density": 105.85
+    },
+    {
+        "id": "0862",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB",
+            "city"
+        ],
+        "name": "Zielona Góra",
+        "capitals": [
+            "Zielona Góra"
+        ],
+        "plates": [
+            "FZ"
+        ],
+        "population": 141280,
+        "density": 507.62
+    },
+    {
+        "id": "0809",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB"
+        ],
+        "name": "zielonogórski",
+        "capitals": [
+            "Zielona Góra"
+        ],
+        "plates": [
+            "FZI"
+        ],
+        "population": 75646,
+        "density": 56.04
+    },
+    {
+        "id": "0226",
+        "parent": "02",
+        "tags": [
+            "county",
+            "voiv-DS"
+        ],
+        "name": "złotoryjski",
+        "capitals": [
+            "Złotoryja"
+        ],
+        "plates": [
+            "DZL"
+        ],
+        "population": 43274,
+        "density": 75.15
+    },
+    {
+        "id": "3031",
+        "parent": "30",
+        "tags": [
+            "county",
+            "voiv-WP"
+        ],
+        "name": "złotowski",
+        "capitals": [
+            "Złotów"
+        ],
+        "plates": [
+            "PZL"
+        ],
+        "population": 69282,
+        "density": 41.73
+    },
+    {
+        "id": "1436",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "zwoleński",
+        "capitals": [
+            "Zwoleń"
+        ],
+        "plates": [
+            "WZW"
+        ],
+        "population": 36026,
+        "density": 62.84
+    },
+    {
+        "id": "0810",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB"
+        ],
+        "name": "żagański",
+        "capitals": [
+            "Żagań"
+        ],
+        "plates": [
+            "FZG"
+        ],
+        "population": 78634,
+        "density": 69.48
+    },
+    {
+        "id": "0811",
+        "parent": "08",
+        "tags": [
+            "county",
+            "voiv-LB"
+        ],
+        "name": "żarski",
+        "capitals": [
+            "Żary"
+        ],
+        "plates": [
+            "FZA"
+        ],
+        "population": 95801,
+        "density": 68.78
+    },
+    {
+        "id": "0419",
+        "parent": "04",
+        "tags": [
+            "county",
+            "voiv-KP"
+        ],
+        "name": "żniński",
+        "capitals": [
+            "Żnin"
+        ],
+        "plates": [
+            "CZN"
+        ],
+        "population": 70070,
+        "density": 71.15
+    },
+    {
+        "id": "2479",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL",
+            "city"
+        ],
+        "name": "Żory",
+        "capitals": [
+            "Żory"
+        ],
+        "plates": [
+            "SZO"
+        ],
+        "population": 62670,
+        "density": 969.52
+    },
+    {
+        "id": "1437",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "żuromiński",
+        "capitals": [
+            "Żuromin"
+        ],
+        "plates": [
+            "WZU"
+        ],
+        "population": 38337,
+        "density": 47.53
+    },
+    {
+        "id": "1438",
+        "parent": "14",
+        "tags": [
+            "county",
+            "voiv-MZ"
+        ],
+        "name": "żyrardowski",
+        "capitals": [
+            "Żyrardów"
+        ],
+        "plates": [
+            "WZY"
+        ],
+        "population": 75616,
+        "density": 141.99
+    },
+    {
+        "id": "2417",
+        "parent": "24",
+        "tags": [
+            "county",
+            "voiv-SL"
+        ],
+        "name": "żywiecki",
+        "capitals": [
+            "Żywiec"
+        ],
+        "plates": [
+            "SZY"
+        ],
+        "population": 152450,
+        "density": 146.58
+    }
+]

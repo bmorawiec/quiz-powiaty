@@ -1,0 +1,8 @@
+<svg viewBox="0 0 800 500" width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="500" fill="#e7e7e7"/>
+    <rect x="50" y="50" width="700" height="400" fill="#ffffff"/>
+    <line x1="0" y1="0" x2="800" y2="500" stroke="#e7e7e7" stroke-width="50"/>
+    <text text-anchor="middle" fill="#303030" style="font-size: 100px; font-family: sans-serif; font-weight: 600;" transform="translate(416,270) rotate(-30)">
+        miński
+    </text>
+</svg>
