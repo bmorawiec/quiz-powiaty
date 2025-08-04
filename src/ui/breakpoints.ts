@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export type Breakpoint = (typeof breakpoints)[number];
-const breakpoints = ['sm', 'md', 'lg', 'xl'] as const;  // ordered from smallest to largest
+const breakpoints = ["sm", "md", "lg", "xl"] as const;  // ordered from smallest to largest
 
 export function useBreakpoints() {
     const [layout, setLayout] = useState<Breakpoint>(layoutFromWindowSize(window.innerWidth));
@@ -12,8 +12,8 @@ export function useBreakpoints() {
             setLayout(layout);
         };
 
-        window.addEventListener('resize', handleWindowResize);
-        return () => window.removeEventListener('resize', handleWindowResize);
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
 
     return layout;

@@ -1,4 +1,4 @@
-import type { IconProps } from './props';
+import type { IconProps } from "./props";
 
 export function TargetIcon({ className }: IconProps) {
     return (

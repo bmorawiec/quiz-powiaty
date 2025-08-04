@@ -1,4 +1,4 @@
-import type { IconProps } from './props';
+import type { IconProps } from "./props";
 
 export function InfoIcon({ className }: IconProps) {
     return (

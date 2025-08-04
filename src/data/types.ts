@@ -8,8 +8,8 @@ export interface Unit {
     /** Used for filtering administrative units. */
     tags: UnitTag[];
     /** The name of this administrative unit.
-     *  In case of a county, this is the county name without the 'powiat ' prefix. 
-     *  In case of a voivodeship, this is the voivodeship name without the 'województwo ' prefix. */
+     *  In case of a county, this is the county name without the "powiat " prefix. 
+     *  In case of a voivodeship, this is the voivodeship name without the "województwo " prefix. */
     name: string;
     /** List of capitals of this administrative unit */
     capitals: string[];
@@ -21,13 +21,13 @@ export interface Unit {
     density: number;
 }
 
-/** 'county' - This administrative unit is a county.
- * 'voivodeship' - This administrative unit is a voivodeship.
+/** "county" - This administrative unit is a county.
+ *  "voivodeship" - This administrative unit is a voivodeship.
  *
- * 'city' - This administrative unit is a city with county rights.
+ *  "city" - This administrative unit is a city with county rights.
  *
- * 'voiv-XX' - This administrative unit is within a voivodeship with the specified code. */
+ *  "voiv-XX" - This administrative unit is within a voivodeship with the specified code. */
 export type UnitTag = (typeof UNIT_TAGS)[number];
-export const UNIT_TAGS = [ 'county', 'voivodeship', 'city',
-    'voiv-DS', 'voiv-KP', 'voiv-LU', 'voiv-LB', 'voiv-LD', 'voiv-MA', 'voiv-MZ', 'voiv-OP',
-    'voiv-PK', 'voiv-PD', 'voiv-PM', 'voiv-SL', 'voiv-SK', 'voiv-WN', 'voiv-WP', 'voiv-ZP' ] as const;
+export const UNIT_TAGS = [ "county", "voivodeship", "city",
+    "voiv-DS", "voiv-KP", "voiv-LU", "voiv-LB", "voiv-LD", "voiv-MA", "voiv-MZ", "voiv-OP",
+    "voiv-PK", "voiv-PD", "voiv-PM", "voiv-SL", "voiv-SK", "voiv-WN", "voiv-WP", "voiv-ZP" ] as const;

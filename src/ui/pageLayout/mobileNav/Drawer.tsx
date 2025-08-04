@@ -1,25 +1,25 @@
-import clsx from 'clsx';
-import { useEffect } from 'react';
-import { CloseIcon, InfoIcon } from '../../icons';
-import { Destination } from './Destination';
+import clsx from "clsx";
+import { useEffect } from "react";
+import { CloseIcon, InfoIcon } from "../../icons";
+import { Destination } from "./Destination";
 
 export interface DrawerProps {
-    state: 'slideIn' | 'slideOut' | 'hidden';
+    state: "slideIn" | "slideOut" | "hidden";
     onClose: () => void;
 }
 
 export function Drawer({ state, onClose }: DrawerProps) {
-    const show = state !== 'hidden';
+    const show = state !== "hidden";
     useEffect(() => {
         if (show) {
             const handleDocumentKeyDown = (event: KeyboardEvent) => {
-                if (event.key === 'Escape') {
+                if (event.key === "Escape") {
                     onClose();
                 }
             };
 
-            document.addEventListener('keydown', handleDocumentKeyDown);
-            return () => document.removeEventListener('keydown', handleDocumentKeyDown);
+            document.addEventListener("keydown", handleDocumentKeyDown);
+            return () => document.removeEventListener("keydown", handleDocumentKeyDown);
         }
     }, [show, onClose]);
 
@@ -29,15 +29,15 @@ export function Drawer({ state, onClose }: DrawerProps) {
 
     return (<>
         <div
-            className={clsx('bg-black/20 fixed left-0 top-0 size-full',
-                (state === 'slideIn') ? 'animate-fade-in-slow' : 'animate-fade-out-slow')}
+            className={clsx("bg-black/20 fixed left-0 top-0 size-full",
+                (state === "slideIn") ? "animate-fade-in-slow" : "animate-fade-out-slow")}
             onPointerDown={onClose}
         />
         <div
             role="navigation"
-            className={clsx('flex flex-col bg-white dark:bg-gray-90 fixed left-0 top-0 w-[450px] max-sm:w-full h-full',
-                'p-[15px] pb-[30px] shadow-sm shadow-black/20 overflow-auto',
-                (state === 'slideIn') ? 'animate-slide-in-left' : 'animate-slide-out-left')}
+            className={clsx("flex flex-col bg-white dark:bg-gray-90 fixed left-0 top-0 w-[450px] max-sm:w-full h-full",
+                "p-[15px] pb-[30px] shadow-sm shadow-black/20 overflow-auto",
+                (state === "slideIn") ? "animate-slide-in-left" : "animate-slide-out-left")}
         >
             <button
                 aria-label="Zamknij menu nawigacji"

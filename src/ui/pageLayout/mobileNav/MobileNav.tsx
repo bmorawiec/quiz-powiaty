@@ -1,14 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
-import { NavLink } from 'react-router';
-import { Logo } from 'src/ui/Logo';
-import { MenuIcon } from '../../icons';
-import { Drawer } from './Drawer';
+import { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router";
+import { Logo } from "src/ui/Logo";
+import { MenuIcon } from "../../icons";
+import { Drawer } from "./Drawer";
 
 export function MobileNav() {
-    const [drawerState, setDrawerState] = useState<'slideIn' | 'slideOut' | 'hidden'>('hidden');
+    const [drawerState, setDrawerState] = useState<"slideIn" | "slideOut" | "hidden">("hidden");
 
     const handleMenuButtonClick = () => {
-        setDrawerState('slideIn');
+        setDrawerState("slideIn");
     };
 
     const animOutTimeout = useRef<number | null>(null);
@@ -19,9 +19,9 @@ export function MobileNav() {
     }, []);
 
     const handleDrawerClose = () => {
-        setDrawerState('slideOut');
+        setDrawerState("slideOut");
         animOutTimeout.current = setTimeout(
-            () => setDrawerState('hidden'),
+            () => setDrawerState("hidden"),
             300,
         );
     };

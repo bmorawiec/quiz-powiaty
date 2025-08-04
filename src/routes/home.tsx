@@ -1,4 +1,4 @@
-import { PageLayout } from 'src/ui';
+import { PageLayout } from "src/ui";
 
 export function HomePage() {
     return (

@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 html, body, #root {
     height: 100%;
@@ -103,7 +103,7 @@ body {
     --color-white: #ffffff;
     --color-black: #000000;
 
-    --font-sans: 'Geist', 'Helvetica', 'Nimbus Sans', 'Arial', sans-serif;
+    --font-sans: "Geist", "Helvetica", "Nimbus Sans", "Arial", sans-serif;
 
     --shadow-*: initial;
     --shadow-sm: 0 0 10px;
