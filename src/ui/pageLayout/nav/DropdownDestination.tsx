@@ -55,7 +55,7 @@ export function DropdownDestination({ label, where, className, children }: Dropd
             {dropdownState !== 'hidden' && (
                 <div 
                     className={clsx('absolute left-[160px] top-[70px] pt-[10px]',
-                        (dropdownState === 'animIn') ? 'animate-fade-in' : 'animate-fade-out')}
+                        (dropdownState === 'animIn') ? 'animate-fade-in' : 'animate-fade-out pointer-events-none')}
                 >
                     <div className="w-[820px] bg-white dark:bg-gray-90 shadow-sm shadow-black/10 rounded-[20px]
                         grid grid-cols-3 p-[15px]">
