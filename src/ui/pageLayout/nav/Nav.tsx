@@ -8,9 +8,13 @@ import { DropdownTile } from "./DropdownTile";
 
 export function Nav() {
     return (
-        <div className="relative flex pt-[20px] pb-[10px] mx-[20px] lg:mx-[100px]">
+        <div
+            role="navigation"
+            className="relative flex pt-[20px] pb-[10px] mx-[20px] lg:mx-[100px]"
+        >
             <NavLink
                 to="/"
+                aria-label="Przejdź do strony głównej"
                 className="mr-[5px] flex items-center px-[20px] h-[50px]
                     text-teal-80 hover:text-teal-70 dark:text-teal-60 dark:hover:text-teal-50
                     transition-colors duration-100"
