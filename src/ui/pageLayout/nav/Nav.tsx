@@ -10,7 +10,7 @@ export function Nav() {
     return (
         <div
             role="navigation"
-            className="relative flex pt-[20px] pb-[10px] mx-[20px] lg:mx-[100px]"
+            className="relative flex pt-[20px] pb-[18px] mx-[20px] lg:mx-[100px]"
         >
             <NavLink
                 to="/"

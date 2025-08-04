@@ -27,7 +27,7 @@ export function MobileNav() {
     };
 
     return (
-        <div className="flex items-center px-[20px] h-[90px] gap-[5px]">
+        <div className="flex items-center px-[20px] pt-[20px] pb-[18px] gap-[5px]">
             <button
                 aria-label="Otwórz menu nawigacji"
                 aria-haspopup="menu"
