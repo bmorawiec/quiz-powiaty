@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 html, body, #root {
-    min-height: 100%;
+    height: 100%;
 }
 
 body {
@@ -9,6 +9,11 @@ body {
 }
 
 @theme {
+    --breakpoint-sm: 600px;
+    --breakpoint-md: 1400px;
+    --breakpoint-lg: 1800px;
+    --breakpoint-xl: 2000px;
+
     --color-*: initial;
 
     --color-teal-5: #e3f2ef;
@@ -95,5 +100,37 @@ body {
     --color-red-95: #401213;
     --color-red-100: #300d0e;
 
+    --color-white: #ffffff;
+    --color-black: #000000;
+
     --font-sans: 'Geist', 'Helvetica', 'Nimbus Sans', 'Arial', sans-serif;
+
+    --shadow-*: initial;
+    --shadow-sm: 0 0 10px;
+
+    --ease-in-cubic: cubic-bezier(0.32, 0, 0.67, 0);
+    --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+
+    --animate-fade-in: 100ms fade-in ease-out both;
+    --animate-fade-out: 100ms fade-out ease-in both;
+    --animate-fade-in-slow: 300ms fade-in var(--ease-out-cubic) both;
+    --animate-fade-out-slow: 300ms fade-out var(--ease-in-cubic) both;
+    --animate-slide-in-left: 300ms slide-in-left var(--ease-out-cubic) both;
+    --animate-slide-out-left: 300ms slide-out-left var(--ease-in-cubic) both;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0%; }
+}
+
+@keyframes fade-out {
+    100% { opacity: 0%; }
+}
+
+@keyframes slide-in-left {
+    0% { transform: translateX(-100%); }
+}
+
+@keyframes slide-out-left {
+    100% { transform: translateX(-100%); }
 }
