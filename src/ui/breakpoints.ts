@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export type Breakpoint = (typeof breakpoints)[number];
-const breakpoints = ["sm", "md", "lg", "xl"] as const;  // ordered from smallest to largest
+const breakpoints = ["xs", "sm", "md", "lg", "xl"] as const;  // ordered from smallest to largest
 
 export function useBreakpoints() {
     const [layout, setLayout] = useState<Breakpoint>(layoutFromWindowSize(window.innerWidth));
@@ -19,8 +19,10 @@ export function useBreakpoints() {
     return layout;
 }
 
+// same as index.css
 const breakpointWidths: Record<Breakpoint, number> = {
-    sm: 600,    // same as index.css
+    xs: 600,
+    sm: 1000,
     md: 1400,
     lg: 1800,
     xl: 2000,

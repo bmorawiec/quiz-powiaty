@@ -37,7 +37,7 @@ export function ModePicker() {
                 Zgadnij...
             </p>
 
-            <div className="flex gap-[10px]">
+            <div className="flex gap-[10px] max-xs:flex-col">
                 <LargeDropdown
                     items={[
                         { value: "name", icon: PlaceNameIcon, label: "nazwę" },
@@ -58,7 +58,7 @@ export function ModePicker() {
                         { value: "voivodeship", label: "województwa" },
                     ]}
                     value={type}
-                    className="w-[160px]"
+                    className="xs:w-[160px]"
                     onChange={setType}
                 />
             </div>
