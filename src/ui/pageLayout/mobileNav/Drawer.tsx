@@ -29,14 +29,14 @@ export function Drawer({ state, onClose }: DrawerProps) {
 
     return (<>
         <div
-            className={clsx("bg-black/20 fixed left-0 top-0 size-full",
+            className={clsx("bg-black/20 fixed left-0 top-0 size-full z-1000",
                 (state === "slideIn") ? "animate-fade-in-slow" : "animate-fade-out-slow")}
             onPointerDown={onClose}
         />
         <div
             role="navigation"
             className={clsx("flex flex-col bg-white dark:bg-gray-90 fixed left-0 top-0 w-[450px] max-sm:w-full h-full",
-                "p-[15px] pb-[30px] shadow-sm shadow-black/20 overflow-auto",
+                "p-[15px] pb-[30px] shadow-sm shadow-black/20 overflow-auto z-1000",
                 (state === "slideIn") ? "animate-slide-in-left" : "animate-slide-out-left")}
         >
             <button
