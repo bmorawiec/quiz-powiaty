@@ -15,8 +15,12 @@ export function DropdownDestination({ label, where, className, children }: Dropd
 
     const animOutTimeout = useRef<number | null>(null);
     useEffect(() => {
-        return () => {  // clear animation timeout if component unmounts before the fade out animation finishes.
-            if (animOutTimeout.current) clearTimeout(animOutTimeout.current);
+        return () => {
+            if (animOutTimeout.current) {
+                // clear animation timeout if component unmounts before the fade out animation finishes.
+                clearTimeout(animOutTimeout.current);
+                animOutTimeout.current = null;
+            }
         };
     }, []);
 
@@ -24,16 +28,17 @@ export function DropdownDestination({ label, where, className, children }: Dropd
         if (animOutTimeout.current) {
             // clear animation timeout if user hovered on the element before fade out animation finished.
             clearTimeout(animOutTimeout.current);
+            animOutTimeout.current = null;
         }
         setDropdownState("animIn");
     };
 
     const handleMouseLeave = () => {
         setDropdownState("animOut");
-        animOutTimeout.current = setTimeout(
-            () => setDropdownState("hidden"),
-            100,
-        );
+        animOutTimeout.current = setTimeout(() => {
+            setDropdownState("hidden");
+            animOutTimeout.current = null;
+        }, 100);
     };
 
     return (

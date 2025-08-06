@@ -13,17 +13,21 @@ export function MobileNav() {
 
     const animOutTimeout = useRef<number | null>(null);
     useEffect(() => {
-        return () => {  // clear animation timeout if component unmounts before the slide out animation finishes.
-            if (animOutTimeout.current) clearTimeout(animOutTimeout.current);
+        return () => {
+            if (animOutTimeout.current) {
+                // clear animation timeout if component unmounts before the slide out animation finishes.
+                clearTimeout(animOutTimeout.current);
+                animOutTimeout.current = null;
+            }
         };
     }, []);
 
     const handleDrawerClose = () => {
         setDrawerState("slideOut");
-        animOutTimeout.current = setTimeout(
-            () => setDrawerState("hidden"),
-            300,
-        );
+        animOutTimeout.current = setTimeout(() => {
+            setDrawerState("hidden");
+            animOutTimeout.current = null;
+        }, 300);
     };
 
     return (
