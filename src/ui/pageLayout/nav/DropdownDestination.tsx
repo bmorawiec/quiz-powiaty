@@ -57,8 +57,8 @@ export function DropdownDestination({ label, where, className, children }: Dropd
                     className={clsx("absolute left-[160px] top-[70px] pt-[10px] z-1000",
                         (dropdownState === "animIn") ? "animate-fade-in" : "animate-fade-out pointer-events-none")}
                 >
-                    <div className="w-[820px] bg-white dark:bg-gray-90 shadow-sm shadow-black/10 rounded-[20px]
-                        grid grid-cols-3 p-[15px]">
+                    <div className="w-[820px] bg-white dark:bg-gray-90 shadow-sm shadow-black/10 dark:shadow-black/70
+                        rounded-[20px] grid grid-cols-3 p-[15px]">
                         {children}
                     </div>
                 </div>

@@ -36,7 +36,7 @@ export function Drawer({ state, onClose }: DrawerProps) {
         <div
             role="navigation"
             className={clsx("flex flex-col bg-white dark:bg-gray-90 fixed left-0 top-0 w-[450px] max-sm:w-full h-full",
-                "p-[15px] pb-[30px] shadow-sm shadow-black/20 overflow-auto z-1000",
+                "p-[15px] pb-[30px] shadow-sm shadow-black/20 dark:shadow-black overflow-auto z-1000",
                 (state === "slideIn") ? "animate-slide-in-left" : "animate-slide-out-left")}
         >
             <button
