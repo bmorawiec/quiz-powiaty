@@ -1,8 +1,13 @@
+import type { ReactNode } from "react";
 import { useBreakpoints } from "../breakpoints";
 import { MobileNav } from "./mobileNav";
 import { Nav } from "./nav";
 
-export function PageLayout() {
+export interface PageLayoutProps {
+    children?: ReactNode
+}
+
+export function PageLayout({ children }: PageLayoutProps) {
     const layout = useBreakpoints();
     return (
         <div className="h-full bg-white dark:bg-black flex flex-col">
@@ -11,6 +16,8 @@ export function PageLayout() {
             ) : (
                 <Nav/>
             )}
+
+            {children}
         </div>
     );
 }
