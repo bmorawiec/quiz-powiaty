@@ -98,7 +98,7 @@ export function LargeDropdown<TValue extends string>({
                         <SelectedIcon/>
                     </div>
                 )}
-                <span className="ml-[4px] flex-1 text-left text-[16px] dark:text-gray-5 truncate">
+                <span className="ml-[4px] flex-1 text-left text-[16px] tracking-[0.01em] dark:text-gray-5 truncate">
                     {selectedItem.label}
                 </span>
                 <DropdownIcon className={clsx("transition-transform duration-100", menuOpen && "rotate-180")}/>

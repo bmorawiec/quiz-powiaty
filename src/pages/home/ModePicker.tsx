@@ -33,7 +33,7 @@ export function ModePicker() {
         <div className="w-[480px] p-[30px] bg-white dark:bg-black rounded-[20px] shadow-sm shadow-black/10
             flex flex-col gap-[12px]">
 
-            <p className="text-[18px]">
+            <p className="text-[18px] tracking-[0.01em]">
                 Zgadnij...
             </p>
 
@@ -63,7 +63,7 @@ export function ModePicker() {
                 />
             </div>
 
-            <p className="text-[18px]">
+            <p className="text-[18px] tracking-[0.01em]">
                 na podstawie jego...
             </p>
 
