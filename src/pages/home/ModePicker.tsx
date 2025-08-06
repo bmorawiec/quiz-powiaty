@@ -31,9 +31,9 @@ export function ModePicker() {
 
     return (
         <div className="w-[480px] p-[30px] bg-white dark:bg-black rounded-[20px] shadow-sm shadow-black/10
-            flex flex-col gap-[12px] text-gray-100 dark:text-gray-15">
+            flex flex-col gap-[12px]">
 
-            <p className="text-[18px] font-[450]">
+            <p className="text-[18px]">
                 Zgadnij...
             </p>
 
@@ -63,7 +63,7 @@ export function ModePicker() {
                 />
             </div>
 
-            <p className="text-[18px] font-[450]">
+            <p className="text-[18px]">
                 na podstawie jego...
             </p>
 
@@ -93,7 +93,7 @@ export function ModePicker() {
             <NavLink
                 to="/quizy"
                 className="flex items-center justify-center h-[50px] rounded-[10px]
-                    text-[18px] font-[450] transition-colors duration-100
+                    text-[18px] transition-colors duration-100
                     bg-gray-10 hover:bg-gray-15 text-black-100 dark:bg-gray-90 dark:hover:bg-gray-95"
             >
                 <span>Wszystkie tryby gry</span>

@@ -49,8 +49,8 @@ export function DropdownDestination({ label, where, className, children }: Dropd
         >
             <NavLink
                 to={where}
-                className="flex items-center gap-[6px] px-[25px] h-[50px] text-[18px] font-[450] rounded-full 
-                    transition-colors duration-80 text-gray-100 dark:text-gray-10
+                className="flex items-center gap-[6px] px-[25px] h-[50px] text-[18px] rounded-full 
+                    text-gray-85 dark:text-gray-15 font-[450] transition-colors duration-80
                     hover:bg-gray-10 group-hover:bg-gray-5 dark:hover:bg-gray-85 dark:group-hover:bg-gray-90"
             >
                 <span>{label}</span>

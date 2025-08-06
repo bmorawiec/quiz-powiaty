@@ -10,11 +10,11 @@ export interface PageLayoutProps {
 export function PageLayout({ children }: PageLayoutProps) {
     const layout = useBreakpoints();
     return (
-        <div className="h-full bg-white dark:bg-black flex flex-col">
+        <div className="h-full bg-white dark:bg-black text-gray-90 dark:text-gray-15 flex flex-col">
             {(layout === "sm" || layout === "md") ? (
-                <MobileNav/>
+                <MobileNav   />
             ) : (
-                <Nav/>
+                <Nav   />
             )}
 
             {children}

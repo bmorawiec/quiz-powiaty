@@ -89,16 +89,16 @@ export function LargeDropdown<TValue extends string>({
                 aria-expanded={menuOpen}
                 className="w-full h-[50px] border border-gray-20 dark:border-gray-75 rounded-[10px] flex items-center
                     pl-[9px] pr-[16px] cursor-pointer transition-colors duration-80
-                    hover:border-gray-30 dark:hover:border-gray-65 text-gray-100 dark:text-gray-10"
+                    hover:border-gray-30 dark:hover:border-gray-65"
                 onClick={handleClick}
             >
                 {SelectedIcon && (
                     <div className="flex items-center justify-center bg-gray-15 dark:bg-gray-80 size-[30px]
-                        rounded-[6px] text-gray-100 dark:text-gray-10 mr-[6px]">
+                        rounded-[6px] mr-[6px]">
                         <SelectedIcon/>
                     </div>
                 )}
-                <span className="ml-[4px] flex-1 text-left text-[16px] font-[450] dark:text-gray-5 truncate">
+                <span className="ml-[4px] flex-1 text-left text-[16px] dark:text-gray-5 truncate">
                     {selectedItem.label}
                 </span>
                 <DropdownIcon className={clsx("transition-transform duration-100", menuOpen && "rotate-180")}/>

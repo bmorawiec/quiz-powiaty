@@ -20,12 +20,12 @@ export function DropdownTile({ icon: Icon, title, where, className, children }: 
         >
             <div className="absolute left-[15px] top-[15px] flex items-center justify-center
                 bg-gray-15 dark:bg-gray-80 size-[30px] rounded-[6px]">
-                <Icon className="text-gray-100 dark:text-gray-20"/>
+                <Icon className="dark:text-gray-20"/>
             </div>
-            <h2 className="text-gray-100 dark:text-gray-10 text-[16px] font-[450]">
+            <h2 className="text-[16px] font-[450] text-gray-85 dark:text-gray-15">
                 {title}
             </h2>
-            <div className="flex flex-col text-gray-65 dark:text-gray-40 text-[14px] font-[450] gap-[3px]">
+            <div className="flex flex-col text-gray-65 dark:text-gray-40 text-[14px] gap-[3px]">
                 {children}
             </div>
         </NavLink>
