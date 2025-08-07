@@ -33,4 +33,4 @@ export const UNIT_TAGS = [ "county", "voivodeship", "city",
     "voiv-PK", "voiv-PD", "voiv-PM", "voiv-SL", "voiv-SK", "voiv-WN", "voiv-WP", "voiv-ZP" ] as const;
 
 /** Represents data fields that can be guessed by the player or that can serve as a hint. */
-export type Guessable = "name" | "capital" | "plate" | "flag" | "coa" | "map";
+export type Guessable = "name" | "capital" | "allCapitals" | "plate" | "allPlates" | "flag" | "coa" | "map";
