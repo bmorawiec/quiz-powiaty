@@ -74,8 +74,8 @@ export function LargeDropdown<TValue extends string>({
             }
         };
 
-        document.addEventListener('click', handleDocumentClick);
-        return () => document.removeEventListener('click', handleDocumentClick);
+        document.addEventListener("click", handleDocumentClick);
+        return () => document.removeEventListener("click", handleDocumentClick);
     }, []);
 
     return (
