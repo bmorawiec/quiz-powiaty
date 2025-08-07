@@ -13,6 +13,11 @@ const guessableToPolish: Record<Guessable, string> = {
     map: "mapa",
 };
 
+const typeToPolish: Record<"county" | "voivodeship", string> = {
+    county: "powiat",
+    voivodeship: "wojewodztwo",
+};
+
 export function ModePicker() {
     const navigate = useNavigate();
 
@@ -24,6 +29,7 @@ export function ModePicker() {
         const mode = (guess === "map") ? "znajdz" : "wybierz";
         const url = "/graj"
             + "?tryb=" + mode
+            + "&typ=" + typeToPolish[type]
             + "&dane=" + guessableToPolish[guessFrom]
             + "&zgadnij=" + guessableToPolish[guess];
         navigate(url);
