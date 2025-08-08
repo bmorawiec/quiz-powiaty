@@ -21,6 +21,8 @@ export interface Unit {
     density: number;
 }
 
+export type UnitType = "county" | "voivodeship";
+
 /** "county" - This administrative unit is a county.
  *  "voivodeship" - This administrative unit is a voivodeship.
  *
