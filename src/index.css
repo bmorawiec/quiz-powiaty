@@ -118,6 +118,7 @@ body {
     --animate-fade-out-slow: 300ms fade-out var(--ease-in-cubic) both;
     --animate-slide-in-left: 300ms slide-in-left var(--ease-out-cubic) both;
     --animate-slide-out-left: 300ms slide-out-left var(--ease-in-cubic) both;
+    --animate-blink: 1000ms bl infinite;
 }
 
 @keyframes fade-in {
@@ -134,4 +135,10 @@ body {
 
 @keyframes slide-out-left {
     100% { transform: translateX(-100%); }
+}
+
+@keyframes bl {
+    0% { visibility: hidden; }
+    49% { visibility: hidden; }
+    50% { visibility: visible; }
 }

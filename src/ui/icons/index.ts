@@ -1,5 +1,6 @@
 export * from "./ArrowRightIcon";
 export * from "./CarIcon";
+export * from "./ClockIcon";
 export * from "./CloseIcon";
 export * from "./COAIcon";
 export * from "./DropdownIcon";
@@ -7,8 +8,10 @@ export * from "./FlagIcon";
 export * from "./InfoIcon";
 export * from "./LocationIcon";
 export * from "./MenuIcon";
+export * from "./PauseIcon";
+export * from "./PlayIcon";
 export * from "./PlaceNameIcon";
 export * from "./props";
 export * from "./SmallArrowRightIcon";
+export * from "./SendIcon";
 export * from "./TargetIcon";
-

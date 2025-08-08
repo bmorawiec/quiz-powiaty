@@ -1,0 +1,21 @@
+import clsx from "clsx";
+import type { ComponentType } from "react";
+import type { IconProps } from "src/ui/icons";
+
+export interface ControlButtonProps {
+    icon: ComponentType<IconProps>;
+    className?: string;
+    onClick?: () => void;
+}
+
+export function ControlButton({ icon: Icon, className, onClick }: ControlButtonProps) {
+    return (
+        <button
+            className={clsx("size-[36px] rounded-[6px] flex items-center justify-center cursor-pointer",
+                "transition-colors duration-[80ms] hover:bg-gray-10 active:bg-gray-15", className)}
+            onClick={onClick}
+        >
+            <Icon/>
+        </button>
+    );
+}
