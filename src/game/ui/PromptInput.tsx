@@ -35,8 +35,8 @@ export function PromptInput({ placeholder, state, className, onGuess }: PromptIn
     };
 
     return (
-        <div className={clsx("h-[60px] border border-gray-20 rounded-[20px] bg-white",
-            "flex items-center pr-[9px]", className)}>
+        <div className={clsx("h-[60px] border border-gray-20 dark:border-gray-65 rounded-[20px]",
+            "bg-white dark:bg-gray-95 flex items-center pr-[9px]", className)}>
             <input
                 ref={input}
                 type="text"
@@ -50,7 +50,7 @@ export function PromptInput({ placeholder, state, className, onGuess }: PromptIn
             <button
                 className="w-[50px] h-[40px] rounded-[10px] cursor-pointer flex items-center justify-center
                     transition-colors duration-[80ms]
-                    bg-teal-70 hover:bg-teal-65 text-white"
+                    bg-teal-70 hover:bg-teal-65 text-white dark:text-gray-95"
                 onClick={handleButtonClick}
             >
                 <SendIcon/>

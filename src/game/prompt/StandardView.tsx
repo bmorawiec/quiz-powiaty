@@ -26,8 +26,9 @@ export function StandardView({ options }: StandardViewProps) {
     };
 
     return (
-        <div className="flex-1 bg-gray-5 md:rounded-[20px] flex flex-col items-center justify-end pt-[60px] pb-[50px]">
-            <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80">
+        <div className="flex-1 bg-gray-5 dark:bg-gray-95 md:rounded-[20px] flex flex-col items-center justify-end
+            pt-[60px] pb-[50px]">
+            <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80 dark:text-gray-10">
                 {promptText}
             </h2>
             <PromptInput

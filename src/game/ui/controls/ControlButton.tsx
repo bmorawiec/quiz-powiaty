@@ -12,7 +12,8 @@ export function ControlButton({ icon: Icon, className, onClick }: ControlButtonP
     return (
         <button
             className={clsx("size-[36px] rounded-[6px] flex items-center justify-center cursor-pointer",
-                "transition-colors duration-[80ms] hover:bg-gray-10 active:bg-gray-15", className)}
+                "transition-colors duration-[80ms]",
+                "hover:bg-gray-10 active:bg-gray-15 dark:hover:bg-gray-85 dark:active:bg-gray-90", className)}
             onClick={onClick}
         >
             <Icon/>
