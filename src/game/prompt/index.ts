@@ -1,3 +1,2 @@
-export * from "./PromptGame";
-export * from "./state";
-
+import { PromptGame } from "./PromptGame";
+export default PromptGame;

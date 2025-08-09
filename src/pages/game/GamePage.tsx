@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router";
-import { PromptGame } from "src/game/prompt";
+import { Game } from "src/game/Game";
 import { PageLayout } from "src/ui";
 import { decodeGameURL } from "src/url";
 
@@ -9,8 +9,12 @@ export function GamePage() {
 
     return (
         <PageLayout>
-            {options && options.gameType === "promptGame" && (
-                <PromptGame options={options}/>
+            {options && (
+                <Game
+                    // ensure the game component is reloaded each time the URL (and with it the game options) changes
+                    key={window.location.href}
+                    options={options}
+                />
             )}
         </PageLayout>
     );
