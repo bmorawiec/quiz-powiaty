@@ -1,8 +1,7 @@
 import { units, type Unit } from "src/data";
-import { createActions, matchesFilters, type GameOptions, type UnitFilter } from "src/game/common";
-import { isValidCombo } from "src/game/common/combos";
+import { createActions, matchesFilters, validateOptions, type GameOptions, type UnitFilter } from "src/game/common";
 import { toShuffled } from "src/utils/shuffle";
-import { validCombos } from "./combos";
+import { validOptions } from "./gameOptions";
 import { hook } from "./store";
 import type { GuessResult, Prompt, PromptAnswer } from "./types";
 
@@ -10,7 +9,7 @@ const { initializeGame, finishGame, setInvalidState, togglePause, calculateTime 
 export { calculateTime, togglePause };
 
 export function gameFromOptions(options: GameOptions) {
-    if (options === null || !isValidCombo(validCombos, options.guessFrom, options.guess)) {
+    if (options === null || !validateOptions(options, validOptions)) {
         setInvalidState();
         return;
     }
