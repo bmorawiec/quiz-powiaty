@@ -32,6 +32,8 @@ export function StandardView({ options }: StandardViewProps) {
             </h2>
             <PromptInput
                 placeholder={inputPlaceholder}
+                answered={prompt.provided}
+                total={prompt.answers.length}
                 state={guessResult}
                 textTransform={textTransform}
                 className="w-[700px]"

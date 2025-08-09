@@ -4,6 +4,8 @@ import { SendIcon } from "src/ui/icons";
 
 export interface PromptInputProps {
     placeholder?: string;
+    answered?: number;
+    total?: number;
     state?: "correct" | "alreadyGuessed" | "wrong" | null;
     textTransform?: "uppercase" | "capitalize";
     className?: string;
@@ -11,7 +13,16 @@ export interface PromptInputProps {
     onClearState?: () => void;
 }
 
-export function PromptInput({ placeholder, state, textTransform, className, onGuess, onClearState }: PromptInputProps) {
+export function PromptInput({
+    placeholder,
+    answered,
+    total,
+    state,
+    textTransform,
+    className,
+    onGuess,
+    onClearState,
+}: PromptInputProps) {
     const [answer, setAnswer] = useState("");
 
     const [animState, setAnimState] = useState<"correct" | "wrong" | "none">("none");
@@ -80,6 +91,12 @@ export function PromptInput({ placeholder, state, textTransform, className, onGu
                 onChange={handleInputChange}
                 onKeyDown={handleInputKeyDown}
             />
+
+            {answered !== undefined && total !== undefined && total > 1 && (
+                <span className="absolute text-[14px] bottom-[9px] right-[68px] text-gray-60 tracking-[-0.01em]">
+                    {answered}/{total}
+                </span>
+            )}
 
             <button
                 className="absolute right-[9px] top-[9px] w-[50px] h-[40px] rounded-[10px] cursor-pointer
