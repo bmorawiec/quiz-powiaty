@@ -1,5 +1,5 @@
-import type { Guessable, UnitType } from "src/data";
-import type { GameOptions, GameType } from "src/game/common";
+import { UNIT_TAGS, type Guessable, type UnitTag, type UnitType } from "src/data";
+import type { GameOptions, GameType, UnitFilter, UnitFilterMode } from "src/game/common";
 
 const gameTypeToPolish: Record<GameType, string> = {
     choiceGame: "wybierz",
@@ -29,11 +29,23 @@ const guessableFromPolish = flipObject(guessableToPolish);
 
 /** Encodes game options into an URL. */
 export function encodeGameURL(options: GameOptions): string {
-    return "/graj"
+    let url = "/graj"
         + "?tryb=" + gameTypeToPolish[options.gameType]
         + "&typ=" + unitTypeToPolish[options.unitType]
         + "&dane=" + guessableToPolish[options.guessFrom]
         + "&zgadnij=" + guessableToPolish[options.guess];
+
+    if (options.filters.length > 0) {
+        url += "&filtry=" + encodeFilters(options.filters);
+    }
+
+    return url;
+}
+
+function encodeFilters(filters: UnitFilter[]): string {
+    return filters
+        .map((filter) => (filter.mode === "exclude") ? "-" + filter.tag : filter.tag)
+        .join(",");
 }
 
 /** Reads game options from URL search params (the part of the URL after the '?').
@@ -46,6 +58,7 @@ export function decodeGameURL(params: URLSearchParams): GameOptions | null {
     if (!gameTypePl || !unitTypePl || !guessFromPl || !guessPl) {
         return null;
     }
+
     const gameType = gameTypeFromPolish[gameTypePl];
     const unitType = unitTypeFromPolish[unitTypePl];
     const guessFrom = guessableFromPolish[guessFromPl];
@@ -53,13 +66,44 @@ export function decodeGameURL(params: URLSearchParams): GameOptions | null {
     if (!gameType || !unitType || !guessFrom || !guess) {
         return null;
     }
+
+    const filterString = params.get("filtry");
+
     return {
         gameType,
         unitType,
         guessFrom,
         guess,
-        filters: [],
+        filters: decodeFilters(filterString),
     };
+}
+
+function decodeFilters(filterString: string | null): UnitFilter[] {
+    if (!filterString) {
+        return [];
+    }
+
+    const filterStrings = filterString.split(",");
+    const filters: UnitFilter[] = [];
+    for (const str of filterStrings) {
+        let mode: UnitFilterMode;
+        let maybeTag;
+        if (str[0] === "-") {
+            mode = "exclude";
+            maybeTag = str.slice(1);
+        } else {
+            mode = "include";
+            maybeTag = str;
+        }
+        if (UNIT_TAGS.includes(maybeTag as UnitTag)) {
+            filters.push({
+                tag: maybeTag as UnitTag,
+                mode,
+            });
+        }
+    }
+
+    return filters;
 }
 
 function flipObject<TKey extends string>(map: Record<TKey, string>): Record<string, TKey | undefined> {
