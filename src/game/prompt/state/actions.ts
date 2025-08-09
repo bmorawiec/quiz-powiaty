@@ -100,8 +100,12 @@ function getNameWithPrefix(unit: Unit) {
     }
 }
 
+/** @throws if the game is unstarted, paused, finished or invalid */
 export function guess(playersGuess: string): GuessResult {
     const game = hook.getState();
+    if (game.state !== "unpaused")
+        throw new Error("Cannot perform this action while the game is unstarted, paused, finished or invalid.");
+
     const result = getGuessResult(playersGuess);
     if (result === "correct") {
         const prompt = game.prompts[game.current];
