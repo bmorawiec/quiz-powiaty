@@ -1,10 +1,14 @@
 import { useEffect } from "react";
-import type { GameProps } from "../common";
-import { Controls, GameLayout, Sidebar } from "../ui";
+import { useNavigate } from "react-router";
+import { encodeGameURL } from "src/url";
+import type { GameOptions, GameProps } from "../common";
+import { Controls, GameLayout, OptionsPanel, Sidebar } from "../ui";
 import { StandardView } from "./StandardView";
 import { calculateTime, gameFromOptions, togglePause, usePromptGameStore } from "./state";
 
 export function PromptGame({ options }: GameProps) {
+    const navigate = useNavigate();
+
     useEffect(() => {
         gameFromOptions(options);
     }, []);
@@ -18,6 +22,11 @@ export function PromptGame({ options }: GameProps) {
         togglePause();
     };
 
+    const handleOptionsChange = (newOptions: GameOptions) => {
+        const newURL = encodeGameURL(newOptions);
+        navigate(newURL);
+    };
+
     return (
         <GameLayout>
             <StandardView options={options}/>
@@ -26,6 +35,10 @@ export function PromptGame({ options }: GameProps) {
                     paused={gameState === "paused"}
                     calculateTime={calculateTime}
                     onPauseClick={handlePauseClick}
+                />
+                <OptionsPanel
+                    options={options}
+                    onChange={handleOptionsChange}
                 />
             </Sidebar>
         </GameLayout>

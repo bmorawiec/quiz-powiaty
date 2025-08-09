@@ -6,7 +6,8 @@ export interface SidebarProps {
 
 export function Sidebar({ children }: SidebarProps) {
     return (
-        <div className="bg-white dark:bg-gray-95 w-[400px] rounded-[20px] shadow-sm shadow-black/10">
+        <div className="bg-white dark:bg-gray-95 w-[400px] rounded-[20px] flex flex-col shadow-sm shadow-black/10
+            overflow-hidden">
             {children}
         </div>
     )

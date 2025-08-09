@@ -15,10 +15,12 @@ export interface GameOptions {
 export interface UnitFilter {
     /** The tag to filter for. */
     tag: UnitTag;
-    /** "include" - All administrative units with the specified tag will be included.
-     *  "exclude" - All administrative units with the specified tag will be excluded. */
-    mode: "include" | "exclude";
+    mode: UnitFilterMode;
 }
+
+/** "include" - All administrative units with the specified tag will be included.
+ *  "exclude" - All administrative units with the specified tag will be excluded. */
+export type UnitFilterMode = "include" | "exclude";
 
 /** Returns true if the provided administrative unit matches the specified filters */
 export function matchesFilters(unit: Unit, filters: UnitFilter[]): boolean {
