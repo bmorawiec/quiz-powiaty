@@ -25,14 +25,15 @@ export type UnitType = "county" | "voivodeship";
 
 /** "county" - This administrative unit is a county.
  *  "voivodeship" - This administrative unit is a voivodeship.
+ *  "duplicate" - There is another administrative unit with the same name.
  *
  *  "city" - This administrative unit is a city with county rights.
  *
  *  "voiv-XX" - This administrative unit is within a voivodeship with the specified code. */
 export type UnitTag = (typeof UNIT_TAGS)[number];
-export const UNIT_TAGS = [ "county", "voivodeship", "city",
+export const UNIT_TAGS = ["county", "voivodeship", "city", "duplicate",
     "voiv-DS", "voiv-KP", "voiv-LU", "voiv-LB", "voiv-LD", "voiv-MA", "voiv-MZ", "voiv-OP",
-    "voiv-PK", "voiv-PD", "voiv-PM", "voiv-SL", "voiv-SK", "voiv-WN", "voiv-WP", "voiv-ZP" ] as const;
+    "voiv-PK", "voiv-PD", "voiv-PM", "voiv-SL", "voiv-SK", "voiv-WN", "voiv-WP", "voiv-ZP"] as const;
 
 /** Represents data fields that can be guessed by the player or that can serve as a hint. */
 export type Guessable = "name" | "capital" | "plate" | "flag" | "coa" | "map";

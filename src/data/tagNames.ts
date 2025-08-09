@@ -4,6 +4,7 @@ export const tagNames: Record<UnitTag, string> = {
     "county": "powiat",
     "voivodeship": "województwo",
     "city": "miasto na prawach powiatu",
+    "duplicate": "duplikat",
     "voiv-DS": "województwo dolnośląskie",
     "voiv-KP": "województwo kujawsko-pomorskie",
     "voiv-LU": "województwo lubelskie",

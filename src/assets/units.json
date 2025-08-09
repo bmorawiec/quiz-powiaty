@@ -440,28 +440,29 @@
     },
     {
         "id": "2003",
-        "parent": "24",
+        "parent": "20",
         "tags": [
             "county",
-            "voiv-SL"
+            "voiv-PD",
+            "duplicate"
         ],
         "name": "bielski",
         "capitals": [
-            "Bielsko-Biała"
+            "Bielsk Podlaski"
         ],
         "plates": [
-            "SBI",
-            "IBI"
+            "BBI"
         ],
-        "population": 166215,
-        "density": 362.41
+        "population": 54058,
+        "density": 39.03
     },
     {
         "id": "2402",
         "parent": "24",
         "tags": [
             "county",
-            "voiv-SL"
+            "voiv-SL",
+            "duplicate"
         ],
         "name": "bielski",
         "capitals": [
@@ -616,7 +617,8 @@
         "parent": "12",
         "tags": [
             "county",
-            "voiv-MA"
+            "voiv-MA",
+            "duplicate"
         ],
         "name": "brzeski",
         "capitals": [
@@ -630,20 +632,21 @@
     },
     {
         "id": "1601",
-        "parent": "12",
+        "parent": "16",
         "tags": [
             "county",
-            "voiv-MA"
+            "voiv-OP",
+            "duplicate"
         ],
         "name": "brzeski",
         "capitals": [
-            "Brzesko"
+            "Brzeg"
         ],
         "plates": [
-            "KBR"
+            "OB"
         ],
-        "population": 93125,
-        "density": 157.7
+        "population": 89632,
+        "density": 102.32
     },
     {
         "id": "1021",
@@ -1514,7 +1517,8 @@
         "parent": "14",
         "tags": [
             "county",
-            "voiv-MZ"
+            "voiv-MZ",
+            "duplicate"
         ],
         "name": "grodziski",
         "capitals": [
@@ -1528,20 +1532,21 @@
     },
     {
         "id": "3005",
-        "parent": "14",
+        "parent": "30",
         "tags": [
             "county",
-            "voiv-MZ"
+            "voiv-WP",
+            "duplicate"
         ],
         "name": "grodziski",
         "capitals": [
-            "Grodzisk Mazowiecki"
+            "Grodzisk Wielkopolski"
         ],
         "plates": [
-            "WGM"
+            "PGO"
         ],
-        "population": 96698,
-        "density": 263.45
+        "population": 51940,
+        "density": 80.92
     },
     {
         "id": "1406",
@@ -2450,28 +2455,29 @@
     },
     {
         "id": "0802",
-        "parent": "18",
+        "parent": "08",
         "tags": [
             "county",
-            "voiv-PK"
+            "voiv-LB",
+            "duplicate"
         ],
         "name": "krośnieński",
         "capitals": [
-            "Krosno"
+            "Krosno Odrzańskie"
         ],
         "plates": [
-            "RKR",
-            "YKR"
+            "FKR"
         ],
-        "population": 112195,
-        "density": 112.97
+        "population": 54706,
+        "density": 39.32
     },
     {
         "id": "1807",
         "parent": "18",
         "tags": [
             "county",
-            "voiv-PK"
+            "voiv-PK",
+            "duplicate"
         ],
         "name": "krośnieński",
         "capitals": [
@@ -3446,27 +3452,29 @@
     },
     {
         "id": "1414",
-        "parent": "22",
+        "parent": "14",
         "tags": [
             "county",
-            "voiv-PM"
+            "voiv-MZ",
+            "duplicate"
         ],
         "name": "nowodworski",
         "capitals": [
-            "Nowy Dwór Gdański"
+            "Nowy Dwór Mazowiecki"
         ],
         "plates": [
-            "GND"
+            "WND"
         ],
-        "population": 35483,
-        "density": 52.64
+        "population": 79427,
+        "density": 114.32
     },
     {
         "id": "2210",
         "parent": "22",
         "tags": [
             "county",
-            "voiv-PM"
+            "voiv-PM",
+            "duplicate"
         ],
         "name": "nowodworski",
         "capitals": [
@@ -3792,7 +3800,8 @@
         "parent": "06",
         "tags": [
             "county",
-            "voiv-LU"
+            "voiv-LU",
+            "duplicate"
         ],
         "name": "opolski",
         "capitals": [
@@ -3806,20 +3815,21 @@
     },
     {
         "id": "1609",
-        "parent": "06",
+        "parent": "16",
         "tags": [
             "county",
-            "voiv-LU"
+            "voiv-OP",
+            "duplicate"
         ],
         "name": "opolski",
         "capitals": [
-            "Opole Lubelskie"
+            "Opole"
         ],
         "plates": [
-            "LOP"
+            "OPO"
         ],
-        "population": 58952,
-        "density": 72.78
+        "population": 123813,
+        "density": 80.7
     },
     {
         "id": "1415",
@@ -3876,27 +3886,29 @@
     },
     {
         "id": "1416",
-        "parent": "30",
+        "parent": "14",
         "tags": [
             "county",
-            "voiv-WP"
+            "voiv-MZ",
+            "duplicate"
         ],
         "name": "ostrowski",
         "capitals": [
-            "Ostrów Wielkopolski"
+            "Ostrów Mazowiecka"
         ],
         "plates": [
-            "POS"
+            "WOR"
         ],
-        "population": 161581,
-        "density": 139.28
+        "population": 72091,
+        "density": 59.2
     },
     {
         "id": "3017",
         "parent": "30",
         "tags": [
             "county",
-            "voiv-WP"
+            "voiv-WP",
+            "duplicate"
         ],
         "name": "ostrowski",
         "capitals": [
@@ -5538,27 +5550,29 @@
     },
     {
         "id": "0218",
-        "parent": "30",
+        "parent": "02",
         "tags": [
             "county",
-            "voiv-WP"
+            "voiv-DS",
+            "duplicate"
         ],
         "name": "średzki",
         "capitals": [
-            "Środa Wielkopolska"
+            "Środa Śląska"
         ],
         "plates": [
-            "PSR"
+            "DSR"
         ],
-        "population": 59033,
-        "density": 94.63
+        "population": 55356,
+        "density": 78.62
     },
     {
         "id": "3025",
         "parent": "30",
         "tags": [
             "county",
-            "voiv-WP"
+            "voiv-WP",
+            "duplicate"
         ],
         "name": "średzki",
         "capitals": [
@@ -5589,27 +5603,29 @@
     },
     {
         "id": "0219",
-        "parent": "06",
+        "parent": "02",
         "tags": [
             "county",
-            "voiv-LU"
+            "voiv-DS",
+            "duplicate"
         ],
         "name": "świdnicki",
         "capitals": [
-            "Świdnik"
+            "Świdnica"
         ],
         "plates": [
-            "LSW"
+            "DSW"
         ],
-        "population": 71739,
-        "density": 153.17
+        "population": 156550,
+        "density": 211.23
     },
     {
         "id": "0617",
         "parent": "06",
         "tags": [
             "county",
-            "voiv-LU"
+            "voiv-LU",
+            "duplicate"
         ],
         "name": "świdnicki",
         "capitals": [
@@ -5832,27 +5848,29 @@
     },
     {
         "id": "0618",
-        "parent": "10",
+        "parent": "06",
         "tags": [
             "county",
-            "voiv-LD"
+            "voiv-LU",
+            "duplicate"
         ],
         "name": "tomaszowski",
         "capitals": [
-            "Tomaszów Mazowiecki"
+            "Tomaszów Lubelski"
         ],
         "plates": [
-            "ETM"
+            "LTM"
         ],
-        "population": 116141,
-        "density": 113.33
+        "population": 82337,
+        "density": 55.3
     },
     {
         "id": "1016",
         "parent": "10",
         "tags": [
             "county",
-            "voiv-LD"
+            "voiv-LD",
+            "duplicate"
         ],
         "name": "tomaszowski",
         "capitals": [
