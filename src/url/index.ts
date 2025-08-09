@@ -17,9 +17,7 @@ const unitTypeToPolish: Record<UnitType, string> = {
 const guessableToPolish: Record<Guessable, string> = {
     name: "nazwa",
     capital: "stolica",
-    allCapitals: "stolice",
     plate: "rejestracja",
-    allPlates: "rejestracje",
     flag: "flaga",
     coa: "herb",
     map: "mapa",

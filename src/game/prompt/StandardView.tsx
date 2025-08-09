@@ -42,9 +42,9 @@ export function StandardView({ options }: StandardViewProps) {
 function getInputPlaceholder(options: GameOptions): string {
     if (options.guess === "name") {
         return "Wpisz nazwę...";
-    } else if (options.guess === "capital" || options.guess === "allCapitals") {
+    } else if (options.guess === "capital") {
         return "Wpisz nazwę stolicy...";
-    } else if (options.guess === "plate" || options.guess === "allPlates") {
+    } else if (options.guess === "plate") {
         return "Wpisz rejestrację...";
     }
     throw new Error("Invalid game options.");
