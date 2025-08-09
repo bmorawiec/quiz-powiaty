@@ -18,11 +18,15 @@ export function StandardView({ options }: StandardViewProps) {
         throw new PromptStateNotFoundError(promptId);
     const promptText = getPromptText(promptState, options);
 
-    const [guessResult, setGuessResult] = useState<GuessResult>("correct");
+    const [guessResult, setGuessResult] = useState<GuessResult | null>("correct");
 
     const handleGuess = (answer: string) => {
         const result = guess(answer);
         setGuessResult(result);
+    };
+
+    const handleClearState = () => {
+        setGuessResult(null);
     };
 
     return (
@@ -34,8 +38,9 @@ export function StandardView({ options }: StandardViewProps) {
             <PromptInput
                 placeholder={inputPlaceholder}
                 state={guessResult}
-                onGuess={handleGuess}
                 className="w-[700px]"
+                onGuess={handleGuess}
+                onClearState={handleClearState}
             />
         </div>
     );

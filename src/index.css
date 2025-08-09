@@ -119,6 +119,7 @@ body {
     --animate-slide-in-left: 300ms slide-in-left var(--ease-out-cubic) both;
     --animate-slide-out-left: 300ms slide-out-left var(--ease-in-cubic) both;
     --animate-blink: 1000ms blink infinite;
+    --animate-shake: 450ms shake;
 }
 
 @keyframes fade-in {
@@ -141,4 +142,12 @@ body {
     0% { visibility: hidden; }
     49% { visibility: hidden; }
     50% { visibility: visible; }
+}
+
+@keyframes shake {
+    15% { transform: translateX(20px); }
+    30% { transform: translateX(-25px); }
+    45% { transform: translateX(30px); }
+    60% { transform: translateX(-35px); }
+    75% { transform: translateX(40px); }
 }
