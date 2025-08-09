@@ -1,10 +1,10 @@
 import type { Guessable } from "src/data";
 
 export const validCombos: Partial<Record<Guessable, Guessable[]>> = {
-    name: ["capital", "allCapitals", "plate", "allPlates"],
-    allCapitals: ["name", "plate", "allPlates"],
-    allPlates: ["name", "capital", "allCapitals"],
-    flag: ["name", "capital", "allCapitals", "plate", "allPlates"],
-    coa: ["name", "capital", "allCapitals", "plate", "allPlates"],
-    map: ["name", "capital", "allCapitals", "plate", "allPlates"],
+    name: ["capital", "plate"],
+    capital: ["name", "plate"],
+    plate: ["name", "capital"],
+    flag: ["name", "capital", "plate"],
+    coa: ["name", "capital", "plate"],
+    map: ["name", "capital", "plate"],
 };

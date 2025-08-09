@@ -2,31 +2,29 @@ import type { GameStore } from "src/game/common";
 
 export interface PromptGameStore extends GameStore {
     /** Stores the order and states of all the prompts that are going to be presented in this game. */
-    prompts: {
-        ids: string[];
-        states: Record<string, PromptState | undefined>;
-        /** TERC code associated with the currently displayed prompt. */
-        current: string;
-        /** Total number of answered prompts */
-        answered: number;
-        /** Total number of prompts */
-        total: number;
-    };
+    prompts: Prompt[];
+    /** Index of the current prompt */
+    current: number;
+    /** Total number of answered prompts */
+    answered: number;
 }
 
-/** Represents a prompt.
- *  Each prompt corresponds to an administrative unit. */
-export interface PromptState {
-    /** TERC code of the administrative unit this question is about. */
-    id: string;
-    /** "unanswered" - This prompt hasn't been answered yet.
-     *  "answering" - This prompt is visible and is being answered right now.
-     *  "answered" - This prompt has been correctly answered. */
-    state: "unanswered" | "answering" | "answered";
-    /** Stores values of all the correct guesses the user has made. */
-    correctGuesses: string[];
-    /** The amount of times the player has attempted to answer this question. */
+/** Represents a prompt. */
+export interface Prompt {
+    /** The question string to be shown. */
+    question: string;
+    /** Stores correct answers to this prompt. */
+    answers: PromptAnswer[];
+    /** Number of correct answers provided by the user. */
+    provided: number;
+    /** The amount of times the player has attempted to answer this prompt. */
     tries: number;
+}
+
+export interface PromptAnswer {
+    /** Whether or not this answer has been guessed by the player. */
+    guessed: boolean;
+    value: string;
 }
 
 /** "correct" - the guess was correct.
