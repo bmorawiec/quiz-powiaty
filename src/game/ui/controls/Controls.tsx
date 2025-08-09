@@ -1,4 +1,4 @@
-import { PauseIcon, PlayIcon } from "src/ui/icons";
+import { PauseIcon, PlayIcon } from "src/ui";
 import { ControlButton } from "./ControlButton";
 import { Timer } from "./Timer";
 

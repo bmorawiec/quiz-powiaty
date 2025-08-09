@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import type { ComponentType } from "react";
-import type { IconProps } from "src/ui/icons";
+import type { IconProps } from "src/ui";
 
 export interface ControlButtonProps {
     icon: ComponentType<IconProps>;

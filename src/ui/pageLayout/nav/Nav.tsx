@@ -1,6 +1,5 @@
 import { NavLink } from "react-router";
-import { PlaceNameIcon, CarIcon, COAIcon, TargetIcon, FlagIcon, LocationIcon } from "src/ui/icons";
-import { InfoIcon } from "../../icons";
+import { CarIcon, COAIcon, FlagIcon, InfoIcon, LocationIcon, PlaceNameIcon, TargetIcon } from "../../icons";
 import { Logo } from "../../Logo";
 import { Destination } from "./Destination";
 import { DropdownDestination } from "./DropdownDestination";

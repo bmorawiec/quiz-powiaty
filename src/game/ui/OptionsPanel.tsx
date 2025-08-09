@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { useState } from "react";
-import { Button, FilterDialog } from "src/ui";
-import { DropdownIcon, FilterIcon } from "src/ui/icons";
+import { Button, DropdownIcon, FilterDialog, FilterIcon } from "src/ui";
 import type { GameOptions, UnitFilter } from "../common";
 
 export interface OptionsPanelProps {

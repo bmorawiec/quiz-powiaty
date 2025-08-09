@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
-import { SendIcon } from "src/ui/icons";
+import { SendIcon } from "src/ui";
 
 export interface PromptInputProps {
     placeholder?: string;

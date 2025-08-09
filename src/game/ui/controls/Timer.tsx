@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
-import { ClockIcon } from "src/ui/icons";
+import { ClockIcon } from "src/ui";
 import { toMinutesAndSeconds } from "src/utils/time";
 
 export interface TimerProps {

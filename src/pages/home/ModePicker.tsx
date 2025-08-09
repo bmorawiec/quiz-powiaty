@@ -2,8 +2,16 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 import type { Guessable, UnitType } from "src/data";
 import type { GameType } from "src/game/common";
-import { LargeDropdown } from "src/ui";
-import { CarIcon, COAIcon, FlagIcon, LocationIcon, PlaceNameIcon, SmallArrowRightIcon, TargetIcon } from "src/ui/icons";
+import {
+    CarIcon,
+    COAIcon,
+    FlagIcon,
+    LargeDropdown,
+    LocationIcon,
+    PlaceNameIcon,
+    SmallArrowRightIcon,
+    TargetIcon,
+} from "src/ui";
 import { encodeGameURL } from "src/url";
 
 export function ModePicker() {
