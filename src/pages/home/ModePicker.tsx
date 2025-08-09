@@ -1,38 +1,27 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
-import type { Guessable } from "src/data";
+import type { Guessable, UnitType } from "src/data";
+import type { GameType } from "src/game/common";
 import { LargeDropdown } from "src/ui";
 import { CarIcon, COAIcon, FlagIcon, LocationIcon, PlaceNameIcon, SmallArrowRightIcon, TargetIcon } from "src/ui/icons";
-
-const guessableToPolish: Record<Guessable, string> = {
-    name: "nazwa",
-    capital: "stolica",
-    plate: "rejestracja",
-    flag: "flaga",
-    coa: "herb",
-    map: "mapa",
-};
-
-const typeToPolish: Record<"county" | "voivodeship", string> = {
-    county: "powiat",
-    voivodeship: "wojewodztwo",
-};
+import { encodeGameURL } from "src/url";
 
 export function ModePicker() {
     const navigate = useNavigate();
 
     const [guess, setGuess] = useState<Guessable>("map");
     const [guessFrom, setGuessFrom] = useState<Guessable>("name");
-    const [type, setType] = useState<"county" | "voivodeship">("county");
+    const [unitType, setUnitType] = useState<UnitType>("county");
 
     const handlePlayClick = () => {
-        const mode = (guess === "map") ? "znajdz" : "wybierz";
-        const url = "/graj"
-            + "?tryb=" + mode
-            + "&typ=" + typeToPolish[type]
-            + "&dane=" + guessableToPolish[guessFrom]
-            + "&zgadnij=" + guessableToPolish[guess];
-        navigate(url);
+        const gameType: GameType = (guess === "map") ? "mapGame" : "choiceGame";
+        navigate(encodeGameURL({
+            gameType,
+            unitType,
+            guessFrom,
+            guess,
+            filters: [],
+        }));
     };
 
     return (
@@ -63,9 +52,9 @@ export function ModePicker() {
                         { value: "county", label: "powiatu" },
                         { value: "voivodeship", label: "województwa" },
                     ]}
-                    value={type}
+                    value={unitType}
                     className="xs:w-[160px]"
-                    onChange={setType}
+                    onChange={setUnitType}
                 />
             </div>
 
