@@ -12,9 +12,9 @@ export function PageLayout({ children }: PageLayoutProps) {
     return (
         <div className="h-full bg-white dark:bg-black text-gray-90 dark:text-gray-15 flex flex-col">
             {(layout === "xs" || layout === "sm") ? (
-                <MobileNav   />
+                <MobileNav/>
             ) : (
-                <Nav   />
+                <Nav/>
             )}
 
             {children}
