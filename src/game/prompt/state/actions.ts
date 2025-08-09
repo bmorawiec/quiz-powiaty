@@ -111,7 +111,7 @@ export function guess(playersGuess: string): GuessResult {
         const prompt = game.prompts[game.current];
         const newPrompt = {
             ...prompt,
-            answers: prompt.answers.map((answer) => (answer.value === playersGuess) ? {
+            answers: prompt.answers.map((answer) => (answer.value.toLowerCase() === playersGuess.toLowerCase()) ? {
                 ...answer,
                 guessed: true,
             } : answer),
