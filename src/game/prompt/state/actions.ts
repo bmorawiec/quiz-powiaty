@@ -42,11 +42,10 @@ function getPrompts(units: Unit[], options: GameOptions): Prompt[] {
 
 function getPromptQuestion(unit: Unit, options: GameOptions): string {
     if (options.guessFrom === "name") {
-        if (options.guess === "capital") {
-            return "Jakie stolice ma " + getNameWithPrefix(unit) + "?";
-        } else if (options.guess === "plate") {
-            return "Jakie rejestracje ma " + getNameWithPrefix(unit) + "?";
-        }
+        const prefix = (options.guess === "capital")
+            ? (unit.capitals.length === 1) ? "Jaką stolicę" : "Jakie stolice"
+            : (unit.plates.length === 1) ? "Jaką rejestrację" : "Jakie rejestracje";
+        return prefix + " ma " + getNameWithPrefix(unit) + "?";
     } else if (options.guessFrom === "capital" || options.guessFrom === "plate") {
         const prefix = (options.unitType === "voivodeship") ? "Jakie województwo" : "Jaki powiat";
         const suffix = (options.guessFrom === "capital")
@@ -58,12 +57,15 @@ function getPromptQuestion(unit: Unit, options: GameOptions): string {
         const suffix = (options.guessFrom === "flag") ? "flaga" : "herb";
         return prefix + " to " + suffix + "?";
     } else if (options.guessFrom === "map") {
-        const suffix = (options.unitType === "voivodeship") ? "to województwo" : "ten powiat";
         if (options.guess === "name") {
+            const suffix = (options.unitType === "voivodeship") ? "to województwo" : "ten powiat";
             return "Jak się nazywa " + suffix + "?";
         } else if (options.guess === "capital") {
-            return "Jakie stolice ma " + suffix + "?";
+            const suffix = (options.unitType === "voivodeship") ? "tego województwa" : "tego powiatu";
+            const prefix = (unit.capitals.length === 1) ? "Jak się nazywa stolica" : "Jak się nazywają stolice";
+            return prefix + " " + suffix + "?";
         } else if (options.guess === "plate") {
+            const suffix = (options.unitType === "voivodeship") ? "to województwo" : "ten powiat";
             return "Jakie rejestracje ma " + suffix + "?";
         }
     }
