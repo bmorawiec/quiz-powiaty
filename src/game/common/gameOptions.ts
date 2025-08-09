@@ -1,5 +1,4 @@
-import type { Unit, UnitTag, UnitType } from "src/data";
-import type { Guessable } from "src/data";
+import type { Guessable, Unit, UnitTag, UnitType } from "src/data";
 
 export type GameType = "choiceGame" | "dndGame" | "mapGame" | "promptGame" | "typingGame";
 
