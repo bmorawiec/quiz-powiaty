@@ -1,15 +1,15 @@
 import type { UnitTag } from "src/data";
-import type { UnitFilter, UnitFilterMode } from "src/game/common";
+import { type UnitFilter, type UnitFilterMode } from "src/game/common";
 import { FilterInput } from "./FilterInput";
 
 export interface FilterGroupProps {
     title: string;
+    tags: UnitTag[];
     filters: UnitFilter[];
-    labels: Partial<Record<UnitTag, string>>;
     onChange: (newFilters: UnitFilter[]) => void;
 }
 
-export function FilterGroup({ title, filters, labels, onChange }: FilterGroupProps) {
+export function FilterGroup({ title, tags, filters, onChange }: FilterGroupProps) {
     const handleFilterChange = (
         tag: UnitTag,
         oldMode: UnitFilterMode | undefined,
@@ -39,13 +39,12 @@ export function FilterGroup({ title, filters, labels, onChange }: FilterGroupPro
             </h3>
 
             <div className="flex flex-col pl-[5px] gap-[10px]">
-                {Object.entries(labels).map(([tag, label]) => {
+                {tags.map((tag) => {
                     const filter = filters.find((filter) => filter.tag === tag);
                     return (
                         <FilterInput
                             key={tag}
                             tag={tag as UnitTag}
-                            label={label}
                             mode={filter?.mode}
                             onChange={handleFilterChange}
                         />

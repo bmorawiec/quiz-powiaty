@@ -1,5 +1,4 @@
 import { useState, type PointerEvent as ReactPointerEvent } from "react";
-import type { UnitTag } from "src/data";
 import type { UnitFilter } from "src/game/common";
 import { Button } from "../Button";
 import { ApplyIcon, CloseIcon, FilterIcon } from "../icons";
@@ -10,29 +9,6 @@ export interface FilterDialogProps {
     onApply: (newFilters: UnitFilter[]) => void;
     onClose: () => void;
 }
-
-const statusFilterLabels = {
-    "city": "miasto na prawach powiatu",
-} as const satisfies Partial<Record<UnitTag, string>>;
-
-const voivodeshipFilterLabels = {
-    "voiv-DS": "województwo dolnośląskie",
-    "voiv-KP": "województwo kujawsko-pomorskie",
-    "voiv-LU": "województwo lubelskie",
-    "voiv-LB": "województwo lubuskie",
-    "voiv-LD": "województwo łódzkie",
-    "voiv-MA": "województwo małopolskie",
-    "voiv-MZ": "województwo mazowieckie",
-    "voiv-OP": "województwo opolskie",
-    "voiv-PK": "województwo podkarpackie",
-    "voiv-PD": "województwo podlaskie",
-    "voiv-PM": "województwo pomorskie",
-    "voiv-SL": "województwo śląskie",
-    "voiv-SK": "województwo świętokrzyskie",
-    "voiv-WN": "województwo warmińsko-mazurskie",
-    "voiv-WP": "województwo wielkopolskie",
-    "voiv-ZP": "województwo zachodniopomorskie",
-} as const satisfies Partial<Record<UnitTag, string>>;
 
 export function FilterDialog({ filters, onApply, onClose }: FilterDialogProps) {
     const [newFilters, setNewFilters] = useState(filters);
@@ -65,14 +41,15 @@ export function FilterDialog({ filters, onApply, onClose }: FilterDialogProps) {
                 <div className="flex-1 flex flex-col px-[30px] overflow-y-auto">
                     <FilterGroup
                         title="Według statusu"
-                        labels={statusFilterLabels}
+                        tags={["city"]}
                         filters={newFilters}
                         onChange={setNewFilters}
                     />
 
                     <FilterGroup
                         title="Według województwa"
-                        labels={voivodeshipFilterLabels}
+                        tags={["voiv-DS", "voiv-KP", "voiv-LU", "voiv-LB", "voiv-LD", "voiv-MA", "voiv-MZ", "voiv-OP",
+                            "voiv-PK", "voiv-PD", "voiv-PM", "voiv-SL", "voiv-SK", "voiv-WN", "voiv-WP", "voiv-ZP"]}
                         filters={newFilters}
                         onChange={setNewFilters}
                     />

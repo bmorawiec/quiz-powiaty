@@ -1,15 +1,16 @@
 import type { UnitTag } from "src/data";
+import { tagNames } from "src/data";
 import type { UnitFilterMode } from "src/game/common";
 import { FilterInputButton } from "./FilterInputButton";
+import { useMemo } from "react";
 
 export interface FilterInputProps {
     tag: UnitTag;
-    label: string;
     mode: UnitFilterMode | undefined;
     onChange: (tag: UnitTag, oldMode: UnitFilterMode | undefined, newMode: UnitFilterMode | undefined) => void;
 }
 
-export function FilterInput({ tag, label, mode, onChange }: FilterInputProps) {
+export function FilterInput({ tag, mode, onChange }: FilterInputProps) {
     const emitIfChanged = (newMode: UnitFilterMode | undefined) => {
         if (newMode !== mode) {
             onChange(tag, mode, newMode);
@@ -27,6 +28,8 @@ export function FilterInput({ tag, label, mode, onChange }: FilterInputProps) {
     const handleIncludeClick = () => {
         emitIfChanged("include");
     };
+
+    const label = useMemo(() => tagNames[tag], [tag]);
 
     return (
         <div className="flex items-center">
