@@ -5,12 +5,13 @@ import { SendIcon } from "src/ui/icons";
 export interface PromptInputProps {
     placeholder?: string;
     state?: "correct" | "alreadyGuessed" | "wrong" | null;
+    textTransform?: "uppercase" | "capitalize";
     className?: string;
     onGuess?: (answer: string) => void;
     onClearState?: () => void;
 }
 
-export function PromptInput({ placeholder, state, className, onGuess, onClearState }: PromptInputProps) {
+export function PromptInput({ placeholder, state, textTransform, className, onGuess, onClearState }: PromptInputProps) {
     const [answer, setAnswer] = useState("");
 
     const [animState, setAnimState] = useState<"correct" | "wrong" | "none">("none");
@@ -73,7 +74,8 @@ export function PromptInput({ placeholder, state, className, onGuess, onClearSta
                 ref={input}
                 type="text"
                 placeholder={placeholder}
-                className="size-full pl-[20px] pr-[70px] rounded-[20px] font-[450] focus-ring"
+                className={clsx("size-full pl-[20px] pr-[70px] rounded-[20px] font-[450] focus-ring",
+                    answer.length > 0 && textTransform)}        // don't transform text when placeholder shown
                 value={answer}
                 onChange={handleInputChange}
                 onKeyDown={handleInputKeyDown}

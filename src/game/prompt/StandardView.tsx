@@ -9,7 +9,9 @@ export interface StandardViewProps {
 
 export function StandardView({ options }: StandardViewProps) {
     const prompt = usePromptGameStore((state) => state.prompts[state.current]);
+
     const inputPlaceholder = getInputPlaceholder(options);
+    const textTransform = getTextTransform(options);
 
     const [guessResult, setGuessResult] = useState<GuessResult | null>("correct");
 
@@ -31,6 +33,7 @@ export function StandardView({ options }: StandardViewProps) {
             <PromptInput
                 placeholder={inputPlaceholder}
                 state={guessResult}
+                textTransform={textTransform}
                 className="w-[700px]"
                 onGuess={handleGuess}
                 onClearState={handleClearState}
@@ -48,4 +51,12 @@ function getInputPlaceholder(options: GameOptions): string {
         return "Wpisz rejestrację...";
     }
     throw new Error("Invalid game options.");
+}
+
+function getTextTransform(options: GameOptions): "uppercase" | "capitalize" | undefined {
+    if (options.guess === "capital") {
+        return "capitalize";
+    } else if (options.guess === "plate") {
+        return "uppercase";
+    }
 }
