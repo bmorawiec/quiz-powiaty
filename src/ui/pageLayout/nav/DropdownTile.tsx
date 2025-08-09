@@ -16,7 +16,7 @@ export function DropdownTile({ icon: Icon, title, where, className, children }: 
         <NavLink
             to={where}
             className={clsx("relative flex flex-col p-[15px] pl-[55px] gap-[3px] transition-colors duration-[80ms]",
-                "hover:bg-gray-5 dark:hover:bg-gray-85 rounded-[15px]", className)}
+                "hover:bg-gray-5 dark:hover:bg-gray-85 rounded-[15px] focus-ring", className)}
         >
             <div className="absolute left-[15px] top-[15px] flex items-center justify-center
                 bg-gray-15 dark:bg-gray-80 size-[30px] rounded-[6px]">

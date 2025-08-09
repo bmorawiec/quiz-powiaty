@@ -26,7 +26,7 @@ export function DropdownItem<TValue extends string>({
             role="option"
             aria-selected={selected}
             className={clsx("flex items-center cursor-pointer p-[10px] hover:bg-gray-5 dark:hover:bg-gray-85",
-                "rounded-[6px] transition-colors duration-80",
+                "rounded-[6px] transition-colors duration-80 focus-ring",
                 selected && "bg-gray-5 hover:bg-gray-10 dark:bg-gray-85 hover:dark:bg-gray-80")}
             onClick={handleClick}
         >

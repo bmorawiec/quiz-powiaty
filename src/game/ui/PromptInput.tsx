@@ -73,7 +73,7 @@ export function PromptInput({ placeholder, state, className, onGuess, onClearSta
                 ref={input}
                 type="text"
                 placeholder={placeholder}
-                className="size-full pl-[20px] pr-[70px] rounded-[20px] font-[450]"
+                className="size-full pl-[20px] pr-[70px] rounded-[20px] font-[450] focus-ring"
                 value={answer}
                 onChange={handleInputChange}
                 onKeyDown={handleInputKeyDown}
@@ -81,7 +81,7 @@ export function PromptInput({ placeholder, state, className, onGuess, onClearSta
 
             <button
                 className="absolute right-[9px] top-[9px] w-[50px] h-[40px] rounded-[10px] cursor-pointer
-                    flex items-center justify-center
+                    flex items-center justify-center focus-ring
                     transition-colors duration-[80ms] bg-teal-70 hover:bg-teal-65 text-white dark:text-gray-95"
                 onClick={handleButtonClick}
             >

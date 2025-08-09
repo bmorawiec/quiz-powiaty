@@ -151,3 +151,7 @@ body {
     60% { transform: translateX(-35px); }
     75% { transform: translateX(40px); }
 }
+
+@utility focus-ring {
+    @apply focus-visible:outline-[3px] outline-offset-[3px] outline-teal-70;
+}

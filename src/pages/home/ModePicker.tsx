@@ -77,7 +77,7 @@ export function ModePicker() {
 
             <button
                 className="mt-auto flex items-center justify-center gap-[2px] h-[60px] rounded-[10px]
-                    cursor-pointer text-[18px] font-[450] transition-colors duration-100
+                    cursor-pointer text-[18px] font-[450] transition-colors duration-100 focus-ring
                     bg-teal-70 hover:bg-teal-65 text-white dark:bg-teal-80 hover:dark:bg-teal-85"
                 onClick={handlePlayClick}
             >
@@ -88,7 +88,7 @@ export function ModePicker() {
             <NavLink
                 to="/quizy"
                 className="flex items-center justify-center h-[50px] rounded-[10px]
-                    text-[18px] transition-colors duration-100
+                    text-[18px] transition-colors duration-100 focus-ring
                     bg-gray-10 hover:bg-gray-15 text-black-100 dark:bg-gray-90 dark:hover:bg-gray-95"
             >
                 <span>Wszystkie tryby gry</span>

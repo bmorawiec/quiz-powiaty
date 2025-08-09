@@ -35,7 +35,7 @@ export function MobileNav() {
             <button
                 aria-label="Otwórz menu nawigacji"
                 aria-haspopup="menu"
-                className="size-[50px] shrink-0 flex items-center justify-center cursor-pointer rounded-full
+                className="size-[50px] shrink-0 flex items-center justify-center cursor-pointer rounded-full focus-ring
                     hover:bg-gray-10 active:bg-gray-15 dark:hover:bg-gray-85 dark:active:bg-gray-90
                     transition-colors duration-80"
                 onClick={handleMenuButtonClick}
@@ -50,7 +50,7 @@ export function MobileNav() {
 
             <NavLink
                 to="/"
-                className="flex items-center h-[50px]
+                className="flex items-center h-[50px] rounded-[6px] focus-ring
                     text-teal-80 hover:text-teal-70 dark:text-teal-60 dark:hover:text-teal-50
                     transition-colors duration-100"
             >

@@ -12,7 +12,7 @@ export function Destination({ label, where, className }: DestinationProps) {
         <NavLink
             to={where}
             className={clsx("shrink-0 flex items-center px-[25px] h-[70px] text-[24px] rounded-full",
-                "transition-colors duration-80",
+                "transition-colors duration-80 focus-ring",
                 "hover:bg-gray-10 dark:hover:bg-gray-80", className)}
         >
             {label}

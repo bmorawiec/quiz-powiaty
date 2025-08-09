@@ -88,7 +88,7 @@ export function LargeDropdown<TValue extends string>({
                 role="combobox"
                 aria-expanded={menuOpen}
                 className="w-full h-[50px] border border-gray-20 dark:border-gray-75 rounded-[10px] flex items-center
-                    pl-[9px] pr-[16px] cursor-pointer transition-colors duration-80
+                    pl-[9px] pr-[16px] cursor-pointer transition-colors duration-80 focus-ring
                     hover:border-gray-30 dark:hover:border-gray-65"
                 onClick={handleClick}
             >

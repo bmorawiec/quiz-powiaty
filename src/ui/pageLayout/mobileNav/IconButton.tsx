@@ -18,7 +18,7 @@ export function NavIconButton({ icon: Icon, role, ariaLabel, ariaHasPopup, class
             aria-haspopup={ariaHasPopup}
             className={clsx("size-[50px] shrink-0 flex items-center justify-center cursor-pointer rounded-full",
                 "hover:bg-gray-10 active:bg-gray-15 dark:hover:bg-gray-85 dark:active:bg-gray-90",
-                "transition-colors duration-80", className)}
+                "transition-colors duration-80 focus-ring", className)}
             onClick={onClick}
         >
             <Icon/>

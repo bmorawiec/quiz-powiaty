@@ -15,7 +15,7 @@ export function Nav() {
             <NavLink
                 to="/"
                 aria-label="Przejdź do strony głównej"
-                className="mr-[5px] flex items-center px-[20px] h-[50px]
+                className="mr-[5px] flex items-center px-[20px] h-[50px] rounded-[6px] focus-ring
                     text-teal-80 hover:text-teal-70 dark:text-teal-60 dark:hover:text-teal-50
                     transition-colors duration-100"
             >
@@ -99,7 +99,7 @@ export function Nav() {
             <button
                 aria-haspopup="dialog"
                 className="ml-auto flex items-center gap-[8px] cursor-pointer h-[50px] px-[20px] rounded-full
-                    text-[16px] tracking-[0.01em] transition-colors duration-80
+                    text-[16px] tracking-[0.01em] transition-colors duration-80 focus-ring
                     hover:bg-gray-10 active:bg-gray-15 dark:hover:bg-gray-90 dark:active:bg-gray-95"
             >
                 <InfoIcon/>
