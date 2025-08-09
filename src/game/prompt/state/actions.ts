@@ -118,21 +118,24 @@ export function guess(playersGuess: string): GuessResult {
             provided: prompt.provided + 1,
         };
 
+        const newPrompts = [
+            ...game.prompts.slice(0, game.current),
+            newPrompt,
+            ...game.prompts.slice(game.current + 1),
+        ];
         // proceed to next prompt if all the correct answers have been provided by the player.
-        const proceed = newPrompt.provided === newPrompt.answers.length;
-        hook.setState({
-            prompts: [
-                ...game.prompts.slice(0, game.current),
-                newPrompt,
-                ...game.prompts.slice(game.current + 1),
-            ],
+        if (newPrompt.provided === newPrompt.answers.length) {
+            hook.setState({
+                prompts: newPrompts,
+                current: game.current + 1,
+                answered: game.answered + 1,
+            });
 
-            current: (proceed) ? game.current + 1 : game.current,
-            answered: (proceed) ? game.answered + 1 : game.answered,
-        });
-
-        if (game.answered + 1 === game.prompts.length) {
-            finishGame();       // finish game if all prompts have been answered
+            if (game.answered + 1 === game.prompts.length) {
+                finishGame();       // finish game if all prompts have been answered
+            }
+        } else {
+            hook.setState({ prompts: newPrompts });
         }
     } else if (result === "wrong") {
         hook.setState({
