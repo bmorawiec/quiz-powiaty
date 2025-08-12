@@ -1,9 +1,7 @@
 [
     {
         "id": "02",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "dolnośląskie",
         "capitals": [
             "Wrocław"
@@ -17,9 +15,7 @@
     },
     {
         "id": "04",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "kujawsko-pomorskie",
         "capitals": [
             "Bydgoszcz",
@@ -33,9 +29,7 @@
     },
     {
         "id": "06",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "lubelskie",
         "capitals": [
             "Lublin"
@@ -48,9 +42,7 @@
     },
     {
         "id": "08",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "lubuskie",
         "capitals": [
             "Gorzów Wielkopolski",
@@ -64,9 +56,7 @@
     },
     {
         "id": "10",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "łódzkie",
         "capitals": [
             "Łódź"
@@ -79,9 +69,7 @@
     },
     {
         "id": "12",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "małopolskie",
         "capitals": [
             "Kraków"
@@ -95,9 +83,7 @@
     },
     {
         "id": "14",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "mazowieckie",
         "capitals": [
             "Warszawa"
@@ -111,9 +97,7 @@
     },
     {
         "id": "16",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "opolskie",
         "capitals": [
             "Opole"
@@ -126,9 +110,7 @@
     },
     {
         "id": "18",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "podkarpackie",
         "capitals": [
             "Rzeszów"
@@ -142,9 +124,7 @@
     },
     {
         "id": "20",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "podlaskie",
         "capitals": [
             "Białystok"
@@ -157,9 +137,7 @@
     },
     {
         "id": "22",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "pomorskie",
         "capitals": [
             "Gdańsk"
@@ -173,9 +151,7 @@
     },
     {
         "id": "24",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "śląskie",
         "capitals": [
             "Katowice"
@@ -189,9 +165,7 @@
     },
     {
         "id": "26",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "świętokrzyskie",
         "capitals": [
             "Kielce"
@@ -204,9 +178,7 @@
     },
     {
         "id": "28",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "warmińsko-mazurskie",
         "capitals": [
             "Olsztyn"
@@ -219,9 +191,7 @@
     },
     {
         "id": "30",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "wielkopolskie",
         "capitals": [
             "Poznań"
@@ -235,9 +205,7 @@
     },
     {
         "id": "32",
-        "tags": [
-            "voivodeship"
-        ],
+        "type": "voivodeship",
         "name": "zachodniopomorskie",
         "capitals": [
             "Szczecin"
@@ -250,11 +218,9 @@
     },
     {
         "id": "0401",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "aleksandrowski",
         "capitals": [
             "Aleksandrów Kujawski"
@@ -267,11 +233,9 @@
     },
     {
         "id": "2001",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "augustowski",
         "capitals": [
             "Augustów"
@@ -284,11 +248,9 @@
     },
     {
         "id": "2801",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "bartoszycki",
         "capitals": [
             "Bartoszyce"
@@ -301,11 +263,9 @@
     },
     {
         "id": "1001",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "bełchatowski",
         "capitals": [
             "Bełchatów"
@@ -318,11 +278,9 @@
     },
     {
         "id": "2401",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "będziński",
         "capitals": [
             "Będzin"
@@ -336,11 +294,9 @@
     },
     {
         "id": "0601",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "bialski",
         "capitals": [
             "Biała Podlaska"
@@ -353,12 +309,9 @@
     },
     {
         "id": "0661",
+        "type": "county",
+        "countyType": "city",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU",
-            "city"
-        ],
         "name": "Biała Podlaska",
         "capitals": [
             "Biała Podlaska"
@@ -371,11 +324,9 @@
     },
     {
         "id": "1401",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "białobrzeski",
         "capitals": [
             "Białobrzegi"
@@ -388,11 +339,9 @@
     },
     {
         "id": "3201",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "białogardzki",
         "capitals": [
             "Białogard"
@@ -405,11 +354,9 @@
     },
     {
         "id": "2002",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "białostocki",
         "capitals": [
             "Białystok"
@@ -422,12 +369,9 @@
     },
     {
         "id": "2061",
+        "type": "county",
+        "countyType": "city",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD",
-            "city"
-        ],
         "name": "Białystok",
         "capitals": [
             "Białystok"
@@ -440,12 +384,10 @@
     },
     {
         "id": "2003",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD",
-            "duplicate"
-        ],
         "name": "bielski",
         "capitals": [
             "Bielsk Podlaski"
@@ -458,12 +400,10 @@
     },
     {
         "id": "2402",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "duplicate"
-        ],
         "name": "bielski",
         "capitals": [
             "Bielsko-Biała"
@@ -477,12 +417,9 @@
     },
     {
         "id": "2461",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Bielsko-Biała",
         "capitals": [
             "Bielsko-Biała"
@@ -495,11 +432,9 @@
     },
     {
         "id": "2414",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "bieruńsko-lędziński",
         "capitals": [
             "Bieruń"
@@ -512,11 +447,9 @@
     },
     {
         "id": "1801",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "bieszczadzki",
         "capitals": [
             "Ustrzyki Dolne"
@@ -529,11 +462,9 @@
     },
     {
         "id": "0602",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "biłgorajski",
         "capitals": [
             "Biłgoraj"
@@ -546,11 +477,9 @@
     },
     {
         "id": "1201",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "bocheński",
         "capitals": [
             "Bochnia"
@@ -563,11 +492,9 @@
     },
     {
         "id": "0201",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "bolesławiecki",
         "capitals": [
             "Bolesławiec"
@@ -580,11 +507,9 @@
     },
     {
         "id": "2802",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "braniewski",
         "capitals": [
             "Braniewo"
@@ -597,11 +522,9 @@
     },
     {
         "id": "0402",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "brodnicki",
         "capitals": [
             "Brodnica"
@@ -614,12 +537,10 @@
     },
     {
         "id": "1202",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA",
-            "duplicate"
-        ],
         "name": "brzeski",
         "capitals": [
             "Brzesko"
@@ -632,12 +553,10 @@
     },
     {
         "id": "1601",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP",
-            "duplicate"
-        ],
         "name": "brzeski",
         "capitals": [
             "Brzeg"
@@ -650,11 +569,9 @@
     },
     {
         "id": "1021",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "brzeziński",
         "capitals": [
             "Brzeziny"
@@ -667,11 +584,9 @@
     },
     {
         "id": "1802",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "brzozowski",
         "capitals": [
             "Brzozów"
@@ -684,11 +599,9 @@
     },
     {
         "id": "2601",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "buski",
         "capitals": [
             "Busko-Zdrój"
@@ -701,11 +614,9 @@
     },
     {
         "id": "0403",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "bydgoski",
         "capitals": [
             "Bydgoszcz"
@@ -719,12 +630,9 @@
     },
     {
         "id": "0461",
+        "type": "county",
+        "countyType": "city",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP",
-            "city"
-        ],
         "name": "Bydgoszcz",
         "capitals": [
             "Bydgoszcz"
@@ -737,12 +645,9 @@
     },
     {
         "id": "2462",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Bytom",
         "capitals": [
             "Bytom"
@@ -755,11 +660,9 @@
     },
     {
         "id": "2201",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "bytowski",
         "capitals": [
             "Bytów"
@@ -772,12 +675,9 @@
     },
     {
         "id": "0662",
+        "type": "county",
+        "countyType": "city",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU",
-            "city"
-        ],
         "name": "Chełm",
         "capitals": [
             "Chełm"
@@ -790,11 +690,9 @@
     },
     {
         "id": "0404",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "chełmiński",
         "capitals": [
             "Chełmno"
@@ -807,11 +705,9 @@
     },
     {
         "id": "0603",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "chełmski",
         "capitals": [
             "Chełm"
@@ -824,11 +720,9 @@
     },
     {
         "id": "3001",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "chodzieski",
         "capitals": [
             "Chodzież"
@@ -841,11 +735,9 @@
     },
     {
         "id": "2202",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "chojnicki",
         "capitals": [
             "Chojnice"
@@ -858,12 +750,9 @@
     },
     {
         "id": "2463",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Chorzów",
         "capitals": [
             "Chorzów"
@@ -876,11 +765,9 @@
     },
     {
         "id": "3202",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "choszczeński",
         "capitals": [
             "Choszczno"
@@ -893,11 +780,9 @@
     },
     {
         "id": "1203",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "chrzanowski",
         "capitals": [
             "Chrzanów"
@@ -910,11 +795,9 @@
     },
     {
         "id": "1402",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "ciechanowski",
         "capitals": [
             "Ciechanów"
@@ -927,11 +810,9 @@
     },
     {
         "id": "2403",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "cieszyński",
         "capitals": [
             "Cieszyn"
@@ -946,11 +827,9 @@
     },
     {
         "id": "3002",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "czarnkowsko-trzcianecki",
         "capitals": [
             "Czarnków"
@@ -963,12 +842,9 @@
     },
     {
         "id": "2464",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Częstochowa",
         "capitals": [
             "Częstochowa"
@@ -981,11 +857,9 @@
     },
     {
         "id": "2404",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "częstochowski",
         "capitals": [
             "Częstochowa"
@@ -998,11 +872,9 @@
     },
     {
         "id": "2203",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "człuchowski",
         "capitals": [
             "Człuchów"
@@ -1015,12 +887,9 @@
     },
     {
         "id": "2465",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Dąbrowa Górnicza",
         "capitals": [
             "Dąbrowa Górnicza"
@@ -1033,11 +902,9 @@
     },
     {
         "id": "1204",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "dąbrowski",
         "capitals": [
             "Dąbrowa Tarnowska"
@@ -1050,11 +917,9 @@
     },
     {
         "id": "1803",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "dębicki",
         "capitals": [
             "Dębica"
@@ -1067,11 +932,9 @@
     },
     {
         "id": "3203",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "drawski",
         "capitals": [
             "Drawsko Pomorskie"
@@ -1084,11 +947,9 @@
     },
     {
         "id": "2803",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "działdowski",
         "capitals": [
             "Działdowo"
@@ -1101,11 +962,9 @@
     },
     {
         "id": "0202",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "dzierżoniowski",
         "capitals": [
             "Dzierżoniów"
@@ -1118,12 +977,9 @@
     },
     {
         "id": "2861",
+        "type": "county",
+        "countyType": "city",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN",
-            "city"
-        ],
         "name": "Elbląg",
         "capitals": [
             "Elbląg"
@@ -1136,11 +992,9 @@
     },
     {
         "id": "2804",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "elbląski",
         "capitals": [
             "Elbląg"
@@ -1153,11 +1007,9 @@
     },
     {
         "id": "2805",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "ełcki",
         "capitals": [
             "Ełk"
@@ -1170,11 +1022,9 @@
     },
     {
         "id": "1403",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "garwoliński",
         "capitals": [
             "Garwolin"
@@ -1187,12 +1037,9 @@
     },
     {
         "id": "2261",
+        "type": "county",
+        "countyType": "city",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM",
-            "city"
-        ],
         "name": "Gdańsk",
         "capitals": [
             "Gdańsk"
@@ -1205,11 +1052,9 @@
     },
     {
         "id": "2204",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "gdański",
         "capitals": [
             "Pruszcz Gdański"
@@ -1222,12 +1067,9 @@
     },
     {
         "id": "2262",
+        "type": "county",
+        "countyType": "city",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM",
-            "city"
-        ],
         "name": "Gdynia",
         "capitals": [
             "Gdynia"
@@ -1240,11 +1082,9 @@
     },
     {
         "id": "2806",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "giżycki",
         "capitals": [
             "Giżycko"
@@ -1257,12 +1097,9 @@
     },
     {
         "id": "2466",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Gliwice",
         "capitals": [
             "Gliwice"
@@ -1275,11 +1112,9 @@
     },
     {
         "id": "2405",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "gliwicki",
         "capitals": [
             "Gliwice"
@@ -1292,11 +1127,9 @@
     },
     {
         "id": "0203",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "głogowski",
         "capitals": [
             "Głogów"
@@ -1309,11 +1142,9 @@
     },
     {
         "id": "1602",
+        "type": "county",
+        "countyType": "county",
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP"
-        ],
         "name": "głubczycki",
         "capitals": [
             "Głubczyce"
@@ -1326,11 +1157,9 @@
     },
     {
         "id": "3003",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "gnieźnieński",
         "capitals": [
             "Gniezno"
@@ -1343,11 +1172,9 @@
     },
     {
         "id": "3204",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "goleniowski",
         "capitals": [
             "Goleniów"
@@ -1360,11 +1187,9 @@
     },
     {
         "id": "0405",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "golubsko-dobrzyński",
         "capitals": [
             "Golub-Dobrzyń"
@@ -1377,11 +1202,9 @@
     },
     {
         "id": "2818",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "gołdapski",
         "capitals": [
             "Gołdap"
@@ -1394,11 +1217,9 @@
     },
     {
         "id": "1205",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "gorlicki",
         "capitals": [
             "Gorlice"
@@ -1411,11 +1232,9 @@
     },
     {
         "id": "0801",
+        "type": "county",
+        "countyType": "county",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB"
-        ],
         "name": "gorzowski",
         "capitals": [
             "Gorzów Wielkopolski"
@@ -1428,12 +1247,9 @@
     },
     {
         "id": "0861",
+        "type": "county",
+        "countyType": "city",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB",
-            "city"
-        ],
         "name": "Gorzów Wielkopolski",
         "capitals": [
             "Gorzów Wielkopolski"
@@ -1446,11 +1262,9 @@
     },
     {
         "id": "1404",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "gostyniński",
         "capitals": [
             "Gostynin"
@@ -1463,11 +1277,9 @@
     },
     {
         "id": "3004",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "gostyński",
         "capitals": [
             "Gostyń"
@@ -1480,11 +1292,9 @@
     },
     {
         "id": "0204",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "górowski",
         "capitals": [
             "Góra"
@@ -1497,11 +1307,9 @@
     },
     {
         "id": "2004",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "grajewski",
         "capitals": [
             "Grajewo"
@@ -1514,12 +1322,10 @@
     },
     {
         "id": "1405",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ",
-            "duplicate"
-        ],
         "name": "grodziski",
         "capitals": [
             "Grodzisk Mazowiecki"
@@ -1532,12 +1338,10 @@
     },
     {
         "id": "3005",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP",
-            "duplicate"
-        ],
         "name": "grodziski",
         "capitals": [
             "Grodzisk Wielkopolski"
@@ -1550,11 +1354,9 @@
     },
     {
         "id": "1406",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "grójecki",
         "capitals": [
             "Grójec"
@@ -1568,12 +1370,9 @@
     },
     {
         "id": "0462",
+        "type": "county",
+        "countyType": "city",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP",
-            "city"
-        ],
         "name": "Grudziądz",
         "capitals": [
             "Grudziądz"
@@ -1586,11 +1385,9 @@
     },
     {
         "id": "0406",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "grudziądzki",
         "capitals": [
             "Grudziądz"
@@ -1603,11 +1400,9 @@
     },
     {
         "id": "3205",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "gryficki",
         "capitals": [
             "Gryfice"
@@ -1620,11 +1415,9 @@
     },
     {
         "id": "3206",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "gryfiński",
         "capitals": [
             "Gryfino"
@@ -1637,11 +1430,9 @@
     },
     {
         "id": "2005",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "hajnowski",
         "capitals": [
             "Hajnówka"
@@ -1654,11 +1445,9 @@
     },
     {
         "id": "0604",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "hrubieszowski",
         "capitals": [
             "Hrubieszów"
@@ -1671,11 +1460,9 @@
     },
     {
         "id": "2807",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "iławski",
         "capitals": [
             "Iława"
@@ -1688,11 +1475,9 @@
     },
     {
         "id": "0407",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "inowrocławski",
         "capitals": [
             "Inowrocław"
@@ -1705,11 +1490,9 @@
     },
     {
         "id": "0605",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "janowski",
         "capitals": [
             "Janów Lubelski"
@@ -1722,11 +1505,9 @@
     },
     {
         "id": "3006",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "jarociński",
         "capitals": [
             "Jarocin"
@@ -1739,11 +1520,9 @@
     },
     {
         "id": "1804",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "jarosławski",
         "capitals": [
             "Jarosław"
@@ -1756,11 +1535,9 @@
     },
     {
         "id": "1805",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "jasielski",
         "capitals": [
             "Jasło"
@@ -1774,12 +1551,9 @@
     },
     {
         "id": "2467",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Jastrzębie-Zdrój",
         "capitals": [
             "Jastrzębie-Zdrój"
@@ -1792,11 +1566,9 @@
     },
     {
         "id": "0205",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "jaworski",
         "capitals": [
             "Jawor"
@@ -1809,12 +1581,9 @@
     },
     {
         "id": "2468",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Jaworzno",
         "capitals": [
             "Jaworzno"
@@ -1827,12 +1596,9 @@
     },
     {
         "id": "0261",
+        "type": "county",
+        "countyType": "city",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS",
-            "city"
-        ],
         "name": "Jelenia Góra",
         "capitals": [
             "Jelenia Góra"
@@ -1845,11 +1611,9 @@
     },
     {
         "id": "2602",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "jędrzejowski",
         "capitals": [
             "Jędrzejów"
@@ -1862,11 +1626,9 @@
     },
     {
         "id": "3007",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "kaliski",
         "capitals": [
             "Kalisz"
@@ -1879,12 +1641,9 @@
     },
     {
         "id": "3061",
+        "type": "county",
+        "countyType": "city",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP",
-            "city"
-        ],
         "name": "Kalisz",
         "capitals": [
             "Kalisz"
@@ -1897,11 +1656,9 @@
     },
     {
         "id": "0207",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "kamiennogórski",
         "capitals": [
             "Kamienna Góra"
@@ -1914,11 +1671,9 @@
     },
     {
         "id": "3207",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "kamieński",
         "capitals": [
             "Kamień Pomorski"
@@ -1931,11 +1686,9 @@
     },
     {
         "id": "0206",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "karkonoski",
         "capitals": [
             "Jelenia Góra"
@@ -1948,11 +1701,9 @@
     },
     {
         "id": "2205",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "kartuski",
         "capitals": [
             "Kartuzy"
@@ -1967,12 +1718,9 @@
     },
     {
         "id": "2469",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Katowice",
         "capitals": [
             "Katowice"
@@ -1985,11 +1733,9 @@
     },
     {
         "id": "2603",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "kazimierski",
         "capitals": [
             "Kazimierza Wielka"
@@ -2002,11 +1748,9 @@
     },
     {
         "id": "1603",
+        "type": "county",
+        "countyType": "county",
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP"
-        ],
         "name": "kędzierzyńsko-kozielski",
         "capitals": [
             "Kędzierzyn-Koźle"
@@ -2019,11 +1763,9 @@
     },
     {
         "id": "3008",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "kępiński",
         "capitals": [
             "Kępno"
@@ -2036,11 +1778,9 @@
     },
     {
         "id": "2808",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "kętrzyński",
         "capitals": [
             "Kętrzyn"
@@ -2053,12 +1793,9 @@
     },
     {
         "id": "2661",
+        "type": "county",
+        "countyType": "city",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK",
-            "city"
-        ],
         "name": "Kielce",
         "capitals": [
             "Kielce"
@@ -2071,11 +1808,9 @@
     },
     {
         "id": "2604",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "kielecki",
         "capitals": [
             "Kielce"
@@ -2091,11 +1826,9 @@
     },
     {
         "id": "1604",
+        "type": "county",
+        "countyType": "county",
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP"
-        ],
         "name": "kluczborski",
         "capitals": [
             "Kluczbork"
@@ -2108,11 +1841,9 @@
     },
     {
         "id": "2406",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "kłobucki",
         "capitals": [
             "Kłobuck"
@@ -2125,11 +1856,9 @@
     },
     {
         "id": "0208",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "kłodzki",
         "capitals": [
             "Kłodzko"
@@ -2142,11 +1871,9 @@
     },
     {
         "id": "1806",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "kolbuszowski",
         "capitals": [
             "Kolbuszowa"
@@ -2159,11 +1886,9 @@
     },
     {
         "id": "2006",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "kolneński",
         "capitals": [
             "Kolno"
@@ -2176,11 +1901,9 @@
     },
     {
         "id": "3009",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "kolski",
         "capitals": [
             "Koło"
@@ -2193,11 +1916,9 @@
     },
     {
         "id": "3208",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "kołobrzeski",
         "capitals": [
             "Kołobrzeg"
@@ -2210,11 +1931,9 @@
     },
     {
         "id": "2605",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "konecki",
         "capitals": [
             "Końskie"
@@ -2227,12 +1946,9 @@
     },
     {
         "id": "3062",
+        "type": "county",
+        "countyType": "city",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP",
-            "city"
-        ],
         "name": "Konin",
         "capitals": [
             "Konin"
@@ -2246,11 +1962,9 @@
     },
     {
         "id": "3010",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "koniński",
         "capitals": [
             "Konin"
@@ -2263,12 +1977,9 @@
     },
     {
         "id": "3261",
+        "type": "county",
+        "countyType": "city",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP",
-            "city"
-        ],
         "name": "Koszalin",
         "capitals": [
             "Koszalin"
@@ -2281,11 +1992,9 @@
     },
     {
         "id": "3209",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "koszaliński",
         "capitals": [
             "Koszalin"
@@ -2298,11 +2007,9 @@
     },
     {
         "id": "3011",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "kościański",
         "capitals": [
             "Kościan"
@@ -2315,11 +2022,9 @@
     },
     {
         "id": "2206",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "kościerski",
         "capitals": [
             "Kościerzyna"
@@ -2332,11 +2037,9 @@
     },
     {
         "id": "1407",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "kozienicki",
         "capitals": [
             "Kozienice"
@@ -2349,11 +2052,9 @@
     },
     {
         "id": "1206",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "krakowski",
         "capitals": [
             "Kraków"
@@ -2367,12 +2068,9 @@
     },
     {
         "id": "1261",
+        "type": "county",
+        "countyType": "city",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA",
-            "city"
-        ],
         "name": "Kraków",
         "capitals": [
             "Kraków"
@@ -2386,11 +2084,9 @@
     },
     {
         "id": "1605",
+        "type": "county",
+        "countyType": "county",
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP"
-        ],
         "name": "krapkowicki",
         "capitals": [
             "Krapkowice"
@@ -2403,11 +2099,9 @@
     },
     {
         "id": "0606",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "krasnostawski",
         "capitals": [
             "Krasnystaw"
@@ -2420,11 +2114,9 @@
     },
     {
         "id": "0607",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "kraśnicki",
         "capitals": [
             "Kraśnik"
@@ -2437,12 +2129,9 @@
     },
     {
         "id": "1861",
+        "type": "county",
+        "countyType": "city",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK",
-            "city"
-        ],
         "name": "Krosno",
         "capitals": [
             "Krosno"
@@ -2455,12 +2144,10 @@
     },
     {
         "id": "0802",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB",
-            "duplicate"
-        ],
         "name": "krośnieński",
         "capitals": [
             "Krosno Odrzańskie"
@@ -2473,12 +2160,10 @@
     },
     {
         "id": "1807",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK",
-            "duplicate"
-        ],
         "name": "krośnieński",
         "capitals": [
             "Krosno"
@@ -2492,11 +2177,9 @@
     },
     {
         "id": "3012",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "krotoszyński",
         "capitals": [
             "Krotoszyn"
@@ -2509,11 +2192,9 @@
     },
     {
         "id": "1002",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "kutnowski",
         "capitals": [
             "Kutno"
@@ -2526,11 +2207,9 @@
     },
     {
         "id": "2207",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "kwidzyński",
         "capitals": [
             "Kwidzyn"
@@ -2543,11 +2222,9 @@
     },
     {
         "id": "1408",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "legionowski",
         "capitals": [
             "Legionowo"
@@ -2560,12 +2237,9 @@
     },
     {
         "id": "0262",
+        "type": "county",
+        "countyType": "city",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS",
-            "city"
-        ],
         "name": "Legnica",
         "capitals": [
             "Legnica"
@@ -2578,11 +2252,9 @@
     },
     {
         "id": "0209",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "legnicki",
         "capitals": [
             "Legnica"
@@ -2595,11 +2267,9 @@
     },
     {
         "id": "1821",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "leski",
         "capitals": [
             "Lesko"
@@ -2612,11 +2282,9 @@
     },
     {
         "id": "3013",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "leszczyński",
         "capitals": [
             "Leszno"
@@ -2629,12 +2297,9 @@
     },
     {
         "id": "3063",
+        "type": "county",
+        "countyType": "city",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP",
-            "city"
-        ],
         "name": "Leszno",
         "capitals": [
             "Leszno"
@@ -2647,11 +2312,9 @@
     },
     {
         "id": "1808",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "leżajski",
         "capitals": [
             "Leżajsk"
@@ -2664,11 +2327,9 @@
     },
     {
         "id": "2208",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "lęborski",
         "capitals": [
             "Lębork"
@@ -2681,11 +2342,9 @@
     },
     {
         "id": "2809",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "lidzbarski",
         "capitals": [
             "Lidzbark Warmiński"
@@ -2698,11 +2357,9 @@
     },
     {
         "id": "1207",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "limanowski",
         "capitals": [
             "Limanowa"
@@ -2715,11 +2372,9 @@
     },
     {
         "id": "0408",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "lipnowski",
         "capitals": [
             "Lipno"
@@ -2732,11 +2387,9 @@
     },
     {
         "id": "1409",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "lipski",
         "capitals": [
             "Lipsko"
@@ -2749,11 +2402,9 @@
     },
     {
         "id": "1809",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "lubaczowski",
         "capitals": [
             "Lubaczów"
@@ -2766,11 +2417,9 @@
     },
     {
         "id": "0210",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "lubański",
         "capitals": [
             "Lubań"
@@ -2783,11 +2432,9 @@
     },
     {
         "id": "0608",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "lubartowski",
         "capitals": [
             "Lubartów"
@@ -2800,11 +2447,9 @@
     },
     {
         "id": "0609",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "lubelski",
         "capitals": [
             "Lublin"
@@ -2817,11 +2462,9 @@
     },
     {
         "id": "0211",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "lubiński",
         "capitals": [
             "Lubin"
@@ -2834,12 +2477,9 @@
     },
     {
         "id": "0663",
+        "type": "county",
+        "countyType": "city",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU",
-            "city"
-        ],
         "name": "Lublin",
         "capitals": [
             "Lublin"
@@ -2852,11 +2492,9 @@
     },
     {
         "id": "2407",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "lubliniecki",
         "capitals": [
             "Lubliniec"
@@ -2869,11 +2507,9 @@
     },
     {
         "id": "0212",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "lwówecki",
         "capitals": [
             "Lwówek Śląski"
@@ -2886,11 +2522,9 @@
     },
     {
         "id": "1810",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "łańcucki",
         "capitals": [
             "Łańcut"
@@ -2903,11 +2537,9 @@
     },
     {
         "id": "1003",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "łaski",
         "capitals": [
             "Łask"
@@ -2920,11 +2552,9 @@
     },
     {
         "id": "1004",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "łęczycki",
         "capitals": [
             "Łęczyca"
@@ -2937,11 +2567,9 @@
     },
     {
         "id": "0610",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "łęczyński",
         "capitals": [
             "Łęczna"
@@ -2954,11 +2582,9 @@
     },
     {
         "id": "3218",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "łobeski",
         "capitals": [
             "Łobez"
@@ -2971,12 +2597,9 @@
     },
     {
         "id": "2062",
+        "type": "county",
+        "countyType": "city",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD",
-            "city"
-        ],
         "name": "Łomża",
         "capitals": [
             "Łomża"
@@ -2989,11 +2612,9 @@
     },
     {
         "id": "2007",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "łomżyński",
         "capitals": [
             "Łomża"
@@ -3006,11 +2627,9 @@
     },
     {
         "id": "1410",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "łosicki",
         "capitals": [
             "Łosice"
@@ -3023,11 +2642,9 @@
     },
     {
         "id": "1005",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "łowicki",
         "capitals": [
             "Łowicz"
@@ -3040,11 +2657,9 @@
     },
     {
         "id": "1006",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "łódzki wschodni",
         "capitals": [
             "Łódź"
@@ -3057,12 +2672,9 @@
     },
     {
         "id": "1061",
+        "type": "county",
+        "countyType": "city",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD",
-            "city"
-        ],
         "name": "Łódź",
         "capitals": [
             "Łódź"
@@ -3076,11 +2688,9 @@
     },
     {
         "id": "0611",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "łukowski",
         "capitals": [
             "Łuków"
@@ -3093,11 +2703,9 @@
     },
     {
         "id": "1411",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "makowski",
         "capitals": [
             "Maków Mazowiecki"
@@ -3110,11 +2718,9 @@
     },
     {
         "id": "2209",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "malborski",
         "capitals": [
             "Malbork"
@@ -3128,11 +2734,9 @@
     },
     {
         "id": "1208",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "miechowski",
         "capitals": [
             "Miechów"
@@ -3145,11 +2749,9 @@
     },
     {
         "id": "1811",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "mielecki",
         "capitals": [
             "Mielec"
@@ -3162,11 +2764,9 @@
     },
     {
         "id": "3014",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "międzychodzki",
         "capitals": [
             "Międzychód"
@@ -3179,11 +2779,9 @@
     },
     {
         "id": "0803",
+        "type": "county",
+        "countyType": "county",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB"
-        ],
         "name": "międzyrzecki",
         "capitals": [
             "Międzyrzecz"
@@ -3196,11 +2794,9 @@
     },
     {
         "id": "2408",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "mikołowski",
         "capitals": [
             "Mikołów"
@@ -3213,11 +2809,9 @@
     },
     {
         "id": "0213",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "milicki",
         "capitals": [
             "Milicz"
@@ -3230,11 +2824,9 @@
     },
     {
         "id": "1412",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "miński",
         "capitals": [
             "Mińsk Mazowiecki"
@@ -3247,11 +2839,9 @@
     },
     {
         "id": "1413",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "mławski",
         "capitals": [
             "Mława"
@@ -3264,11 +2854,9 @@
     },
     {
         "id": "0409",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "mogileński",
         "capitals": [
             "Mogilno"
@@ -3281,11 +2869,9 @@
     },
     {
         "id": "2008",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "moniecki",
         "capitals": [
             "Mońki"
@@ -3298,11 +2884,9 @@
     },
     {
         "id": "2810",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "mrągowski",
         "capitals": [
             "Mrągowo"
@@ -3315,12 +2899,9 @@
     },
     {
         "id": "2470",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Mysłowice",
         "capitals": [
             "Mysłowice"
@@ -3333,11 +2914,9 @@
     },
     {
         "id": "2409",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "myszkowski",
         "capitals": [
             "Myszków"
@@ -3350,11 +2929,9 @@
     },
     {
         "id": "1209",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "myślenicki",
         "capitals": [
             "Myślenice"
@@ -3367,11 +2944,9 @@
     },
     {
         "id": "3210",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "myśliborski",
         "capitals": [
             "Myślibórz"
@@ -3384,11 +2959,9 @@
     },
     {
         "id": "0410",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "nakielski",
         "capitals": [
             "Nakło nad Notecią"
@@ -3401,11 +2974,9 @@
     },
     {
         "id": "1606",
+        "type": "county",
+        "countyType": "county",
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP"
-        ],
         "name": "namysłowski",
         "capitals": [
             "Namysłów"
@@ -3418,11 +2989,9 @@
     },
     {
         "id": "2811",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "nidzicki",
         "capitals": [
             "Nidzica"
@@ -3435,11 +3004,9 @@
     },
     {
         "id": "1812",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "niżański",
         "capitals": [
             "Nisko"
@@ -3452,12 +3019,10 @@
     },
     {
         "id": "1414",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ",
-            "duplicate"
-        ],
         "name": "nowodworski",
         "capitals": [
             "Nowy Dwór Mazowiecki"
@@ -3470,12 +3035,10 @@
     },
     {
         "id": "2210",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM",
-            "duplicate"
-        ],
         "name": "nowodworski",
         "capitals": [
             "Nowy Dwór Gdański"
@@ -3488,11 +3051,9 @@
     },
     {
         "id": "2812",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "nowomiejski",
         "capitals": [
             "Nowe Miasto Lubawskie"
@@ -3505,11 +3066,9 @@
     },
     {
         "id": "1210",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "nowosądecki",
         "capitals": [
             "Nowy Sącz"
@@ -3522,11 +3081,9 @@
     },
     {
         "id": "0804",
+        "type": "county",
+        "countyType": "county",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB"
-        ],
         "name": "nowosolski",
         "capitals": [
             "Nowa Sól"
@@ -3539,11 +3096,9 @@
     },
     {
         "id": "1211",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "nowotarski",
         "capitals": [
             "Nowy Targ"
@@ -3556,11 +3111,9 @@
     },
     {
         "id": "3015",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "nowotomyski",
         "capitals": [
             "Nowy Tomyśl"
@@ -3573,12 +3126,9 @@
     },
     {
         "id": "1262",
+        "type": "county",
+        "countyType": "city",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA",
-            "city"
-        ],
         "name": "Nowy Sącz",
         "capitals": [
             "Nowy Sącz"
@@ -3591,11 +3141,9 @@
     },
     {
         "id": "1607",
+        "type": "county",
+        "countyType": "county",
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP"
-        ],
         "name": "nyski",
         "capitals": [
             "Nysa"
@@ -3608,11 +3156,9 @@
     },
     {
         "id": "3016",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "obornicki",
         "capitals": [
             "Oborniki"
@@ -3625,11 +3171,9 @@
     },
     {
         "id": "2813",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "olecki",
         "capitals": [
             "Olecko"
@@ -3642,11 +3186,9 @@
     },
     {
         "id": "1608",
+        "type": "county",
+        "countyType": "county",
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP"
-        ],
         "name": "oleski",
         "capitals": [
             "Olesno"
@@ -3659,11 +3201,9 @@
     },
     {
         "id": "0214",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "oleśnicki",
         "capitals": [
             "Oleśnica"
@@ -3676,11 +3216,9 @@
     },
     {
         "id": "1212",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "olkuski",
         "capitals": [
             "Olkusz"
@@ -3693,12 +3231,9 @@
     },
     {
         "id": "2862",
+        "type": "county",
+        "countyType": "city",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN",
-            "city"
-        ],
         "name": "Olsztyn",
         "capitals": [
             "Olsztyn"
@@ -3711,11 +3246,9 @@
     },
     {
         "id": "2814",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "olsztyński",
         "capitals": [
             "Olsztyn"
@@ -3728,11 +3261,9 @@
     },
     {
         "id": "0215",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "oławski",
         "capitals": [
             "Oława"
@@ -3745,11 +3276,9 @@
     },
     {
         "id": "2606",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "opatowski",
         "capitals": [
             "Opatów"
@@ -3762,11 +3291,9 @@
     },
     {
         "id": "1007",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "opoczyński",
         "capitals": [
             "Opoczno"
@@ -3779,12 +3306,9 @@
     },
     {
         "id": "1661",
+        "type": "county",
+        "countyType": "city",
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP",
-            "city"
-        ],
         "name": "Opole",
         "capitals": [
             "Opole"
@@ -3797,12 +3321,10 @@
     },
     {
         "id": "0612",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU",
-            "duplicate"
-        ],
         "name": "opolski",
         "capitals": [
             "Opole Lubelskie"
@@ -3815,12 +3337,10 @@
     },
     {
         "id": "1609",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP",
-            "duplicate"
-        ],
         "name": "opolski",
         "capitals": [
             "Opole"
@@ -3833,11 +3353,9 @@
     },
     {
         "id": "1415",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "ostrołęcki",
         "capitals": [
             "Ostrołęka"
@@ -3850,12 +3368,9 @@
     },
     {
         "id": "1461",
+        "type": "county",
+        "countyType": "city",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ",
-            "city"
-        ],
         "name": "Ostrołęka",
         "capitals": [
             "Ostrołęka"
@@ -3869,11 +3384,9 @@
     },
     {
         "id": "2607",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "ostrowiecki",
         "capitals": [
             "Ostrowiec Świętokrzyski"
@@ -3886,12 +3399,10 @@
     },
     {
         "id": "1416",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ",
-            "duplicate"
-        ],
         "name": "ostrowski",
         "capitals": [
             "Ostrów Mazowiecka"
@@ -3904,12 +3415,10 @@
     },
     {
         "id": "3017",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP",
-            "duplicate"
-        ],
         "name": "ostrowski",
         "capitals": [
             "Ostrów Wielkopolski"
@@ -3922,11 +3431,9 @@
     },
     {
         "id": "2815",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "ostródzki",
         "capitals": [
             "Ostróda"
@@ -3941,11 +3448,9 @@
     },
     {
         "id": "3018",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "ostrzeszowski",
         "capitals": [
             "Ostrzeszów"
@@ -3958,11 +3463,9 @@
     },
     {
         "id": "1213",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "oświęcimski",
         "capitals": [
             "Oświęcim"
@@ -3975,11 +3478,9 @@
     },
     {
         "id": "1417",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "otwocki",
         "capitals": [
             "Otwock"
@@ -3992,11 +3493,9 @@
     },
     {
         "id": "1008",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "pabianicki",
         "capitals": [
             "Pabianice"
@@ -4009,11 +3508,9 @@
     },
     {
         "id": "1009",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "pajęczański",
         "capitals": [
             "Pajęczno"
@@ -4026,11 +3523,9 @@
     },
     {
         "id": "0613",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "parczewski",
         "capitals": [
             "Parczew"
@@ -4043,11 +3538,9 @@
     },
     {
         "id": "1418",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "piaseczyński",
         "capitals": [
             "Piaseczno"
@@ -4062,12 +3555,9 @@
     },
     {
         "id": "2471",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Piekary Śląskie",
         "capitals": [
             "Piekary Śląskie"
@@ -4080,11 +3570,9 @@
     },
     {
         "id": "3019",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "pilski",
         "capitals": [
             "Piła"
@@ -4097,11 +3585,9 @@
     },
     {
         "id": "2608",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "pińczowski",
         "capitals": [
             "Pińczów"
@@ -4114,11 +3600,9 @@
     },
     {
         "id": "1010",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "piotrkowski",
         "capitals": [
             "Piotrków Trybunalski"
@@ -4131,12 +3615,9 @@
     },
     {
         "id": "1062",
+        "type": "county",
+        "countyType": "city",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD",
-            "city"
-        ],
         "name": "Piotrków Trybunalski",
         "capitals": [
             "Piotrków Trybunalski"
@@ -4149,11 +3630,9 @@
     },
     {
         "id": "2816",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "piski",
         "capitals": [
             "Pisz"
@@ -4166,11 +3645,9 @@
     },
     {
         "id": "3020",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "pleszewski",
         "capitals": [
             "Pleszew"
@@ -4183,12 +3660,9 @@
     },
     {
         "id": "1462",
+        "type": "county",
+        "countyType": "city",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ",
-            "city"
-        ],
         "name": "Płock",
         "capitals": [
             "Płock"
@@ -4201,11 +3675,9 @@
     },
     {
         "id": "1419",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "płocki",
         "capitals": [
             "Płock"
@@ -4218,11 +3690,9 @@
     },
     {
         "id": "1420",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "płoński",
         "capitals": [
             "Płońsk"
@@ -4235,11 +3705,9 @@
     },
     {
         "id": "1011",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "poddębicki",
         "capitals": [
             "Poddębice"
@@ -4252,11 +3720,9 @@
     },
     {
         "id": "3211",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "policki",
         "capitals": [
             "Police"
@@ -4269,11 +3735,9 @@
     },
     {
         "id": "0216",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "polkowicki",
         "capitals": [
             "Polkowice"
@@ -4286,12 +3750,9 @@
     },
     {
         "id": "3064",
+        "type": "county",
+        "countyType": "city",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP",
-            "city"
-        ],
         "name": "Poznań",
         "capitals": [
             "Poznań"
@@ -4307,11 +3768,9 @@
     },
     {
         "id": "3021",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "poznański",
         "capitals": [
             "Poznań"
@@ -4325,11 +3784,9 @@
     },
     {
         "id": "1214",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "proszowicki",
         "capitals": [
             "Proszowice"
@@ -4342,11 +3799,9 @@
     },
     {
         "id": "1610",
+        "type": "county",
+        "countyType": "county",
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP"
-        ],
         "name": "prudnicki",
         "capitals": [
             "Prudnik"
@@ -4359,11 +3814,9 @@
     },
     {
         "id": "1421",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "pruszkowski",
         "capitals": [
             "Pruszków"
@@ -4378,11 +3831,9 @@
     },
     {
         "id": "1422",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "przasnyski",
         "capitals": [
             "Przasnysz"
@@ -4395,11 +3846,9 @@
     },
     {
         "id": "1813",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "przemyski",
         "capitals": [
             "Przemyśl"
@@ -4412,12 +3861,9 @@
     },
     {
         "id": "1862",
+        "type": "county",
+        "countyType": "city",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK",
-            "city"
-        ],
         "name": "Przemyśl",
         "capitals": [
             "Przemyśl"
@@ -4430,11 +3876,9 @@
     },
     {
         "id": "1814",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "przeworski",
         "capitals": [
             "Przeworsk"
@@ -4447,11 +3891,9 @@
     },
     {
         "id": "1423",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "przysuski",
         "capitals": [
             "Przysucha"
@@ -4464,11 +3906,9 @@
     },
     {
         "id": "2410",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "pszczyński",
         "capitals": [
             "Pszczyna"
@@ -4481,11 +3921,9 @@
     },
     {
         "id": "2211",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "pucki",
         "capitals": [
             "Puck"
@@ -4498,11 +3936,9 @@
     },
     {
         "id": "0614",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "puławski",
         "capitals": [
             "Puławy"
@@ -4515,11 +3951,9 @@
     },
     {
         "id": "1424",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "pułtuski",
         "capitals": [
             "Pułtusk"
@@ -4532,11 +3966,9 @@
     },
     {
         "id": "3212",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "pyrzycki",
         "capitals": [
             "Pyrzyce"
@@ -4549,11 +3981,9 @@
     },
     {
         "id": "2411",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "raciborski",
         "capitals": [
             "Racibórz"
@@ -4566,12 +3996,9 @@
     },
     {
         "id": "1463",
+        "type": "county",
+        "countyType": "city",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ",
-            "city"
-        ],
         "name": "Radom",
         "capitals": [
             "Radom"
@@ -4584,11 +4011,9 @@
     },
     {
         "id": "1425",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "radomski",
         "capitals": [
             "Radom"
@@ -4601,11 +4026,9 @@
     },
     {
         "id": "1012",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "radomszczański",
         "capitals": [
             "Radomsko"
@@ -4618,11 +4041,9 @@
     },
     {
         "id": "0411",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "radziejowski",
         "capitals": [
             "Radziejów"
@@ -4635,11 +4056,9 @@
     },
     {
         "id": "0615",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "radzyński",
         "capitals": [
             "Radzyń Podlaski"
@@ -4652,11 +4071,9 @@
     },
     {
         "id": "3022",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "rawicki",
         "capitals": [
             "Rawicz"
@@ -4669,11 +4086,9 @@
     },
     {
         "id": "1013",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "rawski",
         "capitals": [
             "Rawa Mazowiecka"
@@ -4686,11 +4101,9 @@
     },
     {
         "id": "1815",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "ropczycko-sędziszowski",
         "capitals": [
             "Ropczyce"
@@ -4703,12 +4116,9 @@
     },
     {
         "id": "2472",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Ruda Śląska",
         "capitals": [
             "Ruda Śląska"
@@ -4722,11 +4132,9 @@
     },
     {
         "id": "2412",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "rybnicki",
         "capitals": [
             "Rybnik"
@@ -4739,12 +4147,9 @@
     },
     {
         "id": "2473",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Rybnik",
         "capitals": [
             "Rybnik"
@@ -4757,11 +4162,9 @@
     },
     {
         "id": "0616",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "rycki",
         "capitals": [
             "Ryki"
@@ -4774,11 +4177,9 @@
     },
     {
         "id": "0412",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "rypiński",
         "capitals": [
             "Rypin"
@@ -4791,11 +4192,9 @@
     },
     {
         "id": "1816",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "rzeszowski",
         "capitals": [
             "Rzeszów"
@@ -4809,12 +4208,9 @@
     },
     {
         "id": "1863",
+        "type": "county",
+        "countyType": "city",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK",
-            "city"
-        ],
         "name": "Rzeszów",
         "capitals": [
             "Rzeszów"
@@ -4827,11 +4223,9 @@
     },
     {
         "id": "2609",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "sandomierski",
         "capitals": [
             "Sandomierz"
@@ -4844,11 +4238,9 @@
     },
     {
         "id": "1817",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "sanocki",
         "capitals": [
             "Sanok"
@@ -4861,11 +4253,9 @@
     },
     {
         "id": "2009",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "sejneński",
         "capitals": [
             "Sejny"
@@ -4878,11 +4268,9 @@
     },
     {
         "id": "0413",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "sępoleński",
         "capitals": [
             "Sępólno Krajeńskie"
@@ -4895,12 +4283,9 @@
     },
     {
         "id": "1464",
+        "type": "county",
+        "countyType": "city",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ",
-            "city"
-        ],
         "name": "Siedlce",
         "capitals": [
             "Siedlce"
@@ -4913,11 +4298,9 @@
     },
     {
         "id": "1426",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "siedlecki",
         "capitals": [
             "Siedlce"
@@ -4930,12 +4313,9 @@
     },
     {
         "id": "2474",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Siemianowice Śląskie",
         "capitals": [
             "Siemianowice Śląskie"
@@ -4948,11 +4328,9 @@
     },
     {
         "id": "2010",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "siemiatycki",
         "capitals": [
             "Siemiatycze"
@@ -4965,11 +4343,9 @@
     },
     {
         "id": "1014",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "sieradzki",
         "capitals": [
             "Sieradz"
@@ -4982,11 +4358,9 @@
     },
     {
         "id": "1427",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "sierpecki",
         "capitals": [
             "Sierpc"
@@ -4999,11 +4373,9 @@
     },
     {
         "id": "2610",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "skarżyski",
         "capitals": [
             "Skarżysko-Kamienna"
@@ -5016,12 +4388,9 @@
     },
     {
         "id": "1063",
+        "type": "county",
+        "countyType": "city",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD",
-            "city"
-        ],
         "name": "Skierniewice",
         "capitals": [
             "Skierniewice"
@@ -5034,11 +4403,9 @@
     },
     {
         "id": "1015",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "skierniewicki",
         "capitals": [
             "Skierniewice"
@@ -5051,11 +4418,9 @@
     },
     {
         "id": "3213",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "sławieński",
         "capitals": [
             "Sławno"
@@ -5068,11 +4433,9 @@
     },
     {
         "id": "0805",
+        "type": "county",
+        "countyType": "county",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB"
-        ],
         "name": "słubicki",
         "capitals": [
             "Słubice"
@@ -5085,11 +4448,9 @@
     },
     {
         "id": "3023",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "słupecki",
         "capitals": [
             "Słupca"
@@ -5102,12 +4463,9 @@
     },
     {
         "id": "2263",
+        "type": "county",
+        "countyType": "city",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM",
-            "city"
-        ],
         "name": "Słupsk",
         "capitals": [
             "Słupsk"
@@ -5120,11 +4478,9 @@
     },
     {
         "id": "2212",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "słupski",
         "capitals": [
             "Słupsk"
@@ -5137,11 +4493,9 @@
     },
     {
         "id": "1428",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "sochaczewski",
         "capitals": [
             "Sochaczew"
@@ -5154,11 +4508,9 @@
     },
     {
         "id": "1429",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "sokołowski",
         "capitals": [
             "Sokołów Podlaski"
@@ -5171,11 +4523,9 @@
     },
     {
         "id": "2011",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "sokólski",
         "capitals": [
             "Sokółka"
@@ -5188,12 +4538,9 @@
     },
     {
         "id": "2264",
+        "type": "county",
+        "countyType": "city",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM",
-            "city"
-        ],
         "name": "Sopot",
         "capitals": [
             "Sopot"
@@ -5206,12 +4553,9 @@
     },
     {
         "id": "2475",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Sosnowiec",
         "capitals": [
             "Sosnowiec"
@@ -5224,11 +4568,9 @@
     },
     {
         "id": "1818",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "stalowowolski",
         "capitals": [
             "Stalowa Wola"
@@ -5241,11 +4583,9 @@
     },
     {
         "id": "2611",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "starachowicki",
         "capitals": [
             "Starachowice"
@@ -5258,11 +4598,9 @@
     },
     {
         "id": "3214",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "stargardzki",
         "capitals": [
             "Stargard"
@@ -5275,11 +4613,9 @@
     },
     {
         "id": "2213",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "starogardzki",
         "capitals": [
             "Starogard Gdański"
@@ -5293,11 +4629,9 @@
     },
     {
         "id": "2612",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "staszowski",
         "capitals": [
             "Staszów"
@@ -5310,11 +4644,9 @@
     },
     {
         "id": "1611",
+        "type": "county",
+        "countyType": "county",
         "parent": "16",
-        "tags": [
-            "county",
-            "voiv-OP"
-        ],
         "name": "strzelecki",
         "capitals": [
             "Strzelce Opolskie"
@@ -5327,11 +4659,9 @@
     },
     {
         "id": "0806",
+        "type": "county",
+        "countyType": "county",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB"
-        ],
         "name": "strzelecko-drezdenecki",
         "capitals": [
             "Strzelce Krajeńskie"
@@ -5344,11 +4674,9 @@
     },
     {
         "id": "0217",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "strzeliński",
         "capitals": [
             "Strzelin"
@@ -5361,11 +4689,9 @@
     },
     {
         "id": "1819",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "strzyżowski",
         "capitals": [
             "Strzyżów"
@@ -5378,11 +4704,9 @@
     },
     {
         "id": "0807",
+        "type": "county",
+        "countyType": "county",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB"
-        ],
         "name": "sulęciński",
         "capitals": [
             "Sulęcin"
@@ -5395,11 +4719,9 @@
     },
     {
         "id": "1215",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "suski",
         "capitals": [
             "Sucha Beskidzka"
@@ -5412,11 +4734,9 @@
     },
     {
         "id": "2012",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "suwalski",
         "capitals": [
             "Suwałki"
@@ -5429,12 +4749,9 @@
     },
     {
         "id": "2063",
+        "type": "county",
+        "countyType": "city",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD",
-            "city"
-        ],
         "name": "Suwałki",
         "capitals": [
             "Suwałki"
@@ -5447,11 +4764,9 @@
     },
     {
         "id": "3024",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "szamotulski",
         "capitals": [
             "Szamotuły"
@@ -5464,12 +4779,9 @@
     },
     {
         "id": "3262",
+        "type": "county",
+        "countyType": "city",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP",
-            "city"
-        ],
         "name": "Szczecin",
         "capitals": [
             "Szczecin"
@@ -5482,11 +4794,9 @@
     },
     {
         "id": "3215",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "szczecinecki",
         "capitals": [
             "Szczecinek"
@@ -5499,11 +4809,9 @@
     },
     {
         "id": "2817",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "szczycieński",
         "capitals": [
             "Szczytno"
@@ -5516,11 +4824,9 @@
     },
     {
         "id": "2216",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "sztumski",
         "capitals": [
             "Sztum"
@@ -5533,11 +4839,9 @@
     },
     {
         "id": "1430",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "szydłowiecki",
         "capitals": [
             "Szydłowiec"
@@ -5550,12 +4854,10 @@
     },
     {
         "id": "0218",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS",
-            "duplicate"
-        ],
         "name": "średzki",
         "capitals": [
             "Środa Śląska"
@@ -5568,12 +4870,10 @@
     },
     {
         "id": "3025",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP",
-            "duplicate"
-        ],
         "name": "średzki",
         "capitals": [
             "Środa Wielkopolska"
@@ -5586,11 +4886,9 @@
     },
     {
         "id": "3026",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "śremski",
         "capitals": [
             "Śrem"
@@ -5603,12 +4901,10 @@
     },
     {
         "id": "0219",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS",
-            "duplicate"
-        ],
         "name": "świdnicki",
         "capitals": [
             "Świdnica"
@@ -5621,12 +4917,10 @@
     },
     {
         "id": "0617",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU",
-            "duplicate"
-        ],
         "name": "świdnicki",
         "capitals": [
             "Świdnik"
@@ -5639,11 +4933,9 @@
     },
     {
         "id": "3216",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "świdwiński",
         "capitals": [
             "Świdwin"
@@ -5656,11 +4948,9 @@
     },
     {
         "id": "0808",
+        "type": "county",
+        "countyType": "county",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB"
-        ],
         "name": "świebodziński",
         "capitals": [
             "Świebodzin"
@@ -5673,11 +4963,9 @@
     },
     {
         "id": "0414",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "świecki",
         "capitals": [
             "Świecie"
@@ -5690,12 +4978,9 @@
     },
     {
         "id": "2476",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Świętochłowice",
         "capitals": [
             "Świętochłowice"
@@ -5708,12 +4993,9 @@
     },
     {
         "id": "3263",
+        "type": "county",
+        "countyType": "city",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP",
-            "city"
-        ],
         "name": "Świnoujście",
         "capitals": [
             "Świnoujście"
@@ -5726,12 +5008,9 @@
     },
     {
         "id": "1864",
+        "type": "county",
+        "countyType": "city",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK",
-            "city"
-        ],
         "name": "Tarnobrzeg",
         "capitals": [
             "Tarnobrzeg"
@@ -5744,11 +5023,9 @@
     },
     {
         "id": "1820",
+        "type": "county",
+        "countyType": "county",
         "parent": "18",
-        "tags": [
-            "county",
-            "voiv-PK"
-        ],
         "name": "tarnobrzeski",
         "capitals": [
             "Tarnobrzeg"
@@ -5761,11 +5038,9 @@
     },
     {
         "id": "2413",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "tarnogórski",
         "capitals": [
             "Tarnowskie Góry"
@@ -5779,11 +5054,9 @@
     },
     {
         "id": "1216",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "tarnowski",
         "capitals": [
             "Tarnów"
@@ -5796,12 +5069,9 @@
     },
     {
         "id": "1263",
+        "type": "county",
+        "countyType": "city",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA",
-            "city"
-        ],
         "name": "Tarnów",
         "capitals": [
             "Tarnów"
@@ -5814,11 +5084,9 @@
     },
     {
         "id": "1217",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "tatrzański",
         "capitals": [
             "Zakopane"
@@ -5831,11 +5099,9 @@
     },
     {
         "id": "2214",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "tczewski",
         "capitals": [
             "Tczew"
@@ -5848,12 +5114,10 @@
     },
     {
         "id": "0618",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU",
-            "duplicate"
-        ],
         "name": "tomaszowski",
         "capitals": [
             "Tomaszów Lubelski"
@@ -5866,12 +5130,10 @@
     },
     {
         "id": "1016",
+        "type": "county",
+        "countyType": "county",
+        "duplicate": true,
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD",
-            "duplicate"
-        ],
         "name": "tomaszowski",
         "capitals": [
             "Tomaszów Mazowiecki"
@@ -5884,12 +5146,9 @@
     },
     {
         "id": "0463",
+        "type": "county",
+        "countyType": "city",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP",
-            "city"
-        ],
         "name": "Toruń",
         "capitals": [
             "Toruń"
@@ -5902,11 +5161,9 @@
     },
     {
         "id": "0415",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "toruński",
         "capitals": [
             "Toruń"
@@ -5919,11 +5176,9 @@
     },
     {
         "id": "0220",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "trzebnicki",
         "capitals": [
             "Trzebnica"
@@ -5936,11 +5191,9 @@
     },
     {
         "id": "0416",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "tucholski",
         "capitals": [
             "Tuchola"
@@ -5953,11 +5206,9 @@
     },
     {
         "id": "3027",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "turecki",
         "capitals": [
             "Turek"
@@ -5971,12 +5222,9 @@
     },
     {
         "id": "2477",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Tychy",
         "capitals": [
             "Tychy"
@@ -5989,11 +5237,9 @@
     },
     {
         "id": "1218",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "wadowicki",
         "capitals": [
             "Wadowice"
@@ -6007,12 +5253,9 @@
     },
     {
         "id": "0265",
+        "type": "county",
+        "countyType": "city",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS",
-            "city"
-        ],
         "name": "Wałbrzych",
         "capitals": [
             "Wałbrzych"
@@ -6025,11 +5268,9 @@
     },
     {
         "id": "0221",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "wałbrzyski",
         "capitals": [
             "Wałbrzych"
@@ -6042,11 +5283,9 @@
     },
     {
         "id": "3217",
+        "type": "county",
+        "countyType": "county",
         "parent": "32",
-        "tags": [
-            "county",
-            "voiv-ZP"
-        ],
         "name": "wałecki",
         "capitals": [
             "Wałcz"
@@ -6059,12 +5298,9 @@
     },
     {
         "id": "1465",
+        "type": "county",
+        "countyType": "city",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ",
-            "city"
-        ],
         "name": "Warszawa",
         "capitals": [
             "Warszawa"
@@ -6091,11 +5327,9 @@
     },
     {
         "id": "1432",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "warszawski zachodni",
         "capitals": [
             "Ożarów Mazowiecki"
@@ -6108,11 +5342,9 @@
     },
     {
         "id": "0417",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "wąbrzeski",
         "capitals": [
             "Wąbrzeźno"
@@ -6125,11 +5357,9 @@
     },
     {
         "id": "3028",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "wągrowiecki",
         "capitals": [
             "Wągrowiec"
@@ -6142,11 +5372,9 @@
     },
     {
         "id": "2215",
+        "type": "county",
+        "countyType": "county",
         "parent": "22",
-        "tags": [
-            "county",
-            "voiv-PM"
-        ],
         "name": "wejherowski",
         "capitals": [
             "Wejherowo"
@@ -6160,11 +5388,9 @@
     },
     {
         "id": "2819",
+        "type": "county",
+        "countyType": "county",
         "parent": "28",
-        "tags": [
-            "county",
-            "voiv-WN"
-        ],
         "name": "węgorzewski",
         "capitals": [
             "Węgorzewo"
@@ -6177,11 +5403,9 @@
     },
     {
         "id": "1433",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "węgrowski",
         "capitals": [
             "Węgrów"
@@ -6194,11 +5418,9 @@
     },
     {
         "id": "1219",
+        "type": "county",
+        "countyType": "county",
         "parent": "12",
-        "tags": [
-            "county",
-            "voiv-MA"
-        ],
         "name": "wielicki",
         "capitals": [
             "Wieliczka"
@@ -6211,11 +5433,9 @@
     },
     {
         "id": "1017",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "wieluński",
         "capitals": [
             "Wieluń"
@@ -6228,11 +5448,9 @@
     },
     {
         "id": "1018",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "wieruszowski",
         "capitals": [
             "Wieruszów"
@@ -6245,12 +5463,9 @@
     },
     {
         "id": "0464",
+        "type": "county",
+        "countyType": "city",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP",
-            "city"
-        ],
         "name": "Włocławek",
         "capitals": [
             "Włocławek"
@@ -6263,11 +5478,9 @@
     },
     {
         "id": "0418",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "włocławski",
         "capitals": [
             "Włocławek"
@@ -6280,11 +5493,9 @@
     },
     {
         "id": "0619",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "włodawski",
         "capitals": [
             "Włodawa"
@@ -6297,11 +5508,9 @@
     },
     {
         "id": "2613",
+        "type": "county",
+        "countyType": "county",
         "parent": "26",
-        "tags": [
-            "county",
-            "voiv-SK"
-        ],
         "name": "włoszczowski",
         "capitals": [
             "Włoszczowa"
@@ -6314,11 +5523,9 @@
     },
     {
         "id": "2415",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "wodzisławski",
         "capitals": [
             "Wodzisław Śląski"
@@ -6331,11 +5538,9 @@
     },
     {
         "id": "3029",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "wolsztyński",
         "capitals": [
             "Wolsztyn"
@@ -6348,11 +5553,9 @@
     },
     {
         "id": "1434",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "wołomiński",
         "capitals": [
             "Wołomin"
@@ -6366,11 +5569,9 @@
     },
     {
         "id": "0222",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "wołowski",
         "capitals": [
             "Wołów"
@@ -6383,12 +5584,9 @@
     },
     {
         "id": "0264",
+        "type": "county",
+        "countyType": "city",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS",
-            "city"
-        ],
         "name": "Wrocław",
         "capitals": [
             "Wrocław"
@@ -6402,11 +5600,9 @@
     },
     {
         "id": "0223",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "wrocławski",
         "capitals": [
             "Wrocław"
@@ -6420,11 +5616,9 @@
     },
     {
         "id": "3030",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "wrzesiński",
         "capitals": [
             "Września"
@@ -6437,11 +5631,9 @@
     },
     {
         "id": "0812",
+        "type": "county",
+        "countyType": "county",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB"
-        ],
         "name": "wschowski",
         "capitals": [
             "Wschowa"
@@ -6454,11 +5646,9 @@
     },
     {
         "id": "2013",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "wysokomazowiecki",
         "capitals": [
             "Wysokie Mazowieckie"
@@ -6471,11 +5661,9 @@
     },
     {
         "id": "1435",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "wyszkowski",
         "capitals": [
             "Wyszków"
@@ -6488,12 +5676,9 @@
     },
     {
         "id": "2478",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Zabrze",
         "capitals": [
             "Zabrze"
@@ -6506,11 +5691,9 @@
     },
     {
         "id": "2014",
+        "type": "county",
+        "countyType": "county",
         "parent": "20",
-        "tags": [
-            "county",
-            "voiv-PD"
-        ],
         "name": "zambrowski",
         "capitals": [
             "Zambrów"
@@ -6523,11 +5706,9 @@
     },
     {
         "id": "0620",
+        "type": "county",
+        "countyType": "county",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU"
-        ],
         "name": "zamojski",
         "capitals": [
             "Zamość"
@@ -6540,12 +5721,9 @@
     },
     {
         "id": "0664",
+        "type": "county",
+        "countyType": "city",
         "parent": "06",
-        "tags": [
-            "county",
-            "voiv-LU",
-            "city"
-        ],
         "name": "Zamość",
         "capitals": [
             "Zamość"
@@ -6558,11 +5736,9 @@
     },
     {
         "id": "2416",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "zawierciański",
         "capitals": [
             "Zawiercie"
@@ -6575,11 +5751,9 @@
     },
     {
         "id": "0224",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "ząbkowicki",
         "capitals": [
             "Ząbkowice Śląskie"
@@ -6592,11 +5766,9 @@
     },
     {
         "id": "1019",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "zduńskowolski",
         "capitals": [
             "Zduńska Wola"
@@ -6609,11 +5781,9 @@
     },
     {
         "id": "1020",
+        "type": "county",
+        "countyType": "county",
         "parent": "10",
-        "tags": [
-            "county",
-            "voiv-LD"
-        ],
         "name": "zgierski",
         "capitals": [
             "Zgierz"
@@ -6626,11 +5796,9 @@
     },
     {
         "id": "0225",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "zgorzelecki",
         "capitals": [
             "Zgorzelec"
@@ -6643,12 +5811,9 @@
     },
     {
         "id": "0862",
+        "type": "county",
+        "countyType": "city",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB",
-            "city"
-        ],
         "name": "Zielona Góra",
         "capitals": [
             "Zielona Góra"
@@ -6661,11 +5826,9 @@
     },
     {
         "id": "0809",
+        "type": "county",
+        "countyType": "county",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB"
-        ],
         "name": "zielonogórski",
         "capitals": [
             "Zielona Góra"
@@ -6678,11 +5841,9 @@
     },
     {
         "id": "0226",
+        "type": "county",
+        "countyType": "county",
         "parent": "02",
-        "tags": [
-            "county",
-            "voiv-DS"
-        ],
         "name": "złotoryjski",
         "capitals": [
             "Złotoryja"
@@ -6695,11 +5856,9 @@
     },
     {
         "id": "3031",
+        "type": "county",
+        "countyType": "county",
         "parent": "30",
-        "tags": [
-            "county",
-            "voiv-WP"
-        ],
         "name": "złotowski",
         "capitals": [
             "Złotów"
@@ -6712,11 +5871,9 @@
     },
     {
         "id": "1436",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "zwoleński",
         "capitals": [
             "Zwoleń"
@@ -6729,11 +5886,9 @@
     },
     {
         "id": "0810",
+        "type": "county",
+        "countyType": "county",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB"
-        ],
         "name": "żagański",
         "capitals": [
             "Żagań"
@@ -6746,11 +5901,9 @@
     },
     {
         "id": "0811",
+        "type": "county",
+        "countyType": "county",
         "parent": "08",
-        "tags": [
-            "county",
-            "voiv-LB"
-        ],
         "name": "żarski",
         "capitals": [
             "Żary"
@@ -6763,11 +5916,9 @@
     },
     {
         "id": "0419",
+        "type": "county",
+        "countyType": "county",
         "parent": "04",
-        "tags": [
-            "county",
-            "voiv-KP"
-        ],
         "name": "żniński",
         "capitals": [
             "Żnin"
@@ -6780,12 +5931,9 @@
     },
     {
         "id": "2479",
+        "type": "county",
+        "countyType": "city",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL",
-            "city"
-        ],
         "name": "Żory",
         "capitals": [
             "Żory"
@@ -6798,11 +5946,9 @@
     },
     {
         "id": "1437",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "żuromiński",
         "capitals": [
             "Żuromin"
@@ -6815,11 +5961,9 @@
     },
     {
         "id": "1438",
+        "type": "county",
+        "countyType": "county",
         "parent": "14",
-        "tags": [
-            "county",
-            "voiv-MZ"
-        ],
         "name": "żyrardowski",
         "capitals": [
             "Żyrardów"
@@ -6832,11 +5976,9 @@
     },
     {
         "id": "2417",
+        "type": "county",
+        "countyType": "county",
         "parent": "24",
-        "tags": [
-            "county",
-            "voiv-SL"
-        ],
         "name": "żywiecki",
         "capitals": [
             "Żywiec"

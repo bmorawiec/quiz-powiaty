@@ -1,5 +1,5 @@
-import { UNIT_TAGS, type Guessable, type UnitTag, type UnitType } from "src/data";
-import type { GameOptions, GameType, UnitFilter, UnitFilterMode } from "src/game/common";
+import { voivodeshipIds, type CountyType, type Guessable, type UnitType, type VoivodeshipId } from "src/data";
+import { type GameOptions, type GameType, type UnitFilters } from "src/game/common";
 
 const gameTypeToPolish: Record<GameType, string> = {
     choiceGame: "wybierz",
@@ -23,9 +23,15 @@ const guessableToPolish: Record<Guessable, string> = {
     map: "mapa",
 };
 
+const countyTypeToPolish: Record<CountyType, string> = {
+    county: "powiat",
+    city: "miasto",
+};
+
 const gameTypeFromPolish = flipObject(gameTypeToPolish);
 const unitTypeFromPolish = flipObject(unitTypeToPolish);
 const guessableFromPolish = flipObject(guessableToPolish);
+const countyTypeFromPolish = flipObject(countyTypeToPolish);
 
 /** Encodes game options into an URL. */
 export function encodeGameURL(options: GameOptions): string {
@@ -35,17 +41,35 @@ export function encodeGameURL(options: GameOptions): string {
         + "&dane=" + guessableToPolish[options.guessFrom]
         + "&zgadnij=" + guessableToPolish[options.guess];
 
-    if (options.filters.length > 0) {
-        url += "&filtry=" + encodeFilters(options.filters);
+    const encodedFilters = encodeFilters(options.filters);
+    if (encodedFilters) {
+        url += "&filtry=" + encodedFilters;
     }
 
     return url;
 }
 
-function encodeFilters(filters: UnitFilter[]): string {
-    return filters
-        .map((filter) => (filter.mode === "exclude") ? "-" + filter.tag : filter.tag)
-        .join(",");
+function encodeFilters(filters: UnitFilters): string | null {
+    const groups: string[] = [];
+    if (filters.countyTypes.length > 0) {
+        groups.push("typ:" + filters.countyTypes
+            .map((countyType) => countyTypeToPolish[countyType])
+            .join(","));
+    }
+    if (filters.voivodeships.length > 0) {
+        for (const id of filters.voivodeships) {
+            if (!voivodeshipIds.includes(id)) {
+                throw new Error("Cannot encode filters: Nonexistent voivodeship ID: " + id);
+            }
+        }
+        groups.push("woj:" + filters.voivodeships.join(","));
+    }
+
+    if (groups.length === 0) {
+        return null
+    } else {
+        return groups.join(";");
+    }
 }
 
 /** Reads game options from URL search params (the part of the URL after the '?').
@@ -78,28 +102,34 @@ export function decodeGameURL(params: URLSearchParams): GameOptions | null {
     };
 }
 
-function decodeFilters(filterString: string | null): UnitFilter[] {
+function decodeFilters(filterString: string | null): UnitFilters {
+    const filters: UnitFilters = {
+        countyTypes: [],
+        voivodeships: [],
+    };
     if (!filterString) {
-        return [];
+        return filters;
     }
 
-    const filterStrings = filterString.split(",");
-    const filters: UnitFilter[] = [];
+    const filterStrings = filterString.split(";");
     for (const str of filterStrings) {
-        let mode: UnitFilterMode;
-        let maybeTag;
-        if (str[0] === "-") {
-            mode = "exclude";
-            maybeTag = str.slice(1);
-        } else {
-            mode = "include";
-            maybeTag = str;
-        }
-        if (UNIT_TAGS.includes(maybeTag as UnitTag)) {
-            filters.push({
-                tag: maybeTag as UnitTag,
-                mode,
-            });
+        const [key, joinedValues] = str.split(":");
+        const values = joinedValues.split(",");
+
+        if (key === "typ") {
+            for (const val of values) {
+                const maybeCountyType = countyTypeFromPolish[val];
+                if (maybeCountyType && !filters.countyTypes.includes(maybeCountyType)) {
+                    filters.countyTypes.push(maybeCountyType);
+                }
+            }
+        } else if (key === "woj") {
+            for (const maybeVoivId of values) {
+                if (voivodeshipIds.includes(maybeVoivId as VoivodeshipId)
+                    && !filters.voivodeships.includes(maybeVoivId as VoivodeshipId)) {
+                    filters.voivodeships.push(maybeVoivId as VoivodeshipId);
+                }
+            }
         }
     }
 

@@ -9,7 +9,10 @@ export const initialState: GameStore = {
         unitType: "county",
         guessFrom: "name",
         guess: "map",
-        filters: [],
+        filters: {
+            countyTypes: [],
+            voivodeships: [],
+        },
     },
 };
 

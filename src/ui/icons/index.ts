@@ -12,9 +12,10 @@ export * from "./LocationIcon";
 export * from "./MenuIcon";
 export * from "./MinusIcon";
 export * from "./PauseIcon";
-export * from "./PlayIcon";
 export * from "./PlaceNameIcon";
+export * from "./PlayIcon";
 export * from "./props";
-export * from "./SmallArrowRightIcon";
 export * from "./SendIcon";
+export * from "./SmallArrowRightIcon";
 export * from "./TargetIcon";
+

@@ -1,5 +1,5 @@
 import { units, type Unit } from "src/data";
-import { createActions, matchesFilters, validateOptions, type GameOptions, type UnitFilter } from "src/game/common";
+import { createActions, getMatchingUnits, validateOptions, type GameOptions } from "src/game/common";
 import { toShuffled } from "src/utils/shuffle";
 import { validOptions } from "./gameOptions";
 import { hook } from "./store";
@@ -15,11 +15,7 @@ export function gameFromOptions(options: GameOptions) {
     }
     initializeGame(options);
 
-    const unitTypeFilter: UnitFilter = { tag: options.unitType, mode: "include" };
-    const allFilters = [unitTypeFilter, ...options.filters];
-
-    const matchingUnits = units.filter((unit) => matchesFilters(unit, allFilters));
-
+    const matchingUnits = getMatchingUnits(units, options);
     const prompts = getPrompts(matchingUnits, options);
     hook.setState({
         prompts,
@@ -45,7 +41,10 @@ function getPromptQuestion(unit: Unit, options: GameOptions): string {
         const prefix = (options.guess === "capital")
             ? (unit.capitals.length === 1) ? "Jaką stolicę" : "Jakie stolice"
             : (unit.plates.length === 1) ? "Jaką rejestrację" : "Jakie rejestracje";
-        return prefix + " ma " + getNameWithPrefix(unit) + "?";
+        const unitPrefix = (options.unitType === "voivodeship")
+            ? "województwo"
+            : (unit.countyType === "city") ? "miasto" : "powiat";
+        return prefix + " ma " + unitPrefix + " " + unit.name + "?";
     } else if (options.guessFrom === "capital" || options.guessFrom === "plate") {
         const prefix = (options.unitType === "voivodeship") ? "Jakie województwo" : "Jaki powiat";
         const suffix = (options.guessFrom === "capital")
@@ -88,16 +87,6 @@ function getPromptAnswerStrings(unit: Unit, options: GameOptions): string[] {
         return unit.plates;
     }
     throw new Error("Invalid game options.");
-}
-
-function getNameWithPrefix(unit: Unit) {
-    if (unit.tags.includes("voivodeship")) {
-        return "województwo " + unit.name;
-    } else if (unit.tags.includes("city")) {
-        return "miasto " + unit.name;
-    } else {
-        return "powiat " + unit.name;
-    }
 }
 
 /** @throws if the game is unstarted, paused, finished or invalid */

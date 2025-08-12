@@ -2,11 +2,19 @@
 export interface Unit {
     /** The TERC code of this administrative unit. */
     id: string;
+    type: UnitType;
+    /** "county" - this is a regular county.
+     *  "city" - this is a city on county rights.
+     *
+     *  Required for counties.
+     *  This field can be filtered by. */
+    countyType?: CountyType;
     /** TERC code of the administrative unit this unit is a part of.
-     *  Required for counties. */
-    parent?: string;
-    /** Used for filtering administrative units. */
-    tags: UnitTag[];
+     *  Required for counties.
+     *  This field can be filtered by. */
+    parent?: VoivodeshipId;
+    /** Whether or not there is another administrative unit with the same name. */
+    duplicate?: boolean;
     /** The name of this administrative unit.
      *  In case of a county, this is the county name without the "powiat " prefix. 
      *  In case of a voivodeship, this is the voivodeship name without the "województwo " prefix. */
@@ -22,18 +30,11 @@ export interface Unit {
 }
 
 export type UnitType = "county" | "voivodeship";
+export type CountyType = "county" | "city";
 
-/** "county" - This administrative unit is a county.
- *  "voivodeship" - This administrative unit is a voivodeship.
- *  "duplicate" - There is another administrative unit with the same name.
- *
- *  "city" - This administrative unit is a city with county rights.
- *
- *  "voiv-XX" - This administrative unit is within a voivodeship with the specified code. */
-export type UnitTag = (typeof UNIT_TAGS)[number];
-export const UNIT_TAGS = ["county", "voivodeship", "city", "duplicate",
-    "voiv-DS", "voiv-KP", "voiv-LU", "voiv-LB", "voiv-LD", "voiv-MA", "voiv-MZ", "voiv-OP",
-    "voiv-PK", "voiv-PD", "voiv-PM", "voiv-SL", "voiv-SK", "voiv-WN", "voiv-WP", "voiv-ZP"] as const;
+export const voivodeshipIds = ["02", "04", "06", "08", "10", "12", "14", "16",
+    "18", "20", "22", "24", "26", "28", "30", "32"] as const;
+export type VoivodeshipId = (typeof voivodeshipIds)[number];
 
 /** Represents data fields that can be guessed by the player or that can serve as a hint. */
 export type Guessable = "name" | "capital" | "plate" | "flag" | "coa" | "map";

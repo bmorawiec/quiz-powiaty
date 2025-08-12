@@ -1,5 +1,6 @@
 export * from "./breakpoints";
 export * from "./Button";
+export * from "./Checkbox";
 export * from "./filterDialog";
 export * from "./icons";
 export * from "./largeDropdown";

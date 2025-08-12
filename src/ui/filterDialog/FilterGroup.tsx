@@ -1,55 +1,47 @@
-import type { UnitTag } from "src/data";
-import { type UnitFilter, type UnitFilterMode } from "src/game/common";
-import { FilterInput } from "./FilterInput";
+import { Checkbox } from "../Checkbox";
 
-export interface FilterGroupProps {
+export interface FilterGroupProps<TEntry extends string> {
     title: string;
-    tags: UnitTag[];
-    filters: UnitFilter[];
-    onChange: (newFilters: UnitFilter[]) => void;
+    entries: readonly TEntry[];
+    checked: readonly TEntry[];
+    labels: Record<TEntry, string>;
+    onChange: (newFilters: TEntry[]) => void;
 }
 
-export function FilterGroup({ title, tags, filters, onChange }: FilterGroupProps) {
-    const handleFilterChange = (
-        tag: UnitTag,
-        oldMode: UnitFilterMode | undefined,
-        newMode: UnitFilterMode | undefined,
-    ) => {
-        let newFilters: UnitFilter[];
-        if (newMode === undefined) {
-            newFilters = filters.filter((filter) => filter.tag !== tag);   // remove filter
-        } else {
-            const newFilter: UnitFilter = { tag, mode: newMode };
-            if (oldMode === undefined) {
-                newFilters = [...filters, newFilter];   // add filter to array if it isn't in it
-            } else {
-                // swap filter out if it already is in the array
-                newFilters = filters.map((filter) => (filter.tag === tag) ? newFilter : filter);
+export function FilterGroup<TEntry extends string>({
+    title,
+    entries,
+    checked,
+    labels,
+    onChange,
+}: FilterGroupProps<TEntry>) {
+    const handleCheckboxChange = (newValue: boolean, entry: TEntry) => {
+        const index = checked.indexOf(entry);
+        if (index === -1) {
+            if (newValue) {
+                onChange([...checked, entry]);
             }
+        } else if (!newValue) {
+            onChange(checked.filter((ent) => ent !== entry));
         }
-
-        onChange(newFilters);
     };
 
     return (
         <div className="flex flex-col mb-[8px]">
-            <h3 className="text-[14px] font-[500] pb-[4px] my-[8px] border-b text-gray-60 border-gray-30
+            <h3 className="text-[14px] font-[500] pb-[4px] mt-[8px] mb-[4px] border-b text-gray-60 border-gray-30
                 dark:text-gray-55 dark:border-gray-70">
                 {title}
             </h3>
 
-            <div className="flex flex-col pl-[5px] gap-[10px]">
-                {tags.map((tag) => {
-                    const filter = filters.find((filter) => filter.tag === tag);
-                    return (
-                        <FilterInput
-                            key={tag}
-                            tag={tag as UnitTag}
-                            mode={filter?.mode}
-                            onChange={handleFilterChange}
-                        />
-                    );
-                })}
+            <div className="flex flex-col pl-[4px]">
+                {entries.map((entry) =>
+                    <Checkbox
+                        key={entry}
+                        checked={checked.includes(entry)}
+                        label={labels[entry]}
+                        onChange={(newValue) => handleCheckboxChange(newValue, entry)}
+                    />
+                )}
             </div>
         </div>
     );

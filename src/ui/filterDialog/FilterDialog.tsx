@@ -1,12 +1,13 @@
 import { useState, type PointerEvent as ReactPointerEvent } from "react";
-import type { UnitFilter } from "src/game/common";
+import { voivodeshipIds, type CountyType, type VoivodeshipId } from "src/data";
+import { filterNames, type UnitFilters } from "src/game/common";
 import { Button } from "../Button";
 import { ApplyIcon, CloseIcon, FilterIcon } from "../icons";
 import { FilterGroup } from "./FilterGroup";
 
 export interface FilterDialogProps {
-    filters: UnitFilter[];
-    onApply: (newFilters: UnitFilter[]) => void;
+    filters: UnitFilters;
+    onApply: (newFilters: UnitFilters) => void;
     onClose: () => void;
 }
 
@@ -17,6 +18,20 @@ export function FilterDialog({ filters, onApply, onClose }: FilterDialogProps) {
         if (event.target === event.currentTarget) {
             onClose();
         }
+    };
+
+    const handleTypeFiltersChange = (newCountyTypes: CountyType[]) => {
+        setNewFilters({
+            ...newFilters,
+            countyTypes: newCountyTypes,
+        });
+    };
+
+    const handleVoivodeshipFiltersChange = (newVoivodeships: VoivodeshipId[]) => {
+        setNewFilters({
+            ...newFilters,
+            voivodeships: newVoivodeships,
+        });
     };
 
     const handleApplyClick = () => {
@@ -40,18 +55,19 @@ export function FilterDialog({ filters, onApply, onClose }: FilterDialogProps) {
 
                 <div className="flex-1 flex flex-col px-[30px] overflow-y-auto">
                     <FilterGroup
-                        title="Według statusu"
-                        tags={["city"]}
-                        filters={newFilters}
-                        onChange={setNewFilters}
+                        title="Według rodzaju"
+                        entries={["county", "city"]}
+                        labels={filterNames.countyTypes}
+                        checked={newFilters.countyTypes}
+                        onChange={handleTypeFiltersChange}
                     />
 
                     <FilterGroup
                         title="Według województwa"
-                        tags={["voiv-DS", "voiv-KP", "voiv-LU", "voiv-LB", "voiv-LD", "voiv-MA", "voiv-MZ", "voiv-OP",
-                            "voiv-PK", "voiv-PD", "voiv-PM", "voiv-SL", "voiv-SK", "voiv-WN", "voiv-WP", "voiv-ZP"]}
-                        filters={newFilters}
-                        onChange={setNewFilters}
+                        entries={voivodeshipIds}
+                        labels={filterNames.voivodeships}
+                        checked={newFilters.voivodeships}
+                        onChange={handleVoivodeshipFiltersChange}
                     />
                 </div>
 

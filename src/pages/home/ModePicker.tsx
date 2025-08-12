@@ -28,7 +28,10 @@ export function ModePicker() {
             unitType,
             guessFrom,
             guess,
-            filters: [],
+            filters: {
+                countyTypes: [],
+                voivodeships: [],
+            },
         }));
     };
 

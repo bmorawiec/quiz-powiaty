@@ -1,4 +1,4 @@
-import type { Guessable, Unit, UnitTag, UnitType } from "src/data";
+import { type CountyType, type Guessable, type Unit, type UnitType, type VoivodeshipId } from "src/data";
 
 export type GameType = "choiceGame" | "dndGame" | "mapGame" | "promptGame" | "typingGame";
 
@@ -7,32 +7,58 @@ export interface GameOptions {
     unitType: UnitType;
     guessFrom: Guessable;
     guess: Guessable;
-    filters: UnitFilter[];
+    filters: UnitFilters;
 }
 
-/** Used to filter units depending on their tags. */
-export interface UnitFilter {
-    /** The tag to filter for. */
-    tag: UnitTag;
-    mode: UnitFilterMode;
+/** Used to filter counties depending on their types and/or the voivodeships they're a part of.
+ *  Currently there are no filters that affect voivodeships. */
+export interface UnitFilters {
+    /** Contains types of counties to match. 
+     *  If empty, then all counties are matched. Only affects counties. */
+    countyTypes: CountyType[];
+    /** Contains voivodeship TERC codes to match children of.
+     *  If empty, then all counties are matched. Only affects counties. */
+    voivodeships: VoivodeshipId[];
 }
+
+export const filterNames = {
+    countyTypes: {
+        county: "powiat",
+        city: "miasto na prawach powiatu",
+    } satisfies Record<CountyType, string>,
+    voivodeships: {
+        "02": "dolnośląskie",
+        "04": "kujawsko-pomorskie",
+        "06": "lubelskie",
+        "08": "lubuskie",
+        "10": "łódzkie",
+        "12": "małopolskie",
+        "14": "mazowieckie",
+        "16": "opolskie",
+        "18": "podkarpackie",
+        "20": "podlaskie",
+        "22": "pomorskie",
+        "24": "śląskie",
+        "26": "świętokrzyskie",
+        "28": "warmińsko-mazurskie",
+        "30": "wielkopolskie",
+        "32": "zachodniopomorskie",
+    } satisfies Record<VoivodeshipId, string>,
+};
 
 /** "include" - All administrative units with the specified tag will be included.
  *  "exclude" - All administrative units with the specified tag will be excluded. */
 export type UnitFilterMode = "include" | "exclude";
 
+export function getMatchingUnits(units: Unit[], options: GameOptions): Unit[] {
+    return units.filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
+}
+
 /** Returns true if the provided administrative unit matches the specified filters */
-export function matchesFilters(unit: Unit, filters: UnitFilter[]): boolean {
-    for (const filter of filters) {
-        if (filter.mode === "include") {
-            if (!unit.tags.includes(filter.tag)) {
-                return false;
-            }
-        } else {
-            if (unit.tags.includes(filter.tag)) {
-                return false;
-            }
-        }
+function matchesFilters(unit: Unit, filters: UnitFilters): boolean {
+    if (unit.type === "county") {
+        return (filters.countyTypes.length === 0 || filters.countyTypes.includes(unit.countyType!))
+            && (filters.voivodeships.length === 0 || filters.voivodeships.includes(unit.parent!));
     }
     return true;
 }

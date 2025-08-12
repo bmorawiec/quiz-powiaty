@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 import { Button, DropdownIcon, FilterDialog, FilterIcon } from "src/ui";
-import type { GameOptions, UnitFilter } from "../common";
+import type { GameOptions, UnitFilters } from "../common";
 
 export interface OptionsPanelProps {
     options: GameOptions;
@@ -21,7 +21,7 @@ export function OptionsPanel({ options, onChange }: OptionsPanelProps) {
         setShowFilterDialog(true);
     };
 
-    const handleApplyFilters = (newFilters: UnitFilter[]) => {
+    const handleApplyFilters = (newFilters: UnitFilters) => {
         onChange({
             ...options,
             filters: newFilters,
