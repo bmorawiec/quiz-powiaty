@@ -120,6 +120,8 @@ body {
     --animate-slide-out-left: 300ms slide-out-left var(--ease-in-cubic) both;
     --animate-blink: 1000ms blink infinite;
     --animate-shake: 450ms shake;
+    --animate-correct: 450ms correct;
+    --animate-correct-dark: 450ms correct-dark;
 }
 
 @keyframes fade-in {
@@ -150,6 +152,14 @@ body {
     45% { transform: translateX(30px); }
     60% { transform: translateX(-35px); }
     75% { transform: translateX(40px); }
+}
+
+@keyframes correct {
+    0% { background: var(--color-teal-10); }
+}
+
+@keyframes correct-dark {
+    0% { background: var(--color-teal-95); }
 }
 
 @utility focus-ring {

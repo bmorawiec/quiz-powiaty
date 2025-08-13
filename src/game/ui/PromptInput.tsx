@@ -28,11 +28,11 @@ export function PromptInput({
     const [animState, setAnimState] = useState<"correct" | "wrong" | "none">("none");
     useEffect(() => {
         let animTimeout: number | null = null;
-        if (state === "wrong") {
+        if (state === "wrong" || state === "correct") {
             if (animTimeout) {
                 clearTimeout(animTimeout);
             }
-            setAnimState("wrong");
+            setAnimState(state);
             animTimeout = setTimeout(() => {
                 animTimeout = null;
                 setAnimState("none");
@@ -48,7 +48,7 @@ export function PromptInput({
                 onClearState?.();
             }
         };
-    }, [state]);
+    }, [state, onClearState]);
 
     const input = useRef<HTMLInputElement>(null);
     useEffect(() => {
@@ -80,6 +80,7 @@ export function PromptInput({
         <div className={clsx("relative h-[60px] border border-gray-20 dark:border-gray-65 rounded-[20px]",
             "bg-white dark:bg-gray-95",
             animState === "wrong" && "animate-shake",
+            animState === "correct" && "animate-correct dark:animate-correct-dark",
             className)}>
             <input
                 ref={input}
