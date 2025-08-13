@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
-import { SendIcon } from "src/ui";
+import { InfoIcon, SendIcon } from "src/ui";
 
 export interface PromptInputProps {
     placeholder?: string;
@@ -63,6 +63,9 @@ export function PromptInput({
         if (answer !== "") {
             onGuess?.(answer);
             setAnswer("");
+            if (state) {
+                onClearState?.();
+            }
         }
     };
 
@@ -107,6 +110,15 @@ export function PromptInput({
             >
                 <SendIcon/>
             </button>
+
+            {state === "alreadyGuessed" && (
+                <div className="absolute left-[15px] top-[70px] text-[14px] text-gray-80 flex items-center gap-[4px]">
+                    <InfoIcon className="size-[12px]"/>
+                    <span>
+                        Już zgadłeś tą odpowiedź.
+                    </span>
+                </div>
+            )}
         </div>
     )
 }
