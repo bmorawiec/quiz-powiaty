@@ -10,11 +10,7 @@ export function GamePage() {
     return (
         <PageLayout>
             {options && (
-                <Game
-                    // ensure the game component is reloaded each time the URL (and with it the game options) changes
-                    key={window.location.href}
-                    options={options}
-                />
+                <Game options={options}/>
             )}
         </PageLayout>
     );

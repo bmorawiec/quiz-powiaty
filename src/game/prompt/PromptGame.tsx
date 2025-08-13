@@ -11,7 +11,7 @@ export function PromptGame({ options }: GameProps) {
 
     useEffect(() => {
         gameFromOptions(options);
-    }, []);
+    }, [options]);
 
     const gameState = usePromptGameStore((game) => game.state);
     if (gameState === "unstarted" || gameState === "invalid" || gameState === "finished") {
