@@ -1,7 +1,6 @@
-import { useState } from "react";
 import type { GameOptions } from "../common";
 import { PromptInput } from "../ui";
-import { guess, usePromptGameStore, type GuessResult } from "./state";
+import { guess, usePromptGameStore } from "./state";
 
 export interface StandardViewProps {
     options: GameOptions;
@@ -13,15 +12,8 @@ export function StandardView({ options }: StandardViewProps) {
     const inputPlaceholder = getInputPlaceholder(options);
     const textTransform = getTextTransform(options);
 
-    const [guessResult, setGuessResult] = useState<GuessResult | null>("correct");
-
     const handleGuess = (answer: string) => {
-        const result = guess(answer);
-        setGuessResult(result);
-    };
-
-    const handleClearState = () => {
-        setGuessResult(null);
+        return guess(answer);
     };
 
     return (
@@ -34,11 +26,9 @@ export function StandardView({ options }: StandardViewProps) {
                 placeholder={inputPlaceholder}
                 answered={prompt.provided}
                 total={prompt.answers.length}
-                state={guessResult}
                 textTransform={textTransform}
                 className="w-[700px]"
                 onGuess={handleGuess}
-                onClearState={handleClearState}
             />
         </div>
     );

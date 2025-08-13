@@ -6,49 +6,37 @@ export interface PromptInputProps {
     placeholder?: string;
     answered?: number;
     total?: number;
-    state?: "correct" | "alreadyGuessed" | "wrong" | null;
     textTransform?: "uppercase" | "capitalize";
     className?: string;
-    onGuess?: (answer: string) => void;
-    onClearState?: () => void;
+    onGuess: (answer: string) => "correct" | "alreadyGuessed" | "wrong";
 }
 
 export function PromptInput({
     placeholder,
     answered,
     total,
-    state,
     textTransform,
     className,
     onGuess,
-    onClearState,
 }: PromptInputProps) {
     const [answer, setAnswer] = useState("");
 
-    const [animState, setAnimState] = useState<"correct" | "wrong" | "none">("none");
+    const [result, setResult] = useState<"correct" | "alreadyGuessed" | "wrong" | null>(null);
+    const [animState, setAnimState] = useState<"correctAnim" | "wrongAnim" | null>(null);
     useEffect(() => {
-        let animTimeout: number | null = null;
-        if (state === "wrong" || state === "correct") {
-            if (animTimeout) {
-                clearTimeout(animTimeout);
-            }
-            setAnimState(state);
-            animTimeout = setTimeout(() => {
+        if (animState) {
+            let animTimeout: number | null = setTimeout(() => {
                 animTimeout = null;
-                setAnimState("none");
-                onClearState?.();
+                setAnimState(null);
             }, 450);
-        }
 
-        return () => {
-            if (animTimeout) {
-                clearTimeout(animTimeout);
-                animTimeout = null;
-                setAnimState("none");
-                onClearState?.();
-            }
-        };
-    }, [state, onClearState]);
+            return () => {
+                if (animTimeout) {
+                    clearTimeout(animTimeout);
+                }
+            };
+        }
+    }, [animState]);
 
     const input = useRef<HTMLInputElement>(null);
     useEffect(() => {
@@ -61,11 +49,14 @@ export function PromptInput({
 
     const guess = () => {
         if (answer !== "") {
-            onGuess?.(answer);
-            setAnswer("");
-            if (state) {
-                onClearState?.();
+            const result = onGuess(answer);
+            setResult(result);
+            if (result === "correct") {
+                setAnimState("correctAnim");
+            } else if (result === "wrong") {
+                setAnimState("wrongAnim");
             }
+            setAnswer("");
         }
     };
 
@@ -82,8 +73,8 @@ export function PromptInput({
     return (
         <div className={clsx("relative h-[60px] border border-gray-20 dark:border-gray-65 rounded-[20px]",
             "bg-white dark:bg-gray-95",
-            animState === "wrong" && "animate-shake",
-            animState === "correct" && "animate-correct dark:animate-correct-dark",
+            animState === "wrongAnim" && "animate-shake",
+            animState === "correctAnim" && "animate-correct dark:animate-correct-dark",
             className)}>
             <input
                 ref={input}
@@ -111,7 +102,7 @@ export function PromptInput({
                 <SendIcon/>
             </button>
 
-            {state === "alreadyGuessed" && (
+            {result === "alreadyGuessed" && (
                 <div className="absolute left-[15px] top-[70px] text-[14px] text-gray-80 flex items-center gap-[4px]">
                     <InfoIcon className="size-[12px]"/>
                     <span>
