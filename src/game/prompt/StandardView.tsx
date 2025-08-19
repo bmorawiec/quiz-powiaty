@@ -17,8 +17,8 @@ export function StandardView({ options }: StandardViewProps) {
     };
 
     return (
-        <div className="flex-1 bg-gray-5 dark:bg-gray-95 md:rounded-[20px] flex flex-col items-center justify-end
-            pt-[60px] pb-[50px]">
+        <div className="flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col items-center justify-end
+            pt-[60px] pb-[50px] px-[20px]">
             <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80 dark:text-gray-10">
                 {prompt.question}
             </h2>
@@ -27,7 +27,7 @@ export function StandardView({ options }: StandardViewProps) {
                 answered={prompt.provided}
                 total={prompt.answers.length}
                 textTransform={textTransform}
-                className="w-[700px]"
+                className="w-full max-w-[700px]"
                 onGuess={handleGuess}
             />
         </div>

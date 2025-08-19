@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
+import { useBreakpoints } from "src/ui";
 import { encodeGameURL } from "src/url";
 import type { GameOptions, GameProps } from "../common";
 import { Controls, GameLayout, OptionsPanel, Sidebar } from "../ui";
@@ -8,6 +9,7 @@ import { calculateTime, gameFromOptions, togglePause, usePromptGameStore } from 
 
 export function PromptGame({ options }: GameProps) {
     const navigate = useNavigate();
+    const layout = useBreakpoints();
 
     useEffect(() => {
         gameFromOptions(options);
@@ -30,17 +32,19 @@ export function PromptGame({ options }: GameProps) {
     return (
         <GameLayout>
             <StandardView options={options}/>
-            <Sidebar>
-                <Controls
-                    paused={gameState === "paused"}
-                    calculateTime={calculateTime}
-                    onPauseClick={handlePauseClick}
-                />
-                <OptionsPanel
-                    options={options}
-                    onChange={handleOptionsChange}
-                />
-            </Sidebar>
+            {(layout === "md" || layout === "lg" || layout === "xl") && (
+                <Sidebar>
+                    <Controls
+                        paused={gameState === "paused"}
+                        calculateTime={calculateTime}
+                        onPauseClick={handlePauseClick}
+                    />
+                    <OptionsPanel
+                        options={options}
+                        onChange={handleOptionsChange}
+                    />
+                </Sidebar>
+            )}
         </GameLayout>
     );
 }
