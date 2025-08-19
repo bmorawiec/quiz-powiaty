@@ -1,5 +1,5 @@
-import { getUnambiguousName, units, type Unit } from "src/data";
-import { createActions, getMatchingUnits, validateOptions, type GameOptions } from "src/game/common";
+import { units, type Unit } from "src/data";
+import { createActions, formatQuestion, getMatchingUnits, validateOptions, type GameOptions } from "src/game/common";
 import { toShuffled } from "src/utils/shuffle";
 import { validOptions } from "./gameOptions";
 import { hook } from "./store";
@@ -30,46 +30,11 @@ function getPrompts(units: Unit[], options: GameOptions): Prompt[] {
     return shuffledUnits.map((unit, index) => ({
         about: unit.id,
         state: (index === 0) ? "answering" : "unanswered",
-        question: getPromptQuestion(unit, options),
+        question: formatQuestion(unit, options),
         answers: getPromptAnswers(unit, options),
         provided: 0,
         tries: 0,
     }));
-}
-
-function getPromptQuestion(unit: Unit, options: GameOptions): string {
-    if (options.guessFrom === "name") {
-        const prefix = (options.guess === "capital")
-            ? (unit.capitals.length === 1) ? "Jaką stolicę" : "Jakie stolice"
-            : (unit.plates.length === 1) ? "Jaką rejestrację" : "Jakie rejestracje";
-        const unitPrefix = (options.unitType === "voivodeship")
-            ? "województwo"
-            : (unit.countyType === "city") ? "miasto" : "powiat";
-        return prefix + " ma " + unitPrefix + " " + getUnambiguousName(unit) + "?";
-    } else if (options.guessFrom === "capital" || options.guessFrom === "plate") {
-        const prefix = (options.unitType === "voivodeship") ? "Jakie województwo" : "Jaki powiat";
-        const suffix = (options.guessFrom === "capital")
-            ? ((unit.capitals.length === 1) ? "ma stolicę" : "ma stolice") + " " + unit.capitals.join(", ")
-            : ((unit.plates.length === 1) ? "ma rejestrację" : "ma rejestracje") + " " + unit.plates.join(", ");
-        return prefix + " " + suffix + "?";
-    } else if (options.guessFrom === "flag" || options.guessFrom === "coa") {
-        const prefix = (options.unitType === "voivodeship") ? "Jakiego województwa" : "Jakiego powiatu";
-        const suffix = (options.guessFrom === "flag") ? "flaga" : "herb";
-        return prefix + " to " + suffix + "?";
-    } else if (options.guessFrom === "map") {
-        if (options.guess === "name") {
-            const suffix = (options.unitType === "voivodeship") ? "to województwo" : "ten powiat";
-            return "Jak się nazywa " + suffix + "?";
-        } else if (options.guess === "capital") {
-            const suffix = (options.unitType === "voivodeship") ? "tego województwa" : "tego powiatu";
-            const prefix = (unit.capitals.length === 1) ? "Jak się nazywa stolica" : "Jak się nazywają stolice";
-            return prefix + " " + suffix + "?";
-        } else if (options.guess === "plate") {
-            const suffix = (options.unitType === "voivodeship") ? "to województwo" : "ten powiat";
-            return "Jakie rejestracje ma " + suffix + "?";
-        }
-    }
-    throw new Error("Invalid game options.");
 }
 
 function getPromptAnswers(unit: Unit, options: GameOptions): PromptAnswer[] {
