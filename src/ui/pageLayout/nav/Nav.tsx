@@ -7,10 +7,7 @@ import { DropdownTile } from "./DropdownTile";
 
 export function Nav() {
     return (
-        <div
-            role="navigation"
-            className="relative flex pt-[20px] pb-[18px] mx-[20px] lg:mx-[100px]"
-        >
+        <nav className="relative flex pt-[20px] pb-[18px] mx-[20px] lg:mx-[100px]">
             <NavLink
                 to="/"
                 aria-label="Przejdź do strony głównej"
@@ -104,6 +101,6 @@ export function Nav() {
                 <InfoIcon/>
                 <span>O stronie...</span>
             </button>
-        </div>
+        </nav>
     );
 }

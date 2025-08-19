@@ -33,12 +33,9 @@ export function Drawer({ state, onClose }: DrawerProps) {
                 (state === "slideIn") ? "animate-fade-in-slow" : "animate-fade-out-slow")}
             onPointerDown={onClose}
         />
-        <div
-            role="navigation"
-            className={clsx("flex flex-col bg-white dark:bg-gray-90 fixed left-0 top-0 w-[450px] max-xs:w-full h-full",
-                "p-[15px] pb-[30px] shadow-sm shadow-black/20 dark:shadow-black overflow-auto z-1000",
-                (state === "slideIn") ? "animate-slide-in-left" : "animate-slide-out-left")}
-        >
+        <nav className={clsx("flex flex-col bg-white dark:bg-gray-90 fixed left-0 top-0 w-[450px] max-xs:w-full h-full",
+            "p-[15px] pb-[30px] shadow-sm shadow-black/20 dark:shadow-black overflow-auto z-1000",
+            (state === "slideIn") ? "animate-slide-in-left" : "animate-slide-out-left")}>
             <button
                 aria-label="Zamknij menu nawigacji"
                 className="ml-auto mr-[10px] mt-[10px] size-[50px] shrink-0 flex items-center justify-center focus-ring
@@ -63,6 +60,6 @@ export function Drawer({ state, onClose }: DrawerProps) {
                 <InfoIcon/>
                 <span>O stronie...</span>
             </button>
-        </div>
+        </nav>
     </>);
 }
