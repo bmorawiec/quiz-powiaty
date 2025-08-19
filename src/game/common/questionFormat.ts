@@ -10,22 +10,21 @@ import type { GameOptions } from "./gameOptions";
  *  %type       (województwo | powiat)
  *  %type|countyType            (województwo | powiat | miasto)
  *  %withCapitalsInCities?      (ze stolicą w mieście | ze stolicami w mieście) or empty string
- *  %unambigName                disambiguated county/voivodeship name
- *  %??                         question mark or empty string */
+ *  %unambigName                disambiguated county/voivodeship name */
 const templates: Record<Guessable, string[]> = {
-    name: ["%prefix", " ", "%type|countyType", " ", "%unambigName", "%??"],
-    capital: ["%prefix", " ", "%type|countyType", " ", "%withCapitalsInCities?", " ", "%capitals", "%??"],
-    plate: ["%prefix", " ", "%type", " z rejestracjami ", "%plates", "%??"],
-    flag: ["%prefix", " ", "%type", " z tą flagą", "%??"],
-    coa: ["%prefix", " ", "%type", " z tym herbem", "%??"],
-    map: ["%prefix", " ", "%thisType", "%??"],
+    name: ["%prefix", "%type|countyType", "%unambigName"],
+    capital: ["%prefix", "%type|countyType", "%withCapitalsInCities?", "%capitals"],
+    plate: ["%prefix", "%type", "z rejestracjami", "%plates"],
+    flag: ["%prefix", "%type", "z tą flagą"],
+    coa: ["%prefix", "%type", "z tym herbem"],
+    map: ["%prefix", "%thisType"],
 };
 
 /** Returns a string containing the a question about the provided administrative unit,
  *  based on the specified game options. */
 export function formatQuestion(unit: Unit, options: GameOptions): string {
     const template = templates[options.guessFrom];
-    return template
+    const text = template
         .map((entry) => {
             if (entry === "%capitals") {
                 return unit.capitals.join(", ");
@@ -64,10 +63,9 @@ export function formatQuestion(unit: Unit, options: GameOptions): string {
                 return (unit.capitals.length > 1) ? "ze stolicami w miastach" : "ze stolicą w mieście";
             } else if (entry === "%unambigName") {
                 return getUnambiguousName(unit);
-            } else if (entry === "%??") {
-                return (options.guess === "map") ? "" : "?";
             }
             return entry;
         })
-        .join("");
+        .join(" ");
+    return (options.guess === "map") ? text : text + "?";
 }
