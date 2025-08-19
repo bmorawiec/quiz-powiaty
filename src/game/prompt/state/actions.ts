@@ -170,8 +170,8 @@ function getHint(): string | null {
                 if (noOfLetters > answer.value.length) {
                     return answer.value;
                 }
-                const uncoveredLetters = answer.value.slice(-noOfLetters);
-                return uncoveredLetters.padStart(answer.value.length, "*");
+                const uncoveredLetters = answer.value.slice(0, noOfLetters);
+                return uncoveredLetters.padEnd(answer.value.length, "*");
             })
             .join(", ");
     } else if (game.options.guess === "name" || game.options.guess === "capital") {
