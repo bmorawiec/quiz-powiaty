@@ -9,7 +9,7 @@ export interface TimerProps {
 }
 
 export function Timer({ paused, calculateTime }: TimerProps) {
-    const [time, setTime] = useState(0);
+    const [time, setTime] = useState(calculateTime());
     const [minutes, seconds] = toMinutesAndSeconds(time);
 
     useEffect(() => {
