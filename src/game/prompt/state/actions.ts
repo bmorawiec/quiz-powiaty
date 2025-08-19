@@ -1,4 +1,4 @@
-import { units, type Unit } from "src/data";
+import { getUnambiguousName, units, type Unit } from "src/data";
 import { createActions, getMatchingUnits, validateOptions, type GameOptions } from "src/game/common";
 import { toShuffled } from "src/utils/shuffle";
 import { validOptions } from "./gameOptions";
@@ -44,7 +44,7 @@ function getPromptQuestion(unit: Unit, options: GameOptions): string {
         const unitPrefix = (options.unitType === "voivodeship")
             ? "województwo"
             : (unit.countyType === "city") ? "miasto" : "powiat";
-        return prefix + " ma " + unitPrefix + " " + unit.name + "?";
+        return prefix + " ma " + unitPrefix + " " + getUnambiguousName(unit) + "?";
     } else if (options.guessFrom === "capital" || options.guessFrom === "plate") {
         const prefix = (options.unitType === "voivodeship") ? "Jakie województwo" : "Jaki powiat";
         const suffix = (options.guessFrom === "capital")
