@@ -27,14 +27,13 @@ export function gameFromOptions(options: GameOptions) {
 /** Generates an array of prompts about the provided administrative units. */
 function getPrompts(units: Unit[], options: GameOptions): Prompt[] {
     const shuffledUnits = toShuffled(units);
-    return shuffledUnits.map((unit, index) => ({
+    return shuffledUnits.map((unit) => ({
         about: unit.id,
-        state: (index === 0) ? "answering" : "unanswered",
         question: formatQuestion(unit, options),
         answers: getPromptAnswers(unit, options),
         provided: 0,
         tries: 0,
-    }));
+    } satisfies Prompt));
 }
 
 function getPromptAnswers(unit: Unit, options: GameOptions): PromptAnswer[] {
