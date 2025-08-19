@@ -8,7 +8,7 @@ export interface PromptInputProps {
     total?: number;
     textTransform?: "uppercase" | "capitalize";
     className?: string;
-    onGuess: (answer: string) => "correct" | "alreadyGuessed" | "wrong";
+    onGuess: (answer: string) => ["correct" | "alreadyGuessed" | "wrong", string | null];
 }
 
 export function PromptInput({
@@ -38,6 +38,8 @@ export function PromptInput({
         }
     }, [animState]);
 
+    const [hint, setHint] = useState<string | null>(null);
+
     const input = useRef<HTMLInputElement>(null);
     useEffect(() => {
         input.current!.focus();         // focus input when component mounted
@@ -49,12 +51,14 @@ export function PromptInput({
 
     const guess = () => {
         if (answer !== "") {
-            const result = onGuess(answer);
+            const [result, hint] = onGuess(answer);
             setResult(result);
             if (result === "correct") {
                 setAnimState("correctAnim");
+                setHint(null);
             } else if (result === "wrong") {
                 setAnimState("wrongAnim");
+                setHint(hint);
             }
             setAnswer("");
         }
@@ -102,14 +106,23 @@ export function PromptInput({
                 <SendIcon/>
             </button>
 
-            {result === "alreadyGuessed" && (
-                <div className="absolute left-[15px] top-[70px] text-[14px] text-gray-80 flex items-center gap-[4px]">
-                    <InfoIcon className="size-[12px]"/>
-                    <span>
-                        Już zgadłeś tą odpowiedź.
-                    </span>
-                </div>
-            )}
+            <div className="absolute left-[15px] top-[70px] text-[14px] text-gray-80 flex flex-col gap-[10px]">
+                {(hint || result === "alreadyGuessed") && (
+                    <div className="flex items-center gap-[4px]">
+                        <InfoIcon className="size-[12px]"/>
+                        {result === "alreadyGuessed" && (
+                            <span>
+                                Już zgadłeś tą odpowiedź.
+                            </span>
+                        )}
+                        {hint && (
+                            <span>
+                                Podpowiedź: {hint}
+                            </span>
+                        )}
+                    </div>
+                )}
+            </div>
         </div>
     )
 }
