@@ -1,9 +1,9 @@
 import { units, type Unit } from "src/data";
-import { createActions, type GameOptions, validateOptions, getMatchingUnits, formatQuestion } from "src/game/common";
+import { createActions, formatQuestion, matchesFilters, validateOptions, type GameOptions } from "src/game/common";
+import { toShuffled } from "src/utils/shuffle";
 import { validOptions } from "./gameOptions";
 import { hook } from "./store";
 import type { GuessResult, Question, QuestionOption } from "./types";
-import { toShuffled } from "src/utils/shuffle";
 
 const { initializeGame, finishGame, setInvalidState, togglePause, calculateTime } = createActions(hook);
 export { calculateTime, togglePause };
@@ -15,8 +15,9 @@ export function gameFromOptions(options: GameOptions) {
     }
     initializeGame(options);
 
-    const matchingUnits = getMatchingUnits(units, options);
-    const questions = getQuestions(matchingUnits, options);
+    const matchingUnits = units.filter((unit) => unit.type === options.unitType);
+    const filteredUnits = matchingUnits.filter((unit) => matchesFilters(unit, options.filters));
+    const questions = getQuestions(filteredUnits, matchingUnits, options);
     hook.setState({
         questions,
         current: 0,
@@ -25,12 +26,12 @@ export function gameFromOptions(options: GameOptions) {
 }
 
 /** Generates an array of questions about the provided administrative units. */
-function getQuestions(units: Unit[], options: GameOptions): Question[] {
+function getQuestions(units: Unit[], allUnits: Unit[], options: GameOptions): Question[] {
     const shuffledUnits = toShuffled(units);
     return shuffledUnits.map((unit) => ({
         about: unit.id,
         value: formatQuestion(unit, options),
-        options: getQuestionOptions(unit, units, options),
+        options: getQuestionOptions(unit, allUnits, options),
         tries: 0,
     } satisfies Question));
 }

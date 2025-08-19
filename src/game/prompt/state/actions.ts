@@ -1,5 +1,5 @@
 import { units, type Unit } from "src/data";
-import { createActions, formatQuestion, getMatchingUnits, validateOptions, type GameOptions } from "src/game/common";
+import { createActions, formatQuestion, matchesFilters, validateOptions, type GameOptions } from "src/game/common";
 import { toShuffled } from "src/utils/shuffle";
 import { validOptions } from "./gameOptions";
 import { hook } from "./store";
@@ -15,8 +15,9 @@ export function gameFromOptions(options: GameOptions) {
     }
     initializeGame(options);
 
-    const matchingUnits = getMatchingUnits(units, options);
-    const prompts = getPrompts(matchingUnits, options);
+    const filteredUnits = units
+        .filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
+    const prompts = getPrompts(filteredUnits, options);
     hook.setState({
         prompts,
         current: 0,

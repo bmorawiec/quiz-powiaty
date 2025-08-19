@@ -50,12 +50,8 @@ export const filterNames = {
  *  "exclude" - All administrative units with the specified tag will be excluded. */
 export type UnitFilterMode = "include" | "exclude";
 
-export function getMatchingUnits(units: Unit[], options: GameOptions): Unit[] {
-    return units.filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
-}
-
 /** Returns true if the provided administrative unit matches the specified filters */
-function matchesFilters(unit: Unit, filters: UnitFilters): boolean {
+export function matchesFilters(unit: Unit, filters: UnitFilters): boolean {
     if (unit.type === "county") {
         return (filters.countyTypes.length === 0 || filters.countyTypes.includes(unit.countyType!))
             && (filters.voivodeships.length === 0 || filters.voivodeships.includes(unit.parent!));
