@@ -1,6 +1,6 @@
 import type { GameOptions } from "../common";
 import { PromptInput } from "../ui";
-import { guess, usePromptGameStore } from "./state";
+import { guess, usePromptGameStore, type Prompt } from "./state";
 
 export interface StandardViewProps {
     options: GameOptions;
@@ -11,15 +11,25 @@ export function StandardView({ options }: StandardViewProps) {
 
     const inputPlaceholder = getInputPlaceholder(options);
     const textTransform = getTextTransform(options);
+    const imageUrl = getImageUrl(prompt, options);
 
     const handleGuess = (answer: string) => {
         return guess(answer);
     };
 
     return (
-        <div className="flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col items-center justify-end
+        <div className="relative flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col items-center 
             pt-[60px] pb-[50px] px-[20px]">
-            <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80 dark:text-gray-10">
+            {imageUrl && (
+                <div className="relative w-full max-w-[700px] flex-1 min-h-[200px] max-h-[500px] mb-[30px]">
+                    <img
+                        className="absolute left-0 top-0 w-full h-full"
+                        src={imageUrl}
+                    />
+                </div>
+            )}
+
+            <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80 dark:text-gray-10 mt-auto">
                 {prompt.question}
             </h2>
             <PromptInput
@@ -32,6 +42,16 @@ export function StandardView({ options }: StandardViewProps) {
             />
         </div>
     );
+}
+
+function getImageUrl(prompt: Prompt, options: GameOptions): string | null {
+    if (options.guessFrom === "flag") {
+        return "/images/flag/" + prompt.about + ".svg";
+    } else if (options.guessFrom === "coa") {
+        return "/images/coa/" + prompt.about + ".svg";
+    } else {
+        return null;
+    }
 }
 
 function getInputPlaceholder(options: GameOptions): string {

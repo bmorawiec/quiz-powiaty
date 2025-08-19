@@ -28,6 +28,7 @@ export function gameFromOptions(options: GameOptions) {
 function getPrompts(units: Unit[], options: GameOptions): Prompt[] {
     const shuffledUnits = toShuffled(units);
     return shuffledUnits.map((unit, index) => ({
+        about: unit.id,
         state: (index === 0) ? "answering" : "unanswered",
         question: getPromptQuestion(unit, options),
         answers: getPromptAnswers(unit, options),

@@ -11,6 +11,8 @@ export interface PromptGameStore extends GameStore {
 
 /** Represents a prompt. */
 export interface Prompt {
+    /** TERC code of the administrative unit this prompt is about. */
+    about: string;
     /** The question string to be shown. */
     question: string;
     /** Stores correct answers to this prompt. */
