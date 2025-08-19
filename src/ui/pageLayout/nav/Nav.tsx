@@ -98,7 +98,7 @@ export function Nav() {
             <button
                 aria-haspopup="dialog"
                 className="ml-auto flex items-center gap-[8px] cursor-pointer h-[50px] px-[20px] rounded-full
-                    text-[16px] tracking-[0.01em] transition-colors duration-80 focus-ring
+                    font-[450] text-[16px] tracking-[0.01em] transition-colors duration-80 focus-ring
                     hover:bg-gray-10 active:bg-gray-15 dark:hover:bg-gray-90 dark:active:bg-gray-95"
             >
                 <InfoIcon/>

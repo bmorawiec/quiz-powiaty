@@ -57,7 +57,7 @@ export function Drawer({ state, onClose }: DrawerProps) {
             <button
                 aria-haspopup="dialog"
                 className="mt-auto shrink-0 flex items-center gap-[8px] cursor-pointer h-[60px] px-[25px] rounded-full
-                    text-[18px] hover:bg-gray-10 dark:hover:bg-gray-80 focus-ring
+                    font-[450] text-[18px] hover:bg-gray-10 dark:hover:bg-gray-80 focus-ring
                     transition-colors duration-80 active:bg-gray-15 dark:active:bg-gray-85"
             >
                 <InfoIcon/>
