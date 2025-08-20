@@ -1,5 +1,5 @@
 import type { GameOptions } from "../common";
-import { PromptInput } from "../ui";
+import { PromptInput } from "./PromptInput";
 import { guess, usePromptGameStore, type Prompt } from "./state";
 
 export interface ViewProps {
