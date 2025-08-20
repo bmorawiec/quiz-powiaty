@@ -1,5 +1,5 @@
 import { units, type Unit } from "src/data";
-import { createActions, formatQuestion, matchesFilters, validateOptions, type GameOptions } from "src/game/common";
+import { createActions, formatQuestion, InvalidGameOptionsError, matchesFilters, validateOptions, type GameOptions } from "src/game/common";
 import { toShuffled } from "src/utils/shuffle";
 import { validOptions } from "./gameOptions";
 import { hook } from "./store";
@@ -52,7 +52,7 @@ function getPromptAnswerStrings(unit: Unit, options: GameOptions): string[] {
     } else if (options.guess === "plate") {
         return unit.plates;
     }
-    throw new Error("Invalid game options.");
+    throw new InvalidGameOptionsError();
 }
 
 /** Checks if the player's guess is correct. If it was, then proceeds to the next question.

@@ -1,5 +1,13 @@
 import { type CountyType, type Guessable, type Unit, type UnitType, type VoivodeshipId } from "src/data";
 
+export class InvalidGameOptionsError extends Error {
+    name = "InvalidGameOptionsError";
+
+    constructor() {
+        super("Invalid game options.");
+    }
+}
+
 export type GameType = "choiceGame" | "dndGame" | "mapGame" | "promptGame" | "typingGame";
 
 export interface GameOptions {

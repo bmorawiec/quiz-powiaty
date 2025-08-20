@@ -1,4 +1,4 @@
-import type { GameOptions } from "../common";
+import { InvalidGameOptionsError, type GameOptions } from "../common";
 import { PromptInput } from "./PromptInput";
 import { guess, usePromptGameStore, type Prompt } from "./state";
 
@@ -62,7 +62,7 @@ function getInputPlaceholder(options: GameOptions): string {
     } else if (options.guess === "plate") {
         return "Wpisz rejestrację...";
     }
-    throw new Error("Invalid game options.");
+    throw new InvalidGameOptionsError();
 }
 
 function getTextTransform(options: GameOptions): "uppercase" | "capitalize" | undefined {
