@@ -30,7 +30,7 @@ function getPrompts(units: Unit[], options: GameOptions): Prompt[] {
     const shuffledUnits = toShuffled(units);
     return shuffledUnits.map((unit) => ({
         about: unit.id,
-        question: formatQuestion(unit, options),
+        value: formatQuestion(unit, options),
         answers: getPromptAnswers(unit, options),
         provided: 0,
         tries: 0,

@@ -13,8 +13,8 @@ export interface PromptGameStore extends GameStore {
 export interface Prompt {
     /** TERC code of the administrative unit this prompt is about. */
     about: string;
-    /** The question string to be shown. */
-    question: string;
+    /** The prompt string to be shown. */
+    value: string;
     /** Stores correct answers to this prompt. */
     answers: PromptAnswer[];
     /** Number of correct answers provided by the user. */

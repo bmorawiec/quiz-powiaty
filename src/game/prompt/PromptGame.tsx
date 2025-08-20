@@ -4,7 +4,7 @@ import { useBreakpoints } from "src/ui";
 import { encodeGameURL } from "src/url";
 import type { GameOptions, GameProps } from "../common";
 import { Controls, GameLayout, OptionsPanel, PausedView, Sidebar } from "../ui";
-import { StandardView } from "./StandardView";
+import { View } from "./View";
 import { calculateTime, gameFromOptions, togglePause, usePromptGameStore } from "./state";
 
 export function PromptGame({ options }: GameProps) {
@@ -32,7 +32,7 @@ export function PromptGame({ options }: GameProps) {
             {(paused) ? (
                 <PausedView onUnpauseClick={togglePause}/>
             ) : (
-                <StandardView options={options}/>
+                <View options={options}/>
             )}
             {(layout === "md" || layout === "lg" || layout === "xl") && (
                 <Sidebar>

@@ -2,11 +2,11 @@ import type { GameOptions } from "../common";
 import { PromptInput } from "../ui";
 import { guess, usePromptGameStore, type Prompt } from "./state";
 
-export interface StandardViewProps {
+export interface ViewProps {
     options: GameOptions;
 }
 
-export function StandardView({ options }: StandardViewProps) {
+export function View({ options }: ViewProps) {
     const prompt = usePromptGameStore((state) => state.prompts[state.current]);
 
     const inputPlaceholder = getInputPlaceholder(options);
@@ -30,7 +30,7 @@ export function StandardView({ options }: StandardViewProps) {
             )}
 
             <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80 dark:text-gray-10 mt-auto">
-                {prompt.question}
+                {prompt.value}
             </h2>
             <PromptInput
                 placeholder={inputPlaceholder}
