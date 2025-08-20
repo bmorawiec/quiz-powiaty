@@ -35,5 +35,5 @@ export const validOptions: ValidOptions = {
         plate: "*",
         flag: "*",
         coa: "*",
-    }
+    },
 };
