@@ -22,7 +22,8 @@ export function Option({ questionOpt, onCorrectGuess }: OptionProps) {
         <button
             className={clsx("h-[80px] px-[20px] flex items-center justify-center rounded-[10px] font-[450]",
                 "cursor-pointer transition-colors duration-20 focus-ring",
-                "bg-white border border-gray-20 hover:border-gray-30",
+                "border border-gray-15 bg-white hover:bg-gray-5 active:bg-gray-10",
+                "dark:border-none dark:bg-gray-90 dark:hover:bg-gray-85 dark:active:bg-gray-90",
                 isWrongAnim && "animate-shake")}
             onClick={handleClick}
         >

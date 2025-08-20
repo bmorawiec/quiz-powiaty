@@ -25,7 +25,7 @@ export function ImageOption({ questionOpt, options, onCorrectGuess }: ImageOptio
     return (
         <button
             className={clsx("relative cursor-pointer rounded-[3px] focus-ring transition-[filter] duration-80",
-                "hover:brightness-102",
+                "hover:brightness-102 dark:hover:brightness-95 dark:active:brightness-90",
                 (options.guess === "flag") ? "h-[180px]" : "h-[220px]",
                 isWrongAnim && "animate-shake")}
             onClick={handleClick}

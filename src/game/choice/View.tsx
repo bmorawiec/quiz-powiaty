@@ -22,7 +22,7 @@ export function View({ options }: ViewProps) {
     return (
         <div className={clsx("relative flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col items-center",
             "pt-[60px] pb-[50px] px-[20px]",
-            isCorrectAnim && "animate-correct")}>
+            isCorrectAnim && "animate-correct dark:animate-correct-dark")}>
             {imageUrl && (
                 <div className="relative w-full max-w-[700px] flex-1 min-h-[200px] max-h-[500px] mb-[30px]">
                     <img
