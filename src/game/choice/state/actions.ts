@@ -76,27 +76,24 @@ function getPlausibleOptions(unit: Unit, allUnits: Unit[], options: GameOptions)
         const cityMode = unit.countyType === "city";
         const pairs = [];
         for (const answerUnit of allUnits) {
-            let bestScore = -Infinity;
-            let bestScorePlate = "";
+            if (answerUnit === unit) {
+                continue;
+            }
+            let scoreSum = 0;
             for (const plate of answerUnit.plates) {
                 const nameScore = getPlateScore(plate, unit.name, cityMode);
                 const capitalScores = unit.capitals.map((capital) => getPlateScore(plate, capital, cityMode));
                 const score = Math.max(nameScore, ...capitalScores);
-                if (score > bestScore) {
-                    bestScore = score;
-                    bestScorePlate = plate;
-                }
+                scoreSum += score;
             }
-            if (bestScore > 0 && answerUnit !== unit) {
-                pairs.push({
-                    score: bestScore,
-                    option: {
-                        id: answerUnit.id,
-                        correct: false,
-                        value: bestScorePlate,
-                    } satisfies QuestionOption
-                })
-            }
+            pairs.push({
+                score: scoreSum / answerUnit.plates.length,
+                option: {
+                    id: answerUnit.id,
+                    correct: false,
+                    value: answerUnit.plates.join(", "),
+                } satisfies QuestionOption,
+            });
         }
         return pairs
             .sort((a, b) => b.score - a.score)
@@ -169,8 +166,7 @@ function getOptionValue(unit: Unit, options: GameOptions): string {
     } else if (options.guess === "capital") {
         return unit.capitals.join(", ");
     } else if (options.guess === "plate") {
-        const randomIndex = Math.floor(Math.random() * unit.plates.length);
-        return unit.plates[randomIndex];
+        return unit.plates.join(", ");
     } else if (options.guess === "flag" || options.guess === "coa") {
         return unit.id;
     }
