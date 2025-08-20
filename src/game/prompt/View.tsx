@@ -29,7 +29,7 @@ export function View({ options }: ViewProps) {
                 </div>
             )}
 
-            <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80 dark:text-gray-10 mt-auto">
+            <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80 dark:text-gray-10 mt-auto text-center">
                 {prompt.value}
             </h2>
             <PromptInput
