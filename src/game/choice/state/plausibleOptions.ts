@@ -1,20 +1,18 @@
 import type { Unit } from "src/data";
 import type { GameOptions } from "src/game/common";
 import { swapDiacritics } from "src/utils/diacritics";
-import type { QuestionOption } from "./types";
 
-/** Creates question options that are plausible answers to the question. */
-export function getPlausibleOptions(unit: Unit, allUnits: Unit[], options: GameOptions): QuestionOption[] {
+export function plausibleOptionUnits(unit: Unit, allUnits: Unit[], options: GameOptions): Unit[] {
     if (options.guess === "plate" && (options.guessFrom === "name" || options.guessFrom === "capital")) {
-        return getPlausiblePlateOptions(unit, allUnits);
+        return plausiblePlateOptionUnits(unit, allUnits);
     } else if (options.guessFrom === "plate" && (options.guess === "name" || options.guess === "capital")) {
-        return getPlausibleNameOrCapitalOptions(unit, allUnits, options);
+        return plausibleNameOrCapitalOptionUnits(unit, allUnits, options);
     } else {
         return [];
     }
 }
 
-function getPlausiblePlateOptions(unit: Unit, allUnits: Unit[]): QuestionOption[] {
+function plausiblePlateOptionUnits(unit: Unit, allUnits: Unit[]): Unit[] {
     const pairs = [];
     for (const answerUnit of allUnits) {
         // skip unit if it's the correct answer, or if the county types of units don't match
@@ -30,20 +28,16 @@ function getPlausiblePlateOptions(unit: Unit, allUnits: Unit[]): QuestionOption[
         }
         pairs.push({
             score: scoreSum / answerUnit.plates.length,
-            option: {
-                id: answerUnit.id,
-                correct: false,
-                value: answerUnit.plates.join(", "),
-            } satisfies QuestionOption,
+            unit: answerUnit,
         });
     }
     return pairs
         .sort((a, b) => b.score - a.score)
         .slice(0, 5)
-        .map((obj) => obj.option);
+        .map((obj) => obj.unit);
 }
 
-function getPlausibleNameOrCapitalOptions(unit: Unit, allUnits: Unit[], options: GameOptions): QuestionOption[] {
+function plausibleNameOrCapitalOptionUnits(unit: Unit, allUnits: Unit[], options: GameOptions): Unit[] {
     const pairs = [];
     for (const answerUnit of allUnits) {
         if (answerUnit === unit || answerUnit.countyType !== unit.countyType) {
@@ -63,17 +57,13 @@ function getPlausibleNameOrCapitalOptions(unit: Unit, allUnits: Unit[], options:
         }
         pairs.push({
             score: scoreSum / unit.plates.length,
-            option: {
-                id: answerUnit.id,
-                correct: false,
-                value: strings.join(", "),
-            } satisfies QuestionOption,
+            unit: answerUnit,
         });
     }
     return pairs
         .sort((a, b) => b.score - a.score)
         .slice(0, 5)
-        .map((obj) => obj.option);
+        .map((obj) => obj.unit);
 }
 
 /** Assigns a score to a car plate based on how much it matches the provided string

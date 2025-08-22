@@ -9,7 +9,7 @@ import {
 } from "src/game/common";
 import { toShuffled } from "src/utils/shuffle";
 import { validOptions } from "./gameOptions";
-import { getPlausibleOptions } from "./plausibleOptions";
+import { plausibleOptionUnits } from "./plausibleOptions";
 import { hook } from "./store";
 import type { GuessResult, Question, QuestionOption } from "./types";
 
@@ -45,7 +45,12 @@ function getQuestions(units: Unit[], allUnits: Unit[], options: GameOptions): Qu
 }
 
 function getQuestionOptions(unit: Unit, allUnits: Unit[], options: GameOptions): QuestionOption[] {
-    const questionOptions: QuestionOption[] = getPlausibleOptions(unit, allUnits, options);
+    const questionOptions: QuestionOption[] = plausibleOptionUnits(unit, allUnits, options)
+        .map((unit) => ({
+            id: unit.id,
+            correct: false,
+            value: getOptionValue(unit, options),
+        }));
 
     // randomly choose five incorrect answers
     while (questionOptions.length < 5) {
@@ -72,7 +77,10 @@ function getQuestionOptions(unit: Unit, allUnits: Unit[], options: GameOptions):
 
 function getOptionValue(unit: Unit, options: GameOptions): string {
     if (options.guess === "name") {
-        return unit.name;
+        const prefix = (unit.type === "voivodeship")
+            ? "województwo "
+            : (unit.countyType === "city") ? "miasto " : "powiat ";
+        return prefix + unit.name;
     } else if (options.guess === "capital") {
         return unit.capitals.join(", ");
     } else if (options.guess === "plate") {
