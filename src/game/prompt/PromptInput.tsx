@@ -19,6 +19,9 @@ export function PromptInput({
     className,
     onGuess,
 }: PromptInputProps) {
+    const history = useRef<string[]>([]);       // stores previous answers
+    const historyIndex = useRef(0);             // determines which element from the history is currently displayed
+
     const [answer, setAnswer] = useState("");
 
     const [result, setResult] = useState<"correct" | "alreadyGuessed" | "wrong" | null>(null);
@@ -60,6 +63,8 @@ export function PromptInput({
                 setAnimState("wrongAnim");
                 setHint(hint);
             }
+            history.current.push(answer);
+            historyIndex.current = -1;
             setAnswer("");
         }
     };
@@ -67,6 +72,29 @@ export function PromptInput({
     const handleInputKeyDown = (event: ReactKeyboardEvent) => {
         if (event.key === "Enter") {
             guess();
+        } else if (event.key === "ArrowUp") {
+            event.preventDefault();
+            if (history.current.length > 0) {
+                if (historyIndex.current === -1) {
+                    historyIndex.current = history.current.length - 1;
+                } else if (historyIndex.current > 0) {
+                    historyIndex.current--;
+                }
+                setAnswer(history.current[historyIndex.current]);
+            }
+        } else if (event.key === "ArrowDown") {
+            event.preventDefault();
+            if (historyIndex.current !== -1) {
+                if (historyIndex.current + 1 >= history.current.length) {
+                    historyIndex.current = -1;
+                    setAnswer("");
+                } else {
+                    if (historyIndex.current > -1) {
+                        historyIndex.current++;
+                    }
+                    setAnswer(history.current[historyIndex.current]);
+                }
+            }
         }
     };
 
