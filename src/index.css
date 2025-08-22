@@ -8,6 +8,12 @@ body {
     user-select: none;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background: black;
+    }
+}
+
 @theme {
     --breakpoint-xs: 600px;
     --breakpoint-sm: 1000px;
