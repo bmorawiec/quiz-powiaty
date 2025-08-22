@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useState } from "react";
-import { Button, DropdownIcon, FilterDialog, FilterIcon } from "src/ui";
+import { DropdownIcon, Filters } from "src/ui";
 import type { GameOptions, UnitFilters } from "../common";
 
 export interface OptionsPanelProps {
@@ -15,21 +15,11 @@ export function OptionsPanel({ options, onChange }: OptionsPanelProps) {
         setExpanded(!expanded);
     };
 
-    const [showFilterDialog, setShowFilterDialog] = useState(false);
-
-    const handleFilterButtonClick = () => {
-        setShowFilterDialog(true);
-    };
-
-    const handleApplyFilters = (newFilters: UnitFilters) => {
+    const handleFiltersChange = (newFilters: UnitFilters) => {
         onChange({
             ...options,
             filters: newFilters,
         });
-    };
-
-    const handleCloseFilterDialog = () => {
-        setShowFilterDialog(false);
     };
 
     return (
@@ -48,27 +38,9 @@ export function OptionsPanel({ options, onChange }: OptionsPanelProps) {
             </button>
 
             {expanded && (
-                <div className="flex flex-col px-[30px] pb-[25px]">
-                    <div className="flex items-end">
-                        <div className="flex-1 flex flex-col text-left">
-                            <span className="text-[14px] text-gray-60 dark:text-gray-50 font-[500]">Filtrowanie</span>
-                            <span className="font-[450]">Nie ustawiono</span>
-                        </div>
-
-                        <Button
-                            icon={FilterIcon}
-                            text="Zmień filtr"
-                            onClick={handleFilterButtonClick}
-                        />
-                    </div>
-                </div>
-            )}
-
-            {showFilterDialog && (
-                <FilterDialog
+                <Filters
                     filters={options.filters}
-                    onApply={handleApplyFilters}
-                    onClose={handleCloseFilterDialog}
+                    onChange={handleFiltersChange}
                 />
             )}
         </div>
