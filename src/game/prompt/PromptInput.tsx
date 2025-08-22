@@ -103,36 +103,37 @@ export function PromptInput({
     };
 
     return (
-        <div className={clsx("relative h-[60px] border border-gray-20 dark:border-gray-65 rounded-[20px]",
-            "bg-white dark:bg-gray-95",
-            animState === "wrongAnim" && "animate-shake",
-            animState === "correctAnim" && "animate-correct dark:animate-correct-dark",
-            className)}>
-            <input
-                ref={input}
-                type="text"
-                placeholder={placeholder}
-                className={clsx("size-full pl-[20px] pr-[70px] rounded-[20px] font-[450] focus-ring",
-                    answer.length > 0 && textTransform)}        // don't transform text when placeholder shown
-                value={answer}
-                onChange={handleInputChange}
-                onKeyDown={handleInputKeyDown}
-            />
+        <div className={clsx("relative", className)}>
+            <div className={clsx("relative h-[60px] border border-gray-20 dark:border-gray-65 rounded-[20px]",
+                "bg-white dark:bg-gray-95",
+                animState === "wrongAnim" && "animate-shake",
+                animState === "correctAnim" && "animate-correct dark:animate-correct-dark")}>
+                <input
+                    ref={input}
+                    type="text"
+                    placeholder={placeholder}
+                    className={clsx("size-full pl-[20px] pr-[70px] rounded-[20px] font-[450] focus-ring",
+                        answer.length > 0 && textTransform)}        // don't transform text when placeholder shown
+                    value={answer}
+                    onChange={handleInputChange}
+                    onKeyDown={handleInputKeyDown}
+                />
 
-            {answered !== undefined && total !== undefined && total > 1 && (
-                <span className="absolute text-[14px] bottom-[9px] right-[68px] text-gray-60 tracking-[-0.01em]">
-                    {answered}/{total}
-                </span>
-            )}
+                {answered !== undefined && total !== undefined && total > 1 && (
+                    <span className="absolute text-[14px] bottom-[9px] right-[68px] text-gray-60 tracking-[-0.01em]">
+                        {answered}/{total}
+                    </span>
+                )}
 
-            <button
-                className="absolute right-[9px] top-[9px] w-[50px] h-[40px] rounded-[10px] cursor-pointer
-                    flex items-center justify-center focus-ring
-                    transition-colors duration-[80ms] bg-teal-70 hover:bg-teal-65 text-white dark:text-gray-95"
-                onClick={handleButtonClick}
-            >
-                <SendIcon/>
-            </button>
+                <button
+                    className="absolute right-[9px] top-[9px] w-[50px] h-[40px] rounded-[10px] cursor-pointer
+                        flex items-center justify-center focus-ring
+                        transition-colors duration-[80ms] bg-teal-70 hover:bg-teal-65 text-white dark:text-gray-95"
+                    onClick={handleButtonClick}
+                >
+                    <SendIcon/>
+                </button>
+            </div>
 
             <div className="absolute left-[15px] top-[70px] text-[14px] text-gray-80 flex flex-col gap-[10px]">
                 {(hint || result === "alreadyGuessed") && (
