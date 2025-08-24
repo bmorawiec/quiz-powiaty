@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 import type { Guessable, UnitType } from "src/data";
-import type { GameType } from "src/game/common";
+import { type GameType, encodeGameURL } from "src/gameOptions";
 import {
     CarIcon,
     COAIcon,
@@ -12,7 +12,6 @@ import {
     SmallArrowRightIcon,
     TargetIcon,
 } from "src/ui";
-import { encodeGameURL } from "src/url";
 
 export function ModePicker() {
     const navigate = useNavigate();

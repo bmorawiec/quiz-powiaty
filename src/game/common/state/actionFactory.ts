@@ -1,5 +1,5 @@
+import type { GameOptions } from "src/gameOptions";
 import type { StoreApi, UseBoundStore } from "zustand";
-import type { GameOptions } from "../gameOptions";
 import type { GameStore } from "./types";
 
 export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {

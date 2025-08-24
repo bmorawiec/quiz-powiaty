@@ -1,5 +1,5 @@
 import { voivodeshipIds, type CountyType, type Guessable, type UnitType, type VoivodeshipId } from "src/data";
-import { type GameOptions, type GameType, type UnitFilters } from "src/game/common";
+import { type GameOptions, type GameType, type UnitFilters } from "./types";
 
 const gameTypeToPolish: Record<GameType, string> = {
     choiceGame: "wybierz",

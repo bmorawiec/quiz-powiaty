@@ -1,5 +1,5 @@
 import { type Unit } from "src/data";
-import type { GameOptions } from "./gameOptions";
+import type { GameOptions } from "src/gameOptions";
 
 /** Returns a string containing the a question about the provided administrative unit,
  *  based on the specified game options. */

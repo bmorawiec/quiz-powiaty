@@ -1,4 +1,4 @@
-import type { ValidOptions } from "src/game/common";
+import type { ValidOptions } from "src/gameOptions";
 
 export const validOptions: ValidOptions = {
     name: {

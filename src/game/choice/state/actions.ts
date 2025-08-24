@@ -1,12 +1,6 @@
 import { units, type Unit } from "src/data";
-import {
-    createActions,
-    formatQuestion,
-    InvalidGameOptionsError,
-    matchesFilters,
-    validateOptions,
-    type GameOptions,
-} from "src/game/common";
+import { createActions, formatQuestion } from "src/game/common";
+import { InvalidGameOptionsError, matchesFilters, validateOptions, type GameOptions } from "src/gameOptions";
 import { toShuffled } from "src/utils/shuffle";
 import { validOptions } from "./gameOptions";
 import { plausibleOptionUnits } from "./plausibleOptions";

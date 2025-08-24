@@ -1,5 +1,5 @@
 import type { Unit } from "src/data";
-import type { GameOptions } from "src/game/common";
+import type { GameOptions } from "src/gameOptions";
 import { swapDiacritics } from "src/utils/diacritics";
 
 export function plausibleOptionUnits(unit: Unit, allUnits: Unit[], options: GameOptions): Unit[] {

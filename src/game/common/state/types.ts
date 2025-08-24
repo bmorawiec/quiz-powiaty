@@ -1,4 +1,4 @@
-import type { GameOptions } from "../gameOptions";
+import type { GameOptions } from "src/gameOptions";
 
 export interface GameStore {
     /** Current state of the game */

@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
-import { filterNames, type UnitFilters } from "src/game/common";
-import { Button } from "../Button";
-import { FilterIcon } from "../icons";
+import { filterNames, type UnitFilters } from "src/gameOptions";
+import { Button, FilterIcon } from "src/ui";
 import { FilterDialog } from "./FilterDialog";
 
 export interface FiltersProps {

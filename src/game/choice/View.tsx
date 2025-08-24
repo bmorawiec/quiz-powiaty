@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useAnimation } from "src/utils/useAnimation";
-import type { GameOptions } from "../common";
+import type { GameOptions } from "src/gameOptions";
 import { ImageOption } from "./ImageOption";
 import { Option } from "./Option";
 import { useQuestionGameStore, type Question } from "./state";

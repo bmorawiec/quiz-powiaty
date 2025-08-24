@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
+import { encodeGameURL, type GameOptions } from "src/gameOptions";
 import { useBreakpoints } from "src/ui";
-import { encodeGameURL } from "src/url";
-import type { GameOptions, GameProps } from "../common";
-import { Controls, GameLayout, OptionsPanel, PausedView, Sidebar } from "../ui";
+import { Controls, GameLayout, OptionsPanel, PausedView, Sidebar, type GameProps } from "../common";
 import { calculateTime, gameFromOptions, togglePause, useQuestionGameStore } from "./state";
 import { View } from "./View";
 

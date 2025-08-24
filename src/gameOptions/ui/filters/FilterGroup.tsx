@@ -1,4 +1,4 @@
-import { Checkbox } from "../Checkbox";
+import { Checkbox } from "src/ui";
 
 export interface FilterGroupProps<TEntry extends string> {
     title: string;

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { GameOptions } from "../common";
+import type { GameOptions } from "src/gameOptions";
 import { guess, type QuestionOption } from "./state";
 import { useAnimation } from "src/utils/useAnimation";
 

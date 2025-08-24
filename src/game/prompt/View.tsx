@@ -1,4 +1,4 @@
-import { InvalidGameOptionsError, type GameOptions } from "../common";
+import { InvalidGameOptionsError, type GameOptions } from "src/gameOptions";
 import { PromptInput } from "./PromptInput";
 import { guess, usePromptGameStore, type Prompt } from "./state";
 
