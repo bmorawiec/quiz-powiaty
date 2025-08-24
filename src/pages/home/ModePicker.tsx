@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
-import type { Guessable, UnitType } from "src/data";
+import type { Guessable, UnitType } from "src/data/common";
 import { type GameType, encodeGameURL } from "src/gameOptions";
 import {
     CarIcon,

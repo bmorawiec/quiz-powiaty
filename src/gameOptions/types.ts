@@ -1,4 +1,4 @@
-import { type CountyType, type Guessable, type Unit, type UnitType, type VoivodeshipId } from "src/data";
+import { type CountyType, type Guessable, type Unit, type UnitType, type VoivodeshipId } from "src/data/common";
 
 export class InvalidGameOptionsError extends Error {
     name = "InvalidGameOptionsError";

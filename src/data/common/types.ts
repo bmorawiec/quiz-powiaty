@@ -1,3 +1,5 @@
+import type { Vector } from "src/utils/vector";
+
 /** Stores information about an administrative unit. */
 export interface Unit {
     /** The TERC code of this administrative unit. */
@@ -38,3 +40,16 @@ export type VoivodeshipId = (typeof voivodeshipIds)[number];
 
 /** Represents data fields that can be guessed by the player or that can serve as a hint. */
 export type Guessable = "name" | "capital" | "plate" | "flag" | "coa" | "map";
+
+/** Stores information about the shape of an administrative unit. */
+export interface UnitShape {
+    /** The TERC code of this administrative unit. */
+    id: string;
+    /** The shape of this administrative unit as svg path data. */
+    outline: {
+        lq: string;
+        hq: string;
+    };
+    /** The center of this administrative unit. */
+    center: Vector;
+}

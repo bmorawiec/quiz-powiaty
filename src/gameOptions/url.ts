@@ -1,4 +1,4 @@
-import { voivodeshipIds, type CountyType, type Guessable, type UnitType, type VoivodeshipId } from "src/data";
+import { voivodeshipIds, type CountyType, type Guessable, type UnitType, type VoivodeshipId } from "src/data/common";
 import { type GameOptions, type GameType, type UnitFilters } from "./types";
 
 const gameTypeToPolish: Record<GameType, string> = {

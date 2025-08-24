@@ -1,4 +1,4 @@
-import type { Unit } from "src/data";
+import type { Unit } from "src/data/common";
 import type { GameOptions } from "src/gameOptions";
 import { swapDiacritics } from "src/utils/diacritics";
 
