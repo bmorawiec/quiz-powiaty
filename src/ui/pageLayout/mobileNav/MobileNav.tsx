@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router";
-import { Logo } from "src/ui/Logo";
+import { Logo } from "../../Logo";
 import { MenuIcon } from "../../icons";
 import { Drawer } from "./Drawer";
 

@@ -1,8 +1,8 @@
 import { lazy } from "react";
-import type { GameProps } from "src/game/common";
+import type { GameProps } from "./common";
 
-const ChoiceGame = lazy(() => import("src/game/choice"));
-const PromptGame = lazy(() => import("src/game/prompt"));
+const ChoiceGame = lazy(() => import("./choice"));
+const PromptGame = lazy(() => import("./prompt"));
 
 export function Game({ options }: GameProps) {
     if (options.gameType === "choiceGame") {

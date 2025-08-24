@@ -1,4 +1,4 @@
-import type { GameStore } from "src/game/common";
+import type { GameStore } from "../../common";
 
 export interface ChoiceGameStore extends GameStore {
     /** Stores the order and states of all the questions that are going to be presented in this game. */

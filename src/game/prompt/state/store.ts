@@ -1,4 +1,4 @@
-import { createGameStore, initialState } from "src/game/common";
+import { createGameStore, initialState } from "../../common";
 import type { PromptGameStore } from "./types";
 
 export const hook = createGameStore<PromptGameStore>({

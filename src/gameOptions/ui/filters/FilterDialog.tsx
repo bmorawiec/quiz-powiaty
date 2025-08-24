@@ -1,7 +1,7 @@
 import { useState, type PointerEvent as ReactPointerEvent } from "react";
 import { voivodeshipIds, type CountyType, type VoivodeshipId } from "src/data";
-import { filterNames, type UnitFilters } from "src/gameOptions";
 import { ApplyIcon, Button, CloseIcon, FilterIcon } from "src/ui";
+import { filterNames, type UnitFilters } from "../../types";
 import { FilterGroup } from "./FilterGroup";
 
 export interface FilterDialogProps {

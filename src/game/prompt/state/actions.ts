@@ -1,7 +1,7 @@
 import { units, type Unit } from "src/data";
-import { createActions, formatQuestion } from "src/game/common";
 import { InvalidGameOptionsError, matchesFilters, validateOptions, type GameOptions } from "src/gameOptions";
 import { toShuffled } from "src/utils/shuffle";
+import { createActions, formatQuestion } from "../../common";
 import { validOptions } from "./gameOptions";
 import { hook } from "./store";
 import type { GuessResult, Prompt, PromptAnswer } from "./types";

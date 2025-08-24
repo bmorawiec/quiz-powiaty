@@ -1,4 +1,4 @@
-import type { GameStore } from "src/game/common";
+import type { GameStore } from "../../common";
 
 export interface PromptGameStore extends GameStore {
     /** Stores the order and states of all the prompts that are going to be presented in this game. */
