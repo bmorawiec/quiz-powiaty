@@ -3,8 +3,8 @@ import { CanvasTextMetrics, Container, Graphics, Text, TextStyle } from "pixi.js
 import { useCallback, useContext, useMemo } from "react";
 import { colors } from "src/utils/colors";
 import type { Vector } from "src/utils/vector";
-import { ZoomContext } from "./context";
 import { getPixelPerfectPosition } from "./pixelPerfect";
+import { WorldTransformContext } from "./worldTransform";
 
 export interface TooltipProps {
     position: Vector;
@@ -26,11 +26,11 @@ const PADDING_X = 10;
 const PADDING_Y = 5;
 
 export function Tooltip({ position, text }: TooltipProps) {
-    const zoom = useContext(ZoomContext);
+    const worldTransform = useContext(WorldTransformContext);
 
     const textMetrics = useMemo(
         () => CanvasTextMetrics.measureText(text, textStyle),
-        [text]
+        [text],
     );
 
     const redrawBackground = useCallback((g: Graphics) => {
@@ -51,15 +51,15 @@ export function Tooltip({ position, text }: TooltipProps) {
 
     return (
         <pixiContainer
-            position={getPixelPerfectPosition(position, zoom)}
-            scale={1 / zoom}
+            position={getPixelPerfectPosition(position, worldTransform)}
+            scale={1 / worldTransform.scale}
             zIndex={99_999}
         >
             <pixiGraphics draw={redrawBackground}/>
 
             <pixiText
                 position={{
-                    x: -textMetrics.width / 2,
+                    x: -Math.round(textMetrics.width / 2),
                     y: -10 - PADDING_Y - textMetrics.height,
                 }}
                 text={text}

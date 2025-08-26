@@ -13,7 +13,7 @@ import {
 } from "react";
 import { useDevicePixelRatio } from "src/utils/useDevicePixelRatio";
 import type { Box, Size, Vector } from "src/utils/vector";
-import { ZoomContext } from "./context";
+import { WorldTransformContext, type WorldTransform } from "./worldTransform";
 
 export interface MapProps {
     worldSize: Size;
@@ -86,14 +86,11 @@ export function Map({
         height: containerSize.height - border.top - border.bottom,
     }), [containerSize, border]);
 
-    // changes on user pan and zoom
-    // x and y always kept an integer
-    const [offset, setOffset] = useState<Vector>({ x: 0, y: 0 });
-    // changes on user zoom
-    const [zoom, setZoom] = useState(1);
+    const [offset, setOffset] = useState<Vector>({ x: 0, y: 0 });       // changes on user pan and zoom
+    const [zoom, setZoom] = useState(1);        // changes on user zoom
 
     // how much the world needs to be scaled down to fit into the view
-    const scale = useMemo(() => {
+    const fitScale = useMemo(() => {
         const scaleX = viewSize.width / worldSize.width;
         const scaleY = viewSize.height / worldSize.height;
         return Math.min(scaleX, scaleY);
@@ -101,10 +98,15 @@ export function Map({
 
     const worldPos = useMemo(() => {
         return {
-            x: border.left + (viewSize.width - scale * worldSize.width) / 2 + scale * offset.x,
-            y: border.top + (viewSize.height - scale * worldSize.height) / 2 + scale * offset.y,
+            x: border.left + (viewSize.width - fitScale * worldSize.width) / 2 + fitScale * offset.x,
+            y: border.top + (viewSize.height - fitScale * worldSize.height) / 2 + fitScale * offset.y,
         };
-    }, [border, offset, scale, viewSize, worldSize]);
+    }, [border, offset, fitScale, viewSize, worldSize]);
+
+    const worldTransform = useMemo<WorldTransform>(() => ({
+        position: worldPos,
+        scale: fitScale * zoom,
+    }), [worldPos, fitScale, zoom]);
 
     const [panState, setPanState] = useState<"pointerDown" | "panning" | null>(null);
     const initialOffset = useRef<Vector>({ x: 0, y: 0 });
@@ -120,8 +122,8 @@ export function Map({
                         setPanState("panning");
                     }
                 } else {
-                    const scaledDiffX = (event.clientX - initialPointerPos.current.x) / scale;
-                    const scaledDiffY = (event.clientY - initialPointerPos.current.y) / scale;
+                    const scaledDiffX = (event.clientX - initialPointerPos.current.x) / fitScale;
+                    const scaledDiffY = (event.clientY - initialPointerPos.current.y) / fitScale;
                     setOffset({
                         x: initialOffset.current.x + scaledDiffX,
                         y: initialOffset.current.y + scaledDiffY,
@@ -140,7 +142,7 @@ export function Map({
                 document.removeEventListener("pointerup", handleDocumentPointerUp);
             };
         }
-    }, [scale, panState]);
+    }, [fitScale, panState]);
 
     const handlePointerDown = (event: ReactPointerEvent) => {
         if (event.button === 0) {
@@ -157,8 +159,8 @@ export function Map({
         const mult = (event.deltaY < 0) ? 1.5 : 1 / 1.5;
 
         const ratio = 1 - mult;
-        const dx = (event.nativeEvent.offsetX - worldPos.x) * ratio / scale;
-        const dy = (event.nativeEvent.offsetY - worldPos.y) * ratio / scale;
+        const dx = (event.nativeEvent.offsetX - worldPos.x) * ratio / fitScale;
+        const dy = (event.nativeEvent.offsetY - worldPos.y) * ratio / fitScale;
 
         setOffset({
             x: offset.x + dx,
@@ -184,16 +186,16 @@ export function Map({
                     antialias
                     resolution={dpr}
                 >
-                    <ZoomContext value={scale * zoom}>
+                    <WorldTransformContext value={worldTransform}>
                         <pixiContainer
                             sortableChildren
                             eventMode={(panState === "panning") ? "none" : "auto"}
-                            position={worldPos}
-                            scale={scale * zoom}
+                            position={worldTransform.position}
+                            scale={worldTransform.scale}
                         >
                             {children}
                         </pixiContainer>
-                    </ZoomContext>
+                    </WorldTransformContext>
                 </Application>
             )}
         </div>
