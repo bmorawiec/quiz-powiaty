@@ -35,8 +35,8 @@ export function ModePicker() {
     };
 
     return (
-        <div className="w-[480px] p-[30px] bg-white dark:bg-black rounded-[20px] shadow-sm shadow-black/10
-            flex flex-col gap-[12px]">
+        <div className="absolute left-[20px] lg:left-[100px] top-[20px] bottom-[20px] max-xs:right-[20px] xs:w-[480px]
+            p-[30px] bg-white dark:bg-black rounded-[20px] shadow-sm shadow-black/10 flex flex-col gap-[12px]">
 
             <p className="text-[18px] tracking-[0.01em]">
                 Zgadnij...
