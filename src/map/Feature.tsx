@@ -5,21 +5,25 @@ import { colors } from "src/utils/colors";
 
 export interface FeatureProps {
     shape: number[][];
+    onPointerOver?: () => void;
+    onPointerOut?: () => void;
 }
 
 extend({
     Graphics,
 });
 
-export function Feature({ shape }: FeatureProps) {
+export function Feature({ shape, onPointerOver, onPointerOut }: FeatureProps) {
     const [hover, setHover] = useState(false);
 
     const handlePointerOver = () => {
         setHover(true);
+        onPointerOver?.();
     };
 
     const handlePointerOut = () => {
         setHover(false);
+        onPointerOut?.();
     };
 
     const redraw = useCallback((g: Graphics) => {

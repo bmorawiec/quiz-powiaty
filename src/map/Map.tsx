@@ -1,4 +1,4 @@
-import { Application, extend } from "@pixi/react";
+import { Application, extend, type ApplicationRef } from "@pixi/react";
 import clsx from "clsx";
 import { Container } from "pixi.js";
 import {
@@ -11,7 +11,9 @@ import {
     type PointerEvent as ReactPointerEvent,
     type WheelEvent as ReactWheelEvent,
 } from "react";
+import { useDevicePixelRatio } from "src/utils/useDevicePixelRatio";
 import type { Box, Size, Vector } from "src/utils/vector";
+import { ZoomContext } from "./context";
 
 export interface MapProps {
     worldSize: Size;
@@ -26,12 +28,42 @@ extend({
 
 const DRAG_THRESHOLD = 10;
 
+/*  Anatomy of a map:
+ *  +-----------------------------------------+
+ *  | container     B O R D E R               |
+ *  |   +---------------------------------+   |
+ *  | B | view                            | B |
+ *  | O |         +------------------+    | O |
+ *  | R |         | world            |    | R |
+ *  | D |         |                  |    | D |
+ *  | E |         +------------------+    | E |
+ *  | R |                                 | R |
+ *  |   +---------------------------------+   |
+ *  |               B O R D E R               |
+ *  +-----------------------------------------+
+ *
+ *  container   A div containing the PIXI application.
+ *
+ *  view        The size of this area is determined by the size of the borders as defined in props.
+ *
+ *  world       Contains all the features. The user can pan and zoom into this part of the map.
+ *              The world is initially scaled down so that it fills the view.
+ *              It can also be additionally scaled through changing the zoom. The world can be moved via panning. */
 export function Map({
     worldSize,
     border = { left: 0, right: 0, top: 0, bottom: 0 },
     children,
     className,
 }: MapProps) {
+    const appRef = useRef<ApplicationRef | null>(null);
+    const dpr = useDevicePixelRatio();
+    useEffect(() => {
+        const app = appRef.current?.getApplication();
+        if (app) {
+            app.renderer.resolution = dpr;      // update device pixel ratio of pixi app when it changes
+        }
+    }, [dpr]);
+
     const container = useRef<HTMLDivElement | null>(null);
     const [containerSize, setContainerSize] = useState<Size>({ width: 100, height: 100 });
     useLayoutEffect(() => {
@@ -41,20 +73,26 @@ export function Map({
                 height: container.current!.clientHeight,
             });
         };
-        updateContainerSize();
+        updateContainerSize();  // set initial container size
 
+        // assume container will only resize when window resizes
         window.addEventListener("resize", updateContainerSize);
         return () => window.removeEventListener("resize", updateContainerSize);
     }, []);
 
+    // size of container minus the borders
     const viewSize = useMemo(() => ({
         width: containerSize.width - border.left - border.right,
         height: containerSize.height - border.top - border.bottom,
     }), [containerSize, border]);
 
+    // changes on user pan and zoom
+    // x and y always kept an integer
     const [offset, setOffset] = useState<Vector>({ x: 0, y: 0 });
+    // changes on user zoom
     const [zoom, setZoom] = useState(1);
 
+    // how much the world needs to be scaled down to fit into the view
     const scale = useMemo(() => {
         const scaleX = viewSize.width / worldSize.width;
         const scaleY = viewSize.height / worldSize.height;
@@ -139,18 +177,23 @@ export function Map({
         >
             {viewSize.width > 0 && viewSize.height > 0 && (
                 <Application
-                    className="absolute"
+                    ref={appRef}
+                    className="absolute size-full"
                     resizeTo={container}
                     backgroundAlpha={0}
                     antialias
+                    resolution={dpr}
                 >
-                    <pixiContainer
-                        eventMode={(panState === "panning") ? "none" : "auto"}
-                        position={worldPos}
-                        scale={scale * zoom}
-                    >
-                        {children}
-                    </pixiContainer>
+                    <ZoomContext value={scale * zoom}>
+                        <pixiContainer
+                            sortableChildren
+                            eventMode={(panState === "panning") ? "none" : "auto"}
+                            position={worldPos}
+                            scale={scale * zoom}
+                        >
+                            {children}
+                        </pixiContainer>
+                    </ZoomContext>
                 </Application>
             )}
         </div>
