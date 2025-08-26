@@ -45,10 +45,15 @@ export type Guessable = "name" | "capital" | "plate" | "flag" | "coa" | "map";
 export interface UnitShape {
     /** The TERC code of this administrative unit. */
     id: string;
-    /** The shape of this administrative unit as svg path data. */
+    /** The shape of this administrative unit.
+     *  The data consists of an array of polygons, which in turn are made up of points.
+     *
+     *  Formal definition: (P1, P2, ..., Pn)
+     *  where Pn represents a polygon and Pn = (x1, y1, x2, y2, ..., xn, yn)
+     *  where xn, yn are coordinates of point n. */
     outline: {
-        lq: string;
-        hq: string;
+        lq: number[][];
+        hq: number[][];
     };
     /** The center of this administrative unit. */
     center: Vector;
