@@ -1,17 +1,12 @@
 import { UnitShapeNotFoundError } from "src/data/common";
 import { units } from "src/data/units";
 import { unitShapes } from "src/data/unitShapes";
-import { Border, Feature, Map } from "src/map";
+import { Border, Map } from "src/map";
 import { useBreakpoints } from "src/ui";
-import { MapPlaceholder } from "./MapPlaceholder";
+import { BgFeature } from "./BgFeature";
+import { BgMapPlaceholder } from "./BgMapPlaceholder";
 
-const countyShapes = units
-    .filter((unit) => unit.type === "county")
-    .map((county) => {
-        const shape = unitShapes.find((shape) => shape.id === county.id);
-        if (!shape) throw new UnitShapeNotFoundError(county.id);
-        return shape;
-    });
+const counties = units.filter((unit) => unit.type === "county");
 
 const voivodeshipShapes = units
     .filter((unit) => unit.type === "voivodeship")
@@ -21,11 +16,12 @@ const voivodeshipShapes = units
         return shape;
     });
 
-export function BackgroundMap() {
+export function BgMap() {
     const layout = useBreakpoints();
     if (layout === "xs") {
-        return <MapPlaceholder/>;
+        return <BgMapPlaceholder/>;
     }
+
     return (
         <Map
             worldSize={{
@@ -40,10 +36,10 @@ export function BackgroundMap() {
             }}
             className="absolute size-full"
         >
-            {countyShapes.map((shape) =>
-                <Feature
-                    key={shape.id}
-                    shape={shape.outline.hq}
+            {counties.map((county) =>
+                <BgFeature
+                    key={county.id}
+                    unit={county}
                 />
             )}
 
