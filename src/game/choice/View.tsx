@@ -3,14 +3,14 @@ import { useAnimation } from "src/utils/useAnimation";
 import type { GameOptions } from "src/gameOptions";
 import { ImageOption } from "./ImageOption";
 import { Option } from "./Option";
-import { useQuestionGameStore, type Question } from "./state";
+import { useChoiceGameStore, type Question } from "./state";
 
 export interface ViewProps {
     options: GameOptions;
 }
 
 export function View({ options }: ViewProps) {
-    const question = useQuestionGameStore((state) => state.questions[state.current]);
+    const question = useChoiceGameStore((state) => state.questions[state.current]);
 
     const imageUrl = getImageUrl(question, options);
 
