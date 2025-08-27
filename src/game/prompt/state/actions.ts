@@ -148,8 +148,8 @@ function getHint(): string | null {
                 let hint = "";
                 for (let index = 0; index < answer.value.length; index++) {
                     const char = answer.value[index];
-                    if (char === " ") {
-                        hint += " ";
+                    if (char === " " || char === "-") {
+                        hint += char;
                     } else if (index < noOfLetters || index >= answer.value.length - noOfLetters) {
                         hint += char;
                     } else {
