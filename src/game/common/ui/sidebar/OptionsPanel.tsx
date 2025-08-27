@@ -1,25 +1,16 @@
 import clsx from "clsx";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { DropdownIcon } from "src/ui";
-import { Filters, type GameOptions, type UnitFilters } from "src/gameOptions";
 
 export interface OptionsPanelProps {
-    options: GameOptions;
-    onChange: (newOptions: GameOptions) => void;
+    children?: ReactNode;
 }
 
-export function OptionsPanel({ options, onChange }: OptionsPanelProps) {
+export function OptionsPanel({ children }: OptionsPanelProps) {
     const [expanded, setExpanded] = useState(true);
 
     const handleHeaderClick = () => {
         setExpanded(!expanded);
-    };
-
-    const handleFiltersChange = (newFilters: UnitFilters) => {
-        onChange({
-            ...options,
-            filters: newFilters,
-        });
     };
 
     return (
@@ -37,12 +28,7 @@ export function OptionsPanel({ options, onChange }: OptionsPanelProps) {
                 <DropdownIcon className={clsx("transition-transform duration-100", !expanded && "rotate-180")}/>
             </button>
 
-            {expanded && (
-                <Filters
-                    filters={options.filters}
-                    onChange={handleFiltersChange}
-                />
-            )}
+            {expanded && children}
         </div>
     );
 }

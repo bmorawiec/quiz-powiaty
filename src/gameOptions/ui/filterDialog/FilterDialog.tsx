@@ -6,11 +6,11 @@ import { FilterGroup } from "./FilterGroup";
 
 export interface FilterDialogProps {
     filters: UnitFilters;
-    onApply: (newFilters: UnitFilters) => void;
-    onClose: () => void;
+    onApply?: (newFilters: UnitFilters) => void;
+    onCancel?: () => void;
 }
 
-export function FilterDialog({ filters, onApply, onClose }: FilterDialogProps) {
+export function FilterDialog({ filters, onApply, onCancel }: FilterDialogProps) {
     const [newFilters, setNewFilters] = useState(filters);
 
     const handleTypeFiltersChange = (newCountyTypes: CountyType[]) => {
@@ -28,12 +28,11 @@ export function FilterDialog({ filters, onApply, onClose }: FilterDialogProps) {
     };
 
     const handleApplyClick = () => {
-        onApply(newFilters);
-        onClose();
+        onApply?.(newFilters);
     };
 
     return (
-        <DialogRoot onScrimPointerDown={onClose}>
+        <DialogRoot onScrimPointerDown={onCancel}>
             <Dialog className="w-[450px] h-[650px]">
                 <div className="flex items-center gap-[10px] px-[30px] pt-[26px] pb-[12px]
                     text-gray-80 dark:text-gray-15">
@@ -65,7 +64,7 @@ export function FilterDialog({ filters, onApply, onClose }: FilterDialogProps) {
                     <Button
                         icon={CloseIcon}
                         text="Anuluj"
-                        onClick={onClose}
+                        onClick={onCancel}
                     />
                     <Button
                         icon={ApplyIcon}

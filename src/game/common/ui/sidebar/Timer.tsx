@@ -20,7 +20,7 @@ export function Timer({ paused, calculateTime }: TimerProps) {
     }, []);
 
     return (
-        <div className={clsx("flex items-center gap-[7px] font-[450]", paused && "animate-blink")}>
+        <div className={clsx("flex items-center gap-[7px]", paused && "animate-blink")}>
             <ClockIcon/>
             <span className="mt-[1px]">
                 {minutes}
