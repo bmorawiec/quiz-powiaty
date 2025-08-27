@@ -1,6 +1,6 @@
-import { useState, type PointerEvent as ReactPointerEvent } from "react";
+import { useState } from "react";
 import { voivodeshipIds, type CountyType, type VoivodeshipId } from "src/data/common";
-import { ApplyIcon, Button, CloseIcon, FilterIcon } from "src/ui";
+import { ApplyIcon, Button, CloseIcon, Dialog, DialogRoot, FilterIcon } from "src/ui";
 import { filterNames, type UnitFilters } from "../../types";
 import { FilterGroup } from "./FilterGroup";
 
@@ -12,12 +12,6 @@ export interface FilterDialogProps {
 
 export function FilterDialog({ filters, onApply, onClose }: FilterDialogProps) {
     const [newFilters, setNewFilters] = useState(filters);
-
-    const handleScrimPointerDown = (event: ReactPointerEvent) => {
-        if (event.target === event.currentTarget) {
-            onClose();
-        }
-    };
 
     const handleTypeFiltersChange = (newCountyTypes: CountyType[]) => {
         setNewFilters({
@@ -39,11 +33,8 @@ export function FilterDialog({ filters, onApply, onClose }: FilterDialogProps) {
     };
 
     return (
-        <div
-            className="fixed left-0 top-0 size-full bg-black/20 dark:bg-black/40 flex items-center justify-center"
-            onPointerDown={handleScrimPointerDown}
-        >
-            <div className="w-[450px] h-[650px] bg-white dark:bg-black rounded-[20px] shadow-sm shadow-black/10 flex flex-col">
+        <DialogRoot onScrimPointerDown={onClose}>
+            <Dialog className="w-[450px] h-[650px]">
                 <div className="flex items-center gap-[10px] px-[30px] pt-[26px] pb-[12px]
                     text-gray-80 dark:text-gray-15">
                     <FilterIcon/>
@@ -83,7 +74,7 @@ export function FilterDialog({ filters, onApply, onClose }: FilterDialogProps) {
                         onClick={handleApplyClick}
                     />
                 </div>
-            </div>
-        </div>
+            </Dialog>
+        </DialogRoot>
     );
 }
