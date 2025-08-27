@@ -1,6 +1,7 @@
 import { extend } from "@pixi/react";
 import { Graphics } from "pixi.js";
 import { colors } from "src/utils/colors";
+import { useDarkMode } from "src/utils/useDarkMode";
 
 export interface BorderProps {
     shape: number[][];
@@ -11,6 +12,8 @@ extend({
 });
 
 export function Border({ shape }: BorderProps) {
+    const isDarkMode = useDarkMode();
+
     const redraw = (g: Graphics) => {
         g.clear();
         g.beginPath();
@@ -29,7 +32,9 @@ export function Border({ shape }: BorderProps) {
         g.stroke({
             width: 3,
             join: "round",
-            color: colors.teal90,
+            color: (isDarkMode)
+                ? colors.gray25
+                : colors.teal90,
         });
     };
 

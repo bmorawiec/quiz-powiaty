@@ -2,6 +2,7 @@ import { extend } from "@pixi/react";
 import { Graphics } from "pixi.js";
 import { useCallback, useState } from "react";
 import { colors } from "src/utils/colors";
+import { useDarkMode } from "src/utils/useDarkMode";
 
 export interface FeatureProps {
     shape: number[][];
@@ -26,6 +27,8 @@ export function Feature({ shape, onPointerOver, onPointerOut }: FeatureProps) {
         onPointerOut?.();
     };
 
+    const isDarkMode = useDarkMode();
+
     const redraw = useCallback((g: Graphics) => {
         g.clear();
         g.beginPath();
@@ -42,14 +45,16 @@ export function Feature({ shape, onPointerOver, onPointerOut }: FeatureProps) {
         }
         g.closePath();
         g.fill({
-            color: (hover) ? colors.teal15 : colors.grass10,
+            color: (isDarkMode)
+                ? (hover) ? colors.gray80 : colors.gray90
+                : (hover) ? colors.teal15 : colors.grass10,
         });
         g.stroke({
             width: (hover) ? 2 : 1,
             join: "round",
-            color: colors.teal90,
+            color: (isDarkMode) ? colors.gray10 : colors.teal90,
         });
-    }, [hover, shape]);
+    }, [hover, shape, isDarkMode]);
 
     return (
         <pixiGraphics
