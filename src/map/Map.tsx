@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import type { Box, Size } from "src/utils/vector";
 import { Viewport } from "./Viewport";
 
@@ -12,7 +12,7 @@ export interface MapProps {
 
 export function Map({ className, ...viewportProps }: MapProps) {
     const container = useRef<HTMLDivElement | null>(null);
-    const [containerSize, setContainerSize] = useState<Size | null>(null);
+    const [containerSize, setContainerSize] = useState<Size>({ width: 100, height: 100 });
     useLayoutEffect(() => {
         const updateContainerSize = () => {
             setContainerSize({
@@ -29,7 +29,7 @@ export function Map({ className, ...viewportProps }: MapProps) {
 
     const [hover, setHover] = useState(false);
 
-    const handlePointerMove = () => {
+    const handlePointerEnter = () => {
         setHover(true);
     };
 
@@ -37,14 +37,27 @@ export function Map({ className, ...viewportProps }: MapProps) {
         setHover(false);
     };
 
+    // Wait until the containerSize and hover have their final values.
+    // Quick changes in props to pixi components when they're first rendered cause the
+    // values used by pixi.js to be out of date.
+    const [ready, setReady] = useState(false);
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setReady(true);
+        }, 10);
+        return () => {
+            clearTimeout(timeout);
+        };
+    }, []);
+
     return (
         <div
             ref={container}
             className={clsx("overflow-clip bg-grass-10 dark:bg-gray-90", className)}
-            onPointerMove={handlePointerMove}
+            onPointerEnter={handlePointerEnter}
             onPointerLeave={handlePointerLeave}
         >
-            {containerSize && (
+            {ready && (
                 <Viewport
                     active={hover}
                     size={containerSize}
