@@ -26,7 +26,7 @@ export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
     }
 
     /** Pauses the game if it's currently unpaused. Unpauses the game if it's currently paused.
-      * @throws if the game hasn't been started yet, or if it has finished. */
+      * @throws if the game hasn't been started yet, if it has finished or if it is invalid. */
     function togglePause() {
         const game = hook.getState();
         if (game.state === "unstarted" || game.state === "finished" || game.state === "invalid")
