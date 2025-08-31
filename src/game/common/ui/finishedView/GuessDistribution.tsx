@@ -10,7 +10,7 @@ export function GuessDistribution({ data }: GuessDistributionProps) {
 
     return (
         <div className="flex flex-col gap-[8px] rounded-[10px] px-[22px] pt-[18px] pb-[16px] border
-            bg-white border-gray-15">
+            bg-white border-gray-15 dark:bg-gray-95 dark:border-gray-80">
             <h3 className="font-[550]">
                 Zgadniętych...
             </h3>

@@ -11,7 +11,7 @@ export function FinishedViewBase({ onRestart, children }: FinishedViewBaseProps)
         <div className="flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col">
             <div className="flex-1 overflow-y-auto pt-[58px] flex flex-col items-center">
                 <div className="w-full max-w-[740px] flex flex-col gap-[22px] px-[20px]">
-                    <h2 className="text-[30px] text-gray-90 self-center">
+                    <h2 className="text-[30px] text-gray-90 dark:text-gray-15 self-center">
                         Twój wynik
                     </h2>
 

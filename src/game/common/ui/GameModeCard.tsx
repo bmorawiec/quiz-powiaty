@@ -15,7 +15,7 @@ export function GameModeCard({ options, time }: GameModeCardProps) {
 
     return (
         <div className="flex flex-col gap-[4px] rounded-[10px] px-[22px] pt-[18px] pb-[16px] border
-            border-gray-15 bg-white">
+            bg-white border-gray-15 dark:bg-gray-95 dark:border-gray-80">
             <p>
                 {gameModeName}
             </p>
