@@ -41,11 +41,11 @@ export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
     }
 
     /** Calculates the time the game has been running for unpaused.
-      * @throws if the game hasn't been started yet, or if it has finished. */
+      * @throws if the game hasn't been started yet, or if it is invalid. */
     function calculateTime(): number {
         const game = hook.getState();
-        if (game.state === "unstarted" || game.state === "finished" || game.state === "invalid")
-            throw new Error("Cannot calculate the time for an unstarted, finished or invalid game.");
+        if (game.state === "unstarted" || game.state === "invalid")
+            throw new Error("Cannot calculate the time for an unstarted or invalid game.");
 
         let time = 0;
         const timestamps = (game.state === "unpaused")

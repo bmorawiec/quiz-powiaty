@@ -1,13 +1,14 @@
 import { useRef, useState } from "react";
 import { FilterDialog, Filters, type GameOptions, type UnitFilters } from "src/gameOptions";
 import { PauseIcon, PlayIcon, RestartIcon } from "src/ui";
-import { ControlButton } from "./ControlButton";
-import { Timer } from "./Timer";
-import { OptionsPanel } from "./OptionsPanel";
+import type { GameState } from "../../state";
 import { ConfirmRestartDialog } from "./ConfirmRestartDialog";
+import { ControlButton } from "./ControlButton";
+import { OptionsPanel } from "./OptionsPanel";
+import { Timer } from "./Timer";
 
 export interface SidebarProps {
-    paused: boolean;
+    gameState: GameState;
     calculateTime: () => number;
     onTogglePause: () => void;
     options: GameOptions;
@@ -18,7 +19,7 @@ export interface SidebarProps {
 }
 
 export function Sidebar({
-    paused,
+    gameState,
     calculateTime,
     onTogglePause,
     options,
@@ -77,7 +78,7 @@ export function Sidebar({
             overflow-hidden">
             <div className="flex items-center h-[77px] pl-[30px] pr-[22px] gap-[2px]">
                 <Timer
-                    paused={paused}
+                    gameState={gameState}
                     calculateTime={calculateTime}
                 />
 
@@ -88,7 +89,7 @@ export function Sidebar({
                 />
 
                 <ControlButton
-                    icon={(paused) ? PlayIcon : PauseIcon}
+                    icon={(gameState === "paused") ? PlayIcon : PauseIcon}
                     onClick={onTogglePause}
                 />
             </div>

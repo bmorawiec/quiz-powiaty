@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { voivodeshipIds, type CountyType, type VoivodeshipId } from "src/data/common";
 import { ApplyIcon, Button, CloseIcon, Dialog, DialogRoot, FilterIcon } from "src/ui";
-import { filterNames, type UnitFilters } from "../../types";
+import { filterNames } from "../../filterNames";
+import { type UnitFilters } from "../../types";
 import { FilterGroup } from "./FilterGroup";
 
 export interface FilterDialogProps {

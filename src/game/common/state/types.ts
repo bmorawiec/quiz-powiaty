@@ -2,7 +2,7 @@ import type { GameOptions } from "src/gameOptions";
 
 export interface GameStore {
     /** Current state of the game */
-    state: "unstarted" | "unpaused" | "paused" | "finished" | "invalid";
+    state: GameState;
     /** Timestamps, at which the game was either paused or unpaused.
      *  When the game is...
      *   - paused or finished, the array should contain an even amount of entries.
@@ -11,3 +11,5 @@ export interface GameStore {
     timestamps: number[];
     options: GameOptions;
 }
+
+export type GameState = "unstarted" | "unpaused" | "paused" | "finished" | "invalid";

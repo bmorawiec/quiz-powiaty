@@ -5,6 +5,7 @@ import { useBreakpoints } from "src/ui";
 import { GameLayout, PausedView, Sidebar, type GameProps } from "../common";
 import { calculateTime, gameFromOptions, togglePause, useChoiceGameStore } from "./state";
 import { View } from "./View";
+import { FinishedView } from "./finishedView";
 
 export function ChoiceGame({ options }: GameProps) {
     const navigate = useNavigate();
@@ -18,12 +19,12 @@ export function ChoiceGame({ options }: GameProps) {
     const restartNeedsConfirmation = useChoiceGameStore((game) => game.current > 0);
 
     const gameState = useChoiceGameStore((game) => game.state);
-    if (gameState === "unstarted" || gameState === "invalid" || gameState === "finished") {
+    if (gameState === "unstarted" || gameState === "invalid") {
         return null;
     }
 
-    const handleGameRestart = (newOptions: GameOptions) => {
-        const newURL = encodeGameURL(newOptions);
+    const handleGameRestart = (newOptions?: GameOptions) => {
+        const newURL = encodeGameURL(newOptions || options);
         navigate(newURL);
     };
 
@@ -31,13 +32,18 @@ export function ChoiceGame({ options }: GameProps) {
         <GameLayout>
             {(gameState === "paused") ? (
                 <PausedView onUnpauseClick={togglePause}/>
+            ) : (gameState === "finished") ? (
+                <FinishedView
+                    options={options}
+                    onRestart={handleGameRestart}
+                />
             ) : (
                 <View options={options}/>
             )}
 
             {(layout === "md" || layout === "lg" || layout === "xl") && (
                 <Sidebar
-                    paused={gameState === "paused"}
+                    gameState={gameState}
                     calculateTime={calculateTime}
                     onTogglePause={togglePause}
                     options={options}

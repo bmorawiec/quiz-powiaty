@@ -1,5 +1,7 @@
 export * from "./ApplyIcon";
+export * from "./ArrowDownIcon";
 export * from "./ArrowRightIcon";
+export * from "./ArrowUpIcon";
 export * from "./CarIcon";
 export * from "./ClockIcon";
 export * from "./CloseIcon";
