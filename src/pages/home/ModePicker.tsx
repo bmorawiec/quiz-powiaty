@@ -1,12 +1,14 @@
 import { useState } from "react";
-import { NavLink, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import type { Guessable, UnitType } from "src/data/common";
 import { type GameType, encodeGameURL } from "src/gameOptions";
 import {
     CarIcon,
     COAIcon,
     FlagIcon,
+    LargeButton,
     LargeDropdown,
+    LargeLink,
     LocationIcon,
     PlaceNameIcon,
     SmallArrowRightIcon,
@@ -85,24 +87,19 @@ export function ModePicker() {
                 onChange={setGuessFrom}
             />
 
-            <button
-                className="mt-auto flex items-center justify-center gap-[2px] h-[60px] rounded-[10px]
-                    cursor-pointer text-[18px] font-[450] transition-colors duration-100 focus-ring
-                    bg-teal-70 hover:bg-teal-65 text-white dark:bg-teal-80 hover:dark:bg-teal-85"
+            <LargeButton
+                primary
+                text="Zacznij grę"
+                iconRight={SmallArrowRightIcon}
+                className="mt-auto"
                 onClick={handlePlayClick}
-            >
-                <span>Zacznij grę</span>
-                <SmallArrowRightIcon/>
-            </button>
+            />
 
-            <NavLink
+            <LargeLink
+                short
                 to="/quizy"
-                className="flex items-center justify-center h-[50px] rounded-[10px]
-                    text-[18px] transition-colors duration-100 focus-ring
-                    bg-gray-10 hover:bg-gray-15 text-black-100 dark:bg-gray-90 dark:hover:bg-gray-95"
-            >
-                <span>Wszystkie tryby gry</span>
-            </NavLink>
+                text="Wszystkie tryby gry"
+            />
         </div>
     );
 }
