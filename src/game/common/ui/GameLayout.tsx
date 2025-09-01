@@ -6,7 +6,7 @@ export interface GameLayoutProps {
 
 export function GameLayout({ children }: GameLayoutProps) {
     return (
-        <div className="flex-1 flex gap-[16px] sm:px-[20px] lg:px-[100px] sm:pb-[38px]">
+        <div className="flex-1 flex gap-[16px] sm:px-[20px] lg:px-[100px] sm:pb-[38px] min-h-[600px]">
             {children}
         </div>
     );
