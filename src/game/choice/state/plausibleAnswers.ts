@@ -2,17 +2,17 @@ import type { Unit } from "src/data/common";
 import type { GameOptions } from "src/gameOptions";
 import { swapDiacritics } from "src/utils/diacritics";
 
-export function plausibleOptionUnits(unit: Unit, allUnits: Unit[], options: GameOptions): Unit[] {
+export function plausibleAnswerUnits(unit: Unit, allUnits: Unit[], options: GameOptions): Unit[] {
     if (options.guess === "plate" && (options.guessFrom === "name" || options.guessFrom === "capital")) {
-        return plausiblePlateOptionUnits(unit, allUnits);
+        return plausiblePlateAnswerUnits(unit, allUnits);
     } else if (options.guessFrom === "plate" && (options.guess === "name" || options.guess === "capital")) {
-        return plausibleNameOrCapitalOptionUnits(unit, allUnits, options);
+        return plausibleNameOrCapitalAnswerUnits(unit, allUnits, options);
     } else {
         return [];
     }
 }
 
-function plausiblePlateOptionUnits(unit: Unit, allUnits: Unit[]): Unit[] {
+function plausiblePlateAnswerUnits(unit: Unit, allUnits: Unit[]): Unit[] {
     const pairs = [];
     for (const answerUnit of allUnits) {
         // skip unit if it's the correct answer, or if the county types of units don't match
@@ -37,7 +37,7 @@ function plausiblePlateOptionUnits(unit: Unit, allUnits: Unit[]): Unit[] {
         .map((obj) => obj.unit);
 }
 
-function plausibleNameOrCapitalOptionUnits(unit: Unit, allUnits: Unit[], options: GameOptions): Unit[] {
+function plausibleNameOrCapitalAnswerUnits(unit: Unit, allUnits: Unit[], options: GameOptions): Unit[] {
     const pairs = [];
     for (const answerUnit of allUnits) {
         if (answerUnit === unit || answerUnit.countyType !== unit.countyType) {

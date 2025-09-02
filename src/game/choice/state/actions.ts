@@ -4,7 +4,7 @@ import { InvalidGameOptionsError, matchesFilters, validateOptions, type GameOpti
 import { toShuffled } from "src/utils/shuffle";
 import { createActions, formatQuestion } from "../../common";
 import { validOptions } from "./gameOptions";
-import { plausibleOptionUnits } from "./plausibleOptions";
+import { plausibleAnswerUnits } from "./plausibleAnswers";
 import { hook } from "./store";
 import type { GuessResult, ChoiceQuestion, ChoiceAnswer } from "./types";
 
@@ -35,7 +35,7 @@ function getQuestions(units: Unit[], allUnits: Unit[], options: GameOptions): Ch
         const question: ChoiceQuestion = {
             id: unit.id,
             text: formatQuestion(unit, options),
-            answers: getQuestionOptions(unit, allUnits, options),
+            answers: getAnswers(unit, allUnits, options),
             tries: 0,
         };
         if (options.guessFrom === "flag") {
@@ -47,29 +47,29 @@ function getQuestions(units: Unit[], allUnits: Unit[], options: GameOptions): Ch
     });
 }
 
-function getQuestionOptions(unit: Unit, allUnits: Unit[], options: GameOptions): ChoiceAnswer[] {
-    const questionOptions: ChoiceAnswer[] = plausibleOptionUnits(unit, allUnits, options)
+function getAnswers(unit: Unit, allUnits: Unit[], options: GameOptions): ChoiceAnswer[] {
+    const answers: ChoiceAnswer[] = plausibleAnswerUnits(unit, allUnits, options)
         .map((unit) => getAnswerFromUnit(unit, options));
 
     // randomly choose five incorrect answers
-    while (questionOptions.length < 5) {
+    while (answers.length < 5) {
         const randomIndex = Math.floor(Math.random() * allUnits.length);
         const incorrectUnit = allUnits[randomIndex];
-        if (incorrectUnit !== unit && !questionOptions.some((option) => option.id === incorrectUnit.id)) {
-            questionOptions.push(getAnswerFromUnit(incorrectUnit, options));
+        if (incorrectUnit !== unit && !answers.some((option) => option.id === incorrectUnit.id)) {
+            answers.push(getAnswerFromUnit(incorrectUnit, options));
         }
     }
 
-    // add correct answer to array of options
-    questionOptions.push(getAnswerFromUnit(unit, options, true));
+    // add correct answer to array of answers
+    answers.push(getAnswerFromUnit(unit, options, true));
 
-    return toShuffled(questionOptions);
+    return toShuffled(answers);
 }
 
 function getAnswerFromUnit(unit: Unit, options: GameOptions, correct?: boolean): ChoiceAnswer {
     const answer: ChoiceAnswer = {
         id: unit.id,
-        text: getOptionValue(unit, options),
+        text: getAnswerText(unit, options),
         correct: !!correct,
     };
     if (options.guess === "flag") {
@@ -80,7 +80,7 @@ function getAnswerFromUnit(unit: Unit, options: GameOptions, correct?: boolean):
     return answer;
 };
 
-function getOptionValue(unit: Unit, options: GameOptions): string {
+function getAnswerText(unit: Unit, options: GameOptions): string {
     if (options.guess === "name") {
         const prefix = (unit.type === "voivodeship")
             ? "województwo "
@@ -104,7 +104,7 @@ export function guess(answerId: string): GuessResult {
         throw new Error("Cannot perform this action while the game is unstarted, paused, finished or invalid.");
 
     const question = game.questions[game.current];
-    const answer = question.answers.find((option) => option.id === answerId);
+    const answer = question.answers.find((answer) => answer.id === answerId);
     if (!answer)
         throw new Error("Cannot find answer with the specified ID: " + answerId);
     const result = (answer.correct) ? "correct" : "wrong";

@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import { useAnimation } from "src/utils/useAnimation";
 import { guess } from "../../state";
-import type { OptionProps } from "./Option";
+import type { AnswerProps } from "./Answer";
 
-export function TextOption({ option, onCorrectGuess }: OptionProps) {
+export function TextAnswer({ answer, onCorrectGuess }: AnswerProps) {
     const [isWrongAnim, startWrongAnim] = useAnimation(450);
     const handleClick = () => {
-        const result = guess(option.id);
+        const result = guess(answer.id);
         if (result === "correct") {
             onCorrectGuess();
         } else if (result === "wrong") {
@@ -23,7 +23,7 @@ export function TextOption({ option, onCorrectGuess }: OptionProps) {
                 isWrongAnim && "animate-shake")}
             onClick={handleClick}
         >
-            {option.text}
+            {answer.text}
         </button>
     );
 }

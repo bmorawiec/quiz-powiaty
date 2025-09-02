@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import { useAnimation } from "src/utils/useAnimation";
 import { guess } from "../../state";
-import type { OptionProps } from "./Option";
+import type { AnswerProps } from "./Answer";
 
-export function ImageOption({ option, onCorrectGuess }: OptionProps) {
+export function ImageAnswer({ answer, onCorrectGuess }: AnswerProps) {
     const [isWrongAnim, startWrongAnim] = useAnimation(450);
     const handleClick = () => {
-        const result = guess(option.id);
+        const result = guess(answer.id);
         if (result === "correct") {
             onCorrectGuess();
         } else if (result === "wrong") {
@@ -22,7 +22,7 @@ export function ImageOption({ option, onCorrectGuess }: OptionProps) {
             onClick={handleClick}
         >
             <img
-                src={option.imageURL}
+                src={answer.imageURL}
                 className="absolute left-0 top-0 size-full"
             />
         </button>

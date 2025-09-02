@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useAnimation } from "src/utils/useAnimation";
 import { useChoiceGameStore } from "../state";
-import { Option } from "./option";
+import { Answer } from "./answer";
 
 export function View() {
     const question = useChoiceGameStore((state) => state.questions[state.current]);
@@ -29,10 +29,10 @@ export function View() {
             </h2>
 
             <div className="w-full max-w-[1000px] grid grid-cols-2 md:grid-cols-3 gap-[10px]">
-                {question.answers.map((option) =>
-                    <Option
-                        key={option.id}
-                        option={option}
+                {question.answers.map((answer) =>
+                    <Answer
+                        key={answer.id}
+                        answer={answer}
                         onCorrectGuess={handleCorrectGuess}
                     />
                 )}
