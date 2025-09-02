@@ -17,7 +17,7 @@ export type GameState = "unstarted" | "unpaused" | "paused" | "finished" | "inva
 export interface Question {
     /** TERC id of the administrative unit this question is about. */
     id: string;
-    text: string;
+    text?: string;
     /** URL of image to be shown when this question is presented. */
     imageURL?: string;
     /** The amount of times the player has attempted to answer this question. */
@@ -28,7 +28,7 @@ export interface Question {
 export interface Answer {
     /** TERC id of the administrative unit this answer is about. */
     id: string;
-    text: string;
+    text?: string;
     /** URL of image to be shown when this answer is presented. */
     imageURL?: string;
     correct: boolean;

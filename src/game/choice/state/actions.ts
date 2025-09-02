@@ -1,12 +1,12 @@
 import type { Unit } from "src/data/common";
 import { units } from "src/data/units";
-import { InvalidGameOptionsError, matchesFilters, validateOptions, type GameOptions } from "src/gameOptions";
+import { matchesFilters, validateOptions, type GameOptions } from "src/gameOptions";
 import { toShuffled } from "src/utils/shuffle";
 import { createActions, formatQuestion } from "../../common";
 import { validOptions } from "./gameOptions";
 import { plausibleAnswerUnits } from "./plausibleAnswers";
 import { hook } from "./store";
-import type { GuessResult, ChoiceQuestion, ChoiceAnswer } from "./types";
+import type { ChoiceAnswer, ChoiceQuestion, GuessResult } from "./types";
 
 const { initializeGame, finishGame, setInvalidState, togglePause, calculateTime } = createActions(hook);
 export { calculateTime, togglePause };
@@ -69,13 +69,14 @@ function getAnswers(unit: Unit, allUnits: Unit[], options: GameOptions): ChoiceA
 function getAnswerFromUnit(unit: Unit, options: GameOptions, correct?: boolean): ChoiceAnswer {
     const answer: ChoiceAnswer = {
         id: unit.id,
-        text: getAnswerText(unit, options),
         correct: !!correct,
     };
     if (options.guess === "flag") {
         answer.imageURL = "/images/flag/" + unit.id + ".svg";
     } else if (options.guess === "coa") {
         answer.imageURL = "/images/coa/" + unit.id + ".svg";
+    } else {
+        answer.text = getAnswerText(unit, options);
     }
     return answer;
 };
@@ -90,10 +91,8 @@ function getAnswerText(unit: Unit, options: GameOptions): string {
         return unit.capitals.join(", ");
     } else if (options.guess === "plate") {
         return unit.plates.join(", ");
-    } else if (options.guess === "flag" || options.guess === "coa") {
-        return unit.id;
     }
-    throw new InvalidGameOptionsError();
+    throw Error("Text not defined for the provided game options.");
 }
 
 /** Checks if the player's guess is correct. If it was, then proceeds to the next question.

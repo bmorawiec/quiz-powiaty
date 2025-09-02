@@ -10,6 +10,7 @@ export interface ChoiceGameStore extends GameStore {
 }
 
 export interface ChoiceQuestion extends Question {
+    text: string;
     /** Contains all the correct and incorrect options that will be shown when this question
      *  is presented. There are always six options. */
     answers: ChoiceAnswer[];

@@ -10,6 +10,7 @@ export interface PromptGameStore extends GameStore {
 }
 
 export interface PromptQuestion extends Question {
+    text: string;
     /** Stores correct answers to this prompt. */
     answers: PromptAnswer[];
     /** Number of correct answers provided by the user. */
@@ -17,6 +18,7 @@ export interface PromptQuestion extends Question {
 }
 
 export interface PromptAnswer extends Answer {
+    text: string;
     correct: true;
     /** Whether or not this answer has been guessed by the player. */
     guessed: boolean;

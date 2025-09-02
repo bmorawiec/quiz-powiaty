@@ -26,7 +26,7 @@ export function QuestionBrowser() {
         }
     };
 
-    return (
+    return answerText && (
         <QuestionBrowserBase
             current={current}
             total={total}
