@@ -1,20 +1,15 @@
-import type { GameStore } from "../../common";
+import type { Answer, GameStore, Question } from "../../common";
 
 export interface PromptGameStore extends GameStore {
     /** Stores the order and states of all the prompts that are going to be presented in this game. */
-    prompts: Prompt[];
+    prompts: PromptQuestion[];
     /** Index of the current prompt */
     current: number;
     /** Total number of answered prompts */
     answered: number;
 }
 
-/** Represents a prompt. */
-export interface Prompt {
-    /** TERC code of the administrative unit this prompt is about. */
-    about: string;
-    /** The prompt string to be shown. */
-    value: string;
+export interface PromptQuestion extends Question {
     /** Stores correct answers to this prompt. */
     answers: PromptAnswer[];
     /** Number of correct answers provided by the user. */
@@ -23,10 +18,10 @@ export interface Prompt {
     tries: number;
 }
 
-export interface PromptAnswer {
+export interface PromptAnswer extends Answer {
+    correct: true;
     /** Whether or not this answer has been guessed by the player. */
     guessed: boolean;
-    value: string;
 }
 
 /** "correct" - the guess was correct.

@@ -9,7 +9,7 @@ export function QuestionBrowser() {
 
     const answerText = useMemo(
         () => prompt.answers
-            .map((answer) => answer.value)
+            .map((answer) => answer.text)
             .join(", "),
         [prompt],
     );
@@ -30,7 +30,7 @@ export function QuestionBrowser() {
         <QuestionBrowserBase
             current={current}
             total={total}
-            questionText={prompt.value}
+            questionText={prompt.text}
             answerText={answerText}
             tries={prompt.tries}
             onPrevClick={handlePrevClick}

@@ -1,6 +1,6 @@
 import { InvalidGameOptionsError, type GameOptions } from "src/gameOptions";
+import { guess, usePromptGameStore } from "../state";
 import { PromptInput } from "./PromptInput";
-import { guess, usePromptGameStore, type Prompt } from "../state";
 
 export interface ViewProps {
     options: GameOptions;
@@ -11,7 +11,6 @@ export function View({ options }: ViewProps) {
 
     const inputPlaceholder = getInputPlaceholder(options);
     const textTransform = getTextTransform(options);
-    const imageUrl = getImageUrl(prompt, options);
 
     const handleGuess = (answer: string) => {
         return guess(answer);
@@ -20,17 +19,17 @@ export function View({ options }: ViewProps) {
     return (
         <div className="relative flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col items-center 
             pt-[60px] pb-[50px] px-[20px]">
-            {imageUrl && (
+            {prompt.imageURL && (
                 <div className="relative w-full max-w-[700px] flex-1 min-h-[200px] max-h-[500px] mb-[30px]">
                     <img
                         className="absolute left-0 top-0 w-full h-full"
-                        src={imageUrl}
+                        src={prompt.imageURL}
                     />
                 </div>
             )}
 
             <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80 dark:text-gray-10 mt-auto text-center">
-                {prompt.value}
+                {prompt.text}
             </h2>
             <PromptInput
                 placeholder={inputPlaceholder}
@@ -42,16 +41,6 @@ export function View({ options }: ViewProps) {
             />
         </div>
     );
-}
-
-function getImageUrl(prompt: Prompt, options: GameOptions): string | null {
-    if (options.guessFrom === "flag") {
-        return "/images/flag/" + prompt.about + ".svg";
-    } else if (options.guessFrom === "coa") {
-        return "/images/coa/" + prompt.about + ".svg";
-    } else {
-        return null;
-    }
 }
 
 function getInputPlaceholder(options: GameOptions): string {

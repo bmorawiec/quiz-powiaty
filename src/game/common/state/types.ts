@@ -13,3 +13,20 @@ export interface GameStore {
 }
 
 export type GameState = "unstarted" | "unpaused" | "paused" | "finished" | "invalid";
+
+export interface Question {
+    /** TERC id of the administrative unit this question is about. */
+    id: string;
+    text: string;
+    /** URL of image to be shown when this question is presented. */
+    imageURL?: string;
+}
+
+export interface Answer {
+    /** TERC id of the administrative unit this answer is about. */
+    id: string;
+    text: string;
+    /** URL of image to be shown when this answer is presented. */
+    imageURL?: string;
+    correct: boolean;
+}

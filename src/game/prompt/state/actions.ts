@@ -5,7 +5,7 @@ import { toShuffled } from "src/utils/shuffle";
 import { createActions, formatQuestion } from "../../common";
 import { validOptions } from "./gameOptions";
 import { hook } from "./store";
-import type { GuessResult, Prompt, PromptAnswer } from "./types";
+import type { GuessResult, PromptQuestion, PromptAnswer } from "./types";
 
 const { initializeGame, finishGame, setInvalidState, togglePause, calculateTime } = createActions(hook);
 export { calculateTime, togglePause };
@@ -28,22 +28,32 @@ export function gameFromOptions(options: GameOptions) {
 }
 
 /** Generates an array of prompts about the provided administrative units. */
-function getPrompts(units: Unit[], options: GameOptions): Prompt[] {
+function getPrompts(units: Unit[], options: GameOptions): PromptQuestion[] {
     const shuffledUnits = toShuffled(units);
-    return shuffledUnits.map((unit) => ({
-        about: unit.id,
-        value: formatQuestion(unit, options),
-        answers: getPromptAnswers(unit, options),
-        provided: 0,
-        tries: 0,
-    } satisfies Prompt));
+    return shuffledUnits.map((unit) => {
+        const question: PromptQuestion = {
+            id: unit.id,
+            text: formatQuestion(unit, options),
+            answers: getPromptAnswers(unit, options),
+            provided: 0,
+            tries: 0,
+        };
+        if (options.guessFrom === "flag") {
+            question.imageURL = "/images/flag/" + unit.id + ".svg";
+        } else if (options.guessFrom === "coa") {
+            question.imageURL = "/images/coa/" + unit.id + ".svg";
+        }
+        return question;
+    });
 }
 
 function getPromptAnswers(unit: Unit, options: GameOptions): PromptAnswer[] {
-    return getPromptAnswerStrings(unit, options).map((value) => ({
+    return getPromptAnswerStrings(unit, options).map((text) => ({
+        id: unit.id,
+        text,
+        correct: true,
         guessed: false,
-        value,
-    }));
+    } satisfies PromptAnswer));
 }
 
 function getPromptAnswerStrings(unit: Unit, options: GameOptions): string[] {
@@ -82,7 +92,7 @@ export function guess(playersGuess: string): [GuessResult, string | null] {
         const prompt = game.prompts[game.current];
         const newPrompt = {
             ...prompt,
-            answers: prompt.answers.map((answer) => (answer.value.toLowerCase() === playersGuess.toLowerCase()) ? {
+            answers: prompt.answers.map((answer) => (answer.text.toLowerCase() === playersGuess.toLowerCase()) ? {
                 ...answer,
                 guessed: true,
             } : answer),
@@ -127,7 +137,7 @@ function getHint(): string | null {
     }
     if (prompt.tries >= TRIES_FOR_FULL_HINT) {
         return prompt.answers
-            .map((answer) => answer.value)
+            .map((answer) => answer.text)
             .join(", ");
     }
 
@@ -135,22 +145,22 @@ function getHint(): string | null {
     if (game.options.guess === "plate") {
         return prompt.answers
             .map((answer) => {
-                if (noOfLetters > answer.value.length) {
-                    return answer.value;
+                if (noOfLetters > answer.text.length) {
+                    return answer.text;
                 }
-                const uncoveredLetters = answer.value.slice(0, noOfLetters);
-                return uncoveredLetters.padEnd(answer.value.length, "*");
+                const uncoveredLetters = answer.text.slice(0, noOfLetters);
+                return uncoveredLetters.padEnd(answer.text.length, "*");
             })
             .join(", ");
     } else if (game.options.guess === "name" || game.options.guess === "capital") {
         return prompt.answers
             .map((answer) => {
                 let hint = "";
-                for (let index = 0; index < answer.value.length; index++) {
-                    const char = answer.value[index];
+                for (let index = 0; index < answer.text.length; index++) {
+                    const char = answer.text[index];
                     if (char === " " || char === "-") {
                         hint += char;
-                    } else if (index < noOfLetters || index >= answer.value.length - noOfLetters) {
+                    } else if (index < noOfLetters || index >= answer.text.length - noOfLetters) {
                         hint += char;
                     } else {
                         hint += "*";
@@ -167,7 +177,7 @@ function getHint(): string | null {
 function getGuessResult(playersGuess: string): GuessResult {
     const game = hook.getState();
     const prompt = game.prompts[game.current];
-    const answer = prompt.answers.find((answer) => answer.value.toLowerCase() === playersGuess.toLowerCase());
+    const answer = prompt.answers.find((answer) => answer.text.toLowerCase() === playersGuess.toLowerCase());
     if (!answer) {
         return "wrong";
     } else if (answer.guessed) {
