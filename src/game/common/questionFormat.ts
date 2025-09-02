@@ -11,7 +11,7 @@ export function formatQuestion(unit: Unit, { unitType, guessFrom, guess }: GameO
         } else {
             str += (unitType === "voivodeship") ? "Które województwo " : "Który powiat ";
             if (guessFrom === "capital") {
-                str += (unit.capitals.length > 0) ? "ma stolice w miastach " : " ma stolicę w mieście ";
+                str += (unit.capitals.length > 1) ? "ma stolice w miastach " : " ma stolicę w mieście ";
                 str += unit.capitals.join(", ") + "?";
             } else if (guessFrom === "plate") {
                 str += "ma rejestracje " + unit.plates.join(", ") + "?";
@@ -42,7 +42,7 @@ export function formatQuestion(unit: Unit, { unitType, guessFrom, guess }: GameO
             if (guessFrom === "name") {
                 str += unit.name;
             } else if (guessFrom === "capital") {
-                str += (unit.capitals.length > 0) ? "ze stolicami w miastach " : "ze stolicą w mieście ";
+                str += (unit.capitals.length > 1) ? "ze stolicami w miastach " : "ze stolicą w mieście ";
                 str += unit.capitals.join(", ");
             } else if (guessFrom === "plate") {
                 str += "z rejestracjami " + unit.plates.join(", ");
