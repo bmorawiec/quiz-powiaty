@@ -58,3 +58,10 @@ export interface UnitShape {
     /** The center of this administrative unit. */
     center: Vector;
 }
+
+/** Stores information about the shape of a country */
+export interface CountryShape {
+    /** The ISO 3166-1 alpha-2 code of this country. */
+    id: string;
+    outline: number[][];
+}
