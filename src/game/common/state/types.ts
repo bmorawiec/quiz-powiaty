@@ -20,6 +20,9 @@ export interface Question {
     text: string;
     /** URL of image to be shown when this question is presented. */
     imageURL?: string;
+    /** The amount of times the player has attempted to answer this question. */
+    tries: number;
+    answers: Answer[];
 }
 
 export interface Answer {

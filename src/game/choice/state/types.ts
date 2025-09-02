@@ -13,8 +13,6 @@ export interface ChoiceQuestion extends Question {
     /** Contains all the correct and incorrect options that will be shown when this question
      *  is presented. There are always six options. */
     answers: ChoiceAnswer[];
-    /** The amount of times the player has attempted to answer this question. */
-    tries: number;
 }
 
 export type ChoiceAnswer = Answer;

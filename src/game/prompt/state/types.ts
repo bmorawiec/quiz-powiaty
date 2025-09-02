@@ -14,8 +14,6 @@ export interface PromptQuestion extends Question {
     answers: PromptAnswer[];
     /** Number of correct answers provided by the user. */
     provided: number;
-    /** The amount of times the player has attempted to answer this prompt. */
-    tries: number;
 }
 
 export interface PromptAnswer extends Answer {
