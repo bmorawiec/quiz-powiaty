@@ -31,7 +31,7 @@ export function BgMap() {
             }}
             border={{
                 left: (layout === "xl") ? 610 : 510,
-                right: 30,
+                right: (layout === "xl") ? 100 : 20,
                 top: 30,
                 bottom: 30,
             }}
