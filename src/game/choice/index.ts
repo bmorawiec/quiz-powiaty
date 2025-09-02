@@ -1,2 +1,2 @@
-import { ChoiceGame } from "./ChoiceGame";
+import { ChoiceGame } from "./ui/ChoiceGame";
 export default ChoiceGame;

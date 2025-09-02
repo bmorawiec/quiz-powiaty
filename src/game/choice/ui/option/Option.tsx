@@ -1,5 +1,5 @@
 import type { GameOptions } from "src/gameOptions";
-import type { QuestionOption } from "../state";
+import type { QuestionOption } from "../../state";
 import { ImageOption } from "./ImageOption";
 import { TextOption } from "./TextOption";
 

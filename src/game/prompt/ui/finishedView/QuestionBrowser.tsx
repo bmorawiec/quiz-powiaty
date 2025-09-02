@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { QuestionBrowserBase } from "src/game/common";
-import { usePromptGameStore } from "../state";
+import { usePromptGameStore } from "../../state";
 
 export function QuestionBrowser() {
     const [current, setCurrent] = useState(0);

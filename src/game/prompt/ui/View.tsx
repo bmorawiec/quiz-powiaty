@@ -1,6 +1,6 @@
 import { InvalidGameOptionsError, type GameOptions } from "src/gameOptions";
 import { PromptInput } from "./PromptInput";
-import { guess, usePromptGameStore, type Prompt } from "./state";
+import { guess, usePromptGameStore, type Prompt } from "../state";
 
 export interface ViewProps {
     options: GameOptions;

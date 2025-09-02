@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { FinishedViewBase, GameModeCard, GuessDistribution, ProgressBar } from "../../common";
-import { calculateTime, usePromptGameStore } from "../state";
+import { FinishedViewBase, GameModeCard, GuessDistribution, ProgressBar } from "../../../common";
+import { calculateTime, usePromptGameStore } from "../../state";
 import type { GameOptions } from "src/gameOptions";
 import { QuestionBrowser } from "./QuestionBrowser";
 

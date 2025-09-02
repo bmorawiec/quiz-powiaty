@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { encodeGameURL, type GameOptions } from "src/gameOptions";
 import { useBreakpoints } from "src/ui";
-import { GameLayout, PausedView, Sidebar, type GameProps } from "../common";
+import { GameLayout, PausedView, Sidebar, type GameProps } from "../../common";
 import { FinishedView } from "./finishedView";
-import { calculateTime, gameFromOptions, togglePause, useChoiceGameStore } from "./state";
+import { calculateTime, gameFromOptions, togglePause, useChoiceGameStore } from "../state";
 import { View } from "./View";
 
 export function ChoiceGame({ options }: GameProps) {

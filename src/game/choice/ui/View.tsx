@@ -2,7 +2,7 @@ import clsx from "clsx";
 import type { GameOptions } from "src/gameOptions";
 import { useAnimation } from "src/utils/useAnimation";
 import { Option } from "./option";
-import { useChoiceGameStore, type Question } from "./state";
+import { useChoiceGameStore, type Question } from "../state";
 
 export interface ViewProps {
     options: GameOptions;

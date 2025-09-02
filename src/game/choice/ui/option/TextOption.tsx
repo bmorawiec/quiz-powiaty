@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useAnimation } from "src/utils/useAnimation";
-import { guess, type QuestionOption } from "../state";
+import { guess, type QuestionOption } from "../../state";
 
 export interface TextOptionProps {
     option: QuestionOption;
