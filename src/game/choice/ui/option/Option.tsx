@@ -1,20 +1,17 @@
-import type { GameOptions } from "src/gameOptions";
-import type { QuestionOption } from "../../state";
+import type { ChoiceAnswer } from "../../state";
 import { ImageOption } from "./ImageOption";
 import { TextOption } from "./TextOption";
 
 export interface OptionProps {
-    option: QuestionOption;
-    gameOptions: GameOptions;
+    option: ChoiceAnswer;
     onCorrectGuess: () => void;
 }
 
-export function Option({ option, gameOptions, onCorrectGuess }: OptionProps) {
-    if (gameOptions.guess === "flag" || gameOptions.guess === "coa") {
+export function Option({ option, onCorrectGuess }: OptionProps) {
+    if (option.imageURL) {
         return (
             <ImageOption
                 option={option}
-                gameOptions={gameOptions}
                 onCorrectGuess={onCorrectGuess}
             />
         );

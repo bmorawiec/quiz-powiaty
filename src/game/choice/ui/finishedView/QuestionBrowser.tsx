@@ -5,13 +5,13 @@ import { useChoiceGameStore } from "../../state";
 export function QuestionBrowser() {
     const [current, setCurrent] = useState(0);
     const total = useChoiceGameStore((state) => state.questions.length);
-    const prompt = useChoiceGameStore((state) => state.questions[current]);
+    const question = useChoiceGameStore((state) => state.questions[current]);
 
     const answerText = useMemo(
-        () => prompt.options
+        () => question.answers
             .find((option) => option.correct)!
-            .value,
-        [prompt],
+            .text,
+        [question],
     );
 
     const handlePrevClick = () => {
@@ -30,9 +30,9 @@ export function QuestionBrowser() {
         <QuestionBrowserBase
             current={current}
             total={total}
-            questionText={prompt.value}
+            questionText={question.text}
             answerText={answerText}
-            tries={prompt.tries}
+            tries={question.tries}
             onPrevClick={handlePrevClick}
             onNextClick={handleNextClick}
         />

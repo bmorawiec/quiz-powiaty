@@ -38,7 +38,7 @@ export function ChoiceGame({ options }: GameProps) {
                     onRestart={handleGameRestart}
                 />
             ) : (
-                <View options={options}/>
+                <View/>
             )}
 
             {(layout === "md" || layout === "lg" || layout === "xl") && (

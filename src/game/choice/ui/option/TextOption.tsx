@@ -1,13 +1,9 @@
 import clsx from "clsx";
 import { useAnimation } from "src/utils/useAnimation";
-import { guess, type QuestionOption } from "../../state";
+import { guess } from "../../state";
+import type { OptionProps } from "./Option";
 
-export interface TextOptionProps {
-    option: QuestionOption;
-    onCorrectGuess: () => void;
-}
-
-export function TextOption({ option, onCorrectGuess }: TextOptionProps) {
+export function TextOption({ option, onCorrectGuess }: OptionProps) {
     const [isWrongAnim, startWrongAnim] = useAnimation(450);
     const handleClick = () => {
         const result = guess(option.id);
@@ -27,7 +23,7 @@ export function TextOption({ option, onCorrectGuess }: TextOptionProps) {
                 isWrongAnim && "animate-shake")}
             onClick={handleClick}
         >
-            {option.value}
+            {option.text}
         </button>
     );
 }

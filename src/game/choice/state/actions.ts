@@ -6,7 +6,7 @@ import { createActions, formatQuestion } from "../../common";
 import { validOptions } from "./gameOptions";
 import { plausibleOptionUnits } from "./plausibleOptions";
 import { hook } from "./store";
-import type { GuessResult, Question, QuestionOption } from "./types";
+import type { GuessResult, ChoiceQuestion, ChoiceAnswer } from "./types";
 
 const { initializeGame, finishGame, setInvalidState, togglePause, calculateTime } = createActions(hook);
 export { calculateTime, togglePause };
@@ -29,46 +29,56 @@ export function gameFromOptions(options: GameOptions) {
 }
 
 /** Generates an array of questions about the provided administrative units. */
-function getQuestions(units: Unit[], allUnits: Unit[], options: GameOptions): Question[] {
+function getQuestions(units: Unit[], allUnits: Unit[], options: GameOptions): ChoiceQuestion[] {
     const shuffledUnits = toShuffled(units);
-    return shuffledUnits.map((unit) => ({
-        about: unit.id,
-        value: formatQuestion(unit, options),
-        options: getQuestionOptions(unit, allUnits, options),
-        tries: 0,
-    } satisfies Question));
+    return shuffledUnits.map((unit) => {
+        const question: ChoiceQuestion = {
+            id: unit.id,
+            text: formatQuestion(unit, options),
+            answers: getQuestionOptions(unit, allUnits, options),
+            tries: 0,
+        };
+        if (options.guessFrom === "flag") {
+            question.imageURL = "/images/flag/" + unit.id + ".svg";
+        } else if (options.guessFrom === "coa") {
+            question.imageURL = "/images/coa/" + unit.id + ".svg";
+        }
+        return question;
+    });
 }
 
-function getQuestionOptions(unit: Unit, allUnits: Unit[], options: GameOptions): QuestionOption[] {
-    const questionOptions: QuestionOption[] = plausibleOptionUnits(unit, allUnits, options)
-        .map((unit) => ({
-            id: unit.id,
-            correct: false,
-            value: getOptionValue(unit, options),
-        }));
+function getQuestionOptions(unit: Unit, allUnits: Unit[], options: GameOptions): ChoiceAnswer[] {
+    const questionOptions: ChoiceAnswer[] = plausibleOptionUnits(unit, allUnits, options)
+        .map((unit) => getAnswerFromUnit(unit, options));
 
     // randomly choose five incorrect answers
     while (questionOptions.length < 5) {
         const randomIndex = Math.floor(Math.random() * allUnits.length);
         const incorrectUnit = allUnits[randomIndex];
         if (incorrectUnit !== unit && !questionOptions.some((option) => option.id === incorrectUnit.id)) {
-            questionOptions.push({
-                id: incorrectUnit.id,
-                correct: false,
-                value: getOptionValue(incorrectUnit, options),
-            });
+            questionOptions.push(getAnswerFromUnit(incorrectUnit, options));
         }
     }
 
     // add correct answer to array of options
-    questionOptions.push({
-        id: unit.id,
-        correct: true,
-        value: getOptionValue(unit, options),
-    });
+    questionOptions.push(getAnswerFromUnit(unit, options, true));
 
     return toShuffled(questionOptions);
 }
+
+function getAnswerFromUnit(unit: Unit, options: GameOptions, correct?: boolean): ChoiceAnswer {
+    const answer: ChoiceAnswer = {
+        id: unit.id,
+        text: getOptionValue(unit, options),
+        correct: !!correct,
+    };
+    if (options.guess === "flag") {
+        answer.imageURL = "/images/flag/" + unit.id + ".svg";
+    } else if (options.guess === "coa") {
+        answer.imageURL = "/images/coa/" + unit.id + ".svg";
+    }
+    return answer;
+};
 
 function getOptionValue(unit: Unit, options: GameOptions): string {
     if (options.guess === "name") {
@@ -94,7 +104,7 @@ export function guess(answerId: string): GuessResult {
         throw new Error("Cannot perform this action while the game is unstarted, paused, finished or invalid.");
 
     const question = game.questions[game.current];
-    const answer = question.options.find((option) => option.id === answerId);
+    const answer = question.answers.find((option) => option.id === answerId);
     if (!answer)
         throw new Error("Cannot find answer with the specified ID: " + answerId);
     const result = (answer.correct) ? "correct" : "wrong";
