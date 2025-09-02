@@ -19,6 +19,7 @@ export * from "./PlayIcon";
 export * from "./props";
 export * from "./RestartIcon";
 export * from "./SendIcon";
+export * from "./SmallArrowLeftIcon";
 export * from "./SmallArrowRightIcon";
 export * from "./TargetIcon";
 export * from "./WarningIcon";
