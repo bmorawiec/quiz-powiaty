@@ -1,12 +1,36 @@
-import type { ReactNode } from "react";
 import { LargeButton, LargeLink, RestartIcon } from "src/ui";
+import type { Question } from "../../state";
+import { useMemo } from "react";
+import { ProgressBar } from "./ProgressBar";
+import { GameModeCard } from "../GameModeCard";
+import { GuessDistribution } from "./GuessDistribution";
+import { QuestionBrowser } from "./QuestionBrowser";
+import type { GameOptions } from "src/gameOptions";
 
 export interface FinishedViewBaseProps {
-    onRestart?: () => void;
-    children?: ReactNode;
+    options: GameOptions;
+    questions: Question[];
+    time: number;
+    onRestart: () => void;
 }
 
-export function FinishedViewBase({ onRestart, children }: FinishedViewBaseProps) {
+export function FinishedViewBase({ options, questions, time, onRestart }: FinishedViewBaseProps) {
+    const [points, maxPoints, percent, guessDistribution] = useMemo(() => {
+        let pointSum = 0;
+        const guessDistribution: [number, number, number, number] = [0, 0, 0, 0];
+        for (const question of questions) {
+            const points = Math.max(3 - question.tries, 0);
+            pointSum += points;
+            guessDistribution[points]++;
+        }
+        const maxPoints = questions.length * 3;
+        const frac = pointSum / maxPoints;
+        const percent = (frac < 0.5)
+            ? Math.ceil(frac * 100)
+            : Math.floor(frac * 100);
+        return [pointSum, maxPoints, percent, guessDistribution];
+    }, [questions]);
+
     return (
         <div className="flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col min-h-0">
             <div className="flex-1 overflow-y-auto pt-[58px] flex flex-col items-center">
@@ -15,7 +39,24 @@ export function FinishedViewBase({ onRestart, children }: FinishedViewBaseProps)
                         Twój wynik
                     </h2>
 
-                    {children}
+                    <ProgressBar
+                        percent={percent}
+                        points={points}
+                        maxPoints={maxPoints}
+                    />
+
+                    <GameModeCard
+                        options={options}
+                        time={time}
+                    />
+
+                    <GuessDistribution
+                        data={guessDistribution}
+                    />
+
+                    <QuestionBrowser
+                        questions={questions}
+                    />
                 </div>
             </div>
 
@@ -26,7 +67,7 @@ export function FinishedViewBase({ onRestart, children }: FinishedViewBaseProps)
                         primary
                         text="Zagraj od nowa"
                         icon={RestartIcon}
-                        onClick={onRestart}
+                        onClick={() => onRestart()}
                     />
                     <LargeLink
                         to="/"
