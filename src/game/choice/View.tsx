@@ -1,8 +1,7 @@
 import clsx from "clsx";
-import { useAnimation } from "src/utils/useAnimation";
 import type { GameOptions } from "src/gameOptions";
-import { ImageOption } from "./ImageOption";
-import { Option } from "./Option";
+import { useAnimation } from "src/utils/useAnimation";
+import { Option } from "./option";
 import { useChoiceGameStore, type Question } from "./state";
 
 export interface ViewProps {
@@ -36,28 +35,16 @@ export function View({ options }: ViewProps) {
                 {question.value}
             </h2>
 
-            {(options.guess === "flag" || options.guess === "coa") ? (
-                <div className="w-full max-w-[1000px] grid grid-cols-2 md:grid-cols-3 gap-[20px]">
-                    {question.options.map((option) =>
-                        <ImageOption
-                            key={option.id}
-                            questionOpt={option}
-                            options={options}
-                            onCorrectGuess={handleCorrectGuess}
-                        />
-                    )}
-                </div>
-            ) : (
-                <div className="w-full max-w-[1000px] grid grid-cols-2 md:grid-cols-3 gap-[10px]">
-                    {question.options.map((option) =>
-                        <Option
-                            key={option.id}
-                            questionOpt={option}
-                            onCorrectGuess={handleCorrectGuess}
-                        />
-                    )}
-                </div>
-            )}
+            <div className="w-full max-w-[1000px] grid grid-cols-2 md:grid-cols-3 gap-[10px]">
+                {question.options.map((option) =>
+                    <Option
+                        key={option.id}
+                        option={option}
+                        gameOptions={options}
+                        onCorrectGuess={handleCorrectGuess}
+                    />
+                )}
+            </div>
         </div>
     );
 }
