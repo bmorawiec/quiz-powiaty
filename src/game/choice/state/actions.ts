@@ -1,31 +1,26 @@
 import type { Unit } from "src/data/common";
 import { units } from "src/data/units";
-import { matchesFilters, validateOptions, type GameOptions } from "src/gameOptions";
+import { matchesFilters, type GameOptions } from "src/gameOptions";
 import { toShuffled } from "src/utils/shuffle";
 import { createActions, formatQuestion } from "../../common";
-import { validOptions } from "./gameOptions";
 import { plausibleAnswerUnits } from "./plausibleAnswers";
 import { hook } from "./store";
 import type { ChoiceAnswer, ChoiceQuestion, GuessResult } from "./types";
 
-const { initializeGame, finishGame, setInvalidState, togglePause, calculateTime } = createActions(hook);
+const { initializeGame, finishGame, togglePause, calculateTime } = createActions(hook);
 export { calculateTime, togglePause };
 
 export function gameFromOptions(options: GameOptions) {
-    if (options === null || !validateOptions(options, validOptions)) {
-        setInvalidState();
-        return;
+    if (initializeGame(options)) {
+        const matchingUnits = units.filter((unit) => unit.type === options.unitType);
+        const filteredUnits = matchingUnits.filter((unit) => matchesFilters(unit, options.filters));
+        const questions = getQuestions(filteredUnits, matchingUnits, options);
+        hook.setState({
+            questions,
+            current: 0,
+            answered: 0,
+        });
     }
-    initializeGame(options);
-
-    const matchingUnits = units.filter((unit) => unit.type === options.unitType);
-    const filteredUnits = matchingUnits.filter((unit) => matchesFilters(unit, options.filters));
-    const questions = getQuestions(filteredUnits, matchingUnits, options);
-    hook.setState({
-        questions,
-        current: 0,
-        answered: 0,
-    });
 }
 
 /** Generates an array of questions about the provided administrative units. */

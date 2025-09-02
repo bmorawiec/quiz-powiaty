@@ -1,15 +1,22 @@
-import type { GameOptions } from "src/gameOptions";
+import { validateGameOptions, type GameOptions } from "src/gameOptions";
 import type { StoreApi, UseBoundStore } from "zustand";
 import type { GameStore } from "./types";
 
 export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
-    /** Unpauses the game and sets game options. */
-    function initializeGame(options: GameOptions) {
+    /** Unpauses the game.
+     *  Validates and then sets game options.
+     *  @returns true if the validation was successful. */
+    function initializeGame(options: GameOptions): boolean {
+        if (!validateGameOptions(options)) {
+            setInvalidState();
+            return false;
+        }
         hook.setState({
             state: "unpaused",
             timestamps: [Date.now()],
             options,
         });
+        return true;
     }
 
     function finishGame() {
