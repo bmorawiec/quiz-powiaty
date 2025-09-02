@@ -1,7 +1,8 @@
+import clsx from "clsx";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import type { Guessable, UnitType } from "src/data/common";
-import { type GameType, encodeGameURL } from "src/gameOptions";
+import { type GameOptions, type GameType, encodeGameURL, validateGameOptions } from "src/gameOptions";
 import {
     CarIcon,
     COAIcon,
@@ -14,6 +15,7 @@ import {
     SmallArrowRightIcon,
     TargetIcon,
 } from "src/ui";
+import { useAnimation } from "src/utils/useAnimation";
 
 export function ModePicker() {
     const navigate = useNavigate();
@@ -22,9 +24,11 @@ export function ModePicker() {
     const [guessFrom, setGuessFrom] = useState<Guessable>("name");
     const [unitType, setUnitType] = useState<UnitType>("county");
 
+    const [isInvalidAnim, startInvalidAnim] = useAnimation(450);
     const handlePlayClick = () => {
         const gameType: GameType = (guess === "map") ? "mapGame" : "choiceGame";
-        navigate(encodeGameURL({
+
+        const options: GameOptions = {
             gameType,
             unitType,
             guessFrom,
@@ -33,7 +37,12 @@ export function ModePicker() {
                 countyTypes: [],
                 voivodeships: [],
             },
-        }));
+        };
+        if (validateGameOptions(options)) {
+            navigate(encodeGameURL(options));
+        } else {
+            startInvalidAnim();
+        }
     };
 
     return (
@@ -91,7 +100,7 @@ export function ModePicker() {
                 primary
                 text="Zacznij grę"
                 iconRight={SmallArrowRightIcon}
-                className="mt-auto"
+                className={clsx("mt-auto", isInvalidAnim && "animate-shake")}
                 onClick={handlePlayClick}
             />
 
