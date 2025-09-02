@@ -12,7 +12,7 @@ export interface GameStore {
     options: GameOptions;
 }
 
-export type GameState = "unstarted" | "unpaused" | "paused" | "finished" | "invalid";
+export type GameState = "unstarted" | "unpaused" | "paused" | "finished";
 
 export interface Question {
     /** TERC id of the administrative unit this question is about. */

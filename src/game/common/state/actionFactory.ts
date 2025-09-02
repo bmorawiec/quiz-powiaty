@@ -1,22 +1,16 @@
-import { validateGameOptions, type GameOptions } from "src/gameOptions";
+import { type GameOptions } from "src/gameOptions";
 import type { StoreApi, UseBoundStore } from "zustand";
 import type { GameStore } from "./types";
 
 export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
-    /** Unpauses the game.
-     *  Validates and then sets game options.
-     *  @returns true if the validation was successful. */
-    function initializeGame(options: GameOptions): boolean {
-        if (!validateGameOptions(options)) {
-            setInvalidState();
-            return false;
-        }
+    /** Unpauses the game and sets game options.
+     *  Assumes that the game options have already been validated. */
+    function initializeGame(options: GameOptions) {
         hook.setState({
             state: "unpaused",
             timestamps: [Date.now()],
             options,
         });
-        return true;
     }
 
     function finishGame() {
@@ -27,17 +21,12 @@ export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
         });
     }
 
-    /** Sets the game state to "invalid" */
-    function setInvalidState() {
-        hook.setState({ state: "invalid" });
-    }
-
     /** Pauses the game if it's currently unpaused. Unpauses the game if it's currently paused.
-      * @throws if the game hasn't been started yet, if it has finished or if it is invalid. */
+      * @throws if the game hasn't been started yet or if it has finished. */
     function togglePause() {
         const game = hook.getState();
-        if (game.state === "unstarted" || game.state === "finished" || game.state === "invalid")
-            throw new Error("Cannot pause or unpause an unstarted, finished or invalid game.");
+        if (game.state === "unstarted" || game.state === "finished")
+            throw new Error("Cannot pause or unpause an unstarted or finished game.");
 
         const newState = (game.state === "paused") ? "unpaused" : "paused";
         const timestamp = Date.now();
@@ -48,11 +37,11 @@ export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
     }
 
     /** Calculates the time the game has been running for unpaused.
-      * @throws if the game hasn't been started yet, or if it is invalid. */
+      * @throws if the game hasn't been started yet. */
     function calculateTime(): number {
         const game = hook.getState();
-        if (game.state === "unstarted" || game.state === "invalid")
-            throw new Error("Cannot calculate the time for an unstarted or invalid game.");
+        if (game.state === "unstarted")
+            throw new Error("Cannot calculate the time for an unstarted game.");
 
         let time = 0;
         const timestamps = (game.state === "unpaused")
@@ -69,5 +58,5 @@ export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
         return time;
     }
 
-    return { initializeGame, finishGame, setInvalidState, togglePause, calculateTime };
+    return { initializeGame, finishGame, togglePause, calculateTime };
 }

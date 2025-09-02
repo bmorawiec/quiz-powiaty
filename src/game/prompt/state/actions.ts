@@ -10,16 +10,16 @@ const { initializeGame, finishGame, togglePause, calculateTime } = createActions
 export { calculateTime, togglePause };
 
 export function gameFromOptions(options: GameOptions) {
-    if (initializeGame(options)) {
-        const filteredUnits = units
-            .filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
-        const prompts = getPrompts(filteredUnits, options);
-        hook.setState({
-            prompts,
-            current: 0,
-            answered: 0,
-        });
-    }
+    initializeGame(options);
+
+    const filteredUnits = units
+        .filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
+    const prompts = getPrompts(filteredUnits, options);
+    hook.setState({
+        prompts,
+        current: 0,
+        answered: 0,
+    });
 }
 
 /** Generates an array of prompts about the provided administrative units. */
@@ -63,13 +63,13 @@ function getPromptAnswerStrings(unit: Unit, options: GameOptions): string[] {
 }
 
 /** Checks if the player's guess is correct. If it was, then proceeds to the next question.
- *  @throws if the game is unstarted, paused, finished or invalid
+ *  @throws if the game is unstarted, paused or finished
  *  @returns the result of this guess and, if the guess was incorrect and the required criteria were met,
  *  also returns a hint for the player. */
 export function guess(playersGuess: string): [GuessResult, string | null] {
     const game = hook.getState();
     if (game.state !== "unpaused")
-        throw new Error("Cannot perform this action while the game is unstarted, paused, finished or invalid.");
+        throw new Error("Cannot perform this action while the game is unstarted, paused or finished.");
 
     const result = getGuessResult(playersGuess);
     if (result === "wrong") {

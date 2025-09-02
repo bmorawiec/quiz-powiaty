@@ -11,16 +11,16 @@ const { initializeGame, finishGame, togglePause, calculateTime } = createActions
 export { calculateTime, togglePause };
 
 export function gameFromOptions(options: GameOptions) {
-    if (initializeGame(options)) {
-        const matchingUnits = units.filter((unit) => unit.type === options.unitType);
-        const filteredUnits = matchingUnits.filter((unit) => matchesFilters(unit, options.filters));
-        const questions = getQuestions(filteredUnits, matchingUnits, options);
-        hook.setState({
-            questions,
-            current: 0,
-            answered: 0,
-        });
-    }
+    initializeGame(options);
+
+    const matchingUnits = units.filter((unit) => unit.type === options.unitType);
+    const filteredUnits = matchingUnits.filter((unit) => matchesFilters(unit, options.filters));
+    const questions = getQuestions(filteredUnits, matchingUnits, options);
+    hook.setState({
+        questions,
+        current: 0,
+        answered: 0,
+    });
 }
 
 /** Generates an array of questions about the provided administrative units. */
@@ -91,11 +91,11 @@ function getAnswerText(unit: Unit, options: GameOptions): string {
 }
 
 /** Checks if the player's guess is correct. If it was, then proceeds to the next question.
- *  @throws if the game is unstarted, paused, finished or invalid */
+ *  @throws if the game is unstarted, paused or finished. */
 export function guess(answerId: string): GuessResult {
     const game = hook.getState();
     if (game.state !== "unpaused")
-        throw new Error("Cannot perform this action while the game is unstarted, paused, finished or invalid.");
+        throw new Error("Cannot perform this action while the game is unstarted, paused or finished.");
 
     const question = game.questions[game.current];
     const answer = question.answers.find((answer) => answer.id === answerId);

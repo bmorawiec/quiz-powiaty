@@ -19,7 +19,7 @@ export function PromptGame({ options }: GameProps) {
     const restartNeedsConfirmation = usePromptGameStore((game) => game.current > 0);
 
     const gameState = usePromptGameStore((game) => game.state);
-    if (gameState === "unstarted" || gameState === "invalid") {
+    if (gameState === "unstarted") {
         return null;
     }
 

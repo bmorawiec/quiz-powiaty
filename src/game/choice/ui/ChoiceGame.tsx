@@ -3,8 +3,8 @@ import { useNavigate } from "react-router";
 import { encodeGameURL, type GameOptions } from "src/gameOptions";
 import { useBreakpoints } from "src/ui";
 import { GameLayout, PausedView, Sidebar, type GameProps } from "../../common";
-import { FinishedView } from "./FinishedView";
 import { calculateTime, gameFromOptions, togglePause, useChoiceGameStore } from "../state";
+import { FinishedView } from "./FinishedView";
 import { View } from "./View";
 
 export function ChoiceGame({ options }: GameProps) {
@@ -19,7 +19,7 @@ export function ChoiceGame({ options }: GameProps) {
     const restartNeedsConfirmation = useChoiceGameStore((game) => game.current > 0);
 
     const gameState = useChoiceGameStore((game) => game.state);
-    if (gameState === "unstarted" || gameState === "invalid") {
+    if (gameState === "unstarted") {
         return null;
     }
 
