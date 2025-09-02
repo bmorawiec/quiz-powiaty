@@ -97,7 +97,7 @@ export function ModePicker() {
 
             <LargeLink
                 short
-                to="/quizy"
+                to="/gry"
                 text="Wszystkie tryby gry"
             />
         </div>

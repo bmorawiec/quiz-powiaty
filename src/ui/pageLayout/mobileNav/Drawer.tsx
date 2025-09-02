@@ -46,8 +46,8 @@ export function Drawer({ state, onClose }: DrawerProps) {
                 <CloseIcon/>
             </button>
 
-            <Destination label="Powiaty" where="/powiaty"/>
-            <Destination label="Województwa" where="/wojewodztwa"/>
+            <Destination label="Powiaty" where="/gry/powiaty"/>
+            <Destination label="Województwa" where="/gry/wojewodztwa"/>
             <Destination label="Statystyki" where="/statystyki"/>
             <Destination label="Nauka" where="/nauka" className="mb-[10px]"/>
 
