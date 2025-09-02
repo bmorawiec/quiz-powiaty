@@ -1,4 +1,5 @@
 import { UnitShapeNotFoundError } from "src/data/common";
+import { countryShapes } from "src/data/countryShapes";
 import { units } from "src/data/units";
 import { unitShapes } from "src/data/unitShapes";
 import { Border, Map } from "src/map";
@@ -36,6 +37,13 @@ export function BgMap() {
             }}
             className="absolute size-full"
         >
+            {countryShapes.map((shape) =>
+                <Border
+                    key={shape.id}
+                    shape={shape.outline}
+                />
+            )}
+
             {counties.map((county) =>
                 <BgFeature
                     key={county.id}
