@@ -119,10 +119,10 @@ export function guess(answerId: string): GuessResult {
         }
     } else {
         hook.setState({
-            questions: game.questions.map((prompt, index) => (index === game.current) ? {
-                ...prompt,
-                tries: prompt.tries + 1,        // if the provided answer was wrong, then increase the try counter
-            } : prompt),
+            questions: game.questions.map((question, index) => (index === game.current) ? {
+                ...question,
+                tries: question.tries + 1,        // if the provided answer was wrong, then increase the try counter
+            } : question),
         });
     }
 
