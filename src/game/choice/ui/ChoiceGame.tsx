@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useNavigate } from "react-router";
 import { encodeGameURL, type GameOptions } from "src/gameOptions";
 import { useBreakpoints } from "src/ui";
 import { GameLayout, PausedView, Sidebar, type GameProps } from "../../common";
-import { calculateTime, gameFromOptions, togglePause, useChoiceGameStore } from "../state";
+import { calculateTime, gameFromOptions, resetGame, togglePause, useChoiceGameStore } from "../state";
 import { FinishedView } from "./FinishedView";
 import { View } from "./View";
 
@@ -11,8 +11,11 @@ export function ChoiceGame({ options }: GameProps) {
     const navigate = useNavigate();
     const layout = useBreakpoints();
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         gameFromOptions(options);
+        return () => {
+            resetGame();
+        };
     }, [options]);
 
     // Whether or not the user should confirm game restarts.

@@ -3,13 +3,37 @@ import type { StoreApi, UseBoundStore } from "zustand";
 import type { GameStore } from "./types";
 
 export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
-    /** Unpauses the game and sets game options.
-     *  Assumes that the game options have already been validated. */
-    function initializeGame(options: GameOptions) {
+    /** Sets game options.
+     *  Assumes that the game options have already been validated.
+     *  @throws if the game has been started. */
+    function setOptions(options: GameOptions) {
+        const game = hook.getState();
+        if (game.state !== "unstarted")
+            throw new Error("This action may only be performed when the game is unstarted.");
+
+        hook.setState({
+            options,
+        });
+    }
+
+    /** Used to unpause the game for the first time.
+     *  @throws if the game has been started. */
+    function startGame() {
+        const game = hook.getState();
+        if (game.state !== "unstarted")
+            throw new Error("This action may only be performed when the game is unstarted.");
+
         hook.setState({
             state: "unpaused",
             timestamps: [Date.now()],
-            options,
+        });
+    }
+
+    /** Resets the game to the "unstarted" state. */
+    function resetGame() {
+        hook.setState({
+            state: "unstarted",
+            timestamps: [],
         });
     }
 
@@ -58,5 +82,5 @@ export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
         return time;
     }
 
-    return { initializeGame, finishGame, togglePause, calculateTime };
+    return { setOptions, startGame, resetGame, finishGame, togglePause, calculateTime };
 }

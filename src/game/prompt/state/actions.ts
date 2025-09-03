@@ -6,11 +6,12 @@ import { createActions, formatQuestion } from "../../common";
 import { hook } from "./store";
 import type { GuessResult, PromptAnswer, PromptQuestion } from "./types";
 
-const { initializeGame, finishGame, togglePause, calculateTime } = createActions(hook);
-export { calculateTime, togglePause };
+const { setOptions, startGame, resetGame, finishGame, togglePause, calculateTime } = createActions(hook);
+export { resetGame, calculateTime, togglePause };
 
 export function gameFromOptions(options: GameOptions) {
-    initializeGame(options);
+    setOptions(options);
+    startGame();
 
     const filteredUnits = units
         .filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));

@@ -7,11 +7,12 @@ import { plausibleAnswerUnits } from "./plausibleAnswers";
 import { hook } from "./store";
 import type { ChoiceAnswer, ChoiceQuestion, GuessResult } from "./types";
 
-const { initializeGame, finishGame, togglePause, calculateTime } = createActions(hook);
-export { calculateTime, togglePause };
+const { setOptions, startGame, resetGame, finishGame, togglePause, calculateTime } = createActions(hook);
+export { resetGame, calculateTime, togglePause };
 
 export function gameFromOptions(options: GameOptions) {
-    initializeGame(options);
+    setOptions(options);
+    startGame();
 
     const matchingUnits = units.filter((unit) => unit.type === options.unitType);
     const filteredUnits = matchingUnits.filter((unit) => matchesFilters(unit, options.filters));
