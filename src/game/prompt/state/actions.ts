@@ -2,7 +2,7 @@ import type { Unit } from "src/data/common";
 import { units } from "src/data/units";
 import { InvalidGameOptionsError, matchesFilters, type GameOptions } from "src/gameOptions";
 import { toShuffled } from "src/utils/shuffle";
-import { createActions, formatQuestion } from "../../common";
+import { createActions, formatQuestion, getTextHint } from "../../common";
 import { hook } from "./store";
 import type { GuessResult, PromptAnswer, PromptQuestion } from "./types";
 
@@ -68,7 +68,7 @@ function getPromptAnswerStrings(unit: Unit, options: GameOptions): string[] {
  *  @returns the result of this guess and, if the guess was incorrect and the required criteria were met,
  *  also returns a hint for the player. */
 export function guess(playersGuess: string): [GuessResult, string | null] {
-    const game = hook.getState();
+    let game = hook.getState();
     if (game.state !== "unpaused")
         throw new Error("Cannot perform this action while the game is unstarted, paused or finished.");
 
@@ -80,7 +80,11 @@ export function guess(playersGuess: string): [GuessResult, string | null] {
                 tries: prompt.tries + 1,        // if the provided answer was wrong, then increase the try counter
             } : prompt),
         });
-        const hint = getHint();
+
+        game = hook.getState();         // game state has changed
+        const currentPrompt = game.prompts[game.current];
+        const hint = getTextHint(currentPrompt, game.options);
+
         return [result, hint];  // early return with hint
     }
 
@@ -116,57 +120,6 @@ export function guess(playersGuess: string): [GuessResult, string | null] {
         }
     }
     return [result, null];
-}
-
-const TRIES_FOR_HINT = 1;
-const TRIES_FOR_FULL_HINT = 6;
-
-/** Returns a hint for the current prompt,
- *  if the player has exceeded the minimum number of incorrect guesses for a hint.
- *  Otherwise returns null. */
-function getHint(): string | null {
-    const game = hook.getState();
-    const prompt = game.prompts[game.current];
-
-    if (prompt.tries < TRIES_FOR_HINT) {
-        return null;
-    }
-    if (prompt.tries >= TRIES_FOR_FULL_HINT) {
-        return prompt.answers
-            .map((answer) => answer.text)
-            .join(", ");
-    }
-
-    const noOfLetters = prompt.tries - TRIES_FOR_HINT + 1;      // how many letters to uncover
-    if (game.options.guess === "plate") {
-        return prompt.answers
-            .map((answer) => {
-                if (noOfLetters > answer.text.length) {
-                    return answer.text;
-                }
-                const uncoveredLetters = answer.text.slice(0, noOfLetters);
-                return uncoveredLetters.padEnd(answer.text.length, "*");
-            })
-            .join(", ");
-    } else if (game.options.guess === "name" || game.options.guess === "capital") {
-        return prompt.answers
-            .map((answer) => {
-                let hint = "";
-                for (let index = 0; index < answer.text.length; index++) {
-                    const char = answer.text[index];
-                    if (char === " " || char === "-") {
-                        hint += char;
-                    } else if (index < noOfLetters || index >= answer.text.length - noOfLetters) {
-                        hint += char;
-                    } else {
-                        hint += "*";
-                    }
-                }
-                return hint;
-            })
-            .join(", ");
-    }
-    return null;
 }
 
 /** Returns a guess result based on the player's answer to the current prompt. */
