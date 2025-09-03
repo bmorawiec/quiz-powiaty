@@ -14,9 +14,9 @@ export function OptionsPanel({ children }: OptionsPanelProps) {
     };
 
     return (
-        <div className="flex flex-col border-t border-gray-15 dark:border-gray-80 mt-auto pb-[5px]">
+        <div className="flex flex-col border-t border-gray-15 dark:border-gray-80 mt-auto">
             <button
-                className="m-[10px] mb-[5px] h-[60px] flex items-center justify-between px-[20px] cursor-pointer
+                className="m-[10px] h-[60px] flex items-center justify-between px-[20px] cursor-pointer
                     rounded-[10px] transition-colors duration-80 focus-ring
                     hover:bg-gray-5 active:bg-gray-10 dark:hover:bg-gray-90 dark:active:bg-gray-85"
                 onClick={handleHeaderClick}

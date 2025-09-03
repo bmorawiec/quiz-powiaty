@@ -8,4 +8,5 @@ export * from "./largeDropdown";
 export * from "./LargeLink";
 export * from "./Logo";
 export * from "./pageLayout";
+export * from "./RadioButton";
 

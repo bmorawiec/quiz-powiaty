@@ -1,11 +1,12 @@
 import { useRef, useState } from "react";
-import { FilterDialog, Filters, type GameOptions, type UnitFilters } from "src/gameOptions";
+import { FilterDialog, Filters, type GameOptions, type GameType, type UnitFilters } from "src/gameOptions";
 import { PauseIcon, PlayIcon, RestartIcon } from "src/ui";
 import type { GameState } from "../../state";
 import { ConfirmRestartDialog } from "./ConfirmRestartDialog";
 import { ControlButton } from "./ControlButton";
 import { OptionsPanel } from "./OptionsPanel";
 import { Timer } from "./Timer";
+import { OtherGameTypesProps } from "./OtherGameTypes";
 
 export interface SidebarProps {
     gameState: GameState;
@@ -40,6 +41,8 @@ export function Sidebar({
         }
     };
 
+    // restart dialog
+
     const handleConfirmRestart = () => {
         onGameRestart(newOptions.current!);
         newOptions.current = null;
@@ -51,9 +54,13 @@ export function Sidebar({
         setShowConfirmDialog(false);
     };
 
+    // restart button
+
     const handleRestartClick = () => {
         queueRestart(options);
     };
+
+    // filter dialog
 
     const handleExpandFilters = () => {
         setShowFilterDialog(true);
@@ -71,6 +78,15 @@ export function Sidebar({
 
     const handleCancelFilters = () => {
         setShowFilterDialog(false);
+    };
+
+    // game type picker
+
+    const handleGameTypeChange = (newGameType: GameType) => {
+        queueRestart({
+            ...options,
+            gameType: newGameType,
+        });
     };
 
     return (
@@ -95,9 +111,15 @@ export function Sidebar({
             </div>
 
             <OptionsPanel>
+                <OtherGameTypesProps
+                    options={options}
+                    onGameTypeChange={handleGameTypeChange}
+                />
+
                 <Filters
                     filters={options.filters}
                     onExpand={handleExpandFilters}
+                    className="mb-[3px]"
                 />
             </OptionsPanel>
 

@@ -17,6 +17,8 @@ export * from "./PauseIcon";
 export * from "./PlaceNameIcon";
 export * from "./PlayIcon";
 export * from "./props";
+export * from "./RadioCheckedIcon";
+export * from "./RadioIcon";
 export * from "./RestartIcon";
 export * from "./SendIcon";
 export * from "./SmallArrowLeftIcon";
