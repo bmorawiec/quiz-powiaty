@@ -2,12 +2,11 @@ import { useLayoutEffect } from "react";
 import { useNavigate } from "react-router";
 import { encodeGameURL, type GameOptions } from "src/gameOptions";
 import { useBreakpoints } from "src/ui";
-import { GameLayout, PausedView, Sidebar, type GameProps } from "../../common";
-import { calculateTime, gameFromOptions, resetGame, togglePause, useChoiceGameStore } from "../state";
-import { FinishedView } from "./FinishedView";
-import { View } from "./View";
+import { GameLayout, type GameProps, PausedView, Sidebar } from "../common";
+import { calculateTime, gameFromOptions, resetGame, togglePause, usePromptGameStore } from "./state";
+import { FinishedView, View } from "./ui";
 
-export function ChoiceGame({ options }: GameProps) {
+export function PromptGame({ options }: GameProps) {
     const navigate = useNavigate();
     const layout = useBreakpoints();
 
@@ -19,12 +18,18 @@ export function ChoiceGame({ options }: GameProps) {
     }, [options]);
 
     // Whether or not the user should confirm game restarts.
-    const restartNeedsConfirmation = useChoiceGameStore((game) => game.current > 0);
+    const restartNeedsConfirmation = usePromptGameStore((game) => game.current > 0);
 
-    const gameState = useChoiceGameStore((game) => game.state);
+    const gameState = usePromptGameStore((game) => game.state);
     if (gameState === "unstarted") {
         return null;
     }
+
+    const handleTogglePause = () => {
+        if (gameState !== "finished") {
+            togglePause();
+        }
+    };
 
     const handleGameRestart = (newOptions?: GameOptions) => {
         const newURL = encodeGameURL(newOptions || options);
@@ -41,14 +46,14 @@ export function ChoiceGame({ options }: GameProps) {
                     onRestart={handleGameRestart}
                 />
             ) : (
-                <View/>
+                <View options={options}/>
             )}
 
             {(layout === "md" || layout === "lg" || layout === "xl") && (
                 <Sidebar
                     gameState={gameState}
                     calculateTime={calculateTime}
-                    onTogglePause={togglePause}
+                    onTogglePause={handleTogglePause}
                     options={options}
                     restartNeedsConfirmation={restartNeedsConfirmation}
                     onGameRestart={handleGameRestart}
@@ -57,4 +62,3 @@ export function ChoiceGame({ options }: GameProps) {
         </GameLayout>
     );
 }
-

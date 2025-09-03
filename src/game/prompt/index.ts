@@ -1,2 +1,2 @@
-import { PromptGame } from "./ui/PromptGame";
+import { PromptGame } from "./PromptGame";
 export default PromptGame;
