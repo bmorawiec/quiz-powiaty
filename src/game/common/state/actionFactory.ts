@@ -37,8 +37,13 @@ export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
         });
     }
 
+    /** Sets the state of the game to "finished".
+     *  @throws if the game hasn't been started or if it has finished. */
     function finishGame() {
         const game = hook.getState();
+        if (game.state === "unstarted" || game.state === "finished")
+            throw new Error("This action may only be performed after the game is started and before it is finished.");
+
         hook.setState({
             state: "finished",
             timestamps: [...game.timestamps, Date.now()],
