@@ -1,8 +1,9 @@
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import type { GameOptions } from "src/gameOptions";
-import { useTypingGameStore } from "../state";
-import { Card } from "./card";
 import { focusNextInput } from "src/utils/focusNextInput";
+import { useTypingGameStore } from "../state";
+import { CardList } from "./CardList";
+import { ImageCardList } from "./ImageCardList";
 
 export interface ViewProps {
     options: GameOptions;
@@ -10,20 +11,6 @@ export interface ViewProps {
 
 export function View({ options }: ViewProps) {
     const title = useTypingGameStore((state) => state.title);
-
-    const total = useTypingGameStore((state) => state.questions.length);
-    const [firstHalf, secondHalf] = useMemo(() => {
-        const firstHalfLength = Math.ceil(total / 2);
-        const firstHalf = [];
-        for (let index = 0; index < firstHalfLength; index++) {
-            firstHalf.push(index);
-        }
-        const secondHalf = [];
-        for (let index = firstHalfLength; index < total; index++) {
-            secondHalf.push(index);
-        }
-        return [firstHalf, secondHalf];
-    }, [total]);
 
     useEffect(() => {
         focusNextInput();       // focus first input that can be focused
@@ -39,28 +26,11 @@ export function View({ options }: ViewProps) {
                 {title}
             </h2>
 
-            <div className="w-full max-w-[1000px] grid grid-cols-2 gap-[50px] max-md:flex max-md:gap-[10px]
-                max-md:flex-col">
-                <div className="flex flex-col gap-[10px]">
-                    {firstHalf.map((index) =>
-                        <Card
-                            key={index}
-                            questionIndex={index}
-                            textTransform={textTransform}
-                        />
-                    )}
-                </div>
-
-                <div className="flex flex-col gap-[10px]">
-                    {secondHalf.map((index) =>
-                        <Card
-                            key={index}
-                            questionIndex={index}
-                            textTransform={textTransform}
-                        />
-                    )}
-                </div>
-            </div>
+            {(options.guessFrom === "flag" || options.guessFrom === "coa") ? (
+                <ImageCardList textTransform={textTransform}/>
+            ) : (
+                <CardList textTransform={textTransform}/>
+            )}
         </div>
     );
 }
