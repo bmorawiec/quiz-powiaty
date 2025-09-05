@@ -35,7 +35,7 @@ export function Card({ questionIndex, textTransform }: CardProps) {
     };
 
     return (<>
-        <div className="bg-white rounded-[15px] p-[10px] grid grid-cols-2">
+        <div className="bg-white dark:bg-gray-90 rounded-[15px] p-[10px] grid grid-cols-2">
             <p className="text-[14px] tracking-[0.01em] ml-[6px] mt-[6px] mr-[10px]">
                 {question.text}
             </p>

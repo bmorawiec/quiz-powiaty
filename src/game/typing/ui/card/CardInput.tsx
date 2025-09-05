@@ -39,7 +39,7 @@ export function CardInput({ textTransform, slotIndex, className, onGuess }: Card
             <input
                 ref={input}
                 type="text"
-                className={clsx("size-full border border-gray-20 rounded-[6px] focus-ring pl-[6px]",
+                className={clsx("size-full border border-gray-20 dark:border-gray-65 rounded-[6px] focus-ring pl-[6px]",
                     "text-[14px] peer", textTransform)}
                 onKeyDown={handleInputKeyDown}
             />
