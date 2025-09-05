@@ -147,9 +147,9 @@ body {
 }
 
 @keyframes blink {
-    0% { visibility: hidden; }
-    49% { visibility: hidden; }
-    50% { visibility: visible; }
+    0% { opacity: 45%; }
+    49% { opacity: 45%; }
+    50% { opacity: 100%; }
 }
 
 @keyframes shake {
