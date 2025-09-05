@@ -4,6 +4,7 @@ import { createActions, formatTitle, getQuestionText, getTextHint } from "src/ga
 import { type GameOptions, InvalidGameOptionsError, matchesFilters } from "src/gameOptions";
 import { hook } from "./store";
 import type { GuessResult, TypingAnswer, TypingQuestion } from "./types";
+import { toShuffled } from "src/utils/shuffle";
 
 const { setOptions, startGame, resetGame, finishGame, togglePause, calculateTime } = createActions(hook);
 export { calculateTime, resetGame, togglePause };
@@ -24,7 +25,7 @@ export function gameFromOptions(options: GameOptions) {
 
 /** Generates an array of questions about the provided administrative units. */
 function getQuestions(units: Unit[], options: GameOptions): TypingQuestion[] {
-    return units.map((unit) => {
+    const questions = units.map((unit) => {
         const question: TypingQuestion = {
             id: unit.id,
             text: getQuestionText(unit, options),
@@ -39,6 +40,12 @@ function getQuestions(units: Unit[], options: GameOptions): TypingQuestion[] {
         }
         return question;
     });
+    if (options.guessFrom === "flag" || options.guessFrom === "coa") {
+        return toShuffled(questions);   // scramble questions so that you can't guess based on alphabetical order
+    } else {
+        // if guessing based on text, then the questions should be ordered alphabetically
+        return questions.sort((a, b) => a.text!.localeCompare(b.text!));        // using sort with side effects
+    }
 }
 
 function getQuestionAnswers(unit: Unit, options: GameOptions): TypingAnswer[] {
