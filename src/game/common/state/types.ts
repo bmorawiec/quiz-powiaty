@@ -26,7 +26,7 @@ export interface Question {
 }
 
 export interface Answer {
-    /** TERC id of the administrative unit this answer is about. */
+    /** TERC id of the administrative unit this answer is about. MAY NOT BE UNIQUE. */
     id: string;
     text?: string;
     /** URL of image to be shown when this answer is presented. */

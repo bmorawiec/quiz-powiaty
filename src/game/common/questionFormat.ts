@@ -58,3 +58,52 @@ export function formatQuestion(unit: Unit, { unitType, guessFrom, guess }: GameO
     }
     return str;
 }
+
+export function formatTitle({ guess, guessFrom, unitType }: GameOptions): string {
+    let str = "";
+    if (guess === "name") {
+        str += "Jak się nazywają ";
+    } else if (guess === "capital") {
+        str += "Jakie stolice mają ";
+    } else if (guess === "plate") {
+        str += "Jakie rejestracje mają ";
+    } else if (guess === "flag") {
+        str += "Jakie flagi mają ";
+    } else if (guess === "coa") {
+        str += "Jakie rejestracje mają ";
+    } else if (guess === "map") {
+        str += "Gdzie leżą ";
+    }
+    if (guessFrom === "name" || guessFrom === "map") {
+        str += (unitType === "voivodeship") ? "te województwa?" : "te powiaty?";
+    } else {
+        str += (unitType === "voivodeship") ? "województwa " : "powiaty ";
+        if (guessFrom === "capital") {
+            str += "z tymi stolicami?";
+        } else if (guessFrom === "plate") {
+            str += "z tymi rejestracjami?";
+        } else if (guessFrom === "flag") {
+            str += "z tymi flagami?";
+        } else if (guessFrom === "coa") {
+            str += "z tymi herbami?";
+        }
+    }
+    return str;
+}
+
+export function getQuestionText(unit: Unit, { guessFrom }: GameOptions): string | undefined {
+    if (guessFrom === "name") {
+        const prefix = (unit.type === "voivodeship")
+            ? "województwo "
+            : (unit.countyType === "city") ? "miasto " : "powiat ";
+        return prefix + unit.name;
+    } else if (guessFrom === "capital") {
+        const suffix = (unit.countyType === "city")
+            ? " (miasto)"
+            : "";
+        return unit.capitals.join(", ") + suffix;
+    } else if (guessFrom === "plate") {
+        return unit.plates.join(", ");
+    }
+    return undefined;
+}
