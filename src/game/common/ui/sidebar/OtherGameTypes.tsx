@@ -28,6 +28,7 @@ export function OtherGameTypesProps({ options, onGameTypeChange }: OtherGameType
 
                 return (
                     <RadioButton
+                        key={gameType}
                         checked={gameType === options.gameType}
                         label={gameTypeNames[gameType]}
                         onClick={handleRadioClick}
