@@ -5,6 +5,7 @@ html, body, #root {
 }
 
 body {
+    overflow-x: hidden;
     user-select: none;
 }
 
