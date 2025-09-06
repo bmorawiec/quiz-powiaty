@@ -14,7 +14,8 @@ export function DialogRoot({ onScrimPointerDown, children }: DialogRootProps) {
 
     return (
         <div
-            className="fixed left-0 top-0 size-full bg-black/20 dark:bg-black/40 flex items-center justify-center"
+            className="fixed left-0 top-0 size-full bg-black/20 dark:bg-black/40 flex items-center justify-center
+                px-[20px]"
             onPointerDown={handlePointerDown}
         >
             {children}
