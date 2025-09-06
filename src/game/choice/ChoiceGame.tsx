@@ -1,14 +1,12 @@
 import { useLayoutEffect } from "react";
 import { useNavigate } from "react-router";
 import { encodeGameURL, type GameOptions } from "src/gameOptions";
-import { useBreakpoints } from "src/ui";
-import { GameLayout, PausedView, Sidebar, type GameProps } from "../common";
+import { GameLayout, PausedView, Sidebar, SidebarContent, type GameProps } from "../common";
 import { calculateTime, gameFromOptions, resetGame, togglePause, useChoiceGameStore } from "./state";
 import { FinishedView, View } from "./ui";
 
 export function ChoiceGame({ options }: GameProps) {
     const navigate = useNavigate();
-    const layout = useBreakpoints();
 
     useLayoutEffect(() => {
         gameFromOptions(options);
@@ -43,8 +41,8 @@ export function ChoiceGame({ options }: GameProps) {
                 <View/>
             )}
 
-            {(layout === "md" || layout === "lg" || layout === "xl") && (
-                <Sidebar
+            <Sidebar>
+                <SidebarContent
                     gameState={gameState}
                     calculateTime={calculateTime}
                     onTogglePause={togglePause}
@@ -52,7 +50,7 @@ export function ChoiceGame({ options }: GameProps) {
                     restartNeedsConfirmation={restartNeedsConfirmation}
                     onGameRestart={handleGameRestart}
                 />
-            )}
+            </Sidebar>
         </GameLayout>
     );
 }

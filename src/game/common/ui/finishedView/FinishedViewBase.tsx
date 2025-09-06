@@ -10,11 +10,10 @@ import type { GameOptions } from "src/gameOptions";
 export interface FinishedViewBaseProps {
     options: GameOptions;
     questions: Question[];
-    time: number;
     onRestart: () => void;
 }
 
-export function FinishedViewBase({ options, questions, time, onRestart }: FinishedViewBaseProps) {
+export function FinishedViewBase({ options, questions, onRestart }: FinishedViewBaseProps) {
     const [points, maxPoints, percent, guessDistribution] = useMemo(() => {
         let pointSum = 0;
         const guessDistribution: [number, number, number, number] = [0, 0, 0, 0];
@@ -34,7 +33,7 @@ export function FinishedViewBase({ options, questions, time, onRestart }: Finish
     return (
         <div className="flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col min-h-0">
             <div className="flex-1 overflow-y-auto pt-[58px] flex flex-col items-center">
-                <div className="w-full max-w-[740px] flex flex-col gap-[22px] px-[20px]">
+                <div className="w-full max-w-[740px] flex flex-col gap-[22px] px-[20px] pb-[50px]">
                     <h2 className="text-[30px] text-gray-90 dark:text-gray-15 self-center">
                         Twój wynik
                     </h2>
@@ -47,7 +46,6 @@ export function FinishedViewBase({ options, questions, time, onRestart }: Finish
 
                     <GameModeCard
                         options={options}
-                        time={time}
                     />
 
                     <GuessDistribution
@@ -62,7 +60,7 @@ export function FinishedViewBase({ options, questions, time, onRestart }: Finish
 
             <div className="border-t border-gray-15">
                 <div className="mx-auto w-full max-w-[740px] px-[20px] self-center grid xs:grid-cols-2
-                    max-xs:grid-rows-2 gap-[10px] pb-[30px] pt-[25px]">
+                    max-xs:grid-rows-2 gap-[10px] pb-[30px] max-sm:pb-[110px] pt-[25px]">
                     <LargeButton
                         primary
                         text="Zagraj od nowa"

@@ -1,7 +1,6 @@
-import { useMemo } from "react";
 import type { GameOptions } from "src/gameOptions";
 import { FinishedViewBase } from "../../common";
-import { calculateTime, useChoiceGameStore } from "../state";
+import { useChoiceGameStore } from "../state";
 
 export interface FinishedViewProps {
     options: GameOptions;
@@ -10,13 +9,11 @@ export interface FinishedViewProps {
 
 export function FinishedView({ options, onRestart }: FinishedViewProps) {
     const questions = useChoiceGameStore((state) => state.questions);
-    const time = useMemo(() => calculateTime(), []);
 
     return (
         <FinishedViewBase
             options={options}
             questions={questions}
-            time={time}
             onRestart={onRestart}
         />
     );
