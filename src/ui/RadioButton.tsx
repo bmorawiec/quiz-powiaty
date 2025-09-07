@@ -12,7 +12,7 @@ export function RadioButton({ checked, label, className, onClick }: RadioButtonP
     return (
         <button
             className={clsx("flex items-center px-[12px] h-[36px] gap-[8px] cursor-pointer",
-                "rounded-[10px] transition-colors duration-20",
+                "rounded-[10px] transition-colors duration-20 focus-ring",
                 "hover:bg-gray-5 active:bg-gray-10 dark:hover:bg-gray-90 dark:active:bg-gray-85", className)}
             onClick={onClick && (() => onClick())}
         >
