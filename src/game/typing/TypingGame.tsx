@@ -19,7 +19,7 @@ export function TypingGame({ options }: GameProps) {
     const restartNeedsConfirmation = useTypingGameStore((game) => game.answered > 0);
 
     const gameState = useTypingGameStore((game) => game.state);
-    if (gameState === "unstarted") {
+    if (gameState === "unstarted" || gameState === "starting") {
         return null;
     }
 

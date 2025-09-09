@@ -7,12 +7,12 @@ export interface GameStore {
      *  When the game is...
      *   - paused or finished, the array should contain an even amount of entries.
      *   - unpaused, the array should contain an odd amount of entries.
-     *   - unstarted, the array should be empty. */
+     *   - unstarted or starting, the array should be empty. */
     timestamps: number[];
     options: GameOptions;
 }
 
-export type GameState = "unstarted" | "unpaused" | "paused" | "finished";
+export type GameState = "unstarted" | "starting" | "unpaused" | "paused" | "finished";
 
 export interface Question {
     /** TERC id of the administrative unit this question is about. */

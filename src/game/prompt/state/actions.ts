@@ -1,22 +1,44 @@
 import type { Unit } from "src/data/common";
 import { units } from "src/data/units";
 import { InvalidGameOptionsError, matchesFilters, type GameOptions } from "src/gameOptions";
+import { preloadImage } from "src/utils/preloadImage";
 import { toShuffled } from "src/utils/shuffle";
 import { createActions, formatQuestion, getTextHint } from "../../common";
 import { hook } from "./store";
 import type { GuessResult, PromptAnswer, PromptQuestion } from "./types";
 
-const { setOptions, startGame, resetGame, finishGame, togglePause, calculateTime } = createActions(hook);
-export { resetGame, calculateTime, togglePause };
+const { resetGame, finishGame, togglePause, calculateTime } = createActions(hook);
+export { calculateTime, resetGame, togglePause };
 
-export function gameFromOptions(options: GameOptions) {
-    setOptions(options);
-    startGame();
+export async function gameFromOptions(options: GameOptions) {
+    let game = hook.getState();
+    if (game.state !== "unstarted") {
+        throw new Error("The game hasn't been reset properly before being started.");
+    }
+
+    hook.setState({
+        state: "starting",
+    });
 
     const filteredUnits = units
         .filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
     const prompts = getPrompts(filteredUnits, options);
+    if (options.guessFrom === "flag" || options.guessFrom === "coa") {
+        const firstTwoPrompts = prompts.slice(0, 2);
+        // preload flags/COAs for the first two prompts
+        await Promise.all(firstTwoPrompts.map((prompt) => preloadImage(prompt.imageURL!)));
+    }
+
+    game = hook.getState();
+    // the player has reset the game before it fully started
+    if (game.state === "unstarted") {
+        return;
+    }
+
     hook.setState({
+        state: "unpaused",
+        timestamps: [Date.now()],
+        options,
         prompts,
         current: 0,
         answered: 0,
@@ -64,7 +86,7 @@ function getPromptAnswerStrings(unit: Unit, options: GameOptions): string[] {
 }
 
 /** Checks if the player's guess is correct. If it was, then proceeds to the next question.
- *  @throws if the game is unstarted, paused or finished
+ *  @throws if the game is unstarted, starting, paused or finished
  *  @returns the result of this guess and, if the guess was incorrect and the required criteria were met,
  *  also returns a hint for the player. */
 export function guess(playersGuess: string): [GuessResult, string | null] {
@@ -114,6 +136,11 @@ export function guess(playersGuess: string): [GuessResult, string | null] {
 
             if (game.answered + 1 === game.prompts.length) {
                 finishGame();       // finish game if all prompts have been answered
+            } else if (game.options.guessFrom === "flag" || game.options.guessFrom === "coa") {
+                if (game.current + 2 < game.prompts.length) {
+                    const nextNextQuestion = game.prompts[game.current + 2];
+                    preloadImage(nextNextQuestion.imageURL!);       // preload image for soon-to-be next prompt
+                }
             }
         } else {
             hook.setState({ prompts: newPrompts });

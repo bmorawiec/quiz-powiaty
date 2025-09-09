@@ -19,7 +19,7 @@ export function ChoiceGame({ options }: GameProps) {
     const restartNeedsConfirmation = useChoiceGameStore((game) => game.current > 0);
 
     const gameState = useChoiceGameStore((game) => game.state);
-    if (gameState === "unstarted") {
+    if (gameState === "unstarted" || gameState === "starting") {
         return null;
     }
 

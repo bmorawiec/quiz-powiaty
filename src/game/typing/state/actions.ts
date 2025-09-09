@@ -2,21 +2,42 @@ import type { Unit } from "src/data/common";
 import { units } from "src/data/units";
 import { createActions, formatTitle, getQuestionText, getTextHint } from "src/game/common";
 import { type GameOptions, InvalidGameOptionsError, matchesFilters } from "src/gameOptions";
+import { preloadImage } from "src/utils/preloadImage";
+import { toShuffled } from "src/utils/shuffle";
 import { hook } from "./store";
 import type { GuessResult, TypingAnswer, TypingQuestion } from "./types";
-import { toShuffled } from "src/utils/shuffle";
 
-const { setOptions, startGame, resetGame, finishGame, togglePause, calculateTime } = createActions(hook);
+const { resetGame, finishGame, togglePause, calculateTime } = createActions(hook);
 export { calculateTime, resetGame, togglePause };
 
-export function gameFromOptions(options: GameOptions) {
-    setOptions(options);
-    startGame();
+export async function gameFromOptions(options: GameOptions) {
+    let game = hook.getState();
+    if (game.state !== "unstarted") {
+        throw new Error("The game hasn't been reset properly before being started.");
+    }
+
+    hook.setState({
+        state: "starting",
+    });
 
     const filteredUnits = units
         .filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
     const questions = getQuestions(filteredUnits, options);
+    if (options.guessFrom === "flag" || options.guessFrom === "coa") {
+        // preload all flags/COAs
+        await Promise.all(questions.map((question) => preloadImage(question.imageURL!)));
+    }
+
+    game = hook.getState();
+    // the player has reset the game before it fully started
+    if (game.state === "unstarted") {
+        return;
+    }
+
     hook.setState({
+        state: "unpaused",
+        timestamps: [Date.now()],
+        options,
         title: formatTitle(options),
         questions,
         answered: 0,
@@ -70,7 +91,7 @@ function getQuestionAnswerStrings(unit: Unit, options: GameOptions): string[] {
 }
 
 /** Checks if the player's guess is correct.
- *  @throws if the game is unstarted, paused or finished
+ *  @throws if the game is unstarted, starting, paused or finished
  *  @returns the result of this guess and, if the guess was incorrect and the required criteria were met,
  *  also returns a hint for the player. */
 export function guess(questionId: string, playersGuess: string, slotIndex: number): [GuessResult, string | null] {
