@@ -23,6 +23,12 @@ export function ChoiceGame({ options }: GameProps) {
         return null;
     }
 
+    const handleTogglePause = () => {
+        if (gameState !== "finished") {
+            togglePause();
+        }
+    };
+
     const handleGameRestart = (newOptions?: GameOptions) => {
         const newURL = encodeGameURL(newOptions || options);
         navigate(newURL);
@@ -45,7 +51,7 @@ export function ChoiceGame({ options }: GameProps) {
                 <SidebarContent
                     gameState={gameState}
                     calculateTime={calculateTime}
-                    onTogglePause={togglePause}
+                    onTogglePause={handleTogglePause}
                     options={options}
                     restartNeedsConfirmation={restartNeedsConfirmation}
                     onGameRestart={handleGameRestart}
