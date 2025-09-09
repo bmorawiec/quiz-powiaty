@@ -2,10 +2,10 @@ import { lazy } from "react";
 import { useSearchParams } from "react-router";
 import { decodeGameURL, validateGameOptions } from "src/gameOptions";
 import { GameError } from "./common/ui/GameError";
-import TypingGame from "./typing";
 
 const ChoiceGame = lazy(() => import("./choice"));
 const PromptGame = lazy(() => import("./prompt"));
+const TypingGame = lazy(() => import("./typing"));
 
 export function Game() {
     const [searchParams] = useSearchParams();
