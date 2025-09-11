@@ -1,12 +1,14 @@
-import { useMemo } from "react";
-import { useTypingGameStore } from "../state";
+import { useContext, useMemo } from "react";
 import { Card } from "./card";
+import { TypingGameStoreContext } from "../storeContext";
 
 export interface CardListProps {
     textTransform?: "uppercase" | "capitalize";
 }
 
 export function CardList({ textTransform }: CardListProps) {
+    const useTypingGameStore = useContext(TypingGameStoreContext);
+
     const total = useTypingGameStore((state) => state.questions.length);
     const [firstHalf, secondHalf] = useMemo(() => {
         const firstHalfLength = Math.ceil(total / 2);

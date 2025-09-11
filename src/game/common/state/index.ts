@@ -1,4 +1,4 @@
 export * from "./actionFactory";
-export * from "./storeFactory";
+export * from "./factory";
 export * from "./types";
 

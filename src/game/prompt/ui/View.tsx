@@ -1,17 +1,18 @@
+import { useContext } from "react";
 import { InvalidGameOptionsError, type GameOptions } from "src/gameOptions";
-import { guess, usePromptGameStore } from "../state";
+import { PromptGameStoreContext } from "../storeContext";
 import { PromptInput } from "./PromptInput";
 
-export interface ViewProps {
-    options: GameOptions;
-}
+export function View() {
+    const usePromptGameStore = useContext(PromptGameStoreContext);
 
-export function View({ options }: ViewProps) {
+    const options = usePromptGameStore((game) => game.options);
     const prompt = usePromptGameStore((state) => state.prompts[state.current]);
 
     const inputPlaceholder = getInputPlaceholder(options);
     const textTransform = getTextTransform(options);
 
+    const guess = usePromptGameStore((game) => game.guess);
     const handleGuess = (answer: string) => {
         return guess(answer);
     };

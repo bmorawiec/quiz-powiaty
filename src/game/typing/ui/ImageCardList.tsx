@@ -1,12 +1,14 @@
-import { useMemo } from "react";
-import { useTypingGameStore } from "../state";
+import { useContext, useMemo } from "react";
 import { ImageCard } from "./card";
 
+import { TypingGameStoreContext } from "../storeContext";
 export interface ImageCardListProps {
     textTransform?: "uppercase" | "capitalize";
 }
 
 export function ImageCardList({ textTransform }: ImageCardListProps) {
+    const useTypingGameStore = useContext(TypingGameStoreContext);
+
     const total = useTypingGameStore((state) => state.questions.length);
     const questionIndexes = useMemo(() => {
         const indexes = [];

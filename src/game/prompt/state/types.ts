@@ -1,6 +1,10 @@
+import type { StoreApi, UseBoundStore } from "zustand";
 import type { Answer, GameStore, Question } from "../../common";
+import type { PromptGameStoreActions } from "./actionFactory";
 
-export interface PromptGameStore extends GameStore {
+export type PromptGameStoreHook = UseBoundStore<StoreApi<PromptGameStore>>;
+
+export interface PromptGameStore extends GameStore, PromptGameStoreActions {
     /** Stores the order and states of all the prompts that are going to be presented in this game. */
     prompts: PromptQuestion[];
     /** Index of the current prompt */

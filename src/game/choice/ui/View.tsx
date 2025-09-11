@@ -1,9 +1,11 @@
 import clsx from "clsx";
+import { useContext } from "react";
 import { useAnimation } from "src/utils/useAnimation";
-import { useChoiceGameStore } from "../state";
+import { ChoiceGameStoreContext } from "../storeContext";
 import { Answer } from "./answer";
 
 export function View() {
+    const useChoiceGameStore = useContext(ChoiceGameStoreContext);
     const question = useChoiceGameStore((state) => state.questions[state.current]);
 
     const [isCorrectAnim, startCorrectAnim] = useAnimation(450);

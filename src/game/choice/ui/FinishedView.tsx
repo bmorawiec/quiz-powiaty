@@ -1,13 +1,14 @@
-import type { GameOptions } from "src/gameOptions";
+import { useContext } from "react";
 import { FinishedViewBase } from "../../common";
-import { useChoiceGameStore } from "../state";
+import { ChoiceGameStoreContext } from "../storeContext";
 
 export interface FinishedViewProps {
-    options: GameOptions;
     onRestart: () => void;
 }
 
-export function FinishedView({ options, onRestart }: FinishedViewProps) {
+export function FinishedView({ onRestart }: FinishedViewProps) {
+    const useChoiceGameStore = useContext(ChoiceGameStoreContext);
+    const options = useChoiceGameStore((game) => game.options);
     const questions = useChoiceGameStore((state) => state.questions);
 
     return (

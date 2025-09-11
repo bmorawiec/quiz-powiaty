@@ -1,27 +1,21 @@
-import { useLayoutEffect } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router";
 import { encodeGameURL, type GameOptions } from "src/gameOptions";
-import { GameLayout, PausedView, Sidebar, SidebarContent, type GameProps } from "../common";
-import { calculateTime, gameFromOptions, resetGame, togglePause, useTypingGameStore } from "./state";
+import { GameLayout, PausedView, Sidebar, SidebarContent } from "../common";
+import { TypingGameStoreContext } from "./storeContext";
 import { FinishedView, View } from "./ui";
 
-export function TypingGame({ options }: GameProps) {
-    const navigate = useNavigate();
+export function TypingGame() {
+    const useTypingGameStore = useContext(TypingGameStoreContext);
 
-    useLayoutEffect(() => {
-        gameFromOptions(options);
-        return () => {
-            resetGame();
-        };
-    }, [options]);
+    const togglePause = useTypingGameStore((game) => game.togglePause);
+    const calculateTime = useTypingGameStore((game) => game.calculateTime);
+
+    const gameState = useTypingGameStore((game) => game.state);
+    const options = useTypingGameStore((game) => game.options);
 
     // Whether or not the user should confirm game restarts.
     const restartNeedsConfirmation = useTypingGameStore((game) => game.answered > 0);
-
-    const gameState = useTypingGameStore((game) => game.state);
-    if (gameState === "unstarted" || gameState === "starting") {
-        return null;
-    }
 
     const handleTogglePause = () => {
         if (gameState !== "finished") {
@@ -29,6 +23,7 @@ export function TypingGame({ options }: GameProps) {
         }
     };
 
+    const navigate = useNavigate();
     const handleGameRestart = (newOptions?: GameOptions) => {
         const newURL = encodeGameURL(newOptions || options);
         navigate(newURL);
@@ -39,12 +34,9 @@ export function TypingGame({ options }: GameProps) {
             {(gameState === "paused") ? (
                 <PausedView onUnpauseClick={togglePause}/>
             ) : (gameState === "finished") ? (
-                <FinishedView
-                    options={options}
-                    onRestart={handleGameRestart}
-                />
+                <FinishedView onRestart={handleGameRestart}/>
             ) : (
-                <View options={options}/>
+                <View/>
             )}
 
             <Sidebar>

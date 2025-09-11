@@ -1,5 +1,2 @@
-import { hook } from "./store";
-
-export * from "./actions";
+export * from "./factory";
 export * from "./types";
-export { hook as useTypingGameStore };

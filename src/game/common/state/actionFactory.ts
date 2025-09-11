@@ -1,50 +1,47 @@
-import type { StoreApi, UseBoundStore } from "zustand";
+import type { StoreApi } from "zustand";
 import type { GameStore } from "./types";
 
-export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
-    /** Resets the game to the "unstarted" state. */
-    function resetGame() {
-        hook.setState({
-            state: "unstarted",
-            timestamps: [],
-        });
-    }
-
+export interface GameStoreActions {
     /** Sets the state of the game to "finished".
-     *  @throws if the game hasn't been started, if it's starting or if it has finished. */
-    function finishGame() {
-        const game = hook.getState();
-        if (game.state === "unstarted" || game.state === "starting" || game.state === "finished")
-            throw new Error("This action may only be performed after the game is started and before it is finished.");
+     *  @throws if the game has been finished */
+    finish: () => void;
 
-        hook.setState({
+    /** Pauses the game if it's currently unpaused. Unpauses the game if it's currently paused.
+      * @throws if the game has been finished */
+    togglePause: () => void;
+
+    /** Calculates the time the game has been running for unpaused. */
+    calculateTime: () => number;
+}
+
+export function createGameStoreActions(
+    set: StoreApi<GameStore>["setState"],
+    get: StoreApi<GameStore>["getState"],
+): GameStoreActions {
+    function finish() {
+        const game = get();
+        if (game.state === "finished")
+            throw new Error("This action may only be performed before the game is finished.");
+
+        set({
             state: "finished",
             timestamps: [...game.timestamps, Date.now()],
         });
     }
 
-    /** Pauses the game if it's currently unpaused. Unpauses the game if it's currently paused.
-      * @throws if the game hasn't been started yet, if it's starting or if it has finished. */
     function togglePause() {
-        const game = hook.getState();
-        if (game.state === "unstarted" || game.state === "starting" || game.state === "finished")
-            throw new Error("Cannot pause or unpause an unstarted or finished game.");
+        const game = get();
+        if (game.state === "finished")
+            throw new Error("Cannot pause or unpause a finished game.");
 
-        const newState = (game.state === "paused") ? "unpaused" : "paused";
-        const timestamp = Date.now();
-        hook.setState({
-            state: newState,
-            timestamps: [...game.timestamps, timestamp],
+        set({
+            state: (game.state === "paused") ? "unpaused" : "paused",
+            timestamps: [...game.timestamps, Date.now()],
         });
     }
 
-    /** Calculates the time the game has been running for unpaused.
-     *  Returns zero for unstarted and starting games. */
     function calculateTime(): number {
-        const game = hook.getState();
-        if (game.state === "unstarted" || game.state === "starting") {
-            return 0;
-        }
+        const game = get();
 
         let time = 0;
         const timestamps = (game.state === "unpaused")
@@ -61,5 +58,5 @@ export function createActions(hook: UseBoundStore<StoreApi<GameStore>>) {
         return time;
     }
 
-    return { resetGame, finishGame, togglePause, calculateTime };
+    return { finish, togglePause, calculateTime };
 }

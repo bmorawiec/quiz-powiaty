@@ -1,15 +1,14 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import type { GameOptions } from "src/gameOptions";
 import { focusNextInput } from "src/utils/focusNextInput";
-import { useTypingGameStore } from "../state";
+import { TypingGameStoreContext } from "../storeContext";
 import { CardList } from "./CardList";
 import { ImageCardList } from "./ImageCardList";
 
-export interface ViewProps {
-    options: GameOptions;
-}
+export function View() {
+    const useTypingGameStore = useContext(TypingGameStoreContext);
 
-export function View({ options }: ViewProps) {
+    const options = useTypingGameStore((game) => game.options);
     const title = useTypingGameStore((state) => state.title);
 
     useEffect(() => {

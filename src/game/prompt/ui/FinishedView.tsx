@@ -1,13 +1,14 @@
-import type { GameOptions } from "src/gameOptions";
+import { useContext } from "react";
 import { FinishedViewBase } from "../../common";
-import { usePromptGameStore } from "../state";
+import { PromptGameStoreContext } from "../storeContext";
 
 export interface FinishedViewProps {
-    options: GameOptions;
     onRestart: () => void;
 }
 
-export function FinishedView({ options, onRestart }: FinishedViewProps) {
+export function FinishedView({ onRestart }: FinishedViewProps) {
+    const usePromptGameStore = useContext(PromptGameStoreContext);
+    const options = usePromptGameStore((game) => game.options);
     const prompts = usePromptGameStore((state) => state.prompts);
 
     return (

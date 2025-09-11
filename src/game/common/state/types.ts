@@ -1,6 +1,7 @@
 import type { GameOptions } from "src/gameOptions";
+import type { GameStoreActions } from "./actionFactory";
 
-export interface GameStore {
+export interface GameStore extends GameStoreActions {
     /** Current state of the game */
     state: GameState;
     /** Timestamps, at which the game was either paused or unpaused.
@@ -12,7 +13,7 @@ export interface GameStore {
     options: GameOptions;
 }
 
-export type GameState = "unstarted" | "starting" | "unpaused" | "paused" | "finished";
+export type GameState = "unpaused" | "paused" | "finished";
 
 export interface Question {
     /** TERC id of the administrative unit this question is about. */

@@ -1,6 +1,10 @@
 import type { Answer, GameStore, Question } from "src/game/common";
+import type { TypingGameStoreActions } from "./actionFactory";
+import type { StoreApi, UseBoundStore } from "zustand";
 
-export interface TypingGameStore extends GameStore {
+export type TypingGameStoreHook = UseBoundStore<StoreApi<TypingGameStore>>;
+
+export interface TypingGameStore extends GameStore, TypingGameStoreActions {
     /** The title text shown on the game screen. */
     title: string;
     /** Stores the order and states of all the questions that are going to be presented in this game.

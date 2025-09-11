@@ -1,6 +1,7 @@
-import { useMemo, useState } from "react";
+import { useContext, useMemo, useState } from "react";
 import { InfoIcon } from "src/ui";
-import { useTypingGameStore, type GuessResult, guess } from "../../state";
+import { type GuessResult } from "../../state";
+import { TypingGameStoreContext } from "../../storeContext";
 import { CardInput } from "./CardInput";
 import { GuessedAnswer } from "./GuessedAnswer";
 
@@ -10,6 +11,9 @@ export interface ImageCardProps {
 }
 
 export function ImageCard({ questionIndex, textTransform }: ImageCardProps) {
+    const useTypingGameStore = useContext(TypingGameStoreContext);
+    const guess = useTypingGameStore((game) => game.guess);
+
     const question = useTypingGameStore((state) => state.questions[questionIndex]);
 
     const slotIndexes = useMemo(() => {

@@ -1,9 +1,13 @@
 import clsx from "clsx";
+import { useContext } from "react";
 import { useAnimation } from "src/utils/useAnimation";
-import { guess } from "../../state";
+import { ChoiceGameStoreContext } from "../../storeContext";
 import type { AnswerProps } from "./Answer";
 
 export function TextAnswer({ answer, onCorrectGuess }: AnswerProps) {
+    const useChoiceGameStore = useContext(ChoiceGameStoreContext);
+    const guess = useChoiceGameStore((state) => state.guess);
+
     const [isWrongAnim, startWrongAnim] = useAnimation(450);
     const handleClick = () => {
         const result = guess(answer.id);

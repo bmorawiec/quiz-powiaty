@@ -1,6 +1,10 @@
+import type { StoreApi, UseBoundStore } from "zustand";
 import type { Answer, GameStore, Question } from "../../common";
+import type { ChoiceGameStoreActions } from "./actionFactory";
 
-export interface ChoiceGameStore extends GameStore {
+export type ChoiceGameStoreHook = UseBoundStore<StoreApi<ChoiceGameStore>>;
+
+export interface ChoiceGameStore extends GameStore, ChoiceGameStoreActions {
     /** Stores the order and states of all the questions that are going to be presented in this game. */
     questions: ChoiceQuestion[];
     /** Index of the current question */
