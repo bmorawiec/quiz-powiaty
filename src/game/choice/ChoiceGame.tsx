@@ -14,8 +14,11 @@ export function ChoiceGame() {
     const gameState = useChoiceGameStore((game) => game.state);
     const options = useChoiceGameStore((game) => game.options);
 
-    // Whether or not the user should confirm game restarts.
-    const restartNeedsConfirmation = useChoiceGameStore((game) => game.current > 0);
+    // Check whether or not the user should confirm game restarts.
+    const restartNeedsConfirmation = () => {
+        const game = useChoiceGameStore.getState();
+        return game.current > 0;
+    };
 
     const handleTogglePause = () => {
         if (gameState !== "finished") {

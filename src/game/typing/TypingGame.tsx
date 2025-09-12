@@ -14,8 +14,11 @@ export function TypingGame() {
     const gameState = useTypingGameStore((game) => game.state);
     const options = useTypingGameStore((game) => game.options);
 
-    // Whether or not the user should confirm game restarts.
-    const restartNeedsConfirmation = useTypingGameStore((game) => game.answered > 0);
+    // Check whether or not the user should confirm game restarts.
+    const restartNeedsConfirmation = () => {
+        const game = useTypingGameStore.getState();
+        return game.answered > 0;
+    };
 
     const handleTogglePause = () => {
         if (gameState !== "finished") {

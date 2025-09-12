@@ -14,7 +14,7 @@ export interface SidebarContentProps {
     onTogglePause: () => void;
     options: GameOptions;
     /** When set to true, the user will be asked before the game is restarted due to changes to game options. */
-    restartNeedsConfirmation: boolean;
+    restartNeedsConfirmation: () => boolean;
     /** Called when the game should be restarted due to options having been modified by the player. */
     onGameRestart: (newOptions: GameOptions) => void;
 }
@@ -34,7 +34,7 @@ export function SidebarContent({
 
     const queueRestart = (options: GameOptions) => {
         setNewOptions(options);
-        if (restartNeedsConfirmation) {
+        if (restartNeedsConfirmation()) {
             setShowConfirmDialog(true);
         } else {
             onGameRestart(options);

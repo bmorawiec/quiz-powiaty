@@ -14,8 +14,11 @@ export function PromptGame() {
     const gameState = usePromptGameStore((game) => game.state);
     const options = usePromptGameStore((game) => game.options);
 
-    // Whether or not the user should confirm game restarts.
-    const restartNeedsConfirmation = usePromptGameStore((game) => game.current > 0);
+    // Check whether or not the user should confirm game restarts.
+    const restartNeedsConfirmation = () => {
+        const game = usePromptGameStore.getState();
+        return game.current > 0;
+    };
 
     const handleTogglePause = () => {
         if (gameState !== "finished") {
