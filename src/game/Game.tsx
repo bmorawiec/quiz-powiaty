@@ -2,7 +2,7 @@ import { lazy, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router";
 import { decodeGameURL, validateGameOptions, type GameOptions } from "src/gameOptions";
 import { ChoiceGameStoreContext, createChoiceGameStore, type ChoiceGameStoreHook } from "./choice";
-import { GameError } from "./common/ui/GameError";
+import { GameError } from "./common";
 import { createPromptGameStore, PromptGameStoreContext, type PromptGameStoreHook } from "./prompt";
 import { createTypingGameStore, TypingGameStoreContext, type TypingGameStoreHook } from "./typing";
 
