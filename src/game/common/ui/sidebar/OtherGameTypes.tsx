@@ -14,7 +14,7 @@ const gameTypeNames: Record<GameType, string> = {
     typingGame: "Podpisz",
 };
 
-export function OtherGameTypesProps({ options, onGameTypeChange }: OtherGameTypesProps) {
+export function OtherGameTypes({ options, onGameTypeChange }: OtherGameTypesProps) {
     const otherGameTypes = gameTypesFromCombo(options);
 
     return (

@@ -5,7 +5,7 @@ import type { GameState } from "../../state";
 import { ConfirmRestartDialog } from "./ConfirmRestartDialog";
 import { ControlButton } from "./ControlButton";
 import { OptionsPanel } from "./OptionsPanel";
-import { OtherGameTypesProps } from "./OtherGameTypes";
+import { OtherGameTypes } from "./OtherGameTypes";
 import { Timer } from "./Timer";
 
 export interface SidebarContentProps {
@@ -109,7 +109,7 @@ export function SidebarContent({
         </div>
 
         <OptionsPanel>
-            <OtherGameTypesProps
+            <OtherGameTypes
                 options={newOptions}
                 onGameTypeChange={handleGameTypeChange}
             />
