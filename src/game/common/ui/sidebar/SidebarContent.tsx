@@ -15,8 +15,10 @@ export interface SidebarContentProps {
     options: GameOptions;
     /** When set to true, the user will be asked before the game is restarted due to changes to game options. */
     restartNeedsConfirmation: () => boolean;
+    /** Called when the restart button is clicked. */
+    onGameRestart: () => void;
     /** Called when the game should be restarted due to options having been modified by the player. */
-    onGameRestart: (newOptions: GameOptions) => void;
+    onOptionsChange: (newOptions: GameOptions) => void;
 }
 
 export function SidebarContent({
@@ -26,25 +28,35 @@ export function SidebarContent({
     options,
     restartNeedsConfirmation,
     onGameRestart,
+    onOptionsChange,
 }: SidebarContentProps) {
     const [showConfirmDialog, setShowConfirmDialog] = useState(false);
     const [newOptions, setNewOptions] = useState(options);
 
     const [showFilterDialog, setShowFilterDialog] = useState(false);
 
-    const queueRestart = (options: GameOptions) => {
-        setNewOptions(options);
+    const queueRestart = (newOptions: GameOptions) => {
+        setNewOptions(newOptions);
         if (restartNeedsConfirmation()) {
             setShowConfirmDialog(true);
         } else {
-            onGameRestart(options);
+            if (newOptions === options) {
+                onGameRestart();
+            } else {
+                onOptionsChange(newOptions);
+            }
+            setShowFilterDialog(false);
         }
     };
 
     // restart dialog
 
     const handleConfirmRestart = () => {
-        onGameRestart(newOptions);
+        if (newOptions === options) {
+            onGameRestart();
+        } else {
+            onOptionsChange(newOptions);
+        }
         setShowConfirmDialog(false);
         setShowFilterDialog(false);
     };

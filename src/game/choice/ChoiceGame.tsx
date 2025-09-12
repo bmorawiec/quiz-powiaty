@@ -1,11 +1,9 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router";
-import { encodeGameURL, type GameOptions } from "src/gameOptions";
-import { GameLayout, PausedView, Sidebar, SidebarContent } from "../common";
+import { GameLayout, PausedView, Sidebar, SidebarContent, type GameProps } from "../common";
 import { ChoiceGameStoreContext } from "./storeContext";
 import { FinishedView, View } from "./ui";
 
-export function ChoiceGame() {
+export function ChoiceGame({ onRestart, onOptionsChange }: GameProps) {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);
 
     const togglePause = useChoiceGameStore((game) => game.togglePause);
@@ -26,18 +24,12 @@ export function ChoiceGame() {
         }
     };
 
-    const navigate = useNavigate();
-    const handleGameRestart = (newOptions?: GameOptions) => {
-        const newURL = encodeGameURL(newOptions || options);
-        navigate(newURL);
-    };
-
     return (
         <GameLayout>
             {(gameState === "paused") ? (
                 <PausedView onUnpauseClick={togglePause}/>
             ) : (gameState === "finished") ? (
-                <FinishedView onRestart={handleGameRestart}/>
+                <FinishedView onRestart={onRestart}/>
             ) : (
                 <View/>
             )}
@@ -49,7 +41,8 @@ export function ChoiceGame() {
                     onTogglePause={handleTogglePause}
                     options={options}
                     restartNeedsConfirmation={restartNeedsConfirmation}
-                    onGameRestart={handleGameRestart}
+                    onGameRestart={onRestart}
+                    onOptionsChange={onOptionsChange}
                 />
             </Sidebar>
         </GameLayout>

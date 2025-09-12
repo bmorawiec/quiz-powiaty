@@ -1,11 +1,9 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router";
-import { encodeGameURL, type GameOptions } from "src/gameOptions";
-import { GameLayout, PausedView, Sidebar, SidebarContent } from "../common";
+import { GameLayout, PausedView, Sidebar, SidebarContent, type GameProps } from "../common";
 import { PromptGameStoreContext } from "./storeContext";
 import { FinishedView, View } from "./ui";
 
-export function PromptGame() {
+export function PromptGame({ onRestart, onOptionsChange }: GameProps) {
     const usePromptGameStore = useContext(PromptGameStoreContext);
 
     const togglePause = usePromptGameStore((game) => game.togglePause);
@@ -26,18 +24,12 @@ export function PromptGame() {
         }
     };
 
-    const navigate = useNavigate();
-    const handleGameRestart = (newOptions?: GameOptions) => {
-        const newURL = encodeGameURL(newOptions || options);
-        navigate(newURL);
-    };
-
     return (
         <GameLayout>
             {(gameState === "paused") ? (
                 <PausedView onUnpauseClick={togglePause}/>
             ) : (gameState === "finished") ? (
-                <FinishedView onRestart={handleGameRestart}/>
+                <FinishedView onRestart={onRestart}/>
             ) : (
                 <View/>
             )}
@@ -49,7 +41,8 @@ export function PromptGame() {
                     onTogglePause={handleTogglePause}
                     options={options}
                     restartNeedsConfirmation={restartNeedsConfirmation}
-                    onGameRestart={handleGameRestart}
+                    onGameRestart={onRestart}
+                    onOptionsChange={onOptionsChange}
                 />
             </Sidebar>
         </GameLayout>

@@ -1,11 +1,9 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router";
-import { encodeGameURL, type GameOptions } from "src/gameOptions";
-import { GameLayout, PausedView, Sidebar, SidebarContent } from "../common";
+import { GameLayout, PausedView, Sidebar, SidebarContent, type GameProps } from "../common";
 import { TypingGameStoreContext } from "./storeContext";
 import { FinishedView, View } from "./ui";
 
-export function TypingGame() {
+export function TypingGame({ onRestart, onOptionsChange }: GameProps) {
     const useTypingGameStore = useContext(TypingGameStoreContext);
 
     const togglePause = useTypingGameStore((game) => game.togglePause);
@@ -26,18 +24,12 @@ export function TypingGame() {
         }
     };
 
-    const navigate = useNavigate();
-    const handleGameRestart = (newOptions?: GameOptions) => {
-        const newURL = encodeGameURL(newOptions || options);
-        navigate(newURL);
-    };
-
     return (
         <GameLayout>
             {(gameState === "paused") ? (
                 <PausedView onUnpauseClick={togglePause}/>
             ) : (gameState === "finished") ? (
-                <FinishedView onRestart={handleGameRestart}/>
+                <FinishedView onRestart={onRestart}/>
             ) : (
                 <View/>
             )}
@@ -49,7 +41,8 @@ export function TypingGame() {
                     onTogglePause={handleTogglePause}
                     options={options}
                     restartNeedsConfirmation={restartNeedsConfirmation}
-                    onGameRestart={handleGameRestart}
+                    onGameRestart={onRestart}
+                    onOptionsChange={onOptionsChange}
                 />
             </Sidebar>
         </GameLayout>

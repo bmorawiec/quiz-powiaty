@@ -1,8 +1,8 @@
-import { lazy, useEffect, useMemo, useRef, useState } from "react";
-import { useSearchParams } from "react-router";
-import { decodeGameURL, validateGameOptions, type GameOptions } from "src/gameOptions";
+import { lazy, useCallback, useEffect, useMemo, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router";
+import { decodeGameURL, encodeGameURL, validateGameOptions, type GameOptions } from "src/gameOptions";
 import { ChoiceGameStoreContext, createChoiceGameStore, type ChoiceGameStoreHook } from "./choice";
-import { GameError } from "./common";
+import { GameError, type GameProps } from "./common";
 import { createPromptGameStore, PromptGameStoreContext, type PromptGameStoreHook } from "./prompt";
 import { createTypingGameStore, TypingGameStoreContext, type TypingGameStoreHook } from "./typing";
 
@@ -16,24 +16,35 @@ export function Game() {
 
     const [isError, setIsError] = useState(false);
 
-    const hook = useRef<ChoiceGameStoreHook | PromptGameStoreHook | TypingGameStoreHook | null>(null);
+    const [hook, setHook] = useState<ChoiceGameStoreHook | PromptGameStoreHook | TypingGameStoreHook | null>(null);
     const [options, setOptions] = useState<GameOptions | null>(null);
 
-    useEffect(() => {
+    const restartGame = useCallback(async () => {
         if (newOptions && validateGameOptions(newOptions)) {
             const optionsBeforeAwait = newOptions;
-            (async () => {
-                const newHook = await gameHookFromOptions(newOptions);
-                // check if the game options changed before the async function was ran
-                if (newOptions === optionsBeforeAwait) {
-                    hook.current = newHook;
-                    setOptions(newOptions);
-                }
-            })();
+            const newHook = await gameHookFromOptions(newOptions);
+            // check if the game options changed before the async function was ran
+            if (newOptions === optionsBeforeAwait) {
+                setHook(() => newHook);         // passing in newHook directly would cause it to be called
+                setOptions(newOptions);
+            }
         } else {
             setIsError(true);
         }
     }, [newOptions]);
+
+    useEffect(() => {
+        restartGame();
+    }, [restartGame]);
+
+    const handleRestart = () => {
+        restartGame();
+    };
+
+    const navigate = useNavigate();
+    const handleOptionsChange = (newOptions: GameOptions) => {
+        navigate(encodeGameURL(newOptions));
+    };
 
     if (isError) {
         return (
@@ -45,22 +56,26 @@ export function Game() {
     }
 
     if (options) {
+        const gameProps: GameProps = {
+            onRestart: handleRestart,
+            onOptionsChange: handleOptionsChange,
+        };
         if (options.gameType === "choiceGame") {
             return (
-                <ChoiceGameStoreContext value={hook.current as ChoiceGameStoreHook}>
-                    <ChoiceGame/>
+                <ChoiceGameStoreContext value={hook as ChoiceGameStoreHook}>
+                    <ChoiceGame {...gameProps}/>
                 </ChoiceGameStoreContext>
             );
         } else if (options.gameType === "promptGame") {
             return (
-                <PromptGameStoreContext value={hook.current as PromptGameStoreHook}>
-                    <PromptGame/>
+                <PromptGameStoreContext value={hook as PromptGameStoreHook}>
+                    <PromptGame {...gameProps}/>
                 </PromptGameStoreContext>
             );
         } else if (options.gameType === "typingGame") {
             return (
-                <TypingGameStoreContext value={hook.current as TypingGameStoreHook}>
-                    <TypingGame/>
+                <TypingGameStoreContext value={hook as TypingGameStoreHook}>
+                    <TypingGame {...gameProps}/>
                 </TypingGameStoreContext>
             );
         }
