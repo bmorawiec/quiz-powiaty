@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { FilterDialog, Filters, type GameOptions, type GameType, type UnitFilters } from "src/gameOptions";
 import { PauseIcon, PlayIcon, RestartIcon } from "src/ui";
 import type { GameState } from "../../state";
@@ -28,13 +28,13 @@ export function SidebarContent({
     onGameRestart,
 }: SidebarContentProps) {
     const [showConfirmDialog, setShowConfirmDialog] = useState(false);
-    const newOptions = useRef<GameOptions | null>(null);
+    const [newOptions, setNewOptions] = useState(options);
 
     const [showFilterDialog, setShowFilterDialog] = useState(false);
 
     const queueRestart = (options: GameOptions) => {
+        setNewOptions(options);
         if (restartNeedsConfirmation) {
-            newOptions.current = options;
             setShowConfirmDialog(true);
         } else {
             onGameRestart(options);
@@ -44,13 +44,13 @@ export function SidebarContent({
     // restart dialog
 
     const handleConfirmRestart = () => {
-        onGameRestart(newOptions.current!);
-        newOptions.current = null;
+        onGameRestart(newOptions);
         setShowConfirmDialog(false);
         setShowFilterDialog(false);
     };
 
     const handleCancelRestart = () => {
+        setNewOptions(options);         // cancel player's changes to options
         setShowConfirmDialog(false);
     };
 
@@ -110,12 +110,12 @@ export function SidebarContent({
 
         <OptionsPanel>
             <OtherGameTypesProps
-                options={options}
+                options={newOptions}
                 onGameTypeChange={handleGameTypeChange}
             />
 
             <Filters
-                filters={options.filters}
+                filters={newOptions.filters}
                 onExpand={handleExpandFilters}
                 className="mb-[3px]"
             />
@@ -123,7 +123,7 @@ export function SidebarContent({
 
         {showFilterDialog && (
             <FilterDialog
-                filters={options.filters}
+                filters={newOptions.filters}
                 onApply={handleApplyFilters}
                 onCancel={handleCancelFilters}
             />
