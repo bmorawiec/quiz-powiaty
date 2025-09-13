@@ -1,9 +1,18 @@
 import { type Unit } from "src/data/common";
 import type { GameOptions } from "src/gameOptions";
 
+class FormatError extends Error {
+    name = "FormatError";
+
+    constructor() {
+        super("No format matching the provided game options.");
+    }
+}
+
 /** Returns a string containing the a question about the provided administrative unit,
  *  based on the specified game options. */
-export function formatQuestion(unit: Unit, { unitType, guessFrom, guess }: GameOptions) {
+export function formatQuestion(unit: Unit, options: GameOptions) {
+    const { guessFrom, guess, unitType } = options;
     let str = "";
     if (guess === "name") {
         if (guessFrom === "map") {
@@ -15,10 +24,8 @@ export function formatQuestion(unit: Unit, { unitType, guessFrom, guess }: GameO
                 str += unit.capitals.join(", ") + "?";
             } else if (guessFrom === "plate") {
                 str += "ma rejestracje " + unit.plates.join(", ") + "?";
-            } else if (guessFrom === "flag") {
-                str += "ma tą flagę?";
-            } else if (guessFrom === "coa") {
-                str += "ma ten herb?";
+            } else {
+                throw new FormatError();
             }
         }
     } else {
@@ -32,6 +39,8 @@ export function formatQuestion(unit: Unit, { unitType, guessFrom, guess }: GameO
             str += "Jaki herb ma ";
         } else if (guess === "map") {
             str += "Znajdź ";
+        } else {
+            throw new FormatError();
         }
         if (guessFrom === "map") {
             str += (unitType === "voivodeship") ? "to województwo" : "ten powiat";
@@ -50,6 +59,8 @@ export function formatQuestion(unit: Unit, { unitType, guessFrom, guess }: GameO
                 str += "z tą flagą";
             } else if (guessFrom === "coa") {
                 str += "z tym herbem";
+            } else {
+                throw new FormatError();
             }
         }
         if (guess !== "map") {
@@ -59,7 +70,8 @@ export function formatQuestion(unit: Unit, { unitType, guessFrom, guess }: GameO
     return str;
 }
 
-export function formatTitle({ guess, guessFrom, unitType }: GameOptions, plural?: boolean): string {
+export function formatTitle(options: GameOptions, plural?: boolean): string {
+    const { guessFrom, guess, unitType } = options;
     let str = "";
     if (guess === "name") {
         str += (plural) ? "Jak się nazywają " : "Jak się nazywa ";
@@ -73,6 +85,8 @@ export function formatTitle({ guess, guessFrom, unitType }: GameOptions, plural?
         str += (plural) ? "Jakie rejestracje mają " : "Jakie rejestracje ma ";
     } else if (guess === "map") {
         str += (plural) ? "Gdzie leżą " : "Gdzie leży ";
+    } else {
+        throw new FormatError();
     }
     if (guessFrom === "name" || guessFrom === "map") {
         str += (unitType === "voivodeship")
@@ -90,12 +104,15 @@ export function formatTitle({ guess, guessFrom, unitType }: GameOptions, plural?
             str += (plural) ? "z tymi flagami?" : "z tą flagą?";
         } else if (guessFrom === "coa") {
             str += (plural) ? "z tymi herbami?" : "z tym herbem?";
+        } else {
+            throw new FormatError();
         }
     }
     return str;
 }
 
-export function getQuestionText(unit: Unit, { guessFrom }: GameOptions): string {
+export function getQuestionText(unit: Unit, options: GameOptions): string {
+    const { guessFrom } = options;
     if (guessFrom === "name") {
         const prefix = (unit.type === "voivodeship")
             ? "województwo "
@@ -109,5 +126,5 @@ export function getQuestionText(unit: Unit, { guessFrom }: GameOptions): string 
     } else if (guessFrom === "plate") {
         return unit.plates.join(", ");
     }
-    throw new Error("No question text programmed for the provided game options.");
+    throw new FormatError();
 }
