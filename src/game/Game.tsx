@@ -1,4 +1,4 @@
-import { lazy, useCallback, useEffect, useMemo, useState } from "react";
+import { lazy, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router";
 import { decodeGameURL, encodeGameURL, validateGameOptions, type GameOptions } from "src/gameOptions";
 import { ChoiceGameStoreContext, createChoiceGameStore, type ChoiceGameStoreHook } from "./choice";
@@ -14,6 +14,8 @@ export function Game() {
     const [searchParams] = useSearchParams();
     const newOptions = useMemo(() => decodeGameURL(searchParams), [searchParams]);
 
+    const gameId = useRef(0);
+
     const [isError, setIsError] = useState(false);
 
     const [hook, setHook] = useState<ChoiceGameStoreHook | PromptGameStoreHook | TypingGameStoreHook | null>(null);
@@ -21,10 +23,14 @@ export function Game() {
 
     const restartGame = useCallback(async () => {
         if (newOptions && validateGameOptions(newOptions)) {
-            const optionsBeforeAwait = newOptions;
+            const thisGameId = gameId.current + 1;
+            gameId.current = thisGameId;
+
             const newHook = await gameHookFromOptions(newOptions);
-            // check if the game options changed before the async function was ran
-            if (newOptions === optionsBeforeAwait) {
+
+            // check if another game was started during the await
+            // if so, then don't start this game
+            if (gameId.current === thisGameId) {
                 setHook(() => newHook);         // passing in newHook directly would cause it to be called
                 setOptions(newOptions);
             }
