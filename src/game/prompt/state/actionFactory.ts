@@ -1,7 +1,7 @@
-import { preloadImage } from "src/utils/preloadImage";
-import { getTextHint } from "../../common";
-import type { GuessResult, PromptGameStore } from "./types";
 import type { StoreApi } from "zustand";
+import { getTextHint } from "../../common";
+import type { GuessResult, PromptAnswer, PromptGameStore, PromptQuestion } from "./types";
+import { preloadImage } from "src/utils/preloadImage";
 
 export interface PromptGameStoreActions {
     /** Checks if the player's guess is correct. If it was, then proceeds to the next question.
@@ -16,78 +16,60 @@ export function createPromptGameStoreActions(
     get: StoreApi<PromptGameStore>["getState"],
 ): PromptGameStoreActions {
     function guess(playersGuess: string): [GuessResult, string | null] {
-        let game = get();
+        const game = get();
         if (game.state !== "unpaused")
             throw new Error("Cannot perform this action while the game is paused or finished.");
 
-        const result = getGuessResult(playersGuess);
-        if (result === "wrong") {
+        const prompt = game.prompts[game.current];
+        const answer = prompt.answers
+            .find((answer) => answer.value.toLowerCase() === playersGuess.toLowerCase());
+        if (!answer) {          // a correct answer with this text doesn't exist
+            const newPrompt: PromptQuestion = {
+                ...prompt,
+                tries: prompt.tries + 1,
+            };
             set({
-                prompts: game.prompts.map((prompt, index) => (index === game.current) ? {
-                    ...prompt,
-                    tries: prompt.tries + 1,        // if the provided answer was wrong, then increase the try counter
-                } : prompt),
+                prompts: game.prompts
+                    .map((p) => (p.id === prompt.id) ? newPrompt : p)
             });
-
-            game = get();       // game state has changed
-            const currentPrompt = game.prompts[game.current];
-            const hint = getTextHint(currentPrompt, game.options);
-
-            return [result, hint];  // early return with hint
+            const hint = getTextHint(newPrompt, game.options);
+            return ["wrong", hint];
         }
 
-        if (result === "correct") {
-            const prompt = game.prompts[game.current];
-            const newPrompt = {
+        if (answer.guessed) {   // a correct answer with this text exist, but it was already provided
+            return ["alreadyGuessed", null];
+        } else {                // a correct answer with this text exist
+            const newAnswer: PromptAnswer = {
+                ...answer,
+                guessed: true,
+            };
+            const newPrompt: PromptQuestion = {
                 ...prompt,
-                answers: prompt.answers.map((answer) => (answer.value.toLowerCase() === playersGuess.toLowerCase()) ? {
-                    ...answer,
-                    guessed: true,
-                } : answer),
+                answers: prompt.answers
+                    .map((ans) => (ans.id === answer.id) ? newAnswer : ans),
                 provided: prompt.provided + 1,
             };
-
-            const newPrompts = [
-                ...game.prompts.slice(0, game.current),
-                newPrompt,
-                ...game.prompts.slice(game.current + 1),
-            ];
-            // proceed to next prompt if all the correct answers have been provided by the player.
-            if (newPrompt.provided === newPrompt.answers.length) {
+            set({
+                prompts: game.prompts
+                    .map((p) => (p.id === prompt.id) ? newPrompt : p),
+            });
+            if (newPrompt.provided === prompt.answers.length) {
                 set({
-                    prompts: newPrompts,
+                    // if all answers to this question have been provided,
+                    // then proceed to the next question
                     current: game.current + 1,
                     answered: game.answered + 1,
                 });
-
                 if (game.answered + 1 === game.prompts.length) {
-                    game.finish();      // finish game if all prompts have been answered
+                    game.finish();      // if all the questions have been answered, then finish the game
                 } else if (game.options.guessFrom === "flag" || game.options.guessFrom === "coa") {
                     if (game.current + 2 < game.prompts.length) {
-                        const nextNextQuestion = game.prompts[game.current + 2];
-                        preloadImage(nextNextQuestion.value);       // preload image for soon-to-be next prompt
+                        const nextNextPrompt = game.prompts[game.current + 2];
+                        preloadImage(nextNextPrompt.value);     // preload image for soon-to-be next prompt
                     }
                 }
-            } else {
-                set({
-                    prompts: newPrompts,
-                });
             }
-        }
-        return [result, null];
-    }
-
-    /** Returns a guess result based on the player's answer to the current prompt. */
-    function getGuessResult(playersGuess: string): GuessResult {
-        const game = get();
-        const prompt = game.prompts[game.current];
-        const answer = prompt.answers.find((answer) => answer.value.toLowerCase() === playersGuess.toLowerCase());
-        if (!answer) {
-            return "wrong";
-        } else if (answer.guessed) {
-            return "alreadyGuessed"
-        } else {
-            return "correct";
+            return ["correct", null];
         }
     }
 
