@@ -16,7 +16,7 @@ export interface GameStore extends GameStoreActions {
 export type GameState = "unpaused" | "paused" | "finished";
 
 export interface Question {
-    /** TERC id of the administrative unit this question is about. */
+    /** Id of the administrative unit this question is about. */
     id: string;
     /** Contains either text or the URL of an image to be shown when this question is presented. */
     value: string;
@@ -26,7 +26,7 @@ export interface Question {
 }
 
 export interface Answer {
-    /** TERC id of the administrative unit this answer is about. MAY NOT BE UNIQUE. */
+    /** Id of the administrative unit this answer is about. MAY NOT BE UNIQUE. */
     id: string;
     /** Contains either text or the URL of an image to be shown when this answer is presented. */
     value: string;

@@ -2,7 +2,7 @@ import type { Vector } from "src/utils/vector";
 
 /** Stores information about an administrative unit. */
 export interface Unit {
-    /** The TERC code of this administrative unit. */
+    /** The id of this administrative unit. */
     id: string;
     type: UnitType;
     /** "county" - this is a regular county.
@@ -11,7 +11,7 @@ export interface Unit {
      *  Required for counties.
      *  This field can be filtered by. */
     countyType?: CountyType;
-    /** TERC code of the administrative unit this unit is a part of.
+    /** Id of the administrative unit this unit is a part of.
      *  Required for counties.
      *  This field can be filtered by. */
     parent?: VoivodeshipId;
@@ -43,7 +43,7 @@ export type Guessable = "name" | "capital" | "plate" | "flag" | "coa" | "map";
 
 /** Stores information about the shape of an administrative unit. */
 export interface UnitShape {
-    /** The TERC code of this administrative unit. */
+    /** The id of this administrative unit. */
     id: string;
     /** The shape of this administrative unit.
      *  The data consists of an array of polygons, which in turn are made up of points.

@@ -21,11 +21,11 @@ export interface GameOptions {
 /** Used to filter counties depending on their types and/or the voivodeships they're a part of.
  *  Currently there are no filters that affect voivodeships. */
 export interface UnitFilters {
-    /** Contains types of counties to match. 
-     *  If empty, then all counties are matched. Only affects counties. */
+    /** Matches counties by their types.
+     *  Matches all counties when empty. */
     countyTypes: CountyType[];
-    /** Contains voivodeship TERC codes to match children of.
-     *  If empty, then all counties are matched. Only affects counties. */
+    /** Matches counties by their parent voivodeship.
+     *  Matches all counties when empty. */
     voivodeships: VoivodeshipId[];
 }
 
