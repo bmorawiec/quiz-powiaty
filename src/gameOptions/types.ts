@@ -41,17 +41,3 @@ export function matchesFilters(unit: Unit, filters: UnitFilters): boolean {
     }
     return true;
 }
-
-export type ValidOptions = {
-    [TGuessFrom in Guessable]?: {
-        [TGuess in Guessable]?: "voivodeship" | "county" | "*";
-    };
-};
-
-export function validateOptions(options: GameOptions, validOptions: ValidOptions): boolean {
-    const constraint =  validOptions[options.guessFrom]?.[options.guess];
-    if (!constraint) {
-        return false;
-    }
-    return constraint === "*" || options.unitType === constraint;
-}
