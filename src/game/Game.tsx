@@ -5,6 +5,7 @@ import { ChoiceGameStoreContext, createChoiceGameStore, type ChoiceGameStoreHook
 import { GameError, type GameProps } from "./common";
 import { createPromptGameStore, PromptGameStoreContext, type PromptGameStoreHook } from "./prompt";
 import { createTypingGameStore, TypingGameStoreContext, type TypingGameStoreHook } from "./typing";
+import clsx from "clsx";
 
 const ChoiceGame = lazy(() => import("./choice"));
 const PromptGame = lazy(() => import("./prompt"));
@@ -52,39 +53,71 @@ export function Game() {
         navigate(encodeGameURL(newOptions));
     };
 
-    if (isError) {
-        return (
-            <GameError
-                details="Podany adres gry jest nieprawidłowy. Upewnij się, że adres jest poprawny,
-                    albo spróbuj wybrać inny tryb gry."
-            />
-        );
-    }
+    const container = useRef<HTMLDivElement | null>(null);
+    const [fullscreen, setFullscreen] = useState(false);
 
-    if (!options) {     // game is loading
-        return null;
-    }
+    const handleToggleFullscreen = () => {
+        setFullscreen(!fullscreen);
+    };
+
+    useEffect(() => {
+        if (fullscreen) {
+            container.current!.requestFullscreen();
+        } else {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            }
+        }
+    }, [fullscreen]);
+
+    useEffect(() => {
+        const elem = container.current!;
+
+        const handleFullscreenChange = () => {
+            // detect fullscreen mode exit triggered in a way other than the fullscreen button
+            // (for example via the esc key)
+            if (!document.fullscreenElement) {
+                setFullscreen(false);
+            }
+        };
+
+        elem.addEventListener("fullscreenchange", handleFullscreenChange);
+        return () => elem.removeEventListener("fullscreenchange", handleFullscreenChange);
+    }, []);
 
     const gameProps: GameProps = {
         onRestart: handleRestart,
         onOptionsChange: handleOptionsChange,
+        fullscreen,
+        onToggleFullscreen: handleToggleFullscreen,
     };
     return (
-        <div className="flex-1 flex gap-[16px] sm:px-[20px] lg:px-[100px] sm:pb-[38px] min-h-[600px]">
-            {(options.gameType === "choiceGame") ? (
-                <ChoiceGameStoreContext value={hook as ChoiceGameStoreHook}>
-                    <ChoiceGame {...gameProps}/>
-                </ChoiceGameStoreContext>
-            ) : (options.gameType === "promptGame") ? (
-                <PromptGameStoreContext value={hook as PromptGameStoreHook}>
-                    <PromptGame {...gameProps}/>
-                </PromptGameStoreContext>
-            ) : (options.gameType === "typingGame") ? (
-                <TypingGameStoreContext value={hook as TypingGameStoreHook}>
-                    <TypingGame {...gameProps}/>
-                </TypingGameStoreContext>
+        <div
+            ref={container}
+            className={clsx("bg-white dark:bg-black flex-1 flex gap-[16px] sm:px-[20px] min-h-[600px]",
+                (fullscreen) ? "py-[20px]" : "lg:px-[100px] sm:pb-[38px]")}
+        >
+            {(isError) ? (
+                <GameError details="Podany adres gry jest nieprawidłowy. Upewnij się, że adres jest poprawny
+                    albo spróbuj wybrać inny tryb gry."/>
+            ) : (
+                options && (    // options is null when game is loading
+                    (options.gameType === "choiceGame") ? (
+                        <ChoiceGameStoreContext value={hook as ChoiceGameStoreHook}>
+                            <ChoiceGame {...gameProps}/>
+                        </ChoiceGameStoreContext>
+                    ) : (options.gameType === "promptGame") ? (
+                        <PromptGameStoreContext value={hook as PromptGameStoreHook}>
+                            <PromptGame {...gameProps}/>
+                        </PromptGameStoreContext>
+                    ) : (options.gameType === "typingGame") ? (
+                        <TypingGameStoreContext value={hook as TypingGameStoreHook}>
+                            <TypingGame {...gameProps}/>
+                        </TypingGameStoreContext>
 
-            ) : null}
+                    ) : null
+                )
+            )}
         </div>
     );
 }

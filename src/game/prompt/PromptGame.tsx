@@ -3,7 +3,7 @@ import { PausedView, Sidebar, SidebarContent, type GameProps } from "../common";
 import { PromptGameStoreContext } from "./storeContext";
 import { FinishedView, View } from "./ui";
 
-export function PromptGame({ onRestart, onOptionsChange }: GameProps) {
+export function PromptGame({ onRestart, onOptionsChange, fullscreen, onToggleFullscreen }: GameProps) {
     const usePromptGameStore = useContext(PromptGameStoreContext);
 
     const togglePause = usePromptGameStore((game) => game.togglePause);
@@ -38,6 +38,8 @@ export function PromptGame({ onRestart, onOptionsChange }: GameProps) {
                 gameState={gameState}
                 calculateTime={calculateTime}
                 onTogglePause={handleTogglePause}
+                fullscreen={fullscreen}
+                onToggleFullscreen={onToggleFullscreen}
                 options={options}
                 restartNeedsConfirmation={restartNeedsConfirmation}
                 onGameRestart={onRestart}

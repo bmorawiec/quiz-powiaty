@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FilterDialog, Filters, type GameOptions, type GameType, type UnitFilters } from "src/gameOptions";
-import { FullscreenIcon, PauseIcon, PlayIcon, RestartIcon } from "src/ui";
+import { ExitFullscreenIcon, FullscreenIcon, PauseIcon, PlayIcon, RestartIcon } from "src/ui";
 import type { GameState } from "../../state";
 import { ConfirmRestartDialog } from "./ConfirmRestartDialog";
 import { ControlButton } from "./ControlButton";
@@ -12,6 +12,8 @@ export interface SidebarContentProps {
     gameState: GameState;
     calculateTime: () => number;
     onTogglePause: () => void;
+    fullscreen: boolean;
+    onToggleFullscreen: () => void;
     options: GameOptions;
     /** When set to true, the user will be asked before the game is restarted due to changes to game options. */
     restartNeedsConfirmation: () => boolean;
@@ -25,6 +27,8 @@ export function SidebarContent({
     gameState,
     calculateTime,
     onTogglePause,
+    fullscreen,
+    onToggleFullscreen,
     options,
     restartNeedsConfirmation,
     onGameRestart,
@@ -110,7 +114,8 @@ export function SidebarContent({
 
             <div className="flex gap-[2px]">
                 <ControlButton
-                    icon={FullscreenIcon}
+                    icon={(fullscreen) ? ExitFullscreenIcon : FullscreenIcon}
+                    onClick={onToggleFullscreen}
                 />
 
                 <ControlButton
