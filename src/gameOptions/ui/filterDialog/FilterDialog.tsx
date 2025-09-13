@@ -34,7 +34,7 @@ export function FilterDialog({ filters, onApply, onCancel }: FilterDialogProps) 
 
     return (
         <DialogRoot onScrimPointerDown={onCancel}>
-            <Dialog className="w-[450px] h-[650px]">
+            <Dialog className="w-[450px] h-full max-h-[650px]">
                 <div className="flex items-center gap-[10px] px-[30px] pt-[26px] pb-[12px]
                     text-gray-80 dark:text-gray-15">
                     <FilterIcon/>
