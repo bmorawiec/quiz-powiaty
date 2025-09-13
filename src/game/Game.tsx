@@ -61,32 +61,32 @@ export function Game() {
         );
     }
 
-    if (options) {
-        const gameProps: GameProps = {
-            onRestart: handleRestart,
-            onOptionsChange: handleOptionsChange,
-        };
-        if (options.gameType === "choiceGame") {
-            return (
+    if (!options) {     // game is loading
+        return null;
+    }
+
+    const gameProps: GameProps = {
+        onRestart: handleRestart,
+        onOptionsChange: handleOptionsChange,
+    };
+    return (
+        <div className="flex-1 flex gap-[16px] sm:px-[20px] lg:px-[100px] sm:pb-[38px] min-h-[600px]">
+            {(options.gameType === "choiceGame") ? (
                 <ChoiceGameStoreContext value={hook as ChoiceGameStoreHook}>
                     <ChoiceGame {...gameProps}/>
                 </ChoiceGameStoreContext>
-            );
-        } else if (options.gameType === "promptGame") {
-            return (
+            ) : (options.gameType === "promptGame") ? (
                 <PromptGameStoreContext value={hook as PromptGameStoreHook}>
                     <PromptGame {...gameProps}/>
                 </PromptGameStoreContext>
-            );
-        } else if (options.gameType === "typingGame") {
-            return (
+            ) : (options.gameType === "typingGame") ? (
                 <TypingGameStoreContext value={hook as TypingGameStoreHook}>
                     <TypingGame {...gameProps}/>
                 </TypingGameStoreContext>
-            );
-        }
-    }
-    return null;
+
+            ) : null}
+        </div>
+    );
 }
 
 function gameHookFromOptions(

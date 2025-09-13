@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FilterDialog, Filters, type GameOptions, type GameType, type UnitFilters } from "src/gameOptions";
-import { PauseIcon, PlayIcon, RestartIcon } from "src/ui";
+import { FullscreenIcon, PauseIcon, PlayIcon, RestartIcon } from "src/ui";
 import type { GameState } from "../../state";
 import { ConfirmRestartDialog } from "./ConfirmRestartDialog";
 import { ControlButton } from "./ControlButton";
@@ -102,22 +102,27 @@ export function SidebarContent({
     };
 
     return (<>
-        <div className="flex items-center h-[77px] pl-[30px] pr-[22px] gap-[2px]">
+        <div className="flex items-center h-[77px] pl-[30px] pr-[22px] justify-between">
             <Timer
                 gameState={gameState}
                 calculateTime={calculateTime}
             />
 
-            <ControlButton
-                icon={RestartIcon}
-                className="ml-auto"
-                onClick={handleRestartClick}
-            />
+            <div className="flex gap-[2px]">
+                <ControlButton
+                    icon={FullscreenIcon}
+                />
 
-            <ControlButton
-                icon={(gameState === "paused") ? PlayIcon : PauseIcon}
-                onClick={onTogglePause}
-            />
+                <ControlButton
+                    icon={RestartIcon}
+                    onClick={handleRestartClick}
+                />
+
+                <ControlButton
+                    icon={(gameState === "paused") ? PlayIcon : PauseIcon}
+                    onClick={onTogglePause}
+                />
+            </div>
         </div>
 
         <OptionsPanel>

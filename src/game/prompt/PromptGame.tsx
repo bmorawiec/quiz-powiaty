@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { GameLayout, PausedView, Sidebar, SidebarContent, type GameProps } from "../common";
+import { PausedView, Sidebar, SidebarContent, type GameProps } from "../common";
 import { PromptGameStoreContext } from "./storeContext";
 import { FinishedView, View } from "./ui";
 
@@ -24,27 +24,25 @@ export function PromptGame({ onRestart, onOptionsChange }: GameProps) {
         }
     };
 
-    return (
-        <GameLayout>
-            {(gameState === "paused") ? (
-                <PausedView onUnpauseClick={togglePause}/>
-            ) : (gameState === "finished") ? (
-                <FinishedView onRestart={onRestart}/>
-            ) : (
-                <View/>
-            )}
+    return (<>
+        {(gameState === "paused") ? (
+            <PausedView onUnpauseClick={togglePause}/>
+        ) : (gameState === "finished") ? (
+            <FinishedView onRestart={onRestart}/>
+        ) : (
+            <View/>
+        )}
 
-            <Sidebar>
-                <SidebarContent
-                    gameState={gameState}
-                    calculateTime={calculateTime}
-                    onTogglePause={handleTogglePause}
-                    options={options}
-                    restartNeedsConfirmation={restartNeedsConfirmation}
-                    onGameRestart={onRestart}
-                    onOptionsChange={onOptionsChange}
-                />
-            </Sidebar>
-        </GameLayout>
-    );
+        <Sidebar>
+            <SidebarContent
+                gameState={gameState}
+                calculateTime={calculateTime}
+                onTogglePause={handleTogglePause}
+                options={options}
+                restartNeedsConfirmation={restartNeedsConfirmation}
+                onGameRestart={onRestart}
+                onOptionsChange={onOptionsChange}
+            />
+        </Sidebar>
+    </>);
 }
