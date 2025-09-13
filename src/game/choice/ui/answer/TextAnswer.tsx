@@ -1,10 +1,15 @@
 import clsx from "clsx";
 import { useContext } from "react";
 import { useAnimation } from "src/utils/useAnimation";
+import type { ChoiceAnswer } from "../../state";
 import { ChoiceGameStoreContext } from "../../storeContext";
-import type { AnswerProps } from "./Answer";
 
-export function TextAnswer({ answer, onCorrectGuess }: AnswerProps) {
+export interface TextAnswerProps {
+    answer: ChoiceAnswer;
+    onCorrectGuess: () => void;
+}
+
+export function TextAnswer({ answer, onCorrectGuess }: TextAnswerProps) {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);
     const guess = useChoiceGameStore((state) => state.guess);
 
@@ -27,7 +32,7 @@ export function TextAnswer({ answer, onCorrectGuess }: AnswerProps) {
                 isWrongAnim && "animate-shake")}
             onClick={handleClick}
         >
-            {answer.text}
+            {answer.value}
         </button>
     );
 }

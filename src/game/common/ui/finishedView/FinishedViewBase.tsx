@@ -1,11 +1,11 @@
+import { useMemo } from "react";
+import type { GameOptions } from "src/gameOptions";
 import { LargeButton, LargeLink, RestartIcon } from "src/ui";
 import type { Question } from "../../state";
-import { useMemo } from "react";
-import { ProgressBar } from "./ProgressBar";
 import { GameModeCard } from "../GameModeCard";
 import { GuessDistribution } from "./GuessDistribution";
-import { QuestionBrowser } from "./QuestionBrowser";
-import type { GameOptions } from "src/gameOptions";
+import { ProgressBar } from "./ProgressBar";
+import { QuestionBrowser } from "./questionBrowser";
 
 export interface FinishedViewBaseProps {
     options: GameOptions;
@@ -54,6 +54,7 @@ export function FinishedViewBase({ options, questions, onRestart }: FinishedView
 
                     <QuestionBrowser
                         questions={questions}
+                        options={options}
                     />
                 </div>
             </div>

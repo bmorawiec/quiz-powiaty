@@ -13,7 +13,7 @@ export function getTextHint(question: Question, options: GameOptions): string | 
     }
     if (question.tries >= TRIES_FOR_FULL_HINT) {
         return question.answers
-            .map((answer) => answer.text)
+            .map((answer) => answer.value)
             .join(", ");
     }
 
@@ -21,28 +21,22 @@ export function getTextHint(question: Question, options: GameOptions): string | 
     if (options.guess === "plate") {
         return question.answers
             .map((answer) => {
-                if (!answer.text)
-                    throw new Error("Cannot generate text hint for a non-text answer.");
-
-                if (noOfLetters > answer.text.length) {
-                    return answer.text;
+                if (noOfLetters > answer.value.length) {
+                    return answer.value;
                 }
-                const uncoveredLetters = answer.text.slice(0, noOfLetters);
-                return uncoveredLetters.padEnd(answer.text.length, "*");
+                const uncoveredLetters = answer.value.slice(0, noOfLetters);
+                return uncoveredLetters.padEnd(answer.value.length, "*");
             })
             .join(", ");
     } else if (options.guess === "name" || options.guess === "capital") {
         return question.answers
             .map((answer) => {
-                if (!answer.text)
-                    throw new Error("Cannot generate text hint for a non-text answer.");
-
                 let hint = "";
-                for (let index = 0; index < answer.text.length; index++) {
-                    const char = answer.text[index];
+                for (let index = 0; index < answer.value.length; index++) {
+                    const char = answer.value[index];
                     if (char === " " || char === "-") {
                         hint += char;
-                    } else if (index < noOfLetters || index >= answer.text.length - noOfLetters) {
+                    } else if (index < noOfLetters || index >= answer.value.length - noOfLetters) {
                         hint += char;
                     } else {
                         hint += "*";

@@ -1,6 +1,6 @@
 import type { Unit } from "src/data/common";
 import { units } from "src/data/units";
-import { createGameStore, createGameStoreActions, formatQuestion } from "src/game/common";
+import { createGameStore, createGameStoreActions, formatQuestion, formatTitle } from "src/game/common";
 import { type GameOptions, InvalidGameOptionsError, matchesFilters } from "src/gameOptions";
 import { preloadImage } from "src/utils/preloadImage";
 import { toShuffled } from "src/utils/shuffle";
@@ -14,13 +14,16 @@ export async function createPromptGameStore(options: GameOptions): Promise<Promp
     if (options.guessFrom === "flag" || options.guessFrom === "coa") {
         const firstTwoPrompts = prompts.slice(0, 2);
         // preload flags/COAs for the first two prompts
-        await Promise.all(firstTwoPrompts.map((prompt) => preloadImage(prompt.imageURL!)));
+        await Promise.all(firstTwoPrompts.map((prompt) => preloadImage(prompt.value)));
     }
 
     return createGameStore<PromptGameStore>((set, get) => ({
         state: "unpaused",
         timestamps: [Date.now()],
         options,
+        title: (options.guessFrom === "flag" || options.guessFrom === "coa")
+            ? formatTitle(options)
+            : undefined,
         prompts,
         current: 0,
         answered: 0,
@@ -35,30 +38,34 @@ function getPrompts(units: Unit[], options: GameOptions): PromptQuestion[] {
     return shuffledUnits.map((unit) => {
         const question: PromptQuestion = {
             id: unit.id,
-            text: formatQuestion(unit, options),
-            answers: getPromptAnswers(unit, options),
+            value: getPromptValue(unit, options),
+            answers: getAnswers(unit, options),
             provided: 0,
             tries: 0,
         };
-        if (options.guessFrom === "flag") {
-            question.imageURL = "/images/flag/" + unit.id + ".svg";
-        } else if (options.guessFrom === "coa") {
-            question.imageURL = "/images/coa/" + unit.id + ".svg";
-        }
         return question;
     });
 }
 
-function getPromptAnswers(unit: Unit, options: GameOptions): PromptAnswer[] {
-    return getPromptAnswerStrings(unit, options).map((text) => ({
+function getPromptValue(unit: Unit, options: GameOptions): string {
+    if (options.guessFrom === "flag") {
+        return "/images/flag/" + unit.id + ".svg";
+    } else if (options.guessFrom === "coa") {
+        return "/images/coa/" + unit.id + ".svg";
+    }
+    return formatQuestion(unit, options);
+}
+
+function getAnswers(unit: Unit, options: GameOptions): PromptAnswer[] {
+    return getAnswerValues(unit, options).map((value) => ({
         id: unit.id,
-        text,
+        value,
         correct: true,
         guessed: false,
     } satisfies PromptAnswer));
 }
 
-function getPromptAnswerStrings(unit: Unit, options: GameOptions): string[] {
+function getAnswerValues(unit: Unit, options: GameOptions): string[] {
     if (options.guess === "name") {
         return [unit.name];
     } else if (options.guess === "capital") {

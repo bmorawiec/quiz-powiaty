@@ -59,39 +59,43 @@ export function formatQuestion(unit: Unit, { unitType, guessFrom, guess }: GameO
     return str;
 }
 
-export function formatTitle({ guess, guessFrom, unitType }: GameOptions): string {
+export function formatTitle({ guess, guessFrom, unitType }: GameOptions, plural?: boolean): string {
     let str = "";
     if (guess === "name") {
-        str += "Jak się nazywają ";
+        str += (plural) ? "Jak się nazywają " : "Jak się nazywa ";
     } else if (guess === "capital") {
-        str += "Jakie stolice mają ";
+        str += (plural) ? "Jakie stolice mają " : "Jakie stolice ma ";
     } else if (guess === "plate") {
-        str += "Jakie rejestracje mają ";
+        str += (plural) ? "Jakie rejestracje mają " : "Jakie rejestracje ma ";
     } else if (guess === "flag") {
-        str += "Jakie flagi mają ";
+        str += (plural) ? "Jakie flagi mają " : "Jaką flagę ma ";
     } else if (guess === "coa") {
-        str += "Jakie rejestracje mają ";
+        str += (plural) ? "Jakie rejestracje mają " : "Jakie rejestracje ma ";
     } else if (guess === "map") {
-        str += "Gdzie leżą ";
+        str += (plural) ? "Gdzie leżą " : "Gdzie leży ";
     }
     if (guessFrom === "name" || guessFrom === "map") {
-        str += (unitType === "voivodeship") ? "te województwa?" : "te powiaty?";
+        str += (unitType === "voivodeship")
+            ? (plural) ? "te województwa?" : "to województwo?"
+            : (plural) ? "te powiaty?" : "ten powiat";
     } else {
-        str += (unitType === "voivodeship") ? "województwa " : "powiaty ";
+        str += (unitType === "voivodeship")
+            ? (plural) ? "województwa " : "województwo "
+            : (plural) ? "powiaty " : "powiat ";
         if (guessFrom === "capital") {
             str += "z tymi stolicami?";
         } else if (guessFrom === "plate") {
             str += "z tymi rejestracjami?";
         } else if (guessFrom === "flag") {
-            str += "z tymi flagami?";
+            str += (plural) ? "z tymi flagami?" : "z tą flagą?";
         } else if (guessFrom === "coa") {
-            str += "z tymi herbami?";
+            str += (plural) ? "z tymi herbami?" : "z tym herbem?";
         }
     }
     return str;
 }
 
-export function getQuestionText(unit: Unit, { guessFrom }: GameOptions): string | undefined {
+export function getQuestionText(unit: Unit, { guessFrom }: GameOptions): string {
     if (guessFrom === "name") {
         const prefix = (unit.type === "voivodeship")
             ? "województwo "
@@ -105,5 +109,5 @@ export function getQuestionText(unit: Unit, { guessFrom }: GameOptions): string 
     } else if (guessFrom === "plate") {
         return unit.plates.join(", ");
     }
-    return undefined;
+    throw new Error("No question text programmed for the provided game options.");
 }

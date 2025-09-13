@@ -18,9 +18,8 @@ export type GameState = "unpaused" | "paused" | "finished";
 export interface Question {
     /** TERC id of the administrative unit this question is about. */
     id: string;
-    text?: string;
-    /** URL of image to be shown when this question is presented. */
-    imageURL?: string;
+    /** Contains either text or the URL of an image to be shown when this question is presented. */
+    value: string;
     /** The amount of times the player has attempted to answer this question. */
     tries: number;
     answers: Answer[];
@@ -29,8 +28,7 @@ export interface Question {
 export interface Answer {
     /** TERC id of the administrative unit this answer is about. MAY NOT BE UNIQUE. */
     id: string;
-    text?: string;
-    /** URL of image to be shown when this answer is presented. */
-    imageURL?: string;
+    /** Contains either text or the URL of an image to be shown when this answer is presented. */
+    value: string;
     correct: boolean;
 }

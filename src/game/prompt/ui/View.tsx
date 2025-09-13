@@ -7,6 +7,7 @@ export function View() {
     const usePromptGameStore = useContext(PromptGameStoreContext);
 
     const options = usePromptGameStore((game) => game.options);
+    const title = usePromptGameStore((game) => game.title);
     const prompt = usePromptGameStore((state) => state.prompts[state.current]);
 
     const inputPlaceholder = getInputPlaceholder(options);
@@ -20,17 +21,17 @@ export function View() {
     return (
         <div className="relative flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col items-center 
             pt-[60px] pb-[50px] max-sm:pb-[120px] px-[20px]">
-            {prompt.imageURL && (
+            {(options.guessFrom === "flag" || options.guessFrom === "coa") && (
                 <div className="relative w-full max-w-[700px] flex-1 min-h-[200px] max-h-[500px] mb-[30px]">
                     <img
                         className="absolute left-0 top-0 w-full h-full"
-                        src={prompt.imageURL}
+                        src={prompt.value}
                     />
                 </div>
             )}
 
             <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80 dark:text-gray-10 mt-auto text-center">
-                {prompt.text}
+                {title || prompt.value}
             </h2>
             <PromptInput
                 placeholder={inputPlaceholder}

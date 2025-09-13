@@ -42,7 +42,7 @@ export function ImageCard({ questionIndex, textTransform }: ImageCardProps) {
         <div className="bg-white dark:bg-gray-90 rounded-[15px] p-[10px] pt-[15px] flex flex-col gap-[15px]">
             <img
                 className="aspect-3/2"
-                src={question.imageURL}
+                src={question.value}
             />
 
             <div className="flex flex-col gap-[6px]">
@@ -52,7 +52,7 @@ export function ImageCard({ questionIndex, textTransform }: ImageCardProps) {
                         return (
                             <GuessedAnswer
                                 key={slotIndex}
-                                text={answer.text}
+                                text={answer.value}
                             />
                         );
                     }

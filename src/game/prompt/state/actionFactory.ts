@@ -40,7 +40,7 @@ export function createPromptGameStoreActions(
             const prompt = game.prompts[game.current];
             const newPrompt = {
                 ...prompt,
-                answers: prompt.answers.map((answer) => (answer.text.toLowerCase() === playersGuess.toLowerCase()) ? {
+                answers: prompt.answers.map((answer) => (answer.value.toLowerCase() === playersGuess.toLowerCase()) ? {
                     ...answer,
                     guessed: true,
                 } : answer),
@@ -65,7 +65,7 @@ export function createPromptGameStoreActions(
                 } else if (game.options.guessFrom === "flag" || game.options.guessFrom === "coa") {
                     if (game.current + 2 < game.prompts.length) {
                         const nextNextQuestion = game.prompts[game.current + 2];
-                        preloadImage(nextNextQuestion.imageURL!);       // preload image for soon-to-be next prompt
+                        preloadImage(nextNextQuestion.value);       // preload image for soon-to-be next prompt
                     }
                 }
             } else {
@@ -81,7 +81,7 @@ export function createPromptGameStoreActions(
     function getGuessResult(playersGuess: string): GuessResult {
         const game = get();
         const prompt = game.prompts[game.current];
-        const answer = prompt.answers.find((answer) => answer.text.toLowerCase() === playersGuess.toLowerCase());
+        const answer = prompt.answers.find((answer) => answer.value.toLowerCase() === playersGuess.toLowerCase());
         if (!answer) {
             return "wrong";
         } else if (answer.guessed) {

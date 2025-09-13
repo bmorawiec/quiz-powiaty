@@ -1,33 +1,18 @@
 import { ArrowDownIcon, ArrowUpIcon } from "src/ui";
-import type { Question } from "../../state";
+import type { Question } from "../../../state";
 import { useMemo, useState } from "react";
+import type { GameOptions } from "src/gameOptions";
+import { QuestionAnswers } from "./QuestionAnswers";
 
 export interface QuestionBrowserProps {
     questions: Question[];
+    options: GameOptions;
 }
 
-export function QuestionBrowser({ questions }: QuestionBrowserProps) {
+export function QuestionBrowser({ questions, options }: QuestionBrowserProps) {
     const [current, setCurrent] = useState(0);        // current question index
     const question = useMemo(() => questions[current], [current, questions]);
     const points = (question.tries < 3) ? 3 - question.tries : 0;
-
-    const [answerText, imageURLs] = useMemo(() => {
-        const textList: string[] = [];
-        const imageURLs: string[] = [];
-        for (const answer of question.answers) {
-            if (answer.correct) {
-                if (answer.text !== undefined) {
-                    textList.push(answer.text);
-                }
-                if (answer.imageURL !== undefined) {
-                    imageURLs.push(answer.imageURL);
-                }
-            }
-        }
-
-        const answerText = (textList.length > 0) ? textList.join(", ") : null;
-        return [answerText, imageURLs];
-    }, [question]);
 
     const handlePrevClick = () => {
         if (current > 0) {
@@ -44,33 +29,29 @@ export function QuestionBrowser({ questions }: QuestionBrowserProps) {
     return (
         <div className="flex rounded-[10px] border bg-white border-gray-15 dark:bg-gray-95 dark:border-gray-80">
             <div className="flex-1 flex flex-col px-[22px] pt-[18px] pb-[16px] gap-[4px]">
-                <h3 className="font-[550]">
-                    Pytanie {current + 1}/{questions.length}: {question.text}
-                </h3>
-                {question.imageURL && (
+                {(options.guessFrom === "flag" || options.guessFrom === "coa") ? (<>
+                    <h3 className="font-[550]">
+                        Pytanie {current + 1}/{questions.length}
+                    </h3>
                     <img
-                        src={question.imageURL}
+                        src={question.value}
                         className="w-[100px]"
                     />
+                </>) : (
+                    <h3 className="font-[550]">
+                        Pytanie {current + 1}/{questions.length}: {question.value}
+                    </h3>
                 )}
-                <p>
-                    Poprawna odpowiedź: {answerText}
-                </p>
-                {imageURLs.length > 0 && (
-                    <div className="flex gap-[10px]">
-                        {imageURLs.map((imageURL) =>
-                            <img
-                                src={imageURL}
-                                className="w-[100px]"
-                            />
-                        )}
-                    </div>
-                )}
+
+                <QuestionAnswers
+                    question={question}
+                    options={options}
+                />
+
                 <div className="flex gap-[4px] max-xs:flex-col justify-between">
                     <p>
                         Otrzymanych punktów: {points}/3
                     </p>
-
                     <p>
                         Zgadnięto za {question.tries + 1}. razem
                     </p>

@@ -13,14 +13,14 @@ export async function createTypingGameStore(options: GameOptions): Promise<Typin
     const questions = getQuestions(filteredUnits, options);
     if (options.guessFrom === "flag" || options.guessFrom === "coa") {
         // preload all flags/COAs
-        await Promise.all(questions.map((question) => preloadImage(question.imageURL!)));
+        await Promise.all(questions.map((question) => preloadImage(question.value)));
     }
 
     return createGameStore<TypingGameStore>((set, get) => ({
         state: "unpaused",
         timestamps: [Date.now()],
         options,
-        title: formatTitle(options),
+        title: formatTitle(options, true),
         questions,
         answered: 0,
         ...createGameStoreActions(set, get),
@@ -33,37 +33,41 @@ function getQuestions(units: Unit[], options: GameOptions): TypingQuestion[] {
     const questions = units.map((unit) => {
         const question: TypingQuestion = {
             id: unit.id,
-            text: getQuestionText(unit, options),
-            answers: getQuestionAnswers(unit, options),
+            value: getQuestionValue(unit, options),
+            answers: getAnswers(unit, options),
             provided: 0,
             tries: 0,
         };
-        if (options.guessFrom === "flag") {
-            question.imageURL = "/images/flag/" + unit.id + ".svg";
-        } else if (options.guessFrom === "coa") {
-            question.imageURL = "/images/coa/" + unit.id + ".svg";
-        }
         return question;
     });
     if (options.guessFrom === "flag" || options.guessFrom === "coa") {
         return toShuffled(questions);   // scramble questions so that you can't guess based on alphabetical order
     } else {
         // if guessing based on text, then the questions should be ordered alphabetically
-        return questions.sort((a, b) => a.text!.localeCompare(b.text!));        // using sort with side effects
+        return questions.sort((a, b) => a.value!.localeCompare(b.value!));        // using sort with side effects
     }
 }
 
-function getQuestionAnswers(unit: Unit, options: GameOptions): TypingAnswer[] {
-    return getQuestionAnswerStrings(unit, options).map((text) => ({
+function getQuestionValue(unit: Unit, options: GameOptions): string {
+    if (options.guessFrom === "flag") {
+        return "/images/flag/" + unit.id + ".svg";
+    } else if (options.guessFrom === "coa") {
+        return "/images/coa/" + unit.id + ".svg";
+    }
+    return getQuestionText(unit, options);
+}
+
+function getAnswers(unit: Unit, options: GameOptions): TypingAnswer[] {
+    return getAnswerValues(unit, options).map((value) => ({
         id: unit.id,
-        text,
+        value,
         correct: true,
         guessed: false,
         slotIndex: -1,
     } satisfies TypingAnswer));
 }
 
-function getQuestionAnswerStrings(unit: Unit, options: GameOptions): string[] {
+function getAnswerValues(unit: Unit, options: GameOptions): string[] {
     if (options.guess === "name") {
         return [unit.name];
     } else if (options.guess === "capital") {

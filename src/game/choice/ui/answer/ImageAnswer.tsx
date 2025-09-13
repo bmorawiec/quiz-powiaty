@@ -1,10 +1,15 @@
 import clsx from "clsx";
 import { useContext } from "react";
 import { useAnimation } from "src/utils/useAnimation";
+import type { ChoiceAnswer } from "../../state";
 import { ChoiceGameStoreContext } from "../../storeContext";
-import type { AnswerProps } from "./Answer";
 
-export function ImageAnswer({ answer, onCorrectGuess }: AnswerProps) {
+export interface ImageAnswerProps {
+    answer: ChoiceAnswer;
+    onCorrectGuess: () => void;
+}
+
+export function ImageAnswer({ answer, onCorrectGuess }: ImageAnswerProps) {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);
     const guess = useChoiceGameStore((state) => state.guess);
 
@@ -26,7 +31,7 @@ export function ImageAnswer({ answer, onCorrectGuess }: AnswerProps) {
             onClick={handleClick}
         >
             <img
-                src={answer.imageURL}
+                src={answer.value}
                 className="absolute left-0 top-0 size-full"
             />
         </button>

@@ -34,11 +34,11 @@ export function createChoiceGameStoreActions(
             } else if (game.current + 2 < game.questions.length) {
                 if (game.options.guessFrom === "flag" || game.options.guessFrom === "coa") {
                     const nextNextQuestion = game.questions[game.current + 2];
-                    preloadImage(nextNextQuestion.imageURL!);       // preload image for soon-to-be next question
+                    preloadImage(nextNextQuestion.value);       // preload image for soon-to-be next question
                 } else if (game.options.guess === "flag" || game.options.guess === "coa") {
                     const nextNextQuestion = game.questions[game.current + 2];
                     for (const answer of nextNextQuestion.answers) {
-                        preloadImage(answer.imageURL!);     // preload images for answers of soon-to-be next question
+                        preloadImage(answer.value);     // preload images for answers of soon-to-be next question
                     }
                 }
             }

@@ -24,7 +24,7 @@ export function createTypingGameStoreActions(
             throw new Error("Couldn't find question with the specified ID: " + questionId);
 
         const answer = question.answers
-            .find((answer) => answer.text.toLowerCase() === playersGuess.toLowerCase());
+            .find((answer) => answer.value.toLowerCase() === playersGuess.toLowerCase());
         if (!answer) {      // a correct answer with this text doesn't exist
             const newQuestion: TypingQuestion = {
                 ...question,
@@ -49,7 +49,7 @@ export function createTypingGameStoreActions(
             const newQuestion: TypingQuestion = {
                 ...question,
                 answers: question.answers
-                    .map((ans) => (ans.text === answer.text) ? newAnswer : ans),
+                    .map((ans) => (ans.value === answer.value) ? newAnswer : ans),
                 provided: question.provided + 1,
             };
             set({

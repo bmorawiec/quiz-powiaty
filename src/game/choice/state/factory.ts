@@ -1,6 +1,6 @@
 import type { Unit } from "src/data/common";
 import { units } from "src/data/units";
-import { createGameStore, createGameStoreActions, formatQuestion } from "src/game/common";
+import { createGameStore, createGameStoreActions, formatQuestion, formatTitle } from "src/game/common";
 import { type GameOptions, matchesFilters } from "src/gameOptions";
 import { preloadImage } from "src/utils/preloadImage";
 import { toShuffled } from "src/utils/shuffle";
@@ -15,18 +15,22 @@ export async function createChoiceGameStore(options: GameOptions): Promise<Choic
     if (options.guessFrom === "flag" || options.guessFrom === "coa") {
         const firstTwoQuestions = questions.slice(0, 2);
         // preload flags/COAs for the first two prompts
-        await Promise.all(firstTwoQuestions.map((prompt) => preloadImage(prompt.imageURL!)));
+        await Promise.all(firstTwoQuestions.map((prompt) => preloadImage(prompt.value)));
     } else if (options.guess === "flag" || options.guess === "coa") {
         const firstTwoQuestions = questions.slice(0, 2);
         // preload flags/COAs for answers of the first two prompts
         await Promise.all(firstTwoQuestions.map((prompt) =>
-            Promise.all(prompt.answers.map((answer) => answer.imageURL))));
+            Promise.all(prompt.answers.map((answer) => answer.value))));
     }
+
 
     return createGameStore<ChoiceGameStore>((set, get) => ({
         state: "unpaused",
         timestamps: [Date.now()],
         options,
+        title: (options.guessFrom === "flag" || options.guessFrom === "coa")
+            ? formatTitle(options)
+            : undefined,
         questions,
         current: 0,
         answered: 0,
@@ -41,17 +45,21 @@ function getQuestions(units: Unit[], allUnits: Unit[], options: GameOptions): Ch
     return shuffledUnits.map((unit) => {
         const question: ChoiceQuestion = {
             id: unit.id,
-            text: formatQuestion(unit, options),
+            value: getQuestionValue(unit, options),
             answers: getAnswers(unit, allUnits, options),
             tries: 0,
         };
-        if (options.guessFrom === "flag") {
-            question.imageURL = "/images/flag/" + unit.id + ".svg";
-        } else if (options.guessFrom === "coa") {
-            question.imageURL = "/images/coa/" + unit.id + ".svg";
-        }
         return question;
     });
+}
+
+function getQuestionValue(unit: Unit, options: GameOptions) {
+    if (options.guessFrom === "flag") {
+        return "/images/flag/" + unit.id + ".svg";
+    } else if (options.guessFrom === "coa") {
+        return "/images/coa/" + unit.id + ".svg";
+    }
+    return formatQuestion(unit, options);
 }
 
 function getAnswers(unit: Unit, allUnits: Unit[], options: GameOptions): ChoiceAnswer[] {
@@ -76,19 +84,13 @@ function getAnswers(unit: Unit, allUnits: Unit[], options: GameOptions): ChoiceA
 function getAnswerFromUnit(unit: Unit, options: GameOptions, correct?: boolean): ChoiceAnswer {
     const answer: ChoiceAnswer = {
         id: unit.id,
+        value: getAnswerValue(unit, options),
         correct: !!correct,
     };
-    if (options.guess === "flag") {
-        answer.imageURL = "/images/flag/" + unit.id + ".svg";
-    } else if (options.guess === "coa") {
-        answer.imageURL = "/images/coa/" + unit.id + ".svg";
-    } else {
-        answer.text = getAnswerText(unit, options);
-    }
     return answer;
 };
 
-function getAnswerText(unit: Unit, options: GameOptions): string {
+function getAnswerValue(unit: Unit, options: GameOptions): string {
     if (options.guess === "name") {
         const prefix = (unit.type === "voivodeship")
             ? "województwo "
@@ -98,6 +100,10 @@ function getAnswerText(unit: Unit, options: GameOptions): string {
         return unit.capitals.join(", ");
     } else if (options.guess === "plate") {
         return unit.plates.join(", ");
+    } else if (options.guess === "flag") {
+        return "/images/flag/" + unit.id + ".svg";
+    } else if (options.guess === "coa") {
+        return "/images/coa/" + unit.id + ".svg";
     }
     throw Error("Text not defined for the provided game options.");
 }

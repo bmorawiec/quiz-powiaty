@@ -21,7 +21,6 @@ export interface TypingQuestion extends Question {
 }
 
 export interface TypingAnswer extends Answer {
-    text: string;
     correct: true;
     /** Whether or not this answer has been guessed by the player. */
     guessed: boolean;
