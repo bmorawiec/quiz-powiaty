@@ -16,8 +16,10 @@ export interface GameStore extends GameStoreActions {
 export type GameState = "unpaused" | "paused" | "finished";
 
 export interface Question {
-    /** Id of the administrative unit this question is about. */
+    /** A UUID. */
     id: string;
+    /** Id of the administrative unit this question is about. */
+    about: string;
     /** Contains either text or the URL of an image to be shown when this question is presented. */
     value: string;
     /** The amount of times the player has attempted to answer this question. */
@@ -26,8 +28,10 @@ export interface Question {
 }
 
 export interface Answer {
-    /** Id of the administrative unit this answer is about. MAY NOT BE UNIQUE. */
+    /** A UUID */
     id: string;
+    /** Id of the administrative unit this answer is about. */
+    about: string;
     /** Contains either text or the URL of an image to be shown when this answer is presented. */
     value: string;
     correct: boolean;

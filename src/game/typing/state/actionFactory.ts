@@ -49,7 +49,7 @@ export function createTypingGameStoreActions(
             const newQuestion: TypingQuestion = {
                 ...question,
                 answers: question.answers
-                    .map((ans) => (ans.value === answer.value) ? newAnswer : ans),
+                    .map((ans) => (ans.id === answer.id) ? newAnswer : ans),
                 provided: question.provided + 1,
             };
             set({

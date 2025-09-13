@@ -4,6 +4,7 @@ import { createGameStore, createGameStoreActions, formatQuestion, formatTitle } 
 import { type GameOptions, matchesFilters } from "src/gameOptions";
 import { preloadImage } from "src/utils/preloadImage";
 import { toShuffled } from "src/utils/shuffle";
+import { ulid } from "ulid";
 import { createChoiceGameStoreActions } from "./actionFactory";
 import { plausibleAnswerUnits } from "./plausibleAnswers";
 import type { ChoiceAnswer, ChoiceGameStore, ChoiceGameStoreHook, ChoiceQuestion } from "./types";
@@ -44,7 +45,8 @@ function getQuestions(units: Unit[], allUnits: Unit[], options: GameOptions): Ch
     const shuffledUnits = toShuffled(units);
     return shuffledUnits.map((unit) => {
         const question: ChoiceQuestion = {
-            id: unit.id,
+            id: ulid(),
+            about: unit.id,
             value: getQuestionValue(unit, options),
             answers: getAnswers(unit, allUnits, options),
             tries: 0,
@@ -70,7 +72,7 @@ function getAnswers(unit: Unit, allUnits: Unit[], options: GameOptions): ChoiceA
     while (answers.length < 5) {
         const randomIndex = Math.floor(Math.random() * allUnits.length);
         const incorrectUnit = allUnits[randomIndex];
-        if (incorrectUnit !== unit && !answers.some((option) => option.id === incorrectUnit.id)) {
+        if (incorrectUnit !== unit && !answers.some((option) => option.about === incorrectUnit.id)) {
             answers.push(getAnswerFromUnit(incorrectUnit, options));
         }
     }
@@ -83,7 +85,8 @@ function getAnswers(unit: Unit, allUnits: Unit[], options: GameOptions): ChoiceA
 
 function getAnswerFromUnit(unit: Unit, options: GameOptions, correct?: boolean): ChoiceAnswer {
     const answer: ChoiceAnswer = {
-        id: unit.id,
+        id: ulid(),
+        about: unit.id,
         value: getAnswerValue(unit, options),
         correct: !!correct,
     };

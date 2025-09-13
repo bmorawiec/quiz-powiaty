@@ -4,6 +4,7 @@ import { createGameStore, createGameStoreActions, formatTitle, getQuestionText }
 import { type GameOptions, InvalidGameOptionsError, matchesFilters } from "src/gameOptions";
 import { preloadImage } from "src/utils/preloadImage";
 import { toShuffled } from "src/utils/shuffle";
+import { ulid } from "ulid";
 import { createTypingGameStoreActions } from "./actionFactory";
 import { type TypingAnswer, type TypingGameStore, type TypingGameStoreHook, type TypingQuestion } from "./types";
 
@@ -32,7 +33,8 @@ export async function createTypingGameStore(options: GameOptions): Promise<Typin
 function getQuestions(units: Unit[], options: GameOptions): TypingQuestion[] {
     const questions = units.map((unit) => {
         const question: TypingQuestion = {
-            id: unit.id,
+            id: ulid(),
+            about: unit.id,
             value: getQuestionValue(unit, options),
             answers: getAnswers(unit, options),
             provided: 0,
@@ -59,7 +61,8 @@ function getQuestionValue(unit: Unit, options: GameOptions): string {
 
 function getAnswers(unit: Unit, options: GameOptions): TypingAnswer[] {
     return getAnswerValues(unit, options).map((value) => ({
-        id: unit.id,
+        id: ulid(),
+        about: unit.id,
         value,
         correct: true,
         guessed: false,

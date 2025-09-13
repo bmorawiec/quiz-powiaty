@@ -4,6 +4,7 @@ import { createGameStore, createGameStoreActions, formatQuestion, formatTitle } 
 import { type GameOptions, InvalidGameOptionsError, matchesFilters } from "src/gameOptions";
 import { preloadImage } from "src/utils/preloadImage";
 import { toShuffled } from "src/utils/shuffle";
+import { ulid } from "ulid";
 import { createPromptGameStoreActions } from "./actionFactory";
 import { type PromptAnswer, type PromptGameStore, type PromptGameStoreHook, type PromptQuestion } from "./types";
 
@@ -37,7 +38,8 @@ function getPrompts(units: Unit[], options: GameOptions): PromptQuestion[] {
     const shuffledUnits = toShuffled(units);
     return shuffledUnits.map((unit) => {
         const question: PromptQuestion = {
-            id: unit.id,
+            id: ulid(),
+            about: unit.id,
             value: getPromptValue(unit, options),
             answers: getAnswers(unit, options),
             provided: 0,
@@ -58,7 +60,8 @@ function getPromptValue(unit: Unit, options: GameOptions): string {
 
 function getAnswers(unit: Unit, options: GameOptions): PromptAnswer[] {
     return getAnswerValues(unit, options).map((value) => ({
-        id: unit.id,
+        id: ulid(),
+        about: unit.id,
         value,
         correct: true,
         guessed: false,
