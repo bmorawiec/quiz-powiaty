@@ -98,8 +98,10 @@ export function Game() {
                 (fullscreen) ? "py-[20px]" : "lg:px-[100px] sm:pb-[38px]")}
         >
             {(isError) ? (
-                <GameError details="Podany adres gry jest nieprawidłowy. Upewnij się, że adres jest poprawny
-                    albo spróbuj wybrać inny tryb gry."/>
+                <GameError
+                    title="Podany adres gry jest nieprawidłowy"
+                    details="Spróbuj ponownie przepisać adres lub wybierz inny tryb gry."
+                />
             ) : (
                 options && (    // options is null when game is loading
                     (options.gameType === "choiceGame") ? (

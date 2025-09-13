@@ -1,10 +1,11 @@
 import { CloseIcon, LargeLink, SmallArrowLeftIcon } from "src/ui";
 
 export interface GameErrorProps {
+    title: string;
     details: string;
 }
 
-export function GameError({ details }: GameErrorProps) {
+export function GameError({ title, details }: GameErrorProps) {
     return (
         <div className="size-full bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex items-center justify-center
             px-[40px]">
@@ -12,7 +13,7 @@ export function GameError({ details }: GameErrorProps) {
                 <div className="flex items-center gap-[8px]">
                     <CloseIcon className="size-[24px]"/>
                     <h2 className="text-[28px]">
-                        Coś poszło nie tak...
+                        {title}
                     </h2>
                 </div>
                 <p className="text-[20px]">
