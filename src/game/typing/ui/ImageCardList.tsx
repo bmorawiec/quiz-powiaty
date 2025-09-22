@@ -1,7 +1,7 @@
 import { useContext, useMemo } from "react";
 import { ImageCard } from "./card";
-
 import { TypingGameStoreContext } from "../storeContext";
+
 export interface ImageCardListProps {
     textTransform?: "uppercase" | "capitalize";
 }
