@@ -9,7 +9,8 @@ export function View() {
 
     const options = useChoiceGameStore((game) => game.options);
     const title = useChoiceGameStore((game) => game.title);
-    const question = useChoiceGameStore((state) => state.questions[state.current]);
+    const questionValue = useChoiceGameStore((state) => state.questions[state.current].value);
+    const questionAnswers = useChoiceGameStore((state) => state.questions[state.current].answers);
 
     const [isCorrectAnim, startCorrectAnim] = useAnimation(450);
     const handleCorrectGuess = () => {
@@ -24,17 +25,17 @@ export function View() {
                 <div className="relative w-full max-w-[700px] flex-1 min-h-[200px] max-h-[500px] mb-[30px]">
                     <img
                         className="absolute left-0 top-0 w-full h-full"
-                        src={question.value}
+                        src={questionValue}
                     />
                 </div>
             )}
 
             <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80 dark:text-gray-10 mt-auto text-center">
-                {title || question.value}
+                {title || questionValue}
             </h2>
 
             <div className="w-full max-w-[1000px] grid grid-cols-2 md:grid-cols-3 gap-[10px]">
-                {question.answers.map((answer) =>
+                {questionAnswers.map((answer) =>
                     <Answer
                         key={answer.id}
                         answer={answer}
