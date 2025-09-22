@@ -33,7 +33,7 @@ export function PromptGame({ onRestart, onOptionsChange, fullscreen, onToggleFul
             <View/>
         )}
 
-        <Sidebar>
+        <Sidebar gameState={gameState}>
             <SidebarContent
                 gameState={gameState}
                 calculateTime={calculateTime}

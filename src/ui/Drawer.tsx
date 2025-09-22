@@ -1,26 +1,30 @@
-import { useRef, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 export interface DrawerProps {
+    expanded: boolean;
+    onExpandedChange: (newExpanded: boolean) => void;
     collapsedHeight: number;
     children?: ReactNode;
 }
 
+// the distance (in pixels) the drawer has to be moved from the expanded/collapsed position
+// so that it collapses/expands
 const THRESHOLD = 100;
 
-export function Drawer({ collapsedHeight, children }: DrawerProps) {
+export function Drawer({ expanded, onExpandedChange, collapsedHeight, children }: DrawerProps) {
     const root = useRef<HTMLDivElement | null>(null);
 
+    // true if the next scrollend event to be triggered will be caused by a programmatic scroll
+    // false if the next scrollend event to be triggered will be caused by the user
     const isProgramaticScroll = useRef(false);
-    const expanded = useRef(false);
-    const setExpanded = (newExpanded: boolean) => {
+    useEffect(() => {
         const elem = root.current!;
         const maxScrollTop = window.innerHeight - collapsedHeight;
 
-        expanded.current = newExpanded;
-        elem.scrollTop = (newExpanded) ? maxScrollTop : 0;
+        elem.scrollTop = (expanded) ? maxScrollTop : 0;
 
         isProgramaticScroll.current = true;
-    };
+    }, [expanded, collapsedHeight]);
 
     const handleScrollEnd = () => {
         if (isProgramaticScroll.current) {
@@ -30,15 +34,15 @@ export function Drawer({ collapsedHeight, children }: DrawerProps) {
 
         const elem = root.current!;
         const maxScrollTop = window.innerHeight - collapsedHeight;
-        if (expanded.current) {
+        if (expanded) {
             if (elem.scrollTop < maxScrollTop) {
                 const shouldBeExpanded = elem.scrollTop > maxScrollTop - THRESHOLD;
-                setExpanded(shouldBeExpanded);
+                onExpandedChange(shouldBeExpanded);
             }
         } else {
             if (elem.scrollTop > 0) {
                 const shouldBeExpanded = elem.scrollTop > THRESHOLD;
-                setExpanded(shouldBeExpanded);
+                onExpandedChange(shouldBeExpanded);
             }
         }
     };
