@@ -31,15 +31,37 @@ export interface Unit {
     density: number;
 }
 
-export type UnitType = "county" | "voivodeship";
+export const unitTypes = ["county", "voivodeship"] as const;
+export type UnitType = (typeof unitTypes)[number];
+
+export function isUnitType(maybeUnitType: unknown): maybeUnitType is UnitType {
+    return unitTypes.includes(maybeUnitType as UnitType);
+}
+
+export const countyTypes = ["county", "city"];
 export type CountyType = "county" | "city";
 
-export const voivodeshipIds = ["02", "04", "06", "08", "10", "12", "14", "16",
-    "18", "20", "22", "24", "26", "28", "30", "32"] as const;
+export function isCountyType(maybeCountyType: unknown): maybeCountyType is CountyType {
+    return countyTypes.includes(maybeCountyType as CountyType);
+}
+
+export const voivodeshipIds = [
+    "02", "04", "06", "08", "10", "12", "14", "16",
+    "18", "20", "22", "24", "26", "28", "30", "32"
+] as const;
 export type VoivodeshipId = (typeof voivodeshipIds)[number];
 
+export function isVoivodeshipId(maybeVoivodeshipId: unknown): maybeVoivodeshipId is VoivodeshipId {
+    return voivodeshipIds.includes(maybeVoivodeshipId as VoivodeshipId);
+}
+
 /** Represents data fields that can be guessed by the player or that can serve as a hint. */
-export type Guessable = "name" | "capital" | "plate" | "flag" | "coa" | "map";
+export const guessables = ["name", "capital", "plate", "flag", "coa", "map"] as const;
+export type Guessable = (typeof guessables)[number];
+
+export function isGuessable(maybeGuessable: unknown): maybeGuessable is Guessable {
+    return guessables.includes(maybeGuessable as Guessable);
+}
 
 /** Stores information about the shape of an administrative unit. */
 export interface UnitShape {

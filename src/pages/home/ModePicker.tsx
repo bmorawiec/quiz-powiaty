@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useNavigate } from "react-router";
 import type { Guessable, UnitType } from "src/data/common";
-import { type GameOptions, type GameType, encodeGameURL, validateGameOptions } from "src/gameOptions";
+import { type GameOptions, type GameType, encodeGameURL, isGameOptions, validateGameOptions } from "src/gameOptions";
 import {
     CarIcon,
     COAIcon,
@@ -20,9 +20,10 @@ import { useAnimation } from "src/utils/useAnimation";
 export function ModePicker() {
     const navigate = useNavigate();
 
-    const [guess, setGuess] = useState<Guessable>("map");
-    const [guessFrom, setGuessFrom] = useState<Guessable>("name");
-    const [unitType, setUnitType] = useState<UnitType>("county");
+    const initialOptions = useMemo(() => getInitialOptions(), []);
+    const [guess, setGuess] = useState<Guessable>(initialOptions.guess);
+    const [guessFrom, setGuessFrom] = useState<Guessable>(initialOptions.guessFrom);
+    const [unitType, setUnitType] = useState<UnitType>(initialOptions.unitType);
 
     const [isInvalidAnim, startInvalidAnim] = useAnimation(450);
     const handlePlayClick = () => {
@@ -38,6 +39,8 @@ export function ModePicker() {
                 voivodeships: [],
             },
         };
+        localStorage.setItem("QuizPowiaty.lastPickerMode", JSON.stringify(options));
+
         if (validateGameOptions(options)) {
             navigate(encodeGameURL(options));
         } else {
@@ -111,4 +114,24 @@ export function ModePicker() {
             />
         </div>
     );
+}
+
+function getInitialOptions(): GameOptions {
+    const keyValue = localStorage.getItem("QuizPowiaty.lastPickerMode");
+    if (keyValue) {
+        const options = JSON.parse(keyValue);
+        if (isGameOptions(options)) {
+            return options;
+        }
+    }
+    return {
+        gameType: "choiceGame",
+        unitType: "county",
+        guessFrom: "name",
+        guess: "map",
+        filters: {
+            countyTypes: [],
+            voivodeships: [],
+        },
+    };
 }

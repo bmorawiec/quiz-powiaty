@@ -1,4 +1,14 @@
-import { type CountyType, type Guessable, type Unit, type UnitType, type VoivodeshipId } from "src/data/common";
+import {
+    isCountyType,
+    isGuessable,
+    isUnitType,
+    isVoivodeshipId,
+    type CountyType,
+    type Guessable,
+    type Unit,
+    type UnitType,
+    type VoivodeshipId,
+} from "src/data/common";
 
 export class InvalidGameOptionsError extends Error {
     name = "InvalidGameOptionsError";
@@ -8,7 +18,12 @@ export class InvalidGameOptionsError extends Error {
     }
 }
 
-export type GameType = "choiceGame" | "dndGame" | "mapGame" | "promptGame" | "typingGame";
+export const gameTypes = ["choiceGame", "dndGame", "mapGame", "promptGame", "typingGame"] as const;
+export type GameType = (typeof gameTypes)[number];
+
+export function isGameType(maybeGameType: unknown): maybeGameType is GameType {
+    return gameTypes.includes(maybeGameType as GameType);
+}
 
 export interface GameOptions {
     gameType: GameType;
@@ -16,6 +31,16 @@ export interface GameOptions {
     guessFrom: Guessable;
     guess: Guessable;
     filters: UnitFilters;
+}
+
+export function isGameOptions(maybeOptions: unknown): maybeOptions is GameOptions {
+    return typeof maybeOptions === "object"
+        && maybeOptions !== null
+        && isGameType((maybeOptions as GameOptions).gameType)
+        && isUnitType((maybeOptions as GameOptions).unitType) 
+        && isGuessable((maybeOptions as GameOptions).guessFrom) 
+        && isGuessable((maybeOptions as GameOptions).guess) 
+        && isUnitFilters((maybeOptions as GameOptions).filters);
 }
 
 /** Used to filter counties depending on their types and/or the voivodeships they're a part of.
@@ -29,9 +54,16 @@ export interface UnitFilters {
     voivodeships: VoivodeshipId[];
 }
 
-/** "include" - All administrative units with the specified tag will be included.
- *  "exclude" - All administrative units with the specified tag will be excluded. */
-export type UnitFilterMode = "include" | "exclude";
+export function isUnitFilters(maybeFilters: unknown): maybeFilters is UnitFilters {
+    return typeof maybeFilters === "object"
+        && maybeFilters !== null
+        && Array.isArray((maybeFilters as UnitFilters).countyTypes)
+        && (maybeFilters as UnitFilters).countyTypes
+            .every((maybeCountyType) => isCountyType(maybeCountyType))
+        && Array.isArray((maybeFilters as UnitFilters).voivodeships)
+        && (maybeFilters as UnitFilters).voivodeships
+            .every((maybeVoivodeshipId) => isVoivodeshipId(maybeVoivodeshipId));
+}
 
 /** Returns true if the provided administrative unit matches the specified filters */
 export function matchesFilters(unit: Unit, filters: UnitFilters): boolean {
