@@ -9,12 +9,17 @@ export interface FinishedViewProps {
 export function FinishedView({ onRestart }: FinishedViewProps) {
     const useTypingGameStore = useContext(TypingGameStoreContext);
     const options = useTypingGameStore((game) => game.options);
-    const questions = useTypingGameStore((state) => state.questions);
+
+    const questions = useTypingGameStore((game) => game.questions);
+    const questionIds = useTypingGameStore((game) => game.questionIds);
+    const allAnswers = useTypingGameStore((game) => game.answers);
 
     return (
         <FinishedViewBase
             options={options}
             questions={questions}
+            questionIds={questionIds}
+            allAnswers={allAnswers}
             onRestart={onRestart}
         />
     );

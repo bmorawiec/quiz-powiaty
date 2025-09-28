@@ -1,7 +1,7 @@
-import type { StoreApi } from "zustand";
-import { getTextHint } from "../../common";
-import type { GuessResult, PromptAnswer, PromptGameStore, PromptQuestion } from "./types";
 import { preloadImage } from "src/utils/preloadImage";
+import type { StoreApi } from "zustand";
+import { AnswerNotFoundError, getTextHint, QuestionNotFoundError } from "../../common";
+import type { GuessResult, PromptAnswer, PromptGameStore } from "./types";
 
 export interface PromptGameStoreActions {
     /** Checks if the player's guess is correct. If it was, then proceeds to the next question.
@@ -20,56 +20,141 @@ export function createPromptGameStoreActions(
         if (game.state !== "unpaused")
             throw new Error("Cannot perform this action while the game is paused or finished.");
 
-        const prompt = game.prompts[game.current];
-        const answer = prompt.answers
-            .find((answer) => answer.value.toLowerCase() === playersGuess.toLowerCase());
-        if (!answer) {          // a correct answer with this text doesn't exist
-            const newPrompt: PromptQuestion = {
-                ...prompt,
-                tries: prompt.tries + 1,
-            };
-            set({
-                prompts: game.prompts
-                    .map((p) => (p.id === prompt.id) ? newPrompt : p)
-            });
-            const hint = getTextHint(newPrompt, game.options);
+        const answer = getMatchingAnswer(playersGuess);
+        if (answer) {
+            if (answer.guessed) {       // a correct answer with this value exists, but it was already provided
+                return ["alreadyGuessed", null];
+            } else {                    // a correct answer with this value exist
+                nextAnswer(answer);
+                return ["correct", null];
+            }
+        } else {        // a correct answer with this value doesn't exist
+            increaseTryCount();
+
+            const hint = getHintForCurrent();
             return ["wrong", hint];
         }
+    }
 
-        if (answer.guessed) {   // a correct answer with this text exist, but it was already provided
-            return ["alreadyGuessed", null];
-        } else {                // a correct answer with this text exist
-            const newAnswer: PromptAnswer = {
-                ...answer,
-                guessed: true,
-            };
-            const newPrompt: PromptQuestion = {
-                ...prompt,
-                answers: prompt.answers
-                    .map((ans) => (ans.id === answer.id) ? newAnswer : ans),
-                provided: prompt.provided + 1,
-            };
-            set({
-                prompts: game.prompts
-                    .map((p) => (p.id === prompt.id) ? newPrompt : p),
-            });
-            if (newPrompt.provided === prompt.answers.length) {
-                set({
-                    // if all answers to this question have been provided,
-                    // then proceed to the next question
-                    current: game.current + 1,
-                    answered: game.answered + 1,
-                });
-                if (game.answered + 1 === game.prompts.length) {
-                    game.finish();      // if all the questions have been answered, then finish the game
-                } else if (game.options.guessFrom === "flag" || game.options.guessFrom === "coa") {
-                    if (game.current + 2 < game.prompts.length) {
-                        const nextNextPrompt = game.prompts[game.current + 2];
-                        preloadImage(nextNextPrompt.value);     // preload image for soon-to-be next prompt
-                    }
-                }
+    /** Finds an answer to the current question, of which the value matches the player's guess.
+     *  Returns null if no answer matches the player's guess. */
+    function getMatchingAnswer(playersGuess: string): PromptAnswer | null {
+        const game = get();
+
+        const question = game.questions[game.current];
+        if (!question)
+            throw new QuestionNotFoundError(game.current);
+
+        for (const answerId of question.answerIds) {
+            const answer = game.answers[answerId];
+            if (!answer)
+                throw new AnswerNotFoundError(answerId);
+
+            if (playersGuess.toLowerCase() === answer.value.toLowerCase()) {
+                return answer;
             }
-            return ["correct", null];
+        }
+        return null;
+    }
+
+    /** Returns a hint for the current question. */
+    function getHintForCurrent(): string | null {
+        const game = get();
+
+        const question = game.questions[game.current];
+        if (!question)
+            throw new QuestionNotFoundError(game.current);
+
+        const answers = question.answerIds.map((answerId) => {
+            const answer = game.answers[answerId];
+            if (!answer)
+                throw new AnswerNotFoundError(answerId);
+            return answer;
+        });
+        return getTextHint(question.tries, answers, game.options);
+    }
+
+    /** Proceeds to the next answer and marks the just-guessed one as guessed.
+     *  Proceeds onto the next question if all the answers have been provided.
+     *  @param guessedAnswer - the answer that the user has just guessed. */
+    function nextAnswer(guessedAnswer: PromptAnswer) {
+        const game = get();
+
+        const question = game.questions[game.current];
+        if (!question)
+            throw new QuestionNotFoundError(game.current);
+        set({
+            questions: {
+                ...game.questions,
+                [game.current]: {
+                    ...question,
+                    provided: question.provided + 1,
+                },
+            },
+            answers: {
+                ...game.answers,
+                [guessedAnswer.id]: {
+                    ...guessedAnswer,
+                    guessed: true,
+                },
+            },
+        });
+
+        if (question.provided + 1 >= question.answerIds.length) {
+            nextQuestion();     // proceed to the next question if all answers to this question have been given
+        }
+    }
+
+    /** Proceeds onto the next question. Preloads images for the next-next question.
+     *  Ends the game if all the questions have been answered. */
+    function nextQuestion() {
+        const game = get();
+        const nextQuestionId = game.questionIds[game.answered + 1];
+        set({
+            current: nextQuestionId,            // proceed to the next question
+            answered: game.answered + 1,
+        });
+
+        if (game.answered + 1 >= game.questionIds.length) {
+            game.finish();          // finish game if all questions have been answered
+        } else {
+            preloadNextQuestionImage();         // preload image for now next question
+        }
+    }
+
+    /** Increases the try counter for the current question. */
+    function increaseTryCount() {
+        const game = get();
+
+        const question = game.questions[game.current];
+        if (!question)
+            throw new QuestionNotFoundError(game.current);
+
+        set({
+            questions: {
+                ...game.questions,
+                [game.current]: {
+                    ...question,
+                    tries: question.tries + 1,
+                },
+            },
+        });
+    }
+
+    /** Preloads images for the next question. */
+    function preloadNextQuestionImage() {
+        const game = get();
+
+        const guessingFromFlagOrCOA = game.options.guessFrom === "flag" || game.options.guessFrom === "coa";
+        if (guessingFromFlagOrCOA) {
+            const nextQuestionIndex = game.answered + 1;
+            if (nextQuestionIndex < game.questionIds.length) {
+                const nextQuestionId = game.questionIds[nextQuestionIndex];
+                const nextQuestion = game.questions[nextQuestionId];
+                if (!nextQuestion)
+                    throw new QuestionNotFoundError(nextQuestionId);
+                preloadImage(nextQuestion.value);   // preload image for the next question
+            }
         }
     }
 

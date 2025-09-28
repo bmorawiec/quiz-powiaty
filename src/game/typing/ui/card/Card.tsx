@@ -1,34 +1,28 @@
-import { useContext, useMemo, useState } from "react";
+import { useContext, useState } from "react";
 import { InfoIcon } from "src/ui";
+import { QuestionNotFoundError } from "../../../common";
 import { type GuessResult } from "../../state";
 import { TypingGameStoreContext } from "../../storeContext";
-import { CardInput } from "./CardInput";
-import { GuessedAnswer } from "./GuessedAnswer";
+import { CellSlot } from "./CellSlot";
 
 export interface CardProps {
-    questionIndex: number;
+    questionId: string;
     textTransform?: "uppercase" | "capitalize";
 }
 
-export function Card({ questionIndex, textTransform }: CardProps) {
+export function Card({ questionId, textTransform }: CardProps) {
     const useTypingGameStore = useContext(TypingGameStoreContext);
     const guess = useTypingGameStore((game) => game.guess);
 
-    const question = useTypingGameStore((state) => state.questions[questionIndex]);
-
-    const slotIndexes = useMemo(() => {
-        const indexes = [];
-        for (let index = 0; index < question.answers.length; index++) {
-            indexes.push(index);
-        }
-        return indexes;
-    }, [question.answers.length]);
+    const question = useTypingGameStore((state) => state.questions[questionId]);
+    if (!question)
+        throw new QuestionNotFoundError(questionId);
 
     const [result, setResult] = useState<GuessResult | null>(null);
     const [hint, setHint] = useState<string | null>(null);
 
     const handleGuess = (text: string, slotIndex: number) => {
-        const [result, hint] = guess(question.id, text, slotIndex);
+        const [result, hint] = guess(questionId, text, slotIndex);
         setResult(result);
         if (result === "correct") {
             setHint(null);
@@ -45,25 +39,15 @@ export function Card({ questionIndex, textTransform }: CardProps) {
             </p>
 
             <div className="flex flex-col gap-[6px]">
-                {slotIndexes.map((slotIndex) => {
-                    const answer = question.answers.find((answer) => answer.slotIndex === slotIndex);
-                    if (answer) {
-                        return (
-                            <GuessedAnswer
-                                key={slotIndex}
-                                text={answer.value}
-                            />
-                        );
-                    }
-                    return (
-                        <CardInput
-                            key={slotIndex}
-                            textTransform={textTransform}
-                            slotIndex={slotIndex}
-                            onGuess={handleGuess}
-                        />
-                    );
-                })}
+                {question.answerIds.map((answerId, index) =>
+                    <CellSlot
+                        key={index}
+                        answerId={answerId}
+                        slotIndex={index}
+                        textTransform={textTransform}
+                        onGuess={handleGuess}
+                    />
+                )}
             </div>
         </div>
 

@@ -1,6 +1,13 @@
 import type { Unit } from "src/data/common";
 import { units } from "src/data/units";
-import { createGameStore, createGameStoreActions, formatQuestion, formatTitle } from "src/game/common";
+import {
+    AnswerNotFoundError,
+    createGameStore,
+    createGameStoreActions,
+    formatQuestion,
+    formatTitle,
+    QuestionNotFoundError,
+} from "src/game/common";
 import { type GameOptions, matchesFilters } from "src/gameOptions";
 import { preloadImage } from "src/utils/preloadImage";
 import { toShuffled } from "src/utils/shuffle";
@@ -12,47 +19,94 @@ import type { ChoiceAnswer, ChoiceGameStore, ChoiceGameStoreHook, ChoiceQuestion
 export async function createChoiceGameStore(options: GameOptions): Promise<ChoiceGameStoreHook> {
     const matchingUnits = units.filter((unit) => unit.type === options.unitType);
     const filteredUnits = matchingUnits.filter((unit) => matchesFilters(unit, options.filters));
-    const questions = getQuestions(filteredUnits, matchingUnits, options);
-    if (options.guessFrom === "flag" || options.guessFrom === "coa") {
-        const firstTwoQuestions = questions.slice(0, 2);
-        // preload flags/COAs for the first two prompts
-        await Promise.all(firstTwoQuestions.map((prompt) => preloadImage(prompt.value)));
-    } else if (options.guess === "flag" || options.guess === "coa") {
-        const firstTwoQuestions = questions.slice(0, 2);
-        // preload flags/COAs for answers of the first two prompts
-        await Promise.all(firstTwoQuestions.map((prompt) =>
-            Promise.all(prompt.answers.map((answer) => answer.value))));
-    }
+    const { questions, questionIds, answers, answerIds } = getQuestions(filteredUnits, matchingUnits, options);
 
+    if (options.guessFrom === "flag" || options.guessFrom === "coa") {
+        const firstTwoQuestionIds = questionIds.slice(0, 2);
+
+        // preload flags/COAs for the first two prompts
+        await Promise.all(firstTwoQuestionIds.map((id) => {
+            const question = questions[id];
+            if (!question)
+                throw new QuestionNotFoundError(id);
+
+            return preloadImage(question.value)
+        }));
+    } else if (options.guess === "flag" || options.guess === "coa") {
+        const firstTwoQuestionIds = questionIds.slice(0, 2);
+
+        // preload flags/COAs for answers of the first two prompts
+        await Promise.all(firstTwoQuestionIds.map((id) => {
+            const question = questions[id];
+            if (!question)
+                throw new QuestionNotFoundError(id);
+
+            return Promise.all(question.answerIds.map((id) => {
+                const answer = answers[id];
+                if (!answer)
+                    throw new AnswerNotFoundError(id);
+
+                return preloadImage(answer.value);
+            }));
+        }));
+    }
 
     return createGameStore<ChoiceGameStore>((set, get) => ({
         state: "unpaused",
         timestamps: [Date.now()],
         options,
+        questions,
+        questionIds,
+        answers,
+        answerIds,
         title: (options.guessFrom === "flag" || options.guessFrom === "coa")
             ? formatTitle(options)
             : undefined,
-        questions,
-        current: 0,
+        current: questionIds[0],
         answered: 0,
         ...createGameStoreActions(set, get),
         ...createChoiceGameStoreActions(set, get),
     }));
 }
 
-/** Generates an array of questions about the provided administrative units. */
-function getQuestions(units: Unit[], allUnits: Unit[], options: GameOptions): ChoiceQuestion[] {
-    const shuffledUnits = toShuffled(units);
-    return shuffledUnits.map((unit) => {
+/** Generates questions about the provided administrative units.
+ *  Also generates all the answers to these questions. */
+function getQuestions(units: Unit[], allUnits: Unit[], options: GameOptions): {
+    questions: Record<string, ChoiceQuestion | undefined>;
+    questionIds: string[];
+    answers: Record<string, ChoiceAnswer | undefined>;
+    answerIds: string[];
+} {
+    const questions: Record<string, ChoiceQuestion | undefined> = {};
+    const questionIds: string[] = [];
+
+    let allAnswers: Record<string, ChoiceAnswer | undefined> = {};
+    const allAnswerIds: string[] = [];
+
+    for (const unit of units) {
+        const questionId = ulid();
+
+        const { answers, answerIds } = getAnswers(unit, allUnits, questionId, options);
+        allAnswers = { ...allAnswers, ...answers };
+        allAnswerIds.push(...answerIds);
+
         const question: ChoiceQuestion = {
-            id: ulid(),
+            id: questionId,
             about: unit.id,
             value: getQuestionValue(unit, options),
-            answers: getAnswers(unit, allUnits, options),
             tries: 0,
+            answerIds,
         };
-        return question;
-    });
+        questions[questionId] = question;
+        questionIds.push(questionId);
+    }
+    
+    return {
+        questions,
+        questionIds: toShuffled(questionIds),
+        answers: allAnswers,
+        answerIds: allAnswerIds,
+    };
 }
 
 function getQuestionValue(unit: Unit, options: GameOptions) {
@@ -64,28 +118,49 @@ function getQuestionValue(unit: Unit, options: GameOptions) {
     return formatQuestion(unit, options);
 }
 
-function getAnswers(unit: Unit, allUnits: Unit[], options: GameOptions): ChoiceAnswer[] {
-    const answers: ChoiceAnswer[] = plausibleAnswerUnits(unit, allUnits, options)
-        .map((unit) => getAnswerFromUnit(unit, options));
+function getAnswers(unit: Unit, allUnits: Unit[], questionId: string, options: GameOptions): {
+    answers: Record<string, ChoiceAnswer | undefined>;
+    answerIds: string[];
+} {
+    const answers: Record<string, ChoiceAnswer> = {};
+    const answerIds: string[] = [];
 
-    // randomly choose five incorrect answers
-    while (answers.length < 5) {
+    // generate correct answer
+    const correctAnswer = getAnswerFromUnit(unit, options, questionId, true);
+    answers[correctAnswer.id] = correctAnswer;
+    answerIds.push(correctAnswer.id);
+
+    // add plausible answers to the list
+    const plausibleUnits = plausibleAnswerUnits(unit, allUnits, options);
+    for (const unit of plausibleUnits) {
+        const answer = getAnswerFromUnit(unit, options, questionId);
+        answers[answer.id] = answer;
+        answerIds.push(answer.id);
+    }
+
+    // randomly choose remaining answers
+    while (answerIds.length < 6) {
         const randomIndex = Math.floor(Math.random() * allUnits.length);
         const incorrectUnit = allUnits[randomIndex];
-        if (incorrectUnit !== unit && !answers.some((option) => option.about === incorrectUnit.id)) {
-            answers.push(getAnswerFromUnit(incorrectUnit, options));
+
+        const isDuplicate = answerIds.some((id) => answers[id].about === incorrectUnit.id);
+        if (!isDuplicate) {
+            const answer = getAnswerFromUnit(incorrectUnit, options, questionId);
+            answers[answer.id] = answer;
+            answerIds.push(answer.id);
         }
     }
 
-    // add correct answer to array of answers
-    answers.push(getAnswerFromUnit(unit, options, true));
-
-    return toShuffled(answers);
+    return {
+        answers,
+        answerIds: toShuffled(answerIds),
+    };
 }
 
-function getAnswerFromUnit(unit: Unit, options: GameOptions, correct?: boolean): ChoiceAnswer {
+function getAnswerFromUnit(unit: Unit, options: GameOptions, questionId: string, correct?: boolean): ChoiceAnswer {
     const answer: ChoiceAnswer = {
         id: ulid(),
+        questionId,
         about: unit.id,
         value: getAnswerValue(unit, options),
         correct: !!correct,

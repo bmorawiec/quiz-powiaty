@@ -1,6 +1,7 @@
-import { getTextHint } from "src/game/common";
+import { AnswerNotFoundError, getTextHint, QuestionNotFoundError } from "src/game/common";
 import type { StoreApi } from "zustand";
-import type { GuessResult, TypingAnswer, TypingGameStore, TypingQuestion } from "./types";
+import type { GuessResult, TypingAnswer, TypingGameStore } from "./types";
+import type { PromptAnswer } from "src/game/prompt";
 
 export interface TypingGameStoreActions {
     /** Checks if the player's guess is correct.
@@ -19,55 +20,144 @@ export function createTypingGameStoreActions(
         if (game.state !== "unpaused")
             throw new Error("Cannot perform this action while the game is paused or finished.");
 
-        const question = game.questions.find((question) => question.id === questionId);
-        if (!question)
-            throw new Error("Couldn't find question with the specified ID: " + questionId);
+        const answer = getMatchingAnswer(questionId, playersGuess);
+        if (answer) {
+            if (answer.guessed) {       // a correct answer with this value exists, but it was already provided
+                return ["alreadyGuessed", null];
+            } else {                    // a correct answer with this value exist
+                nextAnswer(answer);
+                moveAnswerIntoSlot(answer, slotIndex);
+                return ["correct", null];
+            }
+        } else {        // a correct answer with this value doesn't exist
+            increaseTryCount(questionId);
 
-        const answer = question.answers
-            .find((answer) => answer.value.toLowerCase() === playersGuess.toLowerCase());
-        if (!answer) {      // a correct answer with this text doesn't exist
-            const newQuestion: TypingQuestion = {
-                ...question,
-                tries: question.tries + 1,  // increase try counter
-            };
-            set({
-                questions: game.questions
-                    .map((q) => (q.id === questionId) ? newQuestion : q),
-            });
-            const hint = getTextHint(newQuestion, game.options);
+            const hint = getHintFor(questionId);
             return ["wrong", hint];
         }
+    }
 
-        if (answer.guessed) {       // a correct answer with this text exist, but it was already provided
-            return ["alreadyGuessed", null];
-        } else {                    // a correct answer with this text exist
-            const newAnswer: TypingAnswer = {
-                ...answer,
-                guessed: true,
-                slotIndex,
-            };
-            const newQuestion: TypingQuestion = {
-                ...question,
-                answers: question.answers
-                    .map((ans) => (ans.id === answer.id) ? newAnswer : ans),
-                provided: question.provided + 1,
-            };
-            set({
-                questions: game.questions
-                    .map((q) => (q.id === question.id) ? newQuestion : q),
-            });
-            if (newQuestion.provided === question.answers.length) {
-                set({
-                    // if all answers to this question have been provided,
-                    // then increase the answered question counter
-                    answered: game.answered + 1,
-                });
-                if (game.answered + 1 === game.questions.length) {
-                    game.finish();      // if all the questions have been answered, then finish the game
-                }
+    /** Finds an answer to the current question, with a value that matches the player's guess.
+     *  Returns null if no answer matches the player's guess. */
+    function getMatchingAnswer(questionId: string, playersGuess: string): TypingAnswer | null {
+        const game = get();
+
+        const question = game.questions[questionId];
+        if (!question)
+            throw new QuestionNotFoundError(questionId);
+
+        for (const answerId of question.answerIds) {
+            const answer = game.answers[answerId];
+            if (!answer)
+                throw new AnswerNotFoundError(answerId);
+
+            if (playersGuess.toLowerCase() === answer.value.toLowerCase()) {
+                return answer;
             }
-            return ["correct", null];
         }
+        return null;
+    }
+
+    function moveAnswerIntoSlot(answer: TypingAnswer, slotIndex: number) {
+        const game = get();
+
+        const question = game.questions[answer.questionId];
+        if (!question)
+            throw new QuestionNotFoundError(answer.questionId);
+
+        const answerIdInSlot = question.answerIds[slotIndex];
+        if (answerIdInSlot !== answer.id) {
+            set({
+                questions: {
+                    ...game.questions,
+                    [answer.questionId]: {
+                        ...question,
+                        answerIds: question.answerIds.map((currentId) => {
+                            if (currentId === answer.id) {
+                                return answerIdInSlot;
+                            } else if (currentId === answerIdInSlot) {
+                                return answer.id;
+                            } else {
+                                return currentId;
+                            }
+                        }),
+                    },
+                },
+            });
+        }
+    }
+
+    /** Returns a hint for the specified question. */
+    function getHintFor(questionId: string): string | null {
+        const game = get();
+
+        const question = game.questions[questionId];
+        if (!question)
+            throw new QuestionNotFoundError(questionId);
+
+        const answers = question.answerIds.map((answerId) => {
+            const answer = game.answers[answerId];
+            if (!answer)
+                throw new AnswerNotFoundError(answerId);
+            return answer;
+        });
+        return getTextHint(question.tries, answers, game.options);
+    }
+
+    /** Marks the specified answer as guessed.
+     *  Ends the game if all the questions were answered.
+     *  @param guessedAnswer - the answer that the user has just guessed. */
+    function nextAnswer(guessedAnswer: PromptAnswer) {
+        const game = get();
+
+        const question = game.questions[guessedAnswer.questionId];
+        if (!question)
+            throw new QuestionNotFoundError(guessedAnswer.questionId);
+        set({
+            questions: {
+                ...game.questions,
+                [guessedAnswer.questionId]: {
+                    ...question,
+                    provided: question.provided + 1,
+                },
+            },
+            answers: {
+                ...game.answers,
+                [guessedAnswer.id]: {
+                    ...guessedAnswer,
+                    guessed: true,
+                },
+            },
+        });
+
+        if (question.provided + 1 >= question.answerIds.length) {
+            set({
+                answered: game.answered + 1,
+            });
+
+            if (game.answered + 1 >= game.questionIds.length) {
+                game.finish();          // finish game if all questions have been answered
+            }
+        }
+    }
+
+    /** Increases the try counter for the specified question. */
+    function increaseTryCount(questionId: string) {
+        const game = get();
+
+        const question = game.questions[questionId];
+        if (!question)
+            throw new QuestionNotFoundError(questionId);
+
+        set({
+            questions: {
+                ...game.questions,
+                [questionId]: {
+                    ...question,
+                    tries: question.tries + 1,
+                },
+            },
+        });
     }
 
     return { guess };

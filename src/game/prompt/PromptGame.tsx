@@ -15,7 +15,7 @@ export function PromptGame({ onRestart, onOptionsChange, fullscreen, onToggleFul
     // Check whether or not the user should confirm game restarts.
     const restartNeedsConfirmation = () => {
         const game = usePromptGameStore.getState();
-        return game.current > 0;
+        return game.answered > 0;
     };
 
     const handleTogglePause = () => {

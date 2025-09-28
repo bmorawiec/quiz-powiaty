@@ -1,17 +1,40 @@
 import { ArrowDownIcon, ArrowUpIcon } from "src/ui";
-import type { Question } from "../../../state";
+import { AnswerNotFoundError, QuestionNotFoundError, type Answer, type Question } from "../../../state";
 import { useMemo, useState } from "react";
 import type { GameOptions } from "src/gameOptions";
 import { QuestionAnswers } from "./QuestionAnswers";
 
 export interface QuestionBrowserProps {
-    questions: Question[];
+    questions: Record<string, Question | undefined>;
+    questionIds: string[];
+    allAnswers: Record<string, Answer | undefined>;
     options: GameOptions;
 }
 
-export function QuestionBrowser({ questions, options }: QuestionBrowserProps) {
+export function QuestionBrowser({ questions, questionIds, allAnswers, options }: QuestionBrowserProps) {
     const [current, setCurrent] = useState(0);        // current question index
-    const question = useMemo(() => questions[current], [current, questions]);
+    const question = useMemo(() => {
+        const questionId = questionIds[current];
+        const question = questions[questionId]
+        if (!question)
+            throw new QuestionNotFoundError(questionId);
+        return question;
+    }, [current, questions, questionIds]);
+
+    const correctAnswers = useMemo(() => {
+        const correctAnswers: Answer[] = [];
+        for (const answerId of question.answerIds) {
+            const answer = allAnswers[answerId];
+            if (!answer)
+                throw new AnswerNotFoundError(answerId)
+
+            if (answer.correct) {
+                correctAnswers.push(answer);
+            }
+        }
+        return correctAnswers;
+    }, [allAnswers, question]);
+
     const points = (question.tries < 3) ? 3 - question.tries : 0;
 
     const handlePrevClick = () => {
@@ -21,7 +44,7 @@ export function QuestionBrowser({ questions, options }: QuestionBrowserProps) {
     };
 
     const handleNextClick = () => {
-        if (current < questions.length - 1) {
+        if (current < questionIds.length - 1) {
             setCurrent(current + 1);
         }
     };
@@ -31,7 +54,7 @@ export function QuestionBrowser({ questions, options }: QuestionBrowserProps) {
             <div className="flex-1 flex flex-col px-[22px] pt-[18px] pb-[16px] gap-[4px]">
                 {(options.guessFrom === "flag" || options.guessFrom === "coa") ? (<>
                     <h3 className="font-[550]">
-                        Pytanie {current + 1}/{questions.length}
+                        Pytanie {current + 1}/{questionIds.length}
                     </h3>
                     <img
                         src={question.value}
@@ -39,12 +62,12 @@ export function QuestionBrowser({ questions, options }: QuestionBrowserProps) {
                     />
                 </>) : (
                     <h3 className="font-[550]">
-                        Pytanie {current + 1}/{questions.length}: {question.value}
+                        Pytanie {current + 1}/{questionIds.length}: {question.value}
                     </h3>
                 )}
 
                 <QuestionAnswers
-                    question={question}
+                    answers={correctAnswers}
                     options={options}
                 />
 

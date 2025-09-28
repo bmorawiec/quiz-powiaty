@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import type { GameOptions } from "src/gameOptions";
 import { LargeButton, LargeLink, RestartIcon } from "src/ui";
-import type { Question } from "../../state";
+import { QuestionNotFoundError, type Answer, type Question } from "../../state";
 import { GameModeCard } from "../GameModeCard";
 import { GuessDistribution } from "./GuessDistribution";
 import { ProgressBar } from "./ProgressBar";
@@ -9,26 +9,32 @@ import { QuestionBrowser } from "./questionBrowser";
 
 export interface FinishedViewBaseProps {
     options: GameOptions;
-    questions: Question[];
+    questions: Record<string, Question | undefined>;
+    questionIds: string[];
+    allAnswers: Record<string, Answer | undefined>;
     onRestart: () => void;
 }
 
-export function FinishedViewBase({ options, questions, onRestart }: FinishedViewBaseProps) {
+export function FinishedViewBase({ options, questions, questionIds, allAnswers, onRestart }: FinishedViewBaseProps) {
     const [points, maxPoints, percent, guessDistribution] = useMemo(() => {
         let pointSum = 0;
         const guessDistribution: [number, number, number, number] = [0, 0, 0, 0];
-        for (const question of questions) {
+        for (const questionId of questionIds) {
+            const question = questions[questionId];
+            if (!question)
+                throw new QuestionNotFoundError(questionId);
+
             const points = Math.max(3 - question.tries, 0);
             pointSum += points;
             guessDistribution[points]++;
         }
-        const maxPoints = questions.length * 3;
+        const maxPoints = questionIds.length * 3;
         const frac = pointSum / maxPoints;
         const percent = (frac < 0.5)
             ? Math.ceil(frac * 100)
             : Math.floor(frac * 100);
         return [pointSum, maxPoints, percent, guessDistribution];
-    }, [questions]);
+    }, [questions, questionIds]);
 
     return (
         <div className="flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col min-h-0">
@@ -54,6 +60,8 @@ export function FinishedViewBase({ options, questions, onRestart }: FinishedView
 
                     <QuestionBrowser
                         questions={questions}
+                        questionIds={questionIds}
+                        allAnswers={allAnswers}
                         options={options}
                     />
                 </div>

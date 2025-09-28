@@ -9,38 +9,32 @@ export interface CardListProps {
 export function CardList({ textTransform }: CardListProps) {
     const useTypingGameStore = useContext(TypingGameStoreContext);
 
-    const total = useTypingGameStore((state) => state.questions.length);
+    const questionIds = useTypingGameStore((state) => state.questionIds);
     const [firstHalf, secondHalf] = useMemo(() => {
-        const firstHalfLength = Math.ceil(total / 2);
-        const firstHalf = [];
-        for (let index = 0; index < firstHalfLength; index++) {
-            firstHalf.push(index);
-        }
-        const secondHalf = [];
-        for (let index = firstHalfLength; index < total; index++) {
-            secondHalf.push(index);
-        }
+        const firstHalfLength = Math.ceil(questionIds.length / 2);
+        const firstHalf = questionIds.slice(0, firstHalfLength);
+        const secondHalf = questionIds.slice(firstHalfLength);
         return [firstHalf, secondHalf];
-    }, [total]);
+    }, [questionIds]);
 
     return (
         <div className="w-full max-w-[1000px] grid grid-cols-2 gap-[50px] max-md:flex max-md:gap-[10px]
             max-md:flex-col">
             <div className="flex flex-col gap-[10px]">
-                {firstHalf.map((index) =>
+                {firstHalf.map((questionId) =>
                     <Card
-                        key={index}
-                        questionIndex={index}
+                        key={questionId}
+                        questionId={questionId}
                         textTransform={textTransform}
                     />
                 )}
             </div>
 
             <div className="flex flex-col gap-[10px]">
-                {secondHalf.map((index) =>
+                {secondHalf.map((questionId) =>
                     <Card
-                        key={index}
-                        questionIndex={index}
+                        key={questionId}
+                        questionId={questionId}
                         textTransform={textTransform}
                     />
                 )}

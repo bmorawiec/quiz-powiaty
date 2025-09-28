@@ -5,19 +5,17 @@ import type { PromptGameStoreActions } from "./actionFactory";
 export type PromptGameStoreHook = UseBoundStore<StoreApi<PromptGameStore>>;
 
 export interface PromptGameStore extends GameStore, PromptGameStoreActions {
+    questions: Record<string, PromptQuestion | undefined>;
+    answers: Record<string, PromptAnswer | undefined>;
     /** The title text shown on the game screen. */
     title?: string;
-    /** Stores the order and states of all the prompts that are going to be presented in this game. */
-    prompts: PromptQuestion[];
-    /** Index of the current prompt */
-    current: number;
-    /** Total number of answered prompts */
+    /** Id of the current question. */
+    current: string;
+    /** Total number of answered questions. */
     answered: number;
 }
 
 export interface PromptQuestion extends Question {
-    /** Stores correct answers to this prompt. */
-    answers: PromptAnswer[];
     /** Number of correct answers provided by the user. */
     provided: number;
 }
