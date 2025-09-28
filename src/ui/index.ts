@@ -10,4 +10,5 @@ export * from "./LargeLink";
 export * from "./Logo";
 export * from "./pageLayout";
 export * from "./RadioButton";
+export * from "./Slider";
 

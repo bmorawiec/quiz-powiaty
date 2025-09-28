@@ -30,6 +30,7 @@ export interface GameOptions {
     unitType: UnitType;
     guessFrom: Guessable;
     guess: Guessable;
+    maxQuestions: number | null;
     filters: UnitFilters;
 }
 

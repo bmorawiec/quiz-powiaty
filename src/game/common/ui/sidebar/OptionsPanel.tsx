@@ -28,7 +28,11 @@ export function OptionsPanel({ children }: OptionsPanelProps) {
                 <DropdownIcon className={clsx("transition-transform duration-100", !expanded && "rotate-180")}/>
             </button>
 
-            {expanded && children}
+            {expanded && (
+                <div className="flex flex-col pb-[26px]">
+                    {children}
+                </div>
+            )}
         </div>
     );
 }

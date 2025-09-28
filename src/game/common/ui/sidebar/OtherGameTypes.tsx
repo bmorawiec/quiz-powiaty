@@ -1,9 +1,11 @@
+import clsx from "clsx";
 import { gameTypesFromCombo, type GameOptions, type GameType } from "src/gameOptions";
 import { RadioButton } from "src/ui";
 
 export interface OtherGameTypesProps {
     options: GameOptions;
     onGameTypeChange: (newGameType: GameType) => void;
+    className?: string;
 }
 
 const gameTypeNames: Record<GameType, string> = {
@@ -14,11 +16,11 @@ const gameTypeNames: Record<GameType, string> = {
     typingGame: "Podpisz",
 };
 
-export function OtherGameTypes({ options, onGameTypeChange }: OtherGameTypesProps) {
+export function OtherGameTypes({ options, onGameTypeChange, className }: OtherGameTypesProps) {
     const otherGameTypes = gameTypesFromCombo(options);
 
     return (
-        <div className="flex flex-col px-[18px] mt-[-12px] mb-[12px]">
+        <div className={clsx("flex flex-col px-[18px]", className)}>
             {otherGameTypes.map((gameType) => {
                 const handleRadioClick = () => {
                     if (gameType !== options.gameType) {

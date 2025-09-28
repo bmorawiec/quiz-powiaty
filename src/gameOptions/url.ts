@@ -41,6 +41,10 @@ export function encodeGameURL(options: GameOptions): string {
         + "&dane=" + guessableToPolish[options.guessFrom]
         + "&zgadnij=" + guessableToPolish[options.guess];
 
+    if (options.maxQuestions) {
+        url += "&max=" + options.maxQuestions;
+    }
+
     const encodedFilters = encodeFilters(options.filters);
     if (encodedFilters) {
         url += "&filtry=" + encodedFilters;
@@ -91,6 +95,17 @@ export function decodeGameURL(params: URLSearchParams): GameOptions | null {
         return null;
     }
 
+    const maxQuestionsString = params.get("max");
+    let maxQuestions;
+    if (maxQuestionsString === null) {
+        maxQuestions = null;
+    } else {
+        maxQuestions = parseInt(maxQuestionsString);
+        if (maxQuestions < 1) {
+            return null;
+        }
+    }
+
     const filterString = params.get("filtry");
 
     return {
@@ -98,6 +113,7 @@ export function decodeGameURL(params: URLSearchParams): GameOptions | null {
         unitType,
         guessFrom,
         guess,
+        maxQuestions,
         filters: decodeFilters(filterString),
     };
 }

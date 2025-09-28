@@ -15,9 +15,8 @@ import { createTypingGameStoreActions } from "./actionFactory";
 import { type TypingAnswer, type TypingGameStore, type TypingGameStoreHook, type TypingQuestion } from "./types";
 
 export async function createTypingGameStore(options: GameOptions): Promise<TypingGameStoreHook> {
-    const filteredUnits = units
-        .filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
-    const { questions, questionIds, answers, answerIds } = getQuestions(filteredUnits, options);
+    const questionUnits = getQuestionUnits(options);
+    const { questions, questionIds, answers, answerIds } = getQuestions(questionUnits, options);
 
     if (options.guessFrom === "flag" || options.guessFrom === "coa") {
         // preload flags/COAs for the all the prompts
@@ -43,6 +42,16 @@ export async function createTypingGameStore(options: GameOptions): Promise<Typin
         ...createGameStoreActions(set, get),
         ...createTypingGameStoreActions(set, get),
     }));
+}
+
+function getQuestionUnits(options: GameOptions) {
+    const questionUnits = units
+        .filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
+
+    if (options.maxQuestions) {
+        return toShuffled(questionUnits).slice(0, options.maxQuestions);
+    }
+    return questionUnits;
 }
 
 /** Generates an array of questions about the provided administrative units. */

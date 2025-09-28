@@ -34,6 +34,7 @@ export function ModePicker() {
             unitType,
             guessFrom,
             guess,
+            maxQuestions: 20,
             filters: {
                 countyTypes: [],
                 voivodeships: [],
@@ -129,6 +130,7 @@ function getInitialOptions(): GameOptions {
         unitType: "county",
         guessFrom: "name",
         guess: "map",
+        maxQuestions: 20,
         filters: {
             countyTypes: [],
             voivodeships: [],

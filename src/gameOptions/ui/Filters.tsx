@@ -1,23 +1,23 @@
+import clsx from "clsx";
 import { useMemo } from "react";
 import { Button, FilterIcon } from "src/ui";
 import { getFilterString } from "../filterNames";
 import { type UnitFilters } from "../types";
-import clsx from "clsx";
 
 export interface FiltersProps {
     filters: UnitFilters;
-    className?: string;
     onExpand?: () => void;
+    className: string;
 }
 
-export function Filters({ filters, className, onExpand }: FiltersProps) {
+export function Filters({ filters, onExpand, className }: FiltersProps) {
     const filterString = useMemo(
         () => getFilterString(filters),
         [filters]
     );
 
     return (
-        <div className={clsx("flex flex-col px-[30px] pb-[25px]", className)}>
+        <div className={clsx("flex flex-col", className)}>
             <div className="flex items-end gap-[20px]">
                 <div className="flex-1 flex flex-col text-left min-w-0">
                     <span className="text-[14px] text-gray-60 dark:text-gray-50 font-[500]">Filtrowanie</span>

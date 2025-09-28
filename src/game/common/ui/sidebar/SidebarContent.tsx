@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { FilterDialog, Filters, type GameOptions, type GameType, type UnitFilters } from "src/gameOptions";
+import {
+    FilterDialog,
+    Filters,
+    MaxQuestions,
+    type GameOptions,
+    type GameType,
+    type UnitFilters,
+} from "src/gameOptions";
 import { ExitFullscreenIcon, FullscreenIcon, PauseIcon, PlayIcon, RestartIcon } from "src/ui";
 import type { GameState } from "../../state";
 import { ConfirmRestartDialog } from "./ConfirmRestartDialog";
@@ -76,6 +83,15 @@ export function SidebarContent({
         queueRestart(options);
     };
 
+    // max questions widget
+
+    const handleMaxQuestionsChange = (newLimit: number | null) => {
+        queueRestart({
+            ...options,
+            maxQuestions: newLimit,
+        });
+    };
+
     // filter dialog
 
     const handleExpandFilters = () => {
@@ -134,12 +150,19 @@ export function SidebarContent({
             <OtherGameTypes
                 options={newOptions}
                 onGameTypeChange={handleGameTypeChange}
+                className="mt-[-12px] mb-[12px]"
+            />
+
+            <MaxQuestions
+                value={newOptions.maxQuestions}
+                onChange={handleMaxQuestionsChange}
+                className="mx-[30px] mb-[17px]"
             />
 
             <Filters
                 filters={newOptions.filters}
                 onExpand={handleExpandFilters}
-                className="mb-[3px]"
+                className="mx-[30px]"
             />
         </OptionsPanel>
 

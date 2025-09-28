@@ -15,9 +15,8 @@ import { createPromptGameStoreActions } from "./actionFactory";
 import { type PromptAnswer, type PromptGameStore, type PromptGameStoreHook, type PromptQuestion } from "./types";
 
 export async function createPromptGameStore(options: GameOptions): Promise<PromptGameStoreHook> {
-    const filteredUnits = units
-        .filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
-    const { questions, questionIds, answers, answerIds } = getQuestions(filteredUnits, options);
+    const questionUnits = getQuestionUnits(options);
+    const { questions, questionIds, answers, answerIds } = getQuestions(questionUnits, options);
 
     if (options.guessFrom === "flag" || options.guessFrom === "coa") {
         const firstTwoQuestionIds = questionIds.slice(0, 2);
@@ -48,6 +47,16 @@ export async function createPromptGameStore(options: GameOptions): Promise<Promp
         ...createGameStoreActions(set, get),
         ...createPromptGameStoreActions(set, get),
     }));
+}
+
+function getQuestionUnits(options: GameOptions) {
+    const questionUnits = units
+        .filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
+
+    if (options.maxQuestions) {
+        return toShuffled(questionUnits).slice(0, options.maxQuestions);
+    }
+    return questionUnits;
 }
 
 /** Generates questions about the provided administrative units. */

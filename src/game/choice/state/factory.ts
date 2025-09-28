@@ -17,9 +17,9 @@ import { plausibleAnswerUnits } from "./plausibleAnswers";
 import type { ChoiceAnswer, ChoiceGameStore, ChoiceGameStoreHook, ChoiceQuestion } from "./types";
 
 export async function createChoiceGameStore(options: GameOptions): Promise<ChoiceGameStoreHook> {
-    const matchingUnits = units.filter((unit) => unit.type === options.unitType);
-    const filteredUnits = matchingUnits.filter((unit) => matchesFilters(unit, options.filters));
-    const { questions, questionIds, answers, answerIds } = getQuestions(filteredUnits, matchingUnits, options);
+    const unitsMatchingType = units.filter((unit) => unit.type === options.unitType);
+    const questionUnits = getQuestionUnits(unitsMatchingType, options);
+    const { questions, questionIds, answers, answerIds } = getQuestions(questionUnits, unitsMatchingType, options);
 
     if (options.guessFrom === "flag" || options.guessFrom === "coa") {
         const firstTwoQuestionIds = questionIds.slice(0, 2);
@@ -67,6 +67,14 @@ export async function createChoiceGameStore(options: GameOptions): Promise<Choic
         ...createGameStoreActions(set, get),
         ...createChoiceGameStoreActions(set, get),
     }));
+}
+
+function getQuestionUnits(unitsMatchingType: Unit[], options: GameOptions): Unit[] {
+    const units = unitsMatchingType.filter((unit) => matchesFilters(unit, options.filters));
+    if (options.maxQuestions) {
+        return toShuffled(units).slice(0, options.maxQuestions);
+    }
+    return units;
 }
 
 /** Generates questions about the provided administrative units.
