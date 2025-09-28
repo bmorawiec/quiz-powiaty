@@ -32,40 +32,42 @@ export function ImageCell({ questionId, textTransform }: ImageCellProps) {
         return result;
     };
 
-    return (<>
-        <div className="bg-white dark:bg-gray-90 rounded-[15px] p-[10px] pt-[15px] flex flex-col gap-[15px]">
-            <img
-                className="aspect-3/2"
-                src={question.value}
-            />
+    return (
+        <div className="flex flex-col gap-[4px]">
+            <div className="bg-white dark:bg-gray-90 rounded-[15px] p-[10px] pt-[15px] flex flex-col gap-[15px]">
+                <img
+                    className="aspect-3/2"
+                    src={question.value}
+                />
 
-            <div className="flex flex-col gap-[6px]">
-                {question.answerIds.map((answerId, index) =>
-                    <CellSlot
-                        key={index}
-                        answerId={answerId}
-                        slotIndex={index}
-                        textTransform={textTransform}
-                        onGuess={handleGuess}
-                    />
-                )}
+                <div className="flex flex-col gap-[6px]">
+                    {question.answerIds.map((answerId, index) =>
+                        <CellSlot
+                            key={index}
+                            answerId={answerId}
+                            slotIndex={index}
+                            textTransform={textTransform}
+                            onGuess={handleGuess}
+                        />
+                    )}
+                </div>
             </div>
+
+            {(result === "alreadyGuessed" || hint) && (
+                <div className="pl-[10px] pb-[2px] flex items-center gap-[4px] text-[14px]">
+                    <InfoIcon className="size-[12px]"/>
+                    {result === "alreadyGuessed" && (
+                        <span>
+                            Już zgadłeś tą odpowiedź.
+                        </span>
+                    )}
+                    {hint && (
+                        <span>
+                            Podpowiedź: {hint}
+                        </span>
+                    )}
+                </div>
+            )}
         </div>
-
-        {(result === "alreadyGuessed" || hint) && (
-            <div className="pl-[10px] pb-[2px] flex items-center gap-[4px] text-[14px]">
-                <InfoIcon className="size-[12px]"/>
-                {result === "alreadyGuessed" && (
-                    <span>
-                        Już zgadłeś tą odpowiedź.
-                    </span>
-                )}
-                {hint && (
-                    <span>
-                        Podpowiedź: {hint}
-                    </span>
-                )}
-            </div>
-        )}
-    </>);
+    );
 }
