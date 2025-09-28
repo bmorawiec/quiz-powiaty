@@ -22,7 +22,7 @@ export function ImageCell({ questionId, textTransform }: ImageCellProps) {
     const [hint, setHint] = useState<string | null>(null);
 
     const handleGuess = (text: string, slotIndex: number) => {
-        const [result, hint] = guess(question.id, text, slotIndex);
+        const [result, hint] = guess(questionId, text, slotIndex);
         setResult(result);
         if (result === "correct") {
             setHint(null);

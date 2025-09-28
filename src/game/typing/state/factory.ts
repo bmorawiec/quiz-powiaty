@@ -66,7 +66,7 @@ function getQuestions(units: Unit[], options: GameOptions): {
         allAnswerIds.push(...answerIds);
 
         const question: TypingQuestion = {
-            id: ulid(),
+            id: questionId,
             about: unit.id,
             value: getQuestionValue(unit, options),
             tries: 0,
