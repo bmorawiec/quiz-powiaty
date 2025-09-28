@@ -5,7 +5,7 @@ import { QuestionNotFoundError, type Answer, type Question } from "../../state";
 import { GameModeCard } from "../GameModeCard";
 import { GuessDistribution } from "./GuessDistribution";
 import { ProgressBar } from "./ProgressBar";
-import { QuestionBrowser } from "./questionBrowser";
+import { QuestionList } from "./questionList";
 
 export interface FinishedViewBaseProps {
     options: GameOptions;
@@ -58,7 +58,7 @@ export function FinishedViewBase({ options, questions, questionIds, allAnswers, 
                         data={guessDistribution}
                     />
 
-                    <QuestionBrowser
+                    <QuestionList
                         questions={questions}
                         questionIds={questionIds}
                         allAnswers={allAnswers}
