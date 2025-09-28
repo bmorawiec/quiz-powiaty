@@ -122,7 +122,7 @@ function getAnswers(unit: Unit, allUnits: Unit[], questionId: string, options: G
     answers: Record<string, ChoiceAnswer | undefined>;
     answerIds: string[];
 } {
-    const answers: Record<string, ChoiceAnswer> = {};
+    const answers: Record<string, ChoiceAnswer | undefined> = {};
     const answerIds: string[] = [];
 
     // generate correct answer
@@ -142,12 +142,19 @@ function getAnswers(unit: Unit, allUnits: Unit[], questionId: string, options: G
     while (answerIds.length < 6) {
         const randomIndex = Math.floor(Math.random() * allUnits.length);
         const incorrectUnit = allUnits[randomIndex];
+        const incorrectAnswer = getAnswerFromUnit(incorrectUnit, options, questionId);
 
-        const isDuplicate = answerIds.some((id) => answers[id].about === incorrectUnit.id);
+        const isDuplicate = answerIds.some((id) => {
+            const answer = answers[id];
+            if (!answer)
+                throw new AnswerNotFoundError(id);
+            // don't use this answer if an answer about the same unit already exists
+            // also don't use this answer if it has the same value as an existing answer
+            return incorrectAnswer.about === answer.about || incorrectAnswer.value === answer.value;
+        });
         if (!isDuplicate) {
-            const answer = getAnswerFromUnit(incorrectUnit, options, questionId);
-            answers[answer.id] = answer;
-            answerIds.push(answer.id);
+            answers[incorrectAnswer.id] = incorrectAnswer;
+            answerIds.push(incorrectAnswer.id);
         }
     }
 
