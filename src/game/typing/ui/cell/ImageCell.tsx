@@ -5,12 +5,12 @@ import { type GuessResult } from "../../state";
 import { TypingGameStoreContext } from "../../storeContext";
 import { CellSlot } from "./CellSlot";
 
-export interface ImageCardProps {
+export interface ImageCellProps {
     questionId: string;
     textTransform?: "uppercase" | "capitalize";
 }
 
-export function ImageCard({ questionId, textTransform }: ImageCardProps) {
+export function ImageCell({ questionId, textTransform }: ImageCellProps) {
     const useTypingGameStore = useContext(TypingGameStoreContext);
     const guess = useTypingGameStore((game) => game.guess);
 

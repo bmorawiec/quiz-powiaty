@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AnswerNotFoundError } from "../../../common";
 import type { GuessResult } from "../../state";
 import { TypingGameStoreContext } from "../../storeContext";
-import { CardInput } from "./CardInput";
+import { CellInput } from "./CellInput";
 import { GuessedAnswer } from "./GuessedAnswer";
 
 export interface CellSlotProps {
@@ -27,7 +27,7 @@ export function CellSlot({ answerId, slotIndex, textTransform, onGuess }: CellSl
         );
     } else {
         return (
-            <CardInput
+            <CellInput
                 textTransform={textTransform}
                 slotIndex={slotIndex}
                 onGuess={onGuess}

@@ -1,12 +1,12 @@
 import { useContext, useMemo } from "react";
-import { Card } from "./card";
+import { Cell } from "./cell";
 import { TypingGameStoreContext } from "../storeContext";
 
-export interface CardListProps {
+export interface TableProps {
     textTransform?: "uppercase" | "capitalize";
 }
 
-export function CardList({ textTransform }: CardListProps) {
+export function Table({ textTransform }: TableProps) {
     const useTypingGameStore = useContext(TypingGameStoreContext);
 
     const questionIds = useTypingGameStore((state) => state.questionIds);
@@ -22,7 +22,7 @@ export function CardList({ textTransform }: CardListProps) {
             max-md:flex-col">
             <div className="flex flex-col gap-[10px]">
                 {firstHalf.map((questionId) =>
-                    <Card
+                    <Cell
                         key={questionId}
                         questionId={questionId}
                         textTransform={textTransform}
@@ -32,7 +32,7 @@ export function CardList({ textTransform }: CardListProps) {
 
             <div className="flex flex-col gap-[10px]">
                 {secondHalf.map((questionId) =>
-                    <Card
+                    <Cell
                         key={questionId}
                         questionId={questionId}
                         textTransform={textTransform}

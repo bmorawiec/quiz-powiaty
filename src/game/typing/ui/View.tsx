@@ -2,8 +2,8 @@ import { useContext, useEffect } from "react";
 import type { GameOptions } from "src/gameOptions";
 import { focusNextInput } from "src/utils/focusNextInput";
 import { TypingGameStoreContext } from "../storeContext";
-import { CardList } from "./CardList";
-import { ImageCardList } from "./ImageCardList";
+import { Table } from "./Table";
+import { ImageTable } from "./ImageTable";
 
 export function View() {
     const useTypingGameStore = useContext(TypingGameStoreContext);
@@ -26,9 +26,9 @@ export function View() {
             </h2>
 
             {(options.guessFrom === "flag" || options.guessFrom === "coa") ? (
-                <ImageCardList textTransform={textTransform}/>
+                <ImageTable textTransform={textTransform}/>
             ) : (
-                <CardList textTransform={textTransform}/>
+                <Table textTransform={textTransform}/>
             )}
         </div>
     );

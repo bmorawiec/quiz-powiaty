@@ -5,14 +5,14 @@ import { focusNextInput } from "src/utils/focusNextInput";
 import { useAnimation } from "src/utils/useAnimation";
 import type { GuessResult } from "../../state";
 
-export interface CardInputProps {
+export interface CellInputProps {
     textTransform?: "uppercase" | "capitalize";
     slotIndex: number;
     className?: string;
     onGuess: (text: string, slotIndex: number) => GuessResult;
 }
 
-export function CardInput({ textTransform, slotIndex, className, onGuess }: CardInputProps) {
+export function CellInput({ textTransform, slotIndex, className, onGuess }: CellInputProps) {
     const input = useRef<HTMLInputElement | null>(null);
 
     const [isWrongAnim, startWrongAnim] = useAnimation(450);
