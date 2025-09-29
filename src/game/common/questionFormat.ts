@@ -1,4 +1,4 @@
-import { type Unit } from "src/data/common";
+import { getUnambiguousName, type Unit } from "src/data/common";
 import type { GameOptions } from "src/gameOptions";
 
 class FormatError extends Error {
@@ -49,7 +49,7 @@ export function formatQuestion(unit: Unit, options: GameOptions) {
                 ? "województwo "
                 : (unit.countyType === "city") ? "miasto " : "powiat ";
             if (guessFrom === "name") {
-                str += unit.name;
+                str += getUnambiguousName(unit);
             } else if (guessFrom === "capital") {
                 str += (unit.capitals.length > 1) ? "ze stolicami w miastach " : "ze stolicą w mieście ";
                 str += unit.capitals.join(", ");
@@ -117,7 +117,7 @@ export function getQuestionText(unit: Unit, options: GameOptions): string {
         const prefix = (unit.type === "voivodeship")
             ? "województwo "
             : (unit.countyType === "city") ? "miasto " : "powiat ";
-        return prefix + unit.name;
+        return prefix + getUnambiguousName(unit);
     } else if (guessFrom === "capital") {
         const suffix = (unit.countyType === "city")
             ? " (miasto)"

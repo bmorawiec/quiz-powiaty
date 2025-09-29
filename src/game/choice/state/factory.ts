@@ -1,4 +1,4 @@
-import type { Unit } from "src/data/common";
+import { getUnambiguousName, type Unit } from "src/data/common";
 import { units } from "src/data/units";
 import {
     AnswerNotFoundError,
@@ -188,7 +188,7 @@ function getAnswerValue(unit: Unit, options: GameOptions): string {
         const prefix = (unit.type === "voivodeship")
             ? "województwo "
             : (unit.countyType === "city") ? "miasto " : "powiat ";
-        return prefix + unit.name;
+        return prefix + getUnambiguousName(unit);
     } else if (options.guess === "capital") {
         return unit.capitals.join(", ");
     } else if (options.guess === "plate") {

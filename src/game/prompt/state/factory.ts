@@ -1,4 +1,4 @@
-import type { Unit } from "src/data/common";
+import { getUnambiguousName, type Unit } from "src/data/common";
 import { units } from "src/data/units";
 import {
     createGameStore,
@@ -138,7 +138,7 @@ function getAnswers(unit: Unit, questionId: string, options: GameOptions): {
 
 function getAnswerValues(unit: Unit, options: GameOptions): string[] {
     if (options.guess === "name") {
-        return [unit.name];
+        return [getUnambiguousName(unit)];
     } else if (options.guess === "capital") {
         return unit.capitals;
     } else if (options.guess === "plate") {
