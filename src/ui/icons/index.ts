@@ -25,6 +25,7 @@ export * from "./RestartIcon";
 export * from "./SendIcon";
 export * from "./SmallArrowLeftIcon";
 export * from "./SmallArrowRightIcon";
+export * from "./SwapIcon";
 export * from "./TargetIcon";
 export * from "./WarningIcon";
 

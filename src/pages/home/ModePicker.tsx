@@ -7,12 +7,14 @@ import {
     CarIcon,
     COAIcon,
     FlagIcon,
+    IconButton,
     LargeButton,
     LargeDropdown,
     LargeLink,
     LocationIcon,
     PlaceNameIcon,
     SmallArrowRightIcon,
+    SwapIcon,
     TargetIcon,
 } from "src/ui";
 import { useAnimation } from "src/utils/useAnimation";
@@ -24,6 +26,11 @@ export function ModePicker() {
     const [guess, setGuess] = useState<Guessable>(initialOptions.guess);
     const [guessFrom, setGuessFrom] = useState<Guessable>(initialOptions.guessFrom);
     const [unitType, setUnitType] = useState<UnitType>(initialOptions.unitType);
+
+    const handleSwapClick = () => {
+        setGuess(guessFrom);
+        setGuessFrom(guess);
+    };
 
     const [isInvalidAnim, startInvalidAnim] = useAnimation(450);
     const handlePlayClick = () => {
@@ -83,9 +90,16 @@ export function ModePicker() {
                 />
             </div>
 
-            <p className="text-[18px] tracking-[0.01em]">
-                na podstawie jego...
-            </p>
+            <div className="flex items-center justify-between my-[-2px]">
+                <p className="text-[18px] tracking-[0.01em]">
+                    na podstawie jego...
+                </p>
+
+                <IconButton
+                    icon={SwapIcon}
+                    onClick={handleSwapClick}
+                />
+            </div>
 
             <LargeDropdown
                 items={[

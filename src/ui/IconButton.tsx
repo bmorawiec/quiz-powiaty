@@ -2,13 +2,13 @@ import clsx from "clsx";
 import type { ComponentType } from "react";
 import type { IconProps } from "src/ui";
 
-export interface ControlButtonProps {
+export interface IconButtonProps {
     icon: ComponentType<IconProps>;
     className?: string;
     onClick?: () => void;
 }
 
-export function ControlButton({ icon: Icon, className, onClick }: ControlButtonProps) {
+export function IconButton({ icon: Icon, className, onClick }: IconButtonProps) {
     return (
         <button
             className={clsx("size-[36px] rounded-[6px] flex items-center justify-center cursor-pointer",

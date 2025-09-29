@@ -7,10 +7,9 @@ import {
     type GameType,
     type UnitFilters,
 } from "src/gameOptions";
-import { ExitFullscreenIcon, FullscreenIcon, PauseIcon, PlayIcon, RestartIcon } from "src/ui";
+import { ExitFullscreenIcon, FullscreenIcon, IconButton, PauseIcon, PlayIcon, RestartIcon } from "src/ui";
 import type { GameState } from "../../state";
 import { ConfirmRestartDialog } from "./ConfirmRestartDialog";
-import { ControlButton } from "./ControlButton";
 import { OptionsPanel } from "./OptionsPanel";
 import { OtherGameTypes } from "./OtherGameTypes";
 import { Timer } from "./Timer";
@@ -129,17 +128,17 @@ export function SidebarContent({
             />
 
             <div className="flex gap-[2px]">
-                <ControlButton
+                <IconButton
                     icon={(fullscreen) ? ExitFullscreenIcon : FullscreenIcon}
                     onClick={onToggleFullscreen}
                 />
 
-                <ControlButton
+                <IconButton
                     icon={RestartIcon}
                     onClick={handleRestartClick}
                 />
 
-                <ControlButton
+                <IconButton
                     icon={(gameState === "paused") ? PlayIcon : PauseIcon}
                     onClick={onTogglePause}
                 />
