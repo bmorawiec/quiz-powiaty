@@ -37,7 +37,7 @@ Tryby gry
 
 Funkcje
 - [x] Filtry
-- [ ] Limit ilości pytań
+- [x] Limit ilości pytań
 - [ ] Prawdziwe flagi i herby zamiast tymczasowych
 
 Zakładki
