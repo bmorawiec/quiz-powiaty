@@ -23,6 +23,7 @@ export * from "./props";
 export * from "./RadioCheckedIcon";
 export * from "./RadioIcon";
 export * from "./RestartIcon";
+export * from "./SelectIcon";
 export * from "./SendIcon";
 export * from "./SmallArrowLeftIcon";
 export * from "./SmallArrowRightIcon";

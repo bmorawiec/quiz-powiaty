@@ -25,15 +25,15 @@ export function DropdownItem<TValue extends string>({
         <button
             role="option"
             aria-selected={selected}
-            className={clsx("flex items-center cursor-pointer p-[10px] hover:bg-gray-5 dark:hover:bg-gray-85",
+            className={clsx("flex items-center cursor-pointer p-[8px] hover:bg-gray-5 dark:hover:bg-gray-85",
                 "rounded-[6px] transition-colors duration-80 focus-ring",
                 selected && "bg-gray-5 hover:bg-gray-10 dark:bg-gray-85 hover:dark:bg-gray-80")}
             onClick={handleClick}
         >
             {Icon && (
-                <div className="flex items-center justify-center bg-gray-15 dark:bg-gray-80 size-[30px]
+                <div className="flex items-center justify-center bg-gray-15 dark:bg-gray-80 size-[26px]
                     rounded-[6px] mr-[6px]">
-                    <Icon/>
+                    <Icon className="size-[14px]"/>
                 </div>
             )}
             <span className="ml-[4px] flex-1 text-left text-[16px] dark:text-gray-5 overflow-hidden truncate">

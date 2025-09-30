@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState, type ComponentType } from "react";
-import { DropdownIcon, type IconProps } from "../icons";
+import { SelectIcon, type IconProps } from "../icons";
 import { DropdownItem } from "./DropdownItem";
 
 export interface LargeDropdownProps<TValue extends string> {
@@ -87,21 +87,21 @@ export function LargeDropdown<TValue extends string>({
                 ref={dropdownRef}
                 role="combobox"
                 aria-expanded={menuOpen}
-                className="w-full h-[50px] border border-gray-20 dark:border-gray-75 rounded-[10px] flex items-center
-                    pl-[9px] pr-[16px] cursor-pointer transition-colors duration-80 focus-ring
+                className="w-full h-[46px] border border-gray-20 dark:border-gray-75 rounded-[10px] flex items-center
+                    pl-[9px] pr-[13px] cursor-pointer transition-colors duration-80 focus-ring
                     hover:border-gray-30 dark:hover:border-gray-65"
                 onClick={handleClick}
             >
                 {SelectedIcon && (
-                    <div className="flex items-center justify-center bg-gray-15 dark:bg-gray-80 size-[30px]
-                        rounded-[6px] mr-[6px]">
-                        <SelectedIcon/>
+                    <div className="flex items-center justify-center bg-gray-15 dark:bg-gray-80 size-[26px]
+                        rounded-[6px] mr-[4px]">
+                        <SelectedIcon className="size-[14px]"/>
                     </div>
                 )}
                 <span className="ml-[4px] flex-1 text-left text-[16px] tracking-[0.01em] dark:text-gray-5 truncate">
                     {selectedItem.label}
                 </span>
-                <DropdownIcon className={clsx("transition-transform duration-100", menuOpen && "rotate-180")}/>
+                <SelectIcon className="size-[14px]"/>
             </button>
 
             {menuOpen &&

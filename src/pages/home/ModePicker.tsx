@@ -63,14 +63,13 @@ export function ModePicker() {
     };
 
     return (
-        <div className="absolute left-[20px] lg:left-[100px] top-[20px] bottom-[20px] max-xs:right-[20px] xs:w-[480px]
-            p-[30px] bg-white dark:bg-black rounded-[20px] shadow-sm shadow-black/10 flex flex-col gap-[12px]">
-
+        <div className="w-[460px] h-[650px]
+            p-[30px] pt-[28px] bg-white dark:bg-black rounded-[20px] shadow-sm shadow-black/10 flex flex-col">
             <p className="text-[18px] tracking-[0.01em]">
                 Zgadnij...
             </p>
 
-            <div className="flex gap-[10px] max-xs:flex-col">
+            <div className="flex gap-[10px] max-xs:flex-col mt-[10px]">
                 <LargeDropdown
                     items={[
                         { value: "name", icon: PlaceNameIcon, label: "nazwę" },
@@ -91,12 +90,12 @@ export function ModePicker() {
                         { value: "voivodeship", label: "województwa" },
                     ]}
                     value={unitType}
-                    className="xs:w-[160px]"
+                    className="xs:w-[155px]"
                     onChange={setUnitType}
                 />
             </div>
 
-            <div className="flex items-center justify-between my-[-2px]">
+            <div className="flex items-center justify-between mt-[13px] mb-[6px] pr-[4px]">
                 <p className="text-[18px] tracking-[0.01em]">
                     na podstawie jego...
                 </p>
@@ -124,7 +123,7 @@ export function ModePicker() {
                 primary
                 text="Zacznij grę"
                 iconRight={SmallArrowRightIcon}
-                className={clsx("mt-auto", isInvalidAnim && "animate-shake")}
+                className={clsx("mt-auto mb-[12px]", isInvalidAnim && "animate-shake")}
                 onClick={handlePlayClick}
             />
 
