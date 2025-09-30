@@ -24,7 +24,7 @@ export function LargeButton({
 }: LargeButton) {
     return (
         <button
-            className={clsx("flex items-center justify-center gap-[6px] h-[60px] rounded-[10px]",
+            className={clsx("flex items-center justify-center gap-[6px] rounded-[10px]",
                 "cursor-pointer text-[18px] transition-colors duration-100 focus-ring px-[40px]",
                 (short) ? "h-[50px]" : "h-[60px]",
                 (error)
