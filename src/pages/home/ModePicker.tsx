@@ -1,21 +1,21 @@
 import clsx from "clsx";
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router";
-import type { Guessable, UnitType } from "src/data/common";
-import { type GameOptions, type GameType, encodeGameURL, isGameOptions, validateGameOptions } from "src/gameOptions";
+import { guessables, unitTypes, type Guessable, type UnitType } from "src/data/common";
+import { encodeGameURL, isGameOptions, validateGameOptions, type GameOptions, type GameType } from "src/gameOptions";
 import {
     CarIcon,
     COAIcon,
+    DiceIcon,
     FlagIcon,
     IconButton,
     LargeButton,
     LargeDropdown,
-    LargeLink,
     LocationIcon,
     PlaceNameIcon,
     SmallArrowRightIcon,
     SwapIcon,
-    TargetIcon,
+    TargetIcon
 } from "src/ui";
 import { useAnimation } from "src/utils/useAnimation";
 
@@ -54,6 +54,12 @@ export function ModePicker() {
         } else {
             startInvalidAnim();
         }
+    };
+
+    const handleRandomGameClick = () => {
+        const options = getRandomGameOptions();
+        localStorage.setItem("QuizPowiaty.lastPickerMode", JSON.stringify(options));
+        navigate(encodeGameURL(options));
     };
 
     return (
@@ -122,10 +128,11 @@ export function ModePicker() {
                 onClick={handlePlayClick}
             />
 
-            <LargeLink
+            <LargeButton
                 short
-                to="/gry"
-                text="Wszystkie tryby gry"
+                text="Losowy tryb gry"
+                icon={DiceIcon}
+                onClick={handleRandomGameClick}
             />
         </div>
     );
@@ -144,6 +151,36 @@ function getInitialOptions(): GameOptions {
         unitType: "county",
         guessFrom: "name",
         guess: "map",
+        maxQuestions: 20,
+        filters: {
+            countyTypes: [],
+            voivodeships: [],
+        },
+    };
+}
+
+function getRandomGameOptions(): GameOptions {
+    const guessFromIndex = Math.floor(Math.random() * guessables.length);
+    const guessFrom = guessables[guessFromIndex];
+
+    const guessOptions = guessables.filter((guessable) => guessable !== guessFrom);
+    const guessIndex = Math.floor(Math.random() * guessOptions.length);
+    const guess = guessOptions[guessIndex];
+
+    let unitType: UnitType;
+    // detect voivodeship-only combos
+    if (guessFrom === "name" && guess === "capital" || guessFrom === "capital" && guess === "name") {
+        unitType = "voivodeship";
+    } else {
+        const unitTypeIndex = Math.floor(Math.random() * unitTypes.length);
+        unitType = unitTypes[unitTypeIndex];
+    }
+
+    return {
+        gameType: (guess === "map") ? "mapGame" : "choiceGame",
+        unitType,
+        guessFrom,
+        guess,
         maxQuestions: 20,
         filters: {
             countyTypes: [],
