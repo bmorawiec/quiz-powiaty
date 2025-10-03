@@ -8,6 +8,8 @@ export interface MaxQuestionsProps {
     className?: string;
 }
 
+const sliderValueMap = [10, 15, 20, 30, 40, 50, null];
+
 export function MaxQuestions({ value, onChange, className }: MaxQuestionsProps) {
     const [newValue, setNewValue] = useState(value);
 
@@ -19,13 +21,10 @@ export function MaxQuestions({ value, onChange, className }: MaxQuestionsProps) 
         onChange(newValue);
     };
 
-    const sliderValue = newValue || 60;
-    const handleSliderChange = (newValue: number) => {
-        if (newValue >= 60) {
-            setNewValue(null);
-        } else {
-            setNewValue(newValue);
-        }
+    const sliderValue = sliderValueMap.indexOf(newValue);
+    const handleSliderChange = (newSliderValue: number) => {
+        const newValue = sliderValueMap[newSliderValue];
+        setNewValue(newValue);
     };
 
     return (
@@ -36,9 +35,9 @@ export function MaxQuestions({ value, onChange, className }: MaxQuestionsProps) 
 
             <div className="flex items-center">
                 <Slider
-                    min={10}
-                    max={60}
-                    step={10}
+                    min={0}
+                    max={sliderValueMap.length - 1}
+                    step={1}
                     value={sliderValue}
                     onChange={handleSliderChange}
                     onDragEnd={handleSliderDragEnd}
@@ -46,7 +45,11 @@ export function MaxQuestions({ value, onChange, className }: MaxQuestionsProps) 
                 />
 
                 <p className="w-[35px] text-right">
-                    {newValue || "\u221e"}
+                    {newValue || (
+                        <span className="mr-[-3px] text-[12px] font-[450]">
+                            MAX
+                        </span>
+                    )}
                 </p>
             </div>
         </div>
