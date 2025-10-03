@@ -1,22 +1,24 @@
 import { getUnambiguousName, type Unit } from "src/data/common";
 import { units } from "src/data/units";
 import {
+    AnswerNotFoundError,
+    QuestionNotFoundError,
     createGameStore,
     createGameStoreActions,
     formatTitle,
     getQuestionText,
-    QuestionNotFoundError,
 } from "src/game/common";
-import { type GameOptions, InvalidGameOptionsError, matchesFilters } from "src/gameOptions";
+import { InvalidGameOptionsError, matchesFilters, type GameOptions } from "src/gameOptions";
 import { preloadImage } from "src/utils/preloadImage";
 import { toShuffled } from "src/utils/shuffle";
 import { ulid } from "ulid";
-import { createTypingGameStoreActions } from "./actionFactory";
-import { type TypingAnswer, type TypingGameStore, type TypingGameStoreHook, type TypingQuestion } from "./types";
+import { createDnDGameStoreActions } from "./actionFactory";
+import type { DnDAnswer, DnDCard, DnDGameStore, DnDGameStoreHook, DnDQuestion } from "./types";
 
-export async function createTypingGameStore(options: GameOptions): Promise<TypingGameStoreHook> {
+export async function createDnDGameStore(options: GameOptions): Promise<DnDGameStoreHook> {
     const questionUnits = getQuestionUnits(options);
     const { questions, questionIds, answers, answerIds } = getQuestions(questionUnits, options);
+    const { cards, unusedCardIds } = getCards(answers, answerIds);
 
     if (options.guessFrom === "flag" || options.guessFrom === "coa") {
         // preload flags/COAs for the all the prompts
@@ -27,9 +29,18 @@ export async function createTypingGameStore(options: GameOptions): Promise<Typin
 
             return preloadImage(question.value);
         }));
+    } else if (options.guess === "flag" || options.guess === "coa") {
+        // preload flags/COAs for the all the answers/cards
+        await Promise.all(answerIds.map((id) => {
+            const answer = answers[id];
+            if (!answer)
+                throw new AnswerNotFoundError(id);
+
+            return preloadImage(answer.value);
+        }));
     }
 
-    return createGameStore<TypingGameStore>((set, get) => ({
+    return createGameStore<DnDGameStore>((set, get) => ({
         state: "unpaused",
         timestamps: [Date.now()],
         options,
@@ -38,9 +49,11 @@ export async function createTypingGameStore(options: GameOptions): Promise<Typin
         answers,
         answerIds,
         title: formatTitle(options, true),
-        answered: 0,
+        correct: 0,
+        cards,
+        unusedCardIds,
         ...createGameStoreActions(set, get),
-        ...createTypingGameStoreActions(set, get),
+        ...createDnDGameStoreActions(set, get),
     }));
 }
 
@@ -56,15 +69,15 @@ function getQuestionUnits(options: GameOptions) {
 
 /** Generates questions about the provided administrative units. */
 function getQuestions(units: Unit[], options: GameOptions): {
-    questions: Record<string, TypingQuestion | undefined>;
+    questions: Record<string, DnDQuestion | undefined>;
     questionIds: string[];
-    answers: Record<string, TypingAnswer | undefined>;
+    answers: Record<string, DnDAnswer | undefined>;
     answerIds: string[];
 } {
-    const questions: Record<string, TypingQuestion | undefined> = {};
+    const questions: Record<string, DnDQuestion | undefined> = {};
     let questionIds: string[] = [];
 
-    let allAnswers: Record<string, TypingAnswer | undefined> = {};
+    let allAnswers: Record<string, DnDAnswer | undefined> = {};
     const allAnswerIds: string[] = [];
 
     for (const unit of units) {
@@ -74,13 +87,13 @@ function getQuestions(units: Unit[], options: GameOptions): {
         allAnswers = { ...allAnswers, ...answers };
         allAnswerIds.push(...answerIds);
 
-        const question: TypingQuestion = {
+        const question: DnDQuestion = {
             id: questionId,
             about: unit.id,
             value: getQuestionValue(unit, options),
             tries: 0,
             answerIds,
-            provided: 0,
+            cardIds: answerIds.map(() => null),
         };
         questions[questionId] = question;
         questionIds.push(questionId);
@@ -118,22 +131,21 @@ function getQuestionValue(unit: Unit, options: GameOptions): string {
 }
 
 function getAnswers(unit: Unit, questionId: string, options: GameOptions): {
-    answers: Record<string, TypingAnswer | undefined>;
+    answers: Record<string, DnDAnswer | undefined>;
     answerIds: string[];
 } {
-    const answers: Record<string, TypingAnswer | undefined> = {};
+    const answers: Record<string, DnDAnswer | undefined> = {};
     const answerIds: string[] = [];
 
     const answerValues = getAnswerValues(unit, options);
 
     for (const value of answerValues) {
-        const answer: TypingAnswer = {
+        const answer: DnDAnswer = {
             id: ulid(),
             questionId,
             about: unit.id,
             value,
             correct: true,
-            guessed: false,
         };
         answers[answer.id] = answer;
         answerIds.push(answer.id);
@@ -154,4 +166,31 @@ function getAnswerValues(unit: Unit, options: GameOptions): string[] {
         return unit.plates;
     }
     throw new InvalidGameOptionsError();
+}
+
+function getCards(answers: Record<string, DnDAnswer | undefined>, answerIds: string[]): {
+    cards: Record<string, DnDCard | undefined>;
+    unusedCardIds: string[];
+} {
+    const cards: Record<string, DnDCard | undefined> = {};
+
+    for (const answerId of answerIds) {
+        const answer = answers[answerId];
+        if (!answer)
+            throw new AnswerNotFoundError();
+
+        const card: DnDCard = {
+            id: answer.id,
+            questionId: null,
+            slotIndex: -1,
+            value: answer.value,
+            verificationResult: null,
+        };
+        cards[card.id] = card;
+    }
+
+    return {
+        cards,
+        unusedCardIds: toShuffled(answerIds),
+    };
 }

@@ -1,15 +1,19 @@
+import clsx from "clsx";
 import { lazy, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router";
 import { decodeGameURL, encodeGameURL, validateGameOptions, type GameOptions } from "src/gameOptions";
 import { ChoiceGameStoreContext, createChoiceGameStore, type ChoiceGameStoreHook } from "./choice";
 import { GameError, type GameProps } from "./common";
+import { createDnDGameStore, DnDGameStoreContext, type DnDGameStoreHook } from "./dnd";
 import { createPromptGameStore, PromptGameStoreContext, type PromptGameStoreHook } from "./prompt";
 import { createTypingGameStore, TypingGameStoreContext, type TypingGameStoreHook } from "./typing";
-import clsx from "clsx";
 
 const ChoiceGame = lazy(() => import("./choice"));
+const DnDGame = lazy(() => import("./dnd"));
 const PromptGame = lazy(() => import("./prompt"));
 const TypingGame = lazy(() => import("./typing"));
+
+type AnyGameStoreHook = ChoiceGameStoreHook | DnDGameStoreHook | PromptGameStoreHook | TypingGameStoreHook;
 
 export function Game() {
     const [searchParams] = useSearchParams();
@@ -19,7 +23,7 @@ export function Game() {
 
     const [isError, setIsError] = useState(false);
 
-    const [hook, setHook] = useState<ChoiceGameStoreHook | PromptGameStoreHook | TypingGameStoreHook | null>(null);
+    const [hook, setHook] = useState<AnyGameStoreHook | null>(null);
     const [options, setOptions] = useState<GameOptions | null>(null);
 
     const restartGame = useCallback(async () => {
@@ -108,6 +112,10 @@ export function Game() {
                         <ChoiceGameStoreContext value={hook as ChoiceGameStoreHook}>
                             <ChoiceGame {...gameProps}/>
                         </ChoiceGameStoreContext>
+                    ) : (options.gameType === "dndGame") ? (
+                        <DnDGameStoreContext value={hook as DnDGameStoreHook}>
+                            <DnDGame {...gameProps}/>
+                        </DnDGameStoreContext>
                     ) : (options.gameType === "promptGame") ? (
                         <PromptGameStoreContext value={hook as PromptGameStoreHook}>
                             <PromptGame {...gameProps}/>
@@ -124,11 +132,11 @@ export function Game() {
     );
 }
 
-function gameHookFromOptions(
-    options: GameOptions
-): Promise<ChoiceGameStoreHook | PromptGameStoreHook | TypingGameStoreHook> {
+function gameHookFromOptions(options: GameOptions): Promise<AnyGameStoreHook> {
     if (options.gameType === "choiceGame") {
         return createChoiceGameStore(options);
+    } else if (options.gameType === "dndGame") {
+        return createDnDGameStore(options);
     } else if (options.gameType === "promptGame") {
         return createPromptGameStore(options);
     } else if (options.gameType === "typingGame") {

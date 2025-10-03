@@ -7,6 +7,7 @@ export * from "./ClockIcon";
 export * from "./CloseIcon";
 export * from "./COAIcon";
 export * from "./DiceIcon";
+export * from "./DragHandleIcon";
 export * from "./DropdownIcon";
 export * from "./ExitFullscreenIcon";
 export * from "./FilterIcon";

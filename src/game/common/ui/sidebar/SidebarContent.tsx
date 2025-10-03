@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import {
     FilterDialog,
     Filters,
@@ -27,6 +27,7 @@ export interface SidebarContentProps {
     onGameRestart: () => void;
     /** Called when the game should be restarted due to options having been modified by the player. */
     onOptionsChange: (newOptions: GameOptions) => void;
+    children?: ReactNode;
 }
 
 export function SidebarContent({
@@ -39,6 +40,7 @@ export function SidebarContent({
     restartNeedsConfirmation,
     onGameRestart,
     onOptionsChange,
+    children,
 }: SidebarContentProps) {
     const [showConfirmDialog, setShowConfirmDialog] = useState(false);
     const [newOptions, setNewOptions] = useState(options);
@@ -143,6 +145,10 @@ export function SidebarContent({
                     onClick={onTogglePause}
                 />
             </div>
+        </div>
+
+        <div className="flex-1 overflow-y-auto">
+            {children}
         </div>
 
         <OptionsPanel>
