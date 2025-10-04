@@ -80,7 +80,7 @@ export function Card({ cardId, indexInSidebar = -1 }: CardProps) {
             onDrop={handleDrop}
         >
             <DragHandleIcon
-                className="size-[10px] mt-[6px] mr-[4px] text-gray-60"
+                className="size-[10px] mt-[6px] mr-[4px] text-gray-60 shrink-0"
             />
 
             <p>
@@ -88,7 +88,7 @@ export function Card({ cardId, indexInSidebar = -1 }: CardProps) {
             </p>
 
             {Icon && (
-                <Icon className="ml-[4px] mt-[4px] size-[14px]"/>
+                <Icon className="ml-[4px] mt-[4px] size-[14px] shrink-0"/>
             )}
         </div>
     );
