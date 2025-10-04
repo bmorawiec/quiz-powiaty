@@ -30,7 +30,7 @@
 
 Tryby gry
 - [x] choiceGame
-- [ ] dndGame
+- [x] dndGame
 - [ ] mapGame
 - [x] promptGame
 - [x] typingGame
