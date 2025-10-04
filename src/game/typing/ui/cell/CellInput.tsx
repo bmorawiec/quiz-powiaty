@@ -19,13 +19,15 @@ export function CellInput({ textTransform, slotIndex, className, onGuess }: Cell
 
     const guess = () => {
         const text = input.current!.value;
-        const result = onGuess(text, slotIndex);
-        if (result === "correct") {
-            focusNextInput();
-        } else if (result === "wrong") {
-            startWrongAnim();
+        if (text !== "") {
+            const result = onGuess(text, slotIndex);
+            if (result === "correct") {
+                focusNextInput();
+            } else if (result === "wrong") {
+                startWrongAnim();
+            }
+            input.current!.value = "";
         }
-        input.current!.value = "";
     };
 
     const handleInputKeyDown = (event: ReactKeyboardEvent) => {
