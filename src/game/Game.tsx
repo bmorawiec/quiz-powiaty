@@ -11,6 +11,7 @@ import {
 } from "react";
 import { useNavigate, useSearchParams } from "react-router";
 import { decodeGameURL, encodeGameURL, validateGameOptions, type GameOptions } from "src/gameOptions";
+import { ulid } from "ulid";
 import type { StoreApi, UseBoundStore } from "zustand";
 import { GameError, type GameProps } from "./common";
 
@@ -18,14 +19,14 @@ export function Game() {
     const [searchParams] = useSearchParams();
     const newOptions = useMemo(() => decodeGameURL(searchParams), [searchParams]);
 
-    const gameId = useRef(0);
+    const gameId = useRef<string | null>(null);
 
     const [isError, setIsError] = useState(false);
 
     const [gameRenderFn, setGameRenderFn] = useState<((props: GameProps) => ReactNode) | null>(null);
     const restartGame = useCallback(async () => {
         if (newOptions && validateGameOptions(newOptions)) {
-            const thisGameId = gameId.current + 1;
+            const thisGameId = ulid();
             gameId.current = thisGameId;
 
             const newRenderFn = await gameRenderFnFromOptions(newOptions);
