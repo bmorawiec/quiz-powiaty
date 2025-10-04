@@ -13,12 +13,19 @@ import { preloadImage } from "src/utils/preloadImage";
 import { toShuffled } from "src/utils/shuffle";
 import { ulid } from "ulid";
 import { createDnDGameStoreActions } from "./actionFactory";
-import type { DnDAnswer, DnDCard, DnDGameStore, DnDGameStoreHook, DnDQuestion } from "./types";
+import {
+    CardNotFoundError,
+    type DnDAnswer,
+    type DnDCard,
+    type DnDGameStore,
+    type DnDGameStoreHook,
+    type DnDQuestion,
+} from "./types";
 
 export async function createDnDGameStore(options: GameOptions): Promise<DnDGameStoreHook> {
     const questionUnits = getQuestionUnits(options);
     const { questions, questionIds, answers, answerIds } = getQuestions(questionUnits, options);
-    const { cards, unusedCardIds } = getCards(answers, answerIds);
+    const { cards, unusedCardIds } = getCards(answers, answerIds, options);
 
     if (options.guessFrom === "flag" || options.guessFrom === "coa") {
         // preload flags/COAs for the all the prompts
@@ -164,11 +171,15 @@ function getAnswerValues(unit: Unit, options: GameOptions): string[] {
         return unit.capitals;
     } else if (options.guess === "plate") {
         return unit.plates;
+    } else if (options.guess === "flag") {
+        return ["/images/flag/" + unit.id + ".svg"];
+    } else if (options.guess === "coa") {
+        return ["/images/coa/" + unit.id + ".svg"];
     }
     throw new InvalidGameOptionsError();
 }
 
-function getCards(answers: Record<string, DnDAnswer | undefined>, answerIds: string[]): {
+function getCards(answers: Record<string, DnDAnswer | undefined>, answerIds: string[], options: GameOptions): {
     cards: Record<string, DnDCard | undefined>;
     unusedCardIds: string[];
 } {
@@ -191,6 +202,24 @@ function getCards(answers: Record<string, DnDAnswer | undefined>, answerIds: str
 
     return {
         cards,
-        unusedCardIds: toShuffled(answerIds),
+        unusedCardIds: getCardIds(answerIds, cards, options),
     };
+}
+
+function getCardIds(answerIds: string[], cards: Record<string, DnDCard | undefined>, options: GameOptions): string[] {
+    if (options.guess === "flag" || options.guess === "coa") {
+        // scramble cards so that you can't guess based on alphabetical order
+        return toShuffled(answerIds);
+    } else {
+        // if guessing based on text, then the cards should be ordered alphabetically
+        const cardIds = [...answerIds];
+        cardIds.sort((a, b) => {            // using sort with side effects
+            const cardA = cards[a];
+            const cardB = cards[b];
+            if (!cardA || !cardB)
+                throw new CardNotFoundError(a, b);
+            return cardA.value.localeCompare(cardB.value);
+        });
+        return cardIds;
+    }
 }
