@@ -67,13 +67,19 @@ export function Card({ cardId, indexInSidebar = -1 }: CardProps) {
     return (
         <div
             draggable
-            className={clsx("border border-gray-20 rounded-[6px] cursor-move px-[9px] pt-[7px] pb-[8px] text-[14px]",
+            className={clsx("border rounded-[6px] cursor-move px-[9px] pt-[7px] pb-[8px] text-[14px]",
                 "transition-colors duration-40 cursor-move flex",
+                "border-gray-20 dark:border-gray-75",
                 (beingDragged)
                     ? "opacity-60"
-                    : (dragHover) ? "bg-gray-5" : "bg-white hover:bg-gray-5",
-                card.verificationResult
-                    && ((card.verificationResult === "correct") ? "text-teal-80" : "text-red-60"))}
+                    : (dragHover)
+                        ? "bg-gray-5 dark:bg-gray-85"
+                        : "bg-white dark:bg-gray-90 hover:bg-gray-5 dark:hover:bg-gray-85",
+                card.verificationResult && (
+                    (card.verificationResult === "correct")
+                        ? "text-teal-80 dark:text-teal-40"
+                        : "text-red-60 dark:text-red-30"
+                ))}
             onDragStart={handleDragStart}
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
