@@ -5,4 +5,5 @@ export interface GameProps {
     onOptionsChange: (newOptions: GameOptions) => void;
     fullscreen: boolean;
     onToggleFullscreen: () => void;
+    isLoading: boolean;
 }

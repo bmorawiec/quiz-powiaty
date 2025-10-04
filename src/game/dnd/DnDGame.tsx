@@ -12,7 +12,7 @@ import { DnDGameStoreContext } from "./storeContext";
 import { FinishedView, View } from "./ui";
 import { UnusedCardList } from "./ui/UnusedCardList";
 
-export function DnDGame({ onRestart, onOptionsChange, fullscreen, onToggleFullscreen }: GameProps) {
+export function DnDGame({ onRestart, onOptionsChange, fullscreen, onToggleFullscreen, isLoading }: GameProps) {
     const useDnDGameStore = useContext(DnDGameStoreContext);
 
     const togglePause = useDnDGameStore((game) => game.togglePause);
@@ -43,6 +43,8 @@ export function DnDGame({ onRestart, onOptionsChange, fullscreen, onToggleFullsc
                 ) : (
                     <View/>
                 )}
+
+                {isLoading && <LoadingPopup/>}
             </ViewContainer>
 
             <Sidebar gameState={gameState}>

@@ -11,7 +11,7 @@ import {
 import { ChoiceGameStoreContext } from "./storeContext";
 import { FinishedView, View } from "./ui";
 
-export function ChoiceGame({ onRestart, onOptionsChange, fullscreen, onToggleFullscreen }: GameProps) {
+export function ChoiceGame({ onRestart, onOptionsChange, fullscreen, onToggleFullscreen, isLoading }: GameProps) {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);
 
     const togglePause = useChoiceGameStore((game) => game.togglePause);
@@ -42,6 +42,8 @@ export function ChoiceGame({ onRestart, onOptionsChange, fullscreen, onToggleFul
                 ) : (
                     <View/>
                 )}
+
+                {isLoading && <LoadingPopup/>}
             </ViewContainer>
 
             <Sidebar gameState={gameState}>

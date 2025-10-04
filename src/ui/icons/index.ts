@@ -28,6 +28,7 @@ export * from "./SelectIcon";
 export * from "./SendIcon";
 export * from "./SmallArrowLeftIcon";
 export * from "./SmallArrowRightIcon";
+export * from "./SpinnerIcon";
 export * from "./SwapIcon";
 export * from "./TargetIcon";
 export * from "./WarningIcon";

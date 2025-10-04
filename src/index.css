@@ -121,6 +121,7 @@ body {
 
     --animate-fade-in: 100ms fade-in ease-out both;
     --animate-fade-out: 100ms fade-out ease-in both;
+    --animate-slow-delayed-fade-in: 500ms fade-in 1000ms ease-out both;
     --animate-fade-in-slow: 300ms fade-in var(--ease-out-cubic) both;
     --animate-fade-out-slow: 300ms fade-out var(--ease-in-cubic) both;
     --animate-slide-in-left: 300ms slide-in-left var(--ease-out-cubic) both;
@@ -159,6 +160,10 @@ body {
     45% { transform: translateX(30px); }
     60% { transform: translateX(-35px); }
     75% { transform: translateX(40px); }
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg) }
 }
 
 @keyframes correct {

@@ -11,7 +11,7 @@ import {
 import { PromptGameStoreContext } from "./storeContext";
 import { FinishedView, View } from "./ui";
 
-export function PromptGame({ onRestart, onOptionsChange, fullscreen, onToggleFullscreen }: GameProps) {
+export function PromptGame({ onRestart, onOptionsChange, fullscreen, onToggleFullscreen, isLoading }: GameProps) {
     const usePromptGameStore = useContext(PromptGameStoreContext);
 
     const togglePause = usePromptGameStore((game) => game.togglePause);
@@ -42,6 +42,8 @@ export function PromptGame({ onRestart, onOptionsChange, fullscreen, onToggleFul
                 ) : (
                     <View/>
                 )}
+
+                {isLoading && <LoadingPopup/>}
             </ViewContainer>
 
             <Sidebar gameState={gameState}>

@@ -22,17 +22,20 @@ export function Game() {
 
     const [isError, setIsError] = useState(false);
 
+    const [isLoading, setIsLoading] = useState(false);
     const [gameRenderFn, setGameRenderFn] = useState<((props: GameProps) => ReactNode) | null>(null);
     const restartGame = useCallback(async () => {
         if (newOptions && validateGameOptions(newOptions)) {
             const thisGameId = ulid();
             gameId.current = thisGameId;
 
+            setIsLoading(true);
             const newRenderFn = await gameRenderFnFromOptions(newOptions);
 
             // check if another game was started during the await
             // if so, then don't start this game
             if (gameId.current === thisGameId) {
+                setIsLoading(false);
                 setGameRenderFn(() => newRenderFn);     // passing in newRenderFn directly would cause it to be called
             }
         } else {
@@ -90,6 +93,7 @@ export function Game() {
         onOptionsChange: handleOptionsChange,
         fullscreen,
         onToggleFullscreen: handleToggleFullscreen,
+        isLoading,
     };
     return (
         <div

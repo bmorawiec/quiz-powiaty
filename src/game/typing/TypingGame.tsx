@@ -11,7 +11,7 @@ import {
 import { TypingGameStoreContext } from "./storeContext";
 import { FinishedView, View } from "./ui";
 
-export function TypingGame({ onRestart, onOptionsChange, fullscreen, onToggleFullscreen }: GameProps) {
+export function TypingGame({ onRestart, onOptionsChange, fullscreen, onToggleFullscreen, isLoading }: GameProps) {
     const useTypingGameStore = useContext(TypingGameStoreContext);
 
     const togglePause = useTypingGameStore((game) => game.togglePause);
@@ -42,6 +42,8 @@ export function TypingGame({ onRestart, onOptionsChange, fullscreen, onToggleFul
                 ) : (
                     <View/>
                 )}
+
+                {isLoading && <LoadingPopup/>}
             </ViewContainer>
 
             <Sidebar gameState={gameState}>
