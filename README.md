@@ -12,6 +12,9 @@
 ### Test wielokrotnego wyboru
 ![Zrzut ekranu z gry w trybie testu wielokrotnego wyboru](/assets/screenshots/choiceGame.png)
 
+### Tryb gry "przeciągnij i upuść"
+![Zrzut ekranu z gry w trybie wpisywania](/assets/screenshots/dndGame.png)
+
 ### Wpisywanie odpowiedzi
 ![Zrzut ekranu z gry w trybie wpisywania](/assets/screenshots/promptGame.png)
 
