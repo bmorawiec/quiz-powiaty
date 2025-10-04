@@ -1,5 +1,4 @@
 export * from "./state";
 export * from "./storeContext";
+export * from "./TypingGame";
 
-import { TypingGame } from "./TypingGame";
-export default TypingGame;

@@ -1,19 +1,18 @@
 import clsx from "clsx";
-import { lazy, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+    useCallback,
+    useEffect,
+    useMemo,
+    useRef,
+    useState,
+    type ComponentType,
+    type Context,
+    type ReactNode,
+} from "react";
 import { useNavigate, useSearchParams } from "react-router";
 import { decodeGameURL, encodeGameURL, validateGameOptions, type GameOptions } from "src/gameOptions";
-import { ChoiceGameStoreContext, createChoiceGameStore, type ChoiceGameStoreHook } from "./choice";
+import type { StoreApi, UseBoundStore } from "zustand";
 import { GameError, type GameProps } from "./common";
-import { createDnDGameStore, DnDGameStoreContext, type DnDGameStoreHook } from "./dnd";
-import { createPromptGameStore, PromptGameStoreContext, type PromptGameStoreHook } from "./prompt";
-import { createTypingGameStore, TypingGameStoreContext, type TypingGameStoreHook } from "./typing";
-
-const ChoiceGame = lazy(() => import("./choice"));
-const DnDGame = lazy(() => import("./dnd"));
-const PromptGame = lazy(() => import("./prompt"));
-const TypingGame = lazy(() => import("./typing"));
-
-type AnyGameStoreHook = ChoiceGameStoreHook | DnDGameStoreHook | PromptGameStoreHook | TypingGameStoreHook;
 
 export function Game() {
     const [searchParams] = useSearchParams();
@@ -23,21 +22,18 @@ export function Game() {
 
     const [isError, setIsError] = useState(false);
 
-    const [hook, setHook] = useState<AnyGameStoreHook | null>(null);
-    const [options, setOptions] = useState<GameOptions | null>(null);
-
+    const [gameRenderFn, setGameRenderFn] = useState<((props: GameProps) => ReactNode) | null>(null);
     const restartGame = useCallback(async () => {
         if (newOptions && validateGameOptions(newOptions)) {
             const thisGameId = gameId.current + 1;
             gameId.current = thisGameId;
 
-            const newHook = await gameHookFromOptions(newOptions);
+            const newRenderFn = await gameRenderFnFromOptions(newOptions);
 
             // check if another game was started during the await
             // if so, then don't start this game
             if (gameId.current === thisGameId) {
-                setHook(() => newHook);         // passing in newHook directly would cause it to be called
-                setOptions(newOptions);
+                setGameRenderFn(() => newRenderFn);     // passing in newRenderFn directly would cause it to be called
             }
         } else {
             setIsError(true);
@@ -106,41 +102,38 @@ export function Game() {
                     title="Podany adres gry jest nieprawidłowy"
                     details="Spróbuj ponownie przepisać adres lub wybierz inny tryb gry."
                 />
-            ) : (
-                options && (    // options is null when game is loading
-                    (options.gameType === "choiceGame") ? (
-                        <ChoiceGameStoreContext value={hook as ChoiceGameStoreHook}>
-                            <ChoiceGame {...gameProps}/>
-                        </ChoiceGameStoreContext>
-                    ) : (options.gameType === "dndGame") ? (
-                        <DnDGameStoreContext value={hook as DnDGameStoreHook}>
-                            <DnDGame {...gameProps}/>
-                        </DnDGameStoreContext>
-                    ) : (options.gameType === "promptGame") ? (
-                        <PromptGameStoreContext value={hook as PromptGameStoreHook}>
-                            <PromptGame {...gameProps}/>
-                        </PromptGameStoreContext>
-                    ) : (options.gameType === "typingGame") ? (
-                        <TypingGameStoreContext value={hook as TypingGameStoreHook}>
-                            <TypingGame {...gameProps}/>
-                        </TypingGameStoreContext>
-
-                    ) : null
-                )
-            )}
+            ) : (gameRenderFn && gameRenderFn(gameProps))}
         </div>
     );
 }
 
-function gameHookFromOptions(options: GameOptions): Promise<AnyGameStoreHook> {
+async function gameRenderFnFromOptions(options: GameOptions): Promise<(props: GameProps) => ReactNode> {
     if (options.gameType === "choiceGame") {
-        return createChoiceGameStore(options);
+        const { createChoiceGameStore, ChoiceGameStoreContext, ChoiceGame } = await import("./choice");
+        return createRenderFn(createChoiceGameStore, ChoiceGameStoreContext, ChoiceGame, options);
     } else if (options.gameType === "dndGame") {
-        return createDnDGameStore(options);
+        const { createDnDGameStore, DnDGameStoreContext, DnDGame } = await import("./dnd");
+        return createRenderFn(createDnDGameStore, DnDGameStoreContext, DnDGame, options);
     } else if (options.gameType === "promptGame") {
-        return createPromptGameStore(options);
+        const { createPromptGameStore, PromptGameStoreContext, PromptGame } = await import("./prompt");
+        return createRenderFn(createPromptGameStore, PromptGameStoreContext, PromptGame, options);
     } else if (options.gameType === "typingGame") {
-        return createTypingGameStore(options);
+        const { createTypingGameStore, TypingGameStoreContext, TypingGame } = await import("./typing");
+        return createRenderFn(createTypingGameStore, TypingGameStoreContext, TypingGame, options);
     }
-    throw new Error("No matching hook for this game type.");
+    throw new Error("No match for this game type.");
+}
+
+async function createRenderFn<TStore>(
+    createThisGameStore: (options: GameOptions) => Promise<UseBoundStore<StoreApi<TStore>>>,
+    ThisGameStoreContext: Context<UseBoundStore<StoreApi<TStore>>>,
+    ThisGame: ComponentType<GameProps>,
+    options: GameOptions,
+): Promise<(props: GameProps) => ReactNode> {
+    const hook = await createThisGameStore(options);
+    return (props: GameProps) => (
+        <ThisGameStoreContext value={hook}>
+            <ThisGame {...props}/>
+        </ThisGameStoreContext>
+    );
 }
