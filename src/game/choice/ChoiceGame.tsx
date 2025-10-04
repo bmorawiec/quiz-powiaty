@@ -1,5 +1,13 @@
 import { useContext } from "react";
-import { PausedView, Sidebar, SidebarContent, type GameProps } from "../common";
+import {
+    GameLayout,
+    LoadingPopup,
+    PausedView,
+    Sidebar,
+    SidebarContent,
+    ViewContainer,
+    type GameProps,
+} from "../common";
 import { ChoiceGameStoreContext } from "./storeContext";
 import { FinishedView, View } from "./ui";
 
@@ -24,28 +32,32 @@ export function ChoiceGame({ onRestart, onOptionsChange, fullscreen, onToggleFul
         }
     };
 
-    return (<>
-        {(gameState === "paused") ? (
-            <PausedView onUnpauseClick={togglePause}/>
-        ) : (gameState === "finished") ? (
-            <FinishedView onRestart={onRestart}/>
-        ) : (
-            <View/>
-        )}
+    return (
+        <GameLayout fullscreen={fullscreen}>
+            <ViewContainer>
+                {(gameState === "paused") ? (
+                    <PausedView onUnpauseClick={togglePause}/>
+                ) : (gameState === "finished") ? (
+                    <FinishedView onRestart={onRestart}/>
+                ) : (
+                    <View/>
+                )}
+            </ViewContainer>
 
-        <Sidebar gameState={gameState}>
-            <SidebarContent
-                gameState={gameState}
-                calculateTime={calculateTime}
-                onTogglePause={handleTogglePause}
-                fullscreen={fullscreen}
-                onToggleFullscreen={onToggleFullscreen}
-                options={options}
-                restartNeedsConfirmation={restartNeedsConfirmation}
-                onGameRestart={onRestart}
-                onOptionsChange={onOptionsChange}
-            />
-        </Sidebar>
-    </>);
+            <Sidebar gameState={gameState}>
+                <SidebarContent
+                    gameState={gameState}
+                    calculateTime={calculateTime}
+                    onTogglePause={handleTogglePause}
+                    fullscreen={fullscreen}
+                    onToggleFullscreen={onToggleFullscreen}
+                    options={options}
+                    restartNeedsConfirmation={restartNeedsConfirmation}
+                    onGameRestart={onRestart}
+                    onOptionsChange={onOptionsChange}
+                />
+            </Sidebar>
+        </GameLayout>
+    );
 }
 

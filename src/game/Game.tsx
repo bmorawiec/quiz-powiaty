@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import {
     useCallback,
     useEffect,
@@ -95,8 +94,7 @@ export function Game() {
     return (
         <div
             ref={container}
-            className={clsx("bg-white dark:bg-black flex-1 flex gap-[16px] sm:px-[20px] min-h-[600px]",
-                (fullscreen) ? "py-[20px]" : "lg:px-[100px] sm:pb-[38px]")}
+            className="bg-white dark:bg-black flex-1 min-h-[600px]"
         >
             {(isError) ? (
                 <GameError

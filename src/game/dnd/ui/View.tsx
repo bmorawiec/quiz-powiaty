@@ -12,7 +12,7 @@ export function View() {
     const title = useDnDGameStore((state) => state.title);
 
     return (
-        <div className="relative flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col items-center 
+        <div className="relative size-full bg-gray-5 dark:bg-gray-95 flex flex-col items-center
             pt-[48px] pb-[50px] max-sm:pb-[300px] px-[20px] overflow-y-auto">
 
             <h2 className="text-[20px] font-[500] mb-[28px] text-gray-80 dark:text-gray-10 text-center">

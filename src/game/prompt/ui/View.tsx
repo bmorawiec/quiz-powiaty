@@ -24,7 +24,7 @@ export function View() {
     };
 
     return (
-        <div className="relative flex-1 bg-gray-5 dark:bg-gray-95 sm:rounded-[20px] flex flex-col items-center 
+        <div className="relative size-full bg-gray-5 dark:bg-gray-95 flex flex-col items-center
             pt-[60px] pb-[50px] max-sm:pb-[120px] px-[20px]">
             {(options.guessFrom === "flag" || options.guessFrom === "coa") && (
                 <div className="relative w-full max-w-[700px] flex-1 min-h-[200px] max-h-[500px] mb-[30px]">

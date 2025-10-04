@@ -37,8 +37,7 @@ export function FinishedViewBase({ options, questions, questionIds, allAnswers, 
     }, [questions, questionIds]);
 
     return (
-        <div className="flex-1 bg-gray-5 dark:bg-gray-95 xs:rounded-[20px] flex flex-col min-h-0
-            max-xs:overflow-y-auto">
+        <div className="size-full bg-gray-5 dark:bg-gray-95 flex flex-col min-h-0 max-xs:overflow-y-auto">
             <div className="flex-1 xs:overflow-y-auto pt-[58px] flex flex-col items-center">
                 <div className="w-full max-w-[740px] flex flex-col gap-[22px] px-[20px] pb-[20px] xs:pb-[50px]">
                     <h2 className="text-[30px] text-gray-90 dark:text-gray-15 self-center">
