@@ -12,7 +12,8 @@ import { useNavigate, useSearchParams } from "react-router";
 import { decodeGameURL, encodeGameURL, validateGameOptions, type GameOptions } from "src/gameOptions";
 import { ulid } from "ulid";
 import type { StoreApi, UseBoundStore } from "zustand";
-import { GameError, type GameProps } from "./common";
+import { type GameProps } from "./common";
+import { GameError } from "./GameError";
 
 export function Game() {
     const [searchParams] = useSearchParams();

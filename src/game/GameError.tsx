@@ -1,5 +1,5 @@
 import { CloseIcon, LargeLink, SmallArrowLeftIcon } from "src/ui";
-import { GameLayout, ViewContainer } from "./gameLayout";
+import { GameLayout, ViewContainer } from "./common";
 
 export interface GameErrorProps {
     title: string;

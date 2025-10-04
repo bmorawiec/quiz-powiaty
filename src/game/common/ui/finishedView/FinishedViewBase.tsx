@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import type { GameOptions } from "src/gameOptions";
 import { LargeButton, LargeLink, RestartIcon } from "src/ui";
 import { QuestionNotFoundError, type Answer, type Question } from "../../state";
-import { GameModeCard } from "../GameModeCard";
+import { GameModeCard } from "./GameModeCard";
 import { GuessDistribution } from "./GuessDistribution";
 import { ProgressBar } from "./ProgressBar";
 import { QuestionList } from "./questionList";
