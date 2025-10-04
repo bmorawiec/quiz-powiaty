@@ -77,9 +77,11 @@ export function Slider({ min, max, step = 1, value, onChange, onDragEnd, classNa
             className={clsx("flex items-center h-[30px] group", className)}
             onPointerDown={handlePointerDown}
         >
-            <div className="relative flex-1 bg-gray-20 h-[6px] rounded-full">
+            <div className="relative flex-1 bg-gray-20 dark:bg-gray-80 h-[6px] rounded-full">
                 <div
-                    className="h-[6px] rounded-full transition-all duration-80 bg-teal-70 group-hover:bg-teal-75"
+                    className="h-[6px] rounded-full transition-all duration-80
+                        bg-teal-70 group-hover:bg-teal-75
+                        dark:bg-teal-65 dark:group-hover:bg-teal-60"
                     style={{
                         width: valuePercent + "%",
                     }}
@@ -89,7 +91,7 @@ export function Slider({ min, max, step = 1, value, onChange, onDragEnd, classNa
                     <div
                         key={index}
                         className={clsx("absolute size-[4px] ml-[-2px] top-[1px] rounded-full",
-                            (percent < valuePercent) ? "bg-white" : "bg-teal-70")}
+                            (percent < valuePercent) ? "bg-white" : "bg-teal-70 dark:bg-teal-55")}
                         style={{
                             left: percent + "%",
                         }}
@@ -97,8 +99,9 @@ export function Slider({ min, max, step = 1, value, onChange, onDragEnd, classNa
                 )}
 
                 <div
-                    className={clsx("absolute rounded-full",
-                        "transition-all duration-80 bg-teal-70 group-hover:bg-teal-75",
+                    className={clsx("absolute rounded-full transition-all duration-80",
+                        "bg-teal-70 group-hover:bg-teal-75",
+                        "dark:bg-teal-65 dark:group-hover:bg-teal-60",
                         (dragging) ? "size-[20px] ml-[-10px] top-[-7px]" : "size-[16px] ml-[-8px] top-[-5px]")}
                     style={{
                         left: valuePercent + "%",
