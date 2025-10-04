@@ -14,6 +14,7 @@ import { ulid } from "ulid";
 import type { StoreApi, UseBoundStore } from "zustand";
 import { type GameProps } from "./common";
 import { GameError } from "./GameError";
+import { GameSkeleton } from "./GameSkeleton";
 
 export function Game() {
     const [searchParams] = useSearchParams();
@@ -106,7 +107,9 @@ export function Game() {
                     title="Podany adres gry jest nieprawidłowy"
                     details="Spróbuj ponownie przepisać adres lub wybierz inny tryb gry."
                 />
-            ) : (gameRenderFn && gameRenderFn(gameProps))}
+            ) : (gameRenderFn) ? (
+                gameRenderFn(gameProps)
+            ) : (isLoading && <GameSkeleton/>)}
         </div>
     );
 }
