@@ -101,7 +101,7 @@ export function decodeGameURL(params: URLSearchParams): GameOptions | null {
         maxQuestions = null;
     } else {
         maxQuestions = parseInt(maxQuestionsString);
-        if (maxQuestions < 1) {
+        if (isNaN(maxQuestions) || maxQuestions < 1) {
             return null;
         }
     }
