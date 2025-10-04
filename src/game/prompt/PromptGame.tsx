@@ -36,7 +36,7 @@ export function PromptGame({ onRestart, onOptionsChange, fullscreen, onToggleFul
         <GameLayout fullscreen={fullscreen}>
             <ViewContainer>
                 {(gameState === "paused") ? (
-                    <PausedView onUnpauseClick={togglePause}/>
+                    <PausedView/>
                 ) : (gameState === "finished") ? (
                     <FinishedView onRestart={onRestart}/>
                 ) : (

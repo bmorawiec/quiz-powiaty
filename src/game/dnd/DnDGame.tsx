@@ -37,7 +37,7 @@ export function DnDGame({ onRestart, onOptionsChange, fullscreen, onToggleFullsc
         <GameLayout fullscreen={fullscreen}>
             <ViewContainer>
                 {(gameState === "paused") ? (
-                    <PausedView onUnpauseClick={togglePause}/>
+                    <PausedView/>
                 ) : (gameState === "finished") ? (
                     <FinishedView onRestart={onRestart}/>
                 ) : (
