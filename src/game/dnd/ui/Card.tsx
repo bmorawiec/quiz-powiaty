@@ -1,8 +1,8 @@
+import clsx from "clsx";
 import { useContext, useState, type DragEvent } from "react";
+import { ApplyIcon, CloseIcon, DragHandleIcon } from "src/ui";
 import { CardNotFoundError } from "../state";
 import { DnDGameStoreContext } from "../storeContext";
-import clsx from "clsx";
-import { ApplyIcon, CloseIcon, DragHandleIcon } from "src/ui";
 
 export interface CardProps {
     cardId: string;
@@ -11,6 +11,7 @@ export interface CardProps {
 
 export function Card({ cardId, indexInSidebar = -1 }: CardProps) {
     const useDnDGameStore = useContext(DnDGameStoreContext);
+    const options = useDnDGameStore((game) => game.options);
 
     const card = useDnDGameStore((game) => game.cards[cardId]);
     if (!card)
@@ -83,9 +84,18 @@ export function Card({ cardId, indexInSidebar = -1 }: CardProps) {
                 className="size-[10px] mt-[6px] mr-[4px] text-gray-60 shrink-0"
             />
 
-            <p>
-                {card.value}
-            </p>
+            {(options.guess === "flag" || options.guess === "coa") ? (
+                <div
+                    className="flex-1 h-[100px] bg-contain bg-center bg-no-repeat"
+                    style={{
+                        backgroundImage: `url(${card.value})`,
+                    }}
+                />
+            ) : (
+                <p>
+                    {card.value}
+                </p>
+            )}
 
             {Icon && (
                 <Icon className="ml-[4px] mt-[4px] size-[14px] shrink-0"/>
