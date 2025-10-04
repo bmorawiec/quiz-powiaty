@@ -36,7 +36,8 @@ export async function createDnDGameStore(options: GameOptions): Promise<DnDGameS
 
             return preloadImage(question.value);
         }));
-    } else if (options.guess === "flag" || options.guess === "coa") {
+    }
+    if (options.guess === "flag" || options.guess === "coa") {
         // preload flags/COAs for the all the answers/cards
         await Promise.all(answerIds.map((id) => {
             const answer = answers[id];

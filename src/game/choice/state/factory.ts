@@ -32,7 +32,8 @@ export async function createChoiceGameStore(options: GameOptions): Promise<Choic
 
             return preloadImage(question.value)
         }));
-    } else if (options.guess === "flag" || options.guess === "coa") {
+    }
+    if (options.guess === "flag" || options.guess === "coa") {
         const firstTwoQuestionIds = questionIds.slice(0, 2);
 
         // preload flags/COAs for answers of the first two prompts
