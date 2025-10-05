@@ -26,7 +26,7 @@ export function View() {
     };
 
     return (
-        <div className={clsx("relative size-full bg-gray-5 dark:bg-gray-95 sm:rounded-[20px]",
+        <div className={clsx("relative size-full bg-gray-5 dark:bg-gray-95",
             "flex flex-col items-center pt-[60px] pb-[50px] max-sm:pb-[120px] px-[20px]",
             isCorrectAnim && "animate-correct dark:animate-correct-dark")}>
             {(options.guessFrom === "flag" || options.guessFrom === "coa") && (
