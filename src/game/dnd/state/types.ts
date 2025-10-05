@@ -21,7 +21,9 @@ export interface DnDQuestion extends Question {
     cardIds: (string | null)[];
 }
 
-export type DnDAnswer = Answer;
+export interface DnDAnswer extends Answer {
+    correct: true;
+}
 
 export class CardNotFoundError extends Error {
     name = "CardNotFoundError";
