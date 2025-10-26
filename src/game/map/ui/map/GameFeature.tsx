@@ -6,6 +6,7 @@ import { colors } from "src/utils/colors";
 import { QuestionNotFoundError } from "../../../common";
 import { FeatureNotFoundError, type MapQuestion } from "../../state";
 import { MapGameStoreContext } from "../../storeContext";
+import { Ripple } from "./Ripple";
 
 export interface GameFeatureProps {
     featureId: string;
@@ -15,10 +16,12 @@ export function GameFeature({ featureId }: GameFeatureProps) {
     const useMapGameStore = useContext(MapGameStoreContext);
 
     const feature = useMapGameStore((game) => game.features[featureId]);
-    if (!feature) throw new FeatureNotFoundError(featureId);
+    if (!feature)
+        throw new FeatureNotFoundError(featureId);
 
     const shape = unitShapes.find((shape) => shape.id === feature.unitId);
-    if (!shape) throw new UnitShapeNotFoundError(feature.unitId);
+    if (!shape)
+        throw new UnitShapeNotFoundError(feature.unitId);
 
     const question = useMapGameStore((game) => (feature.questionId === undefined)
         ? null
@@ -33,18 +36,27 @@ export function GameFeature({ featureId }: GameFeatureProps) {
         }
     };
 
-    const [fill, hoverFill] = getGuessedFeatureStyle(question);
-    return (
+    const showRipple = !!(question && !question.guessed && question.tries > 3);
+    const [fill, hoverFill] = getFeatureStyle(question, showRipple);
+    return (<>
         <Feature
             shape={shape.outline.hq}
             onClick={handleClick}
             fill={fill}
             hoverFill={hoverFill}
         />
-    );
+        
+        {showRipple && (
+            <Ripple center={shape.center}/>
+        )}
+    </>);
 }
 
-function getGuessedFeatureStyle(question: MapQuestion | null): [string | undefined, string | undefined] {
+/** Returns the fill color of a feature depending on the number of guesses. */
+function getFeatureStyle(question: MapQuestion | null, showRipple: boolean): [string | undefined, string | undefined] {
+    if (showRipple) {
+        return [colors.gray35, colors.gray40];  // additionally highlight the feature when ripple shown
+    }
     if (question && question.guessed) {
         if (question.tries === 0) {
             return [colors.teal60, colors.teal55];
