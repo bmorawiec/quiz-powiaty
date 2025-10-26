@@ -8,13 +8,27 @@ export interface FeatureProps {
     shape: number[][];
     onPointerOver?: () => void;
     onPointerOut?: () => void;
+    onClick?: () => void;
+    fill?: string;
+    hoverFill?: string;
+    darkModeFill?: string;
+    darkModeHoverFill?: string;
 }
 
 extend({
     Graphics,
 });
 
-export function Feature({ shape, onPointerOver, onPointerOut }: FeatureProps) {
+export function Feature({
+    shape,
+    onPointerOver,
+    onPointerOut,
+    onClick,
+    fill,
+    hoverFill,
+    darkModeFill,
+    darkModeHoverFill,
+}: FeatureProps) {
     const [hover, setHover] = useState(false);
 
     const handlePointerOver = () => {
@@ -46,15 +60,15 @@ export function Feature({ shape, onPointerOver, onPointerOut }: FeatureProps) {
         g.closePath();
         g.fill({
             color: (isDarkMode)
-                ? (hover) ? colors.gray80 : colors.gray90
-                : (hover) ? colors.teal15 : colors.grass10,
+                ? (hover) ? darkModeHoverFill ?? colors.gray80 : darkModeFill ?? colors.gray90
+                : (hover) ? hoverFill ?? colors.teal15 : fill ?? colors.grass10,
         });
         g.stroke({
             width: (hover) ? 2 : 1,
             join: "round",
             color: (isDarkMode) ? colors.gray10 : colors.teal90,
         });
-    }, [hover, shape, isDarkMode]);
+    }, [hover, fill, hoverFill, darkModeFill, darkModeHoverFill, shape, isDarkMode]);
 
     return (
         <pixiGraphics
@@ -62,6 +76,7 @@ export function Feature({ shape, onPointerOver, onPointerOut }: FeatureProps) {
             draw={redraw}
             onPointerOver={handlePointerOver}
             onPointerOut={handlePointerOut}
+            onClick={onClick}
         />
     );
 }

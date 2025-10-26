@@ -121,6 +121,9 @@ async function gameRenderFnFromOptions(options: GameOptions): Promise<(props: Ga
     } else if (options.gameType === "dndGame") {
         const { createDnDGameStore, DnDGameStoreContext, DnDGame } = await import("./dnd");
         return createRenderFn(createDnDGameStore, DnDGameStoreContext, DnDGame, options);
+    } else if (options.gameType === "mapGame") {
+        const { createMapGameStore, MapGameStoreContext, MapGame } = await import("./map");
+        return createRenderFn(createMapGameStore, MapGameStoreContext, MapGame, options);
     } else if (options.gameType === "promptGame") {
         const { createPromptGameStore, PromptGameStoreContext, PromptGame } = await import("./prompt");
         return createRenderFn(createPromptGameStore, PromptGameStoreContext, PromptGame, options);
