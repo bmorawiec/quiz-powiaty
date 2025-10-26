@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { UnitShapeNotFoundError } from "src/data/common";
 import { unitShapes } from "src/data/unitShapes";
-import { Feature } from "src/map";
+import { Feature, type FeatureStyle } from "src/map";
 import { colors } from "src/utils/colors";
 import { QuestionNotFoundError } from "../../../common";
 import { FeatureNotFoundError, type MapQuestion } from "../../state";
@@ -37,13 +37,12 @@ export function GameFeature({ featureId }: GameFeatureProps) {
     };
 
     const showRipple = !!(question && !question.guessed && question.tries > 3);
-    const [fill, hoverFill] = getFeatureStyle(question, showRipple);
+    const style = getFeatureStyle(question, showRipple);
     return (<>
         <Feature
             shape={shape.outline.hq}
             onClick={handleClick}
-            fill={fill}
-            hoverFill={hoverFill}
+            style={style}
         />
         
         {showRipple && (
@@ -53,20 +52,44 @@ export function GameFeature({ featureId }: GameFeatureProps) {
 }
 
 /** Returns the fill color of a feature depending on the number of guesses. */
-function getFeatureStyle(question: MapQuestion | null, showRipple: boolean): [string | undefined, string | undefined] {
+function getFeatureStyle(question: MapQuestion | null, showRipple: boolean): FeatureStyle | undefined {
     if (showRipple) {
-        return [colors.gray35, colors.gray40];  // additionally highlight the feature when ripple shown
+        return {
+            fill: colors.gray35,        // additionally highlight the feature when ripple shown
+            hoverFill: colors.gray40,
+            darkModeFill: colors.gray60,
+            darkModeHoverFill: colors.gray55,
+        };
     }
     if (question && question.guessed) {
         if (question.tries === 0) {
-            return [colors.teal60, colors.teal55];
+            return {
+                fill: colors.teal60,
+                hoverFill: colors.teal55,
+                darkModeFill: colors.teal65,
+                darkModeHoverFill: colors.teal60,
+            };
         } else if (question.tries === 1) {
-            return [colors.teal40, colors.teal35];
+            return {
+                fill: colors.teal40,
+                hoverFill: colors.teal35,
+                darkModeFill: colors.teal75,
+                darkModeHoverFill: colors.teal70,
+            };
         } else if (question.tries === 2) {
-            return [colors.teal30, colors.teal25];
+            return {
+                fill: colors.teal30,
+                hoverFill: colors.teal25,
+                darkModeFill: colors.teal85,
+                darkModeHoverFill: colors.teal80,
+            };
         } else {
-            return [colors.red55, colors.red50];
+            return {
+                fill: colors.red55,
+                hoverFill: colors.red50,
+                darkModeFill: colors.red60,
+                darkModeHoverFill: colors.red55,
+            };
         }
     }
-    return [undefined, undefined];
 }

@@ -19,7 +19,7 @@ export function QuestionBar() {
                 <LocationIcon/>
             </div>
 
-            <h2 className="font-[450] text-gray-80">
+            <h2 className="font-[450] text-gray-80 dark:text-gray-15">
                 {question.value}
             </h2>
         </div>
