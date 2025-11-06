@@ -9,7 +9,7 @@ import {
 } from "src/game/common";
 import { type GameOptions, InvalidGameOptionsError, matchesFilters } from "src/gameOptions";
 import { preloadImage } from "src/utils/preloadImage";
-import { toShuffled } from "src/utils/shuffle";
+import { toShuffled } from "src/utils/random";
 import { ulid } from "ulid";
 import { createPromptGameStoreActions } from "./actionFactory";
 import { type PromptAnswer, type PromptGameStore, type PromptGameStoreHook, type PromptQuestion } from "./types";

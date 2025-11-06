@@ -2,7 +2,7 @@ import type { Unit } from "src/data/common";
 import { units } from "src/data/units";
 import { matchesFilters, type GameOptions } from "src/gameOptions";
 import { preloadImage } from "src/utils/preloadImage";
-import { toShuffled } from "src/utils/shuffle";
+import { toShuffled } from "src/utils/random";
 import { ulid } from "ulid";
 import {
     QuestionNotFoundError,

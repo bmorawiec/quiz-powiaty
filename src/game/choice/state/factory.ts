@@ -10,7 +10,7 @@ import {
 } from "src/game/common";
 import { type GameOptions, matchesFilters } from "src/gameOptions";
 import { preloadImage } from "src/utils/preloadImage";
-import { toShuffled } from "src/utils/shuffle";
+import { toShuffled } from "src/utils/random";
 import { ulid } from "ulid";
 import { createChoiceGameStoreActions } from "./actionFactory";
 import { plausibleAnswerUnits } from "./plausibleAnswers";
