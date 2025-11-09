@@ -144,6 +144,8 @@ export function createDnDGameStoreActions(
                 // move the card that's currently in the target slot into the sidebar
                 insertCardIntoSidebar(cardIdInTargetSlot);
                 changeCardParent(cardIdInTargetSlot, null, -1);
+
+                setCardResult(cardIdInTargetSlot, null);
             }
             removeCardFromSidebar(movedCardId);
         }
