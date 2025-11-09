@@ -1,5 +1,6 @@
 import type { CountyType, VoivodeshipId } from "src/data/common";
-import { areFiltersEmpty, type UnitFilters } from "./types";
+import { type UnitFilters } from "./types";
+import { areFiltersEmpty } from "./utils";
 
 export const filterNames = {
     countyTypes: {

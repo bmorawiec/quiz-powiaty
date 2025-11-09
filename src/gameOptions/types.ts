@@ -1,14 +1,5 @@
-import {
-    isCountyType,
-    isGuessable,
-    isUnitType,
-    isVoivodeshipId,
-    type CountyType,
-    type Guessable,
-    type Unit,
-    type UnitType,
-    type VoivodeshipId,
-} from "src/data/common";
+import { isGuessable, isUnitType, type Guessable, type UnitType } from "src/data/common";
+import { type UnitFilters, isUnitFilters } from "./filters";
 
 export class InvalidGameOptionsError extends Error {
     name = "InvalidGameOptionsError";
@@ -44,48 +35,3 @@ export function isGameOptions(maybeOptions: unknown): maybeOptions is GameOption
         && isUnitFilters((maybeOptions as GameOptions).filters);
 }
 
-/** Used to filter counties depending on their types and/or the voivodeships they're a part of.
- *  Currently there are no filters that affect voivodeships. */
-export interface UnitFilters {
-    /** Matches counties by their types.
-     *  Matches all counties when empty. */
-    countyTypes: CountyType[];
-    /** Matches counties by their parent voivodeship.
-     *  Matches all counties when empty. */
-    voivodeships: VoivodeshipId[];
-}
-
-export function isUnitFilters(maybeFilters: unknown): maybeFilters is UnitFilters {
-    return typeof maybeFilters === "object"
-        && maybeFilters !== null
-        && Array.isArray((maybeFilters as UnitFilters).countyTypes)
-        && (maybeFilters as UnitFilters).countyTypes
-            .every((maybeCountyType) => isCountyType(maybeCountyType))
-        && Array.isArray((maybeFilters as UnitFilters).voivodeships)
-        && (maybeFilters as UnitFilters).voivodeships
-            .every((maybeVoivodeshipId) => isVoivodeshipId(maybeVoivodeshipId));
-}
-
-export function matchesFilters(unit: Unit, filters: UnitFilters): boolean {
-    return matchesVoivodeshipFilters(unit, filters) && matchesOtherFilters(unit, filters);
-}
-
-export function areFiltersEmpty(filters: UnitFilters): boolean {
-    return filters.countyTypes.length === 0 && filters.voivodeships.length === 0;
-}
-
-/** Checks whether the provided administrative unit matches filters other than the voivodeship filters. */
-export function matchesOtherFilters(unit: Unit, filters: UnitFilters): boolean {
-    if (unit.type === "county") {
-        return filters.countyTypes.length === 0 || filters.countyTypes.includes(unit.countyType!);
-    }
-    return true;
-}
-
-/** Returns true if the provided administrative unit matches the voivodeships selected in the specified filters */
-export function matchesVoivodeshipFilters(unit: Unit, filters: UnitFilters): boolean {
-    if (unit.type === "county") {
-        return filters.voivodeships.length === 0 || filters.voivodeships.includes(unit.parent!);
-    }
-    return true;
-}

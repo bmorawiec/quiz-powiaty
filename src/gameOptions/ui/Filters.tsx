@@ -1,8 +1,7 @@
 import clsx from "clsx";
 import { useMemo } from "react";
 import { Button, FilterIcon } from "src/ui";
-import { getFilterString } from "../filterNames";
-import { type UnitFilters } from "../types";
+import { getFilterString, type UnitFilters } from "../filters";
 
 export interface FiltersProps {
     filters: UnitFilters;
