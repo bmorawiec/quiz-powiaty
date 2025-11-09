@@ -1,7 +1,8 @@
 import { AnswerNotFoundError, getTextHint, QuestionNotFoundError } from "src/game/common";
+import type { PromptAnswer } from "src/game/prompt";
+import { swapDiacritics } from "src/utils/diacritics";
 import type { StoreApi } from "zustand";
 import type { GuessResult, TypingAnswer, TypingGameStore } from "./types";
-import type { PromptAnswer } from "src/game/prompt";
 
 export interface TypingGameStoreActions {
     /** Checks if the player's guess is correct.
@@ -51,7 +52,7 @@ export function createTypingGameStoreActions(
             if (!answer)
                 throw new AnswerNotFoundError(answerId);
 
-            if (playersGuess.toLowerCase() === answer.value.toLowerCase()) {
+            if (swapDiacritics(playersGuess.toLowerCase()) === swapDiacritics(answer.value.toLowerCase())) {
                 return answer;
             }
         }
