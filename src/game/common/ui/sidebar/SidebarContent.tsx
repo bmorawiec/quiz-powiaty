@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from "react";
 import {
+    areFiltersEmpty,
     FilterDialog,
     Filters,
     MaxQuestions,
@@ -100,9 +101,16 @@ export function SidebarContent({
     };
 
     const handleApplyFilters = (newFilters: UnitFilters) => {
+        const filtersEmpty = areFiltersEmpty(options.filters)
+        const newFiltersEmpty = areFiltersEmpty(newFilters);
         queueRestart({
             ...options,
             filters: newFilters,
+            maxQuestions: (filtersEmpty && !newFiltersEmpty)
+                ? null
+                : (!filtersEmpty && newFiltersEmpty)
+                    ? 20
+                    : options.maxQuestions,
         });
         if (!restartNeedsConfirmation) {
             setShowFilterDialog(false);
