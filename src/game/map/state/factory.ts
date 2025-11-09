@@ -1,6 +1,6 @@
 import type { Unit } from "src/data/common";
 import { units } from "src/data/units";
-import { matchesFilters, type GameOptions } from "src/gameOptions";
+import { matchesVoivodeshipFilters, matchesOtherFilters, type GameOptions } from "src/gameOptions";
 import { preloadImage } from "src/utils/preloadImage";
 import { toShuffled } from "src/utils/random";
 import { ulid } from "ulid";
@@ -15,13 +15,14 @@ import { createMapGameStoreActions } from "./actionFactory";
 import type { MapAnswer, MapFeature, MapGameStore, MapGameStoreHook, MapQuestion } from "./types";
 
 export async function createMapGameStore(options: GameOptions): Promise<MapGameStoreHook> {
-    const unitsMatchingFilters = units
-        .filter((unit) => unit.type === options.unitType && matchesFilters(unit, options.filters));
-    const questionUnits = toShuffled(unitsMatchingFilters)
+    const unitsMatchingVoivodeshipFilters = units
+        .filter((unit) => unit.type === options.unitType && matchesVoivodeshipFilters(unit, options.filters));
+    const questionUnits = toShuffled(unitsMatchingVoivodeshipFilters
+            .filter((unit) => matchesOtherFilters(unit, options.filters)))
         .slice(0, options.maxQuestions ?? undefined);
 
     const { questions, questionIds, answers, answerIds } = getQuestions(questionUnits, options);
-    const { features, featureIds } = getFeatures(unitsMatchingFilters, questions, questionIds);
+    const { features, featureIds } = getFeatures(unitsMatchingVoivodeshipFilters, questions, questionIds);
 
     if (options.guessFrom === "flag" || options.guessFrom === "coa") {
         const firstTwoQuestionIds = questionIds.slice(0, 2);
