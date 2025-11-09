@@ -1,5 +1,5 @@
 import type { CountyType, VoivodeshipId } from "src/data/common";
-import type { UnitFilters } from "./types";
+import { areFiltersEmpty, type UnitFilters } from "./types";
 
 export const filterNames = {
     countyTypes: {
@@ -27,7 +27,7 @@ export const filterNames = {
 };
 
 export function getFilterString(filters: UnitFilters): string {
-    if (filters.countyTypes.length === 0 && filters.voivodeships.length === 0) {
+    if (areFiltersEmpty(filters)) {
         return "Nie ustawiono";
     }
     return [

@@ -70,6 +70,10 @@ export function matchesFilters(unit: Unit, filters: UnitFilters): boolean {
     return matchesVoivodeshipFilters(unit, filters) && matchesOtherFilters(unit, filters);
 }
 
+export function areFiltersEmpty(filters: UnitFilters): boolean {
+    return filters.countyTypes.length === 0 && filters.voivodeships.length === 0;
+}
+
 /** Checks whether the provided administrative unit matches filters other than the voivodeship filters. */
 export function matchesOtherFilters(unit: Unit, filters: UnitFilters): boolean {
     if (unit.type === "county") {
