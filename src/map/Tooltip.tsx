@@ -3,8 +3,7 @@ import { CanvasTextMetrics, Container, Graphics, Text, TextStyle } from "pixi.js
 import { useCallback, useContext, useMemo } from "react";
 import { colors } from "src/utils/colors";
 import type { Vector } from "src/utils/vector";
-import { getPixelPerfectPosition } from "./pixelPerfect";
-import { WorldTransformContext } from "./worldTransform";
+import { getPixelPerfectPosition, WorldTransformContext } from "./viewport";
 
 export interface TooltipProps {
     position: Vector;

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import type { Box, Size } from "src/utils/vector";
-import { Viewport } from "./Viewport";
+import { Viewport } from "./viewport";
 
 export interface MapProps {
     worldSize: Size;
