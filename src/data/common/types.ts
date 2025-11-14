@@ -5,10 +5,7 @@ export interface Unit {
     /** The id of this administrative unit. */
     id: string;
     type: UnitType;
-    /** "county" - this is a regular county.
-     *  "city" - this is a city on county rights.
-     *
-     *  Required for counties.
+    /** Required for counties.
      *  This field can be filtered by. */
     countyType?: CountyType;
     /** Id of the administrative unit this unit is a part of.
@@ -38,6 +35,8 @@ export function isUnitType(maybeUnitType: unknown): maybeUnitType is UnitType {
     return unitTypes.includes(maybeUnitType as UnitType);
 }
 
+/** "county" - this unit is a regular county.
+ *  "city" - this unit is a city on county rights. */
 export const countyTypes = ["county", "city"];
 export type CountyType = "county" | "city";
 
@@ -67,12 +66,9 @@ export function isGuessable(maybeGuessable: unknown): maybeGuessable is Guessabl
 export interface UnitShape {
     /** The id of this administrative unit. */
     id: string;
-    /** The shape of this administrative unit.
-     *  The data consists of an array of polygons, which in turn are made up of points.
-     *
-     *  Formal definition: (P1, P2, ..., Pn)
-     *  where Pn represents a polygon and Pn = (x1, y1, x2, y2, ..., xn, yn)
-     *  where xn, yn are coordinates of point n. */
+    /** The shape of this administrative unit as a multipolygon.
+     *  Each number[] in the number[][] corresponds to a single polygon.
+     *  Each number[] contains alternating x and y coordinates of following points. */
     outline: {
         lq: number[][];
         hq: number[][];
@@ -85,5 +81,8 @@ export interface UnitShape {
 export interface CountryShape {
     /** The ISO 3166-1 alpha-2 code of this country. */
     id: string;
+    /** The shape of this country as a multipolygon.
+     *  Each number[] in the number[][] corresponds to a single polygon.
+     *  Each number[] contains alternating x and y coordinates of following points. */
     outline: number[][];
 }
