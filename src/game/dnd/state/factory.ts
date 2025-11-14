@@ -114,8 +114,8 @@ function getQuestions(units: Unit[], options: GameOptions): {
         questionIds.sort((a, b) => {            // using sort with side effects
             const questionA = questions[a];
             const questionB = questions[b];
-            if (!questionA || !questionB)
-                throw new QuestionNotFoundError(a, b);
+            if (!questionA) throw new QuestionNotFoundError(a);
+            if (!questionB) throw new QuestionNotFoundError(b);
             return questionA.value.localeCompare(questionB.value);
         });
     }
@@ -188,7 +188,7 @@ function getCards(answers: Record<string, DnDAnswer | undefined>, answerIds: str
     for (const answerId of answerIds) {
         const answer = answers[answerId];
         if (!answer)
-            throw new AnswerNotFoundError();
+            throw new AnswerNotFoundError(answerId);
 
         const card: DnDCard = {
             id: answer.id,

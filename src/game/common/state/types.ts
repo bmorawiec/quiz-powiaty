@@ -29,8 +29,8 @@ export type GameState = "unpaused" | "paused" | "finished";
 export class QuestionNotFoundError extends Error {
     name = "QuestionNotFoundError";
 
-    constructor(...ids: string[]) {
-        super("A question with the specified id could not be found. Ids were: " + ids.join(", "));
+    constructor(id: string) {
+        super("A question with the specified id could not be found. Id was: " + id);
     }
 }
 
@@ -50,8 +50,8 @@ export interface Question {
 export class AnswerNotFoundError extends Error {
     name = "AnswerNotFoundError";
 
-    constructor(...ids: string[]) {
-        super("An answer with the specified id could not be found. Ids were: " + ids.join(", "));
+    constructor(id: string) {
+        super("An answer with the specified id could not be found. Id was: " + id);
     }
 }
 
