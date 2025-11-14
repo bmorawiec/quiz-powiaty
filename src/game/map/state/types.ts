@@ -14,8 +14,6 @@ export interface MapGameStore extends GameStore, MapGameStoreActions {
     title?: string;
     /** Id of the current question. */
     current: string;
-    /** Total number of answered questions. */
-    answered: number;
 }
 
 export interface MapQuestion extends Question {

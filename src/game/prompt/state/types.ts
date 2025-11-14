@@ -11,8 +11,6 @@ export interface PromptGameStore extends GameStore, PromptGameStoreActions {
     title?: string;
     /** Id of the current question. */
     current: string;
-    /** Total number of answered questions. */
-    answered: number;
 }
 
 export interface PromptQuestion extends Question {

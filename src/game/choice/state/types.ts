@@ -11,8 +11,6 @@ export interface ChoiceGameStore extends GameStore, ChoiceGameStoreActions {
     title?: string;
     /** Id of the current question. */
     current: string;
-    /** Total number of answered questions */
-    answered: number;
 }
 
 export type ChoiceQuestion = Question;

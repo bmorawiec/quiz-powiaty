@@ -49,6 +49,10 @@ export function createDnDGameStoreActions(
             }
         }
 
+        set({
+            answered: correctQuestionCount,
+        });
+
         if (correctQuestionCount === game.questionIds.length) {         // all questions have correct answers
             game.finish();
         }

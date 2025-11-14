@@ -16,6 +16,8 @@ export interface GameStore extends GameStoreActions {
     questionIds: string[];
     /** Stores the states of all the questions that are going to be presented in this game. */
     questions: Record<string, Question | undefined>;
+    /** Number of correctly answered questions. */
+    answered: number;
     /** Stores the ids of all the answers. */
     answerIds: string[];
     /** Stores all the answers to all questions. */

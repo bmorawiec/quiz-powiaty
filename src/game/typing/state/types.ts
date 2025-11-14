@@ -9,7 +9,6 @@ export interface TypingGameStore extends GameStore, TypingGameStoreActions {
     answers: Record<string, TypingAnswer | undefined>;
     /** The title text shown on the game screen. */
     title: string;
-    answered: number;
 }
 
 export interface TypingQuestion extends Question {

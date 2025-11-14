@@ -56,6 +56,7 @@ export async function createDnDGameStore(options: GameOptions): Promise<DnDGameS
         questionIds,
         answers,
         answerIds,
+        answered: 0,
         title: formatTitle(options, true),
         correct: 0,
         cards,
