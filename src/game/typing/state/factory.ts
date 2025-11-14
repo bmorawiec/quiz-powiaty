@@ -4,6 +4,7 @@ import {
     createGameStore,
     createGameStoreActions,
     formatTitle,
+    getInitialGameStoreState,
     getQuestionText,
     QuestionNotFoundError,
 } from "src/game/common";
@@ -30,15 +31,13 @@ export async function createTypingGameStore(options: GameOptions): Promise<Typin
     }
 
     return createGameStore<TypingGameStore>((set, get) => ({
-        state: "unpaused",
-        timestamps: [Date.now()],
+        ...getInitialGameStoreState(),
         options,
         questions,
         questionIds,
         answers,
         answerIds,
         title: formatTitle(options, true),
-        answered: 0,
         ...createGameStoreActions(set, get),
         ...createTypingGameStoreActions(set, get),
     }));

@@ -6,6 +6,7 @@ import {
     createGameStore,
     createGameStoreActions,
     formatTitle,
+    getInitialGameStoreState,
     getQuestionText,
 } from "src/game/common";
 import { InvalidGameOptionsError, matchesFilters, type GameOptions } from "src/gameOptions";
@@ -49,16 +50,13 @@ export async function createDnDGameStore(options: GameOptions): Promise<DnDGameS
     }
 
     return createGameStore<DnDGameStore>((set, get) => ({
-        state: "unpaused",
-        timestamps: [Date.now()],
+        ...getInitialGameStoreState(),
         options,
         questions,
         questionIds,
         answers,
         answerIds,
-        answered: 0,
         title: formatTitle(options, true),
-        correct: 0,
         cards,
         unusedCardIds,
         ...createGameStoreActions(set, get),

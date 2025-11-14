@@ -6,6 +6,7 @@ import {
     createGameStoreActions,
     formatQuestion,
     formatTitle,
+    getInitialGameStoreState,
     QuestionNotFoundError,
 } from "src/game/common";
 import { type GameOptions, matchesFilters } from "src/gameOptions";
@@ -53,8 +54,7 @@ export async function createChoiceGameStore(options: GameOptions): Promise<Choic
     }
 
     return createGameStore<ChoiceGameStore>((set, get) => ({
-        state: "unpaused",
-        timestamps: [Date.now()],
+        ...getInitialGameStoreState(),
         options,
         questions,
         questionIds,
@@ -64,7 +64,6 @@ export async function createChoiceGameStore(options: GameOptions): Promise<Choic
             ? formatTitle(options)
             : undefined,
         current: questionIds[0],
-        answered: 0,
         ...createGameStoreActions(set, get),
         ...createChoiceGameStoreActions(set, get),
     }));

@@ -5,6 +5,7 @@ import {
     createGameStoreActions,
     formatQuestion,
     formatTitle,
+    getInitialGameStoreState,
     QuestionNotFoundError,
 } from "src/game/common";
 import { type GameOptions, InvalidGameOptionsError, matchesFilters } from "src/gameOptions";
@@ -32,8 +33,7 @@ export async function createPromptGameStore(options: GameOptions): Promise<Promp
     }
 
     return createGameStore<PromptGameStore>((set, get) => ({
-        state: "unpaused",
-        timestamps: [Date.now()],
+        ...getInitialGameStoreState(),
         options,
         questions,
         questionIds,
@@ -43,7 +43,6 @@ export async function createPromptGameStore(options: GameOptions): Promise<Promp
             ? formatTitle(options)
             : undefined,
         current: questionIds[0],
-        answered: 0,
         ...createGameStoreActions(set, get),
         ...createPromptGameStoreActions(set, get),
     }));

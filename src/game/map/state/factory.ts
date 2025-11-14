@@ -10,6 +10,7 @@ import {
     createGameStoreActions,
     formatQuestion,
     formatTitle,
+    getInitialGameStoreState,
 } from "../../common";
 import { createMapGameStoreActions } from "./actionFactory";
 import type { MapAnswer, MapFeature, MapGameStore, MapGameStoreHook, MapQuestion } from "./types";
@@ -38,8 +39,7 @@ export async function createMapGameStore(options: GameOptions): Promise<MapGameS
     }
 
     return createGameStore<MapGameStore>((set, get) => ({
-        state: "unpaused",
-        timestamps: [Date.now()],
+        ...getInitialGameStoreState(),
         options,
         questions,
         questionIds,
@@ -51,7 +51,6 @@ export async function createMapGameStore(options: GameOptions): Promise<MapGameS
             ? formatTitle(options)
             : undefined,
         current: questionIds[0],
-        answered: 0,
         ...createGameStoreActions(set, get),
         ...createMapGameStoreActions(set, get),
     }));
