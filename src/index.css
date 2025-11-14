@@ -24,6 +24,7 @@ body {
 
     --color-*: initial;
 
+    /* If you change the color palette here, remember to also change src/utils/colors */
     --color-teal-5: #e3f2ef;
     --color-teal-10: #d5ece7;
     --color-teal-15: #c7e6df;
