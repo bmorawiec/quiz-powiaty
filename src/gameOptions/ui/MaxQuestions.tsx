@@ -10,6 +10,7 @@ export interface MaxQuestionsProps {
 
 const sliderValueMap = [10, 15, 20, 30, 40, 50, null];
 
+/** Maximum question amount slider. */
 export function MaxQuestions({ value, onChange, className }: MaxQuestionsProps) {
     const [newValue, setNewValue] = useState(value);
 

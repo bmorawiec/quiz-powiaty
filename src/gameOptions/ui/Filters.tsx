@@ -9,6 +9,7 @@ export interface FiltersProps {
     className: string;
 }
 
+/** Shows currently applied filters and a button to open the filter selection dialog. */
 export function Filters({ filters, onExpand, className }: FiltersProps) {
     const filterString = useMemo(
         () => getFilterString(filters),

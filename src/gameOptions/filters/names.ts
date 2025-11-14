@@ -27,6 +27,12 @@ export const filterNames = {
     } satisfies Record<VoivodeshipId, string>,
 };
 
+/** Returns a string describing the applied filters.
+ *  @example
+ *  getFilterString({
+ *      countyTypes: ["city"],
+ *      voivodeship: ["02", "04"],
+ *  }) == "miasto na prawach powiatu, dolnośląskie, kujawsko-pomorskie" */
 export function getFilterString(filters: UnitFilters): string {
     if (areFiltersEmpty(filters)) {
         return "Nie ustawiono";

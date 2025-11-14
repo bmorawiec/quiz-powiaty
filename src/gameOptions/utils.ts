@@ -19,7 +19,7 @@ export function validateGameOptions(options: GameOptions): boolean {
 }
 
 /** Returns all valid game types based on the providided guess-guessFrom combo.
- *  @throws if guessFrom is set to guess. */
+ *  @throws if guessFrom = guess. */
 export function gameTypesFromCombo(options: GameOptions): GameType[] {
     if (options.guessFrom === options.guess) {
         throw new InvalidGameOptionsError();

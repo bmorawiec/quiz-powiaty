@@ -10,6 +10,7 @@ export interface FilterDialogProps {
     onCancel?: () => void;
 }
 
+/** Allows the user to modify currently applied filters. */
 export function FilterDialog({ filters, onApply, onCancel }: FilterDialogProps) {
     const [newFilters, setNewFilters] = useState(filters);
 
