@@ -24,6 +24,7 @@ const textStyle = new TextStyle({
 const PADDING_X = 10;
 const PADDING_Y = 5;
 
+/** Shows a tooltip at the specified position. */
 export function Tooltip({ position, text }: TooltipProps) {
     const worldTransform = useContext(WorldTransformContext);
 

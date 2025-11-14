@@ -6,6 +6,9 @@ import { useDarkMode } from "src/utils/useDarkMode";
 import type { FeatureStyle } from "./featureStyle";
 
 export interface FeatureProps {
+    /** The shape of this feature as a multipolygon.
+     *  Each number[] in the number[][] corresponds to a single polygon.
+     *  Each number[] contains alternating x and y coordinates of following points. */
     shape: number[][];
     onPointerOver?: () => void;
     onPointerOut?: () => void;
@@ -17,6 +20,7 @@ extend({
     Graphics,
 });
 
+/** An interactive, filled map feature of the specified shape and style. */
 export function Feature({ shape, onPointerOver, onPointerOut, onClick, style }: FeatureProps) {
     const [hover, setHover] = useState(false);
 

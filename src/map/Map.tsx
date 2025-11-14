@@ -4,12 +4,18 @@ import type { Box, Size } from "src/utils/vector";
 import { Viewport } from "./viewport";
 
 export interface MapProps {
+    /** Panning and zooming is done relative to this size.
+     *  Initially the whole area specified here is visible on the map. */
     worldSize: Size;
+    /** Adds padding on each side of the map. */
     border?: Box;
+    /** These components will be shown on the map.
+     *  Only components provided by src/map can be rendered on the map. */
     children?: ReactNode;
     className?: string;
 }
 
+/** Displays an interactive map with the features that were provided as children. */
 export function Map({ className, ...viewportProps }: MapProps) {
     const container = useRef<HTMLDivElement | null>(null);
     const [containerSize, setContainerSize] = useState<Size>({ width: 100, height: 100 });

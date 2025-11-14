@@ -4,6 +4,9 @@ import { colors } from "src/utils/colors";
 import { useDarkMode } from "src/utils/useDarkMode";
 
 export interface BorderProps {
+    /** The shape of this feature as a multipolygon.
+     *  Each number[] in the number[][] corresponds to a single polygon.
+     *  Each number[] contains alternating x and y coordinates of following points. */
     shape: number[][];
 }
 
@@ -11,6 +14,7 @@ extend({
     Graphics,
 });
 
+/** A non-interactive empty (non-filled) map feature of the specified shape. */
 export function Border({ shape }: BorderProps) {
     const isDarkMode = useDarkMode();
 
