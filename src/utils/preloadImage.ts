@@ -1,3 +1,4 @@
+/** Preloads the image at the specified URL. */
 export function preloadImage(url: string): Promise<void> {
     return new Promise((resolve, reject) => {
         const image = new Image();

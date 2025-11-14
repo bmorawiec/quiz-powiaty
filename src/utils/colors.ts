@@ -1,3 +1,4 @@
+/** Colors from index.css */
 export const colors = {
     teal5: "#e3f2ef",
     teal10: "#d5ece7",

@@ -1,3 +1,4 @@
+/** Focuses the next <input> element on the page. */
 export function focusNextInput() {
     const allInputs = document.querySelectorAll("input");
     if (document.activeElement) {

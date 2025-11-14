@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+/** Changes when the device pixel ratio changes. */
 export function useDevicePixelRatio(): number {
     const [dpr, setDPR] = useState(window.devicePixelRatio);
 

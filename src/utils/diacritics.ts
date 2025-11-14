@@ -3,6 +3,7 @@ const map: Partial<Record<string, string>> = {
     "ą": "a",   "ć": "c",   "ę": "e",   "ł": "l",   "ń": "n",   "ó": "o",   "ś": "s",   "ź": "z",   "ż": "z",
 };
 
+/** Swaps Polish diacritics out for their equivilant letters in the latin alphabet. */
 export function swapDiacritics(str: string): string {
     let newStr = "";
     for (const char of str) {

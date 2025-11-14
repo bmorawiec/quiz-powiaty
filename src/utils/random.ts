@@ -1,4 +1,5 @@
-/** Thanks to github user bryc for the original implementation:
+/** Seeded random number generator.
+ *  Thanks to github user bryc for the original implementation:
  *  https://github.com/bryc/code/blob/master/jshash/PRNGs.md
  *  Code is in the public domain and can be licensed under MIT. */
 export function alea(seed: string) {
@@ -36,6 +37,9 @@ export function alea(seed: string) {
     };
 }
 
+/** Returns the provided array shuffled with the specified rng function.
+ *  Doesn't alter the provided array.
+ *  Uses Math.random by default. */
 export function toShuffled<T>(array: T[], rng: () => number = Math.random): T[] {
     const shuffled = [...array];
     for (let index = shuffled.length - 1; index > 0; index--) {
