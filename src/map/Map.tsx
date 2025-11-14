@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
-import type { Box, Size } from "src/utils/vector";
+import type { Box, Size } from "src/utils/geometry";
 import { Viewport } from "./viewport";
 
 export interface MapProps {

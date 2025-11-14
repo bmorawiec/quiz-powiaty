@@ -2,7 +2,7 @@ import { useTick } from "@pixi/react";
 import { Graphics, Ticker } from "pixi.js";
 import { useCallback, useRef } from "react";
 import { colors } from "src/utils/colors";
-import type { Vector } from "src/utils/vector";
+import type { Vector } from "src/utils/geometry";
 
 export interface RippleProps {
     center: Vector;

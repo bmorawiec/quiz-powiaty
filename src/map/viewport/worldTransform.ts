@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import type { Vector } from "src/utils/vector";
+import type { Vector } from "src/utils/geometry";
 
 /** Describes the transformation applied to a map.
  *  Pv = Pm * tr.scale + tr.position

@@ -1,4 +1,4 @@
-import type { Vector } from "src/utils/vector";
+import type { Vector } from "src/utils/geometry";
 import type { WorldTransform } from "./worldTransform";
 
 /** Rounds the specified map coordinates, so that graphics rendered at this position doesn't get blurred because of

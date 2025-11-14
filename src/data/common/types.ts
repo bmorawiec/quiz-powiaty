@@ -1,4 +1,4 @@
-import type { Vector } from "src/utils/vector";
+import type { Vector } from "src/utils/geometry";
 
 /** Stores information about an administrative unit. */
 export interface Unit {

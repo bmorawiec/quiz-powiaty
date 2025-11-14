@@ -11,7 +11,7 @@ import {
     type WheelEvent as ReactWheelEvent
 } from "react";
 import { useDevicePixelRatio } from "src/utils/useDevicePixelRatio";
-import type { Box, Size, Vector } from "src/utils/vector";
+import type { Box, Size, Vector } from "src/utils/geometry";
 import { WorldTransformContext, type WorldTransform } from "./worldTransform";
 
 export interface ViewportProps {
