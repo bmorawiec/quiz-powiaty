@@ -68,7 +68,7 @@ export interface UnitShape {
     id: string;
     /** The shape of this administrative unit as a multipolygon.
      *  Each number[] in the number[][] corresponds to a single polygon.
-     *  Each number[] contains alternating x and y coordinates of following points. */
+     *  Each number[] contains alternating x and y coordinates of subsequent points. */
     outline: {
         lq: number[][];
         hq: number[][];
@@ -83,6 +83,6 @@ export interface CountryShape {
     id: string;
     /** The shape of this country as a multipolygon.
      *  Each number[] in the number[][] corresponds to a single polygon.
-     *  Each number[] contains alternating x and y coordinates of following points. */
+     *  Each number[] contains alternating x and y coordinates of subsequent points. */
     outline: number[][];
 }

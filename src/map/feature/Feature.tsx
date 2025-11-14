@@ -8,7 +8,7 @@ import type { FeatureStyle } from "./featureStyle";
 export interface FeatureProps {
     /** The shape of this feature as a multipolygon.
      *  Each number[] in the number[][] corresponds to a single polygon.
-     *  Each number[] contains alternating x and y coordinates of following points. */
+     *  Each number[] contains alternating x and y coordinates of subsequent points. */
     shape: number[][];
     onPointerOver?: () => void;
     onPointerOut?: () => void;
