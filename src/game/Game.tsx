@@ -1,20 +1,17 @@
-import {
-    useCallback,
-    useEffect,
-    useMemo,
-    useRef,
-    useState,
-    type ComponentType,
-    type Context,
-    type ReactNode,
-} from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType } from "react";
 import { useNavigate, useSearchParams } from "react-router";
 import { decodeGameURL, encodeGameURL, validateGameOptions, type GameOptions } from "src/gameOptions";
 import { ulid } from "ulid";
-import type { StoreApi, UseBoundStore } from "zustand";
-import { type GameProps } from "./common";
+import { GameStoreContext, type GameProps, type GameStoreHook } from "./common";
 import { GameError } from "./GameError";
+import { GameLayout2 } from "./gameLayout2";
 import { GameSkeleton } from "./GameSkeleton";
+
+export interface GamePackage {
+    options: GameOptions;
+    hook: GameStoreHook;
+    component: ComponentType<GameProps>;
+}
 
 export function Game() {
     const [searchParams] = useSearchParams();
@@ -25,20 +22,20 @@ export function Game() {
     const [isError, setIsError] = useState(false);
 
     const [isLoading, setIsLoading] = useState(false);
-    const [gameRenderFn, setGameRenderFn] = useState<((props: GameProps) => ReactNode) | null>(null);
+    const [gamePackage, setGamePackage] = useState<GamePackage | null>(null);
     const restartGame = useCallback(async () => {
         if (newOptions && validateGameOptions(newOptions)) {
             const thisGameId = ulid();
             gameId.current = thisGameId;
 
             setIsLoading(true);
-            const newRenderFn = await gameRenderFnFromOptions(newOptions);
+            const newGamePackage = await gamePackageFromOptions(newOptions);
 
             // check if another game was started during the await
             // if so, then don't start this game
             if (gameId.current === thisGameId) {
                 setIsLoading(false);
-                setGameRenderFn(() => newRenderFn);     // passing in newRenderFn directly would cause it to be called
+                setGamePackage(newGamePackage);
             }
         } else {
             setIsError(true);
@@ -90,13 +87,6 @@ export function Game() {
         return () => elem.removeEventListener("fullscreenchange", handleFullscreenChange);
     }, []);
 
-    const gameProps: GameProps = {
-        onRestart: handleRestart,
-        onOptionsChange: handleOptionsChange,
-        fullscreen,
-        onToggleFullscreen: handleToggleFullscreen,
-        isLoading,
-    };
     return (
         <div
             ref={container}
@@ -107,43 +97,50 @@ export function Game() {
                     title="Podany adres gry jest nieprawidłowy"
                     details="Spróbuj ponownie przepisać adres lub wybierz inny tryb gry."
                 />
-            ) : (gameRenderFn) ? (
-                gameRenderFn(gameProps)
+            ) : (gamePackage) ? (
+                <GameStoreContext value={gamePackage.hook}>
+                    <GameLayout2
+                        gameScreen={gamePackage.component}
+                        onRestart={handleRestart}
+                        fullscreen={fullscreen}
+                        onToggleFullscreen={handleToggleFullscreen}
+                        onOptionsChange={handleOptionsChange}
+                    />
+                </GameStoreContext>
             ) : (isLoading && <GameSkeleton/>)}
         </div>
     );
 }
 
-async function gameRenderFnFromOptions(options: GameOptions): Promise<(props: GameProps) => ReactNode> {
+async function gamePackageFromOptions(options: GameOptions): Promise<GamePackage> {
     if (options.gameType === "choiceGame") {
-        const { createChoiceGameStore, ChoiceGameStoreContext, ChoiceGame } = await import("./choice");
-        return createRenderFn(createChoiceGameStore, ChoiceGameStoreContext, ChoiceGame, options);
+        const { createChoiceGameStore, ChoiceGame } = await import("./choice");
+        return createGamePackage(options, createChoiceGameStore, ChoiceGame);
     } else if (options.gameType === "dndGame") {
-        const { createDnDGameStore, DnDGameStoreContext, DnDGame } = await import("./dnd");
-        return createRenderFn(createDnDGameStore, DnDGameStoreContext, DnDGame, options);
+        const { createDnDGameStore, DnDGame } = await import("./dnd");
+        return createGamePackage(options, createDnDGameStore, DnDGame);
     } else if (options.gameType === "mapGame") {
-        const { createMapGameStore, MapGameStoreContext, MapGame } = await import("./map");
-        return createRenderFn(createMapGameStore, MapGameStoreContext, MapGame, options);
+        const { createMapGameStore, MapGame } = await import("./map");
+        return createGamePackage(options, createMapGameStore, MapGame);
     } else if (options.gameType === "promptGame") {
-        const { createPromptGameStore, PromptGameStoreContext, PromptGame } = await import("./prompt");
-        return createRenderFn(createPromptGameStore, PromptGameStoreContext, PromptGame, options);
+        const { createPromptGameStore, PromptGame } = await import("./prompt");
+        return createGamePackage(options, createPromptGameStore, PromptGame);
     } else if (options.gameType === "typingGame") {
-        const { createTypingGameStore, TypingGameStoreContext, TypingGame } = await import("./typing");
-        return createRenderFn(createTypingGameStore, TypingGameStoreContext, TypingGame, options);
+        const { createTypingGameStore, TypingGame } = await import("./typing");
+        return createGamePackage(options, createTypingGameStore, TypingGame);
     }
     throw new Error("No match for this game type.");
 }
 
-async function createRenderFn<TStore>(
-    createThisGameStore: (options: GameOptions) => Promise<UseBoundStore<StoreApi<TStore>>>,
-    ThisGameStoreContext: Context<UseBoundStore<StoreApi<TStore>>>,
-    ThisGame: ComponentType<GameProps>,
+async function createGamePackage(
     options: GameOptions,
-): Promise<(props: GameProps) => ReactNode> {
+    createThisGameStore: (options: GameOptions) => Promise<GameStoreHook>,
+    component: ComponentType<GameProps>
+): Promise<GamePackage> {
     const hook = await createThisGameStore(options);
-    return (props: GameProps) => (
-        <ThisGameStoreContext value={hook}>
-            <ThisGame {...props}/>
-        </ThisGameStoreContext>
-    );
+    return {
+        options,
+        hook,
+        component,
+    };
 }

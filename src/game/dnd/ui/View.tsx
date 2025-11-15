@@ -1,8 +1,10 @@
 import { useContext } from "react";
+import { SidebarPortal } from "src/game/gameLayout2";
+import { ApplyIcon, Button } from "src/ui";
 import { DnDGameStoreContext } from "../storeContext";
 import { ImageTable } from "./ImageTable";
 import { Table } from "./Table";
-import { ApplyIcon, Button } from "src/ui";
+import { UnusedCardList } from "./UnusedCardList";
 
 export function View() {
     const useDnDGameStore = useContext(DnDGameStoreContext);
@@ -31,6 +33,10 @@ export function View() {
             ) : (
                 <Table/>
             )}
+
+            <SidebarPortal>
+                <UnusedCardList/>
+            </SidebarPortal>
         </div>
     );
 }

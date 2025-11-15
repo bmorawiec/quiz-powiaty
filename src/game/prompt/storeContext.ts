@@ -1,4 +1,5 @@
-import { createContext } from "react";
+import { type Context } from "react";
+import { GameStoreContext } from "../common";
 import type { PromptGameStoreHook } from "./state";
 
-export const PromptGameStoreContext = createContext<PromptGameStoreHook>(null as unknown as PromptGameStoreHook);
+export const PromptGameStoreContext = GameStoreContext as unknown as Context<PromptGameStoreHook>;

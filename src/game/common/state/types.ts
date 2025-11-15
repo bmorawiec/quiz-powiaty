@@ -1,5 +1,8 @@
 import type { GameOptions } from "src/gameOptions";
 import type { GameStoreActions } from "./actionFactory";
+import type { StoreApi, UseBoundStore } from "zustand";
+
+export type GameStoreHook = UseBoundStore<StoreApi<GameStore>>;
 
 export interface GameStore extends GameStoreActions {
     /** Current state of the game */

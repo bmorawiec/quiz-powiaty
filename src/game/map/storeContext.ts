@@ -1,5 +1,6 @@
-import { createContext } from "react";
+import type { Context } from "react";
+import { GameStoreContext } from "../common";
 import type { MapGameStoreHook } from "./state";
 
-export const MapGameStoreContext = createContext<MapGameStoreHook>(null as unknown as MapGameStoreHook);
+export const MapGameStoreContext = GameStoreContext as unknown as Context<MapGameStoreHook>;
 
