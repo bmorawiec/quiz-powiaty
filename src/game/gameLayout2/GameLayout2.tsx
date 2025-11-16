@@ -1,6 +1,7 @@
+import clsx from "clsx";
 import { type ComponentType, useContext } from "react";
 import type { GameOptions } from "src/gameOptions";
-import { GameLayout, type GameProps, GameStoreContext, Sidebar, SidebarContent, ViewContainer } from "../common";
+import { type GameProps, GameStoreContext, Sidebar, SidebarContent } from "../common";
 
 export interface GameLayout2Props {
     gameScreen: ComponentType<GameProps>;
@@ -30,10 +31,11 @@ export function GameLayout2({
 
     const GameScreen = gameScreen;
     return (
-        <GameLayout fullscreen={fullscreen}>
-            <ViewContainer>
+        <div className={clsx("size-full flex gap-[16px] sm:px-[20px] min-h-[600px]",
+            (fullscreen) ? "py-[20px]" : "lg:px-[100px] sm:pb-[38px]")}>
+            <div className="relative flex-1 sm:rounded-[20px] overflow-hidden">
                 <GameScreen onRestart={onRestart}/>
-            </ViewContainer>
+            </div>
 
             <Sidebar
                 gameState={gameState}
@@ -50,6 +52,6 @@ export function GameLayout2({
                     onOptionsChange={onOptionsChange}
                 />
             </Sidebar>
-        </GameLayout>
+        </div>
     );
 }
