@@ -6,6 +6,7 @@ import "./index.css";
 
 const HomePage = lazy(() => import("src/pages/home"));
 const GamePage = lazy(() => import("src/pages/game"));
+const GamePage2 = lazy(() => import("src/pages/game2"));
 const LearnPage = lazy(() => import("src/pages/learn"));
 
 createRoot(document.getElementById("root")!).render(
@@ -14,6 +15,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/" element={<PageLayout/>}>
                 <Route index element={<HomePage/>}/>
                 <Route path="graj" element={<GamePage/>}/>
+                <Route path="graj2" element={<GamePage2/>}/>
                 <Route path="nauka" element={<LearnPage/>}/>
             </Route>
         </Routes>

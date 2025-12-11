@@ -16,7 +16,7 @@ export function Game() {
     }, [newOptions, requestSwitch]);
 
     return (
-        <div className="bg-white dark:bg-black flex-1 min-h-[600px]">
+        <div className="bg-white dark:bg-black flex-1 min-h-[600px] md:px-[20px] lg:px-[100px] md:pb-[25px]">
             {(state === "ready") ? (
                 <GameStoreContext value={useGameStore!}>
                     <GameView gameComponent={gameComponent!}/>

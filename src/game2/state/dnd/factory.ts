@@ -27,7 +27,8 @@ export async function createDnDGameStore(options: GameOptions): Promise<ZustandH
         units,
         guessFrom: options.guessFrom,
         guess: options.guess,
-        providePlausibleAnswers: true,
+        sortQuestions: true,
+        preloadAllImages: true,
     };
     return createGameStore(apiOptions, (set, get, qsAndAs) => ({
         type: "dnd",
