@@ -3,6 +3,7 @@ import { type GameStore } from "src/game2/state";
 import { validateGameOptions, type GameOptions } from "src/gameOptions";
 import type { ZustandHook } from "src/utils/zustand";
 import { ulid } from "ulid";
+import { createGame } from "./factory";
 
 export interface GameSwitcherReturn extends GameSwitcherState {
     requestSwitch: (options: GameOptions | null) => void;
@@ -53,15 +54,4 @@ export function useGameSwitcher(): GameSwitcherReturn {
         ...state,
         requestSwitch,
     };
-}
-
-async function createGame(options: GameOptions): Promise<[ComponentType, ZustandHook<GameStore>]> {
-    if (options.gameType === "choiceGame") {
-        const { createChoiceGame } = await import("./choice");
-        return createChoiceGame(options);
-    } else if (options.gameType === "dndGame") {
-        const { createChoiceGame } = await import("./choice");
-        return createChoiceGame(options);
-    }
-    throw new Error("Unknown game type: " + options.gameType);
 }

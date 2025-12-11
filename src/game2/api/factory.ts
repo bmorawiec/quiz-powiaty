@@ -7,7 +7,11 @@ import { preloadImages } from "./images";
 
 export async function createGameStore<StoreWithoutAPI extends object>(
     apiOptions: GameAPIOptions,
-    initializer: (set: ZustandSetter<StoreWithoutAPI>, get: ZustandGetter<StoreWithoutAPI>) => StoreWithoutAPI,
+    initializer: (
+        set: ZustandSetter<StoreWithoutAPI & WithAPI>,
+        get: ZustandGetter<StoreWithoutAPI & WithAPI>,
+        qsAndAs: Questions & Answers,
+    ) => StoreWithoutAPI,
 ) {
     const questionsAndAnswers = getQuestionsAndAnswers(apiOptions);
     await preloadImages(questionsAndAnswers, apiOptions);
@@ -24,7 +28,7 @@ export async function createGameStore<StoreWithoutAPI extends object>(
         const apiGet = () => get().api;
 
         return {
-            ...initializer(set, get),
+            ...initializer(set, get, questionsAndAnswers),
             api: createGameAPI(apiSet, apiGet, questionsAndAnswers, apiOptions),
         };
     });

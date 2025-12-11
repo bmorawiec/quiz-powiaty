@@ -58,12 +58,8 @@ export function getQuestionsAndAnswers(apiOptions: GameAPIOptions): Questions & 
     return result;
 }
 
-interface GetAnswersResult extends Answers {
-    numberCorrect: number;
-}
-
-function getAnswers(unit: Unit, apiOptions: GameAPIOptions, questionId: string): GetAnswersResult {
-    const result: GetAnswersResult = {
+function getAnswers(unit: Unit, apiOptions: GameAPIOptions, questionId: string): Answers & { numberCorrect: number } {
+    const result: Answers & { numberCorrect: number } = {
         answers: {},
         answerIds: [],
         numberCorrect: 0,

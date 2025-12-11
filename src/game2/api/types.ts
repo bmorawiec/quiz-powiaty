@@ -66,10 +66,12 @@ export interface GameAPIOptions {
     /** Provide hints as a result of a call to the `incorrectGuess` action.
      *  @default false */
     provideHints?: boolean;
-    /** Sort the questionIds field, so that questions appear in alphabetical order. */
+    /** Sort the questionIds field, so that questions appear in alphabetical order.
+     *  @default false */
     sortQuestions?: boolean;
     /** Causes the API to preload all question and answer images.
-     *  Normally only images for the first two questions are preloaded. */
+     *  Normally only images for the first two questions are preloaded.
+     *  @default false */
     preloadAllImages?: boolean;
 }
 
