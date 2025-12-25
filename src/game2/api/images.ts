@@ -1,5 +1,12 @@
 import { preloadImage } from "src/utils/preloadImage";
-import { AnswerNotFoundError, type Answers, type GameAPIOptions, type Question, QuestionNotFoundError, type Questions } from "./types";
+import {
+    AnswerNotFoundError,
+    type Answers,
+    type GameAPIOptions,
+    type Question,
+    QuestionNotFoundError,
+    type Questions,
+} from "./types";
 
 export async function preloadImages(qsAndAs: Questions & Answers, apiOptions: GameAPIOptions) {
     if (apiOptions.guessFrom === "flag" || apiOptions.guessFrom === "coa") {
@@ -10,9 +17,12 @@ export async function preloadImages(qsAndAs: Questions & Answers, apiOptions: Ga
         await Promise.all(questionIds.flatMap((questionId) => {
             const question = qsAndAs.questions[questionId];
             if (!question) throw new QuestionNotFoundError(questionId);
+            if (question.content.type !== "image")
+                throw new Error("Expected question content type to be 'image'.");
+
             return [
                 ...getAnswerImagePromises(question, qsAndAs, apiOptions),
-                preloadImage(question.imageURL)
+                preloadImage(question.content.url),
             ];
         }));
     }
@@ -23,8 +33,10 @@ function getAnswerImagePromises(question: Question, qsAndAs: Questions & Answers
         return question.answerIds.map((answerId) => {
             const answer = qsAndAs.answers[answerId];
             if (!answer) throw new AnswerNotFoundError(answerId);
+            if (answer.content.type !== "image")
+                throw new Error("Expected answer content type to be 'image'.");
 
-            return preloadImage(answer.imageURL);
+            return preloadImage(answer.content.url);
         });
     } else {
         return [];

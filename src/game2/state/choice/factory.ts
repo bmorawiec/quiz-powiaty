@@ -26,7 +26,7 @@ export async function createChoiceGameStore(options: GameOptions): Promise<Zusta
         units,
         guessFrom: options.guessFrom,
         guess: options.guess,
-        providePlausibleAnswers: true,
+        squishAnswers: true,
     };
     return createGameStore(apiOptions, (set, get, qsAndAs) => {
         const screensAndButtons = createScreensAndButtons(qsAndAs);

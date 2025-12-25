@@ -1,48 +1,54 @@
 import type { Unit } from "src/data/common";
-import type { GameAPIOptions } from "../types";
-import { getCOAURL, getFlagURL } from "./images";
+import type { AnswerContent, GameAPIOptions, TextAnswerContent } from "../types";
 import { TextFormatError } from "./error";
+import { getCOAURL, getFlagURL } from "./images";
 
-interface AnswerText {
-    text: string;
-    shortText: string;
-    imageURL: string;
-};
-
-export function getAnswerText(unit: Unit, apiOptions: GameAPIOptions): AnswerText[] {
+export function getAnswerContents(unit: Unit, apiOptions: GameAPIOptions): AnswerContent[] {
     if (apiOptions.guess === "name") {
         const prefix = (unit.type === "voivodeship")
             ? "województwo "
             : (unit.countyType === "city") ? "miasto " : "powiat ";
         return [{
+            type: "text",
             text: prefix + unit.name,
             shortText: unit.name,
-            imageURL: "",
         }];
     } else if (apiOptions.guess === "capital") {
         return unit.capitals.map((capital) => ({
+            type: "text",
             text: capital,
             shortText: capital,
-            imageURL: "",
         }));
     } else if (apiOptions.guess === "plate") {
         return unit.plates.map((plate) => ({
+            type: "text",
             text: plate,
             shortText: plate,
-            imageURL: "",
-        }))
+        }));
     } else if (apiOptions.guess === "flag" || apiOptions.guess === "coa") {
         return [{
-            text: "",
-            shortText: "",
-            imageURL: (apiOptions.guess === "flag") ? getFlagURL(unit) : getCOAURL(unit),
+            type: "image",
+            url: (apiOptions.guess === "flag") ? getFlagURL(unit) : getCOAURL(unit),
         }];
     } else if (apiOptions.guess === "map") {
         return [{
-            text: "",
-            shortText: "",
-            imageURL: "",
+            type: "feature",
+            unitId: unit.id,
         }];
     }
     throw new TextFormatError();
+}
+
+export function squishTextAnswerContent(contentList: TextAnswerContent[]): TextAnswerContent {
+    const textList: string[] = [];
+    const shortTextList: string[] = [];
+    for (const content of contentList) {
+        textList.push(content.text);
+        shortTextList.push(content.shortText);
+    }
+    return {
+        type: "text",
+        text: textList.join(", "),
+        shortText: shortTextList.join(", "),
+    };
 }

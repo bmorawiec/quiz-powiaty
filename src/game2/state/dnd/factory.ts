@@ -18,7 +18,7 @@ import {
     type Cell,
     type Cells,
     type DnDGameActions,
-    type DnDGameStore
+    type DnDGameStore,
 } from "./types";
 
 export async function createDnDGameStore(options: GameOptions): Promise<ZustandHook<DnDGameStore>> {

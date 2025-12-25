@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { QuestionNotFoundError } from "src/game2/api";
 import { ChoiceScreenNotFoundError } from "src/game2/state";
-import { ChoiceGameStoreContext } from "./hook";
 import { ButtonView } from "./ButtonView";
+import { ChoiceGameStoreContext } from "./hook";
 
 export interface ScreenViewProps {
     screenId: string;
@@ -18,13 +18,16 @@ export function ScreenView({ screenId }: ScreenViewProps) {
     if (!question) throw new QuestionNotFoundError(screen.questionId)
 
     return (
-        <div className="h-[230px] flex flex-col items-center">
+        <div className="flex flex-col items-center">
             <h2 className="h-[56px] text-[20px] font-[450] tracking-[0.01em] text-gray-85">
-                {question.text}
+                {question.content.text}
             </h2>
-            <div className="w-full grid grid-cols-3 gap-[10px]">
+            <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-[10px]">
                 {screen.buttonIds.map((buttonId) =>
-                    <ButtonView buttonId={buttonId}/>
+                    <ButtonView
+                        key={buttonId}
+                        buttonId={buttonId}
+                    />
                 )}
             </div>
         </div>

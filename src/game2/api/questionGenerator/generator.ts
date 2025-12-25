@@ -8,9 +8,10 @@ import {
     type GameAPIOptions,
     type Question,
     type Questions,
+    type TextAnswerContent,
 } from "../types";
-import { getAnswerText } from "./answerText";
-import { getQuestionImageURL, getQuestionText, getShortQuestionText } from "./questionText";
+import { getAnswerContents, squishTextAnswerContent } from "./answerContent";
+import { getQuestionContent } from "./questionContent";
 
 export function getQuestionsAndAnswers(apiOptions: GameAPIOptions): Questions & Answers {
     const result: Questions & Answers = {
@@ -30,9 +31,7 @@ export function getQuestionsAndAnswers(apiOptions: GameAPIOptions): Questions & 
         const question: Question = {
             id: questionId,
             unitId: unit.id,
-            text: getQuestionText(unit, apiOptions),
-            shortText: getShortQuestionText(unit, apiOptions),
-            imageURL: getQuestionImageURL(unit, apiOptions),
+            content: getQuestionContent(unit, apiOptions),
             points: 4,
             tries: 0,
             answerIds,
@@ -52,7 +51,7 @@ export function getQuestionsAndAnswers(apiOptions: GameAPIOptions): Questions & 
             const questionB = result.questions[idB];
             if (!questionB) throw new QuestionNotFoundError(idB);
 
-            return questionA.shortText.localeCompare(questionB.shortText);
+            return questionA.content.shortText.localeCompare(questionB.content.shortText);
         });
     }
     return result;
@@ -65,13 +64,16 @@ function getAnswers(unit: Unit, apiOptions: GameAPIOptions, questionId: string):
         numberCorrect: 0,
     };
 
-    const answerText = getAnswerText(unit, apiOptions);
-    for (const text of answerText) {
+    let correctAnswerContents = getAnswerContents(unit, apiOptions);
+    if (apiOptions.squishAnswers && ["name", "capital", "plate"].includes(apiOptions.guess)) {
+        correctAnswerContents = [squishTextAnswerContent(correctAnswerContents as TextAnswerContent[])];
+    }
+    for (const content of correctAnswerContents) {
         const answer: Answer = {
             id: ulid(),
             questionId,
             unitId: unit.id,
-            ...text,
+            content,
             correct: true,
             guessed: false,
         };

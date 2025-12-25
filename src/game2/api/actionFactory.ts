@@ -124,8 +124,10 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
         return question.answerIds.map((answerId) => {
             const answer = api.answers[answerId];
             if (!answer) throw new AnswerNotFoundError(answerId);
+            if (answer.content.type !== "text")
+                throw new Error("Expected answer content type to be 'text'.");
 
-            return answer.shortText;
+            return answer.content.shortText;
         }).join(", ");
     }
 
@@ -139,14 +141,16 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
         return question.answerIds.map((answerId) => {
             const answer = api.answers[answerId];
             if (!answer) throw new AnswerNotFoundError(answerId);
+            if (answer.content.type !== "text")
+                throw new Error("Expected answer content type to be 'text'.");
 
             let hint = "";
-            for (let index = 0; index < answer.shortText.length; index++) {
-                const char = answer.shortText[index];
+            for (let index = 0; index < answer.content.shortText.length; index++) {
+                const char = answer.content.shortText[index];
                 if (char === " " || char === "-"
                     || index < noOfLetters      // uncover first n letters
-                    // also uncover last n letters
-                    || (answer.shortText.length > 3 && index >= answer.shortText.length - noOfLetters)) {
+                    || (answer.content.shortText.length > 3     // also uncover last n letters
+                        && index >= answer.content.shortText.length - noOfLetters)) {
                     hint += char;
                 } else {
                     hint += "*";

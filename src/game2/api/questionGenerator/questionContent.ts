@@ -1,9 +1,9 @@
 import { getUnambiguousName, type Unit } from "src/data/common";
-import type { GameAPIOptions } from "../types";
+import type { GameAPIOptions, QuestionContent } from "../types";
 import { TextFormatError } from "./error";
 import { getCOAURL, getFlagURL } from "./images";
 
-export function getQuestionText(unit: Unit, apiOptions: GameAPIOptions) {
+function getQuestionText(unit: Unit, apiOptions: GameAPIOptions) {
     const { guessFrom, guess } = apiOptions;
     let str = "";
     if (guess === "name") {
@@ -62,7 +62,7 @@ export function getQuestionText(unit: Unit, apiOptions: GameAPIOptions) {
     return str;
 }
 
-export function getShortQuestionText(unit: Unit, apiOptions: GameAPIOptions): string {
+function getShortQuestionText(unit: Unit, apiOptions: GameAPIOptions): string {
     const { guessFrom } = apiOptions;
     if (guessFrom === "name") {
         const prefix = (unit.type === "voivodeship")
@@ -80,12 +80,38 @@ export function getShortQuestionText(unit: Unit, apiOptions: GameAPIOptions): st
     throw new TextFormatError();
 }
 
-export function getQuestionImageURL(unit: Unit, apiOptions: GameAPIOptions): string {
+function getQuestionImageURL(unit: Unit, apiOptions: GameAPIOptions): string {
     if (apiOptions.guessFrom === "flag") {
         return getFlagURL(unit);
     } else if (apiOptions.guessFrom === "coa") {
         return getCOAURL(unit);
+    }
+    throw new TextFormatError();
+}
+
+export function getQuestionContent(unit: Unit, apiOptions: GameAPIOptions): QuestionContent {
+    const common = {
+        text: getQuestionText(unit, apiOptions),
+        shortText: getShortQuestionText(unit, apiOptions),
+    };
+    if (["name", "capital", "plate"].includes(apiOptions.guessFrom)) {
+        return {
+            type: "text",
+            ...common,
+        };
+    } else if (["flag", "coa"].includes(apiOptions.guessFrom)) {
+        return {
+            type: "image",
+            ...common,
+            url: getQuestionImageURL(unit, apiOptions),
+        };
+    } else if (apiOptions.guessFrom === "map") {
+        return {
+            type: "feature",
+            ...common,
+            unitId: unit.id,
+        };
     } else {
-        return "";
+        throw new Error("Unknown value for `apiOptions.guessFrom`.");
     }
 }

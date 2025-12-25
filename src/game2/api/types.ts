@@ -60,9 +60,6 @@ export interface GameAPIOptions {
     guessFrom: Guessable;
     /** This type of data will be used to generate answers. */
     guess: Guessable;
-    /** Add incorrect, but plausible answers to each question.
-     *  @default false */
-    providePlausibleAnswers?: boolean;
     /** Provide hints as a result of a call to the `incorrectGuess` action.
      *  @default false */
     provideHints?: boolean;
@@ -73,6 +70,8 @@ export interface GameAPIOptions {
      *  Normally only images for the first two questions are preloaded.
      *  @default false */
     preloadAllImages?: boolean;
+    /** @default false */
+    squishAnswers?: boolean;
 }
 
 export interface Question {
@@ -80,9 +79,7 @@ export interface Question {
     id: string;
     /** Id of the administrative unit this question is about. */
     unitId: string;
-    text: string;
-    shortText: string;
-    imageURL: string;
+    content: QuestionContent;
     /** The amount of points awarded for this question.
      *  4 by default. Decreases with each incorrect guess. */
     points: number;
@@ -105,13 +102,51 @@ export interface Answer {
     questionId: string;
     /** Id of the administrative unit this answer is about. */
     unitId: string;
-    text: string;
-    shortText: string;
-    imageURL: string;
+    content: AnswerContent;
     /** Whether or not this is a correct answer. */
     correct: boolean;
     /** If true, then this answer has been correctly guessed. */
     guessed: boolean;
+}
+
+export type QuestionContent = TextQuestionContent | ImageQuestionContent | FeatureQuestionContent;
+
+export interface TextQuestionContent {
+    type: "text";
+    text: string;
+    shortText: string;
+}
+
+export interface ImageQuestionContent {
+    type: "image";
+    text: string;
+    shortText: string;
+    url: string;
+}
+
+export interface FeatureQuestionContent {
+    type: "feature";
+    text: string;
+    shortText: string;
+    unitId: string;
+}
+
+export type AnswerContent = TextAnswerContent | ImageAnswerContent | FeatureAnswerContent;
+
+export interface TextAnswerContent {
+    type: "text";
+    text: string;
+    shortText: string;
+}
+
+export interface ImageAnswerContent {
+    type: "image";
+    url: string;
+}
+
+export interface FeatureAnswerContent {
+    type: "feature";
+    unitId: string;
 }
 
 export class QuestionNotFoundError extends Error {
