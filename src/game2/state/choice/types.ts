@@ -14,7 +14,7 @@ export interface ChoiceGameActions {
 }
 
 export interface ChoiceScreens {
-    screens: Record<string, ChoiceScreen | undefined>;
+    screens: Record<string, ChoiceScreen | FinalChoiceScreen | undefined>;
     screenIds: string[];
 }
 
@@ -25,8 +25,16 @@ export interface Buttons {
 
 export interface ChoiceScreen {
     id: string;
+    final?: false;
+    state: "correct" | "incorrect" | "answering" | "unanswered";
     questionId: string;
     buttonIds: string[];
+}
+
+export interface FinalChoiceScreen {
+    id: string;
+    final: true;
+    reached: boolean;
 }
 
 export interface Button {

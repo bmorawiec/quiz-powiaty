@@ -1,18 +1,15 @@
 import { useContext } from "react";
 import { QuestionNotFoundError } from "src/game2/api";
-import { ChoiceScreenNotFoundError } from "src/game2/state";
+import { type ChoiceScreen } from "src/game2/state";
 import { ButtonView } from "./ButtonView";
 import { ChoiceGameStoreContext } from "./hook";
 
 export interface ScreenViewProps {
-    screenId: string;
+    screen: ChoiceScreen;
 }
 
-export function ScreenView({ screenId }: ScreenViewProps) {
+export function ScreenView({ screen }: ScreenViewProps) {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);
-
-    const screen = useChoiceGameStore((game) => game.screens[screenId]);
-    if (!screen) throw new ChoiceScreenNotFoundError(screenId);
 
     const question = useChoiceGameStore((game) => game.api.questions[screen.questionId]);
     if (!question) throw new QuestionNotFoundError(screen.questionId)

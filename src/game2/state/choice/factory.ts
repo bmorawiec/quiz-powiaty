@@ -19,6 +19,7 @@ import {
     type ChoiceGameStore,
     type ChoiceScreen,
     type ChoiceScreens,
+    type FinalChoiceScreen,
 } from "./types";
 
 export async function createChoiceGameStore(options: GameOptions): Promise<ZustandHook<ChoiceGameStore>> {
@@ -51,7 +52,8 @@ function createScreensAndButtons(qsAndAs: Questions & Answers): ChoiceScreens & 
         buttonIds: [],
     };
 
-    for (const questionId of qsAndAs.questionIds) {
+    for (let questionIndex = 0; questionIndex < qsAndAs.questionIds.length; questionIndex++) {
+        const questionId = qsAndAs.questionIds[questionIndex];
         const question = qsAndAs.questions[questionId];
         if (!question)
             throw new QuestionNotFoundError(questionId);
@@ -62,12 +64,21 @@ function createScreensAndButtons(qsAndAs: Questions & Answers): ChoiceScreens & 
 
         const screen: ChoiceScreen = {
             id: ulid(),
+            state: (questionIndex === 0) ? "answering" : "unanswered",
             questionId,
             buttonIds,
         };
         result.screens[screen.id] = screen;
         result.screenIds.push(screen.id);
     }
+
+    const finalScreen: FinalChoiceScreen = {
+        id: ulid(),
+        final: true,
+        reached: false,
+    };
+    result.screens[finalScreen.id] = finalScreen;
+    result.screenIds.push(finalScreen.id);
 
     return result;
 }
@@ -116,26 +127,58 @@ function createChoiceGameActions(
     }
 
     function nextScreen() {
+        const currentScreenId = get().currentScreenId;
+        const currentScreen = get().screens[currentScreenId];
+        if (!currentScreen) throw new ChoiceScreenNotFoundError(currentScreenId);
+        if (currentScreen.final) {
+            throw new Error("Cannot proceed from the final screen.");
+        }
+
+        const question = get().api.questions[currentScreen.questionId];
+        if (!question) throw new QuestionNotFoundError(currentScreen.questionId);
+
+        set((game) => ({
+            screens: {
+                ...game.screens,
+                [game.currentScreenId]: {
+                    ...currentScreen,
+                    state: (question.points > 0) ? "correct" : "incorrect",
+                },
+            },
+        }));
+
         const nextScreenId = get().screenIds[get().api.numberGuessed];
-        if (nextScreenId) {
-            const nextScreen = get().screens[nextScreenId];
-            if (!nextScreen) throw new ChoiceScreenNotFoundError(nextScreenId);
+        const nextScreen = get().screens[nextScreenId];
+        if (!nextScreen)
+            throw new ChoiceScreenNotFoundError(nextScreenId);
+        set((game) => ({
+            screens: {
+                ...game.screens,
+                [nextScreenId]: (nextScreen.final) ? {
+                    ...nextScreen,
+                    reached: true,
+                } : {
+                    ...nextScreen,
+                    state: "answering",
+                },
+            },
+        }));
 
-            const nextNextScreenId = get().screenIds[get().api.numberGuessed + 1];
-            if (nextNextScreenId) {
-                const nextNextScreen = get().screens[nextNextScreenId];
-                if (!nextNextScreen) throw new ChoiceScreenNotFoundError(nextScreenId);
+        const nextNextScreenId = get().screenIds[get().api.numberGuessed + 1];
+        if (nextNextScreenId) {
+            const nextNextScreen = get().screens[nextNextScreenId];
+            if (!nextNextScreen)
+                throw new ChoiceScreenNotFoundError(nextScreenId);
 
+            if (!nextNextScreen.final) {
                 get().api.preloadImages(nextNextScreen.questionId);
             }
-
-            switchScreens(nextScreenId);
-        } else {
-            switchScreens("finishScreen");
         }
+
+        switchScreens(nextScreenId);
     }
 
-    function switchScreens(screenId: string | "finishScreen") {
+    function switchScreens(screenId: string) {
         set({
             currentScreenId: screenId,
         });
