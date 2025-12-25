@@ -12,4 +12,5 @@ export * from "./Logo";
 export * from "./pageLayout";
 export * from "./RadioButton";
 export * from "./Slider";
+export * from "./stepper";
 

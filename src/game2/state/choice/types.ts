@@ -4,10 +4,13 @@ export type ChoiceGameStore = ChoiceGameState & ChoiceGameActions & WithAPI;
 
 export interface ChoiceGameState extends ChoiceScreens, Buttons {
     type: "choice";
+    /** The id of the currently selected screen. */
+    currentScreenId: string | "finishScreen";
 }
 
 export interface ChoiceGameActions {
     guess(buttonId: string): "correct" | "wrong";
+    switchScreens(screenId: string | "finishScreen"): void;
 }
 
 export interface ChoiceScreens {

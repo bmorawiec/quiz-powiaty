@@ -28,11 +28,15 @@ export async function createChoiceGameStore(options: GameOptions): Promise<Zusta
         guess: options.guess,
         providePlausibleAnswers: true,
     };
-    return createGameStore(apiOptions, (set, get, qsAndAs) => ({
-        type: "choice",
-        ...createScreensAndButtons(qsAndAs),
-        ...createChoiceGameActions(set, get),
-    }));
+    return createGameStore(apiOptions, (set, get, qsAndAs) => {
+        const screensAndButtons = createScreensAndButtons(qsAndAs);
+        return {
+            type: "choice",
+            ...screensAndButtons,
+            ...createChoiceGameActions(set, get),
+            currentScreenId: screensAndButtons.screenIds[0],
+        };
+    });
 }
 
 function createScreensAndButtons(qsAndAs: Questions & Answers): ChoiceScreens & Buttons {
@@ -88,10 +92,10 @@ function createButtons(qsAndAs: Questions & Answers, question: Question): Button
 }
 
 function createChoiceGameActions(
-    _set: ZustandSetter<ChoiceGameStore>,
+    set: ZustandSetter<ChoiceGameStore>,
     get: ZustandGetter<ChoiceGameStore>,
 ): ChoiceGameActions {
-    const guess = (buttonId: string) => {
+    function guess(buttonId: string) {
         const button = get().buttons[buttonId];
         if (!button) throw new ButtonNotFoundError(buttonId);
 
@@ -105,7 +109,13 @@ function createChoiceGameActions(
             get().api.incorrectGuess(answer.questionId);
             return "wrong";
         }
-    };
+    }
 
-    return { guess };
+    function switchScreens(screenId: string | "finishScreen") {
+        set({
+            currentScreenId: screenId,
+        });
+    }
+
+    return { guess, switchScreens };
 }
