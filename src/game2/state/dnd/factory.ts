@@ -22,9 +22,10 @@ import {
 } from "./types";
 
 export async function createDnDGameStore(options: GameOptions): Promise<ZustandHook<DnDGameStore>> {
-    const [units] = await unitsFromOptions(options);
+    const [units, allUnits] = await unitsFromOptions(options);
     const apiOptions: GameAPIOptions = {
         units,
+        allUnits,
         guessFrom: options.guessFrom,
         guess: options.guess,
         sortQuestions: true,

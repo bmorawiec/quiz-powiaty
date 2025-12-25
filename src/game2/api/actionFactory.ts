@@ -1,11 +1,13 @@
 import type { ZustandGetter, ZustandSetter } from "src/utils/zustand";
 import {
     AnswerNotFoundError,
+    QuestionNotFoundError,
     type Answer,
     type GameAPI,
     type GameAPIActions,
     type Question,
 } from "./types";
+import { getImagePreloadPromises } from "./images";
 
 const TRIES_FOR_HINT = 1;
 const TRIES_FOR_FULL_HINT = 6;
@@ -160,5 +162,12 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
         }).join(", ");
     }
 
-    return { togglePause, calculateTime, correctGuess, incorrectGuess };
+    async function preloadImages(questionId: string) {
+        const question = get().questions[questionId];
+        if (!question) throw new QuestionNotFoundError(questionId);
+
+        await Promise.all(getImagePreloadPromises(question, get().answers, get().options));
+    }
+
+    return { togglePause, calculateTime, correctGuess, incorrectGuess, preloadImages };
 }

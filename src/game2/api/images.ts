@@ -1,5 +1,6 @@
 import { preloadImage } from "src/utils/preloadImage";
 import {
+    type Answer,
     AnswerNotFoundError,
     type Answers,
     type GameAPIOptions,
@@ -9,36 +10,43 @@ import {
 } from "./types";
 
 export async function preloadImages(qsAndAs: Questions & Answers, apiOptions: GameAPIOptions) {
-    if (apiOptions.guessFrom === "flag" || apiOptions.guessFrom === "coa") {
+    if (["flag", "coa"].includes(apiOptions.guessFrom) || ["flag", "coa"].includes(apiOptions.guess)) {
+        const promises: Promise<void>[] = [];
+
         const questionIds = (apiOptions.preloadAllImages)
             ? qsAndAs.questionIds
             : qsAndAs.questionIds.slice(0, 2);
 
-        await Promise.all(questionIds.flatMap((questionId) => {
+        for (const questionId of questionIds) {
             const question = qsAndAs.questions[questionId];
-            if (!question) throw new QuestionNotFoundError(questionId);
-            if (question.content.type !== "image")
-                throw new Error("Expected question content type to be 'image'.");
+            if (!question)
+                throw new QuestionNotFoundError(questionId);
+            promises.push(...getImagePreloadPromises(question, qsAndAs.answers, apiOptions));
+        }
 
-            return [
-                ...getAnswerImagePromises(question, qsAndAs, apiOptions),
-                preloadImage(question.content.url),
-            ];
-        }));
+        await Promise.all(promises);
     }
 }
 
-function getAnswerImagePromises(question: Question, qsAndAs: Questions & Answers, apiOptions: GameAPIOptions) {
-    if (apiOptions.guess === "flag" || apiOptions.guess === "coa") {
-        return question.answerIds.map((answerId) => {
-            const answer = qsAndAs.answers[answerId];
+export function getImagePreloadPromises(
+    question: Question,
+    answers: Record<string, Answer | undefined>,
+    apiOptions: GameAPIOptions,
+): Promise<void>[] {
+    const promises: Promise<void>[] = [];
+    if (apiOptions.guessFrom === "flag" || apiOptions.guessFrom === "coa") {
+        if (question.content.type !== "image")
+            throw new Error("Expected question content type to be 'image'.");
+        promises.push(preloadImage(question.content.url));
+    }
+    if (apiOptions.guess === "flag" || apiOptions.guessFrom === "coa") {
+        for (const answerId of question.answerIds) {
+            const answer = answers[answerId];
             if (!answer) throw new AnswerNotFoundError(answerId);
             if (answer.content.type !== "image")
                 throw new Error("Expected answer content type to be 'image'.");
-
-            return preloadImage(answer.content.url);
-        });
-    } else {
-        return [];
+            promises.push(preloadImage(answer.content.url));
+        }
     }
+    return promises;
 }

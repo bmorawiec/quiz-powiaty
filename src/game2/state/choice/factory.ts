@@ -12,6 +12,7 @@ import type { ZustandGetter, ZustandHook, ZustandSetter } from "src/utils/zustan
 import { ulid } from "ulid";
 import {
     ButtonNotFoundError,
+    ChoiceScreenNotFoundError,
     type Button,
     type Buttons,
     type ChoiceGameActions,
@@ -21,12 +22,14 @@ import {
 } from "./types";
 
 export async function createChoiceGameStore(options: GameOptions): Promise<ZustandHook<ChoiceGameStore>> {
-    const [units] = await unitsFromOptions(options);
+    const [units, allUnits] = await unitsFromOptions(options);
     const apiOptions: GameAPIOptions = {
         units,
+        allUnits,
         guessFrom: options.guessFrom,
         guess: options.guess,
         squishAnswers: true,
+        numberOfAnswers: 6,
     };
     return createGameStore(apiOptions, (set, get, qsAndAs) => {
         const screensAndButtons = createScreensAndButtons(qsAndAs);
@@ -104,10 +107,31 @@ function createChoiceGameActions(
 
         if (answer.correct) {
             get().api.correctGuess(button.answerId);
+            nextScreen();
             return "correct";
         } else {
             get().api.incorrectGuess(answer.questionId);
             return "wrong";
+        }
+    }
+
+    function nextScreen() {
+        const nextScreenId = get().screenIds[get().api.numberGuessed];
+        if (nextScreenId) {
+            const nextScreen = get().screens[nextScreenId];
+            if (!nextScreen) throw new ChoiceScreenNotFoundError(nextScreenId);
+
+            const nextNextScreenId = get().screenIds[get().api.numberGuessed + 1];
+            if (nextNextScreenId) {
+                const nextNextScreen = get().screens[nextNextScreenId];
+                if (!nextNextScreen) throw new ChoiceScreenNotFoundError(nextScreenId);
+
+                get().api.preloadImages(nextNextScreen.questionId);
+            }
+
+            switchScreens(nextScreenId);
+        } else {
+            switchScreens("finishScreen");
         }
     }
 

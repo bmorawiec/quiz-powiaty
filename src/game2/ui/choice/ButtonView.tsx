@@ -20,11 +20,19 @@ export function ButtonView({ buttonId }: ButtonViewProps) {
     if (answer.content.type === "feature")
         throw new Error("This component does not support displaying this type of content.");
 
+    const guess = useChoiceGameStore((game) => game.guess);
+    const handleClick = () => {
+        guess(buttonId);
+    };
+
     return (
-        <button className={clsx((answer.content.type === "text") ? "h-[80px]" : "h-[200px]",
-            "border rounded-[10px] font-[450] tracking-[0.01em] cursor-pointer p-[10px]",
-            "transition-colors duration-20 focus-ring",
-            "border-gray-20 bg-white hover:bg-gray-5 active:bg-gray-10")}>
+        <button
+            className={clsx((answer.content.type === "text") ? "h-[80px]" : "h-[200px]",
+                "border rounded-[10px] font-[450] tracking-[0.01em] cursor-pointer p-[10px]",
+                "transition-colors duration-20 focus-ring",
+                "border-gray-20 bg-white hover:bg-gray-5 active:bg-gray-10")}
+            onClick={handleClick}
+        >
             {(answer.content.type === "text") ? (
                 answer.content.text
             ) : (

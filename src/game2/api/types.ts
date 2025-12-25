@@ -39,6 +39,8 @@ export interface GameAPIActions {
     /** Used to report an incorrect guess.
      *  @returns a hint if configured to do so, and if the number of guesses exceeds four. */
     incorrectGuess(questionId: string): string | null;
+
+    preloadImages(questionId: string): Promise<void>;
 }
 
 export type GameState = "unpaused" | "paused" | "finished";
@@ -56,6 +58,7 @@ export interface Answers {
 export interface GameAPIOptions {
     /** Units to generate questions about. */
     units: Unit[];
+    allUnits: Unit[];
     /** This type of data will be used to generate questions. */
     guessFrom: Guessable;
     /** This type of data will be used to generate answers. */
@@ -72,6 +75,7 @@ export interface GameAPIOptions {
     preloadAllImages?: boolean;
     /** @default false */
     squishAnswers?: boolean;
+    numberOfAnswers?: number;
 }
 
 export interface Question {
