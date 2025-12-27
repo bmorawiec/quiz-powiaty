@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { useContext } from "react";
 import { Stepper } from "src/ui";
-import { ChoiceStep } from "./choiceStep";
 import { ChoiceGameStoreContext } from "./hook";
-import { CurrentScreen } from "./CurrentScreen";
+import { CurrentScreen } from "./screens";
+import { ChoiceStep } from "./steps";
 
 export function ChoiceGame() {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);

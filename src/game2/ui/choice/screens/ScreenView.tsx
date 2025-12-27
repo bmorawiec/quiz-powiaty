@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { QuestionNotFoundError } from "src/game2/api";
 import { type ChoiceScreen } from "src/game2/state";
 import { ButtonView } from "./ButtonView";
-import { ChoiceGameStoreContext } from "./hook";
+import { ChoiceGameStoreContext } from "../hook";
 
 export interface ScreenViewProps {
     screen: ChoiceScreen;
@@ -24,6 +24,7 @@ export function ScreenView({ screen }: ScreenViewProps) {
                     <ButtonView
                         key={buttonId}
                         buttonId={buttonId}
+                        disabled={question.guessed}
                     />
                 )}
             </div>
