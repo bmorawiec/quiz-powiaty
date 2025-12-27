@@ -101,6 +101,8 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
 
         const question = api.questions[questionId];
         if (!question) throw new AnswerNotFoundError(questionId);
+        if (question.guessed)
+            throw new Error("Action can't be performed on a question that has been guessed.");
 
         set({
             questions: {
