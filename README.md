@@ -31,19 +31,17 @@
 
 ## Roadmap
 
-Tryby gry
+Rewrite API gry
 - [x] choiceGame
-- [x] dndGame
+- [ ] dndGame
 - [ ] mapGame
-- [x] promptGame
-- [x] typingGame
+- [ ] promptGame
+- [ ] typingGame
 
 Funkcje
 - [x] Filtry
 - [x] Limit ilości pytań
 - [ ] Prawdziwe flagi i herby zamiast tymczasowych
-
-Zakładki
-- [ ] "Statystyki"
-- [ ] "Powiaty" i "Województwa"
-- [ ] "Nauka"
+- [ ] Nowy interfejs użytkownika
+- [ ] Tryb gry „Warszawa”
+- [ ] Powiat dnia
