@@ -27,11 +27,6 @@ export interface PromptScreen {
     id: string;
     /** Used to distinguish between normal screens and the final screen. Omit. */
     final?: false;
-    /** "correct" - The question associated with this screen has been answered in 3 attempts or less.
-     *  "incorrect" - The question associated with this screen has been answered in 4 or more attempts.
-     *  "answering" - The question associated with this screen is being answered.
-     *  "unanswered" - The question associated with this screen hasn't been answered yet. */
-    state: "correct" | "incorrect" | "answering" | "unanswered";
     /** Id of the question associated with this screen. */
     questionId: string;
     /** A list of guesses made by the player. */
@@ -48,8 +43,6 @@ export interface FinalPromptScreen {
     id: string;
     /** Used to distinguish between normal screens and the final screen. */
     final: true;
-    /** Whether or not this screen has been reached (i.e. the game has ended). */
-    reached: boolean;
 }
 
 export class PromptScreenNotFoundError extends Error {

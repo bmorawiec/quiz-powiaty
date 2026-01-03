@@ -56,7 +56,6 @@ function createScreens(qsAndAs: Questions & Answers): PromptScreens {
 
         const screen: PromptScreen = {
             id: ulid(),
-            state: (questionIndex === 0) ? "answering" : "unanswered",
             questionId,
             guesses: [],
         };
@@ -67,7 +66,6 @@ function createScreens(qsAndAs: Questions & Answers): PromptScreens {
     const finalScreen: FinalPromptScreen = {
         id: ulid(),
         final: true,
-        reached: false,
     };
     result.screens[finalScreen.id] = finalScreen;
     result.screenIds.push(finalScreen.id);
@@ -149,57 +147,21 @@ function createPromptGameActions(
         }));
     }
 
-    /** Marks the current screen as answered, and proceeds to the next screen.
+    /** Proceeds to the next screen.
      *  Preloads images for the next-next screen, if there are any to load. */
     function nextScreen() {
-        const currentScreenId = get().currentScreenId;
-        const currentScreen = get().screens[currentScreenId];
-        if (!currentScreen) throw new PromptScreenNotFoundError(currentScreenId);
-        if (currentScreen.final) {
-            throw new Error("Cannot proceed from the final screen.");
-        }
-
-        const question = get().api.questions[currentScreen.questionId];
-        if (!question) throw new QuestionNotFoundError(currentScreen.questionId);
-
-        set((game) => ({
-            screens: {
-                ...game.screens,
-                [game.currentScreenId]: {
-                    ...currentScreen,
-                    state: (question.points > 0) ? "correct" : "incorrect",
-                },
-            },
-        }));
-
-        const nextScreenId = get().screenIds[get().api.numberGuessed];
-        const nextScreen = get().screens[nextScreenId];
-        if (!nextScreen)
-            throw new PromptScreenNotFoundError(nextScreenId);
-        set((game) => ({
-            screens: {
-                ...game.screens,
-                [nextScreenId]: (nextScreen.final) ? {
-                    ...nextScreen,
-                    reached: true,
-                } : {
-                    ...nextScreen,
-                    state: "answering",
-                },
-            },
-        }));
-
         const nextNextScreenId = get().screenIds[get().api.numberGuessed + 1];
         if (nextNextScreenId) {
             const nextNextScreen = get().screens[nextNextScreenId];
             if (!nextNextScreen)
-                throw new PromptScreenNotFoundError(nextScreenId);
+                throw new PromptScreenNotFoundError(nextNextScreenId);
 
             if (!nextNextScreen.final) {
                 get().api.preloadImages(nextNextScreen.questionId);
             }
         }
 
+        const nextScreenId = get().screenIds[get().api.numberGuessed];
         switchScreens(nextScreenId);
     }
 
