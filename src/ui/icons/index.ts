@@ -6,6 +6,7 @@ export * from "./CarIcon";
 export * from "./ClockIcon";
 export * from "./CloseIcon";
 export * from "./COAIcon";
+export * from "./CrownIcon";
 export * from "./DiceIcon";
 export * from "./DragHandleIcon";
 export * from "./DropdownIcon";

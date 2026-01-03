@@ -14,14 +14,17 @@ export function FinalStep({ screen }: FinalStepProps) {
     const currentScreenId = useChoiceGameStore((game) => game.currentScreenId);
     const switchScreens = useChoiceGameStore((game) => game.switchScreens);
 
+    const gameState = useChoiceGameStore((game) => game.api.state);
+
+    const handleClick = () => {
+        switchScreens(screen.id);
+    };
+
     return (
         <Step
             icon={FlagIcon}
             selected={currentScreenId === screen.id}
-            onClick={(screen.reached)
-                ? () => switchScreens(screen.id)
-                : undefined
-            }
+            onClick={(gameState === "finished") ? handleClick : undefined}
         />
     );
 }

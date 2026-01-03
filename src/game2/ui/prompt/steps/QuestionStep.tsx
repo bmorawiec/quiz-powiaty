@@ -1,6 +1,7 @@
 import { useContext } from "react";
+import { QuestionNotFoundError } from "src/game2/api";
 import { type PromptScreen } from "src/game2/state";
-import { ApplyIcon, CloseIcon, Step } from "src/ui";
+import { ApplyIcon, CloseIcon, CrownIcon, Step } from "src/ui";
 import { PromptGameStoreContext } from "../hook";
 
 export interface QuestionStepProps {
@@ -16,20 +17,28 @@ export function QuestionStep({ screen, index }: QuestionStepProps) {
     const currentScreenId = usePromptGameStore((game) => game.currentScreenId);
     const switchScreens = usePromptGameStore((game) => game.switchScreens);
 
+    const numberGuessed = usePromptGameStore((game) => game.api.numberGuessed);
+
+    const question = usePromptGameStore((game) => game.api.questions[screen.questionId]);
+    if (!question)
+        throw new QuestionNotFoundError(screen.questionId);
+
+    const handleClick = () => {
+        switchScreens(screen.id);
+    };
+
     return (
         <Step
-            icon={(screen.state === "correct")
-                ? ApplyIcon
-                : (screen.state === "incorrect")
-                    ? CloseIcon
-                    : undefined}
-            number={(screen.state !== "unanswered")
-                ? index + 1
+            icon={(index < numberGuessed)
+                ? (question.points === 4)
+                    ? CrownIcon
+                    : (question.points > 0)
+                        ? ApplyIcon
+                        : CloseIcon
                 : undefined}
+            number={(index <= numberGuessed) ? index + 1 : undefined}
             selected={screen.id === currentScreenId}
-            onClick={(screen.state !== "unanswered")
-                ? () => switchScreens(screen.id)
-                : undefined}
+            onClick={(index <= numberGuessed) ? handleClick : undefined}
         />
     );
 }
