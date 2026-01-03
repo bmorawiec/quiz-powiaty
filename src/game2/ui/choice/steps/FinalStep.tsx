@@ -7,6 +7,8 @@ export interface FinalStepProps {
     screen: FinalChoiceScreen;
 }
 
+/** Shows a Step component corresponding to the final screen.
+ *  Switches to the final screen when clicked. This is only allowed if the final screen has been reached. */
 export function FinalStep({ screen }: FinalStepProps) {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);
     const currentScreenId = useChoiceGameStore((game) => game.currentScreenId);

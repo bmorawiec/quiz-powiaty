@@ -7,6 +7,8 @@ import { GameView } from "./GameView";
 import { GameStoreContext } from "./hook";
 import { useGameSwitcher } from "./useGameSwitcher";
 
+/** Shows the appropriate game screen depending on URL search params.
+ *  Displays an error if the search params are incorrect. */
 export function Game() {
     const { state, gameComponent, useGameStore, requestSwitch } = useGameSwitcher();
     const [searchParams] = useSearchParams();

@@ -11,6 +11,9 @@ export interface ButtonViewProps {
     disabled?: boolean;
 }
 
+/** Shows a button corresponding to an answer.
+ *  Checks if the answer associated with this button is correct when enabled and the button is clicked.
+ *  When disabled, shows whether the answer associated with this button is correct or not. */
 export function ButtonView({ buttonId, disabled }: ButtonViewProps) {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);
 

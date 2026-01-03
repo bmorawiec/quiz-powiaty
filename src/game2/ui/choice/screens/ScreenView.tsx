@@ -9,6 +9,8 @@ export interface ScreenViewProps {
     screen: ChoiceScreen;
 }
 
+/** Displays the text of the question associated with this screen and its possible answers.
+ *  Shows how many points were awarded for the question, if it has been answered. */
 export function ScreenView({ screen }: ScreenViewProps) {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);
 

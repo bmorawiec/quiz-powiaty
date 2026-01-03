@@ -5,6 +5,8 @@ import { ChoiceGameStoreContext } from "./hook";
 import { CurrentScreen } from "./screens";
 import { ChoiceStep } from "./steps";
 
+/** Shows the game UI.
+ *  Has to be inside a ChoiceGameStoreContext. */
 export function ChoiceGame() {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);
     const apiOptions = useChoiceGameStore((game) => game.api.options);

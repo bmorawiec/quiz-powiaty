@@ -8,6 +8,9 @@ export interface QuestionStepProps {
     index: number;
 }
 
+/** Shows a Step component corresponding to a ChoiceScreen.
+ *  Switches to the appropriate screen on click. This is only allowed if the question associated with that screen
+ *  has been answered. */
 export function QuestionStep({ screen, index }: QuestionStepProps) {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);
     const currentScreenId = useChoiceGameStore((game) => game.currentScreenId);
