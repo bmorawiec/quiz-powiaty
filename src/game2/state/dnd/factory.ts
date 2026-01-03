@@ -21,7 +21,10 @@ import {
     type DnDGameStore,
 } from "./types";
 
-export async function createDnDGameStore(options: GameOptions): Promise<ZustandHook<DnDGameStore>> {
+export async function createDnDGameStore(
+    options: GameOptions,
+    onRestart: () => void,
+): Promise<ZustandHook<DnDGameStore>> {
     const [units, allUnits] = await unitsFromOptions(options);
     const apiOptions: GameAPIOptions = {
         units,
@@ -30,6 +33,7 @@ export async function createDnDGameStore(options: GameOptions): Promise<ZustandH
         guess: options.guess,
         sortQuestions: true,
         preloadAllImages: true,
+        onRestart,
     };
     return createGameStore(apiOptions, (set, get, qsAndAs) => ({
         type: "dnd",

@@ -21,7 +21,10 @@ import {
 
 /** Creates a game store based on the provided options.
  *  Assumes that options have been validated. */
-export async function createPromptGameStore(options: GameOptions): Promise<ZustandHook<PromptGameStore>> {
+export async function createPromptGameStore(
+    options: GameOptions,
+    onRestart: () => void,
+): Promise<ZustandHook<PromptGameStore>> {
     const [units, allUnits] = await unitsFromOptions(options);
     const apiOptions: GameAPIOptions = {
         units,
@@ -29,6 +32,7 @@ export async function createPromptGameStore(options: GameOptions): Promise<Zusta
         guessFrom: options.guessFrom,
         guess: options.guess,
         provideHints: true,
+        onRestart,
     };
     return createGameStore(apiOptions, (set, get, qsAndAs) => {
         const screensAndButtons = createScreens(qsAndAs);

@@ -5,8 +5,11 @@ import type { ZustandHook } from "src/utils/zustand";
 import { DnDGame } from "./DnDGame";
 import { DnDGameStoreContext } from "./hook";
 
-export async function createDnDGame(options: GameOptions): Promise<[ComponentType, ZustandHook<DnDGameStore>]> {
-    const useDnDGameStore = await createDnDGameStore(options);
+export async function createDnDGame(
+    options: GameOptions,
+    onRestart: () => void,
+): Promise<[ComponentType, ZustandHook<DnDGameStore>]> {
+    const useDnDGameStore = await createDnDGameStore(options, onRestart);
 
     function DnDGameWrapper() {
         return (

@@ -13,21 +13,26 @@ export interface GameSwitcherReturn extends GameSwitcherState {
 }
 
 export interface GameSwitcherState {
-    /** "waitingForRequest" - A game switch hasn't been requested yet. Begin the first game with `requestSwitch`.
+    /** "uninitialized" - Waiting for the first `requestSwitch` call. No game is currently running.
      *  "switching" - A game switch is currently underway.
      *  "ready" - The old game has been replaced with the new one.
      *  "invalidOptions" - The options provided in the last `requestSwitch` call were invalid or missing. */
-    state: "waitingForRequest" | "switching" | "ready" | "invalidOptions";
-    /** Game component of the current game. */
+    state: "uninitialized" | "switching" | "ready" | "invalidOptions";
+    /** If true, then this is the first time a game is being started */
+    firstLoad: boolean;
+    /** Game component of the current game.
+     *  Null if switcher is uninitialized. */
     gameComponent: ComponentType | null;
-    /** Game store of the current game. */
+    /** Game store of the current game.
+     *  Null if switcher is uninitialized. */
     useGameStore: ZustandHook<GameStore> | null;
 }
 
 /** Allows a game to be running while the next one is being prepared. */
 export function useGameSwitcher(): GameSwitcherReturn {
     const [state, setState] = useState<GameSwitcherState>({
-        state: "waitingForRequest",
+        state: "uninitialized",
+        firstLoad: true,
         gameComponent: null,
         useGameStore: null,
     });
@@ -44,10 +49,14 @@ export function useGameSwitcher(): GameSwitcherReturn {
             const thisGameId = ulid();
             newGameId.current = thisGameId;
 
-            const [gameComponent, useGameStore] = await createGame(options);
+            const handleRestart = () => {
+                requestSwitch(options);
+            };
+            const [gameComponent, useGameStore] = await createGame(options, handleRestart);
             if (newGameId.current === thisGameId) {
                 setState({
                     state: "ready",
+                    firstLoad: false,
                     gameComponent,
                     useGameStore,
                 });

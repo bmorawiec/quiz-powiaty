@@ -7,8 +7,11 @@ import { PromptGameStoreContext } from "./hook";
 
 /** Creates a game store and a game component.
  *  @returns a tuple containing both values */
-export async function createPromptGame(options: GameOptions): Promise<[ComponentType, ZustandHook<PromptGameStore>]> {
-    const usePromptGameStore = await createPromptGameStore(options);
+export async function createPromptGame(
+    options: GameOptions,
+    onRestart: () => void,
+): Promise<[ComponentType, ZustandHook<PromptGameStore>]> {
+    const usePromptGameStore = await createPromptGameStore(options, onRestart);
 
     function PromptGameWrapper() {
         return (

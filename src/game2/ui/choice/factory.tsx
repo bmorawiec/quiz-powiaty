@@ -7,8 +7,11 @@ import { ChoiceGameStoreContext } from "./hook";
 
 /** Creates a game store and a game component.
  *  @returns a tuple containing both values */
-export async function createChoiceGame(options: GameOptions): Promise<[ComponentType, ZustandHook<ChoiceGameStore>]> {
-    const useChoiceGameStore = await createChoiceGameStore(options);
+export async function createChoiceGame(
+    options: GameOptions,
+    onRestart: () => void,
+): Promise<[ComponentType, ZustandHook<ChoiceGameStore>]> {
+    const useChoiceGameStore = await createChoiceGameStore(options, onRestart);
 
     function ChoiceGameWrapper() {
         return (

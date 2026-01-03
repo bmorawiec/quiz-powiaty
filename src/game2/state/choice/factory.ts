@@ -24,7 +24,10 @@ import {
 
 /** Creates a game store based on the provided options.
  *  Assumes that options have been validated. */
-export async function createChoiceGameStore(options: GameOptions): Promise<ZustandHook<ChoiceGameStore>> {
+export async function createChoiceGameStore(
+    options: GameOptions,
+    onRestart: () => void,
+): Promise<ZustandHook<ChoiceGameStore>> {
     const [units, allUnits] = await unitsFromOptions(options);
     const apiOptions: GameAPIOptions = {
         units,
@@ -33,6 +36,7 @@ export async function createChoiceGameStore(options: GameOptions): Promise<Zusta
         guess: options.guess,
         squishAnswers: true,
         numberOfAnswers: 6,
+        onRestart,
     };
     return createGameStore(apiOptions, (set, get, qsAndAs) => {
         const screensAndButtons = createScreensAndButtons(qsAndAs);

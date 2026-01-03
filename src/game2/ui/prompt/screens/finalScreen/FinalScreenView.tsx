@@ -23,6 +23,8 @@ export function FinalScreenView() {
     const maxPoints = 4 * questionIds.length;
     const percent = Math.floor((points / maxPoints) * 100);
 
+    const restart = usePromptGameStore((game) => game.api.restart);
+
     return (
         <div className="flex-1 flex flex-col gap-[16px] items-center">
             <h2 className="text-[20px] font-[450] tracking-[0.01em] text-gray-85">
@@ -42,6 +44,7 @@ export function FinalScreenView() {
                 text="Zagraj ponownie"
                 icon={RestartIcon}
                 className="w-[350px]"
+                onClick={restart}
             />
         </div>
     );

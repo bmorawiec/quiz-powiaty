@@ -10,7 +10,7 @@ import { useGameSwitcher } from "./useGameSwitcher";
 /** Shows the appropriate game screen depending on URL search params.
  *  Displays an error if the search params are incorrect. */
 export function Game() {
-    const { state, gameComponent, useGameStore, requestSwitch } = useGameSwitcher();
+    const { state, firstLoad, gameComponent, useGameStore, requestSwitch } = useGameSwitcher();
     const [searchParams] = useSearchParams();
     const newOptions = useMemo(() => decodeGameURL(searchParams), [searchParams]);
     useEffect(() => {
@@ -19,14 +19,16 @@ export function Game() {
 
     return (
         <div className="bg-white dark:bg-black flex-1 min-h-[600px] md:px-[20px] lg:px-[100px] md:pb-[25px]">
-            {(state === "ready") ? (
-                <GameStoreContext value={useGameStore!}>
-                    <GameView gameComponent={gameComponent!}/>
-                </GameStoreContext>
-            ) : (state === "invalidOptions") ? (
+            {(state === "invalidOptions") ? (
                 <GameError/>
             ) : (
-                <GameSkeleton/>
+                (firstLoad) ? (
+                    <GameSkeleton/>
+                ) : (
+                    <GameStoreContext value={useGameStore!}>
+                        <GameView gameComponent={gameComponent!}/>
+                    </GameStoreContext>
+                )
             )}
         </div>
     );

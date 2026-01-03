@@ -31,6 +31,9 @@ export interface GameAPIActions {
     /** Calculates the time the game has unpaused for. */
     calculateTime(): number;
 
+    /** Restarts the game. This is done by calling the `onRestart` function provided in the options. */
+    restart(): void;
+
     /** Used to report a correct guess.
      *  Marks the specified answer as guessed.
      *  @returns true if all the answers to this question have been guessed. */
@@ -76,6 +79,8 @@ export interface GameAPIOptions {
     /** @default false */
     squishAnswers?: boolean;
     numberOfAnswers?: number;
+
+    onRestart: () => void;
 }
 
 export interface Question {
