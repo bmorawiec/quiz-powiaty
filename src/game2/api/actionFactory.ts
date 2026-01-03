@@ -110,13 +110,14 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
                 [questionId]: {
                     ...question,
                     points: (question.points <= 0) ? 0 : question.points - 1,
+                    tries: question.tries + 1,
                 },
             },
         });
 
         return (api.options.provideHints)
-            ? getFullHint(question) || getPartialHint(question)
-            : null;
+            ? getFullHint(question) || getPartialHint(question) || ""
+            : "";
     }
 
     function getFullHint(question: Question): string | null {
