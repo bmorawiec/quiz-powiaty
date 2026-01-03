@@ -22,6 +22,8 @@ import {
     type FinalChoiceScreen,
 } from "./types";
 
+/** Creates a game store based on the provided options.
+ *  Assumes that options have been validated. */
 export async function createChoiceGameStore(options: GameOptions): Promise<ZustandHook<ChoiceGameStore>> {
     const [units, allUnits] = await unitsFromOptions(options);
     const apiOptions: GameAPIOptions = {
@@ -43,6 +45,7 @@ export async function createChoiceGameStore(options: GameOptions): Promise<Zusta
     });
 }
 
+/** Creates screens and buttons based on the questions and answers received from the game API. */
 function createScreensAndButtons(qsAndAs: Questions & Answers): ChoiceScreens & Buttons {
     const result: ChoiceScreens & Buttons = {
         screens: {},
@@ -83,6 +86,7 @@ function createScreensAndButtons(qsAndAs: Questions & Answers): ChoiceScreens & 
     return result;
 }
 
+/** Creates buttons corresponding to the answers of the provided question. */
 function createButtons(qsAndAs: Questions & Answers, question: Question): Buttons {
     const result: Buttons = {
         buttons: {},
@@ -126,6 +130,8 @@ function createChoiceGameActions(
         }
     }
 
+    /** Marks the current screen as answered, and proceeds to the next screen.
+     *  Preloads images for the next-next screen, if there are any to load. */
     function nextScreen() {
         const currentScreenId = get().currentScreenId;
         const currentScreen = get().screens[currentScreenId];

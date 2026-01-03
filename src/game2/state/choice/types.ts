@@ -9,7 +9,10 @@ export interface ChoiceGameState extends ChoiceScreens, Buttons {
 }
 
 export interface ChoiceGameActions {
+    /** Checks if the clicked button corresponds to a correct answer. */
     guess(buttonId: string): "correct" | "wrong";
+
+    /** Changes the currently selected screen. */
     switchScreens(screenId: string | "finishScreen"): void;
 }
 
@@ -24,21 +27,34 @@ export interface Buttons {
 }
 
 export interface ChoiceScreen {
+    /** A UUID. */
     id: string;
+    /** Used to distinguish between normal screens and the final screen. Omit. */
     final?: false;
+    /** "correct" - The question associated with this screen has been answered in 3 attempts or less.
+     *  "incorrect" - The question associated with this screen has been answered in 4 or more attempts.
+     *  "answering" - The question associated with this screen is being answered.
+     *  "unanswered" - The question associated with this screen hasn't been answered yet. */
     state: "correct" | "incorrect" | "answering" | "unanswered";
+    /** Id of the question associated with this screen. */
     questionId: string;
+    /** Ids of buttons to be shown on this screen. */
     buttonIds: string[];
 }
 
 export interface FinalChoiceScreen {
+    /** A UUID. */
     id: string;
+    /** Used to distinguish between normal screens and the final screen. */
     final: true;
+    /** Whether or not this screen has been reached (i.e. the game has ended). */
     reached: boolean;
 }
 
 export interface Button {
+    /** A UUID. */
     id: string;
+    /** Id of the button associated with this button. */
     answerId: string;
 }
 
