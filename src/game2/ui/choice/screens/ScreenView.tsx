@@ -1,8 +1,9 @@
+import clsx from "clsx";
 import { useContext } from "react";
 import { QuestionNotFoundError } from "src/game2/api";
 import { type ChoiceScreen } from "src/game2/state";
-import { ButtonView } from "./ButtonView";
 import { ChoiceGameStoreContext } from "../hook";
+import { ButtonView } from "./ButtonView";
 
 export interface ScreenViewProps {
     screen: ChoiceScreen;
@@ -16,9 +17,18 @@ export function ScreenView({ screen }: ScreenViewProps) {
 
     return (
         <div className="flex flex-col items-center">
-            <h2 className="h-[56px] text-[20px] font-[450] tracking-[0.01em] text-gray-85">
-                {question.content.text}
-            </h2>
+            <div className="w-full h-[56px] grid grid-cols-[60px_auto_60px]">
+                <div/>
+                <h2 className="text-center text-[20px] font-[450] tracking-[0.01em] text-gray-85">
+                    {question.content.text}
+                </h2>
+                {question.guessed && (
+                    <span className={clsx("mt-[2px] text-[18px] font-[450] tracking-[0.01em] justify-self-end",
+                        (question.points > 0) ? "text-teal-75" : "text-red-60")}>
+                        +{question.points}pkt
+                    </span>
+                )}
+            </div>
             <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-[10px]">
                 {screen.buttonIds.map((buttonId) =>
                     <ButtonView
