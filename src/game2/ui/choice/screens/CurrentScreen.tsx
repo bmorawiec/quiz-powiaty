@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { ChoiceScreenNotFoundError } from "src/game2/state";
-import { FinalScreenView } from "./FinalScreenView";
 import { ChoiceGameStoreContext } from "../hook";
-import { ScreenView } from "./ScreenView";
+import { FinalScreenView } from "./finalScreen";
+import { ScreenView } from "./screen";
 
 export function CurrentScreen() {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);

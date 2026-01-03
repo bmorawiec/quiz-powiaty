@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import { ChoiceGameStoreContext } from "../hook";
-import { ButtonNotFoundError } from "src/game2/state";
-import { AnswerNotFoundError } from "src/game2/api";
 import clsx from "clsx";
+import { useContext } from "react";
+import { AnswerNotFoundError } from "src/game2/api";
+import { ButtonNotFoundError } from "src/game2/state";
 import { ApplyIcon, CloseIcon } from "src/ui";
 import { useAnimation } from "src/utils/useAnimation";
+import { ChoiceGameStoreContext } from "../../hook";
 
 export interface ButtonViewProps {
     buttonId: string;

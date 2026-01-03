@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { useContext } from "react";
 import { QuestionNotFoundError } from "src/game2/api";
 import { type ChoiceScreen } from "src/game2/state";
-import { ChoiceGameStoreContext } from "../hook";
+import { ChoiceGameStoreContext } from "../../hook";
 import { ButtonView } from "./ButtonView";
 
 export interface ScreenViewProps {

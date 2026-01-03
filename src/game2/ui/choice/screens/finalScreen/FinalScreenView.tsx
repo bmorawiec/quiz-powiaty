@@ -1,7 +1,7 @@
 import { useContext, useMemo } from "react";
 import { QuestionNotFoundError } from "src/game/common";
 import { LargeButton, RestartIcon } from "src/ui";
-import { ChoiceGameStoreContext } from "../hook";
+import { ChoiceGameStoreContext } from "../../hook";
 
 /** Shows the final screen, which contains information about game results and a restart button. */
 export function FinalScreenView() {
