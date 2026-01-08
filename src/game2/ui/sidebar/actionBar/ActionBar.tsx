@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import {
     ExitFullscreenIcon,
     FullscreenIcon,
@@ -11,6 +11,7 @@ import {
 } from "src/ui";
 import { useIsFullscreen } from "src/utils/useIsFullscreen";
 import { GameStoreContext } from "../../hook";
+import { RestartDialog } from "../RestartDialog";
 import { Result } from "./Result";
 import { Timer } from "./Timer";
 
@@ -28,6 +29,16 @@ export function ActionBar({ onCollapse }: ActionBarProps) {
     const toggleFullscreen = useGameStore((game) => game.api.toggleFullscreen);
     const restart = useGameStore((game) => game.api.restart);
 
+    const [showRestartDialog, setShowRestartDialog] = useState(false);
+    const handleRestartClick = () => {
+        const game = useGameStore.getState();
+        if (game.api.numberGuessed > 0 && game.api.state !== "finished") {
+            setShowRestartDialog(true);
+        } else {
+            restart();
+        }
+    };
+
     return (<>
         <div className="pl-[30px] pr-[33px] pt-[31px] pb-[13px] flex justify-between">
             <IconButton
@@ -44,7 +55,7 @@ export function ActionBar({ onCollapse }: ActionBarProps) {
                 />
                 <IconButton
                     icon={RestartIcon}
-                    onClick={restart}
+                    onClick={handleRestartClick}
                 />
                 <IconButton
                     icon={(state === "paused") ? PlayIcon : PauseIcon}
@@ -63,5 +74,12 @@ export function ActionBar({ onCollapse }: ActionBarProps) {
             </p>
             <Result/>
         </div>
+
+        {showRestartDialog && (
+            <RestartDialog
+                onConfirm={restart}
+                onClose={() => setShowRestartDialog(false)}
+            />
+        )}
     </>);
 }
