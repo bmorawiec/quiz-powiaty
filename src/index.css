@@ -178,3 +178,7 @@ body {
 @utility focus-ring {
     @apply focus-visible:outline-[3px] outline-offset-[3px] outline-teal-70;
 }
+
+@utility scrollbar-hidden {
+    scrollbar-width: none;
+}

@@ -6,7 +6,7 @@ export interface StepperProps {
 
 export function Stepper({ children }: StepperProps) {
     return (
-        <div className="h-[30px] flex items-center">
+        <div className="flex items-center overflow-x-auto scrollbar-hidden p-[20px] m-[-20px]">
             {children}
         </div>
     );
