@@ -43,8 +43,14 @@ function createGameAPI(
     return {
         state: "unpaused",
         timestamps: [Date.now()],
+
         options: apiOptions,
+
         numberGuessed: 0,
+
+        points: 0,
+        maxPoints: qsAndAs.questionIds.length,
+
         ...qsAndAs,
         ...createGameAPIActions(set, get),
     };

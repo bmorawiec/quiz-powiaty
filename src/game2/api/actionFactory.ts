@@ -83,6 +83,7 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
                 [answer.questionId]: newQuestion,
             },
             numberGuessed: newNumberGuessed,
+            points: api.points + question.points,
         });
 
         if (newNumberGuessed >= api.questionIds.length) {

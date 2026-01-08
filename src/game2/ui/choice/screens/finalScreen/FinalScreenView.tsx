@@ -1,5 +1,4 @@
-import { useContext, useMemo } from "react";
-import { QuestionNotFoundError } from "src/game/common";
+import { useContext } from "react";
 import { LargeButton, RestartIcon } from "src/ui";
 import { ChoiceGameStoreContext } from "../../hook";
 
@@ -7,20 +6,8 @@ import { ChoiceGameStoreContext } from "../../hook";
 export function FinalScreenView() {
     const useChoiceGameStore = useContext(ChoiceGameStoreContext);
 
-    const questionIds = useChoiceGameStore((game) => game.api.questionIds);
-    const questions = useChoiceGameStore((game) => game.api.questions);
-    const points = useMemo(() => {
-        let points = 0;
-        for (const questionId of questionIds) {
-            const question = questions[questionId];
-            if (!question)
-                throw new QuestionNotFoundError(questionId);
-            points += question!.points;
-        }
-        return points;
-    }, [questionIds, questions]);
-
-    const maxPoints = 4 * questionIds.length;
+    const points = useChoiceGameStore((game) => game.api.points);
+    const maxPoints = useChoiceGameStore((game) => game.api.maxPoints);
     const percent = Math.floor((points / maxPoints) * 100);
 
     const restart = useChoiceGameStore((game) => game.api.restart);

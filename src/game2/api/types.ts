@@ -21,6 +21,12 @@ export interface GameAPIState extends Questions, Answers {
 
     /** Number of guessed questions. */
     numberGuessed: number;
+
+    /** Number of points awarded to the player.
+     *  Updated after each correct guess. */
+    points: number;
+    /** The amount of points that can be received. */
+    maxPoints: number;
 }
 
 export interface GameAPIActions {
