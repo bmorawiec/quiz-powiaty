@@ -1,5 +1,15 @@
 import { useContext } from "react";
-import { FullscreenIcon, HeartIcon, IconButton, PauseIcon, PlayIcon, RestartIcon, SidebarIcon } from "src/ui";
+import {
+    ExitFullscreenIcon,
+    FullscreenIcon,
+    HeartIcon,
+    IconButton,
+    PauseIcon,
+    PlayIcon,
+    RestartIcon,
+    SidebarIcon,
+} from "src/ui";
+import { useIsFullscreen } from "src/utils/useIsFullscreen";
 import { GameStoreContext } from "../../hook";
 import { Result } from "./Result";
 import { Timer } from "./Timer";
@@ -9,10 +19,13 @@ export interface ActionBarProps {
 }
 
 export function ActionBar({ onCollapse }: ActionBarProps) {
+    const isFullscreen = useIsFullscreen();
+
     const useGameStore = useContext(GameStoreContext);
 
     const state = useGameStore((game) => game.api.state);
     const togglePause = useGameStore((game) => game.api.togglePause);
+    const toggleFullscreen = useGameStore((game) => game.api.toggleFullscreen);
     const restart = useGameStore((game) => game.api.restart);
 
     return (<>
@@ -26,7 +39,8 @@ export function ActionBar({ onCollapse }: ActionBarProps) {
                     icon={HeartIcon}
                 />
                 <IconButton
-                    icon={FullscreenIcon}
+                    icon={(isFullscreen) ? ExitFullscreenIcon : FullscreenIcon}
+                    onClick={toggleFullscreen}
                 />
                 <IconButton
                     icon={RestartIcon}
