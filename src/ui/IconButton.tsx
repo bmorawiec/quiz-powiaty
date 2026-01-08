@@ -11,9 +11,9 @@ export interface IconButtonProps {
 export function IconButton({ icon: Icon, className, onClick }: IconButtonProps) {
     return (
         <button
-            className={clsx("size-[36px] rounded-[6px] flex items-center justify-center cursor-pointer",
+            className={clsx("size-[36px] m-[-10px] rounded-[10px] flex items-center justify-center cursor-pointer",
                 "transition-colors duration-[80ms] focus-ring",
-                "hover:bg-gray-10 active:bg-gray-15 dark:hover:bg-gray-85 dark:active:bg-gray-90", className)}
+                "hover:bg-black/8 active:bg-black/10 dark:hover:bg-gray-85 dark:active:bg-gray-90", className)}
             onClick={onClick}
         >
             <Icon/>
