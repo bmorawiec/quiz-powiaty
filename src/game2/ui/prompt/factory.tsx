@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import type { GameAPICallbacks } from "src/game2/api";
 import { type PromptGameStore, createPromptGameStore } from "src/game2/state";
 import type { GameOptions } from "src/gameOptions";
 import type { ZustandHook } from "src/utils/zustand";
@@ -9,9 +10,9 @@ import { PromptGameStoreContext } from "./hook";
  *  @returns a tuple containing both values */
 export async function createPromptGame(
     options: GameOptions,
-    onRestart: () => void,
+    callbacks: GameAPICallbacks,
 ): Promise<[ComponentType, ZustandHook<PromptGameStore>]> {
-    const usePromptGameStore = await createPromptGameStore(options, onRestart);
+    const usePromptGameStore = await createPromptGameStore(options, callbacks);
 
     function PromptGameWrapper() {
         return (

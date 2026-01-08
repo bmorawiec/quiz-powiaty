@@ -3,6 +3,7 @@ import {
     createGameStore,
     QuestionNotFoundError,
     type Answers,
+    type GameAPICallbacks,
     type GameAPIOptions,
     type Question,
     type Questions,
@@ -23,7 +24,7 @@ import {
 
 export async function createDnDGameStore(
     options: GameOptions,
-    onRestart: () => void,
+    callbacks: GameAPICallbacks,
 ): Promise<ZustandHook<DnDGameStore>> {
     const [units, allUnits] = await unitsFromOptions(options);
     const apiOptions: GameAPIOptions = {
@@ -33,7 +34,7 @@ export async function createDnDGameStore(
         guess: options.guess,
         sortQuestions: true,
         preloadAllImages: true,
-        onRestart,
+        ...callbacks,
     };
     return createGameStore(apiOptions, (set, get, qsAndAs) => ({
         type: "dnd",

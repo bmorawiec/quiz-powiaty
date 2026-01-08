@@ -40,6 +40,9 @@ export interface GameAPIActions {
     /** Restarts the game. This is done by calling the `onRestart` function provided in the options. */
     restart(): void;
 
+    /** Enters or exits fullscreen mode. */
+    toggleFullscreen(): void;
+
     /** Used to report a correct guess.
      *  Marks the specified answer as guessed.
      *  @returns true if all the answers to this question have been guessed. */
@@ -64,7 +67,7 @@ export interface Answers {
     answerIds: string[];
 }
 
-export interface GameAPIOptions {
+export interface GameAPIOptions extends GameAPICallbacks {
     /** Units to generate questions about. */
     units: Unit[];
     allUnits: Unit[];
@@ -85,8 +88,12 @@ export interface GameAPIOptions {
     /** @default false */
     squishAnswers?: boolean;
     numberOfAnswers?: number;
+}
 
+export interface GameAPICallbacks {
     onRestart: () => void;
+    /** Called when the user clicks the 'fullscreen' button or 'exit fullscreen' button. */
+    onToggleFullscreen: () => void;
 }
 
 export interface Question {

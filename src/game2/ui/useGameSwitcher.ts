@@ -12,6 +12,10 @@ export interface GameSwitcherReturn extends GameSwitcherState {
     requestSwitch: (options: GameOptions | null) => void;
 }
 
+export interface GameSwitcherOptions {
+    onToggleFullscreen: () => void;
+}
+
 export interface GameSwitcherState {
     /** "uninitialized" - Waiting for the first `requestSwitch` call. No game is currently running.
      *  "switching" - A game switch is currently underway.
@@ -29,7 +33,7 @@ export interface GameSwitcherState {
 }
 
 /** Allows a game to be running while the next one is being prepared. */
-export function useGameSwitcher(): GameSwitcherReturn {
+export function useGameSwitcher({ onToggleFullscreen }: GameSwitcherOptions): GameSwitcherReturn {
     const [state, setState] = useState<GameSwitcherState>({
         state: "uninitialized",
         firstLoad: true,
@@ -52,7 +56,10 @@ export function useGameSwitcher(): GameSwitcherReturn {
             const handleRestart = () => {
                 requestSwitch(options);
             };
-            const [gameComponent, useGameStore] = await createGame(options, handleRestart);
+            const [gameComponent, useGameStore] = await createGame(options, {
+                onRestart: handleRestart,
+                onToggleFullscreen,
+            });
             if (newGameId.current === thisGameId) {
                 setState({
                     state: "ready",
@@ -67,7 +74,7 @@ export function useGameSwitcher(): GameSwitcherReturn {
                 state: "invalidOptions",
             }));
         }
-    }, []);
+    }, [onToggleFullscreen]);
 
     return {
         ...state,

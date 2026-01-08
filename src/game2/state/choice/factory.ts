@@ -3,6 +3,7 @@ import {
     createGameStore,
     QuestionNotFoundError,
     type Answers,
+    type GameAPICallbacks,
     type GameAPIOptions,
     type Question,
     type Questions,
@@ -26,7 +27,7 @@ import {
  *  Assumes that options have been validated. */
 export async function createChoiceGameStore(
     options: GameOptions,
-    onRestart: () => void,
+    callbacks: GameAPICallbacks,
 ): Promise<ZustandHook<ChoiceGameStore>> {
     const [units, allUnits] = await unitsFromOptions(options);
     const apiOptions: GameAPIOptions = {
@@ -36,7 +37,7 @@ export async function createChoiceGameStore(
         guess: options.guess,
         squishAnswers: true,
         numberOfAnswers: 6,
-        onRestart,
+        ...callbacks,
     };
     return createGameStore(apiOptions, (set, get, qsAndAs) => {
         const screensAndButtons = createScreensAndButtons(qsAndAs);

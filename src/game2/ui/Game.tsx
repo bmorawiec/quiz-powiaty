@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router";
 import { decodeGameURL } from "src/gameOptions";
 import { GameError } from "./GameError";
@@ -6,11 +6,37 @@ import { GameSkeleton } from "./GameSkeleton";
 import { GameView } from "./GameView";
 import { GameStoreContext } from "./hook";
 import { useGameSwitcher } from "./useGameSwitcher";
+import clsx from "clsx";
 
 /** Shows the appropriate game screen depending on URL search params.
  *  Displays an error if the search params are incorrect. */
 export function Game() {
-    const { state, firstLoad, gameComponent, useGameStore, requestSwitch } = useGameSwitcher();
+    const container = useRef<HTMLDivElement | null>(null);
+    const [fullscreen, setFullscreen] = useState(false);
+    const handleToggleFullscreen = useCallback(() => {
+        setFullscreen((fullscreen) => !fullscreen);
+    }, []);
+    useEffect(() => {
+        if (fullscreen) {
+            container.current!.requestFullscreen();
+
+            const handleFullscreenChange = () => {
+                if (!document.fullscreenElement) {
+                    setFullscreen(false);
+                }
+            };
+            document.addEventListener("fullscreenchange", handleFullscreenChange);
+            return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
+        } else {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            }
+        }
+    }, [fullscreen]);
+
+    const { state, firstLoad, gameComponent, useGameStore, requestSwitch } = useGameSwitcher({
+        onToggleFullscreen: handleToggleFullscreen,
+    });
     const [searchParams] = useSearchParams();
     const newOptions = useMemo(() => decodeGameURL(searchParams), [searchParams]);
     useEffect(() => {
@@ -18,7 +44,11 @@ export function Game() {
     }, [newOptions, requestSwitch]);
 
     return (
-        <div className="bg-white dark:bg-black flex-1 min-h-[600px] md:px-[20px] lg:px-[100px] md:pb-[25px]">
+        <div
+            ref={container}
+            className={clsx("bg-white dark:bg-black flex-1 min-h-[600px] md:px-[20px]",
+                (fullscreen) ? "md:py-[20px]" : "md:pb-[25px] lg:px-[100px]")}
+        >
             {(state === "invalidOptions") ? (
                 <GameError/>
             ) : (

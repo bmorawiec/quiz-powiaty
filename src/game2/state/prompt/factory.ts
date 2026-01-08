@@ -4,6 +4,7 @@ import {
     QuestionNotFoundError,
     type Answer,
     type Answers,
+    type GameAPICallbacks,
     type GameAPIOptions,
     type Questions,
 } from "src/game2/api";
@@ -23,7 +24,7 @@ import {
  *  Assumes that options have been validated. */
 export async function createPromptGameStore(
     options: GameOptions,
-    onRestart: () => void,
+    callbacks: GameAPICallbacks,
 ): Promise<ZustandHook<PromptGameStore>> {
     const [units, allUnits] = await unitsFromOptions(options);
     const apiOptions: GameAPIOptions = {
@@ -32,7 +33,7 @@ export async function createPromptGameStore(
         guessFrom: options.guessFrom,
         guess: options.guess,
         provideHints: true,
-        onRestart,
+        ...callbacks,
     };
     return createGameStore(apiOptions, (set, get, qsAndAs) => {
         const screensAndButtons = createScreens(qsAndAs);

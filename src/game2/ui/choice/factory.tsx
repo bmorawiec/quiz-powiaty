@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import type { GameAPICallbacks } from "src/game2/api";
 import { type ChoiceGameStore, createChoiceGameStore } from "src/game2/state";
 import type { GameOptions } from "src/gameOptions";
 import type { ZustandHook } from "src/utils/zustand";
@@ -9,9 +10,9 @@ import { ChoiceGameStoreContext } from "./hook";
  *  @returns a tuple containing both values */
 export async function createChoiceGame(
     options: GameOptions,
-    onRestart: () => void,
+    callbacks: GameAPICallbacks,
 ): Promise<[ComponentType, ZustandHook<ChoiceGameStore>]> {
-    const useChoiceGameStore = await createChoiceGameStore(options, onRestart);
+    const useChoiceGameStore = await createChoiceGameStore(options, callbacks);
 
     function ChoiceGameWrapper() {
         return (

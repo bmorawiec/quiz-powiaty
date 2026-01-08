@@ -46,6 +46,10 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
         get().options.onRestart();
     }
 
+    function toggleFullscreen() {
+        get().options.onToggleFullscreen();
+    }
+
     function correctGuess(answerId: string) {
         const api = get();
 
@@ -177,5 +181,5 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
         await Promise.all(getImagePreloadPromises(question, get().answers, get().options));
     }
 
-    return { togglePause, calculateTime, restart, correctGuess, incorrectGuess, preloadImages };
+    return { togglePause, calculateTime, restart, toggleFullscreen, correctGuess, incorrectGuess, preloadImages };
 }
