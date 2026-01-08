@@ -1,0 +1,53 @@
+import { useContext } from "react";
+import { FullscreenIcon, HeartIcon, IconButton, PauseIcon, PlayIcon, RestartIcon, SidebarIcon } from "src/ui";
+import { GameStoreContext } from "../../hook";
+import { Result } from "./Result";
+import { Timer } from "./Timer";
+
+export interface ActionBarProps {
+    onCollapse: () => void;
+}
+
+export function ActionBar({ onCollapse }: ActionBarProps) {
+    const useGameStore = useContext(GameStoreContext);
+
+    const state = useGameStore((game) => game.api.state);
+    const togglePause = useGameStore((game) => game.api.togglePause);
+    const restart = useGameStore((game) => game.api.restart);
+
+    return (<>
+        <div className="pl-[30px] pr-[33px] pt-[31px] pb-[13px] flex justify-between">
+            <IconButton
+                icon={SidebarIcon}
+                onClick={onCollapse}
+            />
+            <div className="flex gap-[23px]">
+                <IconButton
+                    icon={HeartIcon}
+                />
+                <IconButton
+                    icon={FullscreenIcon}
+                />
+                <IconButton
+                    icon={RestartIcon}
+                    onClick={restart}
+                />
+                <IconButton
+                    icon={(state === "paused") ? PlayIcon : PauseIcon}
+                    onClick={togglePause}
+                />
+            </div>
+        </div>
+        <div className="px-[25px] py-[15px] grid grid-cols-2 gap-y-[15px] font-[450] tracking-[0.02em] text-[14px]">
+            <p className="text-gray-60">
+                Czas
+            </p>
+            <Timer/>
+
+            <p className="text-gray-60">
+                Aktualny wynik
+            </p>
+            <Result/>
+        </div>
+    </>);
+}
