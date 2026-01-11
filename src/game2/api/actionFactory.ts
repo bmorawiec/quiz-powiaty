@@ -74,8 +74,6 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
             guessed: question.numberGuessed + 1 >= question.numberCorrect,
         };
 
-        // update guessed question count if all the answers have been guessed
-        const newNumberGuessed = (newQuestion.guessed) ? api.numberGuessed + 1 : api.numberGuessed;
 
         set({
             answers: {
@@ -86,12 +84,17 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
                 ...api.questions,
                 [answer.questionId]: newQuestion,
             },
-            numberGuessed: newNumberGuessed,
-            points: api.points + question.points,
         });
 
-        if (newNumberGuessed >= api.questionIds.length) {
-            finish();   // finish game if all the questions have been guessed
+        if (newQuestion.guessed) {
+            set((api) => ({
+                numberGuessed: api.numberGuessed + 1,   // update guessed question count if all answers guessed
+                points: api.points + question.points,   // also update point counter
+            }));
+
+            if (get().numberGuessed >= get().questionIds.length) {
+                finish();   // finish game if all the questions have been guessed
+            }
         }
 
         return newQuestion.guessed;
