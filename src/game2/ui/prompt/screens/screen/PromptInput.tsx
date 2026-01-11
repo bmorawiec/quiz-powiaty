@@ -145,18 +145,20 @@ export function PromptInput({ answered, total, onGuess }: PromptInputProps) {
 
             <div className="absolute left-[15px] top-[70px] text-[14px] text-gray-80 flex flex-col gap-[10px]">
                 {(hint || result === "alreadyGuessed") && (
-                    <div className="flex items-center gap-[4px]">
-                        <InfoIcon className="size-[12px]"/>
-                        {result === "alreadyGuessed" && (
-                            <span>
-                                Już zgadłeś tą odpowiedź.
-                            </span>
-                        )}
-                        {hint && (
-                            <span>
-                                Podpowiedź: {hint}
-                            </span>
-                        )}
+                    <div className="flex gap-[4px]">
+                        <InfoIcon className="size-[12px] mt-[5px]"/>
+                        <div className="flex flex-col">
+                            {result === "alreadyGuessed" && (
+                                <span>
+                                    Już zgadłeś tą odpowiedź.
+                                </span>
+                            )}
+                            {hint && (
+                                <span>
+                                    Podpowiedź: {hint}
+                                </span>
+                            )}
+                        </div>
                     </div>
                 )}
             </div>
