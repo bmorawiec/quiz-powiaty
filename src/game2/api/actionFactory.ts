@@ -14,23 +14,20 @@ const TRIES_FOR_FULL_HINT = 6;
 
 export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGetter<GameAPI>): GameAPIActions {
     function togglePause() {
-        const api = get();
-        if (api.state === "finished")
+        if (get().state === "finished")
             throw new Error("Cannot pause or unpause a finished game.");
 
-        set({
+        set((api) => ({
             state: (api.state === "paused") ? "unpaused" : "paused",
             timestamps: [...api.timestamps, Date.now()],
-        });
+        }));
     }
 
     function calculateTime() {
-        const game = get();
-
         let time = 0;
-        const timestamps = (game.state === "unpaused")
-            ? [...game.timestamps, Date.now()]
-            : game.timestamps;
+        const timestamps = (get().state === "unpaused")
+            ? [...get().timestamps, Date.now()]
+            : get().timestamps;
         for (let index = 0; index < timestamps.length; index += 2) {
             const unpausedAt = timestamps[index];
             const pausedAt = timestamps[index + 1];
@@ -51,16 +48,14 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
     }
 
     function correctGuess(answerId: string) {
-        const api = get();
-
-        const answer = api.answers[answerId];
+        const answer = get().answers[answerId];
         if (!answer) throw new AnswerNotFoundError(answerId);
         if (answer.guessed)
             throw new Error("Cannot mark an answer that has already been guessed as guessed.");
         if (!answer.correct)
             throw new Error("Cannot mark an incorrect answer as guessed.");
 
-        const question = api.questions[answer.questionId];
+        const question = get().questions[answer.questionId];
         if (!question) throw new AnswerNotFoundError(answer.questionId);
 
         const newAnswer: Answer = {
@@ -75,7 +70,7 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
         };
 
 
-        set({
+        set((api) => ({
             answers: {
                 ...api.answers,
                 [answerId]: newAnswer,
@@ -84,7 +79,7 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
                 ...api.questions,
                 [answer.questionId]: newQuestion,
             },
-        });
+        }));
 
         if (newQuestion.guessed) {
             set((api) => ({
@@ -101,22 +96,19 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
     }
 
     function finish() {
-        const api = get();
         set({
             state: "finished",
-            timestamps: [...api.timestamps, Date.now()],
+            timestamps: [...get().timestamps, Date.now()],
         });
     }
 
     function incorrectGuess(questionId: string) {
-        const api = get();
-
-        const question = api.questions[questionId];
+        const question = get().questions[questionId];
         if (!question) throw new AnswerNotFoundError(questionId);
         if (question.guessed)
             throw new Error("Action can't be performed on a question that has been guessed.");
 
-        set({
+        set((api) => ({
             questions: {
                 ...api.questions,
                 [questionId]: {
@@ -125,9 +117,9 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
                     tries: question.tries + 1,
                 },
             },
-        });
+        }));
 
-        return (api.options.provideHints)
+        return (get().options.provideHints)
             ? getFullHint(question) || getPartialHint(question) || ""
             : "";
     }
@@ -137,9 +129,8 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
             return null;
         }
 
-        const api = get();
         return question.answerIds.map((answerId) => {
-            const answer = api.answers[answerId];
+            const answer = get().answers[answerId];
             if (!answer) throw new AnswerNotFoundError(answerId);
             if (answer.content.type !== "text")
                 throw new Error("Expected answer content type to be 'text'.");
@@ -153,10 +144,9 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
             return null;
         }
 
-        const api = get();
         const noOfLetters = question.tries - TRIES_FOR_HINT + 1;      // how many letters to uncover
         return question.answerIds.map((answerId) => {
-            const answer = api.answers[answerId];
+            const answer = get().answers[answerId];
             if (!answer) throw new AnswerNotFoundError(answerId);
             if (answer.content.type !== "text")
                 throw new Error("Expected answer content type to be 'text'.");
