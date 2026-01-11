@@ -49,7 +49,7 @@ function createGameAPI(
         numberGuessed: 0,
 
         points: 0,
-        maxPoints: qsAndAs.questionIds.length,
+        maxPoints: 4 * qsAndAs.questionIds.length,
 
         ...qsAndAs,
         ...createGameAPIActions(set, get),
