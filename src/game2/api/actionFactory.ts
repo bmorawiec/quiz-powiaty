@@ -48,6 +48,9 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
     }
 
     function correctGuess(answerId: string) {
+        if (get().state !== "unpaused")
+            throw new Error("This action can only be performed while the game is unpaused.");
+
         const answer = get().answers[answerId];
         if (!answer) throw new AnswerNotFoundError(answerId);
         if (answer.guessed)
@@ -103,6 +106,9 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
     }
 
     function incorrectGuess(questionId: string) {
+        if (get().state !== "unpaused")
+            throw new Error("This action can only be performed while the game is unpaused.");
+
         const question = get().questions[questionId];
         if (!question) throw new AnswerNotFoundError(questionId);
         if (question.guessed)
