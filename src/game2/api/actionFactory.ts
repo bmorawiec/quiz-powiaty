@@ -98,6 +98,7 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
         return newQuestion.guessed;
     }
 
+    /** Sets the API's state to "finished" and updates timestamps. */
     function finish() {
         set({
             state: "finished",
@@ -162,7 +163,7 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
                 const char = answer.content.shortText[index];
                 if (char === " " || char === "-"
                     || index < noOfLetters      // uncover first n letters
-                    || (answer.content.shortText.length > 3     // also uncover last n letters
+                    || (answer.content.shortText.length > 3     // also uncover last n letters if text is long enough
                         && index >= answer.content.shortText.length - noOfLetters)) {
                     hint += char;
                 } else {

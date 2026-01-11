@@ -31,25 +31,27 @@ export interface GameAPIState extends Questions, Answers {
 
 export interface GameAPIActions {
     /** Pauses the game if it's currently unpaused. Unpauses the game if it's currently paused.
-      * @throws if the game has been finished */
+      * @throws if the game has finished */
     togglePause(): void;
 
-    /** Calculates the time the game has unpaused for. */
+    /** Calculates the time the game has been unpaused for. */
     calculateTime(): number;
 
-    /** Restarts the game. This is done by calling the `onRestart` function provided in the options. */
+    /** Restarts the game (calls the `onRestart` callback provided through API options). */
     restart(): void;
 
-    /** Enters or exits fullscreen mode. */
+    /** Enters or exits fullscreen mode (calls the `onToggleFullscreen` callback provided through API options). */
     toggleFullscreen(): void;
 
     /** Used to report a correct guess.
      *  Marks the specified answer as guessed.
-     *  @returns true if all the answers to this question have been guessed. */
+     *  @returns true if all the answers to this question have been guessed.
+     *  @throws if the game has been paused or if it has finished */
     correctGuess(answerId: string): boolean;
 
     /** Used to report an incorrect guess.
-     *  @returns a hint if configured to do so, and if the number of guesses exceeds four. */
+     *  @returns a hint if configured to do so, and if the number of guesses exceeds four.
+     *  @throws if the game has been paused or if it has finished */
     incorrectGuess(questionId: string): string;
 
     preloadImages(questionId: string): Promise<void>;
