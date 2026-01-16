@@ -2,17 +2,24 @@ import { Button, CloseIcon, Dialog, DialogRoot, RestartIcon, WarningIcon } from 
 
 export interface RestartDialogProps {
     /** Called when the user clicks the 'confirm' button. */
-    onConfirm: () => void;
+    onConfirm?: () => void;
+    /** Called when the user clicks the 'cancel' button. */
+    onCancel?: () => void;
     /** Called when the user closes the dialog by clicking outside of it, or clicks the 'cancel' or 'confirm'
      *  buttons. */
-    onClose: () => void;
+    onClose?: () => void;
 }
 
 /** Shows a game restart confirmation dialog. */
-export function RestartDialog({ onConfirm, onClose }: RestartDialogProps) {
+export function RestartDialog({ onConfirm, onCancel, onClose }: RestartDialogProps) {
     const handleRestartClick = () => {
-        onConfirm();
-        onClose();
+        onConfirm?.();
+        onClose?.();
+    };
+
+    const handleCancelClick = () => {
+        onCancel?.();
+        onClose?.();
     };
 
     return (
@@ -28,7 +35,7 @@ export function RestartDialog({ onConfirm, onClose }: RestartDialogProps) {
                     <Button
                         icon={CloseIcon}
                         text="Anuluj"
-                        onClick={onClose}
+                        onClick={handleCancelClick}
                     />
                     <Button
                         icon={RestartIcon}
