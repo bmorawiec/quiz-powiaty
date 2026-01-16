@@ -1,9 +1,11 @@
 import type { WithAPI } from "src/game2/api";
+import type { GameOptions } from "src/gameOptions";
 
 export type PromptGameStore = PromptGameState & PromptGameActions & WithAPI;
 
 export interface PromptGameState extends PromptScreens {
     type: "prompt";
+    options: GameOptions;
     /** The id of the currently selected screen. */
     currentScreenId: string | "finishScreen";
 }

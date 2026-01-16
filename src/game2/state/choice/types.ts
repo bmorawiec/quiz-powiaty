@@ -1,9 +1,11 @@
 import type { WithAPI } from "src/game2/api";
+import type { GameOptions } from "src/gameOptions";
 
 export type ChoiceGameStore = ChoiceGameState & ChoiceGameActions & WithAPI;
 
 export interface ChoiceGameState extends ChoiceScreens, Buttons {
     type: "choice";
+    options: GameOptions;
     /** The id of the currently selected screen. */
     currentScreenId: string | "finishScreen";
 }

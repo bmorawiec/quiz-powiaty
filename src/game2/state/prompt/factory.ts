@@ -39,6 +39,7 @@ export async function createPromptGameStore(
         const screensAndButtons = createScreens(qsAndAs);
         return {
             type: "prompt",
+            options,
             ...screensAndButtons,
             ...createPromptGameActions(set, get),
             currentScreenId: screensAndButtons.screenIds[0],

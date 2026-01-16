@@ -43,6 +43,7 @@ export async function createChoiceGameStore(
         const screensAndButtons = createScreensAndButtons(qsAndAs);
         return {
             type: "choice",
+            options,
             ...screensAndButtons,
             ...createChoiceGameActions(set, get),
             currentScreenId: screensAndButtons.screenIds[0],

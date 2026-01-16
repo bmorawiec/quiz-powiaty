@@ -38,6 +38,7 @@ export async function createDnDGameStore(
     };
     return createGameStore(apiOptions, (set, get, qsAndAs) => ({
         type: "dnd",
+        options,
         ...createCellsAndCards(qsAndAs),
         ...createDnDGameActions(set, get),
     }));

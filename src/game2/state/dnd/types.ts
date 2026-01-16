@@ -1,9 +1,11 @@
 import type { WithAPI } from "src/game2/api";
+import type { GameOptions } from "src/gameOptions";
 
 export type DnDGameStore = DnDGameState & DnDGameActions & WithAPI;
 
 export interface DnDGameState extends Cells, Cards {
     type: "dnd";
+    options: GameOptions;
     unusedCardIds: string[];
 }
 
