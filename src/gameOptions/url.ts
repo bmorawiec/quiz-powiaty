@@ -36,7 +36,7 @@ const countyTypeFromPolish = flipObject(countyTypeToPolish);
 
 /** Encodes game options into an URL. */
 export function encodeGameURL(options: GameOptions): string {
-    let url = "/graj"
+    let url = "/graj2"
         + "?tryb=" + gameTypeToPolish[options.gameType]
         + "&typ=" + unitTypeToPolish[options.unitType]
         + "&dane=" + guessableToPolish[options.guessFrom]
