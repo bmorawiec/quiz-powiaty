@@ -7,7 +7,7 @@ export interface MaxQuestionsProps {
     onChange: (newOptions: GameOptions) => void;
 }
 
-const sliderValueMap = [10, 15, 20, 30, 40, 50, null];
+const sliderValueMap = [5, 10, 15, 20, 30, 40, 50, null];
 
 export function MaxQuestions({ options, onChange }: MaxQuestionsProps) {
     const [newValue, setNewValue] = useState(options.maxQuestions);
