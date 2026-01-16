@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { voivodeshipIds, type CountyType, type VoivodeshipId } from "src/data/common";
-import { filterNames, type GameOptions } from "src/gameOptions";
+import { areFiltersEmpty, filterNames, type GameOptions } from "src/gameOptions";
 import { ApplyIcon, Button, CloseIcon, Dialog, DialogRoot, FilterIcon } from "src/ui";
 import { FilterGroup } from "./FilterGroup";
 
@@ -28,9 +28,16 @@ export function FilterDialog({ options, onChange, onCancel }: FilterDialogProps)
     };
 
     const handleApplyClick = () => {
+        const wereFiltersEmpty = areFiltersEmpty(options.filters);
+        const filtersEmpty = areFiltersEmpty(newFilters);
         onChange({
             ...options,
             filters: newFilters,
+            maxQuestions: (wereFiltersEmpty && !filtersEmpty)
+                ? null          // disable question limit when filters are first applied
+                : (!wereFiltersEmpty && filtersEmpty)
+                    ? 20        // enable question limit when filters are first removed
+                    : options.maxQuestions,     // don't change limit otherwise
         });
     };
 
