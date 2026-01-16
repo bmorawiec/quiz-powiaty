@@ -16,7 +16,8 @@ export function Guesses({ guesses }: GuessesProps) {
 
     return (
         <div className={clsx("w-full max-w-[700px] rounded-[10px] px-[15px] py-[13px] flex flex-col gap-[5px]",
-            "bg-white border border-gray-20 overflow-y-auto", textTransform)}>
+            "bg-white bg-dark-95 border border-gray-20 dark:bg-white/5 dark:border-none overflow-y-auto",
+            textTransform)}>
             {guesses.map((guess, index) =>
                 <div
                     key={index}
@@ -24,8 +25,8 @@ export function Guesses({ guesses }: GuessesProps) {
                 >
                     {guess.text}
                     {(guess.correct)
-                        ? <ApplyIcon className="size-[14px] text-teal-75"/>
-                        : <CloseIcon className="size-[14px] text-red-70"/>}
+                        ? <ApplyIcon className="size-[14px] text-teal-75 dark:text-teal-60"/>
+                        : <CloseIcon className="size-[14px] text-red-70 dark:text-red-60"/>}
                 </div>
             )}
         </div>

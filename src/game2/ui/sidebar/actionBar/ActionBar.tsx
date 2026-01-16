@@ -65,12 +65,12 @@ export function ActionBar({ onCollapse }: ActionBarProps) {
                 </div>
             </div>
             <div className="px-[25px] py-[15px] grid grid-cols-2 gap-y-[15px] font-[450] tracking-[0.02em] text-[14px]">
-                <p className="text-gray-60">
+                <p className="text-gray-60 dark:text-gray-45">
                     Czas
                 </p>
                 <Timer/>
 
-                <p className="text-gray-60">
+                <p className="text-gray-60 dark:text-gray-45">
                     Aktualny wynik
                 </p>
                 <Result/>

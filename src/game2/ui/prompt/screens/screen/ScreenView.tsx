@@ -25,14 +25,16 @@ export function ScreenView({ screen }: ScreenViewProps) {
 
     return (
         <div className="flex flex-col items-center overflow-hidden">
-            <div className="w-full h-[56px] grid grid-cols-[60px_auto_60px] shrink-0">
+            <div className="w-full h-[56px] grid grid-cols-[60px_auto_60px]">
                 <div/>
-                <h2 className="text-center text-[20px] font-[450] tracking-[0.01em] text-gray-85">
+
+                <h2 className="text-center text-[20px] font-[450] tracking-[0.01em] text-gray-85 dark:text-gray-10">
                     {question.content.text}
                 </h2>
+
                 {question.guessed && (
                     <span className={clsx("mt-[2px] text-[18px] font-[450] tracking-[0.01em] justify-self-end",
-                        (question.points > 0) ? "text-teal-75" : "text-red-60")}>
+                        (question.points > 0) ? "text-teal-75 dark:text-teal-70" : "text-red-60 dark:text-red-55")}>
                         +{question.points}pkt
                     </span>
                 )}
