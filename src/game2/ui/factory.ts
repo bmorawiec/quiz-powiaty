@@ -13,8 +13,8 @@ export async function createGame(
         const { createChoiceGame } = await import("./choice");
         return createChoiceGame(options, callbacks);
     } else if (options.gameType === "dndGame") {
-        const { createChoiceGame } = await import("./choice");
-        return createChoiceGame(options, callbacks);
+        const { createDnDGame } = await import("./dnd");
+        return createDnDGame(options, callbacks);
     } else if (options.gameType === "promptGame") {
         const { createPromptGame } = await import("./prompt");
         return createPromptGame(options, callbacks);
