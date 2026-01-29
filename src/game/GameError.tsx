@@ -1,4 +1,4 @@
-import { CloseIcon, LargeLink, SmallArrowLeftIcon } from "src/ui";
+import { CloseIcon, LargeLink } from "src/ui";
 
 export interface GameErrorProps {
     title: string;
@@ -26,7 +26,6 @@ export function GameError({ title, details }: GameErrorProps) {
                         to="/"
                         error
                         text="Wróć do strony głównej"
-                        icon={SmallArrowLeftIcon}
                         className="mt-[40px] self-start"
                     />
                 </div>

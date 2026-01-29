@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { ComponentType } from "react";
 import { NavLink } from "react-router";
+import type { IconProps } from "./icons";
 
 export interface LargeLinkProps {
     to: string;
@@ -8,8 +9,8 @@ export interface LargeLinkProps {
     primary?: boolean;
     error?: boolean;
     text: string;
-    icon?: ComponentType;
-    iconRight?: ComponentType;
+    icon?: ComponentType<IconProps>;
+    iconRight?: ComponentType<IconProps>;
     className?: string;
 }
 
@@ -26,7 +27,7 @@ export function LargeLink({
     return (
         <NavLink
             to={to}
-            className={clsx("flex items-center justify-center gap-[6px] rounded-[10px]",
+            className={clsx("flex items-center justify-center gap-[6px] rounded-[12px]",
                 "cursor-pointer text-[18px] transition-colors duration-100 focus-ring px-[40px]",
                 (short) ? "h-[50px]" : "h-[60px]",
                 (error)
@@ -40,7 +41,7 @@ export function LargeLink({
                 className)}
         >
             {Icon && (
-                <Icon/>
+                <Icon className="size-[14px]"/>
             )}
 
             <span>
@@ -48,7 +49,7 @@ export function LargeLink({
             </span>
 
             {IconRight && (
-                <IconRight/>
+                <IconRight className="size-[14px]"/>
             )}
         </NavLink>
     );

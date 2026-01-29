@@ -29,11 +29,8 @@ export * from "./RestartIcon";
 export * from "./SelectIcon";
 export * from "./SendIcon";
 export * from "./SidebarIcon";
-export * from "./SmallArrowLeftIcon";
-export * from "./SmallArrowRightIcon";
 export * from "./SpinnerIcon";
 export * from "./StatsIcon";
 export * from "./SwapIcon";
 export * from "./TargetIcon";
 export * from "./WarningIcon";
-

@@ -1,13 +1,14 @@
 import clsx from "clsx";
 import type { ComponentType } from "react";
+import type { IconProps } from "./icons";
 
 export interface LargeButtonProps {
     short?: boolean;
     primary?: boolean;
     error?: boolean;
     text: string;
-    icon?: ComponentType;
-    iconRight?: ComponentType;
+    icon?: ComponentType<IconProps>;
+    iconRight?: ComponentType<IconProps>;
     className?: string;
     onClick?: () => void;
 }
@@ -24,7 +25,7 @@ export function LargeButton({
 }: LargeButtonProps) {
     return (
         <button
-            className={clsx("flex items-center justify-center gap-[6px] rounded-[10px]",
+            className={clsx("flex items-center justify-center gap-[6px] rounded-[12px]",
                 "cursor-pointer text-[18px] transition-colors duration-100 focus-ring px-[40px]",
                 (short) ? "h-[50px]" : "h-[60px]",
                 (error)
@@ -39,7 +40,7 @@ export function LargeButton({
             onClick={onClick}
         >
             {Icon && (
-                <Icon/>
+                <Icon className="size-[14px]"/>
             )}
 
             <span>
@@ -47,7 +48,7 @@ export function LargeButton({
             </span>
 
             {IconRight && (
-                <IconRight/>
+                <IconRight className="size-[14px]"/>
             )}
         </button>
     );

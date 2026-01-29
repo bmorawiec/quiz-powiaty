@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { guessables, unitTypes, type Guessable, type UnitType } from "src/data/common";
 import { encodeGameURL, isGameOptions, validateGameOptions, type GameOptions, type GameType } from "src/gameOptions";
 import {
+    ArrowRightIcon,
     CarIcon,
     COAIcon,
     DiceIcon,
@@ -13,7 +14,6 @@ import {
     LargeDropdown,
     LocationIcon,
     PlaceNameIcon,
-    SmallArrowRightIcon,
     SwapIcon,
     TargetIcon
 } from "src/ui";
@@ -122,7 +122,7 @@ export function ModePicker() {
             <LargeButton
                 primary
                 text="Zacznij grę"
-                iconRight={SmallArrowRightIcon}
+                iconRight={ArrowRightIcon}
                 className={clsx("mt-auto mb-[12px]", isInvalidAnim && "animate-shake")}
                 onClick={handlePlayClick}
             />
