@@ -18,8 +18,8 @@ export function Button({ icon: Icon, text, filled, onClick, className }: ButtonP
                 (filled)
                     ? "bg-teal-70 text-white hover:bg-teal-65 active:bg-teal-75 " +
                         "dark:bg-teal-75 dark:hover:bg-teal-70 dark:active:bg-teal-65"
-                    : "border text-teal-80 hover:bg-gray-10 active:bg-gray-15 " +
-                        "dark:text-teal-55 dark:hover:bg-gray-90 dark:active:bg-gray-85",
+                    : "border text-teal-80 hover:bg-black/5 active:bg-black/10 " +
+                        "dark:text-teal-55 dark:hover:bg-white/5 dark:active:bg-white/10",
                 className)}
             onClick={onClick}
         >

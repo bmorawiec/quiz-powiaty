@@ -13,7 +13,7 @@ export function IconButton({ icon: Icon, className, onClick }: IconButtonProps) 
         <button
             className={clsx("size-[36px] m-[-10px] rounded-[10px] flex items-center justify-center cursor-pointer",
                 "transition-colors duration-[80ms] focus-ring",
-                "hover:bg-black/8 active:bg-black/10 dark:hover:bg-gray-85 dark:active:bg-gray-90", className)}
+                "hover:bg-black/8 active:bg-black/12 dark:hover:bg-white/8 dark:active:bg-white/4", className)}
             onClick={onClick}
         >
             <Icon/>

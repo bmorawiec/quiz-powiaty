@@ -21,8 +21,8 @@ export function Checkbox({ checked, label, onChange }: CheckboxProps) {
                 (checked)
                     ? "bg-teal-70 group-hover:bg-teal-65 group-active:bg-teal-75 " +
                         "bg-teal-75 dark:group-hover:bg-teal-70 dark:group-active:bg-teal-65"
-                    : "border border-gray-80 group-hover:bg-gray-10 group-active:bg-gray-15 " +
-                        "dark:group-hover:bg-gray-95 dark:group-active:bg-gray-90")}>
+                    : "border border-gray-80 group-hover:bg-black/8 group-active:bg-black/12 " +
+                        "dark:group-hover:bg-white/8 dark:group-active:bg-white/12")}>
                 {checked && <ApplyIcon className="size-[10px] text-white"/>}
             </div>
             <span>

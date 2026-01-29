@@ -87,13 +87,13 @@ export function LargeDropdown<TValue extends string>({
                 ref={dropdownRef}
                 role="combobox"
                 aria-expanded={menuOpen}
-                className="w-full h-[46px] border border-gray-20 dark:border-gray-75 rounded-[10px] flex items-center
-                    pl-[9px] pr-[13px] cursor-pointer transition-colors duration-80 focus-ring
-                    hover:border-gray-30 dark:hover:border-gray-65"
+                className="w-full h-[46px] border border-black/13 dark:border-white/20 rounded-[12px] flex items-center
+                    pl-[9px] pr-[13px] cursor-pointer transition-colors duration-20 focus-ring
+                    hover:bg-black/4 active:bg-black/6 dark:hover:bg-white/6 dark:active:bg-white/8"
                 onClick={handleClick}
             >
                 {SelectedIcon && (
-                    <div className="flex items-center justify-center bg-gray-15 dark:bg-gray-80 size-[26px]
+                    <div className="flex items-center justify-center bg-black/10 dark:bg-white/16 size-[26px]
                         rounded-[6px] mr-[4px]">
                         <SelectedIcon className="size-[14px]"/>
                     </div>
