@@ -1,6 +1,7 @@
 import type { Unit } from "src/data/common";
 import type { UnitFilters } from "./types";
 
+/** Returns true if the provided unit matches the specified filters. */
 export function matchesFilters(unit: Unit, filters: UnitFilters): boolean {
     return matchesVoivodeshipFilters(unit, filters) && matchesOtherFilters(unit, filters);
 }

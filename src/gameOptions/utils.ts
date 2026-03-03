@@ -1,6 +1,6 @@
 import { InvalidGameOptionsError, type GameOptions, type GameType } from "./types";
 
-/** Checks if the provided game options are valid. */
+/** Checks if the provided game options are valid (as per the table in ./types.ts) */
 export function validateGameOptions(options: GameOptions): boolean {
     if (options.guessFrom === options.guess) {
         return false;
@@ -18,7 +18,7 @@ export function validateGameOptions(options: GameOptions): boolean {
     return options.gameType !== "mapGame";
 }
 
-/** Returns all valid game types based on the providided guess-guessFrom combo.
+/** Returns all valid game types based on the providided guess-guessFrom combo (as per the table in ./types.ts)
  *  @throws if guessFrom = guess. */
 export function gameTypesFromCombo(options: GameOptions): GameType[] {
     if (options.guessFrom === options.guess) {
