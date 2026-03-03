@@ -13,10 +13,14 @@ export async function createGameStore<StoreWithoutAPI extends object>(
         qsAndAs: Questions & Answers,
     ) => StoreWithoutAPI,
 ) {
+    // generate questions and answers based on units from the API options.
     const questionsAndAnswers = getQuestionsAndAnswers(apiOptions);
+    // preload question and answer images
     await preloadImages(questionsAndAnswers, apiOptions);
 
     return create<StoreWithoutAPI & WithAPI>()((set, get) => {
+        // this function wraps around the normal `set` function from zustand
+        // so that the game API store can only modify the .api field of the game store
         const apiSet = (partial: Partial<GameAPI> | ((state: GameAPI) => Partial<GameAPI>)) => {
             set((game) => ({
                 api: {
@@ -25,10 +29,13 @@ export async function createGameStore<StoreWithoutAPI extends object>(
                 } satisfies GameAPI,
             } as Partial<StoreWithoutAPI & WithAPI>));
         };
+        // this is so that the game API store can only read the state of the .api field of the game store
         const apiGet = () => get().api;
 
         return {
+            // initialize the part of the game store that is controlled by the stores of the individual game mode
             ...initializer(set, get, questionsAndAnswers),
+            // overwrite the .api field with the game API
             api: createGameAPI(apiSet, apiGet, questionsAndAnswers, apiOptions),
         };
     });

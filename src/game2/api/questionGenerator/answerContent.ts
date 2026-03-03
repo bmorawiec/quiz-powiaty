@@ -3,6 +3,7 @@ import type { AnswerContent, GameAPIOptions, TextAnswerContent } from "../types"
 import { TextFormatError } from "./error";
 import { getCOAURL, getFlagURL } from "./images";
 
+/** Returns answer contents to generate answers from. */
 export function getAnswerContents(unit: Unit, apiOptions: GameAPIOptions): AnswerContent[] {
     if (apiOptions.guess === "name") {
         const prefix = (unit.type === "voivodeship")

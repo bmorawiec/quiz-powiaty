@@ -9,8 +9,12 @@ import {
     type Questions,
 } from "./types";
 
+/** If the `preloadAllImages` API options is set, then preloads images for all the questions and their answers.
+ *  Otherwise preloads images for the first two questions and their answers. */
 export async function preloadImages(qsAndAs: Questions & Answers, apiOptions: GameAPIOptions) {
+    // check if there are images to preload
     if (["flag", "coa"].includes(apiOptions.guessFrom) || ["flag", "coa"].includes(apiOptions.guess)) {
+        // all promises are held in this array so that they can be fetched in parallel
         const promises: Promise<void>[] = [];
 
         const questionIds = (apiOptions.preloadAllImages)
@@ -34,11 +38,15 @@ export function getImagePreloadPromises(
     apiOptions: GameAPIOptions,
 ): Promise<void>[] {
     const promises: Promise<void>[] = [];
+
+    // check if this is an image question
     if (apiOptions.guessFrom === "flag" || apiOptions.guessFrom === "coa") {
         if (question.content.type !== "image")
             throw new Error("Expected question content type to be 'image'.");
         promises.push(preloadImage(question.content.url));
     }
+
+    // check if answers to this question are images
     if (apiOptions.guess === "flag" || apiOptions.guessFrom === "coa") {
         for (const answerId of question.answerIds) {
             const answer = answers[answerId];
@@ -48,5 +56,6 @@ export function getImagePreloadPromises(
             promises.push(preloadImage(answer.content.url));
         }
     }
+
     return promises;
 }

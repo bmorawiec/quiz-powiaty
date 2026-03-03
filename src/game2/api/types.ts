@@ -70,8 +70,9 @@ export interface Answers {
 }
 
 export interface GameAPIOptions extends GameAPICallbacks {
-    /** Units to generate questions about. */
+    /** All generated questions will be about units from this array. */
     units: Unit[];
+    /** Incorrect answers will be about units from this array. */
     allUnits: Unit[];
     /** This type of data will be used to generate questions. */
     guessFrom: Guessable;
@@ -87,8 +88,15 @@ export interface GameAPIOptions extends GameAPICallbacks {
      *  Normally only images for the first two questions are preloaded.
      *  @default false */
     preloadAllImages?: boolean;
-    /** @default false */
+    /** If there are multiple correct answers to a question, then they'll be merged into a single one.
+     *  This way there's always a single correct answer to each question.
+     *  @default false */
     squishAnswers?: boolean;
+    /** How many answers should be generated to each question.
+     *  Exception to the rule: If a question has more correct answers than this number (and the answers aren't
+     *  squished), then they will all be included.
+     *  In particular, if this is set to zero, then only the correct answers will be included.
+     *  @default 0 */
     numberOfAnswers?: number;
 }
 
