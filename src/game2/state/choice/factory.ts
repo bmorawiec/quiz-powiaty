@@ -35,8 +35,8 @@ export async function createChoiceGameStore(
         allUnits,
         guessFrom: options.guessFrom,
         guess: options.guess,
-        squishAnswers: true,
-        numberOfAnswers: 6,
+        squishAnswers: true,    // this is so that there's always only a single correct answer
+        numberOfAnswers: 6,     // this is so that there are 6 options to choose from for each question
         ...callbacks,
     };
     return createGameStore(apiOptions, (set, get, qsAndAs) => {
@@ -46,7 +46,7 @@ export async function createChoiceGameStore(
             options,
             ...screensAndButtons,
             ...createChoiceGameActions(set, get),
-            currentScreenId: screensAndButtons.screenIds[0],
+            currentScreenId: screensAndButtons.screenIds[0],    // show first screen
         };
     });
 }
@@ -61,13 +61,14 @@ function createScreensAndButtons(qsAndAs: Questions & Answers): ChoiceScreens & 
         buttonIds: [],
     };
 
+    // add screens for each question
     for (let questionIndex = 0; questionIndex < qsAndAs.questionIds.length; questionIndex++) {
         const questionId = qsAndAs.questionIds[questionIndex];
         const question = qsAndAs.questions[questionId];
         if (!question)
             throw new QuestionNotFoundError(questionId);
 
-        const { buttons, buttonIds } = createButtons(qsAndAs, question);
+        const { buttons, buttonIds } = createButtons(qsAndAs, question);    // get buttons for answers to this question
         result.buttons = { ...result.buttons, ...buttons };
         result.buttonIds.push(...buttonIds);
 
@@ -80,6 +81,7 @@ function createScreensAndButtons(qsAndAs: Questions & Answers): ChoiceScreens & 
         result.screenIds.push(screen.id);
     }
 
+    // add results screen
     const finalScreen: FinalChoiceScreen = {
         id: ulid(),
         final: true,
@@ -97,6 +99,7 @@ function createButtons(qsAndAs: Questions & Answers, question: Question): Button
         buttonIds: [],
     };
 
+    // create a button for each answer to the provided question
     for (const answerId of question.answerIds) {
         const answer = qsAndAs.answers[answerId];
         if (!answer)
@@ -118,13 +121,16 @@ function createChoiceGameActions(
     get: ZustandGetter<ChoiceGameStore>,
 ): ChoiceGameActions {
     function guess(buttonId: string) {
+        if (get().api.state !== "unpaused")
+            throw new Error("This action can only be performed while the game is unpaused.");
+
         const button = get().buttons[buttonId];
         if (!button) throw new ButtonNotFoundError(buttonId);
 
-        const answer = get().api.answers[button.answerId];
+        const answer = get().api.answers[button.answerId];  // get answer corresponding to the clicked button
         if (!answer) throw new AnswerNotFoundError(button.answerId);
 
-        if (answer.correct) {
+        if (answer.correct) {   // verify that it's the correct answer
             get().api.correctGuess(button.answerId);
             nextScreen();
             return "correct";
@@ -135,8 +141,12 @@ function createChoiceGameActions(
     }
 
     /** Proceeds to the next screen.
-     *  Preloads images for the next-next screen, if there are any to load. */
+     *  Preloads images for the next-next screen, if there are any to load.
+     *  @throws when called while the results screen is shown. */
     function nextScreen() {
+        if (get().screenIds.at(-1) == get().currentScreenId)
+            throw new Error("This action cannot be performed when on the final screen.");
+
         const nextNextScreenId = get().screenIds[get().api.numberGuessed + 1];
         if (nextNextScreenId) {
             const nextNextScreen = get().screens[nextNextScreenId];
@@ -152,8 +162,10 @@ function createChoiceGameActions(
         switchScreens(nextScreenId);
     }
 
-
     function switchScreens(screenId: string) {
+        if (get().screenIds.indexOf(screenId) > get().api.numberGuessed)
+            throw new Error("This action cannot be performed until all the questions before this one are answered.");
+
         set({
             currentScreenId: screenId,
         });
