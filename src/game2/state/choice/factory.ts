@@ -9,19 +9,17 @@ import {
     type Questions,
 } from "src/game2/api";
 import { unitsFromOptions, type GameOptions } from "src/gameOptions";
-import type { ZustandGetter, ZustandHook, ZustandSetter } from "src/utils/zustand";
+import type { ZustandHook } from "src/utils/zustand";
 import { ulid } from "ulid";
 import {
-    ButtonNotFoundError,
-    ChoiceScreenNotFoundError,
     type Button,
     type Buttons,
-    type ChoiceGameActions,
     type ChoiceGameStore,
     type ChoiceScreen,
     type ChoiceScreens,
     type FinalChoiceScreen,
 } from "./types";
+import { getPublicActions } from "./actions";
 
 /** Creates a game store based on the provided options.
  *  Assumes that options have been validated. */
@@ -45,7 +43,7 @@ export async function createChoiceGameStore(
             type: "choice",
             options,
             ...screensAndButtons,
-            ...createChoiceGameActions(set, get),
+            ...getPublicActions(set, get),
             currentScreenId: screensAndButtons.screenIds[0],    // show first screen
         };
     });
@@ -114,62 +112,4 @@ function createButtons(qsAndAs: Questions & Answers, question: Question): Button
     }
 
     return result;
-}
-
-function createChoiceGameActions(
-    set: ZustandSetter<ChoiceGameStore>,
-    get: ZustandGetter<ChoiceGameStore>,
-): ChoiceGameActions {
-    function guess(buttonId: string) {
-        if (get().api.state !== "unpaused")
-            throw new Error("This action can only be performed while the game is unpaused.");
-
-        const button = get().buttons[buttonId];
-        if (!button) throw new ButtonNotFoundError(buttonId);
-
-        const answer = get().api.answers[button.answerId];  // get answer corresponding to the clicked button
-        if (!answer) throw new AnswerNotFoundError(button.answerId);
-
-        if (answer.correct) {   // verify that it's the correct answer
-            get().api.correctGuess(button.answerId);
-            nextScreen();
-            return "correct";
-        } else {
-            get().api.incorrectGuess(answer.questionId);
-            return "wrong";
-        }
-    }
-
-    /** Proceeds to the next screen.
-     *  Preloads images for the next-next screen, if there are any to load.
-     *  @throws when called while the results screen is shown. */
-    function nextScreen() {
-        if (get().screenIds.at(-1) == get().currentScreenId)
-            throw new Error("This action cannot be performed when on the final screen.");
-
-        const nextNextScreenId = get().screenIds[get().api.numberGuessed + 1];
-        if (nextNextScreenId) {
-            const nextNextScreen = get().screens[nextNextScreenId];
-            if (!nextNextScreen)
-                throw new ChoiceScreenNotFoundError(nextNextScreenId);
-
-            if (!nextNextScreen.final) {
-                get().api.preloadImages(nextNextScreen.questionId);
-            }
-        }
-
-        const nextScreenId = get().screenIds[get().api.numberGuessed];
-        switchScreens(nextScreenId);
-    }
-
-    function switchScreens(screenId: string) {
-        if (get().screenIds.indexOf(screenId) > get().api.numberGuessed)
-            throw new Error("This action cannot be performed until all the questions before this one are answered.");
-
-        set({
-            currentScreenId: screenId,
-        });
-    }
-
-    return { guess, switchScreens };
 }

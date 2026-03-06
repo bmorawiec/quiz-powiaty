@@ -1,7 +1,7 @@
-import { describe, expect, it } from "vitest";
 import type { GameAPICallbacks } from "src/game2/api";
 import type { GameOptions } from "src/gameOptions";
 import type { ZustandHook } from "src/utils/zustand";
+import { describe, expect, it } from "vitest";
 import { createChoiceGameStore } from "./factory";
 import { ChoiceScreenNotFoundError, type ChoiceGameStore } from "./types";
 
