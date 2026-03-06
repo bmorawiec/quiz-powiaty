@@ -19,6 +19,7 @@ import {
     type Cells,
     type DnDGameStore,
 } from "./types";
+import { toShuffled } from "src/utils/random";
 
 export async function createDnDGameStore(
     options: GameOptions,
@@ -60,7 +61,7 @@ function createCellsAndCards(qsAndAs: Questions & Answers): Cells & Cards & { un
 
         const cellId = ulid();
 
-        const { cards, cardIds } = createCards(qsAndAs, question, cellId);
+        const { cards, cardIds } = createCards(qsAndAs, question);
         result.cards = { ...result.cards, ...cards };
         result.cardIds.push(...cardIds);
         result.unusedCardIds.push(...cardIds);
@@ -74,10 +75,12 @@ function createCellsAndCards(qsAndAs: Questions & Answers): Cells & Cards & { un
         result.cellIds.push(cellId);
     }
 
+    result.unusedCardIds = toShuffled(result.unusedCardIds);    // randomize order in which cards appear on the sidebar
+
     return result;
 }
 
-function createCards(qsAndAs: Questions & Answers, question: Question, cellId: string): Cards {
+function createCards(qsAndAs: Questions & Answers, question: Question): Cards {
     const result: Cards = {
         cards: {},
         cardIds: [],
@@ -91,7 +94,7 @@ function createCards(qsAndAs: Questions & Answers, question: Question, cellId: s
         const card: Card = {
             id: ulid(),
             answerId,
-            cellId,
+            cellId: null,
             slotIndex: -1,
             status: null,
         };
