@@ -156,7 +156,7 @@ export function createAllActions(set: ZustandSetter<DnDGameStore>, get: ZustandG
         });
     }
 
-    /** Inserts the specified card from the list of unused cards displayed in the sidebar.
+    /** Removes the specified card from the list of unused cards displayed in the sidebar.
      *  Does not update the state of the specified card. */
     function removeCardFromSidebar(cardId: string) {
         set((game) => ({
