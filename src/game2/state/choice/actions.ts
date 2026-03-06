@@ -33,7 +33,7 @@ export function createAllActions(set: ZustandSetter<ChoiceGameStore>, get: Zusta
      *  Preloads images for the next-next screen, if there are any to load.
      *  @throws when called while the results screen is shown. */
     function nextScreen() {
-        if (get().screenIds.at(-1) == get().currentScreenId)
+        if (get().currentScreenId === get().screenIds.at(-1))
             throw new Error("This action cannot be performed when on the final screen.");
 
         const nextNextScreenId = get().screenIds[get().api.numberGuessed + 1];
