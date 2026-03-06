@@ -12,7 +12,8 @@ export interface PromptGameState extends PromptScreens {
 
 export interface PromptGameActions {
     /** Verifies a text answer provided by the player.
-     *  @returns a tuple containing the result of this guess and a hint. */
+     *  @returns a tuple containing the result of this guess and a hint.
+     *  @throws if the game is paused or finished. */
     guess(text: string): ["correct" | "alreadyGuessed" | "wrong", string | null];
 
     /** Changes the currently selected screen. */

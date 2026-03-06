@@ -5,6 +5,9 @@ import { PromptScreenNotFoundError, type PromptGameActions, type PromptGameStore
 /** Returns all actions used by this game store. */
 export function createAllActions(set: ZustandSetter<PromptGameStore>, get: ZustandGetter<PromptGameStore>) {
     function guess(text: string): ["correct" | "alreadyGuessed" | "wrong", string | null] {
+        if (get().api.state !== "unpaused")
+            throw new Error("Cannot perform this action while the game is paused or finished.");
+
         const currentScreenId = get().currentScreenId;
         const currentScreen = get().screens[currentScreenId];
         if (!currentScreen)
@@ -58,7 +61,7 @@ export function createAllActions(set: ZustandSetter<PromptGameStore>, get: Zusta
         if (!currentScreen)
             throw new PromptScreenNotFoundError(currentScreenId);
         if (currentScreen.final)
-            throw new Error("Cannot record a guess on a final screen.");
+            throw new Error("Cannot record a guess on the final screen.");
 
         set((game) => ({
             screens: {
@@ -77,6 +80,9 @@ export function createAllActions(set: ZustandSetter<PromptGameStore>, get: Zusta
     /** Proceeds to the next screen.
      *  Preloads images for the next-next screen, if there are any to load. */
     function nextScreen() {
+        if (get().currentScreenId === get().screenIds.at(-1))
+            throw new Error("This action cannot be performed when on the final screen.");
+
         const nextNextScreenId = get().screenIds[get().api.numberGuessed + 1];
         if (nextNextScreenId) {
             const nextNextScreen = get().screens[nextNextScreenId];
@@ -93,6 +99,9 @@ export function createAllActions(set: ZustandSetter<PromptGameStore>, get: Zusta
     }
 
     function switchScreens(screenId: string) {
+        if (get().screenIds.indexOf(screenId) > get().api.numberGuessed)
+            throw new Error("This action cannot be performed until all the questions before this one are answered.");
+
         set({
             currentScreenId: screenId,
         });
