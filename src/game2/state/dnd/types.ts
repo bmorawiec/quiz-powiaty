@@ -10,7 +10,7 @@ export interface DnDGameState extends Cells, Cards {
 }
 
 export interface DnDGameActions {
-    verify(buttonId: string): void;
+    verify(): void;
     moveCardToSlot(cardId: string, questionId: string, slotIndex: number): void;
     moveCardToSidebar(cardId: string, beforeIndex?: number): void;
 }
