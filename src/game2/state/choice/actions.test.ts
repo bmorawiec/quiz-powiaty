@@ -34,7 +34,7 @@ function reachQuestionAtIndex(store: ZustandHook<ChoiceGameStore>, targetIndex: 
             throw new ChoiceScreenNotFoundError(currentScreenId);
 
         if (currentScreen.final)
-            throw new Error("Somehow reached the end screen.");
+            throw new Error("Loop should have terminated before this screen was reached.");
 
         for (const buttonId of currentScreen.buttonIds) {
             if (store.getState().guess(buttonId) === "correct") {
