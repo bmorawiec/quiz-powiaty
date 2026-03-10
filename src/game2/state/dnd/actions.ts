@@ -1,4 +1,4 @@
-import { AnswerNotFoundError } from "src/game2/api";
+import { AnswerNotFoundError, QuestionNotFoundError } from "src/game2/api";
 import type { ZustandGetter, ZustandSetter } from "src/utils/zustand";
 import {
     CardNotFoundError,
@@ -21,7 +21,14 @@ export function createAllActions(set: ZustandSetter<DnDGameStore>, get: ZustandG
         const cell = get().cells[cellId];
         if (!cell) throw new CellNotFoundError(cellId);
 
+        const question = get().api.questions[cell.questionId];
+        if (!question) throw new QuestionNotFoundError(cell.questionId);
+
+        // this means that all cards placed in this cell have already been verified
+        if (question.guessed) return;
+
         let anyWrongCards = false;
+        // verify all cards + check if any come back as wrong
         for (const cardId of cell.cardSlots) {
             if (cardId) {
                 const status = verifyCard(cell, cardId);
@@ -32,13 +39,17 @@ export function createAllActions(set: ZustandSetter<DnDGameStore>, get: ZustandG
         }
 
         if (anyWrongCards) {
-            get().api.incorrectGuess(cell.questionId);
+            get().api.incorrectGuess(cell.questionId);  // report incorrect guess
         }
     }
 
     function verifyCard(cell: Cell, cardId: string): "correct" | "wrong" {
         const card = get().cards[cardId];
         if (!card) throw new CardNotFoundError(cardId);
+
+        if (card.status === "correct") {
+            return "correct";   // this card has already been verified
+        }
 
         const answer = get().api.answers[card.answerId];
         if (!answer) throw new AnswerNotFoundError(card.answerId);
@@ -54,6 +65,10 @@ export function createAllActions(set: ZustandSetter<DnDGameStore>, get: ZustandG
                 [cardId]: newCard,
             },
         }));
+
+        if (newStatus === "correct") {
+            get().api.correctGuess(card.answerId);  // report correct guess
+        }
 
         return newStatus;
     }
