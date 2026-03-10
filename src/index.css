@@ -182,3 +182,19 @@ body {
 @utility scrollbar-hidden {
     scrollbar-width: none;
 }
+
+@utility scrollbar-color {
+    --scrollbar-thumb-color: white;
+    --scrollbar-track-color: white;
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+@utility thumb-color-* {
+    --scrollbar-thumb-color: --value([color]);
+    --scrollbar-thumb-color: --value(--color-*);
+}
+
+@utility track-color-* {
+    --scrollbar-track-color: --value([color]);
+    --scrollbar-track-color: --value(--color-*);
+}
