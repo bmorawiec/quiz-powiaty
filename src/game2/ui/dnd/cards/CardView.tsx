@@ -1,0 +1,129 @@
+import clsx from "clsx";
+import { useContext, useState } from "react";
+import { CardNotFoundError } from "src/game/dnd";
+import { DnDGameStoreContext } from "../hook";
+import { AnswerNotFoundError } from "src/game2/api";
+import { ApplyIcon, CloseIcon, DragHandleIcon } from "src/ui";
+
+export interface CardViewProps {
+    cardId: string;
+    /** If this card is rendered in the sidebar, then this should be set to its index in the list of cards
+     *  shown. */
+    indexInSidebar?: number;
+}
+
+/** Renders a card.
+ *  Cards can be dragged & dropped over this card. Dragged cards will swap places with this card. */
+export function CardView({ cardId, indexInSidebar }: CardViewProps) {
+    const useDnDGameStore = useContext(DnDGameStoreContext);
+
+    const card = useDnDGameStore((game) => game.cards[cardId]);
+    if (!card) throw new CardNotFoundError(cardId);
+
+    const answer = useDnDGameStore((game) => game.api.answers[card.answerId]);
+    if (!answer) throw new AnswerNotFoundError(card.answerId);
+
+    if (answer.content.type === "feature")  // a card can only display text or an image
+        throw new Error("This component does not support displaying this type of content.");
+
+    // true if this card is currently being dragged
+    const [beingDragged, setBeingDragged] = useState(false);
+
+    const handleDragStart = (event: React.DragEvent) => {
+        event.dataTransfer.clearData();
+        if (answer.content.type === "text") {
+            // this is so that you can drop the card into a text area
+            event.dataTransfer.setData("text/plain", answer.content.shortText);
+        }
+        event.dataTransfer.setData("QuizPowiaty.cardId", cardId);
+        setBeingDragged(true);
+    };
+
+    // true if this card is hovered while another card is being dragged
+    const [dragHover, setDragHover] = useState(false);
+
+    const handleDragOver = (event: React.DragEvent) => {
+        setDragHover(true);
+        event.stopPropagation();
+        event.preventDefault();
+    };
+
+    const handleDragLeave = (event: React.DragEvent) => {
+        if (event.target === event.currentTarget) {     // ensure focus left the card element, not a child element
+            setDragHover(false);
+        }
+    };
+
+    const handleDragEnd = () => {
+        setBeingDragged(false);
+    };
+
+    const moveCardToSlot = useDnDGameStore((game) => game.moveCardToSlot);
+    const moveCardToSidebar = useDnDGameStore((game) => game.moveCardToSidebar);
+    const handleDrop = (event: React.DragEvent) => {
+        event.stopPropagation();
+
+        setDragHover(false);
+
+        const draggedCardId = event.dataTransfer.getData("QuizPowiaty.cardId");
+
+        // check if data with this key exists
+        // (an empty string would be returned if it didn't exist)
+        if (draggedCardId !== "") {
+            if (card.cellId) {  // this card is in a cell slot
+                // swap dragged card with this one
+                moveCardToSlot(draggedCardId, card.cellId, card.slotIndex);
+            } else {    // this card is in the sidebar
+                // swap dragged card with this one by putting it in the sidebar
+                moveCardToSidebar(draggedCardId, indexInSidebar);
+            }
+        }
+    };
+
+    const Icon = card.status && ((card.status === "correct") ? ApplyIcon : CloseIcon);
+
+    return (
+        <div
+            draggable
+            className={clsx("border rounded-[10px] cursor-move pl-[10px] pt-[7px] pb-[8px] text-[14px] shrink-0",
+                "transition-colors duration-40 cursor-move flex items-center gap-[5px]",
+                "border-gray-20 dark:border-gray-75",
+                (answer.content.type === "image") ? "h-[150px]" : "h-[40px]",
+                (beingDragged)
+                    ? "opacity-60"
+                    : (dragHover)
+                        ? "bg-gray-5 dark:bg-gray-85"
+                        : "bg-white dark:bg-gray-90 hover:bg-gray-5 dark:hover:bg-gray-85",
+                (card.status) ? "pr-[12px]" : "pr-[31px]",
+                card.status && (
+                    (card.status === "correct")
+                        ? "text-teal-80 dark:text-teal-40"
+                        : "text-red-60 dark:text-red-30"
+                ))}
+            onDragStart={handleDragStart}
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDragEnd={handleDragEnd}
+            onDrop={handleDrop}
+        >
+            <DragHandleIcon
+                className="size-[10px] text-gray-60 shrink-0"
+            />
+
+            {(answer.content.type === "text") ? (
+                answer.content.text
+            ) : (
+                <div
+                    className="size-full bg-contain bg-center bg-no-repeat"
+                    style={{
+                        backgroundImage: `url(${answer.content.url})`,
+                    }}
+                />
+            )}
+
+            {Icon && (
+                <Icon className="size-[14px] shrink-0"/>
+            )}
+        </div>
+    );
+}
