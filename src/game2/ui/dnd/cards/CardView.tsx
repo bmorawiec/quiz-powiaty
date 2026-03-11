@@ -42,16 +42,18 @@ export function CardView({ cardId, indexInSidebar }: CardViewProps) {
     // true if this card is hovered while another card is being dragged
     const [dragHover, setDragHover] = useState(false);
 
+    const handleDragEnter = (event: React.DragEvent) => {
+        event.stopPropagation();
+    };
+
     const handleDragOver = (event: React.DragEvent) => {
         setDragHover(true);
-        event.stopPropagation();
         event.preventDefault();
     };
 
     const handleDragLeave = (event: React.DragEvent) => {
-        if (event.target === event.currentTarget) {     // ensure focus left the card element, not a child element
-            setDragHover(false);
-        }
+        event.stopPropagation();
+        setDragHover(false);
     };
 
     const handleDragEnd = () => {
@@ -84,46 +86,51 @@ export function CardView({ cardId, indexInSidebar }: CardViewProps) {
 
     return (
         <div
+            className={clsx(card.cellId === null && "px-[20px] py-[5px]")}
             draggable
-            className={clsx("border rounded-[10px] cursor-move pl-[10px] pt-[7px] pb-[8px] text-[14px] shrink-0",
-                "transition-colors duration-40 cursor-move flex items-center gap-[5px]",
-                "border-gray-20 dark:border-gray-75",
-                (answer.content.type === "image") ? "h-[150px]" : "h-[40px]",
-                (beingDragged)
-                    ? "opacity-60"
-                    : (dragHover)
-                        ? "bg-gray-5 dark:bg-gray-85"
-                        : "bg-white dark:bg-gray-90 hover:bg-gray-5 dark:hover:bg-gray-85",
-                (card.status) ? "pr-[12px]" : "pr-[31px]",
-                card.status && (
-                    (card.status === "correct")
-                        ? "text-teal-80 dark:text-teal-40"
-                        : "text-red-60 dark:text-red-30"
-                ))}
             onDragStart={handleDragStart}
+            onDragEnter={handleDragEnter}
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDragEnd={handleDragEnd}
             onDrop={handleDrop}
         >
-            <DragHandleIcon
-                className="size-[10px] text-gray-60 shrink-0"
-            />
-
-            {(answer.content.type === "text") ? (
-                answer.content.text
-            ) : (
-                <div
-                    className="size-full bg-contain bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${answer.content.url})`,
-                    }}
+            <div
+                className={clsx("border rounded-[10px] cursor-move pl-[10px] pt-[7px] pb-[8px] text-[14px] shrink-0",
+                    "transition-colors duration-40 cursor-move flex items-center gap-[5px]",
+                    "border-gray-20 dark:border-gray-75",
+                    (answer.content.type === "image") ? "h-[150px]" : "h-[40px]",
+                    (beingDragged)
+                        ? "opacity-60"
+                        : (dragHover)
+                            ? "bg-gray-5 dark:bg-gray-85"
+                            : "bg-white dark:bg-gray-90 hover:bg-gray-5 dark:hover:bg-gray-85",
+                    (card.status) ? "pr-[12px]" : "pr-[31px]",
+                    card.status && (
+                        (card.status === "correct")
+                            ? "text-teal-80 dark:text-teal-40"
+                            : "text-red-60 dark:text-red-30"
+                    ))}
+            >
+                <DragHandleIcon
+                    className="size-[10px] text-gray-60 shrink-0"
                 />
-            )}
 
-            {Icon && (
-                <Icon className="size-[14px] shrink-0"/>
-            )}
+                {(answer.content.type === "text") ? (
+                    answer.content.text
+                ) : (
+                    <div
+                        className="size-full bg-contain bg-center bg-no-repeat"
+                        style={{
+                            backgroundImage: `url(${answer.content.url})`,
+                        }}
+                    />
+                )}
+
+                {Icon && (
+                    <Icon className="size-[14px] shrink-0"/>
+                )}
+            </div>
         </div>
     );
 }
