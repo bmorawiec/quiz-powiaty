@@ -12,6 +12,9 @@ import {
 /** Returns all actions used by this game store. */
 export function createAllActions(set: ZustandSetter<DnDGameStore>, get: ZustandGetter<DnDGameStore>) {
     function verify() {
+        if (get().api.state !== "unpaused")
+            throw new Error("Cannot perform this action while the game is paused or finished.");
+
         for (const cellId of get().cellIds) {
             verifyCell(cellId);
         }
@@ -90,6 +93,9 @@ export function createAllActions(set: ZustandSetter<DnDGameStore>, get: ZustandG
     }
 
     function moveCardToSlot(movedCardId: string, targetCellId: string, targetSlotIndex: number) {
+        if (get().api.state !== "unpaused")
+            throw new Error("Cannot perform this action while the game is paused or finished.");
+
         const targetCell = get().cells[targetCellId];
         if (!targetCell)
             throw new CellNotFoundError(targetCellId);
@@ -134,6 +140,9 @@ export function createAllActions(set: ZustandSetter<DnDGameStore>, get: ZustandG
     }
 
     function moveCardToSidebar(cardId: string, beforeIndex?: number) {
+        if (get().api.state !== "unpaused")
+            throw new Error("Cannot perform this action while the game is paused or finished.");
+
         const game = get();
 
         const movedCard = game.cards[cardId];
