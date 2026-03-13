@@ -15,10 +15,10 @@ export interface DnDGameActions {
      *  Updates the status of correctly placed cards. Finishes the game when all cards have been placed correctly.
      *  @throws if the game is paused or finished. */
     verify(): void;
-    moveCardToSlot(cardId: string, questionId: string, slotIndex: number): void;
     /** Moves the specified card into a slot.
      *  If the target slot already has a card in it, then the cards will be swapped.
      *  @throws if the game is paused or finished. */
+    moveCardToSlot(cardId: string, cellId: string, slotIndex: number): void;
     /** Moves the specified card into the sidebar, placing it before the specified index.
      *  If the index is not specified, then the card is placed last.
      *  @throws if the game is paused or finished. */
