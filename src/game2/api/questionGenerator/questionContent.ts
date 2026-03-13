@@ -37,22 +37,27 @@ function getQuestionText(unit: Unit, apiOptions: GameAPIOptions) {
         if (guessFrom === "map") {
             str += (unit.type === "voivodeship") ? "to województwo" : "ten powiat";
         } else {
-            str += (unit.type === "voivodeship")
-                ? "województwo "
-                : (unit.countyType === "city") ? "miasto " : "powiat ";
-            if (guessFrom === "name") {
-                str += getUnambiguousName(unit);
-            } else if (guessFrom === "capital") {
-                str += (unit.capitals.length > 1) ? "ze stolicami w miastach " : "ze stolicą w mieście ";
-                str += unit.capitals.join(", ");
-            } else if (guessFrom === "plate") {
-                str += "z rejestracjami " + unit.plates.join(", ");
-            } else if (guessFrom === "flag") {
-                str += "z tą flagą";
-            } else if (guessFrom === "coa") {
-                str += "z tym herbem";
+            if (guessFrom === "capital" && unit.countyType === "city") {
+                str += "miasto ";
+                str += unit.name;
             } else {
-                throw new TextFormatError();
+                str += (unit.type === "voivodeship")
+                    ? "województwo "
+                    : (unit.countyType === "city") ? "miasto " : "powiat ";
+                if (guessFrom === "name") {
+                    str += getUnambiguousName(unit);
+                } else if (guessFrom === "capital") {
+                    str += (unit.capitals.length > 1) ? "ze stolicami w miastach " : "ze stolicą w mieście ";
+                    str += unit.capitals.join(", ");
+                } else if (guessFrom === "plate") {
+                    str += "z rejestracjami " + unit.plates.join(", ");
+                } else if (guessFrom === "flag") {
+                    str += "z tą flagą";
+                } else if (guessFrom === "coa") {
+                    str += "z tym herbem";
+                } else {
+                    throw new TextFormatError();
+                }
             }
         }
         if (guess !== "map") {
