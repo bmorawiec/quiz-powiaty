@@ -87,7 +87,7 @@ export function CardView({ cardId, indexInSidebar }: CardViewProps) {
     return (
         <div
             className={clsx(card.cellId === null && "px-[20px] py-[5px]")}
-            draggable
+            draggable={card.status !== "correct"}
             onDragStart={handleDragStart}
             onDragEnter={handleDragEnter}
             onDragOver={handleDragOver}
