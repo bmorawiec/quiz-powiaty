@@ -100,14 +100,16 @@ export function createAllActions(set: ZustandSetter<DnDGameStore>, get: ZustandG
         if (!targetCell)
             throw new CellNotFoundError(targetCellId);
 
+        const movedCard = get().cards[movedCardId];
+        if (!movedCard)
+            throw new CardNotFoundError(movedCardId);
+        if (movedCard.status === "correct")
+            throw new Error("Cards that have been verified cannot be moved.");
+
         const cardIdInTargetSlot = targetCell.cardSlots[targetSlotIndex];
         if (cardIdInTargetSlot === movedCardId) {
             return;
         }
-
-        const movedCard = get().cards[movedCardId];
-        if (!movedCard)
-            throw new CardNotFoundError(movedCardId);
 
         if (movedCard.cellId) {      // moved card is in a slot
             if (cardIdInTargetSlot) {       // target slot has a card in it
@@ -148,6 +150,8 @@ export function createAllActions(set: ZustandSetter<DnDGameStore>, get: ZustandG
         const movedCard = game.cards[cardId];
         if (!movedCard)
             throw new CardNotFoundError(cardId);
+        if (movedCard.status === "correct")
+            throw new Error("Cards that have been verified cannot be moved.");
 
         if (movedCard.cellId) {     // card is currently in a slot
             // empty the slot that the card is currently in
