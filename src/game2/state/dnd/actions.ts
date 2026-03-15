@@ -111,6 +111,14 @@ export function createAllActions(set: ZustandSetter<DnDGameStore>, get: ZustandG
             return;
         }
 
+        if (cardIdInTargetSlot) {
+            const cardInTargetSlot = get().cards[cardIdInTargetSlot];
+            if (!cardInTargetSlot)
+                throw new CardNotFoundError(cardIdInTargetSlot);
+            if (cardInTargetSlot.status === "correct")
+                throw new Error("Cannot swap this card with a card that has been verified.");
+        }
+
         if (movedCard.cellId) {      // moved card is in a slot
             if (cardIdInTargetSlot) {       // target slot has a card in it
                 // move the card that's currently in the target slot
