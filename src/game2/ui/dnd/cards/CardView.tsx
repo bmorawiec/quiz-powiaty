@@ -67,17 +67,20 @@ export function CardView({ cardId, indexInSidebar }: CardViewProps) {
 
         setDragHover(false);
 
-        const draggedCardId = event.dataTransfer.getData("QuizPowiaty.cardId");
+        // swapping with verified cards is not allowed
+        if (card.status !== "correct") {
+            const draggedCardId = event.dataTransfer.getData("QuizPowiaty.cardId");
 
-        // check if data with this key exists
-        // (an empty string would be returned if it didn't exist)
-        if (draggedCardId !== "") {
-            if (card.cellId) {  // this card is in a cell slot
-                // swap dragged card with this one
-                moveCardToSlot(draggedCardId, card.cellId, card.slotIndex);
-            } else {    // this card is in the sidebar
-                // swap dragged card with this one by putting it in the sidebar
-                moveCardToSidebar(draggedCardId, indexInSidebar);
+            // check if data with this key exists
+            // (an empty string would be returned if it didn't exist)
+            if (draggedCardId !== "") {
+                if (card.cellId) {  // this card is in a cell slot
+                    // swap dragged card with this one
+                    moveCardToSlot(draggedCardId, card.cellId, card.slotIndex);
+                } else {    // this card is in the sidebar
+                    // swap dragged card with this one by putting it in the sidebar
+                    moveCardToSidebar(draggedCardId, indexInSidebar);
+                }
             }
         }
     };
@@ -87,7 +90,7 @@ export function CardView({ cardId, indexInSidebar }: CardViewProps) {
     return (
         <div
             className={clsx(card.cellId === null && "px-[20px] py-[5px]")}
-            draggable={card.status !== "correct"}
+            draggable={card.status !== "correct"}   // dragging verified cards is not allowed
             onDragStart={handleDragStart}
             onDragEnter={handleDragEnter}
             onDragOver={handleDragOver}
