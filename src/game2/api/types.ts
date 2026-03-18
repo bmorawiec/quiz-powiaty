@@ -54,6 +54,7 @@ export interface GameAPIActions {
      *  @throws if the game has been paused or if it has finished */
     incorrectGuess(questionId: string): string;
 
+    /** Preloads images for the question and its answers (if there are any). */
     preloadImages(questionId: string): Promise<void>;
 }
 
@@ -81,7 +82,8 @@ export interface GameAPIOptions extends GameAPICallbacks {
     /** Provide hints as a result of a call to the `incorrectGuess` action.
      *  @default false */
     provideHints?: boolean;
-    /** Sort the questionIds field, so that questions appear in alphabetical order.
+    /** Sort the questions, so that they appear in alphabetical order.
+     *  Applies only if the questions contain text. Otherwise this option does nothing.
      *  @default false */
     sortQuestions?: boolean;
     /** Causes the API to preload all question and answer images.
@@ -145,21 +147,35 @@ export type QuestionContent = TextQuestionContent | ImageQuestionContent | Featu
 
 export interface TextQuestionContent {
     type: "text";
+    /** Text that the player should guess based on, in the form of a question.
+     *  For example this could be
+     *  "Jakie rejestracje ma województwo podkarpackie?"
+     *  ("What are the registration plates for the podkarpackie voivodeship?")
+     *  when guessing registration plates from voivodeship names. */
     text: string;
+    /** Text that the player should guess based on.
+     *  For example this could be "województwo podkarpackie" ("podkarpackie voivodeship")
+     *  when guessing registration *  plates from voivodeship names */
     shortText: string;
 }
 
 export interface ImageQuestionContent {
     type: "image";
+    /** Text that the player should guess based on, in the form of a question.
+     *  For example this could be "Jak się nazywa powiat z tą flagą?" ("What is the name of a county with this flag?")
+     *  when guessing county names from flags. */
     text: string;
-    shortText: string;
+    /** URL of the image to be shown when this question is presented. */
     url: string;
 }
 
 export interface FeatureQuestionContent {
     type: "feature";
+    /** Text that the player should guess based on, in the form of a question.
+     *  For example this could be "Jak się nazywa ten powiat?" ("What is the name of this county?")
+     *  when guessing county names based on their location on the map. */
     text: string;
-    shortText: string;
+    /** Id of the unit this question is about. */
     unitId: string;
 }
 
@@ -167,17 +183,25 @@ export type AnswerContent = TextAnswerContent | ImageAnswerContent | FeatureAnsw
 
 export interface TextAnswerContent {
     type: "text";
+    /** Text that the player should guess.
+     *  For example this could be "województwo podkarpackie" ("podkarpackie voivodeship")
+     *  when guessing voivodeship names. */
     text: string;
+    /** A short version of the text that the player should guess.
+     *  For example this could be "podkarpackie" when guessing voivodeship names.
+     *  Same as `text` when guessing registration plates or capitals. */
     shortText: string;
 }
 
 export interface ImageAnswerContent {
     type: "image";
+    /** URL of the image to be shown when this answer is presented. */
     url: string;
 }
 
 export interface FeatureAnswerContent {
     type: "feature";
+    /** Id of the unit this answer is about. */
     unitId: string;
 }
 

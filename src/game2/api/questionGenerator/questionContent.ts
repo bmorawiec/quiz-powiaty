@@ -85,6 +85,8 @@ function getShortQuestionText(unit: Unit, apiOptions: GameAPIOptions): string {
     throw new TextFormatError();
 }
 
+/** Returns an URL to a flag or coat of arms of the provided unit,
+ *  based on what the questions in this game are about. */
 function getQuestionImageURL(unit: Unit, apiOptions: GameAPIOptions): string {
     if (apiOptions.guessFrom === "flag") {
         return getFlagURL(unit);
@@ -94,29 +96,26 @@ function getQuestionImageURL(unit: Unit, apiOptions: GameAPIOptions): string {
     throw new TextFormatError();
 }
 
+/** Returns the appropriate question content based on game API options and the unit the question is about. */
 export function getQuestionContent(unit: Unit, apiOptions: GameAPIOptions): QuestionContent {
-    const common = {
-        text: getQuestionText(unit, apiOptions),
-        shortText: getShortQuestionText(unit, apiOptions),
-    };
     if (["name", "capital", "plate"].includes(apiOptions.guessFrom)) {
         return {
             type: "text",
-            ...common,
+            text: getQuestionText(unit, apiOptions),
+            shortText: getShortQuestionText(unit, apiOptions),
         };
     } else if (["flag", "coa"].includes(apiOptions.guessFrom)) {
         return {
             type: "image",
-            ...common,
+            text: getQuestionText(unit, apiOptions),
             url: getQuestionImageURL(unit, apiOptions),
         };
     } else if (apiOptions.guessFrom === "map") {
         return {
             type: "feature",
-            ...common,
+            text: getQuestionText(unit, apiOptions),
             unitId: unit.id,
         };
-    } else {
-        throw new Error("Unknown value for `apiOptions.guessFrom`.");
     }
+    throw new TextFormatError();
 }

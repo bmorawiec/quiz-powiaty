@@ -10,6 +10,7 @@ import {
     type Question,
     type Questions,
     type TextAnswerContent,
+    type TextQuestionContent,
 } from "../types";
 import { getAnswerContents, squishTextAnswerContent } from "./answerContent";
 import { getQuestionContent } from "./questionContent";
@@ -46,7 +47,9 @@ export function getQuestionsAndAnswers(apiOptions: GameAPIOptions): Questions & 
         result.questions[questionId] = question;
     }
 
-    if (apiOptions.sortQuestions) {     // sort questions alphabetically if specified in the options
+    // sort questions alphabetically if specified in the options
+    // and the questions can be sorted (question content must be of type "text").
+    if (["name", "capital", "plate"].includes(apiOptions.guessFrom) && apiOptions.sortQuestions) {
         result.questionIds.sort((idA, idB) => {     // potential source of confusion: this is an in-place sort
             const questionA = result.questions[idA];
             if (!questionA) throw new QuestionNotFoundError(idA);
@@ -54,7 +57,8 @@ export function getQuestionsAndAnswers(apiOptions: GameAPIOptions): Questions & 
             const questionB = result.questions[idB];
             if (!questionB) throw new QuestionNotFoundError(idB);
 
-            return questionA.content.shortText.localeCompare(questionB.content.shortText);
+            return (questionA.content as TextQuestionContent).shortText
+                .localeCompare((questionB.content as TextQuestionContent).shortText);
         });
     }
     return result;

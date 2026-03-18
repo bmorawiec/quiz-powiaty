@@ -16,7 +16,10 @@ export function CellView({ cellId }: CellViewProps) {
     if (!cell) throw new CellNotFoundError(cellId);
 
     const question = useDnDGameStore((game) => game.api.questions[cell.questionId]);
-    if (!question) throw new QuestionNotFoundError(cell.questionId);
+    if (!question)
+        throw new QuestionNotFoundError(cell.questionId);
+    if (question.content.type !== "text")
+        throw new Error("Unexpected question content type: " + question.content.type);
 
     return (
         <div className="bg-white dark:bg-gray-90 rounded-[15px] p-[10px] grid grid-cols-2">
