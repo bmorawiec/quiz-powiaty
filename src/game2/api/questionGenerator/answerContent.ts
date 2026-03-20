@@ -3,7 +3,7 @@ import type { AnswerContent, GameAPIOptions, TextAnswerContent } from "../types"
 import { TextFormatError } from "./error";
 import { getCOAURL, getFlagURL } from "./images";
 
-/** Returns answer contents to generate answers from. */
+/** Returns an array of correct answer content objects for the provided unit. */
 export function getAnswerContents(unit: Unit, apiOptions: GameAPIOptions): AnswerContent[] {
     if (apiOptions.guess === "name") {
         const prefix = (unit.type === "voivodeship")
@@ -40,6 +40,8 @@ export function getAnswerContents(unit: Unit, apiOptions: GameAPIOptions): Answe
     throw new TextFormatError();
 }
 
+/** Condenses all the provided answer content objects into a single answer content object.
+ *  The text stored in the object will consist of strings stored in the provided objects, separated by commas. */
 export function squishTextAnswerContent(contentList: TextAnswerContent[]): TextAnswerContent {
     const textList: string[] = [];
     const shortTextList: string[] = [];
