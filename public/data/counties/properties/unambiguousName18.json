@@ -1,0 +1,177 @@
+{
+    "01KSF5C505K2VFZXNV3NKVCKQV": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat bieszczadzki"
+    },
+    "01KSF5C505CMCAHRMEM63M7F79": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat brzozowski"
+    },
+    "01KSF5C50672J7EYJF6N1RX4CZ": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat dębicki"
+    },
+    "01KSF5C507FDRSXW35EZYTA2YK": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat jarosławski"
+    },
+    "01KSF5C5077CEWR7JHPXEQAQ58": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat jasielski"
+    },
+    "01KSF5C508YGDGJXEKYSF96C12": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat kolbuszowski"
+    },
+    "01KSF5C509Z8RBS1C2X5498CHD": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat krośnieński (Krosno)"
+    },
+    "01KSF5C50ABBSGD239WV0NQTXR": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat leżajski"
+    },
+    "01KSF5C50AHNVRZDXFQ1P85GQ3": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat lubaczowski"
+    },
+    "01KSF5C50B83ES1VEBXDKH7PHG": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat łańcucki"
+    },
+    "01KSF5C50CHDPYKVR2ME34RRWQ": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat mielecki"
+    },
+    "01KSF5C50CTZHTA7TRD1XV4G26": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat niżański"
+    },
+    "01KSF5C50DX9ZWCED5PPJQ008Z": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat przemyski"
+    },
+    "01KSF5C50E2P8MRR2E8BANHMJY": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat przeworski"
+    },
+    "01KSF5C50FHYEZAQFA5M5ETPMB": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat ropczycko-sędziszowski"
+    },
+    "01KSF5C50GZZ7JRNWCMJ3KARB3": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat rzeszowski"
+    },
+    "01KSF5C50G6XK9A41DKJ92V03N": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat sanocki"
+    },
+    "01KSF5C50HWMEB3EWDKNZ4KBFW": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat stalowowolski"
+    },
+    "01KSF5C50J1E18EQECRNR4QA6B": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat strzyżowski"
+    },
+    "01KSF5C50KE9FHNEK30HH73W7Y": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat tarnobrzeski"
+    },
+    "01KSF5C50MHCGGZP88QP8DHBXH": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat leski"
+    },
+    "01KSF5C50NBVEQQF76C4AXGZNW": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat Krosno"
+    },
+    "01KSF5C50PZX0B2ZPDKVA6FTNT": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat Przemyśl"
+    },
+    "01KSF5C50QWGT8ZXNG16FWWNYB": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat Rzeszów"
+    },
+    "01KSF5C50RW3E8GSD5VP05RM93": {
+        "type": "text",
+        "tags": [
+            "unambiguousName"
+        ],
+        "text": "powiat Tarnobrzeg"
+    }
+}

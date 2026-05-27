@@ -1,0 +1,247 @@
+{
+    "01KSF5C53W42HJ6WCAH2ZMX1YZ": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat chodzieski"
+    },
+    "01KSF5C53XCKDPC7153552351R": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat czarnkowsko-trzcianecki"
+    },
+    "01KSF5C53XTJGM6PK34732VXHF": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat gnieźnieński"
+    },
+    "01KSF5C53Y708KH4JCM3HJVF0F": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat gostyński"
+    },
+    "01KSF5C53ZEV2PRCZZHKM17JPH": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat grodziski"
+    },
+    "01KSF5C53ZSP6406P1S4P7M1X0": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat jarociński"
+    },
+    "01KSF5C540FV89A0HQK4Y64GJ6": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat kaliski"
+    },
+    "01KSF5C541RT0BRC98CN4036H3": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat kępiński"
+    },
+    "01KSF5C541DV8M8Z998BSR498D": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat kolski"
+    },
+    "01KSF5C542MFJN8C4EGB4Z0AZB": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat koniński"
+    },
+    "01KSF5C543N7XGJMRS3F0ARCRD": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat kościański"
+    },
+    "01KSF5C544V34MPHTDPHHYVNVF": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat krotoszyński"
+    },
+    "01KSF5C544ZQ92KND72KWMPWC6": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat leszczyński"
+    },
+    "01KSF5C545DS0VF0ZECWG4MXZ9": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat międzychodzki"
+    },
+    "01KSF5C546VBQQNH24T1MS5APS": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat nowotomyski"
+    },
+    "01KSF5C547XXN3QR41A9DET1XN": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat obornicki"
+    },
+    "01KSF5C5478VEK5RSEQB32T47S": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat ostrowski"
+    },
+    "01KSF5C548MYHF1VFTDD63WFEB": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat ostrzeszowski"
+    },
+    "01KSF5C54900DH1DNR8NM4JDV2": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat pilski"
+    },
+    "01KSF5C54AA01HM71WTQHFRNE1": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat pleszewski"
+    },
+    "01KSF5C54BA2FF4R03B0H9MGAF": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat poznański"
+    },
+    "01KSF5C54C7MYGJDB5NX69S38Z": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat rawicki"
+    },
+    "01KSF5C54DZNR4952FGP118K7G": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat słupecki"
+    },
+    "01KSF5C54ER4DP1TV99W6166CR": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat szamotulski"
+    },
+    "01KSF5C54FGEH0X56SHHDPFMVR": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat średzki"
+    },
+    "01KSF5C54G6KQBWAS8K0ARZF2H": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat śremski"
+    },
+    "01KSF5C54H478Z3ZTBTFDEXV0P": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat turecki"
+    },
+    "01KSF5C5583A5PT0Z5WP7CSSP6": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat wągrowiecki"
+    },
+    "01KSF5C559KCF7JYPNH86763ZZ": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat wolsztyński"
+    },
+    "01KSF5C55ARB2Q49QR8ZTGNQ3N": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat wrzesiński"
+    },
+    "01KSF5C55BXQ290PYE3CGP64B2": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat złotowski"
+    },
+    "01KSF5C55C2CVMT7TBJ8GHRP2G": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Kalisz"
+    },
+    "01KSF5C55DB37TE0BB7HWZP2G5": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Konin"
+    },
+    "01KSF5C55EG0PHX69WYEJ6SVJC": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Leszno"
+    },
+    "01KSF5C55FBSBD9TN725779GJZ": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Poznań"
+    }
+}

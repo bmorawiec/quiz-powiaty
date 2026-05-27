@@ -1,0 +1,121 @@
+{
+    "01KSF5C50V5F9RJHF48EYHM8KZ": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat augustowski"
+    },
+    "01KSF5C50VWCNCDB80W2EWKDT0": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat białostocki"
+    },
+    "01KSF5C50WZ2HVSW7SM6VXPG4H": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat bielski"
+    },
+    "01KSF5C50X853FJ7T3KRVKJCAP": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat grajewski"
+    },
+    "01KSF5C50XP35PE1PBR7X64C2V": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat hajnowski"
+    },
+    "01KSF5C50YYS73CSZSJ20GXMRR": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat kolneński"
+    },
+    "01KSF5C50Z0JRDVPJ7ST9QYQFQ": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat łomżyński"
+    },
+    "01KSF5C50ZE1R3RZ80J04SW4TX": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat moniecki"
+    },
+    "01KSF5C5106S0J6QHESGPZFD7S": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat sejneński"
+    },
+    "01KSF5C511B0B80AQ8BE9801S6": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat siemiatycki"
+    },
+    "01KSF5C511Z9XP22Q85DNNSAQW": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat sokólski"
+    },
+    "01KSF5C512GNRT0MJS505GA6GZ": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat suwalski"
+    },
+    "01KSF5C5130DR72TS8P25CJJPF": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat wysokomazowiecki"
+    },
+    "01KSF5C514PC4MQTE3DHD1A31B": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat zambrowski"
+    },
+    "01KSF5C5142ZQ6QW7DF68GNH2F": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Białystok"
+    },
+    "01KSF5C515WQ7QQN9GSEH9BGQS": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Łomża"
+    },
+    "01KSF5C516G0AX1Y3XXXG3CYRT": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Suwałki"
+    }
+}

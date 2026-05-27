@@ -1,0 +1,254 @@
+{
+    "01KSF5C51S7VNYK0TP4RS62EVV": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat będziński"
+    },
+    "01KSF5C51T95K1RBDJGYHWSA22": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat bielski"
+    },
+    "01KSF5C51V3S0F1BCCA8VXK6C4": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat cieszyński"
+    },
+    "01KSF5C51WBZPK03GBZYAST328": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat częstochowski"
+    },
+    "01KSF5C51WWKQMZN8BD65V8E4C": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat gliwicki"
+    },
+    "01KSF5C51XYZZ00CW7B9SEXX16": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat kłobucki"
+    },
+    "01KSF5C51YY8AWAZVCDBG719B1": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat lubliniecki"
+    },
+    "01KSF5C51Y9M1FH058JK7WYXYZ": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat mikołowski"
+    },
+    "01KSF5C51Z4GQV2NQ4EZ9NY0BF": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat myszkowski"
+    },
+    "01KSF5C520P13JD0PD6447ZC1R": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat pszczyński"
+    },
+    "01KSF5C5205NJD5MARX3CA315S": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat raciborski"
+    },
+    "01KSF5C521VDSAVZBZDRZ8BRWE": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat rybnicki"
+    },
+    "01KSF5C522MNCJQNSWCZW6RVMY": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat tarnogórski"
+    },
+    "01KSF5C523VWGGJHXGC543MXTT": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat bieruńsko-lędziński"
+    },
+    "01KSF5C523FFN707CMSFAPNZGG": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat wodzisławski"
+    },
+    "01KSF5C5245DBC4JDZ3FN85J6N": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat zawierciański"
+    },
+    "01KSF5C525GCCN26KMW60JFZEF": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat żywiecki"
+    },
+    "01KSF5C526Y50JKBR7JCFT9VA3": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Bielsko-Biała"
+    },
+    "01KSF5C5272ZYPECDSGZCJCGY5": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Bytom"
+    },
+    "01KSF5C528CTFSYQM6Y09HYJ9Z": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Chorzów"
+    },
+    "01KSF5C528X8047YGQVY9E6KHJ": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Częstochowa"
+    },
+    "01KSF5C529NC3EXHTG9K0F1PYE": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Dąbrowa Górnicza"
+    },
+    "01KSF5C52AZZGEV1WCS9R1XM7M": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Gliwice"
+    },
+    "01KSF5C52BTZ503S1B8STGXVVR": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Jastrzębie-Zdrój"
+    },
+    "01KSF5C52C5910FYZCXXBPCGAF": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Jaworzno"
+    },
+    "01KSF5C52DYXAJ7K6J1YEQMA86": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Katowice"
+    },
+    "01KSF5C52ET5ZB2Q32J2FVK1M8": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Mysłowice"
+    },
+    "01KSF5C52F888ZDH4KKWPY59XD": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Piekary Śląskie"
+    },
+    "01KSF5C52GAT8VGNGG73MR0907": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Ruda Śląska"
+    },
+    "01KSF5C52H9QF3TKQ6M3GDKXDX": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Rybnik"
+    },
+    "01KSF5C52JZ5TEA0Y73MQE1DZH": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Siemianowice Śląskie"
+    },
+    "01KSF5C52KVCRJ3NDQD8XCNHEW": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Sosnowiec"
+    },
+    "01KSF5C52MMPY0VD32M9H251ET": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Świętochłowice"
+    },
+    "01KSF5C52NR5ZC5GXHQEB62J5W": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Tychy"
+    },
+    "01KSF5C52PMB8X8WRY8EAYTQZS": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Zabrze"
+    },
+    "01KSF5C52QBQ4AXA6RGPM9DCQ6": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Żory"
+    }
+}

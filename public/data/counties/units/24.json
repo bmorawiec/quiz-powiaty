@@ -1,0 +1,584 @@
+[
+    {
+        "id": "01KSF5C51TWQKM7JBPPFHWHZ53",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C51S7VNYK0TP4RS62EVV",
+            "01KSF5C51SQDRB4E319F6SX563",
+            "01KSF5C51TTBQC9V5H2G80R239",
+            "01KSF5C51TMSAQC3ZYC5FXN7VF",
+            "01KSF5C51T8ETTEQEVX254AD0B",
+            "01KSF5C51TYPEFHH2P5MGVHE51",
+            "01KSF5C51TRFCHRMPCS7VGHNYX",
+            "01KSF5C51TBFXN05AH31J33KCT",
+            "01KSF5C51TK13DXSXT8QTK99RC"
+        ]
+    },
+    {
+        "id": "01KSF5C51VD095Z264K7VGVWPW",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C51T95K1RBDJGYHWSA22",
+            "01KSF5C51T46PJVC4ABTFKMS38",
+            "01KSF5C51T4ZBE6E3XV00S67FG",
+            "01KSF5C51TFNY22VPYY9MBZZB3",
+            "01KSF5C51TXVCP35S2Y7VKH86V",
+            "01KSF5C51TWBG13EJVE80E387P",
+            "01KSF5C51TH53VT4X4Q1MAQY2S",
+            "01KSF5C51VWQAVEZ4EYDHB40KQ",
+            "01KSF5C51V70HS4ZACN53S0J91"
+        ]
+    },
+    {
+        "id": "01KSF5C51VJQ85BTR3P1K287M5",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C51V3S0F1BCCA8VXK6C4",
+            "01KSF5C51VYM590P2G2A469MBQ",
+            "01KSF5C51VZNTCC4A7T5N1XMZM",
+            "01KSF5C51VVXMKNHD792QCCG1Z",
+            "01KSF5C51V45Q8AW4P8VXZXWJD",
+            "01KSF5C51VDF9PXXW4M8GBTBWD",
+            "01KSF5C51VACKJXD9RT67412Y7",
+            "01KSF5C51V81AHMY4HBY0A3S92",
+            "01KSF5C51VM75A6A3J0K6996S9",
+            "01KSF5C51V11ZGVYAYH63XKEDZ"
+        ]
+    },
+    {
+        "id": "01KSF5C51WXBSPMHPC8M2JFMXM",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C51WBZPK03GBZYAST328",
+            "01KSF5C51WZPA04B34HSV93WVS",
+            "01KSF5C51W8SZ1ZV7EM39YNHW7",
+            "01KSF5C51WA0DDH575Q044RJTN",
+            "01KSF5C51WQECFPX3K6KK525DQ",
+            "01KSF5C51WEJ7NWC64S31BZR0Z",
+            "01KSF5C51W4YDZQAB6XH25GCV0",
+            "01KSF5C51W0H3NPYFETM1TV6JV"
+        ]
+    },
+    {
+        "id": "01KSF5C51XPSG0KZCF5EHY0ZGY",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C51WWKQMZN8BD65V8E4C",
+            "01KSF5C51WFYMP55R470RNG5PH",
+            "01KSF5C51WV7RFDAA37W8KSH0N",
+            "01KSF5C51WKJ87NC8PYMXV5VB4",
+            "01KSF5C51WBJ8A7NV52TAWJ5SB",
+            "01KSF5C51X06AQXG1N5E0V5W11",
+            "01KSF5C51XGFXRAA6B2D5AERJ5",
+            "01KSF5C51X2GNFXTWM2XG7HCDT"
+        ]
+    },
+    {
+        "id": "01KSF5C51XEZRA6G1HT3AKBBB0",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C51XYZZ00CW7B9SEXX16",
+            "01KSF5C51XZ4FBZMNMBECZ675Y",
+            "01KSF5C51XJ352E45Q2Y83WWQP",
+            "01KSF5C51XWRA43A5THXC16QDH",
+            "01KSF5C51XYG3GYQ0SK47G6R14",
+            "01KSF5C51XMJ148A1CFBK99530",
+            "01KSF5C51XS5B99GWK4GY7NYNT",
+            "01KSF5C51XDAAXPD6ZHGYVTNQ8"
+        ]
+    },
+    {
+        "id": "01KSF5C51Y4K657PB6MVBDKGPV",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C51YY8AWAZVCDBG719B1",
+            "01KSF5C51YF86N4V94ZGESCE9N",
+            "01KSF5C51YKPYFJ0ZBP7CMCTFG",
+            "01KSF5C51YPVDTF1WDZR9XWH4J",
+            "01KSF5C51YXEVD8EGKWZCYJYW0",
+            "01KSF5C51Y3KHM27BAF7JNKB00",
+            "01KSF5C51YXC4XVKPFSKB1NF5R",
+            "01KSF5C51YKA1KF8VDAPG2T02F"
+        ]
+    },
+    {
+        "id": "01KSF5C51ZMVD7G31P37HD1851",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C51Y9M1FH058JK7WYXYZ",
+            "01KSF5C51YWZ848RX675N3CGA6",
+            "01KSF5C51YTEEQ3GR4SG6T8YSG",
+            "01KSF5C51Y25R39616120GQ1DE",
+            "01KSF5C51ZNHHJEEG3JKVKK1E3",
+            "01KSF5C51ZWF98FD0RP57S4R32",
+            "01KSF5C51ZHE125FC826YF517G",
+            "01KSF5C51ZAEZSXK2YN4M9JD94"
+        ]
+    },
+    {
+        "id": "01KSF5C51ZTZ0HJ0C46XRX88TG",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C51Z4GQV2NQ4EZ9NY0BF",
+            "01KSF5C51ZPDTDF1CX9YZZT42D",
+            "01KSF5C51ZV2WGRKYQZ80CX9R7",
+            "01KSF5C51ZBSYVWM6M48RPAE29",
+            "01KSF5C51ZGKRY7QEJR5YT9GMP",
+            "01KSF5C51ZSYYJKG9969AS0Y5A",
+            "01KSF5C51ZVXNHJA3XEP0RW4Y9",
+            "01KSF5C51ZX3MTH7XQ3866F544"
+        ]
+    },
+    {
+        "id": "01KSF5C520WQ94CXHH1PH8B51S",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C520P13JD0PD6447ZC1R",
+            "01KSF5C520KTFKB38V5MD4HKX9",
+            "01KSF5C520MKRDHKG40N7CN275",
+            "01KSF5C5207MQ344QSPC8RT1AP",
+            "01KSF5C520EMF9PVFVCG1CYTBE",
+            "01KSF5C520FSGVSQY1CH9Y7NZX",
+            "01KSF5C52017C6GT191JC503Y7",
+            "01KSF5C520SA9N69TVYR1FC8A3"
+        ]
+    },
+    {
+        "id": "01KSF5C52185ENEFFDPTE3AH8K",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C5205NJD5MARX3CA315S",
+            "01KSF5C520890G4N6D2QVHGKBQ",
+            "01KSF5C520KDN4D67X7N7F45RT",
+            "01KSF5C521K0GWV3Z8B381XY4R",
+            "01KSF5C521JGA87N11X330F620",
+            "01KSF5C521TE3TJZ665TNR1Z1H",
+            "01KSF5C5219F5BXP5K8V0F75QJ",
+            "01KSF5C521PF03D5EDCW26X7JR"
+        ]
+    },
+    {
+        "id": "01KSF5C522340C0Z544TSZCF40",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C521VDSAVZBZDRZ8BRWE",
+            "01KSF5C521Y82D8XHWTRX51RST",
+            "01KSF5C521Q8YAF85SZXS005FH",
+            "01KSF5C521JRXXP3C2BJSCWVXP",
+            "01KSF5C521DJCCKMV235JDRXAY",
+            "01KSF5C521CFDP7J65BS4J37RM",
+            "01KSF5C521WVNWF8CEE1NK6R1G",
+            "01KSF5C522GGSD6YT80FVZXXMG"
+        ]
+    },
+    {
+        "id": "01KSF5C522RHXFR5HE08ZRE8M1",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C522MNCJQNSWCZW6RVMY",
+            "01KSF5C522WWH5WVVAQR1SAGZZ",
+            "01KSF5C522WZH9WX947D233Y2Q",
+            "01KSF5C522VY7CWYYXF8CPAAW3",
+            "01KSF5C522N7KWBQE0XH683FCX",
+            "01KSF5C522M26MF74G9QBN10NJ",
+            "01KSF5C522GAREWDHHMF47PR9W",
+            "01KSF5C5222AZ8PCP4C1CMC7EB",
+            "01KSF5C522PW816B8G99HAN09K"
+        ]
+    },
+    {
+        "id": "01KSF5C5239PV88MMSC3GAG74B",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C523VWGGJHXGC543MXTT",
+            "01KSF5C5235KH4M3TY4WA8JEMB",
+            "01KSF5C5239060D4AED7TGS0B9",
+            "01KSF5C523GD1929D9NAQQZ9TE",
+            "01KSF5C523VZRTCSJ9SE88NXRC",
+            "01KSF5C523507NXXJJCV87CVGJ",
+            "01KSF5C523DAA723FD539YX6DW",
+            "01KSF5C523CAX658WT3Z888YFD"
+        ]
+    },
+    {
+        "id": "01KSF5C52409X7PN0VNTKGEEHV",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C523FFN707CMSFAPNZGG",
+            "01KSF5C523VC213CYHGQ1NPASB",
+            "01KSF5C5244DRVDWTKY9EN0SD3",
+            "01KSF5C524ZV4FCXAJXTJBH9FB",
+            "01KSF5C524FSN4B8TTVXZ9DF87",
+            "01KSF5C5241Q1SZW9PQ9HNBJE4",
+            "01KSF5C524K9P8E4F0E4PNP0YG",
+            "01KSF5C524X2WA2RGZ337T1W51"
+        ]
+    },
+    {
+        "id": "01KSF5C5257XWY6EQDR92HFDZY",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C5245DBC4JDZ3FN85J6N",
+            "01KSF5C524047RD5KB3G7VFP3M",
+            "01KSF5C524T2A3S9F0MY0YXP9B",
+            "01KSF5C524M77579F8JKM3Z7PB",
+            "01KSF5C524T5BSFYZSP5WHJJN3",
+            "01KSF5C5240ZPEZC33SGBWDNZE",
+            "01KSF5C5254XAW3EE2KV3HPHKB",
+            "01KSF5C525J2SHRSX6P22YMYP4"
+        ]
+    },
+    {
+        "id": "01KSF5C526N3AN41Y084X7PZVA",
+        "tags": [
+            "landCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C525GCCN26KMW60JFZEF",
+            "01KSF5C525YY4YWBM1S4AC8W3W",
+            "01KSF5C525EGBH411YEYYZJ42K",
+            "01KSF5C52566DMFQ1AYF86HHG2",
+            "01KSF5C5254JS7KNXX79M2XDBY",
+            "01KSF5C525JJAPZS4X438WDZ0R",
+            "01KSF5C525F8GXWDWTDXRAXFBN",
+            "01KSF5C5259BAQR3C98Y02N77M"
+        ]
+    },
+    {
+        "id": "01KSF5C526CSW3XPZD28PQ39HY",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C526Y50JKBR7JCFT9VA3",
+            "01KSF5C526F04YWXTA5VSZGPGY",
+            "01KSF5C526HQWZM949YQGWS5T2",
+            "01KSF5C5266NSC63PRB7Q0E9DH",
+            "01KSF5C5262P7H90G2MHN2EEDV",
+            "01KSF5C5264JDDZ2QA3R2K68D6",
+            "01KSF5C526ZPDQ237Y1MBZ26BV",
+            "01KSF5C5268Z9YEFX5GPAT7WJ4"
+        ]
+    },
+    {
+        "id": "01KSF5C527VJ1579G0A19KY858",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C5272ZYPECDSGZCJCGY5",
+            "01KSF5C527PA4TB5RZMZZK2H7C",
+            "01KSF5C5279BDPC1WGN0QA07H3",
+            "01KSF5C527Y97T518SNGSSFW64",
+            "01KSF5C527F0ZTAP00MKC79RR7",
+            "01KSF5C527WTMX9Q3JMQ7E6RZM",
+            "01KSF5C5271XDF27411PV5Q3KC",
+            "01KSF5C527JDGP1ASPGYD1H9F2"
+        ]
+    },
+    {
+        "id": "01KSF5C528Y2C0DCR9X7AGX8Y2",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C528CTFSYQM6Y09HYJ9Z",
+            "01KSF5C528A1DV7ANDGET03PK2",
+            "01KSF5C528AFY2J4V229BZQW4W",
+            "01KSF5C5287QSMPD9VDVB5QMZP",
+            "01KSF5C5282VHWE8REWR8QH2WZ",
+            "01KSF5C5280C84ZYX607F6ZJ68",
+            "01KSF5C528YF2BQKEM2WE03TXV",
+            "01KSF5C528FC5AMQ0405GJ0HJX"
+        ]
+    },
+    {
+        "id": "01KSF5C529JVP50Y4FH50DXNA1",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C528X8047YGQVY9E6KHJ",
+            "01KSF5C529VA9W9NS8ZX6M09T2",
+            "01KSF5C529SB5KKWBW3XKYJ9TZ",
+            "01KSF5C529STTY1W6MWYMP0RWR",
+            "01KSF5C529SCZBBPWAG5D15CVF",
+            "01KSF5C5293AP75BMHWEZNDVWA",
+            "01KSF5C529WTQMFZJJDKAX03ST",
+            "01KSF5C529CYE0Y5TP8Y99566D"
+        ]
+    },
+    {
+        "id": "01KSF5C52APA37KZW7XWZY4XVV",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C529NC3EXHTG9K0F1PYE",
+            "01KSF5C5299T5DNT7XABZBCGXB",
+            "01KSF5C52ABKEYNEDK8ETD55BJ",
+            "01KSF5C52A5V9GCVHR1AA69T5V",
+            "01KSF5C52AQB8Q2E4TR4BJEMDW",
+            "01KSF5C52A1GMKMF68FF4T4YV0",
+            "01KSF5C52A2DYZ3NJJ4MMH1P7C",
+            "01KSF5C52AM09ZS800Z8NQ0S4A"
+        ]
+    },
+    {
+        "id": "01KSF5C52B9M19DE8ENFNDT938",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52AZZGEV1WCS9R1XM7M",
+            "01KSF5C52AW45M23GRPQMT59BQ",
+            "01KSF5C52AYR27BQVN9MSWQ2YK",
+            "01KSF5C52BXP2538ZW3Q5SGATY",
+            "01KSF5C52B61ZKGG89K7DM6TS6",
+            "01KSF5C52BKAN69H2G8VBMYKA1",
+            "01KSF5C52B3D79N5RDQJ6X2MS2",
+            "01KSF5C52BMMDKY9F470XF1N9M"
+        ]
+    },
+    {
+        "id": "01KSF5C52CSGCYJZEQ8Z3PVJMF",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52BTZ503S1B8STGXVVR",
+            "01KSF5C52BXFCPAX9MHGXTE4WD",
+            "01KSF5C52B0TEP5AJ69THQDVVX",
+            "01KSF5C52C20HST4CA96WTT8YS",
+            "01KSF5C52CH1DAQT9Y7GFYE6E6",
+            "01KSF5C52C5CXBZJZPYNCNSNZ0",
+            "01KSF5C52CXCEWFKFBJCWXTSR5",
+            "01KSF5C52C4VGXTQSBX1H14Q0Q"
+        ]
+    },
+    {
+        "id": "01KSF5C52DZCSP8544JX5RDB6Z",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52C5910FYZCXXBPCGAF",
+            "01KSF5C52C5CGCW6PDR51QRQ46",
+            "01KSF5C52CAAYKMT4SGG8K340J",
+            "01KSF5C52CDXR2VJ87ZFVCT1DY",
+            "01KSF5C52DCXJTSGKEGKHBQTJP",
+            "01KSF5C52D23H30M08K8HGFTTB",
+            "01KSF5C52D7S51KQJAZMHK9WCM",
+            "01KSF5C52DW449M9CJ144PWQC3"
+        ]
+    },
+    {
+        "id": "01KSF5C52ET40N73S385X19X7X",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52DYXAJ7K6J1YEQMA86",
+            "01KSF5C52D9Y3AV9GQN075QV21",
+            "01KSF5C52DK1G5A6NDMNPES4TE",
+            "01KSF5C52DS59WNJR13S161FMN",
+            "01KSF5C52EMS5Q0AAPK45Q1FHD",
+            "01KSF5C52EK31G8NVH9XC2ZBJ1",
+            "01KSF5C52ENMHS19ZDFXQB90E4",
+            "01KSF5C52EVYBD0MF59BBC9QYC"
+        ]
+    },
+    {
+        "id": "01KSF5C52FGR9SEPM1RYS6D16Y",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52ET5ZB2Q32J2FVK1M8",
+            "01KSF5C52EYK2TG056PTYX35S0",
+            "01KSF5C52ENCCF67R7CFNMZFC9",
+            "01KSF5C52E6XPFS0K40EYTFQ9K",
+            "01KSF5C52EXECR4S7FWESMGF13",
+            "01KSF5C52FQMCES4078VTAAAT1",
+            "01KSF5C52F1QNKZTMEVWK4MC62",
+            "01KSF5C52FRFMSN9XAMWGQW8AD"
+        ]
+    },
+    {
+        "id": "01KSF5C52G35YM08WC8R9RATN7",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52F888ZDH4KKWPY59XD",
+            "01KSF5C52FYGQHQQWFRHECQP1P",
+            "01KSF5C52F7GY3D8M5EGXGC0YS",
+            "01KSF5C52FCWMJB1QBRS5Y4A1K",
+            "01KSF5C52FWRG2ESH1SRQVA4Z3",
+            "01KSF5C52F3SSNTGX2HD2C1KDE",
+            "01KSF5C52GBQ5PHFM2KB1S5KRJ",
+            "01KSF5C52G5NY57AZCZMWDP0KF"
+        ]
+    },
+    {
+        "id": "01KSF5C52HC5TK04BQMJTZQWJ5",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52GAT8VGNGG73MR0907",
+            "01KSF5C52GNPD65AQRNF78SY67",
+            "01KSF5C52G61YGK78QGCS2PHGA",
+            "01KSF5C52G1AGJ8AQ4VXDRABK1",
+            "01KSF5C52GH2C514VTNWC39YE8",
+            "01KSF5C52GN5MTA4VKMF45A3DY",
+            "01KSF5C52HF1ZQ4FKRMT4GKJNG",
+            "01KSF5C52HEK48Y0X15Z1D3HCF",
+            "01KSF5C52HTDEXH9C5SWZNBF1T"
+        ]
+    },
+    {
+        "id": "01KSF5C52J5SD98FNTA9MRTD3P",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52H9QF3TKQ6M3GDKXDX",
+            "01KSF5C52HDR5575ESWWS7NMTA",
+            "01KSF5C52HKS0GC1K47D0JT25B",
+            "01KSF5C52HV889Y8QK7Q6H1YW3",
+            "01KSF5C52H8453F263DZ774RS7",
+            "01KSF5C52H3981GTW1W5Y9XSZS",
+            "01KSF5C52JX74WX8YWGQM3VHEC",
+            "01KSF5C52JHG4AD0SBRV25JFYS"
+        ]
+    },
+    {
+        "id": "01KSF5C52K1HYJR4C7R3C3JPH3",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52JZ5TEA0Y73MQE1DZH",
+            "01KSF5C52JV7W2EJ1N4K8VV96T",
+            "01KSF5C52JTHK92BCVQ3RGR3ZZ",
+            "01KSF5C52J16JWNJZK6PRMNA2V",
+            "01KSF5C52JV5H4YYDTX6HXZXGH",
+            "01KSF5C52JAX79T7EZ2FEBRZSD",
+            "01KSF5C52K416NZ8WNVSQ2ZQAH",
+            "01KSF5C52KNKQDJNHXR3ZDABDZ"
+        ]
+    },
+    {
+        "id": "01KSF5C52M0AVTBDRSDP83NGH5",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52KVCRJ3NDQD8XCNHEW",
+            "01KSF5C52KAXH39XEP137XGF9E",
+            "01KSF5C52KPXG24MT4MPQEMQSE",
+            "01KSF5C52KATEP4M86RW4PNV5E",
+            "01KSF5C52K08WFHKNVVEWTZGA2",
+            "01KSF5C52KXSZ8VZ9QR8XJKJM8",
+            "01KSF5C52MW108MH20J3XBTP1Y",
+            "01KSF5C52MQQWY3KRZKMBBX0PD"
+        ]
+    },
+    {
+        "id": "01KSF5C52NYMTPCAQEKY5E8GE6",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52MMPY0VD32M9H251ET",
+            "01KSF5C52MMY54TCV1SQEZCTXG",
+            "01KSF5C52MVWH2HWWVQ1HC7QM2",
+            "01KSF5C52M8HJ6GMMEA6Y05Z56",
+            "01KSF5C52M6MWYJW495XY3X2AZ",
+            "01KSF5C52MS9M4D3WB874NPC3Y",
+            "01KSF5C52N36YT8NB1VJHMDHNK",
+            "01KSF5C52NHHJVA2CCKFAJZXYW"
+        ]
+    },
+    {
+        "id": "01KSF5C52PQKJSPGWWJ0G6XZD6",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52NR5ZC5GXHQEB62J5W",
+            "01KSF5C52NVNNT87SRD24X50AC",
+            "01KSF5C52NQKCF1FPJDZJDK6ZN",
+            "01KSF5C52NMY0ZVRAFH51F7RDS",
+            "01KSF5C52N9SQ0AVRQRHVV7V3S",
+            "01KSF5C52NH6RN9JVZYMS1FWV4",
+            "01KSF5C52PN5V3C91ZH139XNAP",
+            "01KSF5C52PPHZN7AFVW5ZRDE07"
+        ]
+    },
+    {
+        "id": "01KSF5C52QQXN0QGE05WQ47ZF1",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52PMB8X8WRY8EAYTQZS",
+            "01KSF5C52P8RDHFG9EMVKZD1MK",
+            "01KSF5C52P82BZRQ72Z9H465XP",
+            "01KSF5C52PJ3KTPNX1ZCBC1VW3",
+            "01KSF5C52PPB16CXWY5SXBQH4W",
+            "01KSF5C52PJ4TVMCP7ZC1Q5ZFB",
+            "01KSF5C52Q98X893TMBCRTQVBQ",
+            "01KSF5C52Q2MJJWZHZFFJW5CT3"
+        ]
+    },
+    {
+        "id": "01KSF5C52R02ZGYM3E76SAWQ26",
+        "tags": [
+            "cityCounty"
+        ],
+        "propertyIds": [
+            "01KSF5C52QBQ4AXA6RGPM9DCQ6",
+            "01KSF5C52Q797SQEPEPJS7WZ65",
+            "01KSF5C52QW2EVSD3D8EHN67HC",
+            "01KSF5C52QYN6GZBVYEAS9SD67",
+            "01KSF5C52Q5FAXZTKXZB6MQVN4",
+            "01KSF5C52QAA9M71256ZKX4Q14",
+            "01KSF5C52R71GFMHMKSHAD0FVR",
+            "01KSF5C52RC97GE0RTFX2PKSRG"
+        ]
+    }
+]

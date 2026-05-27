@@ -1,0 +1,114 @@
+{
+    "01KSF5C4RAQRZN86191ZZZ907K": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "dolnośląskie"
+    },
+    "01KSF5C4RCTC6CVYRZX2MG1VS4": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "kujawsko-pomorskie"
+    },
+    "01KSF5C4RDCHSK6T9C56W27X1Z": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "lubelskie"
+    },
+    "01KSF5C4REC41WMXAX1VA0WFPR": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "lubuskie"
+    },
+    "01KSF5C4RFBFFSTST2GC6YYHZC": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "łódzkie"
+    },
+    "01KSF5C4RGPWD1WD9FVRA0GRT1": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "małopolskie"
+    },
+    "01KSF5C4RHH8HRJC4JZVN0HH94": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "mazowieckie"
+    },
+    "01KSF5C4RJQ2XYSKJ30QJJ1HNJ": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "opolskie"
+    },
+    "01KSF5C4RKRVYC83VE68BSNS2J": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "podkarpackie"
+    },
+    "01KSF5C4RMVGS3W52PB9WQ0YC9": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "podlaskie"
+    },
+    "01KSF5C4RN3FWKC82Z5P2GGEFN": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "pomorskie"
+    },
+    "01KSF5C4RPQA0FYB7VJ2F2WQH2": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "śląskie"
+    },
+    "01KSF5C4RQQ7D21WJPTJZQPK8J": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "świętokrzyskie"
+    },
+    "01KSF5C4RR08HGKHJFT8664V52": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "warmińsko-mazurskie"
+    },
+    "01KSF5C4RRX8CQ7Q7JTKSS1QRB": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "wielkopolskie"
+    },
+    "01KSF5C4RSQ2MWHGGZXVT44M6Y": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "zachodniopomorskie"
+    }
+}

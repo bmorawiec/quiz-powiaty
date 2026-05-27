@@ -1,0 +1,86 @@
+{
+    "01KSF5C4Z1AN191SCM7NF8ZQT8": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat brzeski"
+    },
+    "01KSF5C4Z2TB7XGVF4ESMQAGQ1": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat głubczycki"
+    },
+    "01KSF5C4Z22BNWQ23BEJF0SA2H": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat kędzierzyńsko-kozielski"
+    },
+    "01KSF5C4Z3SSS2RB9BZFRTXEZZ": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat kluczborski"
+    },
+    "01KSF5C4Z4AXHAEMY2HPW06RYM": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat krapkowicki"
+    },
+    "01KSF5C4Z5MCC01P2E3J6VVDD2": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat namysłowski"
+    },
+    "01KSF5C4Z51BEG4T8H8T9F6WKP": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat nyski"
+    },
+    "01KSF5C4Z6QB016CZW22EFRGJ7": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat oleski"
+    },
+    "01KSF5C4Z7D1V7BXSMCGPGARE6": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat opolski"
+    },
+    "01KSF5C4Z877J5F1ASX2JSKSDR": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat prudnicki"
+    },
+    "01KSF5C501DPY61T870C536QNG": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat strzelecki"
+    },
+    "01KSF5C502XW5G926295D9WQ0R": {
+        "type": "text",
+        "tags": [
+            "name"
+        ],
+        "text": "powiat Opole"
+    }
+}

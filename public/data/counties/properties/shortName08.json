@@ -1,0 +1,100 @@
+{
+    "01KSF5C4W2P8C47M69ZH91Y53V": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "gorzowski"
+    },
+    "01KSF5C4W3PC3TSP02627F6EV7": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "krośnieński"
+    },
+    "01KSF5C4W3NPX6HPG8MDYKQBFR": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "międzyrzecki"
+    },
+    "01KSF5C4W45Q1JASFJX94MRAHZ": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "nowosolski"
+    },
+    "01KSF5C4W5NNE5EZ86X1CT71X1": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "słubicki"
+    },
+    "01KSF5C4W5XTMD58SSHQF0S4QP": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "strzelecko-drezdenecki"
+    },
+    "01KSF5C4W6PPEPDW34Z8EFP63S": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "sulęciński"
+    },
+    "01KSF5C4W7QJAC5KNG1S72QPHS": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "świebodziński"
+    },
+    "01KSF5C4W8R1GH74A9QKWHXVS1": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "zielonogórski"
+    },
+    "01KSF5C4W82BQ160K2PYHXH4FK": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "żagański"
+    },
+    "01KSF5C4W9JJEF74SP4GZQ20F4": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "żarski"
+    },
+    "01KSF5C4WAQ97W6KBWGY3A5HHS": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "wschowski"
+    },
+    "01KSF5C4WAGJXEMJT1RGSRZFEW": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "Gorzów Wielkopolski"
+    },
+    "01KSF5C4WBCFQFPKTAYGZZF0QJ": {
+        "type": "text",
+        "tags": [
+            "shortName"
+        ],
+        "text": "Zielona Góra"
+    }
+}
