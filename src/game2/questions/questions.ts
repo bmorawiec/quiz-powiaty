@@ -1,4 +1,4 @@
-import type { Content } from "./content";
+import type { Property } from "src/data";
 
 export const INITIAL_POINT_AMOUNT = 4;
 
@@ -10,7 +10,7 @@ export interface Questions {
 export interface Question {
     /** A UUID. */
     id: string;
-    contents: Content[];
+    contents: Property[];
     /** The amount of points awarded for this question.
      *  At first set to INITIAL_POINT_AMOUNT. Decreases with each incorrect guess. */
     points: number;
