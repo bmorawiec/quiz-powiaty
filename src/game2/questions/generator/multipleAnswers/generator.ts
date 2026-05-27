@@ -1,4 +1,4 @@
-import type { Property, PropertyTag, Unit } from "src/data";
+import { getUnitProperties, type Property, type PropertyTag, type Unit } from "src/data";
 import { ulid } from "ulid";
 import type { Answer, Answers } from "../../answers";
 import type { Question, Questions } from "../../questions";
@@ -113,16 +113,4 @@ export function generateCorrectAnswers(unit: Unit, questionId: string, options: 
     }
 
     return answers;
-}
-
-/** Returns properties from the `properties`, that are linked to by `unit`. */
-export function getUnitProperties(unit: Unit, properties: Record<string, Property>) {
-    const unitProperties: Property[] = [];
-    for (const propertyId of unit.propertyIds) {
-        const property = properties[propertyId];
-        if (property) {
-            unitProperties.push(property);
-        }
-    }
-    return unitProperties;
 }

@@ -1,13 +1,13 @@
 import type { Property, Unit } from "src/data";
+import { getUnitProperties } from "src/data";
 import { describe, expect, it } from "vitest";
+import { INITIAL_POINT_AMOUNT } from "../../questions";
 import {
     generateCorrectAnswers,
     generateMultipleAnswerQuestions,
     generateQuestionAndItsAnswers,
-    getUnitProperties,
     type GeneratorOptions
 } from "./generator";
-import { INITIAL_POINT_AMOUNT } from "../../questions";
 
 const unit1: Unit = {
     id: "1",
