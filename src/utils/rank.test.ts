@@ -2,8 +2,9 @@ import { describe, expect, it } from "vitest";
 import { rankAndPickBest } from "./rank";
 
 describe("rankAndPickBest", () => {
-    it("throws when the input array is empty", () => {
-        expect(() => rankAndPickBest([], 0, () => 0)).toThrow("Cannot pick the best item from an empty array.");
+    it("throws when the input array is too small", () => {
+        expect(() => rankAndPickBest([1, 2, 3], 6, (num: number) => num)).toThrow("Not enough entries to pick from.");
+        expect(() => rankAndPickBest([], 10, (num: number) => num)).toThrow("Not enough entries to pick from.");
     });
 
     it("correctly picks the best items", () => {
