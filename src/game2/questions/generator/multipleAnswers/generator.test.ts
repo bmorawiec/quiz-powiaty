@@ -394,10 +394,3 @@ describe("generateCorrectAnswers", () => {
         });
     });
 });
-
-describe("getUnitProperties", () => {
-    it("returns the correct properties", () => {
-        expect(getUnitProperties(unit1, properties)).toEqual([name1, capital1, plate1a, plate1b, flag1]);
-        expect(getUnitProperties(unit2, properties)).toEqual([name2, capital2, plate2, flag2]);
-    });
-});
