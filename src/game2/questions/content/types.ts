@@ -1,5 +1,5 @@
 export type Content =
-    | TextQuestionContent
+    | TextContent
     | ImageContent
     | TallImageContent
     | TextAndImageContent
@@ -10,7 +10,7 @@ export type Content =
     | TextAndPlateContent;
 
 /** Displays the provided text. */
-export interface TextQuestionContent {
+export interface TextContent {
     type: "text";
     text: string;
 }
