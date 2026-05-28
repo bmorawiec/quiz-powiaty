@@ -10,7 +10,7 @@ export interface GeneratorOptions {
     /** The generated questions will be about these units. */
     units: Unit[];
     /** A map containing properties of the provided units. Not all properties must be provided.
-     *  Only properties with the tags specified in `question.tag` and `answers.tag` must be included. */
+     *  Only properties with the tags specified in `question.tags` and `answers.tag` must be included. */
     properties: Record<string, Property>;
     questions: {
         tags: PropertyTag[];
