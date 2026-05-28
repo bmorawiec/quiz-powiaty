@@ -8,6 +8,7 @@ export type UnitTag =
     | "cityCounty"          /** The tagged unit is a city on county rights */
     | "landCounty";         /** The tagged unit isn't a city on county rights (sometimes called a land county) */
 
+export type PropertyType = Property["type"];
 export type Property = TextProperty | ImageProperty | ShapeProperty;
 
 export interface TextProperty {
@@ -67,3 +68,15 @@ export type ShapePropertyTag =
 export const voivodeshipCodes = ["02", "04", "06", "08", "10", "12", "14", "16",
     "18", "20", "22", "24", "26", "28", "30", "32"] as const;
 export type VoivodeshipCode = (typeof voivodeshipCodes)[number];
+
+export class PropertyNotFoundError extends Error {
+    constructor() {
+        super("Couldn't find a property with the right tag.");
+    }
+}
+
+export class UnexpectedPropertyTypeError extends Error {
+    constructor() {
+        super("Expected this property to be of a different type.");
+    }
+}
