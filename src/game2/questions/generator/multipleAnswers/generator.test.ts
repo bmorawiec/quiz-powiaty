@@ -1,4 +1,5 @@
 import type { ImageProperty, Property, TextProperty, Unit } from "src/data";
+import type { TextContent } from "../../content";
 import { getUnitProperties, PropertyNotFoundError, UnexpectedPropertyTypeError } from "src/data";
 import { describe, expect, it } from "vitest";
 import { INITIAL_POINT_AMOUNT } from "../../questions";
@@ -87,17 +88,6 @@ const nameQuestionContentGenerator = (properties: Property[]): Content => {
     return {
         type: "text",
         text: property.text,
-    };
-};
-
-const flagQuestionContentGenerator = (properties: Property[]): Content => {
-    const property = properties.find((property) => property.tag === "flag") as ImageProperty;
-    if (!property) {
-        throw new PropertyNotFoundError();
-    }
-    return {
-        type: "image",
-        url: property.url,
     };
 };
 
@@ -203,7 +193,7 @@ describe("generateMultipleAnswerQuestions", () => {
             questions: {
                 tags: ["name"],
                 contentGenerator: nameQuestionContentGenerator,
-                sort: true
+                sorter: (a, b) => (a.content as TextContent).text.localeCompare((b.content as TextContent).text),
             },
             answers:  {
                 tag: "plate",
@@ -233,24 +223,6 @@ describe("generateMultipleAnswerQuestions", () => {
         expect(question4).toMatchObject({
             content: { type: "text", text: "powiat rzeszowski" },
         });
-    });
-
-    it("throws when sorting questions with no text content", () => {
-        const options: GeneratorOptions = {
-            units,
-            properties,
-            questions: {
-                tags: ["flag"],
-                contentGenerator: flagQuestionContentGenerator,
-                sort: true,
-            },
-            answers: {
-                tag: "plate",
-                contentGenerator: plateAnswerContentGenerator,
-            },
-        };
-
-        expect(() => generateMultipleAnswerQuestions(options)).toThrow("The provided questions must contain text.");
     });
 });
 
