@@ -1,4 +1,4 @@
-import type { Property } from "src/data";
+import type { Content } from "./content";
 
 export interface Answers {
     answers: Record<string, Answer | undefined>;
@@ -10,7 +10,7 @@ export interface Answer {
     id: string;
     /** Id of the question this is an answer to. */
     questionId: string;
-    contents: Property[];
+    content: Content;
     /** Whether or not this is a correct answer. */
     correct: boolean;
     /** If true, then this answer has been correctly guessed. */

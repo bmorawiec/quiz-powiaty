@@ -1,5 +1,5 @@
-import type { Property, Unit } from "src/data";
-import { getUnitProperties } from "src/data";
+import type { ImageProperty, Property, TextProperty, Unit } from "src/data";
+import { getUnitProperties, PropertyNotFoundError, UnexpectedPropertyTypeError } from "src/data";
 import { describe, expect, it } from "vitest";
 import { INITIAL_POINT_AMOUNT } from "../../questions";
 import {
@@ -8,6 +8,7 @@ import {
     generateQuestionAndItsAnswers,
     type GeneratorOptions
 } from "./generator";
+import type { Content } from "../../content";
 
 const unit1: Unit = {
     id: "1",
@@ -78,13 +79,61 @@ const properties: Record<string, Property> = {
     flag4,
 };
 
+const nameQuestionContentGenerator = (properties: Property[]): Content => {
+    const property = properties.find((property) => property.tag === "name") as TextProperty;
+    if (!property) {
+        throw new PropertyNotFoundError();
+    }
+    return {
+        type: "text",
+        text: property.text,
+    };
+};
+
+const flagQuestionContentGenerator = (properties: Property[]): Content => {
+    const property = properties.find((property) => property.tag === "flag") as ImageProperty;
+    if (!property) {
+        throw new PropertyNotFoundError();
+    }
+    return {
+        type: "image",
+        url: property.url,
+    };
+};
+
+const nameAnswerContentGenerator = (property: Property): Content => {
+    if (property.tag != "name") {
+        throw new UnexpectedPropertyTypeError();
+    }
+    return {
+        type: "text",
+        text: property.text,
+    };
+};
+
+const plateAnswerContentGenerator = (property: Property): Content => {
+    if (property.tag != "plate") {
+        throw new UnexpectedPropertyTypeError();
+    }
+    return {
+        type: "plate",
+        code: property.text,
+    };
+};
+
 describe("generateMultipleAnswerQuestions", () => {
     it("generates the correct amount of questions and answers, in the right order", () => {
         const options: GeneratorOptions = {
             units,
             properties,
-            questions: { tag: "name" },
-            answers:  { tag: "plate" },
+            questions: {
+                tags: ["name"],
+                contentGenerator: nameQuestionContentGenerator,
+            },
+            answers: {
+                tag: "plate",
+                contentGenerator: plateAnswerContentGenerator,
+            },
         };
 
         const qsAndAs = generateMultipleAnswerQuestions(options);
@@ -94,22 +143,22 @@ describe("generateMultipleAnswerQuestions", () => {
         // no in-depth verification of the structure of the generated questions or answers
         const question1 = qsAndAs.questions[qsAndAs.questionIds[0]]!;
         expect(question1).toMatchObject({
-            contents: [{ type: "text", text: "powiat rzeszowski" }],
+            content: { type: "text", text: "powiat rzeszowski" },
         });
 
         const question2 = qsAndAs.questions[qsAndAs.questionIds[1]]!;
         expect(question2).toMatchObject({
-            contents: [{ type: "text", text: "powiat dębicki" }],
+            content: { type: "text", text: "powiat dębicki" },
         });
 
         const question3 = qsAndAs.questions[qsAndAs.questionIds[2]]!;
         expect(question3).toMatchObject({
-            contents: [{ type: "text", text: "powiat krośnieński" }],
+            content: { type: "text", text: "powiat krośnieński" },
         });
 
         const question4 = qsAndAs.questions[qsAndAs.questionIds[3]]!;
         expect(question4).toMatchObject({
-            contents: [{ type: "text", text: "miasto Krosno" }],
+            content: { type: "text", text: "miasto Krosno" },
         });
 
         expect(qsAndAs.answerIds.length).toBe(6);   // expecting 6 answers to be generated
@@ -118,32 +167,32 @@ describe("generateMultipleAnswerQuestions", () => {
         // no in-depth verification of the structure of the generated questions or answers
         const answer1 = qsAndAs.answers[qsAndAs.answerIds[0]]!;
         expect(answer1).toMatchObject({
-            contents: [{ type: "text", text: "RZE" }],
+            content: { type: "plate", code: "RZE" },
         });
 
         const answer2 = qsAndAs.answers[qsAndAs.answerIds[1]]!;
         expect(answer2).toMatchObject({
-            contents: [{ type: "text", text: "RZZ" }],
+            content: { type: "plate", code: "RZZ" },
         });
 
         const answer3 = qsAndAs.answers[qsAndAs.answerIds[2]]!;
         expect(answer3).toMatchObject({
-            contents: [{ type: "text", text: "RDE" }],
+            content: { type: "plate", code: "RDE" },
         });
 
         const answer4 = qsAndAs.answers[qsAndAs.answerIds[3]]!;
         expect(answer4).toMatchObject({
-            contents: [{ type: "text", text: "RKR" }],
+            content: { type: "plate", code: "RKR" },
         });
 
         const answer5 = qsAndAs.answers[qsAndAs.answerIds[4]]!;
         expect(answer5).toMatchObject({
-            contents: [{ type: "text", text: "YKR" }],
+            content: { type: "plate", code: "YKR" },
         });
 
         const answer6 = qsAndAs.answers[qsAndAs.answerIds[5]]!;
         expect(answer6).toMatchObject({
-            contents: [{ type: "text", text: "RK" }],
+            content: { type: "plate", code: "RK" },
         });
     });
 
@@ -151,8 +200,15 @@ describe("generateMultipleAnswerQuestions", () => {
         const options: GeneratorOptions = {
             units,
             properties,
-            questions: { tag: "name", sort: true },
-            answers:  { tag: "plate" },
+            questions: {
+                tags: ["name"],
+                contentGenerator: nameQuestionContentGenerator,
+                sort: true
+            },
+            answers:  {
+                tag: "plate",
+                contentGenerator: plateAnswerContentGenerator,
+            },
         };
 
         const qsAndAs = generateMultipleAnswerQuestions(options);
@@ -160,22 +216,22 @@ describe("generateMultipleAnswerQuestions", () => {
 
         const question1 = qsAndAs.questions[qsAndAs.questionIds[0]]!;
         expect(question1).toMatchObject({
-            contents: [{ type: "text", text: "miasto Krosno" }],
+            content: { type: "text", text: "miasto Krosno" },
         });
 
         const question2 = qsAndAs.questions[qsAndAs.questionIds[1]]!;
         expect(question2).toMatchObject({
-            contents: [{ type: "text", text: "powiat dębicki" }],
+            content: { type: "text", text: "powiat dębicki" },
         });
 
         const question3 = qsAndAs.questions[qsAndAs.questionIds[2]]!;
         expect(question3).toMatchObject({
-            contents: [{ type: "text", text: "powiat krośnieński" }],
+            content: { type: "text", text: "powiat krośnieński" },
         });
 
         const question4 = qsAndAs.questions[qsAndAs.questionIds[3]]!;
         expect(question4).toMatchObject({
-            contents: [{ type: "text", text: "powiat rzeszowski" }],
+            content: { type: "text", text: "powiat rzeszowski" },
         });
     });
 
@@ -183,8 +239,15 @@ describe("generateMultipleAnswerQuestions", () => {
         const options: GeneratorOptions = {
             units,
             properties,
-            questions: { tag: "flag", sort: true },
-            answers:  { tag: "plate" },
+            questions: {
+                tags: ["flag"],
+                contentGenerator: flagQuestionContentGenerator,
+                sort: true,
+            },
+            answers: {
+                tag: "plate",
+                contentGenerator: plateAnswerContentGenerator,
+            },
         };
 
         expect(() => generateMultipleAnswerQuestions(options)).toThrow("The provided questions must contain text.");
@@ -192,21 +255,25 @@ describe("generateMultipleAnswerQuestions", () => {
 });
 
 describe("generateQuestionsAndItsAnswers", () => {
-    it("correctly generates questions with single text content", () => {
+    it("generates questions from a single property", () => {
         const options: GeneratorOptions = {
             units,
             properties,
-            questions: { tag: "name" },
-            answers: { tag: "plate" },
+            questions: {
+                tags: ["name"],
+                contentGenerator: nameQuestionContentGenerator,
+            },
+            answers: {
+                tag: "plate",
+                contentGenerator: plateAnswerContentGenerator,
+            },
         };
 
         const qsAndAs1 = generateQuestionAndItsAnswers(unit1, options);
 
         const question1 = qsAndAs1.questions[qsAndAs1.questionIds[0]]!;
         expect(question1).toMatchObject({
-            contents: [
-                { type: "text", text: "powiat rzeszowski" },
-            ],
+            content: { type: "text", text: "powiat rzeszowski" },
             points: INITIAL_POINT_AMOUNT,
             tries: 0,
             numberGuessed: 0,
@@ -219,9 +286,7 @@ describe("generateQuestionsAndItsAnswers", () => {
 
         const question2 = qsAndAs2.questions[qsAndAs2.questionIds[0]]!;
         expect(question2).toMatchObject({
-            contents: [
-                { type: "text", text: "powiat dębicki" },
-            ],
+            content: { type: "text", text: "powiat dębicki" },
             points: INITIAL_POINT_AMOUNT,
             tries: 0,
             numberGuessed: 0,
@@ -231,37 +296,50 @@ describe("generateQuestionsAndItsAnswers", () => {
         expect(question2.answerIds.length).toBe(1);
     });
 
-    it("correctly generates questions with multiple text contents", () => {
+    it("generates questions from multiple properties", () => {
         const options: GeneratorOptions = {
             units,
             properties,
-            questions: { tag: "plate" },
-            answers: { tag: "name" },
+            questions: {
+                tags: ["plate", "flag"],
+                contentGenerator: (properties: Property[]) => {
+                    const imageProperty = properties.find((property) => property.tag === "flag") as ImageProperty;
+                    if (!imageProperty) {
+                        throw new PropertyNotFoundError();
+                    }
+                    return {
+                        type: "textAndImage",
+                        text: (properties.filter((property) => property.tag === "plate") as TextProperty[])
+                            .map((property) => property.text)
+                            .join(", "),
+                        url: imageProperty.url,
+                    };
+                },
+            },
+            answers: {
+                tag: "plate",
+                contentGenerator: plateAnswerContentGenerator,
+            },
         };
 
         const qsAndAs1 = generateQuestionAndItsAnswers(unit1, options);
 
         const question1 = qsAndAs1.questions[qsAndAs1.questionIds[0]]!;
         expect(question1).toMatchObject({
-            contents: [
-                { type: "text", text: "RZE" },
-                { type: "text", text: "RZZ" },
-            ],
+            content: { type: "textAndImage", text: "RZE, RZZ", url: "/dummy-path/1.svg" },
             points: INITIAL_POINT_AMOUNT,
             tries: 0,
             numberGuessed: 0,
-            numberCorrect: 1,
+            numberCorrect: 2,
             guessed: false,
         });
-        expect(question1.answerIds.length).toBe(1);
+        expect(question1.answerIds.length).toBe(2);
 
         const qsAndAs2 = generateQuestionAndItsAnswers(unit2, options);
 
         const question2 = qsAndAs2.questions[qsAndAs2.questionIds[0]]!;
         expect(question2).toMatchObject({
-            contents: [
-                { type: "text", text: "RDE" },
-            ],
+            content: { type: "textAndImage", text: "RDE", url: "/dummy-path/2.svg" },
             points: INITIAL_POINT_AMOUNT,
             tries: 0,
             numberGuessed: 0,
@@ -270,48 +348,21 @@ describe("generateQuestionsAndItsAnswers", () => {
         });
         expect(question2.answerIds.length).toBe(1);
     });
-
-    it("uses the replacer when generating question content", () => {
-        const options1: GeneratorOptions = {
-            units,
-            properties,
-            questions: {
-                tag: "plate",
-                replacer: (props: Property[]) =>        // adds a prefix to every text property
-                    props.map((prop) => (prop.type === "text")
-                        ? { ...prop, text: "test" + prop.text }
-                        : prop
-                    ),
-            },
-            answers: { tag: "name" },
-        };
-
-        const qsAndAs1 = generateQuestionAndItsAnswers(unit1, options1);
-        const question1 = qsAndAs1.questions[qsAndAs1.questionIds[0]]!;
-        expect(question1).toMatchObject({
-            contents: [
-                { type: "text", text: "testRZE" },
-                { type: "text", text: "testRZZ" },
-            ],
-        });
-
-        const qsAndAs2 = generateQuestionAndItsAnswers(unit2, options1);
-        const question2 = qsAndAs2.questions[qsAndAs2.questionIds[0]]!;
-        expect(question2).toMatchObject({
-            contents: [
-                { type: "text", text: "testRDE" },
-            ],
-        });
-    });
 });
 
 describe("generateCorrectAnswers", () => {
-    it("correctly generates single text answers", () => {
+    it("correctly generates a single answer", () => {
         const options: GeneratorOptions = {
             units,
             properties,
-            questions: { tag: "plate" },
-            answers: { tag: "name" },
+            questions: {
+                tags: ["name"],
+                contentGenerator: nameQuestionContentGenerator,
+            },
+            answers: {
+                tag: "name",
+                contentGenerator: nameAnswerContentGenerator,
+            },
         };
 
         const answers1 = generateCorrectAnswers(unit1, "test1", options);
@@ -320,9 +371,7 @@ describe("generateCorrectAnswers", () => {
         const answer1 = answers1.answers[answers1.answerIds[0]];
         expect(answer1).toMatchObject({
             questionId: "test1",
-            contents: [
-                { type: "text", text: "powiat rzeszowski" }
-            ],
+            content: { type: "text", text: "powiat rzeszowski" },
             correct: true,
             guessed: false,
         });
@@ -333,20 +382,24 @@ describe("generateCorrectAnswers", () => {
         const answer2 = answers2.answers[answers2.answerIds[0]];
         expect(answer2).toMatchObject({
             questionId: "test2",
-            contents: [
-                { type: "text", text: "powiat dębicki" }
-            ],
+            content: { type: "text", text: "powiat dębicki" },
             correct: true,
             guessed: false,
         });
     });
 
-    it("correctly generates multiple text answers", () => {
+    it("correctly generates multiple answers", () => {
         const options: GeneratorOptions = {
             units,
             properties,
-            questions: { tag: "name" },
-            answers: { tag: "plate" },
+            questions: {
+                tags: ["name"],
+                contentGenerator: nameQuestionContentGenerator,
+            },
+            answers: {
+                tag: "plate",
+                contentGenerator: plateAnswerContentGenerator,
+            },
         };
 
         const answers = generateCorrectAnswers(unit1, "test1", options);
@@ -355,9 +408,7 @@ describe("generateCorrectAnswers", () => {
         const answer1 = answers.answers[answers.answerIds[0]];
         expect(answer1).toMatchObject({
             questionId: "test1",
-            contents: [
-                { type: "text", text: "RZE" }
-            ],
+            content: { type: "plate", code: "RZE" },
             correct: true,
             guessed: false,
         });
@@ -365,9 +416,7 @@ describe("generateCorrectAnswers", () => {
         const answer2 = answers.answers[answers.answerIds[1]];
         expect(answer2).toMatchObject({
             questionId: "test1",
-            contents: [
-                { type: "text", text: "RZZ" }
-            ],
+            content: { type: "plate", code: "RZZ" },
             correct: true,
             guessed: false,
         });

@@ -1,6 +1,7 @@
 import { getUnitProperties, type Property, type PropertyTag, type Unit } from "src/data";
 import { ulid } from "ulid";
 import type { Answer, Answers } from "../../answers";
+import { hasText, type Content } from "../../content";
 import type { Question, Questions } from "../../questions";
 import { INITIAL_POINT_AMOUNT, QuestionNotFoundError } from "../../questions";
 import { mergeQuestionsAndAnswers } from "../../questionsAndAnswers";
@@ -12,11 +13,10 @@ export interface GeneratorOptions {
      *  Only properties with the tags specified in `question.tag` and `answers.tag` must be included. */
     properties: Record<string, Property>;
     questions: {
-        /** Question content will be generated based on properties with this tag. */
-        tag: PropertyTag;
-        /** A function that replaces properties just before they are converted to content.
-         *  Used to change the phrasing of questions or add labels to image content. */
-        replacer?: (properties: Property[]) => Property[];
+        tags: PropertyTag[];
+        /** A function that generates question content based on the properties of a unit.
+         *  @param properties A list of properties all tagged with one of the tags specified in `questions.tags`. */
+        contentGenerator: (properties: Property[]) => Content;
         /** If set to true, then the returned questions will be sorted in alphabetical order. This requires at least one
          *  content of type 'text' to be present in the generated questions.
          *  If set to false, then questions are returned in the same order as their corresponding units in the
@@ -25,8 +25,10 @@ export interface GeneratorOptions {
         sort?: boolean;
     };
     answers: {
-        /** Answer content will be generated based on properties with this tag. */
         tag: PropertyTag;
+        /** A function that generates question answer based on the properties of a unit.
+         *  @param property A property tagged with the tag specified in `answers.tag`. */
+        contentGenerator: (property: Property) => Content;
     };
 }
 
@@ -51,13 +53,10 @@ export function generateMultipleAnswerQuestions(options: GeneratorOptions): Ques
             if (!questionA) throw new QuestionNotFoundError(a);
             if (!questionB) throw new QuestionNotFoundError(b);
 
-            const textContentA = questionA.contents.find((content) => content.type === "text");
-            const textContentB = questionB.contents.find((content) => content.type === "text");
-            if (!textContentA || !textContentB) {
+            if (!hasText(questionA.content) || !hasText(questionB.content)) {
                 throw new Error("The provided questions must contain text.");
             }
-
-            return textContentA.text.localeCompare(textContentB.text);
+            return questionA.content.text.localeCompare(questionB.content.text);
         });
     }
 
@@ -67,14 +66,11 @@ export function generateMultipleAnswerQuestions(options: GeneratorOptions): Ques
 /** Generates a question about the provided unit. Also generates the correct answers to that question. */
 export function generateQuestionAndItsAnswers(unit: Unit, options: GeneratorOptions): Questions & Answers {
     const questionId = ulid();
-    const replacer = options.questions.replacer || ((properties: Property[]) => properties);
-
     const { answers, answerIds } = generateCorrectAnswers(unit, questionId, options);
-
     const question: Question = {
         id: questionId,
-        contents: replacer(getUnitProperties(unit, options.properties)
-            .filter((property) => property.tag === options.questions.tag)),
+        content: options.questions.contentGenerator(getUnitProperties(unit, options.properties)
+            .filter((property) => options.questions.tags.includes(property.tag))),
         points: INITIAL_POINT_AMOUNT,
         tries: 0,
         answerIds,
@@ -104,7 +100,7 @@ export function generateCorrectAnswers(unit: Unit, questionId: string, options: 
         const answer: Answer = {
             id: ulid(),
             questionId,
-            contents: [property],
+            content: options.answers.contentGenerator(property),
             correct: true,
             guessed: false,
         };
