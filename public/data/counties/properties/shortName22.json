@@ -1,142 +1,102 @@
 {
-    "01KSF5C518RN5T04C6RTMXZ5KW": {
+    "01KSQVZPRPB4SWWJG4BSJY6A0N": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "bytowski"
     },
-    "01KSF5C519VFYS1KCF69DZM1JN": {
+    "01KSQVZPRQXZVKH4EV7E0ZFCBW": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "chojnicki"
     },
-    "01KSF5C51A0X1NQQ5V67QDWVW4": {
+    "01KSQVZPRQ2M0QFQKWD9275QKT": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "człuchowski"
     },
-    "01KSF5C51A4D5J4TWTE144MBD2": {
+    "01KSQVZPRR03YQXN2R58ZR6CRF": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "gdański"
     },
-    "01KSF5C51BC3C5RJ59BHE7P34P": {
+    "01KSQVZPRSJKWE2B7CJCEMYVB0": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kartuski"
     },
-    "01KSF5C51CG7WYAA21NAP8G0WY": {
+    "01KSQVZPRSW9SEXE18E6HVNSNN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kościerski"
     },
-    "01KSF5C51CM9PQJBTXETXB9VQW": {
+    "01KSQVZPRTYKZQ8GGD038NKWHM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kwidzyński"
     },
-    "01KSF5C51D5ST8ZRWM35DZDJ9Z": {
+    "01KSQVZPRV5N88YNBGDFK5X0SR": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lęborski"
     },
-    "01KSF5C51E0ZE21W5EK37YA48S": {
+    "01KSQVZPRV1TR3JAARAYWSYE87": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "malborski"
     },
-    "01KSF5C51FNGT7MGBXDAGZSJGF": {
+    "01KSQVZPRWK5HS6VHTSDSS896X": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "nowodworski"
     },
-    "01KSF5C51FZA7AZC8YJW0TGH01": {
+    "01KSQVZPRXH5S85A855S49BFHM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "pucki"
     },
-    "01KSF5C51GYCW96DRXN6YAW0H7": {
+    "01KSQVZPRY8CTA3CCN0DK4ZE77": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "słupski"
     },
-    "01KSF5C51H497D3F7Z2Z99JATS": {
+    "01KSQVZPRYPZR3WPSDSN9403Z9": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "starogardzki"
     },
-    "01KSF5C51JET1966GS424KSCTE": {
+    "01KSQVZPRZM23TQ8RXBFZG39Z9": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "tczewski"
     },
-    "01KSF5C51K8CRDYR8XB8S4AXSF": {
+    "01KSQVZPS0Z60KAVZ4143NQ3BW": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wejherowski"
     },
-    "01KSF5C51KY4AQVEWGWC6KBNDD": {
+    "01KSQVZPS13NJRBHBZ9356PGVA": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sztumski"
     },
-    "01KSF5C51MVF3MTKJDTPMQ2AGJ": {
+    "01KSQVZPS23ZM6YE1FRF76MNZ8": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Gdańsk"
     },
-    "01KSF5C51N7E4T8PABGJZ77HZG": {
+    "01KSQVZPS3HF6WKV674Y8SYQQ7": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Gdynia"
     },
-    "01KSF5C51P1SS4AKRTE9486V5P": {
+    "01KSQVZPS457E9E6BG35BN05RA": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Słupsk"
     },
-    "01KSF5C51Q80BEQAQDW2ESG5P7": {
+    "01KSQVZPS4B1J0NJA5F0GF6H6S": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Sopot"
     }
 }

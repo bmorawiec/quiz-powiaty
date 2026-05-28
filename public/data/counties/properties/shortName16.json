@@ -1,86 +1,62 @@
 {
-    "01KSF5C4Z12V4AY0WTAA7XSMV4": {
+    "01KSQVZPPER259F2NVAAHR0BDV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "brzeski"
     },
-    "01KSF5C4Z2K2B5V6FYXEA3XJZM": {
+    "01KSQVZPPE5GB1VQXA5GY6TSEN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "głubczycki"
     },
-    "01KSF5C4Z3PV00AAM7KN21WS4Y": {
+    "01KSQVZPPF9GQ72B0TBQKCKQTD": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kędzierzyńsko-kozielski"
     },
-    "01KSF5C4Z3CP2MDXQGP8DQ1AF0": {
+    "01KSQVZPPGVX4EM50WSGRY3W68": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kluczborski"
     },
-    "01KSF5C4Z45KAWR12AMF6XXBYG": {
+    "01KSQVZPPH30G3E18VCGRYA2JH": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "krapkowicki"
     },
-    "01KSF5C4Z5FZ76PBPXWXB1E163": {
+    "01KSQVZPPH1A8804S4YW1KZMT7": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "namysłowski"
     },
-    "01KSF5C4Z6H0ZPXYF4ECHKSMY2": {
+    "01KSQVZPPJFRDN7MGR0FF8EFKT": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "nyski"
     },
-    "01KSF5C4Z65XR2R3WHZ72HGT00": {
+    "01KSQVZPPKJ91P5H7BQB15EVSV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "oleski"
     },
-    "01KSF5C4Z71XVH4JE44FR7PKE7": {
+    "01KSQVZPPMBX0WK5H7TWW6P1WW": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "opolski"
     },
-    "01KSF5C4Z8XBCWM298JZSH83JZ": {
+    "01KSQVZPPM9RF9RTXTC2VH6DPF": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "prudnicki"
     },
-    "01KSF5C501W1H9CTKNCYDJX7N4": {
+    "01KSQVZPPNV24JHCQJHE91CBGF": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "strzelecki"
     },
-    "01KSF5C502Q3SQG5T8K2GXRDNX": {
+    "01KSQVZPPP1HMS9MY0S647BAS3": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Opole"
     }
 }

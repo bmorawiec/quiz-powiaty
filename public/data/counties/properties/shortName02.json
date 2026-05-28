@@ -1,212 +1,152 @@
 {
-    "01KSF5C4SNY922MMQ67H1Y4DRN": {
+    "01KSQVZPHDM4YQYG07K6BMB548": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "bolesławiecki"
     },
-    "01KSF5C4SPB1HRRY9JESM9989H": {
+    "01KSQVZPHEEV5WRK7E2BE1R2Y9": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "dzierżoniowski"
     },
-    "01KSF5C4SQVQSGH7WBKH4HGYQ5": {
+    "01KSQVZPHFKJZ8ZEHXE6566CEQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "głogowski"
     },
-    "01KSF5C4SR2FT1MKAAY4BZ1XP1": {
+    "01KSQVZPHGVZWHKZ6AEG3P36HY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "górowski"
     },
-    "01KSF5C4SSV56MD9EWJWGFYJTG": {
+    "01KSQVZPHHPDJG25AHAZWNAEGM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "jaworski"
     },
-    "01KSF5C4ST7XS0H1PS6XJMB21B": {
+    "01KSQVZPHJYFN9RV9E63E4SYDH": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "karkonoski"
     },
-    "01KSF5C4SVF7KVB9RRZ67QK60X": {
+    "01KSQVZPHKKRDJ87QSH3AJ6P6F": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kamiennogórski"
     },
-    "01KSF5C4SW6ME3XCZDGJ8NPVFZ": {
+    "01KSQVZPHMTYYCHJHEJERM7SNA": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kłodzki"
     },
-    "01KSF5C4SX3H02CX0FEWXGQJ46": {
+    "01KSQVZPHN2SQ9RCKMQE83AMXM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "legnicki"
     },
-    "01KSF5C4SZECT257WNZWA2NCBH": {
+    "01KSQVZPHPYQPW76FRB0YMYT1P": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lubański"
     },
-    "01KSF5C4T0E3SWZM0ZBJ379S4C": {
+    "01KSQVZPHQYZ9RX7DS0FCN6Z49": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lubiński"
     },
-    "01KSF5C4T1RFRWZ6T7DTM6362V": {
+    "01KSQVZPHR22A6AVEKDR0H6N3R": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lwówecki"
     },
-    "01KSF5C4T14P0QDF3NWK8574H0": {
+    "01KSQVZPHSKZH9BV8Z90X3M2D3": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "milicki"
     },
-    "01KSF5C4T2VDXP0N3Z5BXAH4HB": {
+    "01KSQVZPHTHXTFJVD2B7Q7W8WD": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "oleśnicki"
     },
-    "01KSF5C4T3M1RJ0C103G0RQ86V": {
+    "01KSQVZPHV1AHY350M9EYVSTHQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "oławski"
     },
-    "01KSF5C4T4J65WYS47D38D256V": {
+    "01KSQVZPHWY76GVV1JEZB0ZKMB": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "polkowicki"
     },
-    "01KSF5C4T5PQY9AJNDJTVCZ8QR": {
+    "01KSQVZPHWP9AE1DH70CG69ATV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "strzeliński"
     },
-    "01KSF5C4T6W18SKY7ZGQBKSYTP": {
+    "01KSQVZPHX6RE001ED4ER2FAES": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "średzki"
     },
-    "01KSF5C4T7338Z06B76PSDVMW5": {
+    "01KSQVZPHYARQ06DRB8NKJMXQ9": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "świdnicki"
     },
-    "01KSF5C4T8SN3B8YZERPP06Z3J": {
+    "01KSQVZPHZQRJF2NAY998ZX0JK": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "trzebnicki"
     },
-    "01KSF5C4T8EK8ZPYXWAM6ZJ47P": {
+    "01KSQVZPHZD6VBCJDWD78ZJ671": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wałbrzyski"
     },
-    "01KSF5C4T9CJX9S8WKD9XDYQWA": {
+    "01KSQVZPJ0W75DYZXFRJNVXQRN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wołowski"
     },
-    "01KSF5C4TAZGNSK741BPH5GD4D": {
+    "01KSQVZPJ1WJ52905YXFH0GXRE": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wrocławski"
     },
-    "01KSF5C4TBQF31X7VCPFG8QHMR": {
+    "01KSQVZPJ2QDNX16YS4DCDFCCV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "ząbkowicki"
     },
-    "01KSF5C4TCPZPJ9PZB7D6Q3BKV": {
+    "01KSQVZPJ3SJJX7W1KXCQKXXP1": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "zgorzelecki"
     },
-    "01KSF5C4TDHBTT22QEENSGCH2X": {
+    "01KSQVZPJ4SCCR8FR1G93NTG4N": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "złotoryjski"
     },
-    "01KSF5C4TESNHEHFCTR3YFVGXR": {
+    "01KSQVZPJ52MYNEK5W53WZ4XB8": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Jelenia Góra"
     },
-    "01KSF5C4TENZE2G1079DQ2SNA6": {
+    "01KSQVZPJ578Z3ER3SDE6R6EFQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Legnica"
     },
-    "01KSF5C4TFSAMTX8TKKYCG278C": {
+    "01KSQVZPJ6DACNEVQ7F4J1NJ29": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Wrocław"
     },
-    "01KSF5C4TSG5RQ0NEPKK1SZNX7": {
+    "01KSQVZPJ7REYAQW0EXGWWMV9N": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Wałbrzych"
     }
 }

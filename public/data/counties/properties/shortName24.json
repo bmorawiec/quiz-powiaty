@@ -1,254 +1,182 @@
 {
-    "01KSF5C51TTBQC9V5H2G80R239": {
+    "01KSQVZPS7ABCGJECW0MJWP7ZQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "będziński"
     },
-    "01KSF5C51T4ZBE6E3XV00S67FG": {
+    "01KSQVZPS8DWMHVVKGCQDZXPMG": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "bielski"
     },
-    "01KSF5C51VZNTCC4A7T5N1XMZM": {
+    "01KSQVZPS8BFSZTHN060JY9YBF": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "cieszyński"
     },
-    "01KSF5C51W8SZ1ZV7EM39YNHW7": {
+    "01KSQVZPS9W40FJBZHSF2B05EB": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "częstochowski"
     },
-    "01KSF5C51WV7RFDAA37W8KSH0N": {
+    "01KSQVZPSAYBHCXK3N0JEBKNPY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "gliwicki"
     },
-    "01KSF5C51XJ352E45Q2Y83WWQP": {
+    "01KSQVZPSBXB44S2JPW9ASNWRV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kłobucki"
     },
-    "01KSF5C51YKPYFJ0ZBP7CMCTFG": {
+    "01KSQVZPSBFF85QNTRD5VRJX6S": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lubliniecki"
     },
-    "01KSF5C51YTEEQ3GR4SG6T8YSG": {
+    "01KSQVZPSCS7AH8NRYS4A5Z0PE": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "mikołowski"
     },
-    "01KSF5C51ZV2WGRKYQZ80CX9R7": {
+    "01KSQVZPSDP0KZBZCWTHKQT03S": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "myszkowski"
     },
-    "01KSF5C520MKRDHKG40N7CN275": {
+    "01KSQVZPSDSJ7HYBAZGHWNTT0V": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "pszczyński"
     },
-    "01KSF5C520KDN4D67X7N7F45RT": {
+    "01KSQVZPSE011CDMC7GXHRNTAP": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "raciborski"
     },
-    "01KSF5C521Q8YAF85SZXS005FH": {
+    "01KSQVZPSF5EGY1PVH52Z1ADGF": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "rybnicki"
     },
-    "01KSF5C522WZH9WX947D233Y2Q": {
+    "01KSQVZPSG30A3GANNGTX4K2EE": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "tarnogórski"
     },
-    "01KSF5C5239060D4AED7TGS0B9": {
+    "01KSQVZPSGBFQJTHEFS8CVYM9A": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "bieruńsko-lędziński"
     },
-    "01KSF5C5244DRVDWTKY9EN0SD3": {
+    "01KSQVZPSH9CJ2JWR28EKJB21M": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wodzisławski"
     },
-    "01KSF5C524T2A3S9F0MY0YXP9B": {
+    "01KSQVZPSJSZ35HT9CQ7N0YKHC": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "zawierciański"
     },
-    "01KSF5C525EGBH411YEYYZJ42K": {
+    "01KSQVZPSK4ZWK4842V4WEPGMZ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "żywiecki"
     },
-    "01KSF5C526HQWZM949YQGWS5T2": {
+    "01KSQVZPSMR1Q0CAC85K5Q2PR0": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Bielsko-Biała"
     },
-    "01KSF5C5279BDPC1WGN0QA07H3": {
+    "01KSQVZPSMJFXCB408WAFY5T2G": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Bytom"
     },
-    "01KSF5C528AFY2J4V229BZQW4W": {
+    "01KSQVZPSNN9CEPJHBESNK7S8A": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Chorzów"
     },
-    "01KSF5C529SB5KKWBW3XKYJ9TZ": {
+    "01KSQVZPSPHANJZQAE8QW4T01R": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Częstochowa"
     },
-    "01KSF5C52ABKEYNEDK8ETD55BJ": {
+    "01KSQVZPSQPN3CZP2B3MR1CCVQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Dąbrowa Górnicza"
     },
-    "01KSF5C52AYR27BQVN9MSWQ2YK": {
+    "01KSQVZPSR56ABM96HA4FZHABN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Gliwice"
     },
-    "01KSF5C52B0TEP5AJ69THQDVVX": {
+    "01KSQVZPSSD4CCQVJ90JM3WKSZ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Jastrzębie-Zdrój"
     },
-    "01KSF5C52CAAYKMT4SGG8K340J": {
+    "01KSQVZPST6JN8ST2Q5NRCCZAH": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Jaworzno"
     },
-    "01KSF5C52DK1G5A6NDMNPES4TE": {
+    "01KSQVZPSVBYH169JDEGEBSQ3F": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Katowice"
     },
-    "01KSF5C52ENCCF67R7CFNMZFC9": {
+    "01KSQVZPSWX60E6J0Y7Z6EHS2K": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Mysłowice"
     },
-    "01KSF5C52F7GY3D8M5EGXGC0YS": {
+    "01KSQVZPSX9XK3WEBHBHZAJEY7": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Piekary Śląskie"
     },
-    "01KSF5C52G61YGK78QGCS2PHGA": {
+    "01KSQVZPSYXAXTT2FBWW84R0YK": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Ruda Śląska"
     },
-    "01KSF5C52HKS0GC1K47D0JT25B": {
+    "01KSQVZPSZ43CM832E2C7Q0TG9": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Rybnik"
     },
-    "01KSF5C52JTHK92BCVQ3RGR3ZZ": {
+    "01KSQVZPT0F0D714KXG1MA0F5G": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Siemianowice Śląskie"
     },
-    "01KSF5C52KPXG24MT4MPQEMQSE": {
+    "01KSQVZPT1H4CXE39YP34T8MED": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Sosnowiec"
     },
-    "01KSF5C52MVWH2HWWVQ1HC7QM2": {
+    "01KSQVZPT2JN1YR4AX4D5N4ZY9": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Świętochłowice"
     },
-    "01KSF5C52NQKCF1FPJDZJDK6ZN": {
+    "01KSQVZPT35BEKWPZ0174SNZV5": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Tychy"
     },
-    "01KSF5C52P82BZRQ72Z9H465XP": {
+    "01KSQVZPT4RT4PGSBCQAQS5QAG": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Zabrze"
     },
-    "01KSF5C52QW2EVSD3D8EHN67HC": {
+    "01KSQVZPT5TTFH6T4A3BG8SY6M": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Żory"
     }
 }

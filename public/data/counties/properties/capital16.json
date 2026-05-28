@@ -1,86 +1,62 @@
 {
-    "01KSF5C4Z1GEQMP1ESRAFWKHWG": {
+    "01KSQVZPPERNR4BKTKHCD43965": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Brzeg"
     },
-    "01KSF5C4Z271F7W1PD29SHEAZ7": {
+    "01KSQVZPPF5A5MX4WSF32SP9ND": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Głubczyce"
     },
-    "01KSF5C4Z38WR354MSJ0QD53J5": {
+    "01KSQVZPPFMYE8HCSP5J0F0GZV": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kędzierzyn-Koźle"
     },
-    "01KSF5C4Z3VV7FHJSBQFTXMGK5": {
+    "01KSQVZPPGPKPJECN61623K6MM": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kluczbork"
     },
-    "01KSF5C4Z4CYG7E352KEBVZWGX": {
+    "01KSQVZPPH42K0QYAJCEM7T489": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Krapkowice"
     },
-    "01KSF5C4Z50MYMVZ36GH11WXJ5": {
+    "01KSQVZPPH9JWAYTDHC1GZHGZQ": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Namysłów"
     },
-    "01KSF5C4Z6YF4QCSAX772Z9VSX": {
+    "01KSQVZPPJ3EWG9GHDEZP72NSD": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Nysa"
     },
-    "01KSF5C4Z6BJEBGQDSED5A53GH": {
+    "01KSQVZPPKFFS2QG3RA35BTHR3": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Olesno"
     },
-    "01KSF5C4Z779BZ3S7F7VM886AE": {
+    "01KSQVZPPMTSTT8FQKEQ3G64W7": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Opole"
     },
-    "01KSF5C4Z83ECRZVDCJ4HP5E8T": {
+    "01KSQVZPPMDDZ82Q51MHK4CH8T": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Prudnik"
     },
-    "01KSF5C5014ZJWDNSDPMT7YD71": {
+    "01KSQVZPPN8HEA441WGQCBFFB9": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Strzelce Opolskie"
     },
-    "01KSF5C502FWASPWY3PCQZB6R2": {
+    "01KSQVZPPPY66QAND0CSK13PE4": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Opole"
     }
 }

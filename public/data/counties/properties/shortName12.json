@@ -1,156 +1,112 @@
 {
-    "01KSF5C4X3ZWHVTSC34MD05ZZ9": {
+    "01KSQVZPMR7PN8G3GP9YCBJW5V": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "bocheński"
     },
-    "01KSF5C4X4ZKR0MDSKQR7M7HZX": {
+    "01KSQVZPMSQEDX6HFN9HK155CS": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "brzeski"
     },
-    "01KSF5C4X4SHCZJ5B3X3MNRGBE": {
+    "01KSQVZPMS5CS0759W1M073AHX": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "chrzanowski"
     },
-    "01KSF5C4X512TVQW1MZDZRVYJ2": {
+    "01KSQVZPMT2EF6KQZ50J9HDNW3": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "dąbrowski"
     },
-    "01KSF5C4X6ES7RGVC80B3W3BGS": {
+    "01KSQVZPMVS49MQY5NC2SJGX14": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "gorlicki"
     },
-    "01KSF5C4X7JVF82GC0WVVYTAF4": {
+    "01KSQVZPMVN4ST7SSNXNJT2AK9": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "krakowski"
     },
-    "01KSF5C4X8731498Q3DQC1T9JX": {
+    "01KSQVZPMWTRE3GZ4SZR38K7SN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "limanowski"
     },
-    "01KSF5C4X817VZ3Q9SKJZK8XF7": {
+    "01KSQVZPMX4VHHXDB8NBT6A6SY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "miechowski"
     },
-    "01KSF5C4X9XPENNENGQ3NQVXJ4": {
+    "01KSQVZPMXZG7752H67495YMX6": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "myślenicki"
     },
-    "01KSF5C4XA5K9TKEQMVA37WXAZ": {
+    "01KSQVZPMY5XFV94M9BCGQXY35": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "nowosądecki"
     },
-    "01KSF5C4XBAQWF7AQ46CWTEZY8": {
+    "01KSQVZPMZDM3FN78S19MK2W0R": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "nowotarski"
     },
-    "01KSF5C4XC94BM8KEBDJ89CBEP": {
+    "01KSQVZPMZ1NJ6HN3VX09P42B1": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "olkuski"
     },
-    "01KSF5C4XCK2EDVK5WK4S593GR": {
+    "01KSQVZPN0A7SFARM98GJX9NXN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "oświęcimski"
     },
-    "01KSF5C4XD9H98ZQYV4H2NBGR2": {
+    "01KSQVZPN1XSNQENVET131SAPN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "proszowicki"
     },
-    "01KSF5C4XE7T2N7RRVCD3Q176X": {
+    "01KSQVZPN1ENE9DFR9H91WP24H": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "suski"
     },
-    "01KSF5C4XFS4CZ54EB1QTGP3CC": {
+    "01KSQVZPN2A1J133M8J2CPX1TM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "tarnowski"
     },
-    "01KSF5C4XF1ZSP542SZ4HSQPD8": {
+    "01KSQVZPN2SNQ7JK6AXW8KM0WE": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "tatrzański"
     },
-    "01KSF5C4XGG0ARMP0TGVWZ03H6": {
+    "01KSQVZPN3F55MA94VD15H1QJY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wadowicki"
     },
-    "01KSF5C4XHDG8CT6K9STBK2DQW": {
+    "01KSQVZPN4EYQSQ2TR957D2SBD": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wielicki"
     },
-    "01KSF5C4XJ3KDQ68MZZHWDMHJ9": {
+    "01KSQVZPN4JPVM135FHDV42QV2": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Kraków"
     },
-    "01KSF5C4XK803JHXHBBQW3F2JF": {
+    "01KSQVZPN5PFDM76DCHXVMKPFF": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Nowy Sącz"
     },
-    "01KSF5C4XM9TFW3MP6G7V152Y2": {
+    "01KSQVZPN63TR05V07Q7JKH0X0": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Tarnów"
     }
 }

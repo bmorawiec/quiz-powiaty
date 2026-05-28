@@ -1,296 +1,212 @@
 {
-    "01KSF5C4XQDFJWZWHJQZNHNF6P": {
+    "01KSQVZPN89GC9865BG4TVJ7T5": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat białobrzeski"
     },
-    "01KSF5C4XQ9YFTTH0KHAQ6EY63": {
+    "01KSQVZPN9DXGN52KC78WJ49TH": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat ciechanowski"
     },
-    "01KSF5C4XRG6867T6ERNZ0B2HM": {
+    "01KSQVZPNABR06VPPVTQ729GJ3": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat garwoliński"
     },
-    "01KSF5C4XS0VGYSCV2RDTZR50X": {
+    "01KSQVZPNAYV2X7VQP3YSG8HHE": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat gostyniński"
     },
-    "01KSF5C4XT10NZQVDTC79G1DYS": {
+    "01KSQVZPNB4GQWFV17QVJVCZM2": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat grodziski"
     },
-    "01KSF5C4XTMG4A5AZ7X435WNV2": {
+    "01KSQVZPNCP19J7416890G9V86": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat grójecki"
     },
-    "01KSF5C4XV6MNRTCVSH8FE86A7": {
+    "01KSQVZPNCDKEYS94JFY0817EB": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat kozienicki"
     },
-    "01KSF5C4XWGT5SVX2K05TDHKBS": {
+    "01KSQVZPNDMSP5CPD9GPQ2CV10": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat legionowski"
     },
-    "01KSF5C4XX70WZCRHFR9X17EKY": {
+    "01KSQVZPNEJ5RQPS4QDS7W2P93": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat lipski"
     },
-    "01KSF5C4XY5MYYDDQVJYE9Z45Q": {
+    "01KSQVZPNET9GHV8NRNAYB9WPD": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat łosicki"
     },
-    "01KSF5C4XYHSXHQD53HZYBHXTC": {
+    "01KSQVZPNF4FZ7NQHSZW5ZK94S": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat makowski"
     },
-    "01KSF5C4XZRX4SA5TECC36PEPN": {
+    "01KSQVZPNGTFHQHX4P7MC3TF43": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat miński"
     },
-    "01KSF5C4Y0P777BNST8EC58VPZ": {
+    "01KSQVZPNGVJHWWC3PJA6RJTAF": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat mławski"
     },
-    "01KSF5C4Y1S2B5DARZYBRCZY60": {
+    "01KSQVZPNHX140FYARVWY2MDC3": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat nowodworski"
     },
-    "01KSF5C4Y1W9M75VGVJ5W9QRY7": {
+    "01KSQVZPNHTY4YFJR2FWTDN8KB": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat ostrołęcki"
     },
-    "01KSF5C4Y21P8KMXHTB63BKXN5": {
+    "01KSQVZPNJB3NYBJAJJGY4AG5J": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat ostrowski"
     },
-    "01KSF5C4Y38K9A8N6PFFXADEH1": {
+    "01KSQVZPNKMFX9KP0A0QFCYZYJ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat otwocki"
     },
-    "01KSF5C4Y4ABDFT4HW800XMHDP": {
+    "01KSQVZPNKAR824VNJVXTJHV5N": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat piaseczyński"
     },
-    "01KSF5C4Y52808P2R327NGEX6W": {
+    "01KSQVZPNMVD19841M8CVE8VRK": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat płocki"
     },
-    "01KSF5C4Y5ZDR2G1YHAPG2NHH4": {
+    "01KSQVZPNNF1Y7EYZ2YGJGKN5A": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat płoński"
     },
-    "01KSF5C4Y6A6JFNACS704JP9Y5": {
+    "01KSQVZPNN35ZGDPV737HKETGC": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat pruszkowski"
     },
-    "01KSF5C4Y76GD3Q1FD1055JD4V": {
+    "01KSQVZPNPR9NJ21NKN050PWVP": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat przasnyski"
     },
-    "01KSF5C4Y87EBR4STK7Q5CA96V": {
+    "01KSQVZPNQ3QDXCXY0MHJWBFQK": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat przysuski"
     },
-    "01KSF5C4Y9M8HK603JBQ3MMACV": {
+    "01KSQVZPNRGCACX55AWVZ3YYGH": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat pułtuski"
     },
-    "01KSF5C4YATJWZ90T79APTCQ8Y": {
+    "01KSQVZPNS7AYS37Q1NT8469BK": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat radomski"
     },
-    "01KSF5C4YBF8456M17Q1ES1YSH": {
+    "01KSQVZPNS2DV4F08ACGS2XHXT": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat siedlecki"
     },
-    "01KSF5C4YCHNTA3778P21X6GE8": {
+    "01KSQVZPNT5KY6AK58EPPX1T0A": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat sierpecki"
     },
-    "01KSF5C4YDHB6EAGQXC1VJ71TF": {
+    "01KSQVZPNV558RD9BS62508FGJ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat sochaczewski"
     },
-    "01KSF5C4YEQ4GR662RMDYZ93JF": {
+    "01KSQVZPNW1APKJ82415026JCZ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat sokołowski"
     },
-    "01KSF5C4YFEW41B214N0N3J4SV": {
+    "01KSQVZPNXAFFP1X6TM2Y5CZM3": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat szydłowiecki"
     },
-    "01KSF5C4YGJCFC6ANRJAPJ75JZ": {
+    "01KSQVZPNYKGWHKKC05EFM1WGR": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat warszawski zachodni"
     },
-    "01KSF5C4YHYZ5D2CJGRDKE0GYD": {
+    "01KSQVZPNZKW1P9YM4WWPV2RWZ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat węgrowski"
     },
-    "01KSF5C4YJ6Y952KXS2BWQCRFY": {
+    "01KSQVZPP0FYMGPS1WRSHMMVXE": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wołomiński"
     },
-    "01KSF5C4YK08SCEA92HZY14DNK": {
+    "01KSQVZPP1N1QHD6KQSAJ3GAD5": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wyszkowski"
     },
-    "01KSF5C4YMZ92JG22GE43ZP72Z": {
+    "01KSQVZPP20JAVTXKBM1WDV4BN": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat zwoleński"
     },
-    "01KSF5C4YN3Q9XW6ECT3RBRV8D": {
+    "01KSQVZPP25B8F0PNGWZRPZ8VH": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat żuromiński"
     },
-    "01KSF5C4YPSHD0Z9FE8ESRN0VH": {
+    "01KSQVZPP3VKA0P42YJ2KDVYGN": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat żyrardowski"
     },
-    "01KSF5C4YQ8VCR51Q9AV8YHMEH": {
+    "01KSQVZPP4D6NWYJGK6R81911S": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Ostrołęka"
     },
-    "01KSF5C4YRY5E0V3Q48DWED7RT": {
+    "01KSQVZPP5GK8FG8K1PSGK4S3Q": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Płock"
     },
-    "01KSF5C4YSS74Y1GSJQYGP35ZF": {
+    "01KSQVZPP6HXG977GFCTJD2HAC": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Radom"
     },
-    "01KSF5C4YT06BG485DJABXPTNY": {
+    "01KSQVZPP7XPR9PVFCYZQQC2Y4": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Siedlce"
     },
-    "01KSF5C4YVE54SSWFQVY0CDMQE": {
+    "01KSQVZPP84G85DZJZ4PWQWPX2": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Warszawa"
     }
 }

@@ -1,170 +1,122 @@
 {
-    "01KSF5C4VFTMC9W6BDJH2ZVYH7": {
+    "01KSQVZPK898ACSBQNJKJKEXFA": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "bialski"
     },
-    "01KSF5C4VGAE88NYK16293S1R4": {
+    "01KSQVZPK86PKDTPD6YB02WBZ3": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "biłgorajski"
     },
-    "01KSF5C4VHP4XXW9KDXK5F4NEW": {
+    "01KSQVZPK96K5PKAHKQ6940MSY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "chełmski"
     },
-    "01KSF5C4VH8NFZG58K67XERZEN": {
+    "01KSQVZPKAAZF3GSC4B00JV4SA": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "hrubieszowski"
     },
-    "01KSF5C4VJR78V60S6MNWKMCRX": {
+    "01KSQVZPKA3NQP6PF5X4FDZDSY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "janowski"
     },
-    "01KSF5C4VJGFTXP3R2V8Z1E297": {
+    "01KSQVZPKBP2686AP9TS1MND23": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "krasnostawski"
     },
-    "01KSF5C4VKCXTJRRN7138T6ZX0": {
+    "01KSQVZPKCSMG0RHDEE5F145JP": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kraśnicki"
     },
-    "01KSF5C4VMCYPKX04F3584BWYJ": {
+    "01KSQVZPKC7YE82YGY602N0JSQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lubartowski"
     },
-    "01KSF5C4VMZX7KQVH6C6QAS1AY": {
+    "01KSQVZPKDX7QJ6SDGNCYCNGMW": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lubelski"
     },
-    "01KSF5C4VNBD9M68G046ZBBSRG": {
+    "01KSQVZPKE5724QBXJZ5NAV7SG": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "łęczyński"
     },
-    "01KSF5C4VP7NM3KRG0D51SJEZV": {
+    "01KSQVZPKENK2B7PGNRJMSQA73": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "łukowski"
     },
-    "01KSF5C4VPF3EJAGXDDD7E34YR": {
+    "01KSQVZPKFDQ6BVX669CMRV9MV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "opolski"
     },
-    "01KSF5C4VQ1SC2BVEC9E4PCV66": {
+    "01KSQVZPKGTF2VPS5RS2PJ44GX": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "parczewski"
     },
-    "01KSF5C4VR1MB9MJ1A7KMFRQ8E": {
+    "01KSQVZPKGTYD1GHETWY8P5TEF": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "puławski"
     },
-    "01KSF5C4VRPP1BSSYGX32PV48T": {
+    "01KSQVZPKHRASYB5AR70N8KSP1": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "radzyński"
     },
-    "01KSF5C4VSW5B5RF7WV6J62019": {
+    "01KSQVZPKJMDHW9D83T6NMHYH3": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "rycki"
     },
-    "01KSF5C4VT18R26C90NW9229A8": {
+    "01KSQVZPKJCYKMW8G7SRVYNHZ6": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "świdnicki"
     },
-    "01KSF5C4VT8KYE5WJGZ2YDR9XG": {
+    "01KSQVZPKKTYWP6DMWP5AWEGNQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "tomaszowski"
     },
-    "01KSF5C4VVV5Q4V1J2FVGXHYVZ": {
+    "01KSQVZPKMHY6B6MBWQAXMQS9X": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "włodawski"
     },
-    "01KSF5C4VVQJZWW3PSBATWHHR3": {
+    "01KSQVZPKM89W3AP99M8BR9X2Q": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "zamojski"
     },
-    "01KSF5C4VWR9DBKX41KQRF3PSJ": {
+    "01KSQVZPKNC4N9NCNP81BKRCPK": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Biała Podlaska"
     },
-    "01KSF5C4VXYZ09TN4741S7HFJQ": {
+    "01KSQVZPKPYQDGN34TT0KY29B7": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Chełm"
     },
-    "01KSF5C4VYZ2NMRTA70Z6KZAXC": {
+    "01KSQVZPKQD775S9ZNJR55PXRV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Lublin"
     },
-    "01KSF5C4VZGG78JZRASJJZBVZ9": {
+    "01KSQVZPKQ9VQAPXXP4EAQ0TNV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Zamość"
     }
 }

@@ -1,86 +1,62 @@
 {
-    "01KSF5C4Z1AN191SCM7NF8ZQT8": {
+    "01KSQVZPPDHH8R46R13H974BHJ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat brzeski"
     },
-    "01KSF5C4Z2TB7XGVF4ESMQAGQ1": {
+    "01KSQVZPPEDRD2E8E1CFZ9KP92": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat głubczycki"
     },
-    "01KSF5C4Z22BNWQ23BEJF0SA2H": {
+    "01KSQVZPPF9FTTDWN0RS2WNCME": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat kędzierzyńsko-kozielski"
     },
-    "01KSF5C4Z3SSS2RB9BZFRTXEZZ": {
+    "01KSQVZPPGW7QWG10PH7HZSJJ8": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat kluczborski"
     },
-    "01KSF5C4Z4AXHAEMY2HPW06RYM": {
+    "01KSQVZPPGZ857D0SA2GYGTAG2": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat krapkowicki"
     },
-    "01KSF5C4Z5MCC01P2E3J6VVDD2": {
+    "01KSQVZPPHAYED8BAB5QB736YQ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat namysłowski"
     },
-    "01KSF5C4Z51BEG4T8H8T9F6WKP": {
+    "01KSQVZPPJWT9EJM20RTB6ER2T": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat nyski"
     },
-    "01KSF5C4Z6QB016CZW22EFRGJ7": {
+    "01KSQVZPPKV6GDP03Y861V43XB": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat oleski"
     },
-    "01KSF5C4Z7D1V7BXSMCGPGARE6": {
+    "01KSQVZPPKMXKPT18ZTPBF315Z": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat opolski"
     },
-    "01KSF5C4Z877J5F1ASX2JSKSDR": {
+    "01KSQVZPPMQND4VBRPW4P3F3J6": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat prudnicki"
     },
-    "01KSF5C501DPY61T870C536QNG": {
+    "01KSQVZPPN0FKRSYN1B6XRGQPQ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat strzelecki"
     },
-    "01KSF5C502XW5G926295D9WQ0R": {
+    "01KSQVZPPP6NXY350HBFF3PN02": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Opole"
     }
 }

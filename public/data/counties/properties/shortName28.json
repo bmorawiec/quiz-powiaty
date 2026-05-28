@@ -1,149 +1,107 @@
 {
-    "01KSF5C5382YSSCEYXJEEZKNYG": {
+    "01KSQVZPTK85ZCJQ30HJQ9PFM5": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "bartoszycki"
     },
-    "01KSF5C538QZCF25TKGQVFEPZ8": {
+    "01KSQVZPTMR1601D2528ZTQMWK": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "braniewski"
     },
-    "01KSF5C539K2AKJB1412RAJGAT": {
+    "01KSQVZPTN5XDKZHM9PN764WWT": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "działdowski"
     },
-    "01KSF5C53AJQ32TKJT2DR62J62": {
+    "01KSQVZPTNASG8793BQB754AGT": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "elbląski"
     },
-    "01KSF5C53BWZDRRE42CBRBJ2V7": {
+    "01KSQVZPTPFA14H3A4Q4ZS9BCZ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "ełcki"
     },
-    "01KSF5C53CHEPEQRDGTNBXCK7R": {
+    "01KSQVZPTQQJ1NHN5KV3GPE0YZ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "giżycki"
     },
-    "01KSF5C53D40MD4EEHNW8RT651": {
+    "01KSQVZPTQD7E28NPB2EEZ3TGY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "iławski"
     },
-    "01KSF5C53DREK92ERVSZ3M9MFP": {
+    "01KSQVZPTR7CZTNXPM6FP3HRH9": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kętrzyński"
     },
-    "01KSF5C53EZHNF2PKYH5D5QKQF": {
+    "01KSQVZPTSTRXGR0QKB53WNV2H": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lidzbarski"
     },
-    "01KSF5C53FS76ZP03FWSXMB4GX": {
+    "01KSQVZPTSQYMSF1ZT4JSRE2KJ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "mrągowski"
     },
-    "01KSF5C53GGJCW227MM3N0G0PZ": {
+    "01KSQVZPTT5H028T9F08NGZXH4": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "nidzicki"
     },
-    "01KSF5C53H1QT2HC4EP6QFGTH9": {
+    "01KSQVZPTVCGJ8C3S4QVTQC7MA": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "nowomiejski"
     },
-    "01KSF5C53J7PPVTK371FWJYH1P": {
+    "01KSQVZPTWG70FBD72MEVGRYVM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "olecki"
     },
-    "01KSF5C53KD1RB90MXKG2DZTMW": {
+    "01KSQVZPTXW2FRTW7BBYWXKMFM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "olsztyński"
     },
-    "01KSF5C53MV5S5PKHZSND0A4B2": {
+    "01KSQVZPTX9C0Q9QBC3VSBMC1H": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "ostródzki"
     },
-    "01KSF5C53ND8KXWYM5PMQWN620": {
+    "01KSQVZPTYXZ7HSEV3H62EV7DB": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "piski"
     },
-    "01KSF5C53PMJ4G5Y1JBXD3VYFQ": {
+    "01KSQVZPTZ5ED6WHQNAGJ98DX0": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "szczycieński"
     },
-    "01KSF5C53QSVF79SHA1X4Z3367": {
+    "01KSQVZPV0CFABV6V8Z72TQQJP": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "gołdapski"
     },
-    "01KSF5C53QD4JZ8MWD4BJTDQKQ": {
+    "01KSQVZPV1GA74WFMJRDNAXWW3": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "węgorzewski"
     },
-    "01KSF5C53RFES4H0W8J43YHJY0": {
+    "01KSQVZPV2P1TBWD4Y7A0V6298": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Elbląg"
     },
-    "01KSF5C53SHV9Z7Y1K4EPBVY2S": {
+    "01KSQVZPV3BVRP8HACRXYD6KWV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Olsztyn"
     }
 }

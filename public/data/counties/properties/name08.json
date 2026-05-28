@@ -1,100 +1,72 @@
 {
-    "01KSF5C4W2JPWQ8Q3SX8RKZWX0": {
+    "01KSQVZPKV4Z23CBHPY41VPWDJ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat gorzowski"
     },
-    "01KSF5C4W3S1235E02CTGY01B4": {
+    "01KSQVZPKV0XKFPG1DY7WCBNAR": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat krośnieński"
     },
-    "01KSF5C4W35WX6NZ5ZE9HFMPB6": {
+    "01KSQVZPKWN6X2NYG60K2RE33V": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat międzyrzecki"
     },
-    "01KSF5C4W46YEKSBX783X0DX1R": {
+    "01KSQVZPKX0E0M8F9J93S6BHZR": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat nowosolski"
     },
-    "01KSF5C4W5ZB3A25DTAJC2JSS9": {
+    "01KSQVZPKXP0THZXE098SSS072": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat słubicki"
     },
-    "01KSF5C4W5W3BX60B7RFQVS830": {
+    "01KSQVZPKY3RENPFVX8CXRZXJG": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat strzelecko-drezdenecki"
     },
-    "01KSF5C4W6631SB3RGPCVM53SE": {
+    "01KSQVZPKZDA0VF76ZWY3XCTYN": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat sulęciński"
     },
-    "01KSF5C4W7Z6RD3MV9HX1B3XYP": {
+    "01KSQVZPKZ551KNS0SNC2N5Y94": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat świebodziński"
     },
-    "01KSF5C4W7CW3NH5NN1VT9W46F": {
+    "01KSQVZPM01ZVVXZDAMC7960ZM": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat zielonogórski"
     },
-    "01KSF5C4W8DSB22YXZDFDBEDVM": {
+    "01KSQVZPM1X1BJB18A8DQ0F92Q": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat żagański"
     },
-    "01KSF5C4W9ZAQEP7M0596TB6ZV": {
+    "01KSQVZPM117NE7YADZS2S3V3W": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat żarski"
     },
-    "01KSF5C4WAHJVEVEPJYDJ0JMZ7": {
+    "01KSQVZPM2K7FVZBTR2NC3G3KS": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wschowski"
     },
-    "01KSF5C4WAV4SS6NVRX494SVCG": {
+    "01KSQVZPM3XHBBV72GRNNBDMVY": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Gorzów Wielkopolski"
     },
-    "01KSF5C4WBSDSXDCQ0J77C2GB6": {
+    "01KSQVZPM36G1X6HX0NFV691KN": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Zielona Góra"
     }
 }

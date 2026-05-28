@@ -1,149 +1,107 @@
 {
-    "01KSF5C55MA9HKFTV56PYF9KV0": {
+    "01KSQVZPW6R6HSHD8PTPDMBW84": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "białogardzki"
     },
-    "01KSF5C55MKSNVTA3NWJ1GKMC9": {
+    "01KSQVZPW624AQTC5F9HE5D5KR": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "choszczeński"
     },
-    "01KSF5C55N3DRVFX2HVQ1D5VQM": {
+    "01KSQVZPW7NBQVD3W0E9QAF2N1": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "drawski"
     },
-    "01KSF5C55N41S73BFMB2FBCXMG": {
+    "01KSQVZPW704HJFWA5ANSS0TP4": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "goleniowski"
     },
-    "01KSF5C55P7BXF13TRE6SM7SC9": {
+    "01KSQVZPW8TJ7T5SRZA4FYTZ6M": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "gryficki"
     },
-    "01KSF5C55QHQ9ZA73A781KX0E2": {
+    "01KSQVZPW9AW1YQ7CN5YW72JKZ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "gryfiński"
     },
-    "01KSF5C55QYK4YQ8YH5E4EKKT2": {
+    "01KSQVZPW9CQN6F9YFYR5EXZV1": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kamieński"
     },
-    "01KSF5C55R58769EYMPM4SHQX3": {
+    "01KSQVZPWA9158RV4HCJ9RSF6P": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kołobrzeski"
     },
-    "01KSF5C55SGQG5A0EKZCTKX4AT": {
+    "01KSQVZPWB4Q4T3EB4KX84G8FK": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "koszaliński"
     },
-    "01KSF5C55S8N2KTS3J9Y6KCBS9": {
+    "01KSQVZPWBPG4Q7BAKFP8QZP1D": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "myśliborski"
     },
-    "01KSF5C55TE6QKZ3028DZSMZDC": {
+    "01KSQVZPWCH6Y4CRFZ0B8X8P76": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "policki"
     },
-    "01KSF5C55V7Z37JTPVHM8M47YW": {
+    "01KSQVZPWDDV6T5RWY8XFW3FR0": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "pyrzycki"
     },
-    "01KSF5C55W47NEKKBE6CG7Q8BJ": {
+    "01KSQVZPWD7NGJCASFXM3FB7QG": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sławieński"
     },
-    "01KSF5C55WGSB8D7C32V7SY192": {
+    "01KSQVZPX30D98PMNMTEA3K80B": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "stargardzki"
     },
-    "01KSF5C55XG3ZFGAP6BCZNCQ35": {
+    "01KSQVZPX4NH941JVXZXEGA4JY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "szczecinecki"
     },
-    "01KSF5C55YDT11S4EWZXQZSBTE": {
+    "01KSQVZPX4JYW2WF37SMYKZRZF": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "świdwiński"
     },
-    "01KSF5C55ZT54V4SKXB36GA5EM": {
+    "01KSQVZPX5S3QFZ5SQFJ1KG0CR": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wałecki"
     },
-    "01KSF5C55Z4WHRBDTV8A92CYNQ": {
+    "01KSQVZPX6N9N6T0Z3HMDNR1T4": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "łobeski"
     },
-    "01KSF5C560M054K4DYC45S3AB2": {
+    "01KSQVZPX76QBH7G8G61X6PK2F": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Koszalin"
     },
-    "01KSF5C561GAVAZJNDGFA88NV6": {
+    "01KSQVZPX88H78KV660X0XD773": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Szczecin"
     },
-    "01KSF5C562P6TC86V08H08C7GD": {
+    "01KSQVZPX8M5T9WC63AAZ5W2J1": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Świnoujście"
     }
 }

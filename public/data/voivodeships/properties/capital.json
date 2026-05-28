@@ -1,128 +1,92 @@
 {
-    "01KSF5C4RBZBWTWZEHW708RK8J": {
+    "01KSQVZPGRYR74B2P1181RYYS3": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Wrocław"
     },
-    "01KSF5C4RCYNPQH3VHM568FQS5": {
+    "01KSQVZPGSECWRWNVNN6500MJ3": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Bydgoszcz"
     },
-    "01KSF5C4RCF6D8NFZQG0PXQ0E2": {
+    "01KSQVZPGTTF808RYZFWMN222J": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Toruń"
     },
-    "01KSF5C4RDH83B9RG4X2D8YC9T": {
+    "01KSQVZPGT85R030JNYHV55TKM": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Lublin"
     },
-    "01KSF5C4REZZTY0NZDZ1ANHJHN": {
+    "01KSQVZPGV7GMRH92JM5AB0FBW": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Gorzów Wielkopolski"
     },
-    "01KSF5C4RE1NCC2PT9TBZ4QTNS": {
+    "01KSQVZPGV9NEXWFHM02F96RYP": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Zielona Góra"
     },
-    "01KSF5C4RFHQ1YNF11TN4118M3": {
+    "01KSQVZPGW5EA6K4DTW26F8T9R": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Łódź"
     },
-    "01KSF5C4RGPZ5Y2AEK8PYR686R": {
+    "01KSQVZPGXSWEWJC1EC48MVWJ3": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kraków"
     },
-    "01KSF5C4RH5AW67BG3QQRHJM8F": {
+    "01KSQVZPGYW6VJQF1N1BQTW7YT": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Warszawa"
     },
-    "01KSF5C4RJCPYCJTD68XGAARA0": {
+    "01KSQVZPGZ421D8JS5FQ276DBC": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Opole"
     },
-    "01KSF5C4RKXA4MCMNVZZ5VYQS8": {
+    "01KSQVZPH09PCBWRCWE0AVRMV4": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Rzeszów"
     },
-    "01KSF5C4RMRC3YMSVRM3ZZ6A3Z": {
+    "01KSQVZPH1Y42X36E72NY7F954": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Białystok"
     },
-    "01KSF5C4RNEXFQ1PDWPHZC6E1Y": {
+    "01KSQVZPH2S1KSR6Y3ZFQG7CKY": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Gdańsk"
     },
-    "01KSF5C4RP6PR72XDCMDAKPGD9": {
+    "01KSQVZPH3K6MFHEPQJR0DWCT8": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Katowice"
     },
-    "01KSF5C4RQ2SF9MYCWDXRVY323": {
+    "01KSQVZPH45XE2V5NN96464HEG": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kielce"
     },
-    "01KSF5C4RRBEZ22WRJYGRHWXG3": {
+    "01KSQVZPH4065GY659YEVTFBJJ": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Olsztyn"
     },
-    "01KSF5C4RSFWWNRGHXGG1EA570": {
+    "01KSQVZPH5AZKC2KMYRANPENF4": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Poznań"
     },
-    "01KSF5C4RS3XGFQZ1Z3VGJ2ZVV": {
+    "01KSQVZPH664SA8MA7PCDFTPGS": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Szczecin"
     }
 }

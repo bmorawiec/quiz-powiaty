@@ -1,156 +1,112 @@
 {
-    "01KSF5C4X3HCEP8BA4YQ7CJT8R": {
+    "01KSQVZPMRCCRR9H0TXGNZ6BQM": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Bochnia"
     },
-    "01KSF5C4X4R6BDAZT2ZNPG36GP": {
+    "01KSQVZPMS0745781YREP853H4": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Brzesko"
     },
-    "01KSF5C4X4K3PTK62HPSSVGFCT": {
+    "01KSQVZPMS4KKQZ0JGMQF0KA0G": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Chrzanów"
     },
-    "01KSF5C4X599FTH6QBFE13J5DV": {
+    "01KSQVZPMTRVBBTKHWD5KHSSWK": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Dąbrowa Tarnowska"
     },
-    "01KSF5C4X6W362SDQV0NVK09M1": {
+    "01KSQVZPMVQYAWYH33GNDZ1EPP": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Gorlice"
     },
-    "01KSF5C4X7R5ATA7E9ZWRZ8XKT": {
+    "01KSQVZPMVATVEHYGM5ATKKDG9": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kraków"
     },
-    "01KSF5C4X8EA9RB3SN67J7DG8C": {
+    "01KSQVZPMWA73XAD5WSCVDAZE1": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Limanowa"
     },
-    "01KSF5C4X81VJ3XSNYQXZ5SSP9": {
+    "01KSQVZPMX324CR6YASRC1DJ7C": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Miechów"
     },
-    "01KSF5C4X9SRQTE3CB9BVAKQPT": {
+    "01KSQVZPMX4GNEKV91ZXZ5PD14": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Myślenice"
     },
-    "01KSF5C4XAXFF6F9G3FJZH7080": {
+    "01KSQVZPMYEZ0ZHMAJJJ30C62A": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Nowy Sącz"
     },
-    "01KSF5C4XBCT6FTY1Q1QQK03KN": {
+    "01KSQVZPMZH0SKG926QA1VC15S": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Nowy Targ"
     },
-    "01KSF5C4XCP69WJ8KY2HPDG9CE": {
+    "01KSQVZPMZBWWH99E6DJ6X544A": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Olkusz"
     },
-    "01KSF5C4XCF2NF5JAWMZ5R37BQ": {
+    "01KSQVZPN0J5BX66CMHS1D6GD9": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Oświęcim"
     },
-    "01KSF5C4XDF4PPD8XDZVFKH26N": {
+    "01KSQVZPN1C5G127VYRYV75S4J": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Proszowice"
     },
-    "01KSF5C4XEKCR64NJB01D3G1JR": {
+    "01KSQVZPN1T087EMP3P8CECFYE": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Sucha Beskidzka"
     },
-    "01KSF5C4XFCJFYJWD9YD9T5H9D": {
+    "01KSQVZPN2DPYP6GWPZ1ZE4BWD": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Tarnów"
     },
-    "01KSF5C4XG4X0NMMZDWSTT2ANZ": {
+    "01KSQVZPN3WJ2M77HQG06ZZT1P": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Zakopane"
     },
-    "01KSF5C4XGZH7PAQZC72AJZRTS": {
+    "01KSQVZPN319A3S7DNMW20ZPBW": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Wadowice"
     },
-    "01KSF5C4XHJ61JD60PBNK0GJAN": {
+    "01KSQVZPN4W6QHT0AX9TC851K3": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Wieliczka"
     },
-    "01KSF5C4XJACRDKD6S56XKQ7G4": {
+    "01KSQVZPN5VMPH94TQ5WB5R1WW": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kraków"
     },
-    "01KSF5C4XKPV683133P3VRSMG0": {
+    "01KSQVZPN5F7FPQ7DKDKWAS6H2": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Nowy Sącz"
     },
-    "01KSF5C4XMZ9CE10CS5AT5SX5A": {
+    "01KSQVZPN6SDW774BPPARPE686": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Tarnów"
     }
 }

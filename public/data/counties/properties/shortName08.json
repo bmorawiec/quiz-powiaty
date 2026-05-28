@@ -1,100 +1,72 @@
 {
-    "01KSF5C4W2P8C47M69ZH91Y53V": {
+    "01KSQVZPKV8MDHN6VX8TEJ0KVX": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "gorzowski"
     },
-    "01KSF5C4W3PC3TSP02627F6EV7": {
+    "01KSQVZPKWY7XAGEPZXCYWZ5J5": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "krośnieński"
     },
-    "01KSF5C4W3NPX6HPG8MDYKQBFR": {
+    "01KSQVZPKWHMQY7M9FRDBVTHPV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "międzyrzecki"
     },
-    "01KSF5C4W45Q1JASFJX94MRAHZ": {
+    "01KSQVZPKXXNZ5CQXVX3A4Q1HX": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "nowosolski"
     },
-    "01KSF5C4W5NNE5EZ86X1CT71X1": {
+    "01KSQVZPKYC9PKXHNY73GA4Z1E": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "słubicki"
     },
-    "01KSF5C4W5XTMD58SSHQF0S4QP": {
+    "01KSQVZPKYKT31FSJ8TGS4GQJR": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "strzelecko-drezdenecki"
     },
-    "01KSF5C4W6PPEPDW34Z8EFP63S": {
+    "01KSQVZPKZBXJEE60ZN492E12F": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sulęciński"
     },
-    "01KSF5C4W7QJAC5KNG1S72QPHS": {
+    "01KSQVZPKZ6KPET1E8886MWMJ9": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "świebodziński"
     },
-    "01KSF5C4W8R1GH74A9QKWHXVS1": {
+    "01KSQVZPM0J5YS6ABP8KXVBKZQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "zielonogórski"
     },
-    "01KSF5C4W82BQ160K2PYHXH4FK": {
+    "01KSQVZPM1RQ0KATHPY7JCEV8M": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "żagański"
     },
-    "01KSF5C4W9JJEF74SP4GZQ20F4": {
+    "01KSQVZPM2K0WJGX7MCCZ3X0SW": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "żarski"
     },
-    "01KSF5C4WAQ97W6KBWGY3A5HHS": {
+    "01KSQVZPM2GX5FZWYSBS4MRG6B": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wschowski"
     },
-    "01KSF5C4WAGJXEMJT1RGSRZFEW": {
+    "01KSQVZPM3W8S67KEA09X313BR": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Gorzów Wielkopolski"
     },
-    "01KSF5C4WBCFQFPKTAYGZZF0QJ": {
+    "01KSQVZPM3HPTBEDE6SR93Y8JF": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Zielona Góra"
     }
 }

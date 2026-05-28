@@ -1,170 +1,122 @@
 {
-    "01KSF5C4VF4R98SE3DC726QY5N": {
+    "01KSQVZPK7RN9D9DDCYBQ582ZC": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat bialski"
     },
-    "01KSF5C4VGHM3YEY754FJJVH5H": {
+    "01KSQVZPK8X3QPM98X9Q1BQWSV": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat biłgorajski"
     },
-    "01KSF5C4VGY3CP4EYTWS8A7WVX": {
+    "01KSQVZPK97AW688XECBHHRFZV": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat chełmski"
     },
-    "01KSF5C4VHS1AKBSGNR5D519JK": {
+    "01KSQVZPKA0Z0HTERRKNFQMRQ8": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat hrubieszowski"
     },
-    "01KSF5C4VJ4KC9CVZJZJK26K9H": {
+    "01KSQVZPKAHYJCTYZMA72C150N": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat janowski"
     },
-    "01KSF5C4VJA0A1S93BQRY66V2V": {
+    "01KSQVZPKBE32DSYFF2Q54ST11": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat krasnostawski"
     },
-    "01KSF5C4VKF2X0GJZ9FPVQPR23": {
+    "01KSQVZPKBF2B52DRFCTW17Q6F": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat kraśnicki"
     },
-    "01KSF5C4VMB1305BHD87195F2Z": {
+    "01KSQVZPKCKWDJGSTTAX72A5B5": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat lubartowski"
     },
-    "01KSF5C4VMWVJNKBJBS56X6762": {
+    "01KSQVZPKDD2MR5KKA8Z8Y24X1": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat lubelski"
     },
-    "01KSF5C4VNYE9D48EHFZPRDMBZ": {
+    "01KSQVZPKDS6MGG1CFSZGVEMZP": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat łęczyński"
     },
-    "01KSF5C4VPMYF0KN95Q46RFAWK": {
+    "01KSQVZPKEJQFESRAAK4V0KMXW": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat łukowski"
     },
-    "01KSF5C4VPPPXC4D6GDKZ9922X": {
+    "01KSQVZPKF49WG2TZZF81ADRHZ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat opolski"
     },
-    "01KSF5C4VQBEJ4495TCZV7K58H": {
+    "01KSQVZPKGW0P3CHY9203Z5X1Y": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat parczewski"
     },
-    "01KSF5C4VQEF282HX6Z4YVPBYB": {
+    "01KSQVZPKGVNDRSHQTFCPM77PD": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat puławski"
     },
-    "01KSF5C4VR4J5HYMGFMGRF4RZ1": {
+    "01KSQVZPKHSFZT3CE66FF6JKTK": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat radzyński"
     },
-    "01KSF5C4VS0QSET8W8XJ1E8653": {
+    "01KSQVZPKHW309D6WR2V6E0T5J": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat rycki"
     },
-    "01KSF5C4VSWJ4PEQVGRC440CYG": {
+    "01KSQVZPKJ9YH9WJ55CGN1D0VR": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat świdnicki"
     },
-    "01KSF5C4VTAJSRWRKEDZE6TFJ0": {
+    "01KSQVZPKKZC3VV3XSJF1JMBJH": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat tomaszowski"
     },
-    "01KSF5C4VVC6FD1EH67M84P1PB": {
+    "01KSQVZPKK4627YQBEAFD9TRFK": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat włodawski"
     },
-    "01KSF5C4VV0GVEGG16FD8N30P8": {
+    "01KSQVZPKMV7JV0XKVEK68G5N8": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat zamojski"
     },
-    "01KSF5C4VWH9ZD1K0SFD54QSG5": {
+    "01KSQVZPKNE15GADD9XGJBSWSQ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Biała Podlaska"
     },
-    "01KSF5C4VXK5HXWAD2WXHCD5PQ": {
+    "01KSQVZPKPPR6Y2XPKANNB2QEP": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Chełm"
     },
-    "01KSF5C4VY47948C2SFPBSV29R": {
+    "01KSQVZPKPVTS3T339BX1BJ6QR": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Lublin"
     },
-    "01KSF5C4VZJNFNDC84EM8N7KJQ": {
+    "01KSQVZPKQBGHPT73WY8CPXWEK": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Zamość"
     }
 }

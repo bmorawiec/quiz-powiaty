@@ -1,177 +1,127 @@
 {
-    "01KSF5C5050SQAG4MBNM76E5FX": {
+    "01KSQVZPPRWF59A3ZV5JHZ3MRA": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "bieszczadzki"
     },
-    "01KSF5C505P4ZRWX01WBH66HTK": {
+    "01KSQVZPPSAKW5RXG35KE7D8S7": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "brzozowski"
     },
-    "01KSF5C506H45F07YJD0VAK2GP": {
+    "01KSQVZPPSCPRSJ4XVNV6MMZMH": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "dębicki"
     },
-    "01KSF5C507MKEWMHYZGJMSTZD3": {
+    "01KSQVZPPT90BVMAC818Y8EV0D": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "jarosławski"
     },
-    "01KSF5C507064AKVGJ6DE30KKW": {
+    "01KSQVZPPVDEG8KBM4J9BTP6BS": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "jasielski"
     },
-    "01KSF5C508V525V5W1922MYB63": {
+    "01KSQVZPPWPCFX6Q1606RFHGS8": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kolbuszowski"
     },
-    "01KSF5C5090RKJM1MKWK82JPK4": {
+    "01KSQVZPPWVQA9CE12AW4556QD": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "krośnieński"
     },
-    "01KSF5C50AQ69A4H6QBRYXNKKW": {
+    "01KSQVZPPXV8510DX4VVNC79PJ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "leżajski"
     },
-    "01KSF5C50AE1R2Z81G0H8VNG2C": {
+    "01KSQVZPPYZ83MYZWV689TQN8V": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lubaczowski"
     },
-    "01KSF5C50B6DT3YNZ3BB3XF7G3": {
+    "01KSQVZPPZB37HYKV1X4X5DDQM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "łańcucki"
     },
-    "01KSF5C50C08XPG5PTS89ZY5WW": {
+    "01KSQVZPPZZHE7YCVQF37V7JHT": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "mielecki"
     },
-    "01KSF5C50DJA5ZJ3G96RG4B8YF": {
+    "01KSQVZPQ0WP8G8BZFG29WG1V1": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "niżański"
     },
-    "01KSF5C50DZMQ2KVTS5T1CHJGX": {
+    "01KSQVZPQ1FTCQMEJ1SJPD1QBM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "przemyski"
     },
-    "01KSF5C50E77RRJ0JTD99KXNSX": {
+    "01KSQVZPQ271ZJERK2N151N100": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "przeworski"
     },
-    "01KSF5C50F475XQVPPGCA5JDVW": {
+    "01KSQVZPQ37NDMCFJB60MXEH29": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "ropczycko-sędziszowski"
     },
-    "01KSF5C50GEKCTHZJAAB4BKGXX": {
+    "01KSQVZPQ4P950NDMNKNKJ59EM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "rzeszowski"
     },
-    "01KSF5C50GCMKGTX6S8WQ493HH": {
+    "01KSQVZPQ5G756TF3VVRHDZP1V": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sanocki"
     },
-    "01KSF5C50HWKRFPK1R3XW0KQGC": {
+    "01KSQVZPQ6RYKWD7DJM5F5GK5A": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "stalowowolski"
     },
-    "01KSF5C50J7SQ0T658B2KCZJ06": {
+    "01KSQVZPQ7W9M083Q989T0ZQ4P": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "strzyżowski"
     },
-    "01KSF5C50KHT2TQMQWCQR57VAD": {
+    "01KSQVZPQ9FNEYGRAFD64DA4TP": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "tarnobrzeski"
     },
-    "01KSF5C50M81T66Y654GX3H9Y0": {
+    "01KSQVZPQAN3ZK2XJADXZ9JV36": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "leski"
     },
-    "01KSF5C50NZ0DR62YDRJZ9B1JY": {
+    "01KSQVZPQBTMK8BWQBAQQAQS6K": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Krosno"
     },
-    "01KSF5C50PBEV9P2RMSX3HHF0K": {
+    "01KSQVZPQCPXV5TAWCP59T7DPE": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Przemyśl"
     },
-    "01KSF5C50QA0KC5WW2K17Z0NRY": {
+    "01KSQVZPQDWM9H5PN40S4NM4YX": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Rzeszów"
     },
-    "01KSF5C50RE9K26FXKDN6PZDYV": {
+    "01KSQVZPQETYV0NQRH042T46JK": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Tarnobrzeg"
     }
 }

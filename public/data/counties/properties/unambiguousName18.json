@@ -1,177 +1,127 @@
 {
-    "01KSF5C505K2VFZXNV3NKVCKQV": {
+    "01KSQVZPPR7F4CN62P136MG4PY": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat bieszczadzki"
     },
-    "01KSF5C505CMCAHRMEM63M7F79": {
+    "01KSQVZPPS0ARAKE1TQTSE3VJR": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat brzozowski"
     },
-    "01KSF5C50672J7EYJF6N1RX4CZ": {
+    "01KSQVZPPSP249EQ22K7JZ5EMD": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat dębicki"
     },
-    "01KSF5C507FDRSXW35EZYTA2YK": {
+    "01KSQVZPPT20BGX0S92ZGP1VT0": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat jarosławski"
     },
-    "01KSF5C5077CEWR7JHPXEQAQ58": {
+    "01KSQVZPPVER93Q6Y8FTC66X9D": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat jasielski"
     },
-    "01KSF5C508YGDGJXEKYSF96C12": {
+    "01KSQVZPPW188DVAG61EERNWH4": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat kolbuszowski"
     },
-    "01KSF5C509Z8RBS1C2X5498CHD": {
+    "01KSQVZPPWS824RG2TZBP2B5HX": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat krośnieński (Krosno)"
     },
-    "01KSF5C50ABBSGD239WV0NQTXR": {
+    "01KSQVZPPX4MRTXAFJJW6P2HZX": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat leżajski"
     },
-    "01KSF5C50AHNVRZDXFQ1P85GQ3": {
+    "01KSQVZPPYHS1737SHQDA85F3M": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat lubaczowski"
     },
-    "01KSF5C50B83ES1VEBXDKH7PHG": {
+    "01KSQVZPPZPFQZY25VPVZV92ZY": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat łańcucki"
     },
-    "01KSF5C50CHDPYKVR2ME34RRWQ": {
+    "01KSQVZPPZGXP42E4YPBFG32VM": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat mielecki"
     },
-    "01KSF5C50CTZHTA7TRD1XV4G26": {
+    "01KSQVZPQ05BC09RY4PFEYZN6T": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat niżański"
     },
-    "01KSF5C50DX9ZWCED5PPJQ008Z": {
+    "01KSQVZPQ1PXVEA58B1CH6BMTX": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat przemyski"
     },
-    "01KSF5C50E2P8MRR2E8BANHMJY": {
+    "01KSQVZPQ2JSB13TZZM27NVV0N": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat przeworski"
     },
-    "01KSF5C50FHYEZAQFA5M5ETPMB": {
+    "01KSQVZPQ367Y4H7WH47RFJH4A": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat ropczycko-sędziszowski"
     },
-    "01KSF5C50GZZ7JRNWCMJ3KARB3": {
+    "01KSQVZPQ48G7ENSGGK26THFN6": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat rzeszowski"
     },
-    "01KSF5C50G6XK9A41DKJ92V03N": {
+    "01KSQVZPQ5GAVHJFY5Q7FJMBGV": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat sanocki"
     },
-    "01KSF5C50HWMEB3EWDKNZ4KBFW": {
+    "01KSQVZPQ632P6E2C3G26WWQFD": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat stalowowolski"
     },
-    "01KSF5C50J1E18EQECRNR4QA6B": {
+    "01KSQVZPQ7WYQE4WYZJ8SP6698": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat strzyżowski"
     },
-    "01KSF5C50KE9FHNEK30HH73W7Y": {
+    "01KSQVZPQ80916EE5YT8A637D3": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat tarnobrzeski"
     },
-    "01KSF5C50MHCGGZP88QP8DHBXH": {
+    "01KSQVZPQAT0BNM1JWTACGKYBC": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat leski"
     },
-    "01KSF5C50NBVEQQF76C4AXGZNW": {
+    "01KSQVZPQBF7BQSQWFT05YEA45": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Krosno"
     },
-    "01KSF5C50PZX0B2ZPDKVA6FTNT": {
+    "01KSQVZPQCPRRHGF908KJ38Q98": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Przemyśl"
     },
-    "01KSF5C50QWGT8ZXNG16FWWNYB": {
+    "01KSQVZPQDA8VB54X3NMTJ7DQP": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Rzeszów"
     },
-    "01KSF5C50RW3E8GSD5VP05RM93": {
+    "01KSQVZPQE1BCPK0A402RZWMZ4": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Tarnobrzeg"
     }
 }

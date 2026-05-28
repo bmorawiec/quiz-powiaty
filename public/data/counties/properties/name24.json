@@ -1,254 +1,182 @@
 {
-    "01KSF5C51S7VNYK0TP4RS62EVV": {
+    "01KSQVZPS7C9JEKJRXPREV0Q78": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat będziński"
     },
-    "01KSF5C51T95K1RBDJGYHWSA22": {
+    "01KSQVZPS8ECST6KRA2ZSTFNR7": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat bielski"
     },
-    "01KSF5C51V3S0F1BCCA8VXK6C4": {
+    "01KSQVZPS8R9FPHD59D10NGG2D": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat cieszyński"
     },
-    "01KSF5C51WBZPK03GBZYAST328": {
+    "01KSQVZPS9Z7TKFRBMSGW3MP1R": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat częstochowski"
     },
-    "01KSF5C51WWKQMZN8BD65V8E4C": {
+    "01KSQVZPSAQQX5S2Q7CVYFNTMR": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat gliwicki"
     },
-    "01KSF5C51XYZZ00CW7B9SEXX16": {
+    "01KSQVZPSAX5X8Z9D6QKYTFXD1": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat kłobucki"
     },
-    "01KSF5C51YY8AWAZVCDBG719B1": {
+    "01KSQVZPSBK2ADCGM3MJF2S167": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat lubliniecki"
     },
-    "01KSF5C51Y9M1FH058JK7WYXYZ": {
+    "01KSQVZPSCBCXE7X1PB0VXA0FN": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat mikołowski"
     },
-    "01KSF5C51Z4GQV2NQ4EZ9NY0BF": {
+    "01KSQVZPSDSVAKMBVG49FX7GE2": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat myszkowski"
     },
-    "01KSF5C520P13JD0PD6447ZC1R": {
+    "01KSQVZPSDHSNZNZGERDQ2WTTC": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat pszczyński"
     },
-    "01KSF5C5205NJD5MARX3CA315S": {
+    "01KSQVZPSETF4DA9TW6J9EJHFT": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat raciborski"
     },
-    "01KSF5C521VDSAVZBZDRZ8BRWE": {
+    "01KSQVZPSFH8RMP97WD21JN6EX": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat rybnicki"
     },
-    "01KSF5C522MNCJQNSWCZW6RVMY": {
+    "01KSQVZPSFQP09JE8MW452C2T3": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat tarnogórski"
     },
-    "01KSF5C523VWGGJHXGC543MXTT": {
+    "01KSQVZPSGNW9PT3CR3GS1WXJG": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat bieruńsko-lędziński"
     },
-    "01KSF5C523FFN707CMSFAPNZGG": {
+    "01KSQVZPSH4ZCBWXQNPZ9PV2ZM": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wodzisławski"
     },
-    "01KSF5C5245DBC4JDZ3FN85J6N": {
+    "01KSQVZPSJF1359B159BTCBWHP": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat zawierciański"
     },
-    "01KSF5C525GCCN26KMW60JFZEF": {
+    "01KSQVZPSKP7AK8KM8T36STJ2B": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat żywiecki"
     },
-    "01KSF5C526Y50JKBR7JCFT9VA3": {
+    "01KSQVZPSKSYDK134AY4WCDE1E": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Bielsko-Biała"
     },
-    "01KSF5C5272ZYPECDSGZCJCGY5": {
+    "01KSQVZPSMNFN4H3QR22EQMQHR": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Bytom"
     },
-    "01KSF5C528CTFSYQM6Y09HYJ9Z": {
+    "01KSQVZPSNW4N115DVYHK6MKHM": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Chorzów"
     },
-    "01KSF5C528X8047YGQVY9E6KHJ": {
+    "01KSQVZPSPRMSH1R4A7A39VN99": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Częstochowa"
     },
-    "01KSF5C529NC3EXHTG9K0F1PYE": {
+    "01KSQVZPSQ75TFPPC023QKW5SG": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Dąbrowa Górnicza"
     },
-    "01KSF5C52AZZGEV1WCS9R1XM7M": {
+    "01KSQVZPSRZ3H9FBNRXDAF2P1Z": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Gliwice"
     },
-    "01KSF5C52BTZ503S1B8STGXVVR": {
+    "01KSQVZPSSYB4VA0KWCX1B5GNP": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Jastrzębie-Zdrój"
     },
-    "01KSF5C52C5910FYZCXXBPCGAF": {
+    "01KSQVZPSTACNE4CXQMYDBASRQ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Jaworzno"
     },
-    "01KSF5C52DYXAJ7K6J1YEQMA86": {
+    "01KSQVZPSVV7RFCB3ZB8KJPN82": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Katowice"
     },
-    "01KSF5C52ET5ZB2Q32J2FVK1M8": {
+    "01KSQVZPSWZKAYKS3N7YHKTNK1": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Mysłowice"
     },
-    "01KSF5C52F888ZDH4KKWPY59XD": {
+    "01KSQVZPSXTPVDEB0J6P6ZWN63": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Piekary Śląskie"
     },
-    "01KSF5C52GAT8VGNGG73MR0907": {
+    "01KSQVZPSY0CGVH8Q6A24GJZZX": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Ruda Śląska"
     },
-    "01KSF5C52H9QF3TKQ6M3GDKXDX": {
+    "01KSQVZPSZK2ZKX3X48AVWNM83": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Rybnik"
     },
-    "01KSF5C52JZ5TEA0Y73MQE1DZH": {
+    "01KSQVZPT0AQGM6CGESHYQDQJX": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Siemianowice Śląskie"
     },
-    "01KSF5C52KVCRJ3NDQD8XCNHEW": {
+    "01KSQVZPT18BA5SR69H5NWGQA6": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Sosnowiec"
     },
-    "01KSF5C52MMPY0VD32M9H251ET": {
+    "01KSQVZPT2ZPF4W3C8K9GQJQMS": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Świętochłowice"
     },
-    "01KSF5C52NR5ZC5GXHQEB62J5W": {
+    "01KSQVZPT3BZ6PEJPH1K72K1K8": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Tychy"
     },
-    "01KSF5C52PMB8X8WRY8EAYTQZS": {
+    "01KSQVZPT48AYB2CZ7R8YH8A87": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Zabrze"
     },
-    "01KSF5C52QBQ4AXA6RGPM9DCQ6": {
+    "01KSQVZPT5PJZHA6TBY1VSF5KY": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Żory"
     }
 }

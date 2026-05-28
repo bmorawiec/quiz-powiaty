@@ -1,163 +1,117 @@
 {
-    "01KSF5C4TXTGFWFAGWR82DX6PC": {
+    "01KSQVZPJB6Q0BDKX1J6JNAXN4": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat aleksandrowski"
     },
-    "01KSF5C4TYAJZ93S16FA538T6E": {
+    "01KSQVZPJBMY6M3W6CV2718HZ7": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat brodnicki"
     },
-    "01KSF5C4TYZJSQGGWQ2QH4XS0G": {
+    "01KSQVZPJC3VT8P13CPK61V0TT": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat bydgoski"
     },
-    "01KSF5C4TZDC0635VD1TK703R9": {
+    "01KSQVZPJDXB065XPK9V1GE62B": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat chełmiński"
     },
-    "01KSF5C4V04P2J5RQ6XKQXA01H": {
+    "01KSQVZPJDEPKYBR11BQJQAA2H": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat golubsko-dobrzyński"
     },
-    "01KSF5C4V0VVZGTDFG27CS3BDK": {
+    "01KSQVZPJEREHN0SJ10ERWP76X": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat grudziądzki"
     },
-    "01KSF5C4V1BXNWF6VEZ0XQ7109": {
+    "01KSQVZPJFFMDF9MVPM9YQRKG4": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat inowrocławski"
     },
-    "01KSF5C4V2PN1Q1G7R9KJWXQ5X": {
+    "01KSQVZPJF6HVW6H6K5WE1Q8WA": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat lipnowski"
     },
-    "01KSF5C4V20VNRVPEZA1PRHP36": {
+    "01KSQVZPJGGQZ3XT05K3P65WJX": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat mogileński"
     },
-    "01KSF5C4V3YJCG8517C78GR1YE": {
+    "01KSQVZPJHM2WM6JHNGWQVRKPC": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat nakielski"
     },
-    "01KSF5C4V3JK5VMXDABWE6EPC4": {
+    "01KSQVZPJHGA5M3KHEK9RNA5KE": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat radziejowski"
     },
-    "01KSF5C4V4ZKZY3QGHBWW7PC9S": {
+    "01KSQVZPJJ1YMRNJ8Z7YQRPS69": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat rypiński"
     },
-    "01KSF5C4V5DM2K2AF7Y9SHQ1F8": {
+    "01KSQVZPJKF07WB4M33KCJ6K1N": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat sępoleński"
     },
-    "01KSF5C4V6YZBDWEX6GGYWV9SS": {
+    "01KSQVZPJKK3M494HVCKCJ608C": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat świecki"
     },
-    "01KSF5C4V6SKZ16FV0PAPDA3CX": {
+    "01KSQVZPJMV0JW3GNW8SAE482C": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat toruński"
     },
-    "01KSF5C4V7FH51JSAGPX2476ZF": {
+    "01KSQVZPJN5J41G2XEN7NXQC41": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat tucholski"
     },
-    "01KSF5C4V8N1YJQ7STMRPBZYXN": {
+    "01KSQVZPJNS2ZPEFBCHJAEDB9Z": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wąbrzeski"
     },
-    "01KSF5C4V8CYM8D240VG2N2HWQ": {
+    "01KSQVZPJP44CWWPB26X66Y31T": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat włocławski"
     },
-    "01KSF5C4V966PJ1WXEV26GA9VE": {
+    "01KSQVZPJQ3P26R5KDKWQAR1ZB": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat żniński"
     },
-    "01KSF5C4VA5FQJR0RA8VJ6AADG": {
+    "01KSQVZPJRCGA3BDX74E5SKDY3": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Bydgoszcz"
     },
-    "01KSF5C4VA170KDRXND8KQG9WP": {
+    "01KSQVZPJR6K95H73MEPV86RR7": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Grudziądz"
     },
-    "01KSF5C4VBV66W7E7BRTV404CJ": {
+    "01KSQVZPJSH4R42ZYKARGFB82Q": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Toruń"
     },
-    "01KSF5C4VCFS2ZZK7QY3RG9TGZ": {
+    "01KSQVZPJTWVGNZGCJA5S16X70": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Włocławek"
     }
 }

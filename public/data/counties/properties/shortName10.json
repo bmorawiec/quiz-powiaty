@@ -1,170 +1,122 @@
 {
-    "01KSF5C4WDFSH6FA2QC46P5JMT": {
+    "01KSQVZPM6TRVXX67BE1AAFW4Q": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "bełchatowski"
     },
-    "01KSF5C4WEFBHRJYXM90JT7025": {
+    "01KSQVZPM6RF21MSXKZZ1JQZS2": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kutnowski"
     },
-    "01KSF5C4WFF68VE9BVR5Z8AC2N": {
+    "01KSQVZPM7RR41H3X5VN35MRKK": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "łaski"
     },
-    "01KSF5C4WF5ZA319XN9AHH99MC": {
+    "01KSQVZPM8JH487G934MK30QJP": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "łęczycki"
     },
-    "01KSF5C4WG54X610AMJN3KATTC": {
+    "01KSQVZPM8X5MVT2XBWNVJT0MP": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "łowicki"
     },
-    "01KSF5C4WHDW4HR7YNP49EZAT5": {
+    "01KSQVZPM95H1F8QBJGA0DGB0N": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "łódzki wschodni"
     },
-    "01KSF5C4WJ3KE9DEMAQPNT3EQ7": {
+    "01KSQVZPMA3Y4E1Q58D9069W0W": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "opoczyński"
     },
-    "01KSF5C4WJB2QEY4V1SGDBM12R": {
+    "01KSQVZPMAWYDE66HHPZ3YM4YC": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "pabianicki"
     },
-    "01KSF5C4WKTZ18CM3Z4G0M028F": {
+    "01KSQVZPMB0QTH2P79N70JQD5B": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "pajęczański"
     },
-    "01KSF5C4WM0299ZGC9W05XR203": {
+    "01KSQVZPMCWCCJGEYRHP5035KY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "piotrkowski"
     },
-    "01KSF5C4WN9G3B859ZTPS0M10N": {
+    "01KSQVZPMCKCF0V2K3AJKB9EXQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "poddębicki"
     },
-    "01KSF5C4WPN7TSQKZ2KT6GF8VC": {
+    "01KSQVZPMDQF05E530WZSJY80J": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "radomszczański"
     },
-    "01KSF5C4WP8CH0BCQ6ZKVM7JSW": {
+    "01KSQVZPME5YZGVDNCM5PA84E2": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "rawski"
     },
-    "01KSF5C4WQRJVCPHS9FNWCJN23": {
+    "01KSQVZPME1G5QHTSMNTSCK6HG": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sieradzki"
     },
-    "01KSF5C4WRG1PMY3YZ5DJ3MT6R": {
+    "01KSQVZPMFF0CQSFYF2P3N2TFV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "skierniewicki"
     },
-    "01KSF5C4WSTXG154PA3YRRDQ6E": {
+    "01KSQVZPMGF42PM24E8GAQN92Q": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "tomaszowski"
     },
-    "01KSF5C4WT7Y2Z6QMFJJ7JMESC": {
+    "01KSQVZPMGXM1VGE49QYXV7C9K": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wieluński"
     },
-    "01KSF5C4WTDDJW5MM053JDXED2": {
+    "01KSQVZPMHKVZSTZ117XZ8DZ47": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wieruszowski"
     },
-    "01KSF5C4WVBN50Z4F75D3KP71Y": {
+    "01KSQVZPMJTSZH8DJCYRATBCHQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "zduńskowolski"
     },
-    "01KSF5C4WW26C4WM6MEQJJE8HE": {
+    "01KSQVZPMJNRHD5R1DGSJZJM9G": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "zgierski"
     },
-    "01KSF5C4WXWZRN7X3GCC54SE7N": {
+    "01KSQVZPMKV8MTCEY4MHHM6WZG": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "brzeziński"
     },
-    "01KSF5C4WYMA5FFDJZ92BDNR4M": {
+    "01KSQVZPMMD4EQ0YFCCG6G1H6H": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Łódź"
     },
-    "01KSF5C4WZ903TY4Y0VJBHJFQK": {
+    "01KSQVZPMN1GNZ64V7GA15NCN8": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Piotrków Trybunalski"
     },
-    "01KSF5C4X0V0WNTJ7K92T49NMQ": {
+    "01KSQVZPMNMNQ7MQ8XA4GCH85P": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Skierniewice"
     }
 }

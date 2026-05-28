@@ -1,114 +1,82 @@
 {
-    "01KSF5C4RAQRZN86191ZZZ907K": {
+    "01KSQVZPGREVHTMMHVJNC26YBX": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "dolnośląskie"
     },
-    "01KSF5C4RCTC6CVYRZX2MG1VS4": {
+    "01KSQVZPGS5BQKHTGRRD05VVNQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kujawsko-pomorskie"
     },
-    "01KSF5C4RDCHSK6T9C56W27X1Z": {
+    "01KSQVZPGTZM84HPE96931Y8BE": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lubelskie"
     },
-    "01KSF5C4REC41WMXAX1VA0WFPR": {
+    "01KSQVZPGVR9YK2A05AEMPCTD3": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lubuskie"
     },
-    "01KSF5C4RFBFFSTST2GC6YYHZC": {
+    "01KSQVZPGW0PRKXJQMXKD4Y992": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "łódzkie"
     },
-    "01KSF5C4RGPWD1WD9FVRA0GRT1": {
+    "01KSQVZPGXQHJYFMKB65BTE3FT": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "małopolskie"
     },
-    "01KSF5C4RHH8HRJC4JZVN0HH94": {
+    "01KSQVZPGY6NN122KVY098HXH6": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "mazowieckie"
     },
-    "01KSF5C4RJQ2XYSKJ30QJJ1HNJ": {
+    "01KSQVZPGZGGFW4DPE6RCGWBH9": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "opolskie"
     },
-    "01KSF5C4RKRVYC83VE68BSNS2J": {
+    "01KSQVZPH0A6497VSM4S6A52Q6": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "podkarpackie"
     },
-    "01KSF5C4RMVGS3W52PB9WQ0YC9": {
+    "01KSQVZPH1XP308TWGNM8QD764": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "podlaskie"
     },
-    "01KSF5C4RN3FWKC82Z5P2GGEFN": {
+    "01KSQVZPH2723VAWBWFRCPK51S": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "pomorskie"
     },
-    "01KSF5C4RPQA0FYB7VJ2F2WQH2": {
+    "01KSQVZPH3FE2HQZVQ47B2BYE4": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "śląskie"
     },
-    "01KSF5C4RQQ7D21WJPTJZQPK8J": {
+    "01KSQVZPH4N4YV5D2TDDR7ASKN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "świętokrzyskie"
     },
-    "01KSF5C4RR08HGKHJFT8664V52": {
+    "01KSQVZPH4WMJTR4BJ710Y542G": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "warmińsko-mazurskie"
     },
-    "01KSF5C4RRX8CQ7Q7JTKSS1QRB": {
+    "01KSQVZPH55BJHBFZNYZGFVAZH": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wielkopolskie"
     },
-    "01KSF5C4RSQ2MWHGGZXVT44M6Y": {
+    "01KSQVZPH6H6V58DPBSSXVNPBN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "zachodniopomorskie"
     }
 }

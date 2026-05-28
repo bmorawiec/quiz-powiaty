@@ -1,156 +1,112 @@
 {
-    "01KSF5C4X328Z7Y7ZCVW61PF31": {
+    "01KSQVZPMRBWA16CJ4QCHMSXZT": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat bocheński"
     },
-    "01KSF5C4X4FTVQHC8D8HYNCH7T": {
+    "01KSQVZPMS7V1T6AJZZX1QD2PH": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat brzeski"
     },
-    "01KSF5C4X4Y5TJQBFEAP8TMV27": {
+    "01KSQVZPMSYZS9DCWT5Q784MWN": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat chrzanowski"
     },
-    "01KSF5C4X5C599GXG0PZYM27C7": {
+    "01KSQVZPMTA16YV4B0Z29G3HHX": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat dąbrowski"
     },
-    "01KSF5C4X6J9G8TVWG4ATRCNHV": {
+    "01KSQVZPMV83889TGPJKHSZ598": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat gorlicki"
     },
-    "01KSF5C4X67R86DJ31XT2XMMAN": {
+    "01KSQVZPMVE24SFKSQVP8KKQ04": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat krakowski"
     },
-    "01KSF5C4X7BM4VW61EDHHC9WKC": {
+    "01KSQVZPMWWNRG1BZYT45W42MQ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat limanowski"
     },
-    "01KSF5C4X80RFC7P0BZZSQ7XQW": {
+    "01KSQVZPMXFNTCXT5AZ2Y0HH5J": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat miechowski"
     },
-    "01KSF5C4X9N3EJQ4BJZ7C34JEM": {
+    "01KSQVZPMX9G1A0YBMMFVRYXNY": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat myślenicki"
     },
-    "01KSF5C4XAA5M3QEG0EH1M4PS7": {
+    "01KSQVZPMYQNB1SHV9ZVXGZSYC": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat nowosądecki"
     },
-    "01KSF5C4XBDCPBERQMT2P3CE89": {
+    "01KSQVZPMYZPGP9H1H3ASZBW3T": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat nowotarski"
     },
-    "01KSF5C4XB4Y7S31S1ZERSEVPS": {
+    "01KSQVZPMZ9GG8215T42QS96SA": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat olkuski"
     },
-    "01KSF5C4XCGSG10MXQ4Y1CHYTS": {
+    "01KSQVZPN0AGQN4WQNSZF71V1T": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat oświęcimski"
     },
-    "01KSF5C4XDHC1WNMV6HE16T0XT": {
+    "01KSQVZPN01306M3MNY2Z2D40B": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat proszowicki"
     },
-    "01KSF5C4XE93Y9Y2EHRHHFKHDP": {
+    "01KSQVZPN1XTD0CCWE9WAMS6XT": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat suski"
     },
-    "01KSF5C4XEJNDXKJK4PAM10RP5": {
+    "01KSQVZPN2434KT7M1CH1458A8": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat tarnowski"
     },
-    "01KSF5C4XFH974VTFPTJPB34Q2": {
+    "01KSQVZPN20AE3DFN2V4KSQKD1": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat tatrzański"
     },
-    "01KSF5C4XGJ7FP40A8BVJW9X99": {
+    "01KSQVZPN3MJEXJFBD7SZ2S4AH": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wadowicki"
     },
-    "01KSF5C4XH64ANP5EX1NY3QFXR": {
+    "01KSQVZPN4RNTECBW0Y63APQXT": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wielicki"
     },
-    "01KSF5C4XJ97KE38BNZ6S1ZVY6": {
+    "01KSQVZPN4QA222YP94GG9BR45": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Kraków"
     },
-    "01KSF5C4XKDC9631BNQT171QP9": {
+    "01KSQVZPN57QTQ5MAWWYASCK5Q": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Nowy Sącz"
     },
-    "01KSF5C4XM3MWX1RVJ5YEY6GHE": {
+    "01KSQVZPN6DG1CMRX15TRBD2N1": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Tarnów"
     }
 }

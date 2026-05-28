@@ -1,170 +1,122 @@
 {
-    "01KSF5C4VFB05PPJG87R88SM1G": {
+    "01KSQVZPK8S9AKSD3D1T27VF6K": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat bialski"
     },
-    "01KSF5C4VGAPQE3GPH4S87DRHH": {
+    "01KSQVZPK82DSVFH1KD0BSXKB5": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat biłgorajski"
     },
-    "01KSF5C4VGE9SNCJAFP5KE9ZFM": {
+    "01KSQVZPK99Q7MXPZKN2S5TXK9": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat chełmski"
     },
-    "01KSF5C4VH25RV1YSJK9TKMH3D": {
+    "01KSQVZPKAYVCW1E9N4B8E6541": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat hrubieszowski"
     },
-    "01KSF5C4VJEMQ1QFZ8R8XP6YXP": {
+    "01KSQVZPKAJGHH8W9MAHRVG1WW": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat janowski"
     },
-    "01KSF5C4VJGYVKAKZ8TX8CW80X": {
+    "01KSQVZPKBQ95X8VY0CQNA7WP5": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat krasnostawski"
     },
-    "01KSF5C4VK14MV9XAFZM4GJ8R8": {
+    "01KSQVZPKCA7GR2YDZPS5JWVZ4": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat kraśnicki"
     },
-    "01KSF5C4VMFM6DEXMQZAVWYZK0": {
+    "01KSQVZPKCX32CQR5Y69DC8N04": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat lubartowski"
     },
-    "01KSF5C4VMYXN3YJ6Y3EE46KJG": {
+    "01KSQVZPKD3WM4JXZ0PQF4GFWE": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat lubelski"
     },
-    "01KSF5C4VNCXZZ72XCQK9MSV50": {
+    "01KSQVZPKD5HV7D01MEC11WYBW": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat łęczyński"
     },
-    "01KSF5C4VP5X5MV0XG6EWX7HWG": {
+    "01KSQVZPKENZ3ZZZC836Z3BK6F": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat łukowski"
     },
-    "01KSF5C4VP441Z03KK42CXABGT": {
+    "01KSQVZPKF9GG8QPYS1ATDQV48": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat opolski (Opole Lubelskie)"
     },
-    "01KSF5C4VQDXBC5NTN22170Z4E": {
+    "01KSQVZPKGZSRZY7XKPAA546W6": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat parczewski"
     },
-    "01KSF5C4VR0JQDP1WK21JW677W": {
+    "01KSQVZPKG1QB8C15TWJ3SNAVV": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat puławski"
     },
-    "01KSF5C4VRRKAQEY645AMHJZ1F": {
+    "01KSQVZPKHPE2R53600GHWPP8T": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat radzyński"
     },
-    "01KSF5C4VSQT1MTB166G5KZCN7": {
+    "01KSQVZPKJ3BXGXC1V01F3ZDYP": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat rycki"
     },
-    "01KSF5C4VSJBHZT7YQPK8XYRAZ": {
+    "01KSQVZPKJZQ20TKZCWQ8VZGK1": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat świdnicki (Świdnik)"
     },
-    "01KSF5C4VTRW3P7C6Y2P9Y2FPX": {
+    "01KSQVZPKKPV2BEDSYCHYJ1JHR": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat tomaszowski (Tomaszów Lubelski)"
     },
-    "01KSF5C4VV8SFTYFZQDNFAY4JG": {
+    "01KSQVZPKKHDESTXTMN0CAV6CJ": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat włodawski"
     },
-    "01KSF5C4VV9K72C096G1N6B5SP": {
+    "01KSQVZPKMZZXHHGP78N2KG3MT": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat zamojski"
     },
-    "01KSF5C4VW2MSCBZZRK9829QGW": {
+    "01KSQVZPKNSKDJ0QB24C4YETBZ": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Biała Podlaska"
     },
-    "01KSF5C4VXMRHZJ9ZJ8KRNXBRF": {
+    "01KSQVZPKPXRA7KSW20XYAFKVJ": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Chełm"
     },
-    "01KSF5C4VYXQAY7Q7SB3AJGSHN": {
+    "01KSQVZPKQT7EF0X75366F3XVH": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Lublin"
     },
-    "01KSF5C4VZTGNCPXZD5MPE5VPD": {
+    "01KSQVZPKQHS4599GPVGMJMEEX": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Zamość"
     }
 }

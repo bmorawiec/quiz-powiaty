@@ -1,100 +1,72 @@
 {
-    "01KSF5C52V63AC09EYP34MK399": {
+    "01KSQVZPT85KZ5164VYKMB562Q": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "buski"
     },
-    "01KSF5C52V1BY10ASVNQ4KS4AW": {
+    "01KSQVZPT99EXR44VPJCR4WKVY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "jędrzejowski"
     },
-    "01KSF5C52WD31SVMBM7PXVMYFC": {
+    "01KSQVZPT93RTJHZMSXKN5CJWQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kazimierski"
     },
-    "01KSF5C52XC8A5QJF97ZVQ0B95": {
+    "01KSQVZPTAFZNF4WRA773WG50S": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kielecki"
     },
-    "01KSF5C52YJP0P4CP9J5EJ8H7R": {
+    "01KSQVZPTB2QRCX4MPWVTWDE90": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "konecki"
     },
-    "01KSF5C52YJPHE5BKPWFM0RMZ4": {
+    "01KSQVZPTBRP97TBABHWS9YHWX": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "opatowski"
     },
-    "01KSF5C52Z0D9HPVS1P7BHHW6Y": {
+    "01KSQVZPTCW21YKR04S4PSF8WW": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "ostrowiecki"
     },
-    "01KSF5C530408N5XDZWEBJKY3N": {
+    "01KSQVZPTD34H5JFNVS8G77BS7": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "pińczowski"
     },
-    "01KSF5C53059AS3J2TW4RC2W4R": {
+    "01KSQVZPTEDQAAC26Q279P0WX8": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sandomierski"
     },
-    "01KSF5C531CBK2N6WT3NAVMS1C": {
+    "01KSQVZPTE94D0MHEG6N51ECPY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "skarżyski"
     },
-    "01KSF5C5323V32S8EXKWRM2NZ2": {
+    "01KSQVZPTFJ16NFEZJVWHXH0HH": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "starachowicki"
     },
-    "01KSF5C5332Y2DNH16AMP3Q68T": {
+    "01KSQVZPTG6S17PT03QQCXQDV0": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "staszowski"
     },
-    "01KSF5C53420DF2W4958QKFWTG": {
+    "01KSQVZPTGYB7H9XEGQ4QAPKAM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "włoszczowski"
     },
-    "01KSF5C5357RR5YV6BTJ3XCDEH": {
+    "01KSQVZPTHGZZ2ZAAT4D8HV47V": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Kielce"
     }
 }

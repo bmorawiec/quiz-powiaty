@@ -1,142 +1,102 @@
 {
-    "01KSF5C518848BW9GX0W0S1N6Q": {
+    "01KSQVZPRP6E4VY79HJNMM3Y29": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat bytowski"
     },
-    "01KSF5C5191CJ1STNNVQ3VSGZ4": {
+    "01KSQVZPRQCGQDXSDF3XCXBEXA": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat chojnicki"
     },
-    "01KSF5C51AF3F7H3X9CR40FAAG": {
+    "01KSQVZPRQFZ30YPED27SXFMM6": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat człuchowski"
     },
-    "01KSF5C51ATBBXBFVAHXRN7R53": {
+    "01KSQVZPRRFCQ0NB2FF9XVWQBZ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat gdański"
     },
-    "01KSF5C51BQYVHBVJY8Y40WG1B": {
+    "01KSQVZPRSAXMB13AQZ5QF9ETG": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat kartuski"
     },
-    "01KSF5C51C680A61CYMNN573H2": {
+    "01KSQVZPRSCAQAPYZYR1ZRAEK4": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat kościerski"
     },
-    "01KSF5C51CGVNBQMSEX2F7YWBY": {
+    "01KSQVZPRTMZ52EFRG3PE48136": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat kwidzyński"
     },
-    "01KSF5C51DD4H7TXA8BRFCECYZ": {
+    "01KSQVZPRVYZ06CGT7VST8E5TA": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat lęborski"
     },
-    "01KSF5C51E62V26DW4XC17GZE2": {
+    "01KSQVZPRVSQPNFG8367X8273V": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat malborski"
     },
-    "01KSF5C51EHP2BA0ENG8SN3C9K": {
+    "01KSQVZPRW4BNG94CXQ7PP2FQX": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat nowodworski"
     },
-    "01KSF5C51FEG3CYYE06XQPZBPD": {
+    "01KSQVZPRX264DM8G01YYNND50": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat pucki"
     },
-    "01KSF5C51GM4HS2YWT1RPR0N4E": {
+    "01KSQVZPRYC5DE695Y89MDQEY9": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat słupski"
     },
-    "01KSF5C51HH9AKZWSHQC3AGPRK": {
+    "01KSQVZPRYRDJH3WS73277DSA1": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat starogardzki"
     },
-    "01KSF5C51HQMVY9EEX04TRYY3Y": {
+    "01KSQVZPRZSD7YERCGVZ96753B": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat tczewski"
     },
-    "01KSF5C51JGRMVFB5RD9S4GA26": {
+    "01KSQVZPS0EXJGJSBGVZNH8XQX": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wejherowski"
     },
-    "01KSF5C51K430R77V7F98ZV0HS": {
+    "01KSQVZPS1EH1K0SA3Y70E4ZDH": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat sztumski"
     },
-    "01KSF5C51M2YCCMYKNZ7VK233T": {
+    "01KSQVZPS2RSEPYPWVZ6E9YQ29": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Gdańsk"
     },
-    "01KSF5C51NJWJP4WRKE1D7MG3A": {
+    "01KSQVZPS3G96P919GJED6N6HY": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Gdynia"
     },
-    "01KSF5C51P8DJ39PNQY4J3XGAP": {
+    "01KSQVZPS3XW1RQY7RJ32B1HMC": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Słupsk"
     },
-    "01KSF5C51QDV26N87GHXK406EJ": {
+    "01KSQVZPS4HSD9EN0QHX1S3X5K": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Sopot"
     }
 }

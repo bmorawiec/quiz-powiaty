@@ -1,170 +1,122 @@
 {
-    "01KSF5C4VF9VWJ5YQP9H4H830B": {
+    "01KSQVZPK804N4NT8KKFWD5KGG": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Biała Podlaska"
     },
-    "01KSF5C4VGE95KBSJ89H5R73YY": {
+    "01KSQVZPK8RADHSAY3K9W4Y5D4": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Biłgoraj"
     },
-    "01KSF5C4VHAZG8AFCV4H3HH8DV": {
+    "01KSQVZPK9W7ZPXRXFM3T5FG1S": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Chełm"
     },
-    "01KSF5C4VHKVPQAJZMNZTW39T2": {
+    "01KSQVZPKA09NRAKBPGTTAHYFV": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Hrubieszów"
     },
-    "01KSF5C4VJ069BXYC2EEQJ8DJD": {
+    "01KSQVZPKANDXW0Z5RTKABJHB5": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Janów Lubelski"
     },
-    "01KSF5C4VK2SB3GXVJSJAXWKHF": {
+    "01KSQVZPKBEE68FV2PQFR0PJCY": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Krasnystaw"
     },
-    "01KSF5C4VKRXGPJN26EPQW84BQ": {
+    "01KSQVZPKCQQFT1HZXJG48VNB5": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kraśnik"
     },
-    "01KSF5C4VM6P69734P9PRMDN4Z": {
+    "01KSQVZPKCRMQCMNVFTPRJWQ42": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Lubartów"
     },
-    "01KSF5C4VMVHGAJE7HMENKKND5": {
+    "01KSQVZPKDC72TCEVF7E9HCBES": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Lublin"
     },
-    "01KSF5C4VNA5WS8V8GYB67Q1E2": {
+    "01KSQVZPKED5VB6AGYYH8DJEC1": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Łęczna"
     },
-    "01KSF5C4VPR077HJME14CEE97Q": {
+    "01KSQVZPKEKBPQ9PTFCS0BVHH8": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Łuków"
     },
-    "01KSF5C4VP68351MBFZ9Z7S597": {
+    "01KSQVZPKFKK7B7P2NM4KXD4RQ": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Opole Lubelskie"
     },
-    "01KSF5C4VQFQX4E6M9FDCE8EJQ": {
+    "01KSQVZPKGJ96J0026HJ1SHA9S": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Parczew"
     },
-    "01KSF5C4VRP2G55QXWQ7MC9VHD": {
+    "01KSQVZPKG8FR6WDCPRSDA7QAT": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Puławy"
     },
-    "01KSF5C4VRDA4JCBHR9R38D3JD": {
+    "01KSQVZPKH2WHBWQ2E0GNJG69Y": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Radzyń Podlaski"
     },
-    "01KSF5C4VSA13R5XKYHW75S90P": {
+    "01KSQVZPKJJQ9H7AFVDXWN9J8Q": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Ryki"
     },
-    "01KSF5C4VTV8YEJ1YEP7EFW1C0": {
+    "01KSQVZPKJ635NJFT4A6XA47AA": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Świdnik"
     },
-    "01KSF5C4VT0NCQBHQFFCK3D2XV": {
+    "01KSQVZPKKDVV2QZHMSP5PW6S7": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Tomaszów Lubelski"
     },
-    "01KSF5C4VVJ4N2QZ6R49J6ZG3S": {
+    "01KSQVZPKM3XEZBHFGG0T83FBH": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Włodawa"
     },
-    "01KSF5C4VWXV68G4VAVBWMNCKN": {
+    "01KSQVZPKMSQY8VQG31DZHWYRZ": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Zamość"
     },
-    "01KSF5C4VWMX5W7T2HXM6KMRXQ": {
+    "01KSQVZPKNTMEPNV0BPHD39JS8": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Biała Podlaska"
     },
-    "01KSF5C4VX324BT0K0C8HY76JK": {
+    "01KSQVZPKP1930X2T7JF2ZGWPK": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Chełm"
     },
-    "01KSF5C4VYFWS9D1SWFK40SR7T": {
+    "01KSQVZPKQJTBRBDSRXX11C2PV": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Lublin"
     },
-    "01KSF5C4VZTS4NJB5KQN9M2Y02": {
+    "01KSQVZPKQ6TZMS9ZDN3XM3KXG": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Zamość"
     }
 }

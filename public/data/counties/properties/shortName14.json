@@ -1,296 +1,212 @@
 {
-    "01KSF5C4XQNRHSEJDSQJECQ1SH": {
+    "01KSQVZPN96XPW0F7XS1PDW7NZ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "białobrzeski"
     },
-    "01KSF5C4XRE73AMF4DCGS3WTW1": {
+    "01KSQVZPN9H1JS1R3XT213YCN1": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "ciechanowski"
     },
-    "01KSF5C4XR3A3M222FT5T7JCSJ": {
+    "01KSQVZPNAHGJMNTV4B4GV787D": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "garwoliński"
     },
-    "01KSF5C4XSAH34DBQ6SA9B689V": {
+    "01KSQVZPNAG89MR20VE97E7GFD": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "gostyniński"
     },
-    "01KSF5C4XTHF224WS8H3NMHXFQ": {
+    "01KSQVZPNBJYE37QDWAAEN9873": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "grodziski"
     },
-    "01KSF5C4XV2XEQ8KAT1NDBY2FZ": {
+    "01KSQVZPNCMC9FD2V0J1N54V99": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "grójecki"
     },
-    "01KSF5C4XW315BJ9Y2ZQ84MSW8": {
+    "01KSQVZPND9Q47ZYJKFA18TNE8": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kozienicki"
     },
-    "01KSF5C4XWHDNTQQ1SVW384WE2": {
+    "01KSQVZPNDNY855TXJ5R7ZKJ98": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "legionowski"
     },
-    "01KSF5C4XXGS2XN4ZT6Q6XV38T": {
+    "01KSQVZPNE4CH929G6Q70PEH8P": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lipski"
     },
-    "01KSF5C4XYHRNBMBBZP7A8BV72": {
+    "01KSQVZPNEMF1VK2WEXQYNRSW5": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "łosicki"
     },
-    "01KSF5C4XZAQVNAGXVWKWECKGS": {
+    "01KSQVZPNFR1HRFQJ4E04XZ4MN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "makowski"
     },
-    "01KSF5C4XZZNM8ZNPN5E65PQJG": {
+    "01KSQVZPNGP3DG5M5VTR8B3RT3": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "miński"
     },
-    "01KSF5C4Y0ABEYCK4AAABGJXWX": {
+    "01KSQVZPNG3HR244VA2DCEQ5RQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "mławski"
     },
-    "01KSF5C4Y1GAK8CH60XC3TE5MQ": {
+    "01KSQVZPNHQSBF1167ZWYCFBPW": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "nowodworski"
     },
-    "01KSF5C4Y2NBYPM3D204NQGEBC": {
+    "01KSQVZPNJQM6VV9WN0JFXY0JD": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "ostrołęcki"
     },
-    "01KSF5C4Y2M28JT1XVMWKSMM1G": {
+    "01KSQVZPNJ56FNPM88JDVEYMBD": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "ostrowski"
     },
-    "01KSF5C4Y359D1W80GHANSAF6G": {
+    "01KSQVZPNKZKDSNZMPA3SGCFF4": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "otwocki"
     },
-    "01KSF5C4Y43HNPC22QNQJZFC0A": {
+    "01KSQVZPNKT8DF5G7K1QKYNYK7": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "piaseczyński"
     },
-    "01KSF5C4Y5P75KGND8KTCQJ8C1": {
+    "01KSQVZPNMSFFPPF3X21ZRPD3B": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "płocki"
     },
-    "01KSF5C4Y6QAHR8PK7RVZK8Z2S": {
+    "01KSQVZPNN947E4EP2NED8XWJ1": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "płoński"
     },
-    "01KSF5C4Y6PQRXGBGQY0KQBVRC": {
+    "01KSQVZPNNERWM7JAJXZKH3JY4": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "pruszkowski"
     },
-    "01KSF5C4Y71R13ME9HKXSQXYCE": {
+    "01KSQVZPNPYWAZKGPN0DY53JDY": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "przasnyski"
     },
-    "01KSF5C4Y8VPXENAQ44BPXMR1R": {
+    "01KSQVZPNQTQVJ24014M1B5QXH": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "przysuski"
     },
-    "01KSF5C4Y96A125NCYT6NEJB75": {
+    "01KSQVZPNR8GAF34CP2EZD6DT7": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "pułtuski"
     },
-    "01KSF5C4YAMPV3EGC3H9H18DMB": {
+    "01KSQVZPNSZNAH4875TFCKRGVQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "radomski"
     },
-    "01KSF5C4YBHQX48F9F5HP1P33P": {
+    "01KSQVZPNTSSX2HYZBH41Z7N2Z": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "siedlecki"
     },
-    "01KSF5C4YC7JZTBPC5EPX2D5RW": {
+    "01KSQVZPNTJ0RWSZ47G0C2962E": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sierpecki"
     },
-    "01KSF5C4YD9VHB3PPA53A34XWJ": {
+    "01KSQVZPNVM3S923MNFPKGPCVD": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sochaczewski"
     },
-    "01KSF5C4YEGENRHEBMY3B1R8PD": {
+    "01KSQVZPNWWGVHSZQXQJGVQENT": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sokołowski"
     },
-    "01KSF5C4YF84HQSX9BRS3Y6NXD": {
+    "01KSQVZPNX2ZR7T33KFZDRJZMS": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "szydłowiecki"
     },
-    "01KSF5C4YGDN7TR0VPQ0ADKAPT": {
+    "01KSQVZPNY924FM88JEEQ5J710": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "warszawski zachodni"
     },
-    "01KSF5C4YHYJDHFBR4AXVYWC35": {
+    "01KSQVZPNZ4YF1R50VT1S1BV02": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "węgrowski"
     },
-    "01KSF5C4YJHKMED1GGQWN54FQB": {
+    "01KSQVZPP010E9Q2EBR3H3SYR4": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wołomiński"
     },
-    "01KSF5C4YKAC2HAQ4PHGQG02K6": {
+    "01KSQVZPP1VJ2SY1RQ7HRYMXVZ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wyszkowski"
     },
-    "01KSF5C4YMNBNB1M9HCXGYJ7GT": {
+    "01KSQVZPP25MYM4PE3TZDA8B96": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "zwoleński"
     },
-    "01KSF5C4YNCXD6DZMWK83MMJHD": {
+    "01KSQVZPP3N1Q65QRSBYVHQ7J2": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "żuromiński"
     },
-    "01KSF5C4YP6QES34SSVWPV95PH": {
+    "01KSQVZPP32G5N2R4T6Z03ESB7": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "żyrardowski"
     },
-    "01KSF5C4YQFENB5Y7KE4F436NJ": {
+    "01KSQVZPP44C6CH5PXB8Y26WD5": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Ostrołęka"
     },
-    "01KSF5C4YRJAFAHASH0J6DEQQZ": {
+    "01KSQVZPP5A9NP3TBM9XSWPR6M": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Płock"
     },
-    "01KSF5C4YSY729JQXKSTTPV4J3": {
+    "01KSQVZPP6JG2HTD8XWCRR6VZD": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Radom"
     },
-    "01KSF5C4YTWP80XFFP7947R6PR": {
+    "01KSQVZPP7XV8V0BN74YVFT0X1": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Siedlce"
     },
-    "01KSF5C4YVEHY7AKVA8SG4MQJ5": {
+    "01KSQVZPP82BA2DE86M83BCT6T": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Warszawa"
     }
 }

@@ -1,163 +1,117 @@
 {
-    "01KSF5C4TXG3B471TPE8D979PE": {
+    "01KSQVZPJBM762DGRS5B2Q7SBF": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "aleksandrowski"
     },
-    "01KSF5C4TY5J3WQ2V01DYDHB4B": {
+    "01KSQVZPJC9BZF2Q45GD5723XW": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "brodnicki"
     },
-    "01KSF5C4TY2881SNTBEJ44DMCY": {
+    "01KSQVZPJC1VPX2BBXWSGCES6G": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "bydgoski"
     },
-    "01KSF5C4TZKA0THMJZ4ZCXB8N4": {
+    "01KSQVZPJD3BVKS76VZD5EA3RP": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "chełmiński"
     },
-    "01KSF5C4V0VJ7TVMGBBHEN26W7": {
+    "01KSQVZPJDJS5W6T631VKE2324": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "golubsko-dobrzyński"
     },
-    "01KSF5C4V0GP0EQD3CTNJ8DW2C": {
+    "01KSQVZPJEJNS7AMXWBC15YW9M": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "grudziądzki"
     },
-    "01KSF5C4V1H1G4K55W42MX9RHG": {
+    "01KSQVZPJFYP88PXBT3MHQCXJQ": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "inowrocławski"
     },
-    "01KSF5C4V2W0EMCK8C9WCB29DN": {
+    "01KSQVZPJFJXM9HR0DNWEEMN03": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "lipnowski"
     },
-    "01KSF5C4V2PX1K3DTS22MX9V3J": {
+    "01KSQVZPJG7BS70MP33QJVPTJ4": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "mogileński"
     },
-    "01KSF5C4V3BVJ5N9VZJQT182JK": {
+    "01KSQVZPJH206RJQ2B0ARTZPXC": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "nakielski"
     },
-    "01KSF5C4V463VR5ST5VQKMPSWY": {
+    "01KSQVZPJHCCSBZ42FWRQY8N9V": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "radziejowski"
     },
-    "01KSF5C4V52CZN09B1XHRNV786": {
+    "01KSQVZPJJDAD7H9AWYHPYTQST": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "rypiński"
     },
-    "01KSF5C4V5M78JS774G8FWE3GG": {
+    "01KSQVZPJKGS4P28T9KH97B3H1": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sępoleński"
     },
-    "01KSF5C4V6E7TEE92K4QFGD3S1": {
+    "01KSQVZPJM8WGY6RXBNPWWASQM": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "świecki"
     },
-    "01KSF5C4V7FR2YNB9392KR1VYD": {
+    "01KSQVZPJMXV9RVPWGF4VZPVJA": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "toruński"
     },
-    "01KSF5C4V7BHBEKPY8RERDZVMP": {
+    "01KSQVZPJNEXJTWJ36V8BX9ZAK": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "tucholski"
     },
-    "01KSF5C4V8BZPQB2GHPGS2WD7C": {
+    "01KSQVZPJPQBCMDGF84VSME8AV": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wąbrzeski"
     },
-    "01KSF5C4V992KPPFV1NT89Z3MF": {
+    "01KSQVZPJP64Y955GSZTXAYR9E": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "włocławski"
     },
-    "01KSF5C4V9XZ5HY99CTGH4GRT5": {
+    "01KSQVZPJQZC2C4D0HYTGRTTCF": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "żniński"
     },
-    "01KSF5C4VA2SDBW5A7D8X2TFWP": {
+    "01KSQVZPJRZVFRFP9WRM3VTR8W": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Bydgoszcz"
     },
-    "01KSF5C4VB5QVB7GV3FWCDK2W6": {
+    "01KSQVZPJR51S49V949B27F5NT": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Grudziądz"
     },
-    "01KSF5C4VB438FMHBNR2ZGVF95": {
+    "01KSQVZPJSGQTKVBMT3RN1FB82": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Toruń"
     },
-    "01KSF5C4VCV2HSPMX64TPJYTK9": {
+    "01KSQVZPJTQSGHRCXHFPXTWK2N": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Włocławek"
     }
 }

@@ -1,121 +1,87 @@
 {
-    "01KSF5C50VQP9YB1AQRXXRCRH7": {
+    "01KSQVZPR8M5MRY0RQJ3203V7Y": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Augustów"
     },
-    "01KSF5C50WRPNAAG3GY4GHT8S5": {
+    "01KSQVZPR9DGK14PAZF58DC1E3": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Białystok"
     },
-    "01KSF5C50WJJW501WNE3GVA186": {
+    "01KSQVZPRAG9263ZHVAE5CA09G": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Bielsk Podlaski"
     },
-    "01KSF5C50XFCVBX234R9Z1021M": {
+    "01KSQVZPRACSFWQJBJY8KTHQH7": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Grajewo"
     },
-    "01KSF5C50XF8755MCZW4J5FX3P": {
+    "01KSQVZPRBE8V512XWQ22GBDT1": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Hajnówka"
     },
-    "01KSF5C50YEQ9770TQJRMHE41Z": {
+    "01KSQVZPRCTWAFJ1XR2TKY4VCG": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kolno"
     },
-    "01KSF5C50ZH1THFB5HHFZC77YJ": {
+    "01KSQVZPRCYG90KNJE285E6XQ1": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Łomża"
     },
-    "01KSF5C50Z9WMHXHZ5MFX5AMNT": {
+    "01KSQVZPRDS66W1QN5TAA52Z54": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Mońki"
     },
-    "01KSF5C510NE1NZVGR9XGGS3BC": {
+    "01KSQVZPRE06JVT7F3GV18V87H": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Sejny"
     },
-    "01KSF5C511ZAC47WWQXN5Y2401": {
+    "01KSQVZPREZ8F8HMS49PTMFHPT": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Siemiatycze"
     },
-    "01KSF5C5127R3N7P4ZRPA9RX7C": {
+    "01KSQVZPRF2TNX9TY8YGMWXTDQ": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Sokółka"
     },
-    "01KSF5C512RP5VRHC04WHMAMTJ": {
+    "01KSQVZPRGN5B3MZYNNRHVDVZT": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Suwałki"
     },
-    "01KSF5C513FAQF0G4Q50JPK799": {
+    "01KSQVZPRH9J4MHYV5DB509E05": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Wysokie Mazowieckie"
     },
-    "01KSF5C514V6EA0KGY5E5V7A81": {
+    "01KSQVZPRHX6SMBCKCA0RYEMSE": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Zambrów"
     },
-    "01KSF5C51561M698FGDEADAFZ4": {
+    "01KSQVZPRJ7V5GVG0ECM37DMSK": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Białystok"
     },
-    "01KSF5C515Z0YCQ6QRBFPDMRHZ": {
+    "01KSQVZPRKBHNJHGHR27QZB2FK": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Łomża"
     },
-    "01KSF5C516G2YV36N5XFV5C0R5": {
+    "01KSQVZPRMHE04P593PEWY278E": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Suwałki"
     }
 }

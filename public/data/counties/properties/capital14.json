@@ -1,296 +1,212 @@
 {
-    "01KSF5C4XQYS9TDNA296FRJP8M": {
+    "01KSQVZPN9SDNQMRHN0B12EW68": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Białobrzegi"
     },
-    "01KSF5C4XRVVZVWEHPW8W0MWQ1": {
+    "01KSQVZPN971CD8ZSGNWDBY1RG": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Ciechanów"
     },
-    "01KSF5C4XRMF4KFT71XNXVFZK4": {
+    "01KSQVZPNAA92JK5EBSQ64WPF8": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Garwolin"
     },
-    "01KSF5C4XS6MG3GT8658AHKGC3": {
+    "01KSQVZPNAZ9SM81QWGEQ2KK6H": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Gostynin"
     },
-    "01KSF5C4XTFJSV7PXETD4QY7JS": {
+    "01KSQVZPNBFCHPQKMKEW6GWEV8": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Grodzisk Mazowiecki"
     },
-    "01KSF5C4XVJ7Y6YYZ65DEBT3BX": {
+    "01KSQVZPNC93NGYZD09SCJMXNX": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Grójec"
     },
-    "01KSF5C4XWV19X1XY58T0JE8B9": {
+    "01KSQVZPNDDHX79PVPBKTT8Z1Z": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kozienice"
     },
-    "01KSF5C4XW7Q22WZCP7R615BC9": {
+    "01KSQVZPNDNMCTN77FS86R1WA1": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Legionowo"
     },
-    "01KSF5C4XXGWN7N9CTA0F13C92": {
+    "01KSQVZPNEVDCB942HMZQ7TQXM": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Lipsko"
     },
-    "01KSF5C4XYJM7Y0BBWANZR6X28": {
+    "01KSQVZPNFM3G00QZAQFGVMPQQ": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Łosice"
     },
-    "01KSF5C4XZD06D2KM927QW3PXH": {
+    "01KSQVZPNFP7GFCWPNDZ3CGH05": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Maków Mazowiecki"
     },
-    "01KSF5C4XZ57AY98RFYEMG0QZ9": {
+    "01KSQVZPNGY8E5STDA2S3WFY5B": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Mińsk Mazowiecki"
     },
-    "01KSF5C4Y0NNKRQEZZ5CASCEDC": {
+    "01KSQVZPNGK9TXXATKH8YAFXZC": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Mława"
     },
-    "01KSF5C4Y1SY9X1PCMZ9NB5T79": {
+    "01KSQVZPNHQSMQVS9GQDFCF5BW": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Nowy Dwór Mazowiecki"
     },
-    "01KSF5C4Y2P72C9BJDZF01Y7FE": {
+    "01KSQVZPNJAMR0XGYBNRWNKFAX": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Ostrołęka"
     },
-    "01KSF5C4Y2GRBWTDG9RP8VE8D4": {
+    "01KSQVZPNJMXA3X2E41ZB24K7S": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Ostrów Mazowiecka"
     },
-    "01KSF5C4Y3FSRJ2EQYT201V0GM": {
+    "01KSQVZPNK3K22SJ8YT3NKD8DM": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Otwock"
     },
-    "01KSF5C4Y4SBY90K4ZCZ78FN7A": {
+    "01KSQVZPNKBT302C4Z3SPY2XGP": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Piaseczno"
     },
-    "01KSF5C4Y5FESY6MHX6XNZPT46": {
+    "01KSQVZPNMGAF0SKSGRH68FQM5": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Płock"
     },
-    "01KSF5C4Y6C97C6JB8BBH8XA56": {
+    "01KSQVZPNNERJ19W096J91GF4B": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Płońsk"
     },
-    "01KSF5C4Y6CPCCB57QS01BDA1Z": {
+    "01KSQVZPNPY9H689QC59ERGDSF": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Pruszków"
     },
-    "01KSF5C4Y8XMPQPTMRWMYNJVRB": {
+    "01KSQVZPNPSY2E91BW31RM361Y": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Przasnysz"
     },
-    "01KSF5C4Y81YWBPGQK2Z19CX4Y": {
+    "01KSQVZPNQ01MXQJMZA3YB9XD4": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Przysucha"
     },
-    "01KSF5C4Y9J91T8A9GHCP2XJ2P": {
+    "01KSQVZPNRPSVGEG1CW6JWZH0P": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Pułtusk"
     },
-    "01KSF5C4YAFMWRG3CCH7WBV8TR": {
+    "01KSQVZPNSKPTP9FJWSAS41MK4": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Radom"
     },
-    "01KSF5C4YBKCAEZ8CHX6AGWXD0": {
+    "01KSQVZPNTQ86TYSDDA64TN67P": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Siedlce"
     },
-    "01KSF5C4YC5NC92NB7C3AVYT6Q": {
+    "01KSQVZPNVD9NFYQPTWNYVQTAF": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Sierpc"
     },
-    "01KSF5C4YDS9WJFCKT6J31H439": {
+    "01KSQVZPNV4NG779AKGCMGFC4E": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Sochaczew"
     },
-    "01KSF5C4YEN01M5C1T5HNNWPGR": {
+    "01KSQVZPNWVS2QTD60KGXNC4GQ": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Sokołów Podlaski"
     },
-    "01KSF5C4YFRJD45BJAFJ716K14": {
+    "01KSQVZPNXD8KFYMVYZSAS6T09": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Szydłowiec"
     },
-    "01KSF5C4YGRW5JDMH03NRDSQQ3": {
+    "01KSQVZPNYSRDH2K49FVETWFTY": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Ożarów Mazowiecki"
     },
-    "01KSF5C4YH977GS6D5RT1H84HD": {
+    "01KSQVZPNZ2E15EE9K6VA151XV": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Węgrów"
     },
-    "01KSF5C4YJEGT8MQWF685B0X9F": {
+    "01KSQVZPP0KH4YYK1160AAXG8H": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Wołomin"
     },
-    "01KSF5C4YKE37J03RGKDFMV7BG": {
+    "01KSQVZPP11KV8E1PTNF80TE1Q": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Wyszków"
     },
-    "01KSF5C4YMRAHCD0PHCY16ZXSZ": {
+    "01KSQVZPP25M2PDDW54SESGGGQ": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Zwoleń"
     },
-    "01KSF5C4YNPQ6XZ35TE9ZX6QM2": {
+    "01KSQVZPP3T61MT2FHCZB7MV6H": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Żuromin"
     },
-    "01KSF5C4YP2TRJKJCE3D6AY2MZ": {
+    "01KSQVZPP4GBK1DBPNCT1WQHYM": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Żyrardów"
     },
-    "01KSF5C4YQPGZGYQQ7D9M6F3C0": {
+    "01KSQVZPP40MG2QWVBVKKPT6XW": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Ostrołęka"
     },
-    "01KSF5C4YRPW4F7N0CGHWN1FKH": {
+    "01KSQVZPP6SN3NSN1MQ95J1C60": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Płock"
     },
-    "01KSF5C4YS2CSAQP6Z677JXQDZ": {
+    "01KSQVZPP6S825YZ6QD0WN24HZ": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Radom"
     },
-    "01KSF5C4YTDAT5F6SG9FPVJ0Y9": {
+    "01KSQVZPP7R6PJKWR9JJQX9B0J": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Siedlce"
     },
-    "01KSF5C4YVBH8PRGW2XTW5PQR7": {
+    "01KSQVZPP8B83T5P3QTFKRWHA6": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Warszawa"
     }
 }

@@ -1,86 +1,62 @@
 {
-    "01KSF5C4Z163HCC35377B47ZP0": {
+    "01KSQVZPPEQ835KJB346NG75RQ": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat brzeski (Brzeg)"
     },
-    "01KSF5C4Z25X93D07NFWWQMCK1": {
+    "01KSQVZPPEXJ2K8YWEJR61TWKD": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat głubczycki"
     },
-    "01KSF5C4Z39KAKQYDPY19MB5FE": {
+    "01KSQVZPPFSFAEQCPXRB2C450Y": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat kędzierzyńsko-kozielski"
     },
-    "01KSF5C4Z3CE9R7YCFCDTAQ846": {
+    "01KSQVZPPGHHQV16YJBT1ZCNBE": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat kluczborski"
     },
-    "01KSF5C4Z44M4Q2RQ1R8P0JZS2": {
+    "01KSQVZPPHZNR64YV4GVS05SV5": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat krapkowicki"
     },
-    "01KSF5C4Z52F5D9XR5NRPENGQ0": {
+    "01KSQVZPPH4XM9XD5SX0ATS2DE": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat namysłowski"
     },
-    "01KSF5C4Z6HZ187FT4HHNYHHMG": {
+    "01KSQVZPPJH9C1AXBX59PJE513": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat nyski"
     },
-    "01KSF5C4Z6BAESY7ANDXB4KTBQ": {
+    "01KSQVZPPKNYRCAGSTA9S8QV2D": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat oleski"
     },
-    "01KSF5C4Z7HAT7ZAG3K7E3C1GJ": {
+    "01KSQVZPPK4N9FKTNB5FX0PE0F": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat opolski (Opole)"
     },
-    "01KSF5C4Z8C2R5DJ5D7KKWTFE9": {
+    "01KSQVZPPMGWPMRHXP74Z6JZXC": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat prudnicki"
     },
-    "01KSF5C501NSV0606A996B7ZM4": {
+    "01KSQVZPPN5PE71FVN340HY9TQ": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat strzelecki"
     },
-    "01KSF5C5022WQV3K5YT29J0F26": {
+    "01KSQVZPPPHDK4G0NKXYRT73TY": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Opole"
     }
 }

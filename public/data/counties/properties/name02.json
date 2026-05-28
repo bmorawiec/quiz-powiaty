@@ -1,212 +1,152 @@
 {
-    "01KSF5C4SM3JW7E341PRF6SF58": {
+    "01KSQVZPHDVJ5Y88KZPJE3FA17": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat bolesławiecki"
     },
-    "01KSF5C4SPG0K60PWXDTG7Q8PH": {
+    "01KSQVZPHE10MT6TYCA6NA82AR": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat dzierżoniowski"
     },
-    "01KSF5C4SQM950GVXT305JTZRP": {
+    "01KSQVZPHF90AGZJHTAYQ6Z0NF": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat głogowski"
     },
-    "01KSF5C4SR6GF73HSSQQH8PRW7": {
+    "01KSQVZPHGQYJXYT33ZZR0RVRC": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat górowski"
     },
-    "01KSF5C4SS8TFQPGPNGMFGYREN": {
+    "01KSQVZPHH722EVTBAQ18W977Q": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat jaworski"
     },
-    "01KSF5C4ST8JN2WAZ655W1YRPK": {
+    "01KSQVZPHJ4PN3SM5NG0P2XS9E": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat karkonoski"
     },
-    "01KSF5C4SVWHTP4B6ZS2M5E79H": {
+    "01KSQVZPHK465H3BV8XBFKV4F4": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat kamiennogórski"
     },
-    "01KSF5C4SWEM6PD1CCXVM7CDDS": {
+    "01KSQVZPHM7AJNWG1M2MEH5RRK": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat kłodzki"
     },
-    "01KSF5C4SXSD971TXHPQZ56RZG": {
+    "01KSQVZPHN78PG4SVFVX6GXG9A": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat legnicki"
     },
-    "01KSF5C4SYD8ZJCFV6Y47D7WZY": {
+    "01KSQVZPHPDV2T4K0KCEG2W3Z0": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat lubański"
     },
-    "01KSF5C4SZTJPYMWNJC9GCJAZN": {
+    "01KSQVZPHQW6BNQDH5EHTQ9CEF": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat lubiński"
     },
-    "01KSF5C4T054JQWCTVT7V5SWKR": {
+    "01KSQVZPHR7ZV6QSJVB80QPZHS": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat lwówecki"
     },
-    "01KSF5C4T12EXXCQ344F7SKHGP": {
+    "01KSQVZPHS9NG0PK1B287A52Y3": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat milicki"
     },
-    "01KSF5C4T20FKYARQZNG9E86H2": {
+    "01KSQVZPHTVX8N6DEVHJYQV9EJ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat oleśnicki"
     },
-    "01KSF5C4T3B22Q2S3H5MGWC194": {
+    "01KSQVZPHV7PBGS50VZ2AACJ8N": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat oławski"
     },
-    "01KSF5C4T4YE4A3KFXE6A8PY8Y": {
+    "01KSQVZPHV7XG858BFKWA31RVQ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat polkowicki"
     },
-    "01KSF5C4T5321AB2X58BY52Z3A": {
+    "01KSQVZPHW7CQ45BJ9709V7BX1": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat strzeliński"
     },
-    "01KSF5C4T6H23XYAXA7FSKMV6F": {
+    "01KSQVZPHX00ABC320EDYD8WEN": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat średzki"
     },
-    "01KSF5C4T7FZNSSBX1CR46PCZT": {
+    "01KSQVZPHYQ36HAMNCAE6K5W72": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat świdnicki"
     },
-    "01KSF5C4T78J92649XC7JGVNDB": {
+    "01KSQVZPHZY2QKJZTSPF9JSGJ1": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat trzebnicki"
     },
-    "01KSF5C4T82Y5ZQ3FB8S0XMVF2": {
+    "01KSQVZPHZ8SRQTT92DK1GSTAB": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wałbrzyski"
     },
-    "01KSF5C4T97WKRACDS52NPGB8D": {
+    "01KSQVZPJ0AVTGXS7VFANY3P14": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wołowski"
     },
-    "01KSF5C4TAJ96GGTQFD5QZAB3E": {
+    "01KSQVZPJ1TGCMQ5TWFENVRQQF": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wrocławski"
     },
-    "01KSF5C4TBSQK5ZE291AB4M7RC": {
+    "01KSQVZPJ2CQ6NCZT8J0070BZQ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat ząbkowicki"
     },
-    "01KSF5C4TCTJ8P7B0QD5YZ3RNE": {
+    "01KSQVZPJ3YBWB51PA8FVVV5Z1": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat zgorzelecki"
     },
-    "01KSF5C4TD7V7Z7EPTZXFK3NP6": {
+    "01KSQVZPJ4H52975NR1GSD6GYX": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat złotoryjski"
     },
-    "01KSF5C4TDF69WME9M4EPKEZBE": {
+    "01KSQVZPJ4YHPYT16EYPGMVEXD": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Jelenia Góra"
     },
-    "01KSF5C4TE7HMQPJJY4PB3PQDM": {
+    "01KSQVZPJ51W8V7R4EBSJCTSM8": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Legnica"
     },
-    "01KSF5C4TFM3ZBCCQFCT3SQNXF": {
+    "01KSQVZPJ64VQ73CZP0EJMNCP5": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Wrocław"
     },
-    "01KSF5C4TSZTWS0AT07YGRKKBT": {
+    "01KSQVZPJ7C4XH6K8Q688N9VBQ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Wałbrzych"
     }
 }

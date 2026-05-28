@@ -1,170 +1,122 @@
 {
-    "01KSF5C4WD76BDSK39A4WGJMF9": {
+    "01KSQVZPM6WDPRDF91X6HY26Z4": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat bełchatowski"
     },
-    "01KSF5C4WEVVSET2HFSSJD7481": {
+    "01KSQVZPM6M0HMXJEVXZZPYWFM": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat kutnowski"
     },
-    "01KSF5C4WFXXG09SH53XNGAWWJ": {
+    "01KSQVZPM75HRHH0QHX64MY2XD": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat łaski"
     },
-    "01KSF5C4WF64P98MJCCRK03NEG": {
+    "01KSQVZPM8PM86VGQ8G38T9DSS": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat łęczycki"
     },
-    "01KSF5C4WGGSVXCSYX4MCRWCW2": {
+    "01KSQVZPM8AR8ZJD9Y19Y1CP76": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat łowicki"
     },
-    "01KSF5C4WH50ECJQGKS8Z19W0J": {
+    "01KSQVZPM92T73VMSP8H497117": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat łódzki wschodni"
     },
-    "01KSF5C4WJVZ6AXPM18KNP2XP5": {
+    "01KSQVZPMA1Z3KG2990A3N9MBV": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat opoczyński"
     },
-    "01KSF5C4WJRRXRDWCAP155MEX1": {
+    "01KSQVZPMAJVQT9KF1J8NA64VZ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat pabianicki"
     },
-    "01KSF5C4WK6E51Y4D4PKPATG9P": {
+    "01KSQVZPMBXZACNYN29G8NRSX7": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat pajęczański"
     },
-    "01KSF5C4WMAFHTMTK55ZN6H1SA": {
+    "01KSQVZPMC0BWR8CVFF8VR2996": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat piotrkowski"
     },
-    "01KSF5C4WN4FAC5NSV71XZ989J": {
+    "01KSQVZPMCXF97R1H2S77NERVK": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat poddębicki"
     },
-    "01KSF5C4WNYZT71R40CETCJ7HJ": {
+    "01KSQVZPMDF3RBR04HXRCDCF6M": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat radomszczański"
     },
-    "01KSF5C4WPC6DWE4R2YSAD234V": {
+    "01KSQVZPMDVC90FZYZV7AX2EXD": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat rawski"
     },
-    "01KSF5C4WQXT65H9YXT88P5S36": {
+    "01KSQVZPMEE5JWHFJJ69PRRTA4": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat sieradzki"
     },
-    "01KSF5C4WRR1EW188VSJQ3K8HN": {
+    "01KSQVZPMFE530HDDK5MHANQ5P": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat skierniewicki"
     },
-    "01KSF5C4WSNX2C3HR4FGNQW89A": {
+    "01KSQVZPMFKG3GAJJ06J9GFKRC": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat tomaszowski"
     },
-    "01KSF5C4WSNB8B8JK6RBHPK7F4": {
+    "01KSQVZPMGD533WH1VD9XDCKS2": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wieluński"
     },
-    "01KSF5C4WTKS714XP7PH80CPBG": {
+    "01KSQVZPMH6BB95J22H7A0DDKD": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat wieruszowski"
     },
-    "01KSF5C4WVCHEGKV6WVMX3Y3EY": {
+    "01KSQVZPMH7350JSRHSFHBKWW1": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat zduńskowolski"
     },
-    "01KSF5C4WWJWQPHJE4XZMWMANX": {
+    "01KSQVZPMJFP660BYNYN7FP1C4": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat zgierski"
     },
-    "01KSF5C4WW4GQM2FJMM8J2DWYP": {
+    "01KSQVZPMK67GABN5RXC0EBJAZ": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat brzeziński"
     },
-    "01KSF5C4WX34YPHDYYCM5N3Y6N": {
+    "01KSQVZPMMDBP7BVN21JNA92R8": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Łódź"
     },
-    "01KSF5C4WZTCTEYGXC5YF2HJ64": {
+    "01KSQVZPMMZEQV89RJ857E8XVK": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Piotrków Trybunalski"
     },
-    "01KSF5C4X0P794P6MRPM8HACWQ": {
+    "01KSQVZPMNKY376EBXAC9KCFS7": {
         "type": "text",
-        "tags": [
-            "name"
-        ],
+        "tag": "name",
         "text": "powiat Skierniewice"
     }
 }

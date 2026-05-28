@@ -1,121 +1,87 @@
 {
-    "01KSF5C50VHR4NQBYVVSCVH2A1": {
+    "01KSQVZPR8Y3SSASEZ55AZ5NB7": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "augustowski"
     },
-    "01KSF5C50VNCP0MRTY261ZEXCP": {
+    "01KSQVZPR9A7ZD73PRMB1GNQBN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "białostocki"
     },
-    "01KSF5C50WRSS9Y6C6F1EAYDHV": {
+    "01KSQVZPRA9HK29S4TS5555CNN": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "bielski"
     },
-    "01KSF5C50XEMQ0YHKXBJFA8BFV": {
+    "01KSQVZPRAV1HM78JFTKEQ3S36": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "grajewski"
     },
-    "01KSF5C50X0PGDYNW73PPDEY8F": {
+    "01KSQVZPRB5ZAS456EP5JV5JMC": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "hajnowski"
     },
-    "01KSF5C50Y54REXRMQS564ECZR": {
+    "01KSQVZPRCQKQJ0J6CFBJJJ2VR": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "kolneński"
     },
-    "01KSF5C50Z8MYJJWYQSNZDC7YG": {
+    "01KSQVZPRCJ7QVK5B9XGTR44XB": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "łomżyński"
     },
-    "01KSF5C50ZRQ7FED0QEMK84EKQ": {
+    "01KSQVZPRDDEAWEZFEH85GKKVW": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "moniecki"
     },
-    "01KSF5C510NN13E89NZYZQX76G": {
+    "01KSQVZPRE9KZ7R71BABQEZW5J": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sejneński"
     },
-    "01KSF5C51134BVEKFY166XFS9X": {
+    "01KSQVZPREEDDN413XTRX9V87Z": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "siemiatycki"
     },
-    "01KSF5C51127VWWTR3DNKTBRNP": {
+    "01KSQVZPRFBYB9SCDTQVY5VYDP": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "sokólski"
     },
-    "01KSF5C512DX1RA6Q2XVQ2HP4Q": {
+    "01KSQVZPRGP25HR26RT8G4NHYC": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "suwalski"
     },
-    "01KSF5C513D264RKJFZ28PAW67": {
+    "01KSQVZPRHNCPY3VXSCJWVW8PB": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "wysokomazowiecki"
     },
-    "01KSF5C514N02R5QGDJR71F7XD": {
+    "01KSQVZPRHDYC0C7EE36ADMXDC": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "zambrowski"
     },
-    "01KSF5C514N43EKBVF13TBCN9X": {
+    "01KSQVZPRJXNEBE8H87C1RBZNG": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Białystok"
     },
-    "01KSF5C515DRGRG2K0KH2HDT49": {
+    "01KSQVZPRKA70AZME8WKNJYSJT": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Łomża"
     },
-    "01KSF5C516TPH2P5E8BB8983XQ": {
+    "01KSQVZPRMQ2G0K19KYFN5803C": {
         "type": "text",
-        "tags": [
-            "shortName"
-        ],
+        "tag": "shortName",
         "text": "Suwałki"
     }
 }

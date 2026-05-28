@@ -1,100 +1,72 @@
 {
-    "01KSF5C52VERR6FSQKGJH98Q3V": {
+    "01KSQVZPT8KQDTSRDYH9HVWV5P": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat buski"
     },
-    "01KSF5C52V7ZWFE6479R35WHG3": {
+    "01KSQVZPT9AQMAE5GF1BP9YDX1": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat jędrzejowski"
     },
-    "01KSF5C52WJTHFMC8R5RVARE4S": {
+    "01KSQVZPT9PK64J0NBPB4BEZMJ": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat kazimierski"
     },
-    "01KSF5C52XH3VWFCF9SSTNVX39": {
+    "01KSQVZPTAF9PDD3EEQ0TDH063": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat kielecki"
     },
-    "01KSF5C52X7ZV4APW0TNQWEF2X": {
+    "01KSQVZPTBY08W63SDVQMAA94A": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat konecki"
     },
-    "01KSF5C52Y0KJ8P2H3YARXVY1H": {
+    "01KSQVZPTBMBT56ZQ7Z7G0SVW5": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat opatowski"
     },
-    "01KSF5C52ZM2AJ46BKVXA865AJ": {
+    "01KSQVZPTCC6P4EG2P1S69R7JH": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat ostrowiecki"
     },
-    "01KSF5C530MD5JFS5RD739YEV1": {
+    "01KSQVZPTD4MWNGDV4ZKFJH9NE": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat pińczowski"
     },
-    "01KSF5C530BBB8683PN497Y7R3": {
+    "01KSQVZPTDRHGCT69NSYMHAS61": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat sandomierski"
     },
-    "01KSF5C531STKWJ1BYXEMX7R6W": {
+    "01KSQVZPTE9HAK3M1NA4ZDGHF6": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat skarżyski"
     },
-    "01KSF5C53263ZDZ9RRRDJCSV6C": {
+    "01KSQVZPTFAC6YPA0BZVKJEQ5G": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat starachowicki"
     },
-    "01KSF5C533RZBWNGYK7NAW635J": {
+    "01KSQVZPTG5FQQ099BZETE2422": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat staszowski"
     },
-    "01KSF5C534K2Z7SZR30FV0D6HG": {
+    "01KSQVZPTG7MVSZTPAPPYDT8AK": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat włoszczowski"
     },
-    "01KSF5C5354G99XT9WKT97046D": {
+    "01KSQVZPTH45AXF6E4FEEAKX02": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Kielce"
     }
 }

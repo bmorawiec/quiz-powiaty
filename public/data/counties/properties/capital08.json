@@ -1,100 +1,72 @@
 {
-    "01KSF5C4W22MRAPQV1DDYAKYFJ": {
+    "01KSQVZPKVSBG4X6D1C9WDNVGE": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Gorzów Wielkopolski"
     },
-    "01KSF5C4W3BF2GD9Y96H21NVSE": {
+    "01KSQVZPKWH78J1AR9XC68S6Z1": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Krosno Odrzańskie"
     },
-    "01KSF5C4W3TH90K7T5XYBHCBG4": {
+    "01KSQVZPKW6KH0N6FM9B580X2N": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Międzyrzecz"
     },
-    "01KSF5C4W4D30V3S92FRQ324WW": {
+    "01KSQVZPKXRX1683WR0YSKW43M": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Nowa Sól"
     },
-    "01KSF5C4W5X98H3W6G1S5Z2202": {
+    "01KSQVZPKYBETEHQ1QGVW3CMGP": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Słubice"
     },
-    "01KSF5C4W6PNY6TFXDAK4KMBVK": {
+    "01KSQVZPKYDCQGRZ9C4NJEWCAZ": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Strzelce Krajeńskie"
     },
-    "01KSF5C4W6GS3RTXCPQ2S69BR5": {
+    "01KSQVZPKZ6G37K99SPZ1SQ5GS": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Sulęcin"
     },
-    "01KSF5C4W7GTE7J4GC0369J989": {
+    "01KSQVZPM0QSNDMRVSP8GZT65T": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Świebodzin"
     },
-    "01KSF5C4W8QCWYP21XVNESREY8": {
+    "01KSQVZPM0824RYKJSGWDJ88H7": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Zielona Góra"
     },
-    "01KSF5C4W8TH1R22DZNH1R4HYH": {
+    "01KSQVZPM1EWXZ9F4S3PGKZ5ZJ": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Żagań"
     },
-    "01KSF5C4W9PQPV7AW0NP7XY9G3": {
+    "01KSQVZPM2QFBR6ZT4441YS46P": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Żary"
     },
-    "01KSF5C4WAPGHRQJ4GZXDMQP7V": {
+    "01KSQVZPM2B7FG24Z5R3A58D8Y": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Wschowa"
     },
-    "01KSF5C4WBGMVZRM7T3DD4GTGQ": {
+    "01KSQVZPM3H8KEQPM0A1NS2DAB": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Gorzów Wielkopolski"
     },
-    "01KSF5C4WB0CS9MPPJZ2FFGTVF": {
+    "01KSQVZPM4WFMS4DC7Q473B9CG": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Zielona Góra"
     }
 }

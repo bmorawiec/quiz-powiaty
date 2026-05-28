@@ -1,100 +1,72 @@
 {
-    "01KSF5C52VTZDAQM0ZC2VSMFW0": {
+    "01KSQVZPT86VD44ZGZ5Z1FSC3J": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Busko-Zdrój"
     },
-    "01KSF5C52VNYFQ39DFAW08FF15": {
+    "01KSQVZPT9HVJQC483A5D1FZ05": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Jędrzejów"
     },
-    "01KSF5C52WWG4TYM11YS1RDF2P": {
+    "01KSQVZPT918DSMQ13G011EPBC": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kazimierza Wielka"
     },
-    "01KSF5C52XCGQA8YMSWXBSVCBC": {
+    "01KSQVZPTAWEDR21P69PWV7470": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kielce"
     },
-    "01KSF5C52Y7W0HH68F6C533Q32": {
+    "01KSQVZPTBNA25ET1JPT1YTC8A": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Końskie"
     },
-    "01KSF5C52YT2Q19MYGTDS8AHY9": {
+    "01KSQVZPTCYBVGM168DB1FV6DT": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Opatów"
     },
-    "01KSF5C52ZGF6KQMSMBD4YN4RF": {
+    "01KSQVZPTC1J5636MEJV627EZY": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Ostrowiec Świętokrzyski"
     },
-    "01KSF5C530C5AQFY1340J8VX8W": {
+    "01KSQVZPTDWKBN0B49QF66J98S": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Pińczów"
     },
-    "01KSF5C531X7NN8DT6VJ9XMN58": {
+    "01KSQVZPTENEA7DVPRY7M3PVFF": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Sandomierz"
     },
-    "01KSF5C531M0975JVNDMSBGF2N": {
+    "01KSQVZPTE5Y0S4NZTAGQQT9JS": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Skarżysko-Kamienna"
     },
-    "01KSF5C532KTY85EPXTG0S2EZ6": {
+    "01KSQVZPTFBZZFR2TXDSK56AGB": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Starachowice"
     },
-    "01KSF5C533DHWW31HRF4H74J7W": {
+    "01KSQVZPTG7RBEJCXZ3Z475PD0": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Staszów"
     },
-    "01KSF5C5343ENXZ9X5MN7HFN14": {
+    "01KSQVZPTG8M33F1K4J60XVG9D": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Włoszczowa"
     },
-    "01KSF5C535GF2MXAGYZNYH05PZ": {
+    "01KSQVZPTHMFRE0FXH307SAXKS": {
         "type": "text",
-        "tags": [
-            "capital"
-        ],
+        "tag": "capital",
         "text": "Kielce"
     }
 }

@@ -1,121 +1,87 @@
 {
-    "01KSF5C52VJR331BY05YD56J5Y": {
+    "01KSQVZPT8SW4S5HKQQ7F1S4AC": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TBU"
     },
-    "01KSF5C52WBTWV04W1F43DD7KW": {
+    "01KSQVZPT9Q9HCSNHQYBKQ52WT": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TJE"
     },
-    "01KSF5C52W0J950RJK25NWXAP1": {
+    "01KSQVZPTAB4F34JRRJ05QTX6A": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TKA"
     },
-    "01KSF5C52XYSVZSBN69Y7634YN": {
+    "01KSQVZPTA5RQ6Q1NPC5D1V5E5": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TKI"
     },
-    "01KSF5C52XNJTKAN7145PFXWBW": {
+    "01KSQVZPTAET1J0CK247W8RK19": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TKC"
     },
-    "01KSF5C52X6GJ7K5VFRD7K6JNA": {
+    "01KSQVZPTAQ447DRRVPAYP2YN8": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TKM"
     },
-    "01KSF5C52XHS6NECM1MRNY1BZN": {
+    "01KSQVZPTAM76CF83XGAS2TT9R": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TKP"
     },
-    "01KSF5C52YYQ55M1EWMZZS1CHH": {
+    "01KSQVZPTBKT8ABNPK6FKKFHDS": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TKN"
     },
-    "01KSF5C52YHSG7EJ2DG6ZHQGRD": {
+    "01KSQVZPTCT3WA4XJ8YBSEYZAC": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TOP"
     },
-    "01KSF5C52Z4HRFJ0GHDETRBS31": {
+    "01KSQVZPTCFPVS11C88A8044EK": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TOS"
     },
-    "01KSF5C5304R8K2Z6AKS1J0B17": {
+    "01KSQVZPTDKCCWMN1T9GS0VXY2": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TPI"
     },
-    "01KSF5C5318VD44ATVGXHE2GY9": {
+    "01KSQVZPTETJDW1CAMN9GAFCVZ": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TSA"
     },
-    "01KSF5C531GKT394WCA92MG2P1": {
+    "01KSQVZPTESCTPBFVD5VXYHZC5": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TSK"
     },
-    "01KSF5C532EK94NMVK2XNAZ112": {
+    "01KSQVZPTF0ACDTQYHMS73BHEY": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TST"
     },
-    "01KSF5C533XGVRH56J01ACRSJ4": {
+    "01KSQVZPTGZF665X0XRNV8EJK6": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TSZ"
     },
-    "01KSF5C534SX2DSAC4TZC3D8QA": {
+    "01KSQVZPTGKZ6P79QY0FCZJ3CJ": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TLW"
     },
-    "01KSF5C53574FCKGM9WG0WBHG8": {
+    "01KSQVZPTH3KYVSY4PZK32QS30": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "TK"
     }
 }

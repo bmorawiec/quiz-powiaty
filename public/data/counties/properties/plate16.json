@@ -1,86 +1,62 @@
 {
-    "01KSF5C4Z1S6KSW6M593X2ETNY": {
+    "01KSQVZPPEF7FNSJEQQDNZKMV2": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "OB"
     },
-    "01KSF5C4Z2RKZNH471NM4NENVC": {
+    "01KSQVZPPFAA3CVMH7GFVE5A0N": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "OGL"
     },
-    "01KSF5C4Z3J9MJMB3NZJ6WFM70": {
+    "01KSQVZPPFXSG52HK3ZN6A9K7J": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "OK"
     },
-    "01KSF5C4Z4T3MMCEXY5E1812K1": {
+    "01KSQVZPPGTFSTXF4K1KNJB32R": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "OKL"
     },
-    "01KSF5C4Z4A48VSJ10R4HMNKD4": {
+    "01KSQVZPPHC1YRG1YW6AMMRXJ9": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "OKR"
     },
-    "01KSF5C4Z5QHF7815GF3HDB8SG": {
+    "01KSQVZPPHNXYVV23PSSTTG7DV": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "ONA"
     },
-    "01KSF5C4Z6GN6H2X6AXFMDFBTJ": {
+    "01KSQVZPPJ1EPBFH72VXWEB733": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "ONY"
     },
-    "01KSF5C4Z71FSD4MKGN7P9XZ5F": {
+    "01KSQVZPPK5M6D3C3EF5TC400G": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "OOL"
     },
-    "01KSF5C4Z7JCVFWXHV927856J3": {
+    "01KSQVZPPMZDCVX8ZNZ6N0XXRR": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "OPO"
     },
-    "01KSF5C4Z8S2DKSNCT0G0DF4F6": {
+    "01KSQVZPPMRABXWE2HNMVYS9S7": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "OPR"
     },
-    "01KSF5C501W8G34K5T48H2Z1BT": {
+    "01KSQVZPPNFPW1VYA2JDGKS53E": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "OST"
     },
-    "01KSF5C5027G1AQ4T6JE6SKJXJ": {
+    "01KSQVZPPPNEFG004602GQN074": {
         "type": "text",
-        "tags": [
-            "plate"
-        ],
+        "tag": "plate",
         "text": "OP"
     }
 }

@@ -1,247 +1,177 @@
 {
-    "01KSF5C53WN232JCRZNZXXY1AH": {
+    "01KSQVZPV51BCRTP4NF9D379JV": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat chodzieski"
     },
-    "01KSF5C53XWAWJT53B0AYJ5TYS": {
+    "01KSQVZPV6343TCGC52FXQTVGN": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat czarnkowsko-trzcianecki"
     },
-    "01KSF5C53YECGSRJP4P6VZ8KGT": {
+    "01KSQVZPV7XBJMB7KAN7SGZ2BR": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat gnieźnieński"
     },
-    "01KSF5C53YTEWY7XTSB7Z6FFR4": {
+    "01KSQVZPV7T0YV8H8X2Q80BJ9M": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat gostyński"
     },
-    "01KSF5C53Z21TNKBQKFHA0EA4H": {
+    "01KSQVZPV8FPKX8XS3KMWDM7R6": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat grodziski (Grodzisk Wielkopolski)"
     },
-    "01KSF5C53ZB17CGZW5H9QSXY68": {
+    "01KSQVZPV9QYWS5D7DHSC2EDB8": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat jarociński"
     },
-    "01KSF5C540SWF8F69B6MTN1000": {
+    "01KSQVZPV9Q5BGGPHM6630YJPQ": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat kaliski"
     },
-    "01KSF5C541S6KPWA2183AAPP4J": {
+    "01KSQVZPVAVB33BR7ASM6NJ63X": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat kępiński"
     },
-    "01KSF5C542RNPTWE3ST5PJW5W7": {
+    "01KSQVZPVB7B12PKCJ8JMENW7J": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat kolski"
     },
-    "01KSF5C54286BGW5BYCX77YR1Q": {
+    "01KSQVZPVBE9CQGVM2CMWTCF2W": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat koniński"
     },
-    "01KSF5C543REYC02T8JK5PD9GZ": {
+    "01KSQVZPVCAWHQSMSXJFZTRPE0": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat kościański"
     },
-    "01KSF5C5441F1TP80S0156D4CB": {
+    "01KSQVZPVDJ2NTJR07WP4YPQZ6": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat krotoszyński"
     },
-    "01KSF5C5447WCNW807FTRPX8QJ": {
+    "01KSQVZPVD9GTJNYR7X3VP3P81": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat leszczyński"
     },
-    "01KSF5C545Y95FV13QRX7M4C5G": {
+    "01KSQVZPVEKRNJ2JJ8V3K00B62": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat międzychodzki"
     },
-    "01KSF5C546RG1VG7X29QAZVJZP": {
+    "01KSQVZPVFS9H9WMS5GZCAH660": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat nowotomyski"
     },
-    "01KSF5C547348QEF254TAPCT70": {
+    "01KSQVZPVGWCVR4X0X2FMZWEB2": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat obornicki"
     },
-    "01KSF5C5470ADXW626B8FEPFVR": {
+    "01KSQVZPVGD0R4RQRKTEZPSMJ9": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat ostrowski (Ostrów Wielkopolski)"
     },
-    "01KSF5C548ZBK4DNHX6JGJJYHA": {
+    "01KSQVZPVHDEGNTFCEN2AKVMHV": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat ostrzeszowski"
     },
-    "01KSF5C5493EG2YZRMEXQ4TYKM": {
+    "01KSQVZPVJKGWWY6EZ88F06YZ5": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat pilski"
     },
-    "01KSF5C54A61ZAYAZ4MJPTFR48": {
+    "01KSQVZPVK1M9N432V5Y65E6SV": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat pleszewski"
     },
-    "01KSF5C54B0MQ0Z5ZPQTB93XZV": {
+    "01KSQVZPVMB31TSBKWQRTN7HF2": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat poznański"
     },
-    "01KSF5C54CARWVV7A0FS6K9JFP": {
+    "01KSQVZPVNBMMJHXTBBK2WJJSE": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat rawicki"
     },
-    "01KSF5C54DSPCNRSS0WJ6N4V4C": {
+    "01KSQVZPVPPNFAS3Z8TQH1X8K3": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat słupecki"
     },
-    "01KSF5C54ER45K1E61HM59AR2W": {
+    "01KSQVZPVQDEPMPV6Z5PCXBXZK": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat szamotulski"
     },
-    "01KSF5C54FEVG20CC25FB296B1": {
+    "01KSQVZPVRJHK31NENXN9J5HHV": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat średzki (Środa Wielkopolska)"
     },
-    "01KSF5C54GQPY007G63AFPR50P": {
+    "01KSQVZPVSQPWVYD477SJAHJJY": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat śremski"
     },
-    "01KSF5C54HAQAB06KWWYJBKD59": {
+    "01KSQVZPVSTX4KSP33CDG1M0N3": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat turecki"
     },
-    "01KSF5C558R544K8TZJXYP2KMQ": {
+    "01KSQVZPVTRXRPMRZJ3HGE78KX": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat wągrowiecki"
     },
-    "01KSF5C559PAFGE2A27J0JCTSJ": {
+    "01KSQVZPVVNWS0DHCTJH1GT6SN": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat wolsztyński"
     },
-    "01KSF5C55AR5REJK163W8KNXVY": {
+    "01KSQVZPVW1PTVH5CS5RXR9BGE": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat wrzesiński"
     },
-    "01KSF5C55B17Z9KBMDVW82YSXE": {
+    "01KSQVZPVXV875QVJTH9D3QHK3": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat złotowski"
     },
-    "01KSF5C55C5X1F3FJY8PC6Q32F": {
+    "01KSQVZPVY28KMEJZCSDNRDX8T": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Kalisz"
     },
-    "01KSF5C55DXPVK22955SEY70W9": {
+    "01KSQVZPVZAJZB7VEDRKB9ST02": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Konin"
     },
-    "01KSF5C55E977M5EXKSX47RYGC": {
+    "01KSQVZPW04HYBGGC1GDQTCC0D": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Leszno"
     },
-    "01KSF5C55F4WN1QDGBR9VAXW84": {
+    "01KSQVZPW1P927VE285APY55HD": {
         "type": "text",
-        "tags": [
-            "unambiguousName"
-        ],
+        "tag": "unambiguousName",
         "text": "powiat Poznań"
     }
 }
