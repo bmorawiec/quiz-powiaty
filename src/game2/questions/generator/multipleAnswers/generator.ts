@@ -1,7 +1,7 @@
 import { getUnitProperties, type Property, type PropertyTag, type Unit } from "src/data";
 import { ulid } from "ulid";
 import type { Answer, Answers } from "../../answers";
-import { hasText, type Content } from "../../content";
+import type { Content } from "../../content";
 import type { Question, Questions } from "../../questions";
 import { INITIAL_POINT_AMOUNT, QuestionNotFoundError } from "../../questions";
 import { mergeQuestionsAndAnswers } from "../../questionsAndAnswers";
@@ -17,12 +17,8 @@ export interface GeneratorOptions {
         /** A function that generates question content based on the properties of a unit.
          *  @param properties A list of properties all tagged with one of the tags specified in `questions.tags`. */
         contentGenerator: (properties: Property[]) => Content;
-        /** If set to true, then the returned questions will be sorted in alphabetical order. This requires at least one
-         *  content of type 'text' to be present in the generated questions.
-         *  If set to false, then questions are returned in the same order as their corresponding units in the
-         *  `units` array.
-         *  @default false */
-        sort?: boolean;
+        /** If provided, then the generated questions will be sorted using this sorter. */
+        sorter?: (a: Question, b: Question) => number;
     };
     answers: {
         tag: PropertyTag;
@@ -46,17 +42,13 @@ export function generateMultipleAnswerQuestions(options: GeneratorOptions): Ques
         qsAndAs = mergeQuestionsAndAnswers(qsAndAs, unitQsAndAs);
     }
 
-    if (options.questions.sort) {
-        qsAndAs.questionIds.sort((a: string, b: string) => {
-            const questionA = qsAndAs.questions[a];
-            const questionB = qsAndAs.questions[b];
-            if (!questionA) throw new QuestionNotFoundError(a);
-            if (!questionB) throw new QuestionNotFoundError(b);
-
-            if (!hasText(questionA.content) || !hasText(questionB.content)) {
-                throw new Error("The provided questions must contain text.");
-            }
-            return questionA.content.text.localeCompare(questionB.content.text);
+    if (options.questions.sorter) {
+        qsAndAs.questionIds.sort((idA, idB) => {
+            const questionA = qsAndAs.questions[idA];
+            const questionB = qsAndAs.questions[idB];
+            if (!questionA) throw new QuestionNotFoundError(idA);
+            if (!questionB) throw new QuestionNotFoundError(idB);
+            return options.questions.sorter!(questionA, questionB);
         });
     }
 

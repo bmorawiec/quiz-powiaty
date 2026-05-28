@@ -9,13 +9,6 @@ export type Content =
     | PlateContent
     | TextAndPlateContent;
 
-export type ContentWithText =
-    | TextQuestionContent
-    | TextAndImageContent
-    | TextAndShapeContent
-    | TextWithInlineImageContent
-    | TextAndPlateContent;
-
 /** Displays the provided text. */
 export interface TextQuestionContent {
     type: "text";
