@@ -12,23 +12,25 @@ export type Property = TextProperty | ImageProperty | ShapeProperty;
 
 export interface TextProperty {
     type: "text";
-    tags: PropertyTag[];
+    tag: TextPropertyTag;
     text: string;
 }
 
 export interface ImageProperty {
     type: "image";
-    tags: PropertyTag[];
+    tag: ImagePropertyTag;
     url: string;
 }
 
 export interface ShapeProperty {
     type: "shape";
-    tags: PropertyTag[];
+    tag: ShapePropertyTag;
     shape: number[][];
 }
 
-export type PropertyTag =
+export type PropertyTag = TextPropertyTag | ImagePropertyTag | ShapePropertyTag;
+
+export type TextPropertyTag =
     /** Properties with this tag should be of type TextProperty and will contain the full name
      *  of an administrative unit.
      *  @example Example content: "województwo podkarpackie" for the Subcarpathian voivodeship */
@@ -49,11 +51,15 @@ export type PropertyTag =
      *  of an administrative unit.
      *  @example Example content: "Rzeszów" for the Subcarpathian voivodeship */
     | "plate"
+
+export type ImagePropertyTag =
     /** Properties with this tag should be of type ImageProperty and will link to the flag of an administrative unit. */
     | "flag"
     /** Properties with this tag should be of type ImageProperty and will link to the coat of arms
      *  of an administrative unit. */
     | "coa"
+
+export type ShapePropertyTag =
     /** Properties with this tag should be of type ShapeProperty and will contain the shape
      *  of an administrative unit. */
     | "shape";

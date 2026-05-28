@@ -15,11 +15,11 @@ const unit1: Unit = {
     propertyIds: ["name1", "unambiguousName1", "shortName1", "capital1", "plate1a", "plate1b",
         "flag1", "coa1", "shape1"],
 };
-const name1: Property = { tags: ["name"], type: "text", text: "powiat rzeszowski" };
-const capital1: Property = { tags: ["capital"], type: "text", text: "Rzeszów" };
-const plate1a: Property = { tags: ["plate"], type: "text", text: "RZE" };
-const plate1b: Property = { tags: ["plate"], type: "text", text: "RZZ" };
-const flag1: Property = { tags: ["flag"], type: "image", url: "/dummy-path/1.svg" };
+const name1: Property = { tag: "name", type: "text", text: "powiat rzeszowski" };
+const capital1: Property = { tag: "capital", type: "text", text: "Rzeszów" };
+const plate1a: Property = { tag: "plate", type: "text", text: "RZE" };
+const plate1b: Property = { tag: "plate", type: "text", text: "RZZ" };
+const flag1: Property = { tag: "flag", type: "image", url: "/dummy-path/1.svg" };
 
 const unit2: Unit = {
     id: "2",
@@ -27,10 +27,10 @@ const unit2: Unit = {
     propertyIds: ["name2", "unambiguousName2", "shortName2", "capital2", "plate2",
         "flag2", "coa2", "shape2"],
 };
-const name2: Property = { tags: ["name"], type: "text", text: "powiat dębicki" };
-const capital2: Property = { tags: ["capital"], type: "text", text: "Dębica" };
-const plate2: Property = { tags: ["plate"], type: "text", text: "RDE" };
-const flag2: Property = { tags: ["flag"], type: "image", url: "/dummy-path/2.svg" };
+const name2: Property = { tag: "name", type: "text", text: "powiat dębicki" };
+const capital2: Property = { tag: "capital", type: "text", text: "Dębica" };
+const plate2: Property = { tag: "plate", type: "text", text: "RDE" };
+const flag2: Property = { tag: "flag", type: "image", url: "/dummy-path/2.svg" };
 
 const unit3: Unit = {
     id: "3",
@@ -38,11 +38,11 @@ const unit3: Unit = {
     propertyIds: ["name3", "unambiguousName3", "shortName3", "capital3", "plate3a", "plate3b",
         "flag3", "coa3", "shape3"],
 };
-const name3: Property = { tags: ["name"], type: "text", text: "powiat krośnieński" };
-const capital3: Property = { tags: ["capital"], type: "text", text: "Krosno" };
-const plate3a: Property = { tags: ["plate"], type: "text", text: "RKR" };
-const plate3b: Property = { tags: ["plate"], type: "text", text: "YKR" };
-const flag3: Property = { tags: ["flag"], type: "image", url: "/dummy-path/3.svg" };
+const name3: Property = { tag: "name", type: "text", text: "powiat krośnieński" };
+const capital3: Property = { tag: "capital", type: "text", text: "Krosno" };
+const plate3a: Property = { tag: "plate", type: "text", text: "RKR" };
+const plate3b: Property = { tag: "plate", type: "text", text: "YKR" };
+const flag3: Property = { tag: "flag", type: "image", url: "/dummy-path/3.svg" };
 
 const unit4: Unit = {
     id: "4",
@@ -50,10 +50,10 @@ const unit4: Unit = {
     propertyIds: ["name4", "unambiguousName4", "shortName4", "capital4", "plate4",
         "flag4", "coa4", "shape4"],
 };
-const name4: Property = { tags: ["name"], type: "text", text: "miasto Krosno" };
-const capital4: Property = { tags: ["capital"], type: "text", text: "Krosno" };
-const plate4: Property = { tags: ["plate"], type: "text", text: "RK" };
-const flag4: Property = { tags: ["flag"], type: "image", url: "/dummy-path/4.svg" };
+const name4: Property = { tag: "name", type: "text", text: "miasto Krosno" };
+const capital4: Property = { tag: "capital", type: "text", text: "Krosno" };
+const plate4: Property = { tag: "plate", type: "text", text: "RK" };
+const flag4: Property = { tag: "flag", type: "image", url: "/dummy-path/4.svg" };
 
 const units: Unit[] = [unit1, unit2, unit3, unit4];
 

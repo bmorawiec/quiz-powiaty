@@ -74,7 +74,7 @@ export function generateQuestionAndItsAnswers(unit: Unit, options: GeneratorOpti
     const question: Question = {
         id: questionId,
         contents: replacer(getUnitProperties(unit, options.properties)
-            .filter((property) => property.tags.includes(options.questions.tag))),
+            .filter((property) => property.tag === options.questions.tag)),
         points: INITIAL_POINT_AMOUNT,
         tries: 0,
         answerIds,
@@ -99,7 +99,7 @@ export function generateCorrectAnswers(unit: Unit, questionId: string, options: 
     };
 
     const answerProperties = getUnitProperties(unit, options.properties)
-        .filter((property) => property.tags.includes(options.answers.tag));
+        .filter((property) => property.tag.includes(options.answers.tag));
     for (const property of answerProperties) {
         const answer: Answer = {
             id: ulid(),
