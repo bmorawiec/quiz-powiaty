@@ -1,0 +1,1 @@
+export { generateSingleAnswerQuestions } from "./generator";
