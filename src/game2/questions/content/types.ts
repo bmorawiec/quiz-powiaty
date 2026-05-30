@@ -1,8 +1,13 @@
+import type { Property } from "src/data";
+
+export type ContentGenerator = (properties: Property[]) => Content;
+
 export type Content =
     | TextContent
     | ImageContent
     | TallImageContent
     | TextAndImageContent
+    | TitledImageContent
     | ShapeContent
     | TextAndShapeContent
     | TextWithInlineImageContent
@@ -33,6 +38,13 @@ export interface TextAndImageContent {
     type: "textAndImage";
     text: string;
     url: string;
+}
+
+/** Displays an image on the left and a title in the center. */
+export interface TitledImageContent {
+    type: "titledImage",
+    url: string;
+    text: string;
 }
 
 /** Displays a shape. */
