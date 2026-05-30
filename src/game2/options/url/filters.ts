@@ -1,4 +1,3 @@
-import type { UnitFilters } from "src/gameOptions";
 import type { CountyType, GameFilters } from "../types/filters";
 import { voivodeshipCodes, type VoivodeshipCode } from "src/data";
 import { flipObject } from "src/utils/flipObject";
@@ -21,12 +20,12 @@ export function encodeFilters(filters: GameFilters): string {
     return encodedFilters;
 }
 
-export function decodeFilters(encodedFilters: string): UnitFilters | null {
+export function decodeFilters(encodedFilters: string): GameFilters | null {
     if (encodedFilters.length % 2 != 0) {
         return null;
     }
 
-    const filters: UnitFilters = {
+    const filters: GameFilters = {
         countyTypes: [],
         voivodeships: [],
     };
@@ -34,7 +33,7 @@ export function decodeFilters(encodedFilters: string): UnitFilters | null {
     for (let index = 0; index < encodedFilters.length; index += 2) {
         const code = encodedFilters.slice(index, index + 2);
         if (voivodeshipCodes.includes(code as VoivodeshipCode)) {
-            filters.voivodeships.push(code);
+            filters.voivodeships.push(code as VoivodeshipCode);
         } else {
             const countyType = codeToCountyType[code];
             if (!countyType) {
