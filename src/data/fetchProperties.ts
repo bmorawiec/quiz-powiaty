@@ -1,4 +1,4 @@
-import type { Property, PropertyTag, VoivodeshipCode } from "./types";
+import { voivodeshipCodes, type Property, type PropertyTag, type VoivodeshipCode } from "./types";
 
 /** Returns properties (of all voivodeships) tagged with the specified tags. */
 export async function fetchVoivodeshipProperties(tags: PropertyTag[]) {
@@ -27,11 +27,15 @@ async function fetchVoivodeshipPropertiesFile(tag: PropertyTag) {
     return properties;
 }
 
-/** Returns properties (of counties in the listed voivodeships) tagged with the specified tags. */
+/** Returns properties (of counties in the listed voivodeships) tagged with the specified tags.
+ *  If the provided array is empty, then counties from all voivodeships will be fetched. */
 export async function fetchCountyProperties(
-    voivodeships: VoivodeshipCode[],
+    voivodeships: readonly VoivodeshipCode[],
     tags: PropertyTag[],
 ): Promise<Record<string, Property>> {
+    if (voivodeships.length === 0) {
+        voivodeships = voivodeshipCodes;
+    }
     const promises = voivodeships.flatMap((voivodeship) =>
         tags.map((tag) => fetchCountyPropertiesFile(voivodeship, tag)));
     const propertyObjects = await Promise.all(promises);

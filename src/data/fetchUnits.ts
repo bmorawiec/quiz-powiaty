@@ -1,4 +1,4 @@
-import type { Unit, VoivodeshipCode } from "./types";
+import { voivodeshipCodes, type Unit, type VoivodeshipCode } from "./types";
 
 /** Returns an array containing all voivodeships. */
 export async function fetchVoivodeships(): Promise<Unit[]> {
@@ -11,8 +11,12 @@ export async function fetchVoivodeships(): Promise<Unit[]> {
     return units;
 }
 
-/** Returns an array containing counties that are a part of one of the listed voivodeships. */
-export async function fetchCounties(voivodeships: VoivodeshipCode[]): Promise<Unit[]> {
+/** Returns an array containing counties that are a part of one of the listed voivodeships.
+ *  If the provided array is empty, then counties from all voivodeships will be fetched. */
+export async function fetchCounties(voivodeships: readonly VoivodeshipCode[]): Promise<Unit[]> {
+    if (voivodeships.length === 0) {
+        voivodeships = voivodeshipCodes;
+    }
     const promises = voivodeships.map((voivodeship) => fetchCountiesFile(voivodeship));
     const unitArrays = await Promise.all(promises);
 
