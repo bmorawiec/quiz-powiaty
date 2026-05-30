@@ -4,7 +4,7 @@ import { optionsFromURL, optionsToURL } from "./url/options";
 describe("optionsToURL", () => {
     it("correctly encodes game options", () => {
         expect(optionsToURL({
-            mode: "choice",
+            mode: "choiceGame",
             unitType: "county",
             guessFrom: "name",
             guess: "shape",
@@ -16,7 +16,7 @@ describe("optionsToURL", () => {
         })).toBe("#365894ce99022818cc");
 
         expect(optionsToURL({
-            mode: "dnd",
+            mode: "dndGame",
             unitType: "county",
             guessFrom: "capital",
             guess: "coa",
@@ -28,7 +28,7 @@ describe("optionsToURL", () => {
         })).toBe("#363235dd50040610121432");
 
         expect(optionsToURL({
-            mode: "prompt",
+            mode: "promptGame",
             unitType: "voivodeship",
             guessFrom: "plate",
             guess: "flag",
@@ -42,7 +42,7 @@ describe("optionsToURL", () => {
 
     it("encodes unknown maxQuestions values for infinity", () => {
         expect(optionsToURL({
-            mode: "prompt",
+            mode: "promptGame",
             unitType: "voivodeship",
             guessFrom: "plate",
             guess: "flag",
@@ -58,7 +58,7 @@ describe("optionsToURL", () => {
 describe("optionsFromURL", () => {
     it("correctly decodes game options", () => {
         expect(optionsFromURL("#365894ce99022818cc")).toEqual({
-            mode: "choice",
+            mode: "choiceGame",
             unitType: "county",
             guessFrom: "name",
             guess: "shape",
@@ -70,7 +70,7 @@ describe("optionsFromURL", () => {
         });
 
         expect(optionsFromURL("#363235dd50040610121432")).toEqual({
-            mode: "dnd",
+            mode: "dndGame",
             unitType: "county",
             guessFrom: "capital",
             guess: "coa",
@@ -82,7 +82,7 @@ describe("optionsFromURL", () => {
         });
 
         expect(optionsFromURL("#869534pt05")).toEqual({
-            mode: "prompt",
+            mode: "promptGame",
             unitType: "voivodeship",
             guessFrom: "plate",
             guess: "flag",

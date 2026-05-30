@@ -68,10 +68,10 @@ const guessableToCode: Record<Guessable, string> = {
 };
 
 const modeToCode: Record<GameMode, string> = {
-    choice: "ce",
-    dnd: "dd",
-    prompt: "pt",
-    typing: "tg",
+    choiceGame: "ce",
+    dndGame: "dd",
+    promptGame: "pt",
+    typingGame: "tg",
 };
 
 const unitTypeFromCode = flipObject(unitTypeToCode);

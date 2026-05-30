@@ -15,16 +15,18 @@ export interface GameOptions {
     filters: GameFilters;
 }
 
+export const unitTypes: UnitType[] = ["county", "voivodeship"];
 export type UnitType =
     | "county"
     | "voivodeship";
 
 export type GameMode =
-    | "choice"      /** A multiple choice quiz. */
-    | "dnd"         /** Drag-and-drop answers to their respective questions. */
-    | "prompt"      /** Type in answers to prompts one prompt at a time. */
-    | "typing";     /** Fill in the table. */
+    | "choiceGame"      /** A multiple choice quiz. */
+    | "dndGame"         /** Drag-and-drop answers to their respective questions. */
+    | "promptGame"      /** Type in answers to prompts one prompt at a time. */
+    | "typingGame";     /** Fill in the table. */
 
+export const guessables: Guessable[] = ["name", "capital", "plate", "flag", "coa", "shape"];
 export type Guessable =
     | "name"        /** Guess or guess from the name of an administrative unit. */
     | "capital"     /** Guess or guess from the capital of an administrative unit. */
