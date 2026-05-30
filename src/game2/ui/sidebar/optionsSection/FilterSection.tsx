@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { getFilterString, type GameOptions } from "src/gameOptions";
+import { getFilterString, type GameOptions } from "src/game2/options";
 import { Button, FilterIcon } from "src/ui";
 
 export interface FilterSectionProps {

@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState, type ComponentType } from "react";
+import { optionsToQuestions, validateGameOptions, type GameOptions } from "src/game2/options";
 import { type GameStore } from "src/game2/state";
-import { validateGameOptions, type GameOptions } from "src/gameOptions";
 import type { ZustandHook } from "src/utils/zustand";
 import { ulid } from "ulid";
 import { createGame } from "./factory";
@@ -56,10 +56,11 @@ export function useGameSwitcher({ onToggleFullscreen }: GameSwitcherOptions): Ga
             const handleRestart = () => {
                 requestSwitch(options);
             };
-            const [gameComponent, useGameStore] = await createGame(options, {
-                onRestart: handleRestart,
-                onToggleFullscreen,
-            });
+            const [gameComponent, useGameStore] = await createGame(
+                optionsToQuestions(options),
+                options,
+                { onRestart: handleRestart, onToggleFullscreen },
+            );
             if (newGameId.current === thisGameId) {
                 setState({
                     state: "ready",

@@ -1,10 +1,11 @@
-import { QuestionNotFoundError, type GameAPICallbacks } from "src/game2/api";
+import { CardNotFoundError } from "src/game/dnd";
+import { type GameAPICallbacks } from "src/game2/api";
+import { QuestionNotFoundError } from "src/game2/questions";
 import type { GameOptions } from "src/gameOptions";
 import type { ZustandHook } from "src/utils/zustand";
 import { describe, expect, it } from "vitest";
 import { createDnDGameStore } from "./factory";
 import { CellNotFoundError, type DnDGameStore } from "./types";
-import { CardNotFoundError } from "src/game/dnd";
 
 const someOptions: GameOptions = {
     gameType: "dndGame",

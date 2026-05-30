@@ -1,12 +1,12 @@
+import clsx from "clsx";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useSearchParams } from "react-router";
-import { decodeGameURL } from "src/gameOptions";
+import { useLocation } from "react-router";
+import { optionsFromURL } from "src/game2/options";
 import { GameError } from "./GameError";
 import { GameSkeleton } from "./GameSkeleton";
 import { GameView } from "./GameView";
 import { GameStoreContext } from "./hook";
 import { useGameSwitcher } from "./useGameSwitcher";
-import clsx from "clsx";
 
 /** Shows the appropriate game screen depending on URL search params.
  *  Displays an error if the search params are incorrect. */
@@ -37,8 +37,8 @@ export function Game() {
     const { state, firstLoad, gameComponent, useGameStore, requestSwitch } = useGameSwitcher({
         onToggleFullscreen: handleToggleFullscreen,
     });
-    const [searchParams] = useSearchParams();
-    const newOptions = useMemo(() => decodeGameURL(searchParams), [searchParams]);
+    const { hash } = useLocation();
+    const newOptions = useMemo(() => optionsFromURL(hash), [hash]);
     useEffect(() => {
         requestSwitch(newOptions);
     }, [newOptions, requestSwitch]);

@@ -1,14 +1,12 @@
 import {
     AnswerNotFoundError,
-    createGameStore,
     QuestionNotFoundError,
     type Answers,
-    type GameAPICallbacks,
-    type GameAPIOptions,
     type Question,
     type Questions,
-} from "src/game2/api";
-import { unitsFromOptions, type GameOptions } from "src/gameOptions";
+} from "src/game2/questions";
+import { createGameStore, type GameAPICallbacks, type GameAPIOptions } from "src/game2/api";
+import { type GameOptions } from "src/game2/options";
 import type { ZustandHook } from "src/utils/zustand";
 import { ulid } from "ulid";
 import {
@@ -24,21 +22,16 @@ import { getPublicActions } from "./actions";
 /** Creates a game store based on the provided options.
  *  Assumes that options have been validated. */
 export async function createChoiceGameStore(
+    questionsAndAnswers: Questions & Answers,
     options: GameOptions,
     callbacks: GameAPICallbacks,
 ): Promise<ZustandHook<ChoiceGameStore>> {
-    const [units, allUnits] = await unitsFromOptions(options);
     const apiOptions: GameAPIOptions = {
-        units,
-        allUnits,
-        guessFrom: options.guessFrom,
-        guess: options.guess,
-        squishAnswers: true,    // this is so that there's always only a single correct answer
-        numberOfAnswers: 6,     // this is so that there are 6 options to choose from for each question
+        questionsAndAnswers,
         ...callbacks,
     };
-    return createGameStore(apiOptions, (set, get, qsAndAs) => {
-        const screensAndButtons = createScreensAndButtons(qsAndAs);
+    return createGameStore(apiOptions, (set, get) => {
+        const screensAndButtons = createScreensAndButtons(questionsAndAnswers);
         return {
             type: "choice",
             options,

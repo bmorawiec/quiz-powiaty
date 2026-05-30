@@ -1,4 +1,4 @@
-import type { Guessable, Unit } from "src/data/common";
+import type { Answers, Questions } from "../questions";
 
 export interface WithAPI {
     api: GameAPI;
@@ -50,9 +50,8 @@ export interface GameAPIActions {
     correctGuess(answerId: string): boolean;
 
     /** Used to report an incorrect guess.
-     *  @returns a hint if configured to do so, and if the number of guesses exceeds four.
      *  @throws if the game has been paused or if it has finished */
-    incorrectGuess(questionId: string): string;
+    incorrectGuess(questionId: string): void;
 
     /** Preloads images for the question and its answers (if there are any). */
     preloadImages(questionId: string): Promise<void>;
@@ -60,163 +59,17 @@ export interface GameAPIActions {
 
 export type GameState = "unpaused" | "paused" | "finished";
 
-export interface Questions {
-    questions: Record<string, Question | undefined>;
-    questionIds: string[];
-}
-
-export interface Answers {
-    answers: Record<string, Answer | undefined>;
-    answerIds: string[];
-}
-
 export interface GameAPIOptions extends GameAPICallbacks {
-    /** All generated questions will be about units from this array. */
-    units: Unit[];
-    /** Incorrect answers will be about units from this array. */
-    allUnits: Unit[];
-    /** This type of data will be used to generate questions. */
-    guessFrom: Guessable;
-    /** This type of data will be used to generate answers. */
-    guess: Guessable;
-    /** Provide hints as a result of a call to the `incorrectGuess` action.
-     *  @default false */
-    provideHints?: boolean;
-    /** Sort the questions, so that they appear in alphabetical order.
-     *  Applies only if the questions contain text. Otherwise this option does nothing.
-     *  @default false */
-    sortQuestions?: boolean;
+    /** The questions that will be presented in this game. */
+    questionsAndAnswers: Questions & Answers;
     /** Causes the API to preload all question and answer images.
      *  Normally only images for the first two questions are preloaded.
      *  @default false */
     preloadAllImages?: boolean;
-    /** If there are multiple correct answers to a question, then they'll be merged into a single one.
-     *  This way there's always a single correct answer to each question.
-     *  @default false */
-    squishAnswers?: boolean;
-    /** How many answers should be generated to each question.
-     *  Exception to the rule: If a question has more correct answers than this number (and the answers aren't
-     *  squished), then they will all be included.
-     *  In particular, if this is set to zero, then only the correct answers will be included.
-     *  @default 0 */
-    numberOfAnswers?: number;
 }
 
 export interface GameAPICallbacks {
     onRestart: () => void;
     /** Called when the user clicks the 'fullscreen' button or 'exit fullscreen' button. */
     onToggleFullscreen: () => void;
-}
-
-export interface Question {
-    /** A UUID. */
-    id: string;
-    /** Id of the administrative unit this question is about. */
-    unitId: string;
-    content: QuestionContent;
-    /** The amount of points awarded for this question.
-     *  4 by default. Decreases with each incorrect guess. */
-    points: number;
-    /** Number of incorrect tries when guessing this question. */
-    tries: number;
-    /** Ids of the answers to this question. */
-    answerIds: string[];
-    /** Number of guessed answers. */
-    numberGuessed: number;
-    /** Number of correct answers. */
-    numberCorrect: number;
-    /** If true, then all the answers to this question have been correctly guessed. */
-    guessed: boolean;
-}
-
-export interface Answer {
-    /** A UUID. */
-    id: string;
-    /** Id of the question this is an answer to. */
-    questionId: string;
-    /** Id of the administrative unit this answer is about. */
-    unitId: string;
-    content: AnswerContent;
-    /** Whether or not this is a correct answer. */
-    correct: boolean;
-    /** If true, then this answer has been correctly guessed. */
-    guessed: boolean;
-}
-
-export type QuestionContent = TextQuestionContent | ImageQuestionContent | FeatureQuestionContent;
-
-export interface TextQuestionContent {
-    type: "text";
-    /** Text that the player should guess based on, in the form of a question.
-     *  For example this could be
-     *  "Jakie rejestracje ma województwo podkarpackie?"
-     *  ("What are the registration plates for the podkarpackie voivodeship?")
-     *  when guessing registration plates from voivodeship names. */
-    text: string;
-    /** Text that the player should guess based on.
-     *  For example this could be "województwo podkarpackie" ("podkarpackie voivodeship")
-     *  when guessing registration *  plates from voivodeship names */
-    shortText: string;
-}
-
-export interface ImageQuestionContent {
-    type: "image";
-    /** Text that the player should guess based on, in the form of a question.
-     *  For example this could be "Jak się nazywa powiat z tą flagą?" ("What is the name of a county with this flag?")
-     *  when guessing county names from flags. */
-    text: string;
-    /** URL of the image to be shown when this question is presented. */
-    url: string;
-}
-
-export interface FeatureQuestionContent {
-    type: "feature";
-    /** Text that the player should guess based on, in the form of a question.
-     *  For example this could be "Jak się nazywa ten powiat?" ("What is the name of this county?")
-     *  when guessing county names based on their location on the map. */
-    text: string;
-    /** Id of the unit this question is about. */
-    unitId: string;
-}
-
-export type AnswerContent = TextAnswerContent | ImageAnswerContent | FeatureAnswerContent;
-
-export interface TextAnswerContent {
-    type: "text";
-    /** Text that the player should guess.
-     *  For example this could be "województwo podkarpackie" ("podkarpackie voivodeship")
-     *  when guessing voivodeship names. */
-    text: string;
-    /** A short version of the text that the player should guess.
-     *  For example this could be "podkarpackie" when guessing voivodeship names.
-     *  Same as `text` when guessing registration plates or capitals. */
-    shortText: string;
-}
-
-export interface ImageAnswerContent {
-    type: "image";
-    /** URL of the image to be shown when this answer is presented. */
-    url: string;
-}
-
-export interface FeatureAnswerContent {
-    type: "feature";
-    /** Id of the unit this answer is about. */
-    unitId: string;
-}
-
-export class QuestionNotFoundError extends Error {
-    name = "QuestionNotFoundError";
-
-    constructor(id: string) {
-        super("A question with the specified id could not be found. Id was: " + id);
-    }
-}
-
-export class AnswerNotFoundError extends Error {
-    name = "AnswerNotFoundError";
-
-    constructor(id: string) {
-        super("An answer with the specified id could not be found. Id was: " + id);
-    }
 }

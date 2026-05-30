@@ -1,4 +1,4 @@
-import { AnswerNotFoundError } from "src/game2/api";
+import { AnswerNotFoundError } from "src/game2/questions";
 import type { ZustandGetter, ZustandSetter } from "src/utils/zustand";
 import {
     ButtonNotFoundError,

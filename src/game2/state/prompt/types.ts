@@ -1,5 +1,5 @@
 import type { WithAPI } from "src/game2/api";
-import type { GameOptions } from "src/gameOptions";
+import type { GameOptions } from "src/game2/options";
 
 export type PromptGameStore = PromptGameState & PromptGameActions & WithAPI;
 

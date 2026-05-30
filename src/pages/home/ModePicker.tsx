@@ -1,8 +1,14 @@
 import clsx from "clsx";
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router";
-import { guessables, unitTypes, type Guessable, type UnitType } from "src/data/common";
-import { encodeGameURL, isGameOptions, validateGameOptions, type GameOptions, type GameType } from "src/gameOptions";
+import {
+    getRandomOptions,
+    optionsToURL,
+    validateGameOptions,
+    type GameOptions,
+    type Guessable,
+    type UnitType
+} from "src/game2/options";
 import {
     ArrowRightIcon,
     CarIcon,
@@ -12,7 +18,6 @@ import {
     IconButton,
     LargeButton,
     LargeDropdown,
-    LocationIcon,
     PlaceNameIcon,
     SwapIcon,
     TargetIcon
@@ -34,10 +39,8 @@ export function ModePicker() {
 
     const [isInvalidAnim, startInvalidAnim] = useAnimation(450);
     const handlePlayClick = () => {
-        const gameType: GameType = (guess === "map") ? "mapGame" : "choiceGame";
-
         const options: GameOptions = {
-            gameType,
+            mode: "choiceGame",
             unitType,
             guessFrom,
             guess,
@@ -50,16 +53,17 @@ export function ModePicker() {
         localStorage.setItem("QuizPowiaty.lastPickerMode", JSON.stringify(options));
 
         if (validateGameOptions(options)) {
-            navigate(encodeGameURL(options));
+            navigate("/graj2" + optionsToURL(options));
         } else {
             startInvalidAnim();
         }
     };
 
     const handleRandomGameClick = () => {
-        const options = getRandomGameOptions();
+        const options = getRandomOptions();
+        console.log(options);
         localStorage.setItem("QuizPowiaty.lastPickerMode", JSON.stringify(options));
-        navigate(encodeGameURL(options));
+        navigate("/graj2" + optionsToURL(options));
     };
 
     return (
@@ -77,7 +81,7 @@ export function ModePicker() {
                         { value: "plate", icon: CarIcon, label: "rejestrację" },
                         { value: "flag", icon: FlagIcon, label: "flagę" },
                         { value: "coa", icon: COAIcon, label: "godło" },
-                        { value: "map", icon: LocationIcon, label: "lokalizację na mapie" },
+                        { value: "shape", label: "kształt" },
                     ]}
                     value={guess}
                     className="flex-1"
@@ -113,7 +117,7 @@ export function ModePicker() {
                     { value: "plate", icon: CarIcon, label: "rejestracji" },
                     { value: "flag", icon: FlagIcon, label: "flagi" },
                     { value: "coa", icon: COAIcon, label: "godła" },
-                    { value: "map", icon: LocationIcon, label: "lokalizacji na mapie" },
+                    { value: "shape", label: "kształtu" },
                 ]}
                 value={guessFrom}
                 onChange={setGuessFrom}
@@ -140,46 +144,13 @@ export function ModePicker() {
 function getInitialOptions(): GameOptions {
     const keyValue = localStorage.getItem("QuizPowiaty.lastPickerMode");
     if (keyValue) {
-        const options = JSON.parse(keyValue);
-        if (isGameOptions(options)) {
-            return options;
-        }
+        return JSON.parse(keyValue);
     }
     return {
-        gameType: "choiceGame",
+        mode: "choiceGame",
         unitType: "county",
         guessFrom: "name",
-        guess: "map",
-        maxQuestions: 20,
-        filters: {
-            countyTypes: [],
-            voivodeships: [],
-        },
-    };
-}
-
-function getRandomGameOptions(): GameOptions {
-    const guessFromIndex = Math.floor(Math.random() * guessables.length);
-    const guessFrom = guessables[guessFromIndex];
-
-    const guessOptions = guessables.filter((guessable) => guessable !== guessFrom);
-    const guessIndex = Math.floor(Math.random() * guessOptions.length);
-    const guess = guessOptions[guessIndex];
-
-    let unitType: UnitType;
-    // detect voivodeship-only combos
-    if (guessFrom === "name" && guess === "capital" || guessFrom === "capital" && guess === "name") {
-        unitType = "voivodeship";
-    } else {
-        const unitTypeIndex = Math.floor(Math.random() * unitTypes.length);
-        unitType = unitTypes[unitTypeIndex];
-    }
-
-    return {
-        gameType: (guess === "map") ? "mapGame" : "choiceGame",
-        unitType,
-        guessFrom,
-        guess,
+        guess: "plate",
         maxQuestions: 20,
         filters: {
             countyTypes: [],

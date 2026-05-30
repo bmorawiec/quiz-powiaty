@@ -1,14 +1,12 @@
 import {
     AnswerNotFoundError,
-    createGameStore,
     QuestionNotFoundError,
     type Answers,
-    type GameAPICallbacks,
-    type GameAPIOptions,
     type Question,
     type Questions,
-} from "src/game2/api";
-import { unitsFromOptions, type GameOptions } from "src/gameOptions";
+} from "src/game2/questions";
+import { createGameStore, type GameAPICallbacks, type GameAPIOptions } from "src/game2/api";
+import { type GameOptions } from "src/game2/options";
 import type { ZustandHook } from "src/utils/zustand";
 import { ulid } from "ulid";
 import { getPublicActions } from "./actions";
@@ -22,23 +20,19 @@ import {
 import { toShuffled } from "src/utils/random";
 
 export async function createDnDGameStore(
+    questionsAndAnswers: Questions & Answers,
     options: GameOptions,
     callbacks: GameAPICallbacks,
 ): Promise<ZustandHook<DnDGameStore>> {
-    const [units, allUnits] = await unitsFromOptions(options);
     const apiOptions: GameAPIOptions = {
-        units,
-        allUnits,
-        guessFrom: options.guessFrom,
-        guess: options.guess,
-        sortQuestions: true,
+        questionsAndAnswers,
         preloadAllImages: true,
         ...callbacks,
     };
-    return createGameStore(apiOptions, (set, get, qsAndAs) => ({
+    return createGameStore(apiOptions, (set, get) => ({
         type: "dnd",
         options,
-        ...createCellsAndCards(qsAndAs),
+        ...createCellsAndCards(questionsAndAnswers),
         ...getPublicActions(set, get),
     }));
 }

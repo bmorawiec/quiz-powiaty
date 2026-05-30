@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { voivodeshipIds, type CountyType, type VoivodeshipId } from "src/data/common";
-import { areFiltersEmpty, filterNames, type GameOptions } from "src/gameOptions";
 import { ApplyIcon, Button, CloseIcon, Dialog, DialogRoot, FilterIcon } from "src/ui";
 import { FilterGroup } from "./FilterGroup";
+import { areFiltersEmpty, filterNames, type CountyType, type GameOptions } from "src/game2/options";
+import { voivodeshipCodes, type VoivodeshipCode } from "src/data";
 
 export interface FilterDialogProps {
     options: GameOptions;
@@ -20,7 +20,7 @@ export function FilterDialog({ options, onChange, onCancel }: FilterDialogProps)
         });
     };
 
-    const handleVoivodeshipFiltersChange = (newVoivodeships: VoivodeshipId[]) => {
+    const handleVoivodeshipFiltersChange = (newVoivodeships: VoivodeshipCode[]) => {
         setNewFilters({
             ...newFilters,
             voivodeships: newVoivodeships,
@@ -34,7 +34,7 @@ export function FilterDialog({ options, onChange, onCancel }: FilterDialogProps)
             ...options,
             filters: newFilters,
             maxQuestions: (wereFiltersEmpty && !filtersEmpty)
-                ? null          // disable question limit when filters are first applied
+                ? Infinity      // disable question limit when filters are first applied
                 : (!wereFiltersEmpty && filtersEmpty)
                     ? 20        // enable question limit when filters are first removed
                     : options.maxQuestions,     // don't change limit otherwise
@@ -55,7 +55,7 @@ export function FilterDialog({ options, onChange, onCancel }: FilterDialogProps)
                 <div className="flex-1 flex flex-col px-[30px] overflow-y-auto">
                     <FilterGroup
                         title="Według rodzaju"
-                        entries={["county", "city"]}
+                        entries={["cityCounty", "landCounty"]}
                         labels={filterNames.countyTypes}
                         checked={newFilters.countyTypes}
                         onChange={handleTypeFiltersChange}
@@ -63,7 +63,7 @@ export function FilterDialog({ options, onChange, onCancel }: FilterDialogProps)
 
                     <FilterGroup
                         title="Według województwa"
-                        entries={voivodeshipIds}
+                        entries={voivodeshipCodes}
                         labels={filterNames.voivodeships}
                         checked={newFilters.voivodeships}
                         onChange={handleVoivodeshipFiltersChange}

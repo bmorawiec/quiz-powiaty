@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router";
-import { encodeGameURL, type GameOptions } from "src/gameOptions";
+import { optionsToURL, type GameOptions } from "src/game2/options";
 import { GameStoreContext } from "../../hook";
 import { RestartDialog } from "../RestartDialog";
 import { FilterSection } from "./FilterSection";
@@ -16,7 +16,7 @@ export function OptionsSection() {
 
     const [showRestartDialog, setShowRestartDialog] = useState(false);
     const handleConfirmRestart = () => {
-        const url = encodeGameURL(newOptions);
+        const url = optionsToURL(newOptions);
         navigate(url);
     };
     const handleCancelRestart = () => {
@@ -36,7 +36,7 @@ export function OptionsSection() {
             setShowRestartDialog(true);
         } else {
             setShowFilterDialog(false);
-            const url = encodeGameURL(newOptions);      // only switch options immediately if the user hasn't guessed
+            const url = optionsToURL(newOptions);       // only switch options immediately if the user hasn't guessed
             navigate(url);                              // a single question, otherwise show a dialog
         }
     };

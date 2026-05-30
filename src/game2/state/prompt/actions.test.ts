@@ -1,11 +1,12 @@
 import { AnswerNotFoundError } from "src/game/common";
-import { QuestionNotFoundError, type GameAPICallbacks } from "src/game2/api";
+import { type GameAPICallbacks } from "src/game2/api";
 import type { GameOptions } from "src/gameOptions";
 import type { ZustandHook } from "src/utils/zustand";
 import { describe, expect, it } from "vitest";
 import { createAllActions } from "./actions";
 import { createPromptGameStore } from "./factory";
 import { PromptScreenNotFoundError, type PromptGameStore } from "./types";
+import { QuestionNotFoundError } from "src/game2/questions";
 
 const someOptions: GameOptions = {
     gameType: "promptGame",
@@ -49,7 +50,7 @@ function reachQuestionAtIndex(store: ZustandHook<PromptGameStore>, targetIndex: 
             if (answer.content.type !== "text")
                 throw new Error("Expected answer content to be of type 'text'.");
 
-            store.getState().guess(answer.content.shortText);
+            store.getState().guess(answer.content.text);
         }
 
         index++;

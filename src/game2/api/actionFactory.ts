@@ -1,16 +1,7 @@
+import { AnswerNotFoundError, QuestionNotFoundError, type Answer, type Question } from "src/game2/questions";
 import type { ZustandGetter, ZustandSetter } from "src/utils/zustand";
-import {
-    AnswerNotFoundError,
-    QuestionNotFoundError,
-    type Answer,
-    type GameAPI,
-    type GameAPIActions,
-    type Question,
-} from "./types";
 import { getImagePreloadPromises } from "./images";
-
-const TRIES_FOR_HINT = 1;
-const TRIES_FOR_FULL_HINT = 6;
+import { type GameAPI, type GameAPIActions } from "./types";
 
 export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGetter<GameAPI>): GameAPIActions {
     function togglePause() {
@@ -125,60 +116,13 @@ export function createGameAPIActions(set: ZustandSetter<GameAPI>, get: ZustandGe
                 },
             },
         }));
-
-        return (get().options.provideHints)
-            ? getFullHint(question) || getPartialHint(question) || ""
-            : "";
-    }
-
-    function getFullHint(question: Question): string | null {
-        if (question.tries <= TRIES_FOR_FULL_HINT) {
-            return null;
-        }
-
-        return question.answerIds.map((answerId) => {
-            const answer = get().answers[answerId];
-            if (!answer) throw new AnswerNotFoundError(answerId);
-            if (answer.content.type !== "text")
-                throw new Error("Expected answer content type to be 'text'.");
-
-            return answer.content.shortText;
-        }).join(", ");
-    }
-
-    function getPartialHint(question: Question): string | null {
-        if (question.tries <= TRIES_FOR_HINT) {
-            return null;
-        }
-
-        const noOfLetters = question.tries - TRIES_FOR_HINT + 1;      // how many letters to uncover
-        return question.answerIds.map((answerId) => {
-            const answer = get().answers[answerId];
-            if (!answer) throw new AnswerNotFoundError(answerId);
-            if (answer.content.type !== "text")
-                throw new Error("Expected answer content type to be 'text'.");
-
-            let hint = "";
-            for (let index = 0; index < answer.content.shortText.length; index++) {
-                const char = answer.content.shortText[index];
-                if (char === " " || char === "-"
-                    || index < noOfLetters      // uncover first n letters
-                    || (answer.content.shortText.length > 3     // also uncover last n letters if text is long enough
-                        && index >= answer.content.shortText.length - noOfLetters)) {
-                    hint += char;
-                } else {
-                    hint += "*";
-                }
-            }
-            return hint;
-        }).join(", ");
     }
 
     async function preloadImages(questionId: string) {
         const question = get().questions[questionId];
         if (!question) throw new QuestionNotFoundError(questionId);
 
-        await Promise.all(getImagePreloadPromises(question, get().answers, get().options));
+        await Promise.all(getImagePreloadPromises(question, get().answers));
     }
 
     return { togglePause, calculateTime, restart, toggleFullscreen, correctGuess, incorrectGuess, preloadImages };

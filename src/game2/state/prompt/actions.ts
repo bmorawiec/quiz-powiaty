@@ -1,4 +1,4 @@
-import { AnswerNotFoundError, QuestionNotFoundError, type Answer } from "src/game2/api";
+import { AnswerNotFoundError, QuestionNotFoundError, type Answer } from "src/game2/questions";
 import type { ZustandGetter, ZustandSetter } from "src/utils/zustand";
 import { PromptScreenNotFoundError, type PromptGameActions, type PromptGameStore, type PromptScreen } from "./types";
 
@@ -29,8 +29,8 @@ export function createAllActions(set: ZustandSetter<PromptGameStore>, get: Zusta
             }
         } else {
             recordGuess(text, false);
-            const hint = get().api.incorrectGuess(currentScreen.questionId);
-            return ["wrong", hint];
+            get().api.incorrectGuess(currentScreen.questionId);
+            return ["wrong", "TODO"];
         }
     }
 
@@ -47,8 +47,7 @@ export function createAllActions(set: ZustandSetter<PromptGameStore>, get: Zusta
             if (answer.content.type !== "text")
                 throw new Error("Expected content to be of type 'text'.");
 
-            if (answer.content.text.toLowerCase() === text.toLowerCase()
-                || answer.content.shortText.toLowerCase() === text.toLowerCase()) {
+            if (answer.content.text.toLowerCase() === text.toLowerCase()) {
                 return answer;
             }
         }

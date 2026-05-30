@@ -1,4 +1,4 @@
-import { gameTypesFromCombo, type GameOptions, type GameType } from "src/gameOptions";
+import { validModes, type GameMode, type GameOptions } from "src/game2/options";
 import { RadioButton } from "src/ui";
 
 export interface GameModesProps {
@@ -6,32 +6,31 @@ export interface GameModesProps {
     onChange: (newOptions: GameOptions) => void;
 }
 
-const LABELS: Record<GameType, string> = {
+const LABELS: Record<GameMode, string> = {
     choiceGame: "Wybierz",
     dndGame: "Przyporządkuj",
-    mapGame: "Znajdź na mapie",
     promptGame: "Zgadnij",
     typingGame: "Podpisz",
 };
 
 export function GameModes({ options, onChange }: GameModesProps) {
-    const switchModes = (mode: GameType) => {
-        if (mode !== options.gameType) {
+    const switchModes = (mode: GameMode) => {
+        if (mode !== options.mode) {
             onChange({
                 ...options,
-                gameType: mode,
+                mode,
             });
         }
     };
 
-    const otherModes = gameTypesFromCombo(options);
+    const otherModes = validModes(options.guessFrom, options.guess);
     return (
         <div className="flex flex-col mx-[-12px] mt-[12px]">
             {otherModes.map((mode) =>
                 <RadioButton
                     key={mode}
                     label={LABELS[mode]}
-                    checked={options.gameType === mode}
+                    checked={options.mode === mode}
                     onClick={() => switchModes(mode)}
                 />
             )}
