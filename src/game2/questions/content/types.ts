@@ -6,8 +6,8 @@ export type Content =
     | ShapeContent
     | TextAndShapeContent
     | TextWithInlineImageContent
-    | PlateContent
-    | TextAndPlateContent;
+    | MultiplePlatesContent
+    | TextAndMultiplePlatesContent;
 
 /** Displays the provided text. */
 export interface TextContent {
@@ -61,15 +61,15 @@ export interface TextWithInlineImageContent {
     afterText: string;
 }
 
-/** Displays the provided text on a license plate. */
-export interface PlateContent {
-    type: "plate";
-    code: string;
+/** Displays the provided strings on license plates. */
+export interface MultiplePlatesContent {
+    type: "multiplePlates";
+    codes: string[];
 }
 
-/** Displays a license plate with the provided code on it and some text above the plate. */
-export interface TextAndPlateContent {
-    type: "textAndPlate";
+/** Displays a list of license plates with the provided codes on them and some text above the plates. */
+export interface TextAndMultiplePlatesContent {
+    type: "textAndMultiplePlates";
     text: string;
-    code: string;
+    codes: string[];
 }
