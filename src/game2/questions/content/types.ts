@@ -38,13 +38,13 @@ export interface TextAndImageContent {
 /** Displays a shape. */
 export interface ShapeContent {
     type: "shape";
-    shape: string;
+    shape: number[][];
 }
 
 /** Displays a shape and some text above that shape. */
 export interface TextAndShapeContent {
     type: "textAndShape";
-    shape: string;
+    shape: number[][];
     text: string;
 }
 
