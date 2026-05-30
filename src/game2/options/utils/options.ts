@@ -1,4 +1,4 @@
-import { guessables, unitTypes, type GameOptions, type UnitType } from "../types";
+import { guessables, unitTypes, type GameMode, type GameOptions, type Guessable, type UnitType } from "../types";
 
 export function validateGameOptions(options: GameOptions): boolean {
     if (options.guessFrom === options.guess) {
@@ -44,4 +44,13 @@ export function getRandomOptions(): GameOptions {
             voivodeships: [],
         },
     };
+}
+
+/** Returns an array of all valid game modes for this guessFrom-guess combo. */
+export function validModes(_guessFrom: Guessable, guess: Guessable): GameMode[] {
+    if (guess === "flag" || guess === "coa" || guess === "shape") {
+        return ["choiceGame", "dndGame"];
+    } else {
+        return ["choiceGame", "dndGame", "promptGame", "typingGame"];
+    }
 }
