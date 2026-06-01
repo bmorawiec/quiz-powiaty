@@ -1,7 +1,7 @@
 import { getUnitProperties, type Property, type PropertyTag, type Unit } from "src/data";
 import { ulid } from "ulid";
 import type { Answer, Answers } from "../../answers";
-import type { Content } from "../../content";
+import type { ContentGenerator } from "../../content";
 import type { Question, Questions } from "../../questions";
 import { INITIAL_POINT_AMOUNT, QuestionNotFoundError } from "../../questions";
 import { mergeQuestionsAndAnswers } from "../../questionsAndAnswers";
@@ -16,15 +16,15 @@ export interface GeneratorOptions {
         tags: PropertyTag[];
         /** A function that generates question content based on the properties of a unit.
          *  @param properties A list of properties all tagged with one of the tags specified in `questions.tags`. */
-        contentGenerator: (properties: Property[]) => Content;
+        contentGenerator: ContentGenerator;
         /** If provided, then the generated questions will be sorted using this sorter. */
         sorter?: (a: Question, b: Question) => number;
     };
     answers: {
-        tag: PropertyTag;
+        tags: PropertyTag[];
         /** A function that generates question answer based on the properties of a unit.
          *  @param property A property tagged with the tag specified in `answers.tag`. */
-        contentGenerator: (property: Property) => Content;
+        contentGenerator: ContentGenerator,
     };
 }
 
@@ -87,12 +87,12 @@ export function generateCorrectAnswers(unit: Unit, questionId: string, options: 
     };
 
     const answerProperties = getUnitProperties(unit, options.properties)
-        .filter((property) => property.tag.includes(options.answers.tag));
+        .filter((property) => options.answers.tags.includes(property.tag));
     for (const property of answerProperties) {
         const answer: Answer = {
             id: ulid(),
             questionId,
-            content: options.answers.contentGenerator(property),
+            content: options.answers.contentGenerator([property]),
             correct: true,
             guessed: false,
         };

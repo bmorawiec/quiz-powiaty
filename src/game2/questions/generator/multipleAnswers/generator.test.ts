@@ -1,6 +1,6 @@
 import type { ImageProperty, Property, TextProperty, Unit } from "src/data";
 import type { TextContent } from "../../content";
-import { getUnitProperties, PropertyNotFoundError, UnexpectedPropertyTypeError } from "src/data";
+import { PropertyNotFoundError, UnexpectedPropertyTypeError } from "src/data";
 import { describe, expect, it } from "vitest";
 import { INITIAL_POINT_AMOUNT } from "../../questions";
 import {
@@ -91,8 +91,9 @@ const nameQuestionContentGenerator = (properties: Property[]): Content => {
     };
 };
 
-const nameAnswerContentGenerator = (property: Property): Content => {
-    if (property.tag != "name") {
+const nameAnswerContentGenerator = (properties: Property[]): Content => {
+    const property = properties.find((property) => property.tag === "name") as TextProperty | undefined;
+    if (!property) {
         throw new UnexpectedPropertyTypeError();
     }
     return {
@@ -101,13 +102,14 @@ const nameAnswerContentGenerator = (property: Property): Content => {
     };
 };
 
-const plateAnswerContentGenerator = (property: Property): Content => {
-    if (property.tag != "plate") {
+const plateAnswerContentGenerator = (properties: Property[]): Content => {
+    const property = properties.find((property) => property.tag === "plate") as TextProperty | undefined;
+    if (!property) {
         throw new UnexpectedPropertyTypeError();
     }
     return {
-        type: "plate",
-        code: property.text,
+        type: "multiplePlates",
+        codes: [property.text],
     };
 };
 
@@ -121,7 +123,7 @@ describe("generateMultipleAnswerQuestions", () => {
                 contentGenerator: nameQuestionContentGenerator,
             },
             answers: {
-                tag: "plate",
+                tags: ["plate"],
                 contentGenerator: plateAnswerContentGenerator,
             },
         };
@@ -157,32 +159,32 @@ describe("generateMultipleAnswerQuestions", () => {
         // no in-depth verification of the structure of the generated questions or answers
         const answer1 = qsAndAs.answers[qsAndAs.answerIds[0]]!;
         expect(answer1).toMatchObject({
-            content: { type: "plate", code: "RZE" },
+            content: { type: "multiplePlates", codes: ["RZE"] },
         });
 
         const answer2 = qsAndAs.answers[qsAndAs.answerIds[1]]!;
         expect(answer2).toMatchObject({
-            content: { type: "plate", code: "RZZ" },
+            content: { type: "multiplePlates", codes: ["RZZ"] },
         });
 
         const answer3 = qsAndAs.answers[qsAndAs.answerIds[2]]!;
         expect(answer3).toMatchObject({
-            content: { type: "plate", code: "RDE" },
+            content: { type: "multiplePlates", codes: ["RDE"] },
         });
 
         const answer4 = qsAndAs.answers[qsAndAs.answerIds[3]]!;
         expect(answer4).toMatchObject({
-            content: { type: "plate", code: "RKR" },
+            content: { type: "multiplePlates", codes: ["RKR"] },
         });
 
         const answer5 = qsAndAs.answers[qsAndAs.answerIds[4]]!;
         expect(answer5).toMatchObject({
-            content: { type: "plate", code: "YKR" },
+            content: { type: "multiplePlates", codes: ["YKR"] },
         });
 
         const answer6 = qsAndAs.answers[qsAndAs.answerIds[5]]!;
         expect(answer6).toMatchObject({
-            content: { type: "plate", code: "RK" },
+            content: { type: "multiplePlates", codes: ["RK"] },
         });
     });
 
@@ -196,7 +198,7 @@ describe("generateMultipleAnswerQuestions", () => {
                 sorter: (a, b) => (a.content as TextContent).text.localeCompare((b.content as TextContent).text),
             },
             answers:  {
-                tag: "plate",
+                tags: ["plate"],
                 contentGenerator: plateAnswerContentGenerator,
             },
         };
@@ -236,7 +238,7 @@ describe("generateQuestionsAndItsAnswers", () => {
                 contentGenerator: nameQuestionContentGenerator,
             },
             answers: {
-                tag: "plate",
+                tags: ["plate"],
                 contentGenerator: plateAnswerContentGenerator,
             },
         };
@@ -289,7 +291,7 @@ describe("generateQuestionsAndItsAnswers", () => {
                 },
             },
             answers: {
-                tag: "plate",
+                tags: ["plate"],
                 contentGenerator: plateAnswerContentGenerator,
             },
         };
@@ -332,7 +334,7 @@ describe("generateCorrectAnswers", () => {
                 contentGenerator: nameQuestionContentGenerator,
             },
             answers: {
-                tag: "name",
+                tags: ["name"],
                 contentGenerator: nameAnswerContentGenerator,
             },
         };
@@ -369,7 +371,7 @@ describe("generateCorrectAnswers", () => {
                 contentGenerator: nameQuestionContentGenerator,
             },
             answers: {
-                tag: "plate",
+                tags: ["plate"],
                 contentGenerator: plateAnswerContentGenerator,
             },
         };
@@ -380,7 +382,7 @@ describe("generateCorrectAnswers", () => {
         const answer1 = answers.answers[answers.answerIds[0]];
         expect(answer1).toMatchObject({
             questionId: "test1",
-            content: { type: "plate", code: "RZE" },
+            content: { type: "multiplePlates", codes: ["RZE"] },
             correct: true,
             guessed: false,
         });
@@ -388,7 +390,7 @@ describe("generateCorrectAnswers", () => {
         const answer2 = answers.answers[answers.answerIds[1]];
         expect(answer2).toMatchObject({
             questionId: "test1",
-            content: { type: "plate", code: "RZZ" },
+            content: { type: "multiplePlates", codes: ["RZZ"] },
             correct: true,
             guessed: false,
         });
