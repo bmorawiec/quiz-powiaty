@@ -56,7 +56,7 @@ async function fetchCountyPropertiesFile(
     voivodeship: VoivodeshipCode,
     tag: PropertyTag,
 ): Promise<Record<string, Property>> {
-    const response = await fetch("/data/properties/" + tag + voivodeship + ".json");
+    const response = await fetch("/data/counties/properties/" + tag + voivodeship + ".json");
     if (!response.ok) {
         throw new Error("Response status was: " + response.status);
     }
