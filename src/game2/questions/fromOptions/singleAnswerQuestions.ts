@@ -1,7 +1,7 @@
+import type { GameOptions } from "src/game2/options";
 import { generateSingleAnswerQuestions, type Answers, type Questions } from "src/game2/questions";
 import { toShuffled } from "src/utils/random";
-import type { GameOptions } from "../types";
-import { contentGenerators } from "./contentGenerators";
+import { contentGenerators } from "../contentGenerators";
 import {
     fetchProperties,
     fetchPropertiesFromAllVoivodeships,

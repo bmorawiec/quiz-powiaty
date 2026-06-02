@@ -6,9 +6,9 @@ import {
     type TextProperty,
 } from "src/data";
 import type { ContentGenerator } from "src/game2/questions";
-import type { GameOptions } from "../../types";
+import type { GameOptions } from "src/game2/options";
 
-export function shortQuestions(options: GameOptions): [ContentGenerator, PropertyTag[]] {
+export function richAnswers(options: GameOptions): [ContentGenerator, PropertyTag[]] {
     return {
         name: withName,
         capital: withCapitals,
@@ -16,11 +16,12 @@ export function shortQuestions(options: GameOptions): [ContentGenerator, Propert
         flag: withFlag,
         coa: withCOA,
         shape: withShape,
-    }[options.guessFrom](options);
+    }[options.guess](options);
 }
 
 function withName(options: GameOptions): [ContentGenerator, PropertyTag[]] {
-    if (options.guess === "coa" || options.guess === "flag") {
+    if (options.guessFrom === "coa" || options.guessFrom === "flag") {
+        // Don't include the coat of arms in the answer when guessing from the CoA or the flag.
         return [(properties) => {
             const nameProperty = properties
                 .find((property) => property.tag === "unambiguousName") as TextProperty | undefined;
@@ -28,13 +29,11 @@ function withName(options: GameOptions): [ContentGenerator, PropertyTag[]] {
 
             return {
                 type: "text",
-                // Examples:
-                // "powiat rzeszowski"
-                // "województwo mazowieckie"
                 text: nameProperty.text,
             };
         }, ["unambiguousName"]];
     } else {
+        // Generates answers containing the coat of arms of the voivodeship/county and its name.
         return [(properties) => {
             const nameProperty = properties
                 .find((property) => property.tag === "unambiguousName") as TextProperty | undefined;
@@ -45,9 +44,6 @@ function withName(options: GameOptions): [ContentGenerator, PropertyTag[]] {
 
             return {
                 type: "titledImage",
-                // Examples:
-                // "powiat rzeszowski" (coat of arms shown on the left)
-                // "województwo mazowieckie" (coat of arms shown on the left)
                 url: coaProperty.url,
                 text: nameProperty.text,
             };
@@ -56,21 +52,20 @@ function withName(options: GameOptions): [ContentGenerator, PropertyTag[]] {
 }
 
 function withCapitals(_options: GameOptions): [ContentGenerator, PropertyTag[]] {
+    // Generates answers containing a list of the names of the capital cities.
     return [(properties) => {
         const capitalProperties = properties.filter((property) => property.tag === "capital") as TextProperty[];
         if (capitalProperties.length === 0) throw new PropertyNotFoundError();
 
         return {
             type: "text",
-            // Examples:
-            // "Bydgoszcz, Toruń"
-            // "Rzeszów"
             text: capitalProperties.map((property) => property.text).join(", "),
         };
     }, ["capital"]];
 }
 
 function withPlates(_options: GameOptions): [ContentGenerator, PropertyTag[]] {
+    // Generates answers containing a list of the license plate codes this unit uses.
     return [(properties) => {
         const plateProperties = properties.filter((property) => property.tag === "plate") as TextProperty[];
         if (plateProperties.length === 0) throw new PropertyNotFoundError();
@@ -83,30 +78,33 @@ function withPlates(_options: GameOptions): [ContentGenerator, PropertyTag[]] {
 }
 
 function withFlag(_options: GameOptions): [ContentGenerator, PropertyTag[]] {
+    // Generates answers containing the flag of this unit.
     return [(properties) => {
-        const flagProperty = properties.find((property) => property.tag === "flag") as ImageProperty | undefined;
-        if (!flagProperty) throw new PropertyNotFoundError();
+        const property = properties.find((property) => property.tag === "flag") as ImageProperty | undefined;
+        if (!property) throw new PropertyNotFoundError();
 
         return {
             type: "image",
-            url: flagProperty.url,
+            url: property.url,
         };
     }, ["flag"]];
 }
 
 function withCOA(_options: GameOptions): [ContentGenerator, PropertyTag[]] {
+    // Generates answers containing the coa of this unit.
     return [(properties) => {
-        const coaProperty = properties.find((property) => property.tag === "coa") as ImageProperty | undefined;
-        if (!coaProperty) throw new PropertyNotFoundError();
+        const property = properties.find((property) => property.tag === "coa") as ImageProperty | undefined;
+        if (!property) throw new PropertyNotFoundError();
 
         return {
-            type: "image",
-            url: coaProperty.url,
+            type: "tallImage",
+            url: property.url,
         };
-    }, ["coa"]];
+    }, ["coa"]]
 }
 
 function withShape(_options: GameOptions): [ContentGenerator, PropertyTag[]] {
+    // Generates answers containing the shape of this unit.
     return [(properties) => {
         const shapeProperty = properties.find((property) => property.tag === "shape") as ShapeProperty | undefined;
         if (!shapeProperty) throw new PropertyNotFoundError();

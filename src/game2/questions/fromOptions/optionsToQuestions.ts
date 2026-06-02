@@ -1,5 +1,5 @@
 import type { Answers, Questions } from "src/game2/questions";
-import type { GameOptions } from "../types";
+import type { GameOptions } from "src/game2/options";
 import { optionsToMultipleAnswerQuestions } from "./multipleAnswerQuestions";
 import { optionsToSingleAnswerQuestions } from "./singleAnswerQuestions";
 

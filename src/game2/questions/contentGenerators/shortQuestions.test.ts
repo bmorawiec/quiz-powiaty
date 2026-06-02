@@ -1,8 +1,8 @@
-import { describe, expect, it } from "vitest";
-import { fullQuestions } from "./fullQuestions";
 import { type Property, type PropertyTag } from "src/data";
+import type { GameOptions } from "src/game2/options";
 import type { Content, ContentGenerator } from "src/game2/questions";
-import type { GameOptions } from "../../types";
+import { describe, expect, it } from "vitest";
+import { shortQuestions } from "./shortQuestions";
 
 const EXAMPLE_SHAPE: number[][] = [[0, 0, 10, 10, 10, 0], [100, 100, 110, 100, 110, 110]];
 
@@ -47,22 +47,20 @@ interface TestEntry {
 const questionTests = {
     counties: [
         {
-            generator: fullQuestions({
+            generator: shortQuestions({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "county",
                 guessFrom: "name",
                 guess: "plate",
             }),
             expectedContent: {
-                type: "textWithInlineImage",
-                beforeText: "Jakie rejestracje ma",
-                imageUrl: "/dummy-path/coa/krośnieński.svg",
+                type: "titledImage",
+                url: "/dummy-path/coa/krośnieński.svg",
                 text: "powiat krośnieński (Krosno)",
-                afterText: "?"
             },
         },
         {
-            generator: fullQuestions({
+            generator: shortQuestions({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "county",
                 guessFrom: "name",
@@ -70,11 +68,11 @@ const questionTests = {
             }),
             expectedContent: {
                 type: "text",
-                text: "Jaką flagę ma powiat krośnieński (Krosno)?",
+                text: "powiat krośnieński (Krosno)",
             },
         },
         {
-            generator: fullQuestions({
+            generator: shortQuestions({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "county",
                 guessFrom: "name",
@@ -82,11 +80,11 @@ const questionTests = {
             }),
             expectedContent: {
                 type: "text",
-                text: "Jaki herb ma powiat krośnieński (Krosno)?",
+                text: "powiat krośnieński (Krosno)",
             },
         },
         {
-            generator: fullQuestions({
+            generator: shortQuestions({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "county",
                 guessFrom: "capital",
@@ -94,65 +92,61 @@ const questionTests = {
             }),
             expectedContent: {
                 type: "text",
-                text: "Jakie rejestracje ma powiat ze stolicą w mieście Krosno?",
+                text: "Krosno",
             },
         },
         {
-            generator: fullQuestions({
+            generator: shortQuestions({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "county",
                 guessFrom: "plate",
                 guess: "name",
             }),
             expectedContent: {
-                type: "textAndMultiplePlates",
-                text: "Jak się nazywa powiat z tymi rejestracjami?",
+                type: "multiplePlates",
                 codes: ["RKR", "YKR"],
             },
         },
         {
-            generator: fullQuestions({
+            generator: shortQuestions({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "county",
                 guessFrom: "flag",
                 guess: "name",
             }),
             expectedContent: {
-                type: "textAndImage",
-                text: "Jak się nazywa powiat z tą flagą?",
+                type: "image",
                 url: "/dummy-path/flag/krośnieński.svg",
             },
         },
         {
-            generator: fullQuestions({
+            generator: shortQuestions({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "county",
                 guessFrom: "coa",
                 guess: "name",
             }),
             expectedContent: {
-                type: "textAndImage",
-                text: "Jak się nazywa powiat z tym herbem?",
+                type: "image",
                 url: "/dummy-path/coa/krośnieński.svg",
             },
         },
         {
-            generator: fullQuestions({
+            generator: shortQuestions({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "county",
                 guessFrom: "shape",
                 guess: "name",
             }),
             expectedContent: {
-                type: "textAndShape",
-                text: "Jak się nazywa powiat o tym kształcie?",
+                type: "shape",
                 shape: EXAMPLE_SHAPE,
             },
         },
     ] satisfies TestEntry[],
     voivodeships: [
         {
-            generator: fullQuestions({
+            generator: shortQuestions({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "voivodeship",
                 guessFrom: "capital",
@@ -160,7 +154,7 @@ const questionTests = {
             }),
             expectedContent: {
                 type: "text",
-                text: "Jakie rejestracje ma województwo ze stolicami w miastach Bydgoszcz, Toruń?",
+                text: "Bydgoszcz, Toruń",
             },
         },
     ] satisfies TestEntry[],

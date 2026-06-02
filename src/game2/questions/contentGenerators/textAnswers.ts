@@ -3,8 +3,8 @@ import {
     type PropertyTag,
     type TextProperty,
 } from "src/data";
+import type { GameOptions } from "src/game2/options";
 import type { ContentGenerator } from "src/game2/questions";
-import type { GameOptions } from "../../types";
 
 export function textAnswers(options: GameOptions): [ContentGenerator, PropertyTag[]] {
     return {

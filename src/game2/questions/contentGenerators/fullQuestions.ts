@@ -6,7 +6,7 @@ import {
     type TextProperty,
 } from "src/data";
 import type { ContentGenerator } from "src/game2/questions";
-import type { GameOptions, Guessable, UnitType } from "../../types";
+import type { GameOptions, Guessable, UnitType } from "src/game2/options";
 
 export function fullQuestions(options: GameOptions): [ContentGenerator, PropertyTag[]] {
     return {

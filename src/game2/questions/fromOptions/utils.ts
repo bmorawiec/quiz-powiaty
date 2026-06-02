@@ -6,7 +6,7 @@ import {
     type PropertyTag,
     type Unit,
 } from "src/data";
-import type { GameOptions } from "../types";
+import type { GameOptions } from "src/game2/options";
 
 export function fetchUnits(options: GameOptions) {
     if (options.unitType === "county") {

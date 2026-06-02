@@ -1,9 +1,9 @@
+import { UnexpectedPropertyTypeError } from "src/data";
+import type { GameOptions } from "src/game2/options";
 import { generateMultipleAnswerQuestions, type Answers, type Question, type Questions } from "src/game2/questions";
 import { toShuffled } from "src/utils/random";
-import type { GameOptions } from "../types";
-import { contentGenerators } from "./contentGenerators";
+import { contentGenerators } from "../contentGenerators";
 import { fetchProperties, fetchUnits, filterByCountyType } from "./utils";
-import { UnexpectedPropertyTypeError } from "src/data";
 
 export async function optionsToMultipleAnswerQuestions(options: GameOptions): Promise<Questions & Answers> {
     const [questionContentGenerator, questionTags] = (options.mode === "dndGame" || options.mode === "typingGame")

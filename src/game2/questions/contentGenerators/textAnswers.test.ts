@@ -1,8 +1,8 @@
 import type { Property, PropertyTag } from "src/data";
+import type { GameOptions } from "src/game2/options";
 import type { Content, ContentGenerator } from "src/game2/questions";
 import { describe, expect, it } from "vitest";
-import { richAnswers } from "./richAnswers";
-import type { GameOptions } from "../../types";
+import { textAnswers } from "./textAnswers";
 
 const EXAMPLE_SHAPE: number[][] = [[0, 0, 10, 10, 10, 0], [100, 100, 110, 100, 110, 110]];
 
@@ -47,94 +47,33 @@ interface TestEntry {
 const questionTests = {
     counties: [
         {
-            generator: richAnswers({
+            generator: textAnswers({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "county",
                 guessFrom: "plate",
                 guess: "name",
             }),
             expectedContent: {
-                type: "titledImage",
-                url: "/dummy-path/coa/krośnieński.svg",
-                text: "powiat krośnieński (Krosno)",
-            },
-        },
-        {
-            generator: richAnswers({
-                ...IRRELEVANT_OPTIONS,
-                unitType: "county",
-                guessFrom: "coa",
-                guess: "name",
-            }),
-            expectedContent: {
                 type: "text",
-                text: "powiat krośnieński (Krosno)",
+                text: "krośnieński",
             },
         },
         {
-            generator: richAnswers({
-                ...IRRELEVANT_OPTIONS,
-                unitType: "county",
-                guessFrom: "flag",
-                guess: "name",
-            }),
-            expectedContent: {
-                type: "text",
-                text: "powiat krośnieński (Krosno)",
-            },
-        },
-        {
-            generator: richAnswers({
+            generator: textAnswers({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "county",
                 guessFrom: "coa",
                 guess: "plate",
             }),
             expectedContent: {
-                type: "multiplePlates",
-                codes: ["RKR", "YKR"],
-            },
-        },
-        {
-            generator: richAnswers({
-                ...IRRELEVANT_OPTIONS,
-                unitType: "county",
-                guessFrom: "name",
-                guess: "flag",
-            }),
-            expectedContent: {
-                type: "image",
-                url: "/dummy-path/flag/krośnieński.svg",
-            },
-        },
-        {
-            generator: richAnswers({
-                ...IRRELEVANT_OPTIONS,
-                unitType: "county",
-                guessFrom: "name",
-                guess: "coa",
-            }),
-            expectedContent: {
-                type: "tallImage",
-                url: "/dummy-path/coa/krośnieński.svg",
-            },
-        },
-        {
-            generator: richAnswers({
-                ...IRRELEVANT_OPTIONS,
-                unitType: "county",
-                guessFrom: "name",
-                guess: "shape",
-            }),
-            expectedContent: {
-                type: "shape",
-                shape: EXAMPLE_SHAPE,
+                type: "text",
+                text: "RKR, YKR",
             },
         },
     ] satisfies TestEntry[],
     voivodeships: [
         {
-            generator: richAnswers({
+            generator: textAnswers({
                 ...IRRELEVANT_OPTIONS,
                 unitType: "voivodeship",
                 guessFrom: "name",
@@ -148,7 +87,7 @@ const questionTests = {
     ] satisfies TestEntry[],
 };
 
-describe("richAnswers", () => {
+describe("textAnswers", () => {
     it("generates correct question content for example game options", () => {
         for (const test of questionTests.counties) {
             const [generator, tags] = test.generator;
@@ -161,5 +100,28 @@ describe("richAnswers", () => {
             expect(generator(voivodeshipProperties.filter((property) => tags.includes(property.tag))))
                 .toEqual(test.expectedContent);
         }
+    });
+
+    it("throws when creating a generator for answers that cannot be reprsented as text", () => {
+        expect(() => textAnswers({
+            ...IRRELEVANT_OPTIONS,
+            unitType: "county",
+            guessFrom: "plate",
+            guess: "flag",
+        })).toThrow("Cannot generate text content based on the flag of an administrative unit.");
+
+        expect(() => textAnswers({
+            ...IRRELEVANT_OPTIONS,
+            unitType: "county",
+            guessFrom: "plate",
+            guess: "coa",
+        })).toThrow("Cannot generate text content based on the coat of arms of an administrative unit.");
+
+        expect(() => textAnswers({
+            ...IRRELEVANT_OPTIONS,
+            unitType: "county",
+            guessFrom: "plate",
+            guess: "shape",
+        })).toThrow("Cannot generate text content based on the shape of an administrative unit.");
     });
 });
