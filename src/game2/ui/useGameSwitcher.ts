@@ -1,9 +1,10 @@
 import { useCallback, useRef, useState, type ComponentType } from "react";
-import { optionsToQuestions, validateGameOptions, type GameOptions } from "src/game2/options";
+import { validateGameOptions, type GameOptions } from "src/game2/options";
 import { type GameStore } from "src/game2/state";
 import type { ZustandHook } from "src/utils/zustand";
 import { ulid } from "ulid";
 import { createGame } from "./factory";
+import { optionsToQuestions } from "../questions";
 
 export interface GameSwitcherReturn extends GameSwitcherState {
     /** Changes game options or begins the first game.
@@ -57,7 +58,7 @@ export function useGameSwitcher({ onToggleFullscreen }: GameSwitcherOptions): Ga
                 requestSwitch(options);
             };
             const [gameComponent, useGameStore] = await createGame(
-                optionsToQuestions(options),
+                await optionsToQuestions(options),
                 options,
                 { onRestart: handleRestart, onToggleFullscreen },
             );
