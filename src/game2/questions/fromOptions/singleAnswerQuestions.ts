@@ -16,7 +16,7 @@ export async function optionsToSingleAnswerQuestions(options: GameOptions): Prom
     return generateSingleAnswerQuestions({
         questions: {
             units: toShuffled(filterByCountyType(await fetchUnits(options), options)).slice(options.maxQuestions),
-            properties: await fetchProperties(options, answerTags),
+            properties: await fetchProperties(options, questionTags),
             tags: questionTags,
             contentGenerator: questionContentGenerator,
         },
