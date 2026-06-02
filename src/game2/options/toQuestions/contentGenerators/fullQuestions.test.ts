@@ -1,0 +1,184 @@
+import { describe, expect, it } from "vitest";
+import { fullQuestions } from "./fullQuestions";
+import { type Property, type PropertyTag } from "src/data";
+import type { Content, ContentGenerator } from "src/game2/questions";
+import type { GameOptions } from "../../types";
+
+const EXAMPLE_SHAPE: number[][] = [[0, 0, 10, 10, 10, 0], [100, 100, 110, 100, 110, 110]];
+
+const IRRELEVANT_OPTIONS = {
+    mode: "choiceGame",
+    maxQuestions: 20,
+    filters: {
+        countyTypes: [],
+        voivodeships: [],
+    },
+} satisfies Partial<GameOptions>;
+
+const voivodeshipProperties: Property[] = [
+    { type: "text", tag: "name", text: "województwo kujawsko-pomorskie" },
+    { type: "text", tag: "unambiguousName", text: "województwo kujawsko-pomorskie" },
+    { type: "text", tag: "shortName", text: "kujawsko-pomorskie" },
+    { type: "text", tag: "capital", text: "Bydgoszcz" },
+    { type: "text", tag: "capital", text: "Toruń" },
+    { type: "text", tag: "plate", text: "C" },
+    { type: "image", tag: "flag", url: "/dummy-path/flag/kujawsko-pomorskie.svg" },
+    { type: "image", tag: "coa", url: "/dummy-path/coa/kujawsko-pomorskie.svg" },
+    { type: "shape", tag: "shape", shape: EXAMPLE_SHAPE },
+];
+
+const countyProperties: Property[] = [
+    { type: "text", tag: "name", text: "powiat krośnieński" },
+    { type: "text", tag: "unambiguousName", text: "powiat krośnieński (Krosno)" },
+    { type: "text", tag: "shortName", text: "krośnieński" },
+    { type: "text", tag: "capital", text: "Krosno" },
+    { type: "text", tag: "plate", text: "RKR" },
+    { type: "text", tag: "plate", text: "YKR" },
+    { type: "image", tag: "flag", url: "/dummy-path/flag/krośnieński.svg" },
+    { type: "image", tag: "coa", url: "/dummy-path/coa/krośnieński.svg" },
+    { type: "shape", tag: "shape", shape: EXAMPLE_SHAPE },
+];
+
+interface TestEntry {
+    generator: [ContentGenerator, PropertyTag[]];
+    expectedContent: Content;
+}
+
+const questionTests = {
+    counties: [
+        {
+            generator: fullQuestions({
+                ...IRRELEVANT_OPTIONS,
+                unitType: "county",
+                guessFrom: "name",
+                guess: "plate",
+            }),
+            expectedContent: {
+                type: "textWithInlineImage",
+                beforeText: "Jakie rejestracje ma",
+                imageUrl: "/dummy-path/coa/krośnieński.svg",
+                text: "powiat krośnieński (Krosno)",
+                afterText: "?"
+            },
+        },
+        {
+            generator: fullQuestions({
+                ...IRRELEVANT_OPTIONS,
+                unitType: "county",
+                guessFrom: "name",
+                guess: "flag",
+            }),
+            expectedContent: {
+                type: "text",
+                text: "Jaką flagę ma powiat krośnieński (Krosno)?",
+            },
+        },
+        {
+            generator: fullQuestions({
+                ...IRRELEVANT_OPTIONS,
+                unitType: "county",
+                guessFrom: "name",
+                guess: "coa",
+            }),
+            expectedContent: {
+                type: "text",
+                text: "Jaki herb ma powiat krośnieński (Krosno)?",
+            },
+        },
+        {
+            generator: fullQuestions({
+                ...IRRELEVANT_OPTIONS,
+                unitType: "county",
+                guessFrom: "capital",
+                guess: "plate",
+            }),
+            expectedContent: {
+                type: "text",
+                text: "Jakie rejestracje ma powiat ze stolicą w mieście Krosno?",
+            },
+        },
+        {
+            generator: fullQuestions({
+                ...IRRELEVANT_OPTIONS,
+                unitType: "county",
+                guessFrom: "plate",
+                guess: "name",
+            }),
+            expectedContent: {
+                type: "textAndMultiplePlates",
+                text: "Jak się nazywa powiat z tymi rejestracjami?",
+                codes: ["RKR", "YKR"],
+            },
+        },
+        {
+            generator: fullQuestions({
+                ...IRRELEVANT_OPTIONS,
+                unitType: "county",
+                guessFrom: "flag",
+                guess: "name",
+            }),
+            expectedContent: {
+                type: "textAndImage",
+                text: "Jak się nazywa powiat z tą flagą?",
+                url: "/dummy-path/flag/krośnieński.svg",
+            },
+        },
+        {
+            generator: fullQuestions({
+                ...IRRELEVANT_OPTIONS,
+                unitType: "county",
+                guessFrom: "coa",
+                guess: "name",
+            }),
+            expectedContent: {
+                type: "textAndImage",
+                text: "Jak się nazywa powiat z tym herbem?",
+                url: "/dummy-path/coa/krośnieński.svg",
+            },
+        },
+        {
+            generator: fullQuestions({
+                ...IRRELEVANT_OPTIONS,
+                unitType: "county",
+                guessFrom: "shape",
+                guess: "name",
+            }),
+            expectedContent: {
+                type: "textAndShape",
+                text: "Jak się nazywa powiat o tym kształcie?",
+                shape: EXAMPLE_SHAPE,
+            },
+        },
+    ] satisfies TestEntry[],
+    voivodeships: [
+        {
+            generator: fullQuestions({
+                ...IRRELEVANT_OPTIONS,
+                unitType: "voivodeship",
+                guessFrom: "capital",
+                guess: "plate",
+            }),
+            expectedContent: {
+                type: "text",
+                text: "Jakie rejestracje ma województwo ze stolicami w miastach Bydgoszcz, Toruń?",
+            },
+        },
+    ] satisfies TestEntry[],
+};
+
+
+describe("fullQuestions", () => {
+    it("generates correct question content for example game options", () => {
+        for (const test of questionTests.counties) {
+            const [generator, tags] = test.generator;
+            expect(generator(countyProperties.filter((property) => tags.includes(property.tag))))
+                .toEqual(test.expectedContent);
+        }
+
+        for (const test of questionTests.voivodeships) {
+            const [generator, tags] = test.generator;
+            expect(generator(voivodeshipProperties.filter((property) => tags.includes(property.tag))))
+                .toEqual(test.expectedContent);
+        }
+    });
+});
