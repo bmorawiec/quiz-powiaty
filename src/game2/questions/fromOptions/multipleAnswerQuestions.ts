@@ -12,17 +12,28 @@ export async function optionsToMultipleAnswerQuestions(options: GameOptions): Pr
     const [answerContentGenerator, answerTags] = (options.mode === "promptGame" || options.mode === "typingGame")
         ? contentGenerators.textAnswers(options)
         : contentGenerators.richAnswers(options);
+
+    // Whether or not questions should be sorted.
+    const sortQuestions = ["dndGame", "typingGame"].includes(options.mode)
+        && ["name", "capital", "plate"].includes(options.guessFrom);
+
     return generateMultipleAnswerQuestions({
         units: toShuffled(filterByCountyType(await fetchUnits(options), options)).slice(options.maxQuestions),
         properties: await fetchProperties(options, [...questionTags, ...answerTags]),
         questions: {
             tags: questionTags,
             contentGenerator: questionContentGenerator,
-            sorter: (options.mode === "dndGame" || options.mode === "typingGame")
+            sorter: (sortQuestions)
+                // Sorts questions by content text or by text shown on license plates included in the content.
                 ? (a: Question, b: Question) => {
-                    if (a.content.type !== "text") throw new UnexpectedPropertyTypeError();
-                    if (b.content.type !== "text") throw new UnexpectedPropertyTypeError();
-                    return a.content.text.localeCompare(b.content.text);
+                    if (a.content.type === "multiplePlates") {
+                        if (b.content.type !== "multiplePlates") throw new UnexpectedPropertyTypeError();
+                        return a.content.codes[0].localeCompare(b.content.codes[0]);
+                    } else if (a.content.type === "text") {
+                        if (b.content.type !== "text") throw new UnexpectedPropertyTypeError();
+                        return a.content.text.localeCompare(b.content.text);
+                    }
+                    return 0;
                 }
                 : undefined,
         },
