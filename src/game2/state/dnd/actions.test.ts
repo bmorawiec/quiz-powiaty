@@ -1,14 +1,23 @@
-import { CardNotFoundError } from "src/game/dnd";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { type GameAPICallbacks } from "src/game2/api";
-import { QuestionNotFoundError } from "src/game2/questions";
-import type { GameOptions } from "src/gameOptions";
+import type { GameOptions } from "src/game2/options";
+import { optionsToQuestions, QuestionNotFoundError } from "src/game2/questions";
 import type { ZustandHook } from "src/utils/zustand";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { createDnDGameStore } from "./factory";
-import { CellNotFoundError, type DnDGameStore } from "./types";
+import { CardNotFoundError, CellNotFoundError, type DnDGameStore } from "./types";
+
+vi.stubGlobal("fetch", async (url: string) => {
+    const absURL = path.join(process.cwd(), "public", url);
+    return new Response((await readFile(absURL)).toString(), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+    });
+});
 
 const someOptions: GameOptions = {
-    gameType: "dndGame",
+    mode: "dndGame",
     unitType: "county",
     guessFrom: "plate",
     guess: "capital",
@@ -74,7 +83,8 @@ function moveCorrectCardIntoFirstCell(store: ZustandHook<DnDGameStore>): [string
 
 describe("verify", () => {
     it("throws an error when the game is paused", async () => {
-        const store = await createDnDGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createDnDGameStore(qsAndAs, someOptions, emptyCallbacks);
 
         store.getState().api.togglePause();
         expect(() => store.getState().verify())
@@ -82,7 +92,8 @@ describe("verify", () => {
     });
 
     it("throws an error when the game is finished", async () => {
-        const store = await createDnDGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createDnDGameStore(qsAndAs, someOptions, emptyCallbacks);
 
         finishGame(store);
         expect(() => store.getState().verify())
@@ -92,7 +103,8 @@ describe("verify", () => {
 
 describe("moveCardToSlot", () => {
     it("throws an error when the game is paused", async () => {
-        const store = await createDnDGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createDnDGameStore(qsAndAs, someOptions, emptyCallbacks);
 
         store.getState().api.togglePause();
 
@@ -103,7 +115,8 @@ describe("moveCardToSlot", () => {
     });
 
     it("throws an error when the game is finished", async () => {
-        const store = await createDnDGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createDnDGameStore(qsAndAs, someOptions, emptyCallbacks);
 
         finishGame(store);
 
@@ -114,7 +127,8 @@ describe("moveCardToSlot", () => {
     });
 
     it("throws when moving a card that has been verified", async () => {
-        const store = await createDnDGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createDnDGameStore(qsAndAs, someOptions, emptyCallbacks);
 
         const [movedCardId] = moveCorrectCardIntoFirstCell(store);
         store.getState().verify();
@@ -126,7 +140,8 @@ describe("moveCardToSlot", () => {
     });
 
     it("throws when moving a card to a slot with a card that has been verified", async () => {
-        const store = await createDnDGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createDnDGameStore(qsAndAs, someOptions, emptyCallbacks);
 
         const [_, firstCellId] = moveCorrectCardIntoFirstCell(store);
         store.getState().verify();
@@ -143,7 +158,8 @@ describe("moveCardToSlot", () => {
 
 describe("moveCardToSidebar", () => {
     it("throws an error when the game is paused", async () => {
-        const store = await createDnDGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createDnDGameStore(qsAndAs, someOptions, emptyCallbacks);
 
         store.getState().api.togglePause();
 
@@ -153,7 +169,8 @@ describe("moveCardToSidebar", () => {
     });
 
     it("throws an error when the game is finished", async () => {
-        const store = await createDnDGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createDnDGameStore(qsAndAs, someOptions, emptyCallbacks);
 
         finishGame(store);
 
@@ -163,7 +180,8 @@ describe("moveCardToSidebar", () => {
     });
 
     it("throws when moving a card that has been verified", async () => {
-        const store = await createDnDGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createDnDGameStore(qsAndAs, someOptions, emptyCallbacks);
 
         const [movedCardId] = moveCorrectCardIntoFirstCell(store);
         store.getState().verify();

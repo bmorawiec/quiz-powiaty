@@ -1,13 +1,24 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import type { GameAPICallbacks } from "src/game2/api";
-import type { GameOptions } from "src/gameOptions";
+import type { GameOptions } from "src/game2/options";
+import { optionsToQuestions } from "src/game2/questions";
 import type { ZustandHook } from "src/utils/zustand";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { createAllActions } from "./actions";
 import { createChoiceGameStore } from "./factory";
 import { ChoiceScreenNotFoundError, type ChoiceGameStore } from "./types";
 
+vi.stubGlobal("fetch", async (url: string) => {
+    const absURL = path.join(process.cwd(), "public", url);
+    return new Response((await readFile(absURL)).toString(), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+    });
+});
+
 const someOptions: GameOptions = {
-    gameType: "choiceGame",
+    mode: "choiceGame",
     unitType: "county",
     guessFrom: "plate",
     guess: "capital",
@@ -48,7 +59,8 @@ function reachQuestionAtIndex(store: ZustandHook<ChoiceGameStore>, targetIndex: 
 
 describe("guess", () => {
     it("throws an error when the game is paused", async () => {
-        const store = await createChoiceGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createChoiceGameStore(qsAndAs, someOptions, emptyCallbacks);
 
         store.getState().api.togglePause();     // pause the game
         expect(() => store.getState().guess(""))
@@ -56,7 +68,8 @@ describe("guess", () => {
     });
 
     it("throws an error when the game is finished", async () => {
-        const store = await createChoiceGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createChoiceGameStore(qsAndAs, someOptions, emptyCallbacks);
         reachQuestionAtIndex(store);
 
         expect(() => store.getState().guess(""))
@@ -66,7 +79,8 @@ describe("guess", () => {
 
 describe("nextScreen", () => {
     it("throws an error when called on the results screen", async () => {
-        const store = await createChoiceGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createChoiceGameStore(qsAndAs, someOptions, emptyCallbacks);
         reachQuestionAtIndex(store);
 
         const { nextScreen } = createAllActions(store.setState, store.getState);
@@ -76,7 +90,8 @@ describe("nextScreen", () => {
 
 describe("switchScreens", () => {
     it("throws an error when switching to a screen that hasn't been reached yet", async () => {
-        const store = await createChoiceGameStore(someOptions, emptyCallbacks);
+        const qsAndAs = await optionsToQuestions(someOptions);
+        const store = await createChoiceGameStore(qsAndAs, someOptions, emptyCallbacks);
         reachQuestionAtIndex(store, 10);
 
         expect(() => store.getState().switchScreens(store.getState().screenIds[5])).not.toThrow();

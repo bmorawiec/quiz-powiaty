@@ -25,10 +25,7 @@
 
         "paths": {
             "src/*": ["./src/*"]
-        },
-
-        "types": []     /* Don't import node.js typedefs */
+        }
     },
-    "include": ["src"],
-    "exclude": ["src/**/*.test.ts"]     /* This is so that this tsconfig file only applies in non-test files. */
+    "include": ["src/**/*.test.ts"]     /* This is so that this tsconfig file only applies in test files. */
 }
