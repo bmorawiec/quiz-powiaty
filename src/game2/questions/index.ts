@@ -1,4 +1,4 @@
-export * from "./generator";
+export * from "./generators";
 export * from "./answers";
 export * from "./content";
 export * from "./questions";
