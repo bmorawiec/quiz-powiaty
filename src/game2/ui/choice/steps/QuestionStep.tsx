@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { QuestionNotFoundError } from "src/game2/api";
+import { QuestionNotFoundError } from "src/game2/questions";
 import { type ChoiceScreen } from "src/game2/state";
 import { ApplyIcon, CloseIcon, CrownIcon, Step } from "src/ui";
 import { ChoiceGameStoreContext } from "../hook";

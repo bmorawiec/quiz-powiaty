@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useContext } from "react";
-import { AnswerNotFoundError } from "src/game2/api";
+import { AnswerNotFoundError } from "src/game2/questions";
 import { ButtonNotFoundError } from "src/game2/state";
 import { ApplyIcon, CloseIcon } from "src/ui";
 import { useAnimation } from "src/utils/useAnimation";
@@ -23,9 +23,6 @@ export function ButtonView({ buttonId, disabled }: ButtonViewProps) {
     const answer = useChoiceGameStore((game) => game.api.answers[button.answerId]);
     if (!answer) throw new AnswerNotFoundError(button.answerId);
 
-    if (answer.content.type === "feature")
-        throw new Error("This component does not support displaying this type of content.");
-
     const [isWrongAnim, playWrongAnim] = useAnimation(450);
     const guess = useChoiceGameStore((game) => game.guess);
     const handleClick = () => {
@@ -39,8 +36,7 @@ export function ButtonView({ buttonId, disabled }: ButtonViewProps) {
 
     return (
         <button
-            className={clsx((answer.content.type === "text") ? "h-[80px]" : "h-[200px]",
-                "border rounded-[10px] font-[450] tracking-[0.01em] p-[10px]",
+            className={clsx("h-[80px] border rounded-[10px] font-[450] tracking-[0.01em] p-[10px]",
                 "transition-colors duration-20 focus-ring flex items-center justify-center gap-[8px]",
                 !disabled && "cursor-pointer hover:bg-gray-5 active:bg-gray-10 " +
                     "dark:hover:bg-white/8 dark:active:bg-white/4",
@@ -50,16 +46,7 @@ export function ButtonView({ buttonId, disabled }: ButtonViewProps) {
                 isWrongAnim && "animate-shake")}
             onClick={handleClick}
         >
-            {(answer.content.type === "text") ? (
-                answer.content.text
-            ) : (
-                <div
-                    className="size-full bg-contain bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${answer.content.url})`,
-                    }}
-                />
-            )}
+            (placeholder)
 
             {disabled && ((answer.correct)
                 ? <ApplyIcon className="size-[14px] text-teal-75 dark:text-teal-60"/>

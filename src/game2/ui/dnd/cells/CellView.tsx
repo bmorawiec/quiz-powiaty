@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { QuestionNotFoundError } from "src/game2/api";
+import { QuestionNotFoundError } from "src/game2/questions";
 import { CellNotFoundError } from "src/game2/state";
 import { DnDGameStoreContext } from "../hook";
 import { Slot } from "./Slot";
@@ -24,7 +24,7 @@ export function CellView({ cellId }: CellViewProps) {
     return (
         <div className="bg-white dark:bg-gray-90 rounded-[15px] p-[10px] grid grid-cols-2">
             <p className="text-[14px] tracking-[0.01em] ml-[6px] mt-[8px] mr-[10px]">
-                {question.content.shortText}
+                (placeholder)
             </p>
 
             <div className="flex flex-col gap-[6px]">
@@ -38,5 +38,5 @@ export function CellView({ cellId }: CellViewProps) {
                 )}
             </div>
         </div>
-    )
+    );
 }

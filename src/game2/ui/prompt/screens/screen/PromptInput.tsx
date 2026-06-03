@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { useContext, useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import type { GameAPIOptions } from "src/game2/api";
-import { InvalidGameOptionsError } from "src/gameOptions";
 import { InfoIcon, SendIcon } from "src/ui";
 import { PromptGameStoreContext } from "../../hook";
 import { getTextTransform } from "./textTransform";
@@ -166,13 +165,6 @@ export function PromptInput({ answered, total, onGuess }: PromptInputProps) {
     )
 }
 
-function getInputPlaceholder(apiOptions: GameAPIOptions): string {
-    if (apiOptions.guess === "name") {
-        return "Wpisz nazwę...";
-    } else if (apiOptions.guess === "capital") {
-        return "Wpisz nazwę stolicy...";
-    } else if (apiOptions.guess === "plate") {
-        return "Wpisz rejestrację...";
-    }
-    throw new InvalidGameOptionsError();
+function getInputPlaceholder(_apiOptions: GameAPIOptions): string {
+    return "(placeholder)";
 }

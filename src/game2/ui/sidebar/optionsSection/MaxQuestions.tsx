@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import type { GameOptions } from "src/gameOptions";
+import type { GameOptions } from "src/game2/options";
 import { Slider } from "src/ui";
 
 export interface MaxQuestionsProps {
@@ -7,7 +7,7 @@ export interface MaxQuestionsProps {
     onChange: (newOptions: GameOptions) => void;
 }
 
-const sliderValueMap = [5, 10, 15, 20, 30, 40, 50, null];
+const sliderValueMap = [5, 10, 15, 20, 30, 40, 50, Infinity];
 
 export function MaxQuestions({ options, onChange }: MaxQuestionsProps) {
     const [newValue, setNewValue] = useState(options.maxQuestions);

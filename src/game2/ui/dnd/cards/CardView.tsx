@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { useContext, useState } from "react";
-import { CardNotFoundError } from "src/game/dnd";
-import { DnDGameStoreContext } from "../hook";
-import { AnswerNotFoundError } from "src/game2/api";
+import { AnswerNotFoundError } from "src/game2/questions";
+import { CardNotFoundError } from "src/game2/state";
 import { ApplyIcon, CloseIcon, DragHandleIcon } from "src/ui";
+import { DnDGameStoreContext } from "../hook";
 
 export interface CardViewProps {
     cardId: string;
@@ -23,9 +23,6 @@ export function CardView({ cardId, indexInSidebar }: CardViewProps) {
     const answer = useDnDGameStore((game) => game.api.answers[card.answerId]);
     if (!answer) throw new AnswerNotFoundError(card.answerId);
 
-    if (answer.content.type === "feature")  // a card can only display text or an image
-        throw new Error("This component does not support displaying this type of content.");
-
     // true if this card is currently being dragged
     const [beingDragged, setBeingDragged] = useState(false);
 
@@ -33,7 +30,7 @@ export function CardView({ cardId, indexInSidebar }: CardViewProps) {
         event.dataTransfer.clearData();
         if (answer.content.type === "text") {
             // this is so that you can drop the card into a text area
-            event.dataTransfer.setData("text/plain", answer.content.shortText);
+            event.dataTransfer.setData("text/plain", answer.content.text);
         }
         event.dataTransfer.setData("QuizPowiaty.cardId", cardId);
         setBeingDragged(true);
@@ -100,9 +97,8 @@ export function CardView({ cardId, indexInSidebar }: CardViewProps) {
         >
             <div
                 className={clsx("border rounded-[10px] cursor-move pl-[10px] pt-[7px] pb-[8px] text-[14px] shrink-0",
-                    "transition-colors duration-40 cursor-move flex items-center gap-[5px]",
+                    "transition-colors duration-40 cursor-move flex items-center gap-[5px] h-[40px]",
                     "border-gray-20 dark:border-gray-75",
-                    (answer.content.type === "image") ? "h-[150px]" : "h-[40px]",
                     (beingDragged)
                         ? "opacity-60"
                         : (dragHover)
@@ -119,16 +115,7 @@ export function CardView({ cardId, indexInSidebar }: CardViewProps) {
                     className="size-[10px] text-gray-60 shrink-0"
                 />
 
-                {(answer.content.type === "text") ? (
-                    answer.content.text
-                ) : (
-                    <div
-                        className="size-full bg-contain bg-center bg-no-repeat"
-                        style={{
-                            backgroundImage: `url(${answer.content.url})`,
-                        }}
-                    />
-                )}
+                (placeholder)
 
                 {Icon && (
                     <Icon className="size-[14px] shrink-0"/>
