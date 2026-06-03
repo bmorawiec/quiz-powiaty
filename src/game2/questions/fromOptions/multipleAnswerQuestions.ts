@@ -18,7 +18,7 @@ export async function optionsToMultipleAnswerQuestions(options: GameOptions): Pr
         && ["name", "capital", "plate"].includes(options.guessFrom);
 
     return generateMultipleAnswerQuestions({
-        units: toShuffled(filterByCountyType(await fetchUnits(options), options)).slice(options.maxQuestions),
+        units: toShuffled(filterByCountyType(await fetchUnits(options), options)).slice(0, options.maxQuestions),
         properties: await fetchProperties(options, [...questionTags, ...answerTags]),
         questions: {
             tags: questionTags,

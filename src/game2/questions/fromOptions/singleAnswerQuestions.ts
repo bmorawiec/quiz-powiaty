@@ -15,7 +15,7 @@ export async function optionsToSingleAnswerQuestions(options: GameOptions): Prom
     const [answerContentGenerator, answerTags] = contentGenerators.richAnswers(options);
     return generateSingleAnswerQuestions({
         questions: {
-            units: toShuffled(filterByCountyType(await fetchUnits(options), options)).slice(options.maxQuestions),
+            units: toShuffled(filterByCountyType(await fetchUnits(options), options)).slice(0, options.maxQuestions),
             properties: await fetchProperties(options, questionTags),
             tags: questionTags,
             contentGenerator: questionContentGenerator,
