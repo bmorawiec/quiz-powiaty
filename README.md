@@ -1,47 +1,56 @@
 <p align="center">
-    <img src="/assets/logo.svg" alt="Logo projektu QuizPowiaty"/>
+    <img src="/assets/banner.svg" alt="Banner z logiem projektu quiz-powiaty"/>
 </p>
 <p align="center">Quiz o podziale administracyjnym Polski</p>
 
----
+![Zrzut ekranu z gry (pytania o nazwy powiatów o podanych rejestracjach)](/assets/screenshots/sc1.png)
 
-![Zrzut ekranu ze strony głównej aplikacji](/assets/screenshots/home.png)
+### Funkcje
 
-## Tryby gry
+- Zgadywanie nazw, stolic, tablic rejestracyjnych, flag, herbów, i kształtów powiatów i województw (łącznie 54 kombinacji do wyboru)
+- Tryby gry
+  - Test wielokrotnego wyboru
+  - Przeciągnij i upuść
+  - Wpisywanie
+- Tryb ciemny
 
-### Test wielokrotnego wyboru
-![Zrzut ekranu z gry w trybie testu wielokrotnego wyboru](/assets/screenshots/choiceGame.png)
+### Roadmap
 
-### Tryb gry "przeciągnij i upuść"
-![Zrzut ekranu z gry w trybie wpisywania](/assets/screenshots/dndGame.png)
-
-### Wpisywanie odpowiedzi
-![Zrzut ekranu z gry w trybie wpisywania](/assets/screenshots/promptGame.png)
-
-### Podpisywanie
-![Zrzut ekranu z gry w trybie podpisywania](/assets/screenshots/typingGame.png)
-
-## Funkcje
-
-### Filtrowanie powiatów wg. województwa i statusu
-![Zrzut ekranu pokazujący okienko filtrowania](/assets/screenshots/filters.png)
-
-### Ciemny motyw
-![Zrzut ekranu ze strony głównej aplikacji, z aktywnym ciemnym motywem](/assets/screenshots/darkMode.png)
-
-## Roadmap
-
-Rewrite API gry
-- [x] choiceGame
-- [ ] dndGame
-- [ ] mapGame
-- [ ] promptGame
-- [ ] typingGame
-
-Funkcje
 - [x] Filtry
 - [x] Limit ilości pytań
+- [ ] Nowy silnik gry
+  - [x] Nowy format danych
+  - [x] Generator pytań
+  - [x] Uniwersalny generator zawartości do pytań
+  - [x] Tryb gry "test wielokrotnego wyboru" (choiceGame)
+  - [x] Tryb gry "przeciągnij i upuść" (dndGame)
+  - [x] Tryb gry "wpisz" (promptGame)
+  - [ ] Tryb gry "podpisz" (typingGame)
+  - [ ] Tryb gry "mapa" (mapGame)
+- [ ] Statystyki
+- [ ] Menu nawigacji
+- [ ] Tryb mobilny
 - [ ] Prawdziwe flagi i herby zamiast tymczasowych
-- [ ] Nowy interfejs użytkownika
-- [ ] Tryb gry „Warszawa”
-- [ ] Powiat dnia
+- [ ] Kiedyś (wersja 2.0)
+  - [ ] Tryb gry "Warszawa"
+  - [ ] Tryb nauki (mapa wszystkich powiatów z wyszukiwarką)
+  - [ ] Zakładanie kont
+
+### Zrzuty ekranu
+
+![Zrzut ekranu z gry (test wielokrotnego wyboru o rejestracjach powiatów)](/assets/screenshots/sc2.png)
+
+![Zrzut ekranu z gry (przyporządkowywanie nazw powiatów do ich kształtów)](/assets/screenshots/sc3.png)
+
+![Zrzut ekranu pokazujący tryb ciemny](/assets/screenshots/sc4.png)
+
+### Uruchamianie środowiska programistycznego
+
+Sklonuj repozytorium za pomocą komendy
+```
+git clone https://github.com/bmorawiec/quiz-powiaty.git
+```
+
+Dostępne komendy
+- `npm run dev` - uruchamia serwer pod adresem `localhost:5173`
+- `npm run test` - uruchamia wszystkie unit testy
