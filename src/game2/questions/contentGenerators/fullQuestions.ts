@@ -150,6 +150,7 @@ function withShape(options: GameOptions): [ContentGenerator, PropertyTag[]] {
             // "Jaką stolicę ma powiat o tym kształcie?"
             text: QUESTION_PREFIXES[options.guess] + " " + UNIT_TYPES[options.unitType] + " o tym kształcie?",
             shape: shapeProperty.shape,
+            size: shapeProperty.size,
         };
     }, ["shape"]];
 }

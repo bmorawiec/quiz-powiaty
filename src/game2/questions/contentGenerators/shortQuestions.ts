@@ -114,6 +114,7 @@ function withShape(_options: GameOptions): [ContentGenerator, PropertyTag[]] {
         return {
             type: "shape",
             shape: shapeProperty.shape,
+            size: shapeProperty.size,
         };
     }, ["shape"]];
 }

@@ -24,7 +24,7 @@ const voivodeshipProperties: Property[] = [
     { type: "text", tag: "plate", text: "C" },
     { type: "image", tag: "flag", url: "/dummy-path/flag/kujawsko-pomorskie.svg" },
     { type: "image", tag: "coa", url: "/dummy-path/coa/kujawsko-pomorskie.svg" },
-    { type: "shape", tag: "shape", shape: EXAMPLE_SHAPE },
+    { type: "shape", tag: "shape", shape: EXAMPLE_SHAPE, position: [0, 0], size: [10, 10] },
 ];
 
 const countyProperties: Property[] = [
@@ -36,7 +36,7 @@ const countyProperties: Property[] = [
     { type: "text", tag: "plate", text: "YKR" },
     { type: "image", tag: "flag", url: "/dummy-path/flag/krośnieński.svg" },
     { type: "image", tag: "coa", url: "/dummy-path/coa/krośnieński.svg" },
-    { type: "shape", tag: "shape", shape: EXAMPLE_SHAPE },
+    { type: "shape", tag: "shape", shape: EXAMPLE_SHAPE, position: [0, 0], size: [10, 10] },
 ];
 
 interface TestEntry {
@@ -129,6 +129,7 @@ const questionTests = {
             expectedContent: {
                 type: "shape",
                 shape: EXAMPLE_SHAPE,
+                size: [10, 10],
             },
         },
     ] satisfies TestEntry[],
