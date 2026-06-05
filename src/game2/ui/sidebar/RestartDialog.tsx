@@ -17,13 +17,13 @@ export function RestartDialog({ onConfirm, onCancel, onClose }: RestartDialogPro
         onClose?.();
     };
 
-    const handleCancelClick = () => {
+    const handleCancel = () => {
         onCancel?.();
         onClose?.();
     };
 
     return (
-        <DialogRoot onScrimPointerDown={onClose}>
+        <DialogRoot onScrimPointerDown={handleCancel}>
             <Dialog className="w-[500px]">
                 <div className="flex px-[25px] pt-[30px] pb-[20px] gap-[7px]">
                     <WarningIcon className="mt-[2px]"/>
@@ -35,7 +35,7 @@ export function RestartDialog({ onConfirm, onCancel, onClose }: RestartDialogPro
                     <Button
                         icon={CloseIcon}
                         text="Anuluj"
-                        onClick={handleCancelClick}
+                        onClick={handleCancel}
                     />
                     <Button
                         icon={RestartIcon}
