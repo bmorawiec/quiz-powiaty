@@ -18,7 +18,7 @@ export function Plate({ code, height = 50 }: PlateProps) {
                 : <PlateBackground/>}
 
             {code.split("").map((char, index) =>
-                <svg x={190 + index * 180} y={55}>
+                <svg key={index} x={190 + index * 180} y={55}>
                     <Letter letter={char}/>
                 </svg>
             )}
