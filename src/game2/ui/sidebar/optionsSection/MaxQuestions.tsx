@@ -46,11 +46,14 @@ export function MaxQuestions({ options, onChange }: MaxQuestionsProps) {
                 />
 
                 <p className="w-[35px] text-right">
-                    {newValue || (
-                        <span className="mr-[-3px] text-[12px] font-[450]">
-                            MAX
-                        </span>
-                    )}
+                    {(newValue === Infinity)
+                        ? (
+                            <span className="mr-[-3px] text-[12px] font-[450]">
+                                MAX
+                            </span>
+                        )
+                        : newValue
+                    }
                 </p>
             </div>
         </div>
