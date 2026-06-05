@@ -12,8 +12,8 @@ export function PromptGame() {
 
     return (
         <div className="size-full bg-gray-10 dark:bg-gray-95 rounded-[20px] px-[20px] py-[50px]
-            flex flex-col items-center md:justify-end">
-            <div className="md:h-[290px] w-full max-w-[1000px] flex flex-col gap-[30px]">
+            flex flex-col items-center">
+            <div className="w-full h-full max-w-[1000px] flex flex-col gap-[30px] md:justify-end">
                 <Stepper>
                     {screenIds.map((screenId, index) =>
                         <PromptStep

@@ -110,8 +110,8 @@ export function PromptInput({ answered, total, onGuess }: PromptInputProps) {
     };
 
     return (
-        <div className="relative w-full max-w-[700px]">
-            <div className={clsx("relative h-[60px] mb-[50px] rounded-[20px]",
+        <div className="relative w-full max-w-[700px] h-[130px]">
+            <div className={clsx("relative h-[60px] rounded-[20px]",
                 "border border-gray-20 dark:border-gray-65 bg-white dark:bg-gray-95",
                 animState === "wrongAnim" && "animate-shake",
                 animState === "correctAnim" && "animate-correct dark:animate-correct-dark")}>

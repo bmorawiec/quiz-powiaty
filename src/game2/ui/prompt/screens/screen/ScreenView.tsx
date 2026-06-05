@@ -1,10 +1,10 @@
-import clsx from "clsx";
 import { useContext } from "react";
 import { QuestionNotFoundError } from "src/game2/questions";
 import { type PromptScreen } from "src/game2/state";
 import { PromptGameStoreContext } from "../../hook";
 import { Guesses } from "./Guesses";
 import { PromptInput } from "./PromptInput";
+import { QuestionView } from "./question";
 
 export interface ScreenViewProps {
     screen: PromptScreen;
@@ -23,23 +23,10 @@ export function ScreenView({ screen }: ScreenViewProps) {
         return guess(answer);
     };
 
-    return (
-        <div className="flex flex-col items-center overflow-hidden">
-            <div className="w-full h-[56px] grid grid-cols-[60px_auto_60px]">
-                <div/>
+    return (<>
+        <QuestionView question={question}/>
 
-                <h2 className="text-center text-[20px] font-[450] tracking-[0.01em] text-gray-85 dark:text-gray-10">
-                    (placeholder)
-                </h2>
-
-                {question.guessed && (
-                    <span className={clsx("mt-[2px] text-[18px] font-[450] tracking-[0.01em] justify-self-end",
-                        (question.points > 0) ? "text-teal-75 dark:text-teal-70" : "text-red-60 dark:text-red-55")}>
-                        +{question.points}pkt
-                    </span>
-                )}
-            </div>
-
+        <div className="flex flex-col items-center">
             {(question.guessed) ? (
                 <Guesses
                     guesses={screen.guesses}
@@ -52,5 +39,5 @@ export function ScreenView({ screen }: ScreenViewProps) {
                 />
             )}
         </div>
-    );
+    </>);
 }

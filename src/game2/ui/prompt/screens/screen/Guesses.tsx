@@ -15,7 +15,7 @@ export function Guesses({ guesses }: GuessesProps) {
     const textTransform = getTextTransform(apiOptions);
 
     return (
-        <div className={clsx("w-full max-w-[700px] rounded-[10px] px-[15px] py-[13px] flex flex-col gap-[5px]",
+        <div className={clsx("w-full h-[130px] max-w-[700px] rounded-[10px] px-[15px] py-[13px] flex flex-col gap-[5px]",
             "bg-white bg-dark-95 border border-gray-20 dark:bg-white/5 dark:border-none overflow-y-auto",
             textTransform)}>
             {guesses.map((guess, index) =>
