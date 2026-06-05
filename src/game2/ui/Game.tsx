@@ -46,8 +46,8 @@ export function Game() {
     return (
         <div
             ref={container}
-            className={clsx("bg-white dark:bg-black flex-1 min-h-[600px] md:px-[20px]",
-                (fullscreen) ? "md:py-[20px]" : "md:pb-[25px] lg:px-[100px]")}
+            className={clsx("bg-white dark:bg-black flex-1 min-h-[600px] px-[10px] py-[20px]",
+                (fullscreen) ? "md:py-[20px]" : "lg:px-[80px]")}
         >
             {(state === "invalidOptions") ? (
                 <GameError/>

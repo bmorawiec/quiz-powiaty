@@ -42,7 +42,7 @@ export const colors = {
     grass95: "#18441c",
     grass100: "#102d13",
 
-    gray5: "#f5f5f5",
+    gray5: "#f3f3f3",
     gray10: "#ededed",
     gray15: "#e6e6e6",
     gray20: "#dbdbdb",
