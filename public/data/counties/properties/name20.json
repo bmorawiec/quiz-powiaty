@@ -1,87 +1,87 @@
 {
-    "01KTC2ZDXWGA8QM2BZQZED349K": {
+    "01KTC42PH5ZPSMKF84FPJ7Z401": {
         "type": "text",
         "tag": "name",
         "text": "powiat augustowski"
     },
-    "01KTC2ZDXXP6HJ5C6R3TGK4J9S": {
+    "01KTC42PH6EKXBVQMC8YT944K3": {
         "type": "text",
         "tag": "name",
         "text": "powiat białostocki"
     },
-    "01KTC2ZDXYVHHV8YP35C6T9PX4": {
+    "01KTC42PH64PJGG20SPMKWKMVS": {
         "type": "text",
         "tag": "name",
         "text": "powiat bielski"
     },
-    "01KTC2ZDXYGN2RGTAVDFX30APM": {
+    "01KTC42PH7JSC90GVAHHRXF0GV": {
         "type": "text",
         "tag": "name",
         "text": "powiat grajewski"
     },
-    "01KTC2ZDXZZQ7S7J828YN53CPY": {
+    "01KTC42PH8GSMNYZSYNG506GMV": {
         "type": "text",
         "tag": "name",
         "text": "powiat hajnowski"
     },
-    "01KTC2ZDY06H080FT8C8V1PJSZ": {
+    "01KTC42PH8SV2MFHZTT6PNQYQV": {
         "type": "text",
         "tag": "name",
         "text": "powiat kolneński"
     },
-    "01KTC2ZDY0KK5DAY04GNFK0952": {
+    "01KTC42PH97SF6FMBZR49QS4AM": {
         "type": "text",
         "tag": "name",
         "text": "powiat łomżyński"
     },
-    "01KTC2ZDY1WAWND23PGZGA5A4A": {
+    "01KTC42PHA68PCXGJ98JVD6PKH": {
         "type": "text",
         "tag": "name",
         "text": "powiat moniecki"
     },
-    "01KTC2ZDY2RVMSWN69HNCV43JM": {
+    "01KTC42PHAEXKC8990RK7JR9E8": {
         "type": "text",
         "tag": "name",
         "text": "powiat sejneński"
     },
-    "01KTC2ZDY3FGRDTN2G4MFBPXVV": {
+    "01KTC42PHB4ZYKD8YW73Q4N0Z8": {
         "type": "text",
         "tag": "name",
         "text": "powiat siemiatycki"
     },
-    "01KTC2ZDY33K8KK2PY80CQKRCE": {
+    "01KTC42PHCRXDH2BA4BQQSEFHG": {
         "type": "text",
         "tag": "name",
         "text": "powiat sokólski"
     },
-    "01KTC2ZDY40431R6K1T9DPYTNN": {
+    "01KTC42PHCAACR2KCCBV6GWYN1": {
         "type": "text",
         "tag": "name",
         "text": "powiat suwalski"
     },
-    "01KTC2ZDY5F7RBM2EEXSANB380": {
+    "01KTC42PHDXXHMC3496GDQC7GN": {
         "type": "text",
         "tag": "name",
         "text": "powiat wysokomazowiecki"
     },
-    "01KTC2ZDY6JC6WHCY6H5D1Z0XK": {
+    "01KTC42PHEP8ES4S8NY471N1A3": {
         "type": "text",
         "tag": "name",
         "text": "powiat zambrowski"
     },
-    "01KTC2ZDY6EKE8T4M4B3694NQZ": {
+    "01KTC42PHF2XA83NK7M91WH4MM": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Białystok"
+        "text": "miasto Białystok"
     },
-    "01KTC2ZDY7VK5KBW0A9V8DMHEK": {
+    "01KTC42PHFTQ1WYPJWRHT9T864": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Łomża"
+        "text": "miasto Łomża"
     },
-    "01KTC2ZDY8331S28ZE2YKPBAWW": {
+    "01KTC42PHG5CN5J7XP1JH0V1P6": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Suwałki"
+        "text": "miasto Suwałki"
     }
 }

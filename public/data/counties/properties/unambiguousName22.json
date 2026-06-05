@@ -1,102 +1,102 @@
 {
-    "01KTC2ZDYBEV8W884ZRYGDYBH6": {
+    "01KTC42PHK6K93DR4N85A770TP": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat bytowski"
     },
-    "01KTC2ZDYBVJS5BEQM1W018B5J": {
+    "01KTC42PHK6P21MEBB9F8S8A2Z": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat chojnicki"
     },
-    "01KTC2ZDYC39RQRD7D40K4J4PH": {
+    "01KTC42PHM4RB4RPGTPWAX07NE": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat człuchowski"
     },
-    "01KTC2ZDYDFKF48YBAYV5P6NVF": {
+    "01KTC42PHN2WYA0WBKEQWXSPS4": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat gdański"
     },
-    "01KTC2ZDYDKX5343TQZZT682VN": {
+    "01KTC42PHNNYRP86NSYRAXXTZC": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat kartuski"
     },
-    "01KTC2ZDYE467X3NHNYTJXP18B": {
+    "01KTC42PHPSE3GPXA2WYDSGH7V": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat kościerski"
     },
-    "01KTC2ZDYF2GH2KTPJ7SS32531": {
+    "01KTC42PHQ35Z8W5TXHC76BK21": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat kwidzyński"
     },
-    "01KTC2ZDYFEQRAFJR2JXSXBT94": {
+    "01KTC42PHQ74Y4STKD5K74EHQ1": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat lęborski"
     },
-    "01KTC2ZDYGRYDH84Z9BQ7R62JF": {
+    "01KTC42PHRH46EHKXA8B42WMXG": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat malborski"
     },
-    "01KTC2ZDYH9Y03JFRDJ4KK8TW9": {
+    "01KTC42PHSH6PDR8TBXKH770H0": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat nowodworski (Nowy Dwór Gdański)"
     },
-    "01KTC2ZDYHYPEWGJX572AETJHJ": {
+    "01KTC42PHTVPZ73QA7HS4CKH6H": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat pucki"
     },
-    "01KTC2ZDYJFXWW27FM0RBNM7ZW": {
+    "01KTC42PHTT4K1CM6ME55315EW": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat słupski"
     },
-    "01KTC2ZDYK9FRNHMBDK05KQGY1": {
+    "01KTC42PHV9NXAXCEV413Y4RRC": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat starogardzki"
     },
-    "01KTC2ZDYMAQ3QWR4XN0TM7Q3G": {
+    "01KTC42PHWN88QDXB3WCHGC298": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat tczewski"
     },
-    "01KTC2ZDYNKHJ8K1TZXJANQ9CW": {
+    "01KTC42PHXYTJP06PBZXY23VJN": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat wejherowski"
     },
-    "01KTC2ZDYPKHSAZFVKWMPA85YM": {
+    "01KTC42PHY4RXFADKAK1N3652M": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat sztumski"
     },
-    "01KTC2ZDYQXZEWYZZ3X7EQXY97": {
+    "01KTC42PHZSQE8WCA1NFM7EFZR": {
         "type": "text",
         "tag": "unambiguousName",
-        "text": "powiat Gdańsk"
+        "text": "miasto Gdańsk"
     },
-    "01KTC2ZDYQGJE8NZQEBQ1D4PCS": {
+    "01KTC42PHZJJ4JZTCMHT3V162H": {
         "type": "text",
         "tag": "unambiguousName",
-        "text": "powiat Gdynia"
+        "text": "miasto Gdynia"
     },
-    "01KTC2ZDYRRA9YGV3Y23R0Z8FR": {
+    "01KTC42PJ03M6G05E0XYS9TJ9M": {
         "type": "text",
         "tag": "unambiguousName",
-        "text": "powiat Słupsk"
+        "text": "miasto Słupsk"
     },
-    "01KTC2ZDYS7G9CAMPXTGFXFFHZ": {
+    "01KTC42PJ1A68J1B31ERXXVMR3": {
         "type": "text",
         "tag": "unambiguousName",
-        "text": "powiat Sopot"
+        "text": "miasto Sopot"
     }
 }

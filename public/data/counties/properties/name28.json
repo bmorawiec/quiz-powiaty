@@ -1,107 +1,107 @@
 {
-    "01KTC2ZE0C195KW0937QPMGWS9": {
+    "01KTC42PKGBTK9CEE07CFKWXGY": {
         "type": "text",
         "tag": "name",
         "text": "powiat bartoszycki"
     },
-    "01KTC2ZE0CXACVMZCMN7D58GX9": {
+    "01KTC42PKHWAFZ5QJMZD4GTRRN": {
         "type": "text",
         "tag": "name",
         "text": "powiat braniewski"
     },
-    "01KTC2ZE0D53ZS6YZFZ3FHZRER": {
+    "01KTC42PKHQG6314XQSWTB7WW2": {
         "type": "text",
         "tag": "name",
         "text": "powiat działdowski"
     },
-    "01KTC2ZE0EGVSB6GR3PARB6A6R": {
+    "01KTC42PKJ0EQ3YMEXMRS6VAHM": {
         "type": "text",
         "tag": "name",
         "text": "powiat elbląski"
     },
-    "01KTC2ZE0FYFA5NSKXWTF9JCWK": {
+    "01KTC42PKKGJ2Q6BX62XKFS7EE": {
         "type": "text",
         "tag": "name",
         "text": "powiat ełcki"
     },
-    "01KTC2ZE0FJ9YD2NB16EFWGCW7": {
+    "01KTC42PKK1H6Y1647BQAAFMY1": {
         "type": "text",
         "tag": "name",
         "text": "powiat giżycki"
     },
-    "01KTC2ZE0G8SB0FDDAHDDV8822": {
+    "01KTC42PKMRAX620VF9CJWXQGH": {
         "type": "text",
         "tag": "name",
         "text": "powiat iławski"
     },
-    "01KTC2ZE0H8TW6622FNYDPD6ZQ": {
+    "01KTC42PKMW6GTPTA92ADBBNGX": {
         "type": "text",
         "tag": "name",
         "text": "powiat kętrzyński"
     },
-    "01KTC2ZE0HHQNDNC3NSSJADFSH": {
+    "01KTC42PKNFYXHQ5PPVF8KNPT4": {
         "type": "text",
         "tag": "name",
         "text": "powiat lidzbarski"
     },
-    "01KTC2ZE0JS838D5JWN173134J": {
+    "01KTC42PKP8RQHANTEQTGRXGN3": {
         "type": "text",
         "tag": "name",
         "text": "powiat mrągowski"
     },
-    "01KTC2ZE0KJFTY3R6M5T0SM7SG": {
+    "01KTC42PKQXGS5AEMNWREAXSBJ": {
         "type": "text",
         "tag": "name",
         "text": "powiat nidzicki"
     },
-    "01KTC2ZE1CMWZ4XVX8DFFGWHHW": {
+    "01KTC42PKQ35G07Y4K1WBCMDQQ": {
         "type": "text",
         "tag": "name",
         "text": "powiat nowomiejski"
     },
-    "01KTC2ZE1DHGM2XW3E4SBM1Z09": {
+    "01KTC42PKRKFM7VXSG0JGS32V5": {
         "type": "text",
         "tag": "name",
         "text": "powiat olecki"
     },
-    "01KTC2ZE1E3FWBHR4R31V4BXE2": {
+    "01KTC42PKSNW3ZRHRYNKX08KRF": {
         "type": "text",
         "tag": "name",
         "text": "powiat olsztyński"
     },
-    "01KTC2ZE1FJKDE3ZF01REASC6E": {
+    "01KTC42PKTWY0HBF8D8VAE1XVP": {
         "type": "text",
         "tag": "name",
         "text": "powiat ostródzki"
     },
-    "01KTC2ZE1GMV3P07075GP01EAB": {
+    "01KTC42PKV0YJFHH1JJM6538FQ": {
         "type": "text",
         "tag": "name",
         "text": "powiat piski"
     },
-    "01KTC2ZE1HHAWXK3DJHZ1YESXP": {
+    "01KTC42PKWAGNQGA8DVXN7819R": {
         "type": "text",
         "tag": "name",
         "text": "powiat szczycieński"
     },
-    "01KTC2ZE1JPRRF85QGA204QB9K": {
+    "01KTC42PKWXF4DQM95QQ134M45": {
         "type": "text",
         "tag": "name",
         "text": "powiat gołdapski"
     },
-    "01KTC2ZE1KG7EEFVT4P9XCD4MS": {
+    "01KTC42PKXC1FEFCFMXYK5SK7B": {
         "type": "text",
         "tag": "name",
         "text": "powiat węgorzewski"
     },
-    "01KTC2ZE1MNRWKJYTFER44KRKJ": {
+    "01KTC42PKYSGE1GQ49WD6EG0CA": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Elbląg"
+        "text": "miasto Elbląg"
     },
-    "01KTC2ZE1N4Y7RQC84D2Z9S33E": {
+    "01KTC42PKZC7C2224ERX28Z3J7": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Olsztyn"
+        "text": "miasto Olsztyn"
     }
 }

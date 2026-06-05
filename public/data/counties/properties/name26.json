@@ -1,72 +1,72 @@
 {
-    "01KTC2ZE001S3PQS8R8S7ZNG6V": {
+    "01KTC42PK5T2H7KSEGKM6AWN3E": {
         "type": "text",
         "tag": "name",
         "text": "powiat buski"
     },
-    "01KTC2ZE01NXYWSA2085WGDZ9C": {
+    "01KTC42PK5N9XARC8NPGVXB5JD": {
         "type": "text",
         "tag": "name",
         "text": "powiat jędrzejowski"
     },
-    "01KTC2ZE01TF3WX28DWEZ7HS7X": {
+    "01KTC42PK6977RVPJFGARYJZYR": {
         "type": "text",
         "tag": "name",
         "text": "powiat kazimierski"
     },
-    "01KTC2ZE02VJBYKEW2JD7ADF02": {
+    "01KTC42PK70S75W3SJTA0D7Z50": {
         "type": "text",
         "tag": "name",
         "text": "powiat kielecki"
     },
-    "01KTC2ZE03Y2E9BJXDERA37M6D": {
+    "01KTC42PK8KNHPSF3GDAWVGZXM": {
         "type": "text",
         "tag": "name",
         "text": "powiat konecki"
     },
-    "01KTC2ZE04DV5AXBRSF8SXEFHS": {
+    "01KTC42PK8QBJ0FQ2Y3AEBNCZC": {
         "type": "text",
         "tag": "name",
         "text": "powiat opatowski"
     },
-    "01KTC2ZE043NCYWRJR7SP0543A": {
+    "01KTC42PK9E6KZTBTABCY3KTEJ": {
         "type": "text",
         "tag": "name",
         "text": "powiat ostrowiecki"
     },
-    "01KTC2ZE05K41S2SJE98HDQZRT": {
+    "01KTC42PKA7YQ1BZCQ9WTC1M7G": {
         "type": "text",
         "tag": "name",
         "text": "powiat pińczowski"
     },
-    "01KTC2ZE06NEBWA224AZNAQ8KR": {
+    "01KTC42PKA410MSGEK3JDXZ74V": {
         "type": "text",
         "tag": "name",
         "text": "powiat sandomierski"
     },
-    "01KTC2ZE07WG7YK4KQM807JH8J": {
+    "01KTC42PKBSBQ0PQM5HWMJT9VS": {
         "type": "text",
         "tag": "name",
         "text": "powiat skarżyski"
     },
-    "01KTC2ZE07Y6CTHSZ8GZ0Q9P2D": {
+    "01KTC42PKCHVD993EBQAR49YWV": {
         "type": "text",
         "tag": "name",
         "text": "powiat starachowicki"
     },
-    "01KTC2ZE084MXSFKP4GHW9YAXW": {
+    "01KTC42PKC0KZC6EX0VVHQ9FHF": {
         "type": "text",
         "tag": "name",
         "text": "powiat staszowski"
     },
-    "01KTC2ZE09YMZ2SFDB6HTCS0FF": {
+    "01KTC42PKDG66AY2PJTDJK4HVS": {
         "type": "text",
         "tag": "name",
         "text": "powiat włoszczowski"
     },
-    "01KTC2ZE0AEYW7DFA4KQBT92MZ": {
+    "01KTC42PKEYVQFXNEH9WEQTKMT": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Kielce"
+        "text": "miasto Kielce"
     }
 }

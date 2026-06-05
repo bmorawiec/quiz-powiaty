@@ -1,62 +1,62 @@
 {
-    "01KTC2ZDWV9MCK475NM00E2Q8E": {
+    "01KTC42PG4Z5VCJ8M1J5Q69BXY": {
         "type": "text",
         "tag": "name",
         "text": "powiat brzeski"
     },
-    "01KTC2ZDWWB5G6MW25EGSYQAXH": {
+    "01KTC42PG5NDHGB98EEATFSDZE": {
         "type": "text",
         "tag": "name",
         "text": "powiat głubczycki"
     },
-    "01KTC2ZDWW087FQ5MRK93G2PE6": {
+    "01KTC42PG6PJYKWB6J82BPZKH2": {
         "type": "text",
         "tag": "name",
         "text": "powiat kędzierzyńsko-kozielski"
     },
-    "01KTC2ZDWX3VXPD6DYMEZ0TFM0": {
+    "01KTC42PG7VJCRAVQCH01ZRVQ9": {
         "type": "text",
         "tag": "name",
         "text": "powiat kluczborski"
     },
-    "01KTC2ZDWYE1EC6M0PSBD3E15E": {
+    "01KTC42PG7EYZ4RDHJ0HKHVYRQ": {
         "type": "text",
         "tag": "name",
         "text": "powiat krapkowicki"
     },
-    "01KTC2ZDWY6PXVD57NAN35PBXC": {
+    "01KTC42PG8A5E9WCXHMJ2B6KNP": {
         "type": "text",
         "tag": "name",
         "text": "powiat namysłowski"
     },
-    "01KTC2ZDWZCMHVHDQ8RX5EQF0E": {
+    "01KTC42PG9N1J3JM9EFN0YMF32": {
         "type": "text",
         "tag": "name",
         "text": "powiat nyski"
     },
-    "01KTC2ZDX0EPXA1PA4670AHV8C": {
+    "01KTC42PG92XVWVJ4ZQDP59QQV": {
         "type": "text",
         "tag": "name",
         "text": "powiat oleski"
     },
-    "01KTC2ZDX1MDWQ6ASQKTEQK42K": {
+    "01KTC42PGAFAX0QM9ZGWXNVCSC": {
         "type": "text",
         "tag": "name",
         "text": "powiat opolski"
     },
-    "01KTC2ZDX1QQVKZRCHF6CVWE1T": {
+    "01KTC42PGB5TP7FMEQV7RHVFWS": {
         "type": "text",
         "tag": "name",
         "text": "powiat prudnicki"
     },
-    "01KTC2ZDX2HZS20GQZYGZCPCCP": {
+    "01KTC42PGBSKPEDAKXJDKY239F": {
         "type": "text",
         "tag": "name",
         "text": "powiat strzelecki"
     },
-    "01KTC2ZDX36W3C29XBPWDTRN0E": {
+    "01KTC42PGC178Z8A4V6PQ3EYDH": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Opole"
+        "text": "miasto Opole"
     }
 }

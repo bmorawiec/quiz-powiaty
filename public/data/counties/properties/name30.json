@@ -1,177 +1,177 @@
 {
-    "01KTC2ZE1REV417MJ9570B5STM": {
+    "01KTC42PM24DZFH06D64RE52ZP": {
         "type": "text",
         "tag": "name",
         "text": "powiat chodzieski"
     },
-    "01KTC2ZE1S6EWDRCS0J0GVGSK1": {
+    "01KTC42PM3A67TS6MDFV2VA6K9": {
         "type": "text",
         "tag": "name",
         "text": "powiat czarnkowsko-trzcianecki"
     },
-    "01KTC2ZE1SZ7ZX4YXCXBYEJFGQ": {
+    "01KTC42PM36VWNZ888BNKCZKSZ": {
         "type": "text",
         "tag": "name",
         "text": "powiat gnieźnieński"
     },
-    "01KTC2ZE1TH4A7SN9B2WSKNV1D": {
+    "01KTC42PM4CYJ2WY0EZQKWR2PH": {
         "type": "text",
         "tag": "name",
         "text": "powiat gostyński"
     },
-    "01KTC2ZE1VHS1CSYZ1CQA3XCFK": {
+    "01KTC42PM5ER8GD8S1R30M9NQA": {
         "type": "text",
         "tag": "name",
         "text": "powiat grodziski"
     },
-    "01KTC2ZE1VRNQC637FDAMNY7JG": {
+    "01KTC42PM5CSQE5WW61G2QMFQK": {
         "type": "text",
         "tag": "name",
         "text": "powiat jarociński"
     },
-    "01KTC2ZE1W2MV71D323C18B6XQ": {
+    "01KTC42PM63VFG6S921S9BFQ43": {
         "type": "text",
         "tag": "name",
         "text": "powiat kaliski"
     },
-    "01KTC2ZE1X1FHT0Y5R41NFVDCG": {
+    "01KTC42PM6BDQRXRB09C10GW2K": {
         "type": "text",
         "tag": "name",
         "text": "powiat kępiński"
     },
-    "01KTC2ZE1XQ47XWA0PXYN1N3R1": {
+    "01KTC42PM7MVT2YC7G36YGW4R8": {
         "type": "text",
         "tag": "name",
         "text": "powiat kolski"
     },
-    "01KTC2ZE1YHZHP8CD398KNK6P3": {
+    "01KTC42PM8D9ZMN44HHB51KFA5": {
         "type": "text",
         "tag": "name",
         "text": "powiat koniński"
     },
-    "01KTC2ZE1Z1ZGXTB345C0J6P59": {
+    "01KTC42PM9TST6V7HBDC7S1GFT": {
         "type": "text",
         "tag": "name",
         "text": "powiat kościański"
     },
-    "01KTC2ZE20HSFQ3J8TF35KE0QV": {
+    "01KTC42PMARKA9MCBVMVJGR18T": {
         "type": "text",
         "tag": "name",
         "text": "powiat krotoszyński"
     },
-    "01KTC2ZE21X1V64G880FAWWKPK": {
+    "01KTC42PN0CZS8E9Q0FFE09TZF": {
         "type": "text",
         "tag": "name",
         "text": "powiat leszczyński"
     },
-    "01KTC2ZE2148KH9V5VWV0E1JN3": {
+    "01KTC42PN1YECW54FG4PPCR4QX": {
         "type": "text",
         "tag": "name",
         "text": "powiat międzychodzki"
     },
-    "01KTC2ZE22B5FF1VEK0NY5H5Y0": {
+    "01KTC42PN27FEH55HB75FXF2E3": {
         "type": "text",
         "tag": "name",
         "text": "powiat nowotomyski"
     },
-    "01KTC2ZE235VPGR566Z6NJ0A7T": {
+    "01KTC42PN27XVF0J5V9QM8RQX1": {
         "type": "text",
         "tag": "name",
         "text": "powiat obornicki"
     },
-    "01KTC2ZE24DDNQ1JGSYP0V9240": {
+    "01KTC42PN3WBZVF84Q5C4HJ2VY": {
         "type": "text",
         "tag": "name",
         "text": "powiat ostrowski"
     },
-    "01KTC2ZE258D5YXGJS2WZYDQGS": {
+    "01KTC42PN40B9E3WWXCTR32H30": {
         "type": "text",
         "tag": "name",
         "text": "powiat ostrzeszowski"
     },
-    "01KTC2ZE25FCDY5Q1PJ0S11G47": {
+    "01KTC42PN5FTH95CKHZE1DEBEP": {
         "type": "text",
         "tag": "name",
         "text": "powiat pilski"
     },
-    "01KTC2ZE26QPVC6EQ4FERQ449M": {
+    "01KTC42PN640XN5XAHSDX6ZC3E": {
         "type": "text",
         "tag": "name",
         "text": "powiat pleszewski"
     },
-    "01KTC2ZE27531N2GYP0NKV24VF": {
+    "01KTC42PN735QF12JVV4MF59XG": {
         "type": "text",
         "tag": "name",
         "text": "powiat poznański"
     },
-    "01KTC2ZE28GX33W75S6V153H4C": {
+    "01KTC42PN8YQP5A6T8RFJV2RJM": {
         "type": "text",
         "tag": "name",
         "text": "powiat rawicki"
     },
-    "01KTC2ZE29XH6XQMDVM3C85N5S": {
+    "01KTC42PN9YQ3DS6J2H8Z6VMR3": {
         "type": "text",
         "tag": "name",
         "text": "powiat słupecki"
     },
-    "01KTC2ZE2AZ9BN2584NSN4HCK3": {
+    "01KTC42PN91A3P8113P7FS43YF": {
         "type": "text",
         "tag": "name",
         "text": "powiat szamotulski"
     },
-    "01KTC2ZE2B3B9JREMJCT4A665B": {
+    "01KTC42PNA8E6DVC8YDA984KMC": {
         "type": "text",
         "tag": "name",
         "text": "powiat średzki"
     },
-    "01KTC2ZE2C0JMNC9B3ZDDXD2H1": {
+    "01KTC42PNB14TTVSAV6NEFPXP4": {
         "type": "text",
         "tag": "name",
         "text": "powiat śremski"
     },
-    "01KTC2ZE2DJ5M8TBGCDJ8ZAKWC": {
+    "01KTC42PNCY1M80ABMDAGX9Z0C": {
         "type": "text",
         "tag": "name",
         "text": "powiat turecki"
     },
-    "01KTC2ZE2EDJE045DFF1RTMWQH": {
+    "01KTC42PND5QTTRG2MWVHGKRW8": {
         "type": "text",
         "tag": "name",
         "text": "powiat wągrowiecki"
     },
-    "01KTC2ZE2F7GXRS16JVWJZBPPF": {
+    "01KTC42PNETN2BJ6CS9RXJENY3": {
         "type": "text",
         "tag": "name",
         "text": "powiat wolsztyński"
     },
-    "01KTC2ZE2GV9R4E9XGTSPNMVMR": {
+    "01KTC42PNF2R4XZE6B0ZN7F7BD": {
         "type": "text",
         "tag": "name",
         "text": "powiat wrzesiński"
     },
-    "01KTC2ZE2HAVS795JAXANZ8436": {
+    "01KTC42PNGJZ0AF2X5ZX0B65VD": {
         "type": "text",
         "tag": "name",
         "text": "powiat złotowski"
     },
-    "01KTC2ZE2JEP3HAC7YM17FSMS6": {
+    "01KTC42PNH6RVNZKK92WM9VS5D": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Kalisz"
+        "text": "miasto Kalisz"
     },
-    "01KTC2ZE2KQN152B8P04D456XP": {
+    "01KTC42PNJC069NQY8SY7Y0WS7": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Konin"
+        "text": "miasto Konin"
     },
-    "01KTC2ZE2MCZN13DD7EF3RMD69": {
+    "01KTC42PNKN5TRESVASNW7Y720": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Leszno"
+        "text": "miasto Leszno"
     },
-    "01KTC2ZE2N7R1J5Q3Q5V1PH7ZN": {
+    "01KTC42PNMPPPV1HQB2P3VNX9E": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Poznań"
+        "text": "miasto Poznań"
     }
 }

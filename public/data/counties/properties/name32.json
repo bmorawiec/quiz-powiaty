@@ -1,107 +1,107 @@
 {
-    "01KTC2ZE2SV62VM4K9BPY5HM9V": {
+    "01KTC42PNS683MQHX9ZYA3A582": {
         "type": "text",
         "tag": "name",
         "text": "powiat białogardzki"
     },
-    "01KTC2ZE2T520FD7E630VK3TVY": {
+    "01KTC42PNTDNHF06AV2Z1DCK6T": {
         "type": "text",
         "tag": "name",
         "text": "powiat choszczeński"
     },
-    "01KTC2ZE2VMKEESXDKT2YZRFEP": {
+    "01KTC42PNV5EB68HZ3AWR3MGYC": {
         "type": "text",
         "tag": "name",
         "text": "powiat drawski"
     },
-    "01KTC2ZE2W02XC76SGR1YEWDB1": {
+    "01KTC42PNVBFRXSD1K1NQ364S7": {
         "type": "text",
         "tag": "name",
         "text": "powiat goleniowski"
     },
-    "01KTC2ZE2W01VHM8ZYA46930WK": {
+    "01KTC42PNW2GYSGA8NHFC1N8QS": {
         "type": "text",
         "tag": "name",
         "text": "powiat gryficki"
     },
-    "01KTC2ZE2XHANGCH59ZN4DEZCM": {
+    "01KTC42PNXMDDST19XWWMBNKQE": {
         "type": "text",
         "tag": "name",
         "text": "powiat gryfiński"
     },
-    "01KTC2ZE2YJK2EABYAHGSH2NXE": {
+    "01KTC42PNXGNY92KAE4EE9NBYK": {
         "type": "text",
         "tag": "name",
         "text": "powiat kamieński"
     },
-    "01KTC2ZE2YFNZC7JW2P0276VJP": {
+    "01KTC42PNYA2CW9JQW3R77K3P8": {
         "type": "text",
         "tag": "name",
         "text": "powiat kołobrzeski"
     },
-    "01KTC2ZE2ZC4BT5NB9KMSZAG7M": {
+    "01KTC42PNZYSB892GQ16YHHRKF": {
         "type": "text",
         "tag": "name",
         "text": "powiat koszaliński"
     },
-    "01KTC2ZE30437MAQQD7192EQ0C": {
+    "01KTC42PNZ12G5X7J7HG3NWN6F": {
         "type": "text",
         "tag": "name",
         "text": "powiat myśliborski"
     },
-    "01KTC2ZE300EH0WX21B9PCV3BR": {
+    "01KTC42PP07PE9NY043JD4GA8H": {
         "type": "text",
         "tag": "name",
         "text": "powiat policki"
     },
-    "01KTC2ZE31Q2W87T3V5FNWEZXF": {
+    "01KTC42PP1K00J7JD5A05F4ERR": {
         "type": "text",
         "tag": "name",
         "text": "powiat pyrzycki"
     },
-    "01KTC2ZE322K1QMJTYV5K7ECKK": {
+    "01KTC42PP1EE5Q0617CZ5K1K6T": {
         "type": "text",
         "tag": "name",
         "text": "powiat sławieński"
     },
-    "01KTC2ZE3386WENDJ3CKYMKG7V": {
+    "01KTC42PP2TVG0EYSWZ3KVV1JF": {
         "type": "text",
         "tag": "name",
         "text": "powiat stargardzki"
     },
-    "01KTC2ZE34A3Z7SRMAE1D17BBM": {
+    "01KTC42PP3YVV6PDY3X4TBJV4S": {
         "type": "text",
         "tag": "name",
         "text": "powiat szczecinecki"
     },
-    "01KTC2ZE341Y24719ZGWBBMCT8": {
+    "01KTC42PP4AAJKM8MHMC1K94J3": {
         "type": "text",
         "tag": "name",
         "text": "powiat świdwiński"
     },
-    "01KTC2ZE35S4N8M8JJVPKMPQHR": {
+    "01KTC42PP5ZVBD55QG8X1SFMQ9": {
         "type": "text",
         "tag": "name",
         "text": "powiat wałecki"
     },
-    "01KTC2ZE36GEQMBMYYFT2ERSMA": {
+    "01KTC42PP5F7736FXJVK5KVW61": {
         "type": "text",
         "tag": "name",
         "text": "powiat łobeski"
     },
-    "01KTC2ZE376V3NCQQ8JM7C0B6H": {
+    "01KTC42PP6SY6FEZQ7ZRMP3886": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Koszalin"
+        "text": "miasto Koszalin"
     },
-    "01KTC2ZE387WQ0CXGQWTAK1N71": {
+    "01KTC42PP70WG4GCNZX1X6YNB9": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Szczecin"
+        "text": "miasto Szczecin"
     },
-    "01KTC2ZE394YC2NXCP56EC6PS6": {
+    "01KTC42PP899P3C7PHPES0QJ0J": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Świnoujście"
+        "text": "miasto Świnoujście"
     }
 }

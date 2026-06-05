@@ -1,117 +1,117 @@
 {
-    "01KTC2ZDQS2153VV0GQWHC1FFK": {
+    "01KTC42PB9P9AY1J2CJXXXSG6B": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat aleksandrowski"
     },
-    "01KTC2ZDQTN0MR8CZSRKR3FCWX": {
+    "01KTC42PBAHMS7SPBS4JASQ8RB": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat brodnicki"
     },
-    "01KTC2ZDQT2SDMF9XJ0X5YPQ6Y": {
+    "01KTC42PBA35K1HN6G6VPE5BPM": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat bydgoski"
     },
-    "01KTC2ZDQV28H863BW6RWDHBQG": {
+    "01KTC42PBBQ0TPHF8ZCTT13W60": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat chełmiński"
     },
-    "01KTC2ZDQWWMXNK0PDXHTMFX7N": {
+    "01KTC42PBCV0KBHWJ86P6A80QZ": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat golubsko-dobrzyński"
     },
-    "01KTC2ZDQXZH2MTQH3PF7C10A8": {
+    "01KTC42PBC0RGZFZM0X874B4X7": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat grudziądzki"
     },
-    "01KTC2ZDQX132S5VBCE2KEQY4Q": {
+    "01KTC42PBDDMBWF5PTF1AH7DC8": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat inowrocławski"
     },
-    "01KTC2ZDQYFG5PN71FX9GEMRC2": {
+    "01KTC42PBE2NAXN3N1TNRXJTC6": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat lipnowski"
     },
-    "01KTC2ZDQZ9DA7C9EJ0RG6HE88": {
+    "01KTC42PBEBGK2H0EJT5QXVP6F": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat mogileński"
     },
-    "01KTC2ZDQZ0RBRN8QWXHSCH91M": {
+    "01KTC42PBFFMJ8166ADCANQ88V": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat nakielski"
     },
-    "01KTC2ZDR0YC3F9KYB4ZR0JMQH": {
+    "01KTC42PBGRTA5RHEAEYTXF43N": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat radziejowski"
     },
-    "01KTC2ZDR1Z79FXX50S1QXBSSQ": {
+    "01KTC42PBHVHFPGZT541CJXX2W": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat rypiński"
     },
-    "01KTC2ZDR2WNNX2Z4C842T54BH": {
+    "01KTC42PBHV67EH9TJDB565NPX": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat sępoleński"
     },
-    "01KTC2ZDR2WMPYMT7Y8NM98F9W": {
+    "01KTC42PBJNFNCWFWEXK7DWAZS": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat świecki"
     },
-    "01KTC2ZDR3XXP9TFKFB3QT2WYM": {
+    "01KTC42PBKN6WWKD7KX91W4WR4": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat toruński"
     },
-    "01KTC2ZDR4J43MPJ30V0891TP8": {
+    "01KTC42PBKDTRXDJHJ73WASD9M": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat tucholski"
     },
-    "01KTC2ZDR4JMPCQV5A8Z2T5M4H": {
+    "01KTC42PBMPGXKNQCEA0A5H7CJ": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat wąbrzeski"
     },
-    "01KTC2ZDR5FMJ8JW0XZ83J0352": {
+    "01KTC42PBN5F84E2TCE1KB300Z": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat włocławski"
     },
-    "01KTC2ZDR61MY6NENRWGK3A1F8": {
+    "01KTC42PBNW4B06GVA1FX41N4E": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat żniński"
     },
-    "01KTC2ZDR65PDT1BDTBVN2JG10": {
+    "01KTC42PBPG7DDXE0FN9S4V20D": {
         "type": "text",
         "tag": "unambiguousName",
-        "text": "powiat Bydgoszcz"
+        "text": "miasto Bydgoszcz"
     },
-    "01KTC2ZDR7YWXS3MCJVHK5M83H": {
+    "01KTC42PBQKET56G2BYNE4VJH9": {
         "type": "text",
         "tag": "unambiguousName",
-        "text": "powiat Grudziądz"
+        "text": "miasto Grudziądz"
     },
-    "01KTC2ZDR82BQXSZ542NC2WM86": {
+    "01KTC42PBQ5NHXRG76S9FPA2Q7": {
         "type": "text",
         "tag": "unambiguousName",
-        "text": "powiat Toruń"
+        "text": "miasto Toruń"
     },
-    "01KTC2ZDR9TC60ZYR46P1X860R": {
+    "01KTC42PBR6D66YVM0V7ETZ3PR": {
         "type": "text",
         "tag": "unambiguousName",
-        "text": "powiat Włocławek"
+        "text": "miasto Włocławek"
     }
 }

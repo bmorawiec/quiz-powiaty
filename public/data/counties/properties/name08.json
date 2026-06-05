@@ -1,72 +1,72 @@
 {
-    "01KTC2ZDS17RQ7GJ91NVTD9FDK": {
+    "01KTC42PCEMYYVKKQ2FK5B4XHS": {
         "type": "text",
         "tag": "name",
         "text": "powiat gorzowski"
     },
-    "01KTC2ZDS2WCWHZJW0Q2WFKMMD": {
+    "01KTC42PCEHQ2KDQAANG9VF4X8": {
         "type": "text",
         "tag": "name",
         "text": "powiat krośnieński"
     },
-    "01KTC2ZDS36KY3MK1B91A4RTYB": {
+    "01KTC42PCF83YN0PJ5G24MSAK4": {
         "type": "text",
         "tag": "name",
         "text": "powiat międzyrzecki"
     },
-    "01KTC2ZDS4782STY5SK2R8MHJP": {
+    "01KTC42PCG96E9TEXZYYEVJNYG": {
         "type": "text",
         "tag": "name",
         "text": "powiat nowosolski"
     },
-    "01KTC2ZDS4NWY8KVJ5ANN85CVP": {
+    "01KTC42PCG21NABCRHY0MT0VVM": {
         "type": "text",
         "tag": "name",
         "text": "powiat słubicki"
     },
-    "01KTC2ZDS5V4VEEP52Y025KRCJ": {
+    "01KTC42PCHSF35ZCXM1ZQ92J3V": {
         "type": "text",
         "tag": "name",
         "text": "powiat strzelecko-drezdenecki"
     },
-    "01KTC2ZDS6P0E752M8WA2YWRWQ": {
+    "01KTC42PCJS2ZST9H8PEXJDES2": {
         "type": "text",
         "tag": "name",
         "text": "powiat sulęciński"
     },
-    "01KTC2ZDS7TS125D735XJXRNSE": {
+    "01KTC42PCJ7SVHFRQZ4GMJFDCB": {
         "type": "text",
         "tag": "name",
         "text": "powiat świebodziński"
     },
-    "01KTC2ZDS8WS9JTYHCQZT815EF": {
+    "01KTC42PCKETCD84F7XAD3DTY3": {
         "type": "text",
         "tag": "name",
         "text": "powiat zielonogórski"
     },
-    "01KTC2ZDS8PX9MFMKC42HP38GX": {
+    "01KTC42PCMVWZ1NMAVVZS1SRX5": {
         "type": "text",
         "tag": "name",
         "text": "powiat żagański"
     },
-    "01KTC2ZDS9MNXHXBHW2YNXTCPY": {
+    "01KTC42PCMJE3962Y0CVTTX7BG": {
         "type": "text",
         "tag": "name",
         "text": "powiat żarski"
     },
-    "01KTC2ZDSA93698T48063RA7NA": {
+    "01KTC42PCNMX8VKS0SJP7FVMWS": {
         "type": "text",
         "tag": "name",
         "text": "powiat wschowski"
     },
-    "01KTC2ZDSBV1M4MZAEC0PFTG0A": {
+    "01KTC42PCP0RKW8ESYN31BTSKR": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Gorzów Wielkopolski"
+        "text": "miasto Gorzów Wielkopolski"
     },
-    "01KTC2ZDSC6CEBTRSZH5PS1CMA": {
+    "01KTC42PCPTQFD9EW6R0VKA0W1": {
         "type": "text",
         "tag": "name",
-        "text": "powiat Zielona Góra"
+        "text": "miasto Zielona Góra"
     }
 }

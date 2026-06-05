@@ -1,72 +1,72 @@
 {
-    "01KTC2ZDS19E75ZD5DG6T2CS9A": {
+    "01KTC42PCESAXP5470W070MNYT": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat gorzowski"
     },
-    "01KTC2ZDS2WRDM7C16DBA1XM7N": {
+    "01KTC42PCEGZNKQ58PCQZHK49M": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat krośnieński (Krosno Odrzańskie)"
     },
-    "01KTC2ZDS36MFY6NPRS1F7C0C2": {
+    "01KTC42PCF86WWDFERBHVVC9JG": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat międzyrzecki"
     },
-    "01KTC2ZDS4VXXAG80KCNF9DC0F": {
+    "01KTC42PCGXMYA7451T2NHCDYJ": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat nowosolski"
     },
-    "01KTC2ZDS4C63Y70WJYSCZFA0K": {
+    "01KTC42PCGR3F5EYPENEFEWGJM": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat słubicki"
     },
-    "01KTC2ZDS508YMWRRHRVB4NJND": {
+    "01KTC42PCHYG2KJ1BE9S4W4C4D": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat strzelecko-drezdenecki"
     },
-    "01KTC2ZDS6YM71S3C4XYJT2YRK": {
+    "01KTC42PCJP9R8103CR4PVW22G": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat sulęciński"
     },
-    "01KTC2ZDS7KSXTBWJQXN1P5MDE": {
+    "01KTC42PCJD7GQ6MHNWNHAKJEJ": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat świebodziński"
     },
-    "01KTC2ZDS82FZ64GA8NEE0QFS2": {
+    "01KTC42PCK453K4AX4RA31E5Y7": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat zielonogórski"
     },
-    "01KTC2ZDS8CHZMZFA95Q5CNJFQ": {
+    "01KTC42PCMRTPZ4R4F0HMAHDT2": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat żagański"
     },
-    "01KTC2ZDS9G3WK84HJ4M0SE3JA": {
+    "01KTC42PCM9R7XGE3G45W5CDHE": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat żarski"
     },
-    "01KTC2ZDSAEMNHDA467V5S525V": {
+    "01KTC42PCN9JVV39QDHC6XNDSW": {
         "type": "text",
         "tag": "unambiguousName",
         "text": "powiat wschowski"
     },
-    "01KTC2ZDSBGRVJVGDR1Y264JHF": {
+    "01KTC42PCPRPFT6KVTM4JST3F1": {
         "type": "text",
         "tag": "unambiguousName",
-        "text": "powiat Gorzów Wielkopolski"
+        "text": "miasto Gorzów Wielkopolski"
     },
-    "01KTC2ZDSCFQPA6R400404PD3H": {
+    "01KTC42PCP8AKYY41GMF4N29VW": {
         "type": "text",
         "tag": "unambiguousName",
-        "text": "powiat Zielona Góra"
+        "text": "miasto Zielona Góra"
     }
 }
