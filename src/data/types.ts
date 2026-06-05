@@ -26,6 +26,8 @@ export interface ImageProperty {
 export interface ShapeProperty {
     type: "shape";
     tag: ShapePropertyTag;
+    position: [number, number];
+    size: [number, number];
     shape: number[][];
 }
 
