@@ -61,7 +61,6 @@ export function ModePicker() {
 
     const handleRandomGameClick = () => {
         const options = getRandomOptions();
-        console.log(options);
         localStorage.setItem("QuizPowiaty.lastPickerMode", JSON.stringify(options));
         navigate("/graj2" + optionsToURL(options));
     };
