@@ -123,7 +123,8 @@ export function generateAnswers(
     // pick answers at random if a ranking function hasn't been provided
     const rank = options.answers.rankIncorrect || (() => Math.random());
     const bestIncorrectAnswers = rankAndPickBest(
-        incorrectAnswerCandidates,
+        // remove the correct answer from the candidate list
+        incorrectAnswerCandidates.filter((candidate) => candidate.unitId !== unit.id),
         options.answers.howManyIncorrect,
         (candidate: AnswerCandidate) => rank(questionProperties, candidate.properties),
     );
@@ -155,12 +156,16 @@ export function incorrectAnswerFromCandidate(
 
 /** A candidate for an answer. */
 interface AnswerCandidate {
+    /** Id of the unit this answer is about. */
+    unitId: string;
+    /** The properties of the administrative unit this answer is about. */
     properties: Property[];
 }
 
 /** Creates a candidate for an incorrect answer based on the properties of the provided unit. */
 export function generateIncorrectAnswerCandidate(unit: Unit, options: GeneratorOptions): AnswerCandidate {
     return {
+        unitId: unit.id,
         properties: getUnitProperties(unit, options.answers.properties)
             .filter((property) => options.answers.tags.includes(property.tag)),
     };
