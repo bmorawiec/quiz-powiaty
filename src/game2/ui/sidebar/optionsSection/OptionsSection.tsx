@@ -16,6 +16,8 @@ export function OptionsSection() {
 
     const [showRestartDialog, setShowRestartDialog] = useState(false);
     const handleConfirmRestart = () => {
+        setShowFilterDialog(false);
+
         const url = optionsToURL(newOptions);
         navigate(url);
     };
@@ -24,7 +26,6 @@ export function OptionsSection() {
     };
     const handleRestartDialogClose = () => {
         setShowRestartDialog(false);
-        setShowFilterDialog(false);
     };
 
     const navigate = useNavigate();
