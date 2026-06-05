@@ -2,9 +2,10 @@ import clsx from "clsx";
 import { useContext } from "react";
 import { AnswerNotFoundError } from "src/game2/questions";
 import { ButtonNotFoundError } from "src/game2/state";
-import { ApplyIcon, CloseIcon } from "src/ui";
 import { useAnimation } from "src/utils/useAnimation";
-import { ChoiceGameStoreContext } from "../../hook";
+import { ChoiceGameStoreContext } from "../../../hook";
+import { ButtonContentView } from "./ButtonContentView";
+import { VerificationBadge } from "./VerificationBadge";
 
 export interface ButtonViewProps {
     buttonId: string;
@@ -36,8 +37,8 @@ export function ButtonView({ buttonId, disabled }: ButtonViewProps) {
 
     return (
         <button
-            className={clsx("h-[80px] border rounded-[10px] font-[450] tracking-[0.01em] p-[10px]",
-                "transition-colors duration-20 focus-ring flex items-center justify-center gap-[8px]",
+            className={clsx("relative border rounded-[10px]",
+                "transition-colors duration-20 focus-ring",
                 !disabled && "cursor-pointer hover:bg-gray-5 active:bg-gray-10 " +
                     "dark:hover:bg-white/8 dark:active:bg-white/4",
                 (disabled && answer.correct)
@@ -46,11 +47,8 @@ export function ButtonView({ buttonId, disabled }: ButtonViewProps) {
                 isWrongAnim && "animate-shake")}
             onClick={handleClick}
         >
-            (placeholder)
-
-            {disabled && ((answer.correct)
-                ? <ApplyIcon className="size-[14px] text-teal-75 dark:text-teal-60"/>
-                : <CloseIcon className="size-[14px] text-red-70 dark:text-red-60"/>)}
+            <ButtonContentView content={answer.content}/>
+            {disabled && <VerificationBadge correct={answer.correct}/>}
         </button>
     );
 }

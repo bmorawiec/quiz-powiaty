@@ -1,9 +1,9 @@
-import clsx from "clsx";
 import { useContext } from "react";
 import { QuestionNotFoundError } from "src/game2/questions";
 import { type ChoiceScreen } from "src/game2/state";
 import { ChoiceGameStoreContext } from "../../hook";
-import { ButtonView } from "./ButtonView";
+import { ButtonView } from "./button/ButtonView";
+import { QuestionView } from "./question";
 
 export interface ScreenViewProps {
     screen: ChoiceScreen;
@@ -17,32 +17,17 @@ export function ScreenView({ screen }: ScreenViewProps) {
     const question = useChoiceGameStore((game) => game.api.questions[screen.questionId]);
     if (!question) throw new QuestionNotFoundError(screen.questionId)
 
-    return (
-        <div className="flex flex-col items-center">
-            <div className="w-full h-[56px] grid grid-cols-[60px_auto_60px]">
-                <div/>
+    return (<>
+        <QuestionView question={question}/>
 
-                <h2 className="text-center text-[20px] font-[450] tracking-[0.01em] text-gray-85 dark:text-gray-10">
-                    (placeholder)
-                </h2>
-
-                {question.guessed && (
-                    <span className={clsx("mt-[2px] text-[18px] font-[450] tracking-[0.01em] justify-self-end",
-                        (question.points > 0) ? "text-teal-75 dark:text-teal-70" : "text-red-60 dark:text-red-55")}>
-                        +{question.points}pkt
-                    </span>
-                )}
-            </div>
-
-            <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-[10px]">
-                {screen.buttonIds.map((buttonId) =>
-                    <ButtonView
-                        key={buttonId}
-                        buttonId={buttonId}
-                        disabled={question.guessed}
-                    />
-                )}
-            </div>
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-[10px]">
+            {screen.buttonIds.map((buttonId) =>
+                <ButtonView
+                    key={buttonId}
+                    buttonId={buttonId}
+                    disabled={question.guessed}
+                />
+            )}
         </div>
-    );
+    </>);
 }
