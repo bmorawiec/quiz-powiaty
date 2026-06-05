@@ -40,7 +40,7 @@ export function EmptySlot({ cellId, slotIndex }: EmptySlotProps) {
 
     return (
         <div
-            className={clsx("h-[40px] border border-[2px] border-dotted rounded-[6px]",
+            className={clsx("h-[42px] border border-[2px] border-dotted rounded-[6px]",
                 "border-gray-25 dark:border-gray-60", dragHover && "bg-gray-5 dark:bg-gray-85")}
             onDragEnter={handleDragEnter}
             onDragLeave={handleDragLeave}

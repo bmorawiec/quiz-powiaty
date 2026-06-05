@@ -4,6 +4,7 @@ import { AnswerNotFoundError } from "src/game2/questions";
 import { CardNotFoundError } from "src/game2/state";
 import { ApplyIcon, CloseIcon, DragHandleIcon } from "src/ui";
 import { DnDGameStoreContext } from "../hook";
+import { CardContentView } from "./CardContentView";
 
 export interface CardViewProps {
     cardId: string;
@@ -96,8 +97,8 @@ export function CardView({ cardId, indexInSidebar }: CardViewProps) {
             onDrop={handleDrop}
         >
             <div
-                className={clsx("border rounded-[10px] cursor-move pl-[10px] pt-[7px] pb-[8px] text-[14px] shrink-0",
-                    "transition-colors duration-40 cursor-move flex items-center gap-[5px] h-[40px]",
+                className={clsx("border rounded-[10px] cursor-move text-[14px] shrink-0",
+                    "transition-colors duration-40 cursor-move flex items-center gap-[5px]",
                     "border-gray-20 dark:border-gray-75",
                     (beingDragged)
                         ? "opacity-60"
@@ -111,11 +112,7 @@ export function CardView({ cardId, indexInSidebar }: CardViewProps) {
                             : "text-red-60 dark:text-red-30"
                     ))}
             >
-                <DragHandleIcon
-                    className="size-[10px] text-gray-60 shrink-0"
-                />
-
-                (placeholder)
+                <CardContentView content={answer.content}/>
 
                 {Icon && (
                     <Icon className="size-[14px] shrink-0"/>

@@ -3,6 +3,7 @@ import { QuestionNotFoundError } from "src/game2/questions";
 import { CellNotFoundError } from "src/game2/state";
 import { DnDGameStoreContext } from "../hook";
 import { Slot } from "./Slot";
+import { CellContentView } from "./CellContentView";
 
 export interface CellViewProps {
     cellId: string;
@@ -18,14 +19,10 @@ export function CellView({ cellId }: CellViewProps) {
     const question = useDnDGameStore((game) => game.api.questions[cell.questionId]);
     if (!question)
         throw new QuestionNotFoundError(cell.questionId);
-    if (question.content.type !== "text")
-        throw new Error("Unexpected question content type: " + question.content.type);
 
     return (
         <div className="bg-white dark:bg-gray-90 rounded-[15px] p-[10px] grid grid-cols-2">
-            <p className="text-[14px] tracking-[0.01em] ml-[6px] mt-[8px] mr-[10px]">
-                (placeholder)
-            </p>
+            <CellContentView content={question.content}/>
 
             <div className="flex flex-col gap-[6px]">
                 {cell.cardSlots.map((cardId, index) =>
