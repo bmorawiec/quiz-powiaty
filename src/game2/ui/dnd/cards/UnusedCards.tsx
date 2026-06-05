@@ -40,6 +40,7 @@ export function UnusedCards() {
         <div
             className={clsx("size-full overflow-y-auto flex flex-col pt-[15px] pb-[400px]",
                 "scrollbar-color thumb-color-gray-25 track-color-gray-10",
+                "dark:thumb-color-gray-70 dark:track-color-gray-90",
                 dragHover && "bg-gray-15")}
             onDragEnter={handleDragEnter}
             onDragLeave={handleDragLeave}

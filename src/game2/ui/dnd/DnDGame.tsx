@@ -13,7 +13,8 @@ export function DnDGame() {
     return (
         <div className="size-full bg-gray-10 dark:bg-gray-95 rounded-[20px] grid grid-cols-[auto_400px]">
             <div className="flex flex-col relative overflow-y-auto border-r border-black/10
-                scrollbar-color thumb-color-gray-25 track-color-gray-10">
+                scrollbar-color thumb-color-gray-25 track-color-gray-10
+                dark:thumb-color-gray-70 dark:track-color-gray-90">
                 <h2 className="text-[20px] font-[500] mt-[47px] mb-[5px] text-gray-80 dark:text-gray-10 text-center">
                     Tytuł
                 </h2>
