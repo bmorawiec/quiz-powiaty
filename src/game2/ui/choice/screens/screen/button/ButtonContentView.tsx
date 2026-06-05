@@ -73,6 +73,7 @@ function MultiplePlatesContentView({ content }: MultiplePlatesContentViewProps) 
         <div className="h-[80px] flex content-center justify-center gap-[8px] flex-wrap">
             {content.codes.map((code) =>
                 <Plate
+                    key={code}
                     code={code}
                     height={plateHeight}
                 />
