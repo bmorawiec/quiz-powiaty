@@ -62,7 +62,7 @@ function withName(options: GameOptions): [ContentGenerator, PropertyTag[]] {
                 // Examples:
                 // "Jaki herb ma powiat rzeszowski?" (coat of arms shown on the left)
                 // "Jaką stolicę ma województwo mazowieckie?" (coat of arms shown on the left)
-                beforeText: QUESTION_PREFIXES[options.guess],
+                beforeText: QUESTION_PREFIXES[options.guess] + " ",
                 imageUrl: coaProperty.url,
                 text: nameProperty.text,
                 afterText: "?",
