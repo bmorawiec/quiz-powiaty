@@ -20,7 +20,7 @@ export function richAnswers(options: GameOptions): [ContentGenerator, PropertyTa
 }
 
 function withName(options: GameOptions): [ContentGenerator, PropertyTag[]] {
-    if (options.guessFrom === "coa" || options.guessFrom === "flag") {
+    if (options.mode === "dndGame" || options.guessFrom === "coa" || options.guessFrom === "flag") {
         // Don't include the coat of arms in the answer when guessing from the CoA or the flag.
         return [(properties) => {
             const nameProperty = properties
