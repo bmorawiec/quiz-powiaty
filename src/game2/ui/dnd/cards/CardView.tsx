@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { useContext, useState } from "react";
 import { AnswerNotFoundError } from "src/game2/questions";
 import { CardNotFoundError } from "src/game2/state";
-import { ApplyIcon, CloseIcon, DragHandleIcon } from "src/ui";
+import { ApplyIcon, CloseIcon } from "src/ui";
 import { DnDGameStoreContext } from "../hook";
 import { CardContentView } from "./CardContentView";
 
