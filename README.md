@@ -44,11 +44,20 @@
 
 ![Zrzut ekranu pokazujący tryb ciemny](/assets/screenshots/sc4.png)
 
-### Uruchamianie środowiska programistycznego
+### Przygotowanie środowiska programistycznego
 
-Sklonuj repozytorium za pomocą komendy
+1. Sklonuj repozytorium za pomocą komendy
 ```
 git clone https://github.com/bmorawiec/quiz-powiaty.git
+```
+lub (jeśli chcesz np. tylko wytestować aplikację) użyj komendy
+```
+git clone https://github.com/bmorawiec/quiz-powiaty.git --depth 1
+```
+
+2. Zainstaluj pakiety
+```
+npm install
 ```
 
 Dostępne komendy
