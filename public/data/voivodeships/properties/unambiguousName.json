@@ -1,82 +1,82 @@
 {
-    "01KTHS53RRY5KKQ99937B14WCA": {
+    "01KTHS53RKAK6TJM94PHKZS3CG": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo dolnośląskie"
     },
-    "01KTHS53RY3TA14H31T00MCP59": {
+    "01KTHS53RYZQ4VKC8KSM9TBQ89": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo kujawsko-pomorskie"
     },
-    "01KTHS53RZYZMG0878P518W4AW": {
+    "01KTHS53RZ6RH1VEZ90V7ZN3RG": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo lubelskie"
     },
-    "01KTHS53S0ZJS5S4ZXZ6VQZ56W": {
+    "01KTHS53S0PXP7C1HEFPYCFF4D": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo lubuskie"
     },
-    "01KTHS53S2CA5CT9FC08SQJ7MB": {
+    "01KTHS53S19MT86CFHJBTVC0Y3": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo łódzkie"
     },
-    "01KTHS53S34RYXAZQN7C7Z90YP": {
+    "01KTHS53S321HQ1XM103EQ4PHC": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo małopolskie"
     },
-    "01KTHS53S4TQHCRY6GDQTRNS6G": {
+    "01KTHS53S429JFHR4WMYPB0AJA": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo mazowieckie"
     },
-    "01KTHS53S5SZ6PJ573V4N3C1MW": {
+    "01KTHS53S5Z3KBHX6DMNHMYZXE": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo opolskie"
     },
-    "01KTHS53S6QGE1MF0DXJG7B1PH": {
+    "01KTHS53S6DWR3KXATV0K1JHPD": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo podkarpackie"
     },
-    "01KTHS53S8G1CHD6SWWZNXBKGK": {
+    "01KTHS53S8CA11MMKQDN08CD72": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo podlaskie"
     },
-    "01KTHS53S9MVBZGBZZBSX7JNCT": {
+    "01KTHS53S900K00FKEQDDYT6MW": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo pomorskie"
     },
-    "01KTHS53SASW9DNGHGV2HTETJG": {
+    "01KTHS53SAMF94GRM4H5VJPP89": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo śląskie"
     },
-    "01KTHS53SBB4VWSCAS6HGEBCMF": {
+    "01KTHS53SBYA5QJ890VDBQCJZ2": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo świętokrzyskie"
     },
-    "01KTHS53SC05GNY2PCM6ZWR03R": {
+    "01KTHS53SCQTPF8REFSV3KXJYM": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo warmińsko-mazurskie"
     },
-    "01KTHS53SDB6D6QZZ2A67W8GR7": {
+    "01KTHS53SD8EGNTBMWG0K7NKQV": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo wielkopolskie"
     },
-    "01KTHS53SF1BB0Y0VC7FJ1N37A": {
+    "01KTHS53SEQ2WKD914VYW93KX8": {
         "type": "text",
-        "tag": "name",
+        "tag": "unambiguousName",
         "text": "województwo zachodniopomorskie"
     }
 }
