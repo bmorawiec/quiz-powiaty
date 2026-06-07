@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { optionsToURL, type GameOptions } from "src/game2/options";
 import { GameStoreContext } from "../../hook";
@@ -11,6 +11,11 @@ import { FilterDialog } from "./filterDialog";
 export function OptionsSection() {
     const useGameStore = useContext(GameStoreContext);
     const [newOptions, setNewOptions] = useState(useGameStore.getState().options);
+
+    const options = useGameStore((game) => game.options);
+    useEffect(() => {
+        setNewOptions(options);     // Update options selected in dropdowns when current game options change.
+    }, [options]);
 
     const [showFilterDialog, setShowFilterDialog] = useState(false);
 
@@ -43,11 +48,7 @@ export function OptionsSection() {
     };
 
     return (
-        <div className="flex flex-col border-t border-gray-15 dark:border-gray-80 p-[30px]">
-            <span className="text-gray-80 dark:text-gray-15 font-[550]">
-                Opcje rozgrywki
-            </span>
-
+        <div className="flex flex-col border-t border-gray-15 dark:border-gray-80 p-[30px] pt-[10px] mt-auto">
             <GameModes
                 options={newOptions}
                 onChange={changeOptions}

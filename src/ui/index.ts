@@ -3,6 +3,7 @@ export * from "./Button";
 export * from "./Checkbox";
 export * from "./dialog";
 export * from "./Drawer";
+export * from "./dropdown";
 export * from "./IconButton";
 export * from "./icons";
 export * from "./LargeButton";
